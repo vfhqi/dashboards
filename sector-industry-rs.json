@@ -1,6 +1,6 @@
 {
  "source": "rs-dashboard.html",
- "current_week": "2026-08-19",
+ "current_week": "2026-08-20",
  "prior_week": "2026-06-19",
  "industry": {
   "A. Consumer staples": {
@@ -74,7 +74,7 @@
    "prior": "F"
   },
   "A.2. Tobacco": {
-   "current": "F",
+   "current": "D",
    "prior": "C"
   },
   "A.3. Automotive repair": {
@@ -114,11 +114,11 @@
    "prior": "B"
   },
   "B.4. CDMO or CRO": {
-   "current": "C",
+   "current": "D",
    "prior": "C"
   },
   "B.5. Medtech - consumables - mature": {
-   "current": "F",
+   "current": "D",
    "prior": "D"
   },
   "B.6. Medtech - capital goods": {
@@ -178,7 +178,7 @@
    "prior": "C"
   },
   "G.11. Traditional asset managers (B2C)": {
-   "current": "A",
+   "current": "B",
    "prior": "B"
   },
   "G.12. Specialty finance and other": {
@@ -194,7 +194,7 @@
    "prior": "D"
   },
   "G.3. Alternative investment managers": {
-   "current": "D",
+   "current": "F",
    "prior": "F"
   },
   "G.4. Holding companies": {
@@ -362,7 +362,7 @@
    "prior": "B"
   },
   "M.7. Forestry and paper products": {
-   "current": "D",
+   "current": "F",
    "prior": "D"
   },
   "M.8. Chemicals - Gases": {
@@ -390,11 +390,11 @@
    "prior": "D"
   },
   "O.2. Products - various [SPLIT]": {
-   "current": "D",
+   "current": "C",
    "prior": "D"
   },
   "O.4. Capital goods - grid": {
-   "current": "B",
+   "current": "A",
    "prior": "A"
   },
   "O.6. Capital goods - measurement": {
