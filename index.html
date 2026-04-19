@@ -333,6 +333,47 @@
             margin-left: 2px;
         }
 
+        /* === COLOUR MODE — tag-driven text colouring === */
+        /* #J Judgement = purple, #A Analysis = blue, #I Information = muted, Actions = green */
+        body.colour-mode .tag-j .suffix-tag,
+        body.colour-mode .tag-j > strong,
+        body.colour-mode .tag-j > .suffix-tag,
+        body.colour-mode li.tag-j { color: #c4a5f7; }
+        body.colour-mode .tag-j .suffix-tag { color: #c4a5f7; }
+        body.colour-mode li.tag-j strong { color: #d4bfff; }
+
+        body.colour-mode .tag-a .suffix-tag,
+        body.colour-mode .tag-a > strong,
+        body.colour-mode .tag-a > .suffix-tag,
+        body.colour-mode li.tag-a { color: #79b8ff; }
+        body.colour-mode .tag-a .suffix-tag { color: #79b8ff; }
+        body.colour-mode li.tag-a strong { color: #9ecbff; }
+
+        body.colour-mode .tag-i .suffix-tag,
+        body.colour-mode .tag-i > strong,
+        body.colour-mode .tag-i > .suffix-tag,
+        body.colour-mode li.tag-i { color: #8b949e; }
+        body.colour-mode .tag-i .suffix-tag { color: #8b949e; }
+
+        body.colour-mode .tag-action,
+        body.colour-mode .tag-action strong,
+        body.colour-mode .tag-action .suffix-tag,
+        body.colour-mode .memo-section[id="memo-sec-d"] .memo-item-content,
+        body.colour-mode .memo-section[id="memo-sec-d"] .memo-item-content li { color: #56d364; }
+
+        /* MAP view colour mode */
+        body.colour-mode .map-j-line { color: #c4a5f7; }
+        body.colour-mode .map-j-line strong { color: #d4bfff; }
+        body.colour-mode .map-child-judgement { color: #c4a5f7; }
+
+        /* Inline tag-j/tag-a wrappers (for single-line judgements outside lists) */
+        body.colour-mode span.tag-j { color: #c4a5f7; }
+        body.colour-mode span.tag-j strong { color: #d4bfff; }
+        body.colour-mode span.tag-j .suffix-tag { color: #c4a5f7; }
+        body.colour-mode span.tag-a { color: #79b8ff; }
+        body.colour-mode span.tag-a strong { color: #9ecbff; }
+        body.colour-mode span.tag-i { color: #8b949e; }
+
         /* Tree Expansion */
         .tree-container {
             display: none;
@@ -2890,6 +2931,10 @@
             <div class="toolbar-separator"></div>
             <div class="toolbar-group">
                 <button class="toolbar-btn" id="btn-fundamental" onclick="toggleFundamental()">FUNDAMENTAL</button>
+            </div>
+            <div class="toolbar-separator"></div>
+            <div class="toolbar-group">
+                <button class="toolbar-btn" id="btn-colour" onclick="toggleColourMode()">COLOUR</button>
             </div>
             <div style="margin-left:auto;font-size:10px;color:#8a95a5;letter-spacing:0.3px;align-self:center;padding-right:4px;">Saved 19-Apr-26 (v3 + MEMO)</div>
         </div>
@@ -7396,6 +7441,7 @@
                 var hasSuffix = /#[AI]$/.test(text);
                 var clean = cleanText(text);
                 var suffix = hasSuffix ? text.match(/#[AI]$/)[0] : '#A';
+                var tagClass = suffix === '#I' ? 'tag-i' : 'tag-a';
 
                 if (isSub) {
                     if (!inSubList) {
@@ -7403,14 +7449,14 @@
                         inSubList = true;
                     }
                     var cleanBold = clean.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
-                    html += '<li><span class="bullet-dash">\u2013</span> <span class="suffix-tag">' + suffix + '</span> ' + cleanBold + '</li>';
+                    html += '<li class="' + tagClass + '"><span class="bullet-dash">\u2013</span> <span class="suffix-tag">' + suffix + '</span> ' + cleanBold + '</li>';
                 } else {
                     if (inSubList) {
                         html += '</ul>';
                         inSubList = false;
                     }
                     var cleanBoldTop = clean.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
-                    html += '<li><span class="bullet-dash">\u2013</span> <span class="suffix-tag">' + suffix + '</span> ' + cleanBoldTop + '</li>';
+                    html += '<li class="' + tagClass + '"><span class="bullet-dash">\u2013</span> <span class="suffix-tag">' + suffix + '</span> ' + cleanBoldTop + '</li>';
                 }
             });
             if (inSubList) html += '</ul>';
@@ -7424,7 +7470,7 @@
             if (typeof judgement === 'string') {
                 var cleaned = cleanText(judgement);
                 cleaned = cleaned.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
-                return '<span class="suffix-tag">#J</span> <strong>' + cleaned + '</strong>';
+                return '<span class="tag-j"><span class="suffix-tag">#J</span> <strong>' + cleaned + '</strong></span>';
             }
             if (Array.isArray(judgement) && judgement.length > 0) {
                 var jhtml = '<ul class="judgement-bullets">';
@@ -7439,13 +7485,13 @@
                             jhtml += '<ul class="sub-bullets">';
                             inSubList = true;
                         }
-                        jhtml += '<li><span class="bullet-dash">\u2013</span> ' + clean + '</li>';
+                        jhtml += '<li class="tag-j"><span class="bullet-dash">\u2013</span> ' + clean + '</li>';
                     } else {
                         if (inSubList) {
                             jhtml += '</ul>';
                             inSubList = false;
                         }
-                        jhtml += '<li><span class="bullet-dash">\u2013</span> <span class="suffix-tag">#J</span> <strong>' + clean + '</strong></li>';
+                        jhtml += '<li class="tag-j"><span class="bullet-dash">\u2013</span> <span class="suffix-tag">#J</span> <strong>' + clean + '</strong></li>';
                     }
                 });
                 if (inSubList) jhtml += '</ul>';
@@ -8520,6 +8566,13 @@
             document.body.classList.toggle('fundamental-view', nowOn);
             btn.textContent = nowOn ? 'PILLARS' : 'FUNDAMENTAL';
             updateStickyPositions();
+        }
+
+        function toggleColourMode() {
+            var btn = document.getElementById('btn-colour');
+            var nowOn = !btn.classList.contains('active');
+            btn.classList.toggle('active', nowOn);
+            document.body.classList.toggle('colour-mode', nowOn);
         }
 
         function toggleExpandCollapse() {
