@@ -806,6 +806,54 @@
             border: 1px solid #30363d;
         }
 
+        /* ============================================================
+           FUNDAMENTAL VIEW — swaps P1-P6 + Setup/Fulcrum/Rec/Next/Updated
+           for 11 fundamental-case columns (3 Case AFs + 8 Building Blocks)
+           ============================================================ */
+        .fundamental-col { display: none; }
+        body.fundamental-view .standard-col { display: none; }
+        body.fundamental-view th.fundamental-col,
+        body.fundamental-view td.fundamental-col { display: table-cell; }
+        body.fundamental-view .pillar-group-header { display: none !important; }
+
+        th.fundamental-col {
+            font-size: 9px;
+            line-height: 1.15;
+            padding: 6px 4px;
+            min-width: 52px;
+            max-width: 64px;
+            text-align: center;
+            vertical-align: middle;
+            white-space: normal;
+        }
+        th.fundamental-col .fc-num {
+            display: block;
+            font-size: 9px;
+            color: #8b949e;
+            font-weight: 600;
+            letter-spacing: 0.4px;
+            margin-bottom: 2px;
+        }
+        th.fundamental-col .fc-label {
+            display: block;
+            font-size: 10px;
+            color: #c9d1d9;
+            font-weight: 600;
+        }
+        th.fundamental-af { background-color: #0e1a24; }
+        th.fundamental-bb { background-color: #0e1d16; }
+        td.fundamental-col {
+            text-align: center;
+            padding: 6px 4px;
+            min-width: 52px;
+            max-width: 64px;
+        }
+        /* Group divider between AF#3 and BB#1 */
+        th.fundamental-col.fc-divider,
+        td.fundamental-col.fc-divider {
+            border-left: 2px solid #30363d;
+        }
+
         .group-label {
             text-align: center;
             font-size: 10px;
@@ -1995,7 +2043,11 @@
             <div class="toolbar-group">
                 <button class="toolbar-btn" id="btn-key" onclick="toggleView('key')">KEY</button>
             </div>
-            <div style="margin-left:auto;font-size:10px;color:#8a95a5;letter-spacing:0.3px;align-self:center;padding-right:4px;">Saved 19-Apr-26 06:54</div>
+            <div class="toolbar-separator"></div>
+            <div class="toolbar-group">
+                <button class="toolbar-btn" id="btn-fundamental" onclick="toggleFundamental()">FUNDAMENTAL</button>
+            </div>
+            <div style="margin-left:auto;font-size:10px;color:#8a95a5;letter-spacing:0.3px;align-self:center;padding-right:4px;">Saved 19-Apr-26 07:20</div>
         </div>
         <!-- IC Ratings (always visible, tabs removed) -->
         <div id="ratings" class="tab-content active">
@@ -2078,17 +2130,30 @@
                             <th>Company</th>
                             <th>Stage</th>
                             <th class="map-column-header">MAP</th>
-                            <th class="pillar-column">P1<br>Technical Momentum</th>
-                            <th class="pillar-column">P2<br>Market Paradigm</th>
-                            <th class="pillar-column">P3<br>Fund Change</th>
-                            <th class="pillar-column">P4<br>Building Blocks</th>
-                            <th class="pillar-column">P5<br>SS Earnings Momentum</th>
-                            <th class="pillar-column">P6<br>Valuation<br>in Range</th>
-                            <th>Setup</th>
-                            <th>Fulcrum Driver</th>
-                            <th>Rec</th>
-                            <th>Next Action</th>
-                            <th>Updated</th>
+                            <th class="pillar-column standard-col">P1<br>Technical Momentum</th>
+                            <th class="pillar-column standard-col">P2<br>Market Paradigm</th>
+                            <th class="pillar-column standard-col">P3<br>Fund Change</th>
+                            <th class="pillar-column standard-col">P4<br>Building Blocks</th>
+                            <th class="pillar-column standard-col">P5<br>SS Earnings Momentum</th>
+                            <th class="pillar-column standard-col">P6<br>Valuation<br>in Range</th>
+                            <th class="standard-col">Setup</th>
+                            <th class="standard-col">Fulcrum Driver</th>
+                            <th class="standard-col">Rec</th>
+                            <th class="standard-col">Next Action</th>
+                            <th class="standard-col">Updated</th>
+                            <!-- Fundamental view — 3 Case AFs -->
+                            <th class="fundamental-col fundamental-af"><span class="fc-num">AF #1</span><span class="fc-label">Case<br>Outputs</span></th>
+                            <th class="fundamental-col fundamental-af"><span class="fc-num">AF #2</span><span class="fc-label">Case<br>Inputs</span></th>
+                            <th class="fundamental-col fundamental-af"><span class="fc-num">AF #3</span><span class="fc-label">Case<br>Setups</span></th>
+                            <!-- Fundamental view — 8 Building Blocks -->
+                            <th class="fundamental-col fundamental-bb fc-divider"><span class="fc-num">BB #1</span><span class="fc-label">Simplicity<br>Guardrails</span></th>
+                            <th class="fundamental-col fundamental-bb"><span class="fc-num">BB #2</span><span class="fc-label">Foundation<br>Quality</span></th>
+                            <th class="fundamental-col fundamental-bb"><span class="fc-num">BB #3</span><span class="fc-label">Market<br>Paradigm Fit</span></th>
+                            <th class="fundamental-col fundamental-bb"><span class="fc-num">BB #4</span><span class="fc-label">Seek-to-Avoid<br>Constraints</span></th>
+                            <th class="fundamental-col fundamental-bb"><span class="fc-num">BB #5</span><span class="fc-label">Size-Limiting<br>Constraints</span></th>
+                            <th class="fundamental-col fundamental-bb"><span class="fc-num">BB #6</span><span class="fc-label">Invalidating<br>Constraints</span></th>
+                            <th class="fundamental-col fundamental-bb"><span class="fc-num">BB #7</span><span class="fc-label">Past Trend /<br>Momentum</span></th>
+                            <th class="fundamental-col fundamental-bb"><span class="fc-num">BB #8</span><span class="fc-label">Nice-to-Have<br>Attributes</span></th>
                         </tr>
                     </thead>
                     <tbody id="table-body">
@@ -7447,17 +7512,18 @@
                         '<td>' + escapeHtml(stock.company_name) + '</td>' +
                         '<td><span class="stage-badge ' + getStageClass(stock.stage) + '">' + stock.stage + '</span></td>' +
                         '<td class="map-column-cell"><button type="button" class="map-button" onclick="openMapView(event,' + index + ')" title="Open summary MAP for ' + escapeHtml(stock.ticker) + '">MAP</button></td>' +
-                        '<td class="pillar-column" onclick="onPillarBadgeClick(event,' + index + ',\'p1\')" style="cursor:pointer;"><span class="rating-badge ' + getRatingClass(stock.pillars.p1_technical_momentum) + '">' + stock.pillars.p1_technical_momentum + '</span></td>' +
-                        '<td class="pillar-column" onclick="onPillarBadgeClick(event,' + index + ',\'p2\')" style="cursor:pointer;"><span class="rating-badge ' + getRatingClass(stock.pillars.p2_market_paradigm_fit) + '">' + stock.pillars.p2_market_paradigm_fit + '</span></td>' +
-                        '<td class="pillar-column" onclick="onPillarBadgeClick(event,' + index + ',\'p3\')" style="cursor:pointer;"><span class="rating-badge ' + getRatingClass(stock.pillars.p3_fundamental_change) + '">' + stock.pillars.p3_fundamental_change + '</span></td>' +
-                        '<td class="pillar-column" onclick="onPillarBadgeClick(event,' + index + ',\'p4\')" style="cursor:pointer;"><span class="rating-badge ' + getRatingClass(stock.pillars.p4_building_blocks) + '">' + stock.pillars.p4_building_blocks + '</span></td>' +
-                        '<td class="pillar-column" onclick="onPillarBadgeClick(event,' + index + ',\'p5\')" style="cursor:pointer;"><span class="rating-badge ' + getRatingClass(stock.pillars.p5_ss_earnings_momentum) + '">' + stock.pillars.p5_ss_earnings_momentum + '</span></td>' +
-                        '<td class="pillar-column" onclick="onPillarBadgeClick(event,' + index + ',\'p6\')" style="cursor:pointer;"><span class="rating-badge ' + getRatingClass(stock.pillars.p6_valuation) + '">' + stock.pillars.p6_valuation + '</span></td>' +
-                        '<td style="font-size: 11px;">' + escapeHtml(stock.investment_case.primary_setup) + '</td>' +
-                        '<td style="font-size: 11px;">' + escapeHtml(stock.investment_case.fulcrum_drivers.substring(0, 40)) + '...</td>' +
-                        '<td><span class="stage-badge stage-live">' + stock.actions.apm_recommendation + '</span></td>' +
-                        '<td style="font-size: 11px;">' + escapeHtml(stock.actions.next_action.substring(0, 30)) + '...</td>' +
-                        '<td>' + stock.last_updated + '</td>';
+                        '<td class="pillar-column standard-col" onclick="onPillarBadgeClick(event,' + index + ',\'p1\')" style="cursor:pointer;"><span class="rating-badge ' + getRatingClass(stock.pillars.p1_technical_momentum) + '">' + stock.pillars.p1_technical_momentum + '</span></td>' +
+                        '<td class="pillar-column standard-col" onclick="onPillarBadgeClick(event,' + index + ',\'p2\')" style="cursor:pointer;"><span class="rating-badge ' + getRatingClass(stock.pillars.p2_market_paradigm_fit) + '">' + stock.pillars.p2_market_paradigm_fit + '</span></td>' +
+                        '<td class="pillar-column standard-col" onclick="onPillarBadgeClick(event,' + index + ',\'p3\')" style="cursor:pointer;"><span class="rating-badge ' + getRatingClass(stock.pillars.p3_fundamental_change) + '">' + stock.pillars.p3_fundamental_change + '</span></td>' +
+                        '<td class="pillar-column standard-col" onclick="onPillarBadgeClick(event,' + index + ',\'p4\')" style="cursor:pointer;"><span class="rating-badge ' + getRatingClass(stock.pillars.p4_building_blocks) + '">' + stock.pillars.p4_building_blocks + '</span></td>' +
+                        '<td class="pillar-column standard-col" onclick="onPillarBadgeClick(event,' + index + ',\'p5\')" style="cursor:pointer;"><span class="rating-badge ' + getRatingClass(stock.pillars.p5_ss_earnings_momentum) + '">' + stock.pillars.p5_ss_earnings_momentum + '</span></td>' +
+                        '<td class="pillar-column standard-col" onclick="onPillarBadgeClick(event,' + index + ',\'p6\')" style="cursor:pointer;"><span class="rating-badge ' + getRatingClass(stock.pillars.p6_valuation) + '">' + stock.pillars.p6_valuation + '</span></td>' +
+                        '<td class="standard-col" style="font-size: 11px;">' + escapeHtml(stock.investment_case.primary_setup) + '</td>' +
+                        '<td class="standard-col" style="font-size: 11px;">' + escapeHtml(stock.investment_case.fulcrum_drivers.substring(0, 40)) + '...</td>' +
+                        '<td class="standard-col"><span class="stage-badge stage-live">' + stock.actions.apm_recommendation + '</span></td>' +
+                        '<td class="standard-col" style="font-size: 11px;">' + escapeHtml(stock.actions.next_action.substring(0, 30)) + '...</td>' +
+                        '<td class="standard-col">' + stock.last_updated + '</td>' +
+                        renderFundamentalCells(stock, index);
 
                     tbody.appendChild(row);
 
@@ -7473,7 +7539,7 @@
                         pillarHtml = '<div style="color:#ff6b6b;padding:12px;">Error rendering pillars for ' + stock.ticker + ': ' + pillarErr.message + '</div>';
                     }
 
-                    treeRow.innerHTML = '<td colspan="16"><div class="tree-container expanded">' +
+                    treeRow.innerHTML = '<td colspan="27"><div class="tree-container expanded">' +
                         '<div class="pillars-sticky-header" id="pillars-sticky-' + index + '">' +
                         '<h3 style="font-size: 14px; margin-bottom: 12px;">6 Pillars — ' + escapeHtml(stock.ticker) + '</h3>' +
                         '<div class="pillars-row">' + pillarHtml + '</div>' +
@@ -7485,7 +7551,7 @@
                 } catch (rowErr) {
                     // Append an error row so the user sees something
                     var errRow = document.createElement('tr');
-                    errRow.innerHTML = '<td colspan="16" style="color:#ff6b6b;padding:12px;">Error rendering ' + (stock ? stock.ticker : 'unknown') + ': ' + rowErr.message + '</td>';
+                    errRow.innerHTML = '<td colspan="27" style="color:#ff6b6b;padding:12px;">Error rendering ' + (stock ? stock.ticker : 'unknown') + ': ' + rowErr.message + '</td>';
                     tbody.appendChild(errRow);
                 }
             });
@@ -7532,6 +7598,18 @@
                 document.body.classList.toggle('show-key', !isActive);
             }
             // KEY toggle changes thead height; recalculate sticky tops
+            updateStickyPositions();
+        }
+
+        // FUNDAMENTAL <-> PILLARS toggle
+        //   OFF (default): show P1-P6 + Setup/Fulcrum/Rec/Next/Updated
+        //   ON:            show 3 Case AFs + 8 Building Blocks
+        function toggleFundamental() {
+            var btn = document.getElementById('btn-fundamental');
+            var nowOn = !btn.classList.contains('active');
+            btn.classList.toggle('active', nowOn);
+            document.body.classList.toggle('fundamental-view', nowOn);
+            btn.textContent = nowOn ? 'PILLARS' : 'FUNDAMENTAL';
             updateStickyPositions();
         }
 
@@ -7599,6 +7677,50 @@
             var td = getTreeDataForStock(stock);
             if (!td || !td.pillars) return null;
             return td.pillars[pillarId] || null;
+        }
+
+        // Build the 11 fundamental-view cells for a stock row.
+        // Order: P3.AF#1, P3.AF#2, P3.AF#3, P4.BB#1, ..., P4.BB#8.
+        // BB#1 cell gets fc-divider class to mark visual separation from AFs.
+        // Click navigates to the family detail panel.
+        function renderFundamentalCells(stock, stockIdx) {
+            var p3 = getPillarById(stock, 'p3');
+            var p4 = getPillarById(stock, 'p4');
+            var spec = [
+                { label: 'p3', pillar: p3, af: 1, kind: 'af' },
+                { label: 'p3', pillar: p3, af: 2, kind: 'af' },
+                { label: 'p3', pillar: p3, af: 3, kind: 'af' },
+                { label: 'p4', pillar: p4, af: 1, kind: 'bb', divider: true },
+                { label: 'p4', pillar: p4, af: 2, kind: 'bb' },
+                { label: 'p4', pillar: p4, af: 3, kind: 'bb' },
+                { label: 'p4', pillar: p4, af: 4, kind: 'bb' },
+                { label: 'p4', pillar: p4, af: 5, kind: 'bb' },
+                { label: 'p4', pillar: p4, af: 6, kind: 'bb' },
+                { label: 'p4', pillar: p4, af: 7, kind: 'bb' },
+                { label: 'p4', pillar: p4, af: 8, kind: 'bb' }
+            ];
+            var html = '';
+            for (var i = 0; i < spec.length; i++) {
+                var s = spec[i];
+                var rating = '\u2014';
+                var familyIdx = -1;
+                if (s.pillar) {
+                    familyIdx = getFamilyIdxByAfNumber(s.pillar, s.af);
+                    if (familyIdx >= 0 && s.pillar.families[familyIdx]) {
+                        rating = s.pillar.families[familyIdx].rating || '\u2014';
+                    }
+                }
+                var cls = 'fundamental-col';
+                if (s.divider) cls += ' fc-divider';
+                var clickAttr = '';
+                if (familyIdx >= 0) {
+                    clickAttr = ' onclick="onPillarBadgeClick(event,' + stockIdx + ',\'' + s.label + '\'); setTimeout(function(){ var fams=document.querySelectorAll(\'#pillar-detail-panel-' + stockIdx + ' .family-header\'); if(fams[' + familyIdx + ']) fams[' + familyIdx + '].click(); },120);" style="cursor:pointer;"';
+                }
+                html += '<td class="' + cls + '"' + clickAttr + '>' +
+                        '<span class="rating-badge ' + getRatingClass(rating) + '">' + escapeHtml(rating) + '</span>' +
+                        '</td>';
+            }
+            return html;
         }
 
         // Family index map — pillar -> {AF number -> family idx in pillar.families}
