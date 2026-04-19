@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1400, initial-scale=0.28, minimum-scale=0.15, maximum-scale=3.0, user-scalable=yes">
     <title>IC Ratings Dashboard</title>
     <style>
         * {
@@ -8089,51 +8089,16 @@
             }
 
             overlay.classList.add('active');
-
-            // On mobile/iPad the page is zoomed out to fit the wide table.
-            // We need the overlay to fill the real screen, not the layout viewport.
-            // Strategy: use position:absolute, scroll to top-left, size to the
-            // visual viewport, then lock background scroll. The user can freely
-            // pinch-zoom inside the overlay after it opens.
-            var vv = window.visualViewport;
-            var w = vv ? vv.width : window.innerWidth;
-            var h = vv ? vv.height : window.innerHeight;
-            var sl = window.pageXOffset || document.documentElement.scrollLeft || 0;
-            var st = window.pageYOffset || document.documentElement.scrollTop || 0;
-
-            overlay.style.position = 'absolute';
-            overlay.style.left = sl + 'px';
-            overlay.style.top = st + 'px';
-            overlay.style.width = w + 'px';
-            overlay.style.height = h + 'px';
-
             document.body.style.overflow = 'hidden';
-        }
 
-        // Only re-layout on orientation change (not during pinch-zoom)
-        window.addEventListener('orientationchange', function() {
-            var overlay = document.getElementById('map-modal-overlay');
-            if (!overlay || !overlay.classList.contains('active')) return;
-            // Small delay so dimensions settle after rotation
-            setTimeout(function() {
-                var vv = window.visualViewport;
-                var w = vv ? vv.width : window.innerWidth;
-                var h = vv ? vv.height : window.innerHeight;
-                overlay.style.width = w + 'px';
-                overlay.style.height = h + 'px';
-            }, 300);
-        });
+            // Scroll to top so the overlay is visible
+            window.scrollTo(0, 0);
+        }
 
         function closeMapView() {
             var overlay = document.getElementById('map-modal-overlay');
             if (overlay) {
                 overlay.classList.remove('active');
-                // Reset inline styles so CSS takes over when closed
-                overlay.style.position = '';
-                overlay.style.left = '';
-                overlay.style.top = '';
-                overlay.style.width = '';
-                overlay.style.height = '';
             }
             document.body.style.overflow = '';
         }
