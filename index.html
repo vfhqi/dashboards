@@ -2776,6 +2776,80 @@
         .map-rating-f { background: #8a2a2a; color: #ffd6d6; }
         .map-rating-blank { background: #2d3745; color: #8892a0; }
 
+        /* MAP judgement toggle button */
+        .map-judgement-toggle {
+            background: transparent;
+            border: 1px solid #2d3745;
+            color: #8b949e;
+            font-size: 11px;
+            font-family: inherit;
+            font-weight: 600;
+            padding: 2px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.12s, color 0.12s, border-color 0.12s;
+            margin-right: 6px;
+            letter-spacing: 0.3px;
+        }
+        .map-judgement-toggle:hover {
+            background: #1f2a3a;
+            color: #c9d1d9;
+            border-color: #3d4a5c;
+        }
+        .map-judgement-toggle.active {
+            background: rgba(163, 113, 247, 0.15);
+            border-color: rgba(163, 113, 247, 0.5);
+            color: #c4a5f7;
+        }
+
+        /* MAP node-level judgement snippet (family level) */
+        .map-node-judgement {
+            display: none;
+            padding: 3px 8px 4px;
+            font-size: 9.5px;
+            line-height: 1.35;
+            color: #9ca8b8;
+            border-top: 1px solid rgba(48, 54, 61, 0.5);
+            background: rgba(22, 27, 34, 0.6);
+            border-radius: 0 0 3px 3px;
+        }
+        .map-show-judgements .map-node-judgement {
+            display: block;
+        }
+        .map-node-judgement .map-j-line {
+            margin: 1px 0;
+            padding-left: 6px;
+            border-left: 2px solid rgba(163, 113, 247, 0.4);
+        }
+        .map-node-judgement .map-j-line strong {
+            color: #c4a5f7;
+            font-weight: 600;
+        }
+
+        /* MAP child-level judgement snippet */
+        .map-child-judgement {
+            display: none;
+            width: 100%;
+            font-size: 9px;
+            line-height: 1.3;
+            color: #7d8a9a;
+            padding: 1px 6px 2px 10px;
+            margin-top: -1px;
+            white-space: normal;
+        }
+        .map-show-judgements .map-child-judgement {
+            display: block;
+        }
+        .map-show-judgements .map-child {
+            flex-wrap: wrap;
+        }
+        .map-child-judgement .map-j-tag {
+            color: rgba(163, 113, 247, 0.6);
+            font-size: 8px;
+            font-weight: 600;
+            margin-right: 3px;
+        }
+
         /* Responsive — stack on narrow screens */
         @media (max-width: 1100px) {
             .map-bb-grid {
@@ -8610,6 +8684,136 @@
             return '\u2014';
         }
 
+        // Find a child's judgement array by walking the family subtree.
+        // Same traversal as findChildRating but returns the judgement array.
+        function findChildJudgement(family, labelFragment) {
+            if (!family) return null;
+            var frag = labelFragment.toLowerCase();
+
+            function walk(nodes) {
+                if (!nodes || !nodes.length) return null;
+                for (var i = 0; i < nodes.length; i++) {
+                    var n = nodes[i];
+                    var lbl = (n.label || '').toLowerCase();
+                    if (lbl.indexOf(frag) !== -1) {
+                        return n.judgement || null;
+                    }
+                    if (n.children && n.children.length) {
+                        var nested = walk(n.children);
+                        if (nested !== null) return nested;
+                    }
+                }
+                return null;
+            }
+
+            var starts = [];
+            if (family.children) starts.push(family.children);
+            if (family.dimensions) starts.push(family.dimensions);
+            if (family.attributes) starts.push(family.attributes);
+            if (family.rows) starts.push(family.rows);
+
+            for (var s = 0; s < starts.length; s++) {
+                var hit = walk(starts[s]);
+                if (hit !== null) return hit;
+            }
+            return null;
+        }
+
+        // Extract the most substantive 1-2 line judgement snippet from a
+        // judgement array. Prioritises #J tagged bullets over #A over #I.
+        // Returns plain text (HTML-safe), or '' if nothing useful found.
+        function extractMapJudgementSnippet(judgement, maxLines) {
+            if (!judgement) return '';
+            maxLines = maxLines || 2;
+
+            // Normalise to array
+            var bullets;
+            if (typeof judgement === 'string') {
+                bullets = [judgement];
+            } else if (Array.isArray(judgement)) {
+                bullets = judgement;
+            } else {
+                return '';
+            }
+
+            // Strip sub-bullets (indented "  - ") — they are supporting detail
+            var topLevel = [];
+            for (var i = 0; i < bullets.length; i++) {
+                if (bullets[i].indexOf('  - ') !== 0) {
+                    topLevel.push(bullets[i]);
+                }
+            }
+            if (topLevel.length === 0) return '';
+
+            // Score and rank: #J > #A > #I > untagged
+            // Within each tier, prefer bullets with ** bold ** markers (more substantive)
+            // and avoid "Not A because" / "Contra:" prefixed bullets (they're caveats)
+            function scoreBullet(text) {
+                var score = 0;
+                if (text.indexOf('#J') !== -1) score += 100;
+                else if (text.indexOf('#A') !== -1) score += 50;
+                else if (text.indexOf('#I') !== -1) score += 10;
+                // Boost for bold content (substantive assertions)
+                if (text.indexOf('**') !== -1) score += 20;
+                // Penalise caveats and "not A because" explanations
+                var lower = text.toLowerCase();
+                if (lower.indexOf('not a because') !== -1) score -= 30;
+                if (lower.indexOf('not b because') !== -1) score -= 30;
+                if (lower.indexOf('**contra:') !== -1 || lower.indexOf('**contra.**') !== -1) score -= 25;
+                if (lower.indexOf('contra:') !== -1) score -= 15;
+                // Penalise very short bullets (less informative)
+                if (text.length < 20) score -= 10;
+                // Boost longer substantive text (more likely to be the core judgement)
+                if (text.length > 40) score += 5;
+                return score;
+            }
+
+            // Sort by score descending
+            var scored = [];
+            for (var j = 0; j < topLevel.length; j++) {
+                scored.push({ text: topLevel[j], score: scoreBullet(topLevel[j]) });
+            }
+            scored.sort(function(a, b) { return b.score - a.score; });
+
+            // Take top N, clean for display
+            var result = [];
+            for (var k = 0; k < Math.min(maxLines, scored.length); k++) {
+                var line = scored[k].text;
+                // Strip tags: #J, #A, #I
+                line = line.replace(/\s*#[JAI]\b/g, '');
+                // Convert **bold** to <strong>
+                line = line.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+                // Trim whitespace
+                line = line.replace(/^\s+|\s+$/g, '');
+                if (line.length > 0) {
+                    result.push(line);
+                }
+            }
+            return result.join('<br>');
+        }
+
+        // Toggle judgement visibility in MAP modal
+        var mapJudgementsVisible = false;
+        function toggleMapJudgements() {
+            mapJudgementsVisible = !mapJudgementsVisible;
+            var body = document.getElementById('map-modal-body');
+            var btn = document.getElementById('map-judgement-toggle');
+            if (body) {
+                if (mapJudgementsVisible) {
+                    body.classList.add('map-show-judgements');
+                } else {
+                    body.classList.remove('map-show-judgements');
+                }
+            }
+            if (btn) {
+                if (mapJudgementsVisible) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            }
+        }
+
         // CSS class for rating chip
         function mapRatingClass(rating) {
             var r = (rating || '').toString().toUpperCase();
@@ -8819,6 +9023,15 @@
             html += '<span class="map-node-number">' + prefix + node.number + '</span>';
             html += escapeHtml(node.title);
             html += '</div>';
+
+            // Family-level judgement snippet (shown when toggle active)
+            var familySnippet = family ? extractMapJudgementSnippet(family.judgement, 2) : '';
+            if (familySnippet) {
+                html += '<div class="map-node-judgement">';
+                html += '<div class="map-j-line">' + familySnippet + '</div>';
+                html += '</div>';
+            }
+
             html += '<div class="map-children">';
 
             for (var i = 0; i < node.children.length; i++) {
@@ -8833,6 +9046,14 @@
                     + ',\'' + safeLabel + '\')">';
                 html += '<span class="map-child-label">' + escapeHtml(childLabel) + '</span>';
                 html += '<span class="map-child-rating ' + ratingClass + '">' + escapeHtml(mapRatingText(rating)) + '</span>';
+
+                // Child-level judgement snippet (1 line only)
+                var childJudgement = findChildJudgement(family, childLabel);
+                var childSnippet = extractMapJudgementSnippet(childJudgement, 1);
+                if (childSnippet) {
+                    html += '<div class="map-child-judgement"><span class="map-j-tag">#J</span>' + childSnippet + '</div>';
+                }
+
                 html += '</div>';
             }
 
@@ -8895,6 +9116,19 @@
                 }
             }
 
+            // Restore judgement toggle state from previous interaction
+            if (body && mapJudgementsVisible) {
+                body.classList.add('map-show-judgements');
+            }
+            var jBtn = document.getElementById('map-judgement-toggle');
+            if (jBtn) {
+                if (mapJudgementsVisible) {
+                    jBtn.classList.add('active');
+                } else {
+                    jBtn.classList.remove('active');
+                }
+            }
+
             overlay.classList.add('active');
             document.body.style.overflow = 'hidden';
 
@@ -8919,7 +9153,10 @@
                 '<div class="map-modal-frame" id="map-modal-frame">' +
                     '<div class="map-modal-header">' +
                         '<div class="map-modal-title" id="map-modal-title"></div>' +
-                        '<button type="button" class="map-modal-close" onclick="closeMapView()">Close \u2715</button>' +
+                        '<div style="display:flex;align-items:center;gap:4px;">' +
+                            '<button type="button" class="map-judgement-toggle" id="map-judgement-toggle" onclick="toggleMapJudgements()" title="Show/hide key judgement bullets">#J Judgements</button>' +
+                            '<button type="button" class="map-modal-close" onclick="closeMapView()">Close \u2715</button>' +
+                        '</div>' +
                     '</div>' +
                     '<div class="map-modal-body" id="map-modal-body"></div>' +
                 '</div>';
