@@ -2374,33 +2374,20 @@
             color: #6b7280;
         }
 
-        /* ---- MEMO: Kill ALL default list bullets — dash is the only marker ---- */
-        .memo-section ul,
-        .memo-pillar-stack ul,
-        .memo-family-block ul,
-        .memo-child-block ul,
-        .memo-detail-body ul,
-        .memo-item-content ul {
-            list-style: none;
-            padding-left: 0;
+        /* ---- MEMO: Kill ALL default list bullets globally — dash span is the only marker ---- */
+        .memo-modal-frame ul,
+        .memo-modal-frame ol {
+            list-style: none !important;
+            padding-left: 0 !important;
             margin: 0;
         }
-        .memo-section li,
-        .memo-pillar-stack li,
-        .memo-family-block li,
-        .memo-child-block li,
-        .memo-detail-body li {
-            list-style: none;
-            padding-left: 18px;
-            text-indent: -18px;
+        .memo-modal-frame li {
+            list-style: none !important;
+            list-style-type: none !important;
         }
-        /* Sub-bullets get extra left indent */
-        .memo-section .sub-bullets,
-        .memo-pillar-stack .sub-bullets,
-        .memo-family-block .sub-bullets,
-        .memo-child-block .sub-bullets,
-        .memo-detail-body .sub-bullets {
-            padding-left: 18px;
+        /* Sub-bullets get left indent inside memo */
+        .memo-modal-frame .sub-bullets {
+            padding-left: 20px !important;
         }
 
         /* Memo sections */
@@ -2523,10 +2510,17 @@
             padding-left: 16px;
             text-indent: -16px;
         }
-        /* Only add dash pseudo-element to plain list items (not inside judgement/analysis bullet renderers) */
+        /* Add dash marker to plain list items in Section C/D (not inside judgement/analysis bullet renderers) */
         ul.memo-item-content > li::before {
             content: "\2013\00a0";
             color: #9ca3af;
+        }
+        /* Judgement/analysis bullets already have dash spans — don't add pseudo-element */
+        .judgement-bullets > li::before,
+        .analysis-bullets > li::before,
+        .judgement-bullets .sub-bullets li::before,
+        .analysis-bullets .sub-bullets li::before {
+            content: none !important;
         }
         .memo-placeholder {
             font-size: 11px;
