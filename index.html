@@ -7204,6 +7204,7 @@
         // Utility functions
         function getRatingClass(rating) {
             if (!rating || rating === "\u2014") return "rating-blank";
+            if (typeof rating !== 'string') rating = String(rating);
             return 'rating-' + rating.toLowerCase();
         }
 
