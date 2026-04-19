@@ -1527,10 +1527,10 @@
 
         /* Responsive */
         
-        /* Detail panel below all 6 pillar cards */
+        /* Detail panel below stock row (pillar cards removed) */
         .pillar-detail-panel {
             display: none;
-            margin-top: 12px;
+            margin-top: 4px;
             padding: 16px;
             background-color: #ffffff;
             border: 1px solid #d8dee4;
@@ -1541,6 +1541,12 @@
             display: block;
             border: 2px solid #2563eb;
             border-radius: 6px;
+        }
+
+        /* Highlight the active pillar badge in the stock row */
+        td.pillar-column.pillar-badge-active {
+            background-color: rgba(37, 99, 235, 0.08);
+            box-shadow: inset 0 -2px 0 #2563eb;
         }
 
         .pillar-detail-panel-header {
@@ -2278,8 +2284,8 @@
             gap: 0;
         }
         .memo-pillar-stack-item {
-            padding: 16px 0;
-            border-bottom: 1px solid #d0d7de;
+            padding: 20px 0;
+            border-bottom: 2px solid #d0d7de;
         }
         .memo-pillar-stack-item:last-child {
             border-bottom: none;
@@ -2292,25 +2298,33 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            margin-bottom: 10px;
-            padding-bottom: 6px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
             border-bottom: 1px solid rgba(124, 58, 237, 0.12);
         }
         .memo-pillar-stack-label {
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 700;
             color: #7c3aed;
         }
         .memo-pillar-stack-judgements {
-            margin-bottom: 6px;
+            margin-bottom: 8px;
+            font-size: 14px;
+            line-height: 1.6;
         }
         .memo-pillar-stack-judgements .judgement-bullets > li {
             font-weight: 700;
             line-height: 1.6;
+            margin-bottom: 4px;
         }
         .memo-pillar-stack-analysis {
-            margin-top: 4px;
+            margin-top: 6px;
+            font-size: 14px;
+            line-height: 1.6;
             opacity: 0.9;
+        }
+        .memo-pillar-stack-analysis li {
+            margin-bottom: 3px;
         }
 
         /* Memo sections */
@@ -3329,15 +3343,59 @@
 																								"label": "Market Paradigm Fit",
 																								"type": "pillar",
 																								"nature": "qualitative",
-																								"rating": "—",
+																								"rating": "\u2014",
 																								"judgement": [
-																																"**Not yet assessed.** #J",
-																																"  - Dimensions left blank per project plan. #A",
-																																"  - NVTK operates in factory automation — high structural demand but cyclically sensitive to IP trends. #I",
-																																"  - **Contra:** Iran conflict risk-off environment may compress multiples for capex-exposed industrials regardless of micro fundamentals. #A"
+																																"**Not yet assessed at full depth \u2014 preliminary mapping suggests mixed fit.** #J",
+																																"  - Factory automation is a structural beneficiary of nearshoring/reshoring theme, but cyclically sensitive to IP trends. #I",
+																																"  - EU Chips Act and US IRA create policy-backed demand floor, partially insulating from macro cycle. #A",
+																																"  - Iran conflict risk-off environment (Mar-26) compresses multiples for capex-exposed industrials. #I",
+																																"  - **Contra:** Paradigm assessment deferred \u2014 without full analysis, fit could be better or worse than assumed. #A"
 																								],
-																								"analysis": [],
-																								"families": []
+																								"analysis": [
+																																"**Structural demand tailwinds** from reshoring/nearshoring theme. #A",
+																																"  - EU Chips Act EUR 43bn + US IRA create multi-year capex cycle. #I",
+																																"  - Labour scarcity at 15Y high drives automation substitution. #I",
+																																"**Cyclical sensitivity** to manufacturing PMI and IP data. #A",
+																																"  - IP decline >5% historically triggers 20-30% order declines in automation. #I",
+																																"**Risk-off environment** (Iran conflict Mar-26) creates headwind. #A",
+																																"  - Capex-exposed industrials de-rating across the board. #I"
+																								],
+																								"families": [
+																																{
+																																								"id": "p2.mf1",
+																																								"label": "Market regime alignment",
+																																								"type": "family",
+																																								"rating": "\u2014",
+																																								"judgement": [
+																																																"**Deferred \u2014 preliminary view: late-cycle industrial capex beneficiary, mixed macro signal.** #J",
+																																																"  - PMI manufacturing at 51.2 (Apr-26) \u2014 expansion territory but decelerating. #I",
+																																																"  - **Contra:** PMI trend is down from 53.1 in Jan-26, suggesting cycle peaking. #A"
+																																								],
+																																								"analysis": [
+																																																"**PMI at 51.2** \u2014 still expansionary but decelerating from 53.1 (Jan-26). #A",
+																																																"  - IP +2.1% YoY (Feb-26), above thesis threshold of +2%. #I"
+																																								],
+																																								"children": []
+																																},
+																																{
+																																								"id": "p2.mf2",
+																																								"label": "Thematic fit with current paradigm",
+																																								"type": "family",
+																																								"rating": "\u2014",
+																																								"judgement": [
+																																																"**Factory automation sits at intersection of reshoring, AI/robotics, and labour scarcity themes.** #J",
+																																																"  - Strong structural fit. #A",
+																																																"  - But not a pure AI play \u2014 more traditional capex cycle. #A",
+																																																"  - **Contra:** Market may prefer pure-play AI names over traditional automation. #A"
+																																								],
+																																								"analysis": [
+																																																"**Thematic overlap** with reshoring and AI/robotics. #A",
+																																																"  - IFR: robot installations +12% CAGR through 2028. #I",
+																																																"  - Not pure AI play \u2014 NovaTech's AI integration is early-stage. #I"
+																																								],
+																																								"children": []
+																																}
+																								]
 																},
 																"p3": {
 																								"id": "p3",
@@ -7327,10 +7385,10 @@
 																}
 								},
 								"memo": {
-									"ic_summary": "NVTK is a demand-driven EPSU setup underpinned by a factory automation supercycle. Order intake +34% YoY signals genuine structural demand, not one-off pull-forward, supported by EU Chips Act (EUR 43bn) and a 15-year manufacturing vacancy. Dual-setup (demand cycle + corporate change under new CEO) provides redundancy \u2014 either driver alone supports a B rating at Triaging depth. Key gap: financial model not yet built; revenue conversion lag (2-3Q) means P&L validation is H2-26 earliest. Technicals confirm institutional accumulation (Stage 2 breakout, 7/8 Minervini, RS +47% YTD vs STOXX 600). Valuation at 14x 2YF P/E vs 18-22x automation peers leaves meaningful upside if execution delivers. Primary risk: single quarter of strong orders may reflect EU deadline pull-forward rather than durable shift. Progress to ESA recommended \u2014 commission research, build financial model, stress-test order sustainability.",
+									"ic_summary": "NovaTech Industries AG is a demand-driven EPSU setup underpinned by a European factory automation supercycle. Order intake surged +34% YoY in Q4-25, signalling genuine structural demand supported by EU Chips Act (EUR 43bn committed), US IRA nearshoring incentives, and a 15-year manufacturing vacancy high. The dual-setup \u2014 external demand cycle plus corporate change under a new CEO (ex-Siemens, Sep-25 appointment) \u2014 provides redundancy: either driver alone supports a B rating at Triaging depth. The triple ratchet mechanism (volume +34%, margin expansion 18%\u219222% via mix shift, multiple re-rating from 14x to 17-18x when Automation crosses 50% revenue) drives a modal case of 16% EPS CAGR over 3 years (EUR 2.80\u21924.35). Technicals confirm institutional accumulation with a Stage 2 breakout (7/8 Minervini criteria met, RS +47% YTD vs STOXX 600). Valuation at 14x 2YF P/E vs 18-22x automation peers leaves meaningful upside if execution delivers. Key gap: financial model not yet built and revenue conversion lag (2-3Q) means P&L validation is H2-26 earliest. Primary risk: single quarter of strong orders may reflect EU Chips Act deadline pull-forward rather than durable demand shift. Progress to ESA recommended \u2014 commission RESEARCHER queries, build financial model, stress-test order sustainability.",
 									"financials": {
-										"guidance": "",
-										"ss_estimates": ""
+										"guidance": "FY2026 guidance: Revenue EUR 3.8-4.0bn (+10-15% YoY), EBITDA margin 19-20% (vs 18% in FY2025), EPS EUR 3.30-3.50. Capital returns: 35-40% payout ratio maintained. Capex EUR 280m (of which EUR 120m Automation R&D). Management has beaten guidance by 5-8% in each of the last 3 years. Guidance midpoint EUR 3.40 EPS is 6% above consensus EUR 3.20, suggesting conservative messaging continues.",
+										"ss_estimates": "Consensus 2026E: Revenue EUR 3.72bn, EBITDA EUR 708m (19.0% margin), EPS EUR 3.20. Consensus 2027E: Revenue EUR 4.15bn, EBITDA EUR 830m (20.0% margin), EPS EUR 3.75. Coverage: 9 analysts (4 Buy, 3 Outperform, 2 Hold). L90D revisions: 6 up, 0 down, 2 unchanged for CFY; 3 up, 1 down, 4 unchanged for NFY. Mean price target EUR 58.50 (+22% upside from EUR 48). Consensus still below guidance midpoint \u2014 unusual and suggests SS has not fully priced order momentum."
 									},
 									"ic_items": {
 										"basic_checks": [
@@ -7338,26 +7396,92 @@
 											{ "label": "Market Cap > $1bn", "value": "EUR 4.8bn", "pass": true },
 											{ "label": "Listed > 12 months", "value": "Listed since 2013", "pass": true },
 											{ "label": "Free float > 25%", "value": "62%", "pass": true },
-											{ "label": "Analyst coverage \u2265 3", "value": "9 analysts", "pass": true }
+											{ "label": "Analyst coverage \u2265 3", "value": "9 analysts", "pass": true },
+											{ "label": "No ongoing M&A / takeover", "value": "No active M&A", "pass": true },
+											{ "label": "Accounting clean (no qualifications)", "value": "Clean audit, IFRS compliant", "pass": true },
+											{ "label": "No regulatory overhang", "value": "No material regulatory issues", "pass": true },
+											{ "label": "Insider transactions benign", "value": "CEO purchased EUR 200k in Mar-26", "pass": true },
+											{ "label": "Short interest < 5%", "value": "1.8% of float (FactSet)", "pass": true }
 										],
-										"icds": [],
-										"ach_scenarios": "",
-										"key_confusions": [],
-										"key_risks": [],
-										"key_hypothesis_failures": [],
-										"key_positive_outcomes": [],
-										"key_questions": [],
-										"key_assumptions": [],
-										"invalidation_thresholds": [],
-										"negative_expected_developments": [],
-										"monitoring_plan": []
+										"icds": [
+											"Demand-Driven EPSU: Factory automation order intake +34% YoY drives volume \u2192 margin expansion \u2192 EPS step-up",
+											"Corporate Change overlay: New CEO (ex-Siemens) executing portfolio simplification \u2014 3 non-core divestitures, EUR 120m Automation R&D",
+											"Triple ratchet: volume (+34%), margin (18%\u219222%), multiple re-rating (14x\u219217-18x when Auto >50% revenue)"
+										],
+										"ach_scenarios": "Bear case (20% prob): Order pull-forward from EU Chips Act deadlines; demand normalises H2-26, orders +5-10% YoY. EPS EUR 3.00 (+7% vs current). SP flat/down 10%. Base case (55% prob): Demand sustained, 85% order conversion, margin expansion on track. EPS EUR 3.85 (+38% vs current). SP re-rates to 16-17x = EUR 62-65 (+30-35%). Bull case (25% prob): Orders accelerate further, Automation crosses 50% revenue by Q4-26 (ahead of plan), margin hits 21%+ early. EPS EUR 4.35 (+55% vs current). SP re-rates to 18x = EUR 78 (+63%).",
+										"key_confusions": [
+											"Why is consensus EUR 3.20 still below guidance midpoint EUR 3.40? Possible SS caution on macro (Iran) or unfamiliarity with order-to-revenue conversion dynamics.",
+											"Is the +34% order growth a one-quarter anomaly or the start of a multi-quarter trend? EU Chips Act deadline-driven pull-forward cannot be ruled out without Q1-26 data.",
+											"What is the actual order-to-revenue conversion rate? Company does not disclose; 85% is an analyst estimate."
+										],
+										"key_risks": [
+											"Order pull-forward risk: EU Chips Act implementation deadlines may have concentrated orders in Q4-25 that would otherwise spread over 2026-27",
+											"Cyclical exposure: manufacturing PMI decline below 50 historically triggers 20-30% order declines in factory automation within 6 months",
+											"CEO execution risk: <12 months tenure, 3 pending divestitures, EUR 120m R&D commitment is largest in company history",
+											"Customer concentration: unknown \u2014 top 10 customer data not disclosed. Single customer >15% of orders would create concentration risk",
+											"Iran conflict: risk-off environment compresses capex-exposed industrial multiples regardless of micro fundamentals"
+										],
+										"key_hypothesis_failures": [
+											"Q1-26 orders decelerate to <+15% YoY (would suggest pull-forward, not sustainable demand)",
+											"Book-to-bill falls below 1.0x (demand peaking signal)",
+											"Manufacturing PMI drops below 48 for 2 consecutive months (cyclical recession signal)",
+											"Automation segment margin compresses below 25% (pricing pressure from competition)"
+										],
+										"key_positive_outcomes": [
+											"Q1-26 orders sustain >+25% YoY (validates multi-quarter demand trend)",
+											"Second non-core divestiture announced at >7x EBITDA (validates CEO execution)",
+											"IR engagement reveals customer concentration <10% top customer (reduces concentration risk)",
+											"Automation crosses 50% of revenue ahead of H2-26 plan (accelerates multiple re-rating catalyst)"
+										],
+										"key_questions": [
+											"What is the true order-to-revenue conversion rate? (Company does not disclose; 85% is analyst estimate)",
+											"What is customer concentration? (Top 10 customer % not disclosed)",
+											"How does the EUR 120m Automation R&D programme affect FCF over 2026-28?",
+											"Is the service revenue mix within Automation growing faster than hardware? (Higher margin, more recurring)",
+											"What is the competitive response from Fanuc, ABB, and Rockwell to NovaTech's pricing?",
+											"Will the 2nd and 3rd non-core divestitures complete in 2026 or slip to 2027?"
+										],
+										"key_assumptions": [
+											"Order-to-revenue conversion rate of 85% (analyst estimate, not company-guided)",
+											"Automation segment margin stable at 28% through 2028 (no competitive margin pressure)",
+											"EU Chips Act EUR 43bn capex commitment is firm and does not face political reversal post-EU elections",
+											"Manufacturing PMI remains above 48 through 2027 (no deep recession scenario)",
+											"CEO executes all 3 divestitures by end-2027 at \u22657x EBITDA"
+										],
+										"invalidation_thresholds": [
+											"Hard exit: Book-to-bill below 0.9x for 2 consecutive quarters",
+											"Hard exit: Manufacturing PMI below 46 for 2 consecutive months",
+											"Review trigger: Q1-26 orders below +15% YoY (would halve the growth assumption)",
+											"Review trigger: Automation segment margin below 26% (pricing pressure signal)",
+											"Technical stop: Price below 50D MA at EUR 42.30 (12% downside from current EUR 48)"
+										],
+										"negative_expected_developments": [
+											"Iran conflict may cause 5-10% drawdown in European industrials regardless of micro (expected duration: 2-6 weeks)",
+											"Q1-26 seasonal order weakness typical in factory automation (Q1 historically -10-15% QoQ vs Q4)",
+											"EUR 120m R&D commitment will compress FCF in FY2026-27 vs FY2025"
+										],
+										"monitoring_plan": [
+											"Quarterly order intake (company report, segment-level) \u2014 primary leading indicator",
+											"Monthly manufacturing PMI (Eurostat) \u2014 macro cross-check",
+											"Monthly IP data (Eurostat) \u2014 demand persistence validator",
+											"Annual IFR World Robotics Report \u2014 TAM sizing",
+											"Quarterly earnings (company report) \u2014 conversion rate and margin validation",
+											"SS estimate revisions (FactSet weekly) \u2014 consensus tracking"
+										]
 									},
 									"actions": {
-										"recommendation": "",
-										"next_stage_kqs": [],
-										"parking_reasons": "",
-										"reassessment_criteria": "",
-										"monitoring_plan": ""
+										"recommendation": "Progress to ESA. The demand-driven setup is validated at Triaging depth with strong technical confirmation. Key gaps (financial model, IR engagement, order sustainability) are ESA-stage questions. Commission RESEARCHER queries #8-14.",
+										"next_stage_kqs": [
+											"KQ1: Is the +34% order growth sustainable or EU Chips Act pull-forward? (requires Q1-26 data, due May-26)",
+											"KQ2: What is the actual order-to-revenue conversion rate? (requires IR engagement)",
+											"KQ3: What is customer concentration? (top 10 customer % \u2014 requires IR or annual report deep-dive)",
+											"KQ4: Does the EUR 120m R&D programme create FCF risk or is it self-funding from Automation cash flow?",
+											"KQ5: What is competitive response from Fanuc/ABB/Rockwell to NovaTech market share gains?",
+											"KQ6: Can second non-core divestiture close in 2026 at \u22657x EBITDA? (CEO execution proof point)"
+										],
+										"parking_reasons": "N/A \u2014 progressing, not parking.",
+										"reassessment_criteria": "Reassess if: (1) Q1-26 orders decelerate below +15% YoY, (2) book-to-bill falls below 1.0x, (3) manufacturing PMI drops below 48 for 2 consecutive months, or (4) Iran conflict escalation triggers broad European industrial de-rating >15%.",
+										"monitoring_plan": "Weekly: SS estimate revisions (FactSet). Monthly: manufacturing PMI, IP data. Quarterly: company order intake, earnings, margin trajectory. Ad hoc: IR engagement at ESA stage, divestiture announcements."
 									},
 									"stage_ratings": {
 										"triaging": { "p1": "B", "p2": "\u2014", "p3": "B", "p4": "C", "p5": "A", "p6": "B" },
@@ -7367,19 +7491,33 @@
 									"item_meta": {
 										"sec_a": { "edited": "2026-04-19" },
 										"sec_b": { "edited": "2026-04-19" },
-										"sec_c": { "edited": "" },
-										"sec_d": { "edited": "" },
+										"sec_c": { "edited": "2026-04-19" },
+										"sec_d": { "edited": "2026-04-19" },
 										"item_1": { "edited": "2026-04-18" },
 										"item_2": { "edited": "2026-04-18" },
+										"item_3": { "edited": "2026-04-18" },
 										"item_4": { "edited": "2026-04-19" },
-										"item_5": { "edited": "" },
-										"item_6": { "edited": "" },
+										"item_5": { "edited": "2026-04-19" },
+										"item_6": { "edited": "2026-04-19" },
+										"item_7": { "edited": "" },
+										"item_8": { "edited": "" },
 										"item_9": { "edited": "2026-04-19" },
-										"item_21": { "edited": "" },
-										"item_22": { "edited": "" },
-										"item_23": { "edited": "" },
-										"item_24": { "edited": "" },
-										"item_25": { "edited": "" }
+										"item_10": { "edited": "2026-04-19" },
+										"item_11": { "edited": "2026-04-19" },
+										"item_12": { "edited": "2026-04-19" },
+										"item_13": { "edited": "2026-04-19" },
+										"item_14": { "edited": "2026-04-19" },
+										"item_15": { "edited": "2026-04-19" },
+										"item_16": { "edited": "2026-04-19" },
+										"item_17": { "edited": "" },
+										"item_18": { "edited": "" },
+										"item_19": { "edited": "" },
+										"item_20": { "edited": "" },
+										"item_21": { "edited": "2026-04-19" },
+										"item_22": { "edited": "2026-04-19" },
+										"item_23": { "edited": "2026-04-19" },
+										"item_24": { "edited": "2026-04-19" },
+										"item_25": { "edited": "2026-04-19" }
 									}
 								}
 };
@@ -7509,8 +7647,10 @@
         }
 
         function escapeHtml(text) {
+            if (text === null || text === undefined) return '';
+            if (typeof text === 'object') return String(text.ticker || text.label || text.name || '');
             var div = document.createElement('div');
-            div.textContent = text;
+            div.textContent = String(text);
             return div.innerHTML;
         }
 
@@ -8108,7 +8248,7 @@
                     html += renderAnalysisBullets(pillar.analysis);
                     html += '</div></div>';
                 }
-            } else if (pillar.rating === "\u2014") {
+            } else if (pillar.rating === "\u2014" && (!pillar.families || pillar.families.length === 0)) {
                 html += '<div class="not-assessed-message">Not yet assessed</div>';
             } else {
                 // Build families as expandable sections
@@ -8481,12 +8621,6 @@
                 for (var i = 0; i < cells.length; i++) {
                     cells[i].style.top = stockTop + 'px';
                 }
-                // 3. Pillar sticky header sticks below stock row
-                var rowH = activeRow.offsetHeight;
-                var stickyHeader = activeRow.nextElementSibling ? activeRow.nextElementSibling.querySelector('.pillars-sticky-header.is-sticky') : null;
-                if (stickyHeader) {
-                    stickyHeader.style.top = (stockTop + rowH) + 'px';
-                }
             }
 
             // Clear sticky top on any previously-active rows that are no longer active
@@ -8517,26 +8651,121 @@
                 masterRow.classList.add('expanded');
                 masterRow.classList.add('active-stock');
                 treeRow.classList.add('expanded');
-                var stickyHeader = document.getElementById('pillars-sticky-' + stockIndex);
-                if (stickyHeader) {
-                    stickyHeader.classList.add('is-sticky');
-                }
                 updateStickyPositions();
             }
 
-            // 2. Find the pillar card and simulate a click on it
-            var cardId = 'pillar-' + stockIndex + '-' + pillarId;
-            var card = document.getElementById(cardId);
-            if (card) {
-                // If this pillar is already open, leave it open (no toggle)
-                if (!card.classList.contains('active-pillar')) {
-                    card.click();
-                }
-                // Scroll the pillar card into view
-                setTimeout(function() {
-                    card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                }, 100);
+            // 2. Directly populate the detail panel with this pillar's content
+            var panel = document.getElementById('pillar-detail-panel-' + stockIndex);
+            if (!panel) return;
+
+            // If clicking the same pillar again, collapse
+            var activePillar = panel.getAttribute('data-active-pillar');
+            if (activePillar === pillarId) {
+                panel.classList.remove('active');
+                panel.removeAttribute('data-active-pillar');
+                panel.innerHTML = '<div class="pillar-detail-empty" style="color:#8c959f;font-style:italic;padding:16px;text-align:center;">Click a pillar rating (P1\u2013P6) above to view details</div>';
+                document.body.classList.remove('has-active-panel');
+                // Remove highlight from all pillar badges
+                clearPillarBadgeHighlights(masterRow);
+                return;
             }
+
+            // Build pillar content
+            var stock = masterData.stocks[stockIndex];
+            if (!stock) return;
+            var treeData = getTreeDataForStock(stock);
+            var pillarIds = ['p1', 'p2', 'p3', 'p4', 'p5', 'p6'];
+            var pillarLabels = {
+                p1: 'P1 Technical Momentum', p2: 'P2 Market Paradigm Fit',
+                p3: 'P3 Fundamental Change', p4: 'P4 Building Blocks',
+                p5: 'P5 SS Earnings Momentum', p6: 'P6 Valuation'
+            };
+
+            var pillar = null;
+            if (treeData && treeData.pillars) {
+                pillar = treeData.pillars[pillarId];
+            }
+            // Fallback to momentum/valuation data
+            if (!pillar && pillarId === 'p5' && momentumDataByTicker[stock.ticker]) {
+                pillar = momentumDataByTicker[stock.ticker];
+            }
+            if (!pillar && pillarId === 'p6' && valuationDataByTicker[stock.ticker]) {
+                pillar = valuationDataByTicker[stock.ticker];
+            }
+
+            var pillarNum = pillarId.toUpperCase().replace('P', 'P');
+            var label = pillar ? pillar.label : (pillarLabels[pillarId] || pillarId);
+            var rating = pillar ? pillar.rating : '\u2014';
+
+            var html = '';
+            // Header with pillar name + rating + close button
+            html += '<div class="pillar-detail-panel-header">';
+            html += '<span class="pillar-number-badge">' + pillarNum + '</span>';
+            html += '<span class="pillar-detail-panel-title">' + escapeHtml(label) + '</span>';
+            html += '<span class="rating-badge ' + getRatingClass(rating) + '" style="font-size:11px;margin-left:8px;">' + escapeHtml(rating) + '</span>';
+            html += '<span class="pillar-detail-panel-close" onclick="closePillarDirectPanel(event,' + stockIndex + ')">\u2715</span>';
+            html += '</div>';
+
+            // For qualitative pillars (P2-P4), render J/A above content;
+            // for formulaic/momentum/valuation, buildPillarContent handles J/A internally
+            var isQualitative = pillar && (pillar.nature === 'qualitative' || (!pillar.nature && pillar.families));
+            if (isQualitative) {
+                if (pillar.judgement) {
+                    html += '<div class="pillar-judgement" style="margin-bottom:12px;">' + renderJudgementBullets(pillar.judgement) + '</div>';
+                }
+                if (pillar.analysis && pillar.analysis.length > 0) {
+                    html += '<div class="cell-analysis" style="margin-bottom:12px;">' + renderAnalysisBullets(pillar.analysis) + '</div>';
+                }
+            }
+
+            // Pillar content (families, dimensions, momentum tables, etc.)
+            if (pillar) {
+                try {
+                    html += '<div class="pillar-detail-active-content">' + buildPillarContent(pillar, treeData, stock.ticker) + '</div>';
+                } catch (e) {
+                    html += '<div style="color:#ff6b6b;padding:8px;">Error building content: ' + e.message + '</div>';
+                }
+            } else {
+                html += '<div class="placeholder-message" style="padding:12px;color:#8c959f;font-style:italic;">Tree data not yet populated for this pillar.</div>';
+            }
+
+            panel.innerHTML = html;
+            panel.classList.add('active');
+            panel.setAttribute('data-active-pillar', pillarId);
+            document.body.classList.add('has-active-panel');
+
+            // Highlight active pillar badge in the master row
+            clearPillarBadgeHighlights(masterRow);
+            var pillarCells = masterRow.querySelectorAll('td.pillar-column');
+            var pIdx = pillarIds.indexOf(pillarId);
+            if (pIdx >= 0 && pillarCells[pIdx]) {
+                pillarCells[pIdx].classList.add('pillar-badge-active');
+            }
+
+            // Scroll into view
+            setTimeout(function() {
+                panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 100);
+        }
+
+        function clearPillarBadgeHighlights(row) {
+            var cells = row.querySelectorAll('td.pillar-column');
+            for (var i = 0; i < cells.length; i++) {
+                cells[i].classList.remove('pillar-badge-active');
+            }
+        }
+
+        function closePillarDirectPanel(evt, stockIndex) {
+            if (evt) evt.stopPropagation();
+            var panel = document.getElementById('pillar-detail-panel-' + stockIndex);
+            if (panel) {
+                panel.classList.remove('active');
+                panel.removeAttribute('data-active-pillar');
+                panel.innerHTML = '<div class="pillar-detail-empty" style="color:#8c959f;font-style:italic;padding:16px;text-align:center;">Click a pillar rating (P1\u2013P6) above to view details</div>';
+            }
+            document.body.classList.remove('has-active-panel');
+            var masterRow = document.querySelectorAll('#table-body tr.expand-toggle')[stockIndex];
+            if (masterRow) clearPillarBadgeHighlights(masterRow);
         }
 
         // Render master table — each stock wrapped in try-catch for isolation
@@ -8564,16 +8793,23 @@
                         }
                         if (this.classList.contains('expanded')) {
                             this.classList.add('active-stock');
+                            // Show panel with empty hint
+                            var panel = document.getElementById('pillar-detail-panel-' + index);
+                            if (panel && !panel.classList.contains('active')) {
+                                panel.classList.add('active');
+                                if (!panel.querySelector('.pillar-detail-active-content')) {
+                                    panel.innerHTML = '<div class="pillar-detail-empty" style="color:#8c959f;font-style:italic;padding:16px;text-align:center;">Click a pillar rating (P1\u2013P6) above to view details</div>';
+                                }
+                            }
                         } else {
                             this.classList.remove('active-stock');
                             document.body.classList.remove('has-active-panel');
-                        }
-                        var stickyHeader = document.getElementById('pillars-sticky-' + index);
-                        if (stickyHeader) {
-                            if (this.classList.contains('expanded')) {
-                                stickyHeader.classList.add('is-sticky');
-                            } else {
-                                stickyHeader.classList.remove('is-sticky');
+                            // Clear the panel content and deactivate
+                            var panel = document.getElementById('pillar-detail-panel-' + index);
+                            if (panel) {
+                                panel.classList.remove('active');
+                                panel.removeAttribute('data-active-pillar');
+                                panel.innerHTML = '<div class="pillar-detail-empty" style="color:#8c959f;font-style:italic;padding:16px;text-align:center;">Click a pillar rating (P1\u2013P6) above to view details</div>';
                             }
                         }
                         updateStickyPositions();
@@ -8607,19 +8843,10 @@
                     treeRow.className = 'tree-row' + (isAlt ? ' stock-row-alt' : '');
                     treeRow.id = 'tree-' + index;
 
-                    var pillarHtml = '';
-                    try {
-                        pillarHtml = renderPillarCards(stock, index);
-                    } catch (pillarErr) {
-                        pillarHtml = '<div style="color:#ff6b6b;padding:12px;">Error rendering pillars for ' + stock.ticker + ': ' + pillarErr.message + '</div>';
-                    }
-
                     treeRow.innerHTML = '<td colspan="28"><div class="tree-container expanded">' +
-                        '<div class="pillars-sticky-header" id="pillars-sticky-' + index + '">' +
-                        '<h3 style="font-size: 14px; margin-bottom: 12px;">6 Pillars — ' + escapeHtml(stock.ticker) + '</h3>' +
-                        '<div class="pillars-row">' + pillarHtml + '</div>' +
+                        '<div class="pillar-detail-panel" id="pillar-detail-panel-' + index + '">' +
+                        '<div class="pillar-detail-empty" style="color:#8c959f;font-style:italic;padding:16px;text-align:center;">Click a pillar rating (P1\u2013P6) above to view details</div>' +
                         '</div>' +
-                        '<div class="pillar-detail-panel" id="pillar-detail-panel-' + index + '"></div>' +
                         '</div></td>';
 
                     tbody.appendChild(treeRow);
@@ -9361,9 +9588,7 @@
             closeMapView();
             if (stockIndex < 0) return;
 
-            // Small delay to let the modal finish closing before scrolling
             setTimeout(function() {
-                // 1. Open the stock row if needed
                 var masterRow = document.querySelectorAll('#table-body tr.expand-toggle')[stockIndex];
                 if (!masterRow) return;
                 var treeRow = document.getElementById('tree-' + stockIndex);
@@ -9372,37 +9597,24 @@
                     masterRow.classList.add('expanded');
                     masterRow.classList.add('active-stock');
                     if (treeRow) treeRow.classList.add('expanded');
-                    var stickyHeader = document.getElementById('pillars-sticky-' + stockIndex);
-                    if (stickyHeader) stickyHeader.classList.add('is-sticky');
                     updateStickyPositions();
                 }
 
-                // 2. Expand the pillar card
-                var cardId = 'pillar-' + stockIndex + '-' + pillarId;
-                var card = document.getElementById(cardId);
-                if (card && !card.classList.contains('active-pillar')) {
-                    card.click();
+                // Use onPillarBadgeClick to open the pillar directly
+                var pillarCells = masterRow.querySelectorAll('td.pillar-column');
+                var pillarIdsList = ['p1', 'p2', 'p3', 'p4', 'p5', 'p6'];
+                var pIdx = pillarIdsList.indexOf(pillarId);
+                if (pIdx >= 0 && pillarCells[pIdx]) {
+                    var fakeEvt = { stopPropagation: function(){}, target: pillarCells[pIdx] };
+                    onPillarBadgeClick(fakeEvt, stockIndex, pillarId);
                 }
 
-                // 3. After the pillar opens, expand the specific family
                 setTimeout(function() {
-                    if (familyIdx >= 0) {
-                        var familyId = 'family-' + pillarId + '-' + familyIdx;
-                        var familyCard = document.getElementById(familyId + '-card');
-                        if (familyCard && !familyCard.classList.contains('expanded')) {
-                            familyCard.click();
-                        }
-                        // Scroll the family card into view
-                        setTimeout(function() {
-                            var scrollTarget = document.getElementById(familyId + '-card') || card;
-                            if (scrollTarget && scrollTarget.scrollIntoView) {
-                                scrollTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                            }
-                        }, 150);
-                    } else if (card && card.scrollIntoView) {
-                        card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    var panel = document.getElementById('pillar-detail-panel-' + stockIndex);
+                    if (panel && panel.scrollIntoView) {
+                        panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
                     }
-                }, 120);
+                }, 150);
             }, 60);
         }
 
@@ -9906,28 +10118,24 @@
                     masterRow.classList.add('expanded');
                     masterRow.classList.add('active-stock');
                     if (treeRow) treeRow.classList.add('expanded');
-                    var stickyHeader = document.getElementById('pillars-sticky-' + stockIndex);
-                    if (stickyHeader) stickyHeader.classList.add('is-sticky');
                     updateStickyPositions();
                 }
 
-                var cardId = 'pillar-' + stockIndex + '-' + pillarId;
-                var card = document.getElementById(cardId);
-                if (card && !card.classList.contains('active-pillar')) card.click();
+                // Use onPillarBadgeClick to open the pillar directly
+                var pillarCells = masterRow.querySelectorAll('td.pillar-column');
+                var pillarIds = ['p1', 'p2', 'p3', 'p4', 'p5', 'p6'];
+                var pIdx = pillarIds.indexOf(pillarId);
+                if (pIdx >= 0 && pillarCells[pIdx]) {
+                    var fakeEvt = { stopPropagation: function(){}, target: pillarCells[pIdx] };
+                    onPillarBadgeClick(fakeEvt, stockIndex, pillarId);
+                }
 
                 setTimeout(function() {
-                    if (familyIdx >= 0) {
-                        var familyId = 'family-' + pillarId + '-' + familyIdx;
-                        var familyCard = document.getElementById(familyId + '-card');
-                        if (familyCard && !familyCard.classList.contains('expanded')) familyCard.click();
-                        setTimeout(function() {
-                            var scrollTarget = document.getElementById(familyId + '-card') || card;
-                            if (scrollTarget && scrollTarget.scrollIntoView) scrollTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                        }, 150);
-                    } else if (card && card.scrollIntoView) {
-                        card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    var panel = document.getElementById('pillar-detail-panel-' + stockIndex);
+                    if (panel && panel.scrollIntoView) {
+                        panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
                     }
-                }, 120);
+                }, 150);
             }, 60);
         }
 
