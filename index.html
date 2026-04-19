@@ -1938,12 +1938,12 @@
         }
         .memo-modal-frame {
             position: relative;
-            max-width: 1100px;
-            margin: 8px auto;
+            max-width: calc(100vw - 40px);
+            margin: 8px 20px;
             background: #0d1117;
             border: 1px solid #1f2a3a;
             border-radius: 6px;
-            padding: 16px 20px 24px;
+            padding: 16px 24px 24px;
             box-shadow: 0 18px 64px rgba(0, 0, 0, 0.65);
         }
         .memo-modal-header {
@@ -2020,6 +2020,136 @@
             color: #a371f7;
             background: rgba(163, 113, 247, 0.1);
             border-color: rgba(163, 113, 247, 0.5);
+        }
+
+        /* Memo ToC */
+        .memo-toc {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 12px 16px;
+            margin-bottom: 20px;
+        }
+        .memo-toc-title {
+            font-size: 11px;
+            font-weight: 700;
+            color: #8b949e;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 8px;
+        }
+        .memo-toc-sections {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0;
+        }
+        .memo-toc-group {
+            flex: 1 1 200px;
+            min-width: 180px;
+            padding: 4px 0;
+        }
+        .memo-toc-group-label {
+            font-size: 11px;
+            font-weight: 700;
+            color: #a371f7;
+            margin-bottom: 4px;
+            cursor: pointer;
+        }
+        .memo-toc-group-label:hover {
+            color: #c9a0ff;
+        }
+        .memo-toc-items {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .memo-toc-items li {
+            font-size: 11px;
+            color: #6e7681;
+            line-height: 1.6;
+            padding-left: 8px;
+            cursor: pointer;
+        }
+        .memo-toc-items li:hover {
+            color: #c9d1d9;
+        }
+        .memo-toc-items li.memo-toc-rb {
+            color: #6e4c00;
+            font-style: italic;
+        }
+
+        /* Ratings depth toggle buttons */
+        .memo-ratings-depth {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 10px;
+        }
+        .memo-depth-btn {
+            padding: 3px 10px;
+            font-family: inherit;
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            color: #8b949e;
+            background: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background 0.12s, color 0.12s;
+        }
+        .memo-depth-btn:hover {
+            color: #c9d1d9;
+            border-color: #484f58;
+        }
+        .memo-depth-btn.active {
+            color: #a371f7;
+            background: rgba(163, 113, 247, 0.1);
+            border-color: rgba(163, 113, 247, 0.5);
+        }
+
+        /* Ratings table depth rows */
+        .memo-ratings-table .depth-family td:first-child { padding-left: 20px; }
+        .memo-ratings-table .depth-tc td:first-child { padding-left: 36px; }
+        .memo-ratings-table .depth-attr td:first-child { padding-left: 52px; }
+        .memo-ratings-table .depth-q td:first-child { padding-left: 68px; }
+        .memo-ratings-table .depth-family td:first-child,
+        .memo-ratings-table .depth-tc td:first-child,
+        .memo-ratings-table .depth-attr td:first-child,
+        .memo-ratings-table .depth-q td:first-child {
+            font-weight: 400;
+            font-size: 11px;
+            color: #8b949e;
+        }
+        .memo-ratings-table .depth-pillar td:first-child {
+            font-weight: 600;
+            color: #e6edf3;
+        }
+        .memo-ratings-table td:first-child a {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 1px dotted rgba(139, 148, 158, 0.3);
+        }
+        .memo-ratings-table td:first-child a:hover {
+            color: #a371f7;
+            border-bottom-color: #a371f7;
+        }
+
+        /* Pillar judgements 2x3 grid */
+        .memo-pillar-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px 20px;
+        }
+        .memo-pillar-grid-cell {
+            min-width: 0;
+        }
+        .memo-pillar-grid-label {
+            font-size: 12px;
+            font-weight: 700;
+            color: #a371f7;
+            margin-bottom: 4px;
+            padding-bottom: 3px;
+            border-bottom: 1px solid rgba(167,139,250,0.15);
         }
 
         /* Memo sections */
@@ -6947,7 +7077,7 @@
 																}
 								},
 								"memo": {
-									"ic_summary": "",
+									"ic_summary": "NVTK is a demand-driven EPSU setup underpinned by a factory automation supercycle. Order intake +34% YoY signals genuine structural demand, not one-off pull-forward, supported by EU Chips Act (EUR 43bn) and a 15-year manufacturing vacancy. Dual-setup (demand cycle + corporate change under new CEO) provides redundancy \u2014 either driver alone supports a B rating at Triaging depth. Key gap: financial model not yet built; revenue conversion lag (2-3Q) means P&L validation is H2-26 earliest. Technicals confirm institutional accumulation (Stage 2 breakout, 7/8 Minervini, RS +47% YTD vs STOXX 600). Valuation at 14x 2YF P/E vs 18-22x automation peers leaves meaningful upside if execution delivers. Primary risk: single quarter of strong orders may reflect EU deadline pull-forward rather than durable shift. Progress to ESA recommended \u2014 commission research, build financial model, stress-test order sustainability.",
 									"financials": {
 										"guidance": "",
 										"ss_estimates": ""
@@ -9488,6 +9618,9 @@
             }
             html += '</div>';
 
+            // Table of Contents
+            html += renderMemoToc();
+
             // ========== Section A: Financials ==========
             html += renderMemoSectionA(memo, true);
 
@@ -9503,11 +9636,191 @@
             return html;
         }
 
+        // ---- Memo ToC renderer ----
+        function renderMemoToc() {
+            var html = '<div class="memo-toc">';
+            html += '<div class="memo-toc-title">Contents</div>';
+            html += '<div class="memo-toc-sections">';
+
+            // Section A
+            html += '<div class="memo-toc-group">';
+            html += '<div class="memo-toc-group-label" onclick="memoScrollTo(\'memo-sec-a\')">A: Financials</div>';
+            html += '<ul class="memo-toc-items">';
+            html += '<li onclick="memoScrollTo(\'memo-item-5\')">#5 Guidance</li>';
+            html += '<li onclick="memoScrollTo(\'memo-item-6\')">#6 SS Estimates</li>';
+            html += '<li onclick="memoScrollTo(\'memo-item-7\')" class="memo-toc-rb">#7 Modal Case [RB]</li>';
+            html += '<li onclick="memoScrollTo(\'memo-item-8\')" class="memo-toc-rb">#8 TSR DuPont [RB]</li>';
+            html += '</ul></div>';
+
+            // Section B
+            html += '<div class="memo-toc-group">';
+            html += '<div class="memo-toc-group-label" onclick="memoScrollTo(\'memo-sec-b\')">B: Summary</div>';
+            html += '<ul class="memo-toc-items">';
+            html += '<li onclick="memoScrollTo(\'memo-item-1\')">#1 Ratings Progression</li>';
+            html += '<li onclick="memoScrollTo(\'memo-item-2\')">#2/#3 Judgements &amp; Analysis</li>';
+            html += '<li onclick="memoScrollTo(\'memo-item-4\')">#4 IC Written Summary</li>';
+            html += '</ul></div>';
+
+            // Section C
+            html += '<div class="memo-toc-group">';
+            html += '<div class="memo-toc-group-label" onclick="memoScrollTo(\'memo-sec-c\')">C: IC Analysis</div>';
+            html += '<ul class="memo-toc-items">';
+            html += '<li onclick="memoScrollTo(\'memo-item-9\')">#9 Basic Checks</li>';
+            html += '<li onclick="memoScrollTo(\'memo-item-p3detail\')">P3 Detail</li>';
+            html += '<li onclick="memoScrollTo(\'memo-item-p4detail\')">P4 Detail</li>';
+            html += '<li onclick="memoScrollTo(\'memo-item-10\')">#10\u2013#20 IC Items</li>';
+            html += '</ul></div>';
+
+            // Section D
+            html += '<div class="memo-toc-group">';
+            html += '<div class="memo-toc-group-label" onclick="memoScrollTo(\'memo-sec-d\')">D: Actions</div>';
+            html += '<ul class="memo-toc-items">';
+            html += '<li onclick="memoScrollTo(\'memo-item-21\')">#21 Recommendation</li>';
+            html += '<li onclick="memoScrollTo(\'memo-item-22\')">#22 Next Stage KQs</li>';
+            html += '<li onclick="memoScrollTo(\'memo-item-23\')">#23 Parking Reasons</li>';
+            html += '<li onclick="memoScrollTo(\'memo-item-24\')">#24 Re-Assessment</li>';
+            html += '<li onclick="memoScrollTo(\'memo-item-25\')">#25 Monitoring Plan</li>';
+            html += '</ul></div>';
+
+            html += '</div></div>';
+            return html;
+        }
+
+        function memoScrollTo(id) {
+            var el = document.getElementById(id);
+            if (!el) return;
+            var modal = document.getElementById('memo-modal-body');
+            if (modal) {
+                // Expand the parent section if collapsed
+                var section = el.closest('.memo-section');
+                if (section) {
+                    var header = section.querySelector('.memo-section-header');
+                    if (header && !header.classList.contains('expanded')) {
+                        header.classList.add('expanded');
+                    }
+                }
+                el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        // ---- Ratings table renderer (supports depth levels) ----
+        function renderMemoRatingsTable(pillarIds, pillarLabels, pillarDetailAnchors, stageRatings, pillars, depth) {
+            var html = '<table class="memo-ratings-table">';
+            html += '<thead><tr><th>Pillar</th><th>Triaging</th><th>ESA</th><th>DD</th></tr></thead>';
+            html += '<tbody>';
+            var stageKeys = ['triaging', 'esa', 'dd'];
+
+            for (var pi = 0; pi < pillarIds.length; pi++) {
+                var pid = pillarIds[pi];
+                var pData = pillars[pid];
+                // Pillar row
+                html += '<tr class="depth-pillar">';
+                html += '<td><a href="javascript:void(0)" onclick="memoScrollTo(\'' + (pillarDetailAnchors[pid] || 'memo-item-2') + '\')">' + pillarLabels[pid] + '</a></td>';
+                for (var ski = 0; ski < stageKeys.length; ski++) {
+                    var sk = stageKeys[ski];
+                    var rating = (stageRatings[sk] && stageRatings[sk][pid]) ? stageRatings[sk][pid] : '';
+                    if (rating) {
+                        html += '<td><span class="rating-badge ' + getRatingClass(rating) + '">' + escapeHtml(rating) + '</span></td>';
+                    } else {
+                        html += '<td><span style="color:#484f58;">\u2014</span></td>';
+                    }
+                }
+                html += '</tr>';
+
+                // Deeper levels if requested
+                if (depth !== 'pillars' && pData && pData.families) {
+                    for (var fi = 0; fi < pData.families.length; fi++) {
+                        var fam = pData.families[fi];
+                        // Family row
+                        html += '<tr class="depth-family">';
+                        html += '<td>' + escapeHtml(fam.label || '') + '</td>';
+                        html += '<td>' + renderRatingCell(fam.rating) + '</td>';
+                        html += '<td>\u2014</td><td>\u2014</td></tr>';
+
+                        if (depth !== 'families' && fam.children) {
+                            html += renderDepthChildren(fam.children, depth, 'tc');
+                        }
+                    }
+                }
+            }
+            html += '</tbody></table>';
+            return html;
+        }
+
+        function renderDepthChildren(children, maxDepth, currentLevel) {
+            if (!children || children.length === 0) return '';
+            var html = '';
+            var levelMap = { tc: 'depth-tc', attribute: 'depth-attr', question: 'depth-q' };
+            var nextLevel = { tc: 'attribute', attribute: 'question', question: null };
+            var showLevel = { tcs: 'tc', attributes: 'attribute', questions: 'question' };
+            for (var ci = 0; ci < children.length; ci++) {
+                var child = children[ci];
+                var cls = levelMap[currentLevel] || 'depth-tc';
+                html += '<tr class="' + cls + '">';
+                html += '<td>' + escapeHtml(child.label || '') + '</td>';
+                html += '<td>' + renderRatingCell(child.rating) + '</td>';
+                html += '<td>\u2014</td><td>\u2014</td></tr>';
+
+                var next = nextLevel[currentLevel];
+                if (next && child.children && child.children.length > 0) {
+                    // Check if maxDepth allows going deeper
+                    var depthOrder = ['pillars', 'families', 'tcs', 'attributes', 'questions'];
+                    var nextDepthNeeded = { tc: 'tcs', attribute: 'attributes', question: 'questions' };
+                    var nextNeeded = nextDepthNeeded[next];
+                    if (nextNeeded && depthOrder.indexOf(maxDepth) >= depthOrder.indexOf(nextNeeded)) {
+                        html += renderDepthChildren(child.children, maxDepth, next);
+                    }
+                }
+            }
+            return html;
+        }
+
+        function renderRatingCell(rating) {
+            if (rating && rating !== '\u2014' && rating !== '') {
+                return '<span class="rating-badge ' + getRatingClass(rating) + '">' + escapeHtml(rating) + '</span>';
+            }
+            return '<span style="color:#484f58;">\u2014</span>';
+        }
+
+        var currentMemoRatingsDepth = 'pillars';
+        function memoSetRatingsDepth(depth) {
+            currentMemoRatingsDepth = depth;
+            // Update active button
+            var btns = document.querySelectorAll('.memo-depth-btn');
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].classList.remove('active');
+                if (btns[i].textContent.toLowerCase().replace(/\s/g,'') === depth) {
+                    btns[i].classList.add('active');
+                }
+            }
+            // Re-render table
+            var container = document.getElementById('memo-ratings-table-container');
+            if (!container) return;
+            var stock = masterData.stocks[currentMemoStockIndex];
+            if (!stock) return;
+            var treeData = getTreeDataForStock(stock);
+            if (!treeData) return;
+            var memo = treeData.memo || {};
+            var stageRatings = memo.stage_ratings || {};
+            var pillars = treeData.pillars || {};
+            var pillarIds = ['p1', 'p2', 'p3', 'p4', 'p5', 'p6'];
+            var pillarLabels = {
+                p1: 'P1 Technical Momentum', p2: 'P2 Market Paradigm',
+                p3: 'P3 Fundamental Change', p4: 'P4 Building Blocks',
+                p5: 'P5 SS Earnings Momentum', p6: 'P6 Valuation'
+            };
+            var pillarDetailAnchors = {
+                p1: 'memo-item-2', p2: 'memo-item-2', p3: 'memo-item-p3detail',
+                p4: 'memo-item-p4detail', p5: 'memo-item-2', p6: 'memo-item-2'
+            };
+            container.innerHTML = renderMemoRatingsTable(pillarIds, pillarLabels, pillarDetailAnchors, stageRatings, pillars, depth);
+        }
+
         // ---- Section A: Financials ----
         function renderMemoSectionA(memo, expanded) {
             var fin = memo.financials || {};
             var expClass = expanded ? ' expanded' : '';
-            var html = '<div class="memo-section">';
+            var html = '<div class="memo-section" id="memo-sec-a">';
             html += '<div class="memo-section-header' + expClass + '" onclick="memoToggleSection(this)">';
             html += '<span class="memo-section-chevron">\u25B6</span>';
             html += '<span class="memo-section-label">Section A: Financials</span>';
@@ -9516,25 +9829,25 @@
             html += '<div class="memo-section-body">';
 
             // #5 Guidance
-            html += '<div class="memo-item">';
+            html += '<div class="memo-item" id="memo-item-5">';
             html += '<div class="memo-item-title">#5 Guidance (EGP, Key Financial Milestones)</div>';
             html += fin.guidance ? '<div class="memo-item-content">' + escapeHtml(fin.guidance) + '</div>' : '<div class="memo-placeholder">Not yet populated</div>';
             html += '</div>';
 
             // #6 SS Estimates
-            html += '<div class="memo-item">';
+            html += '<div class="memo-item" id="memo-item-6">';
             html += '<div class="memo-item-title">#6 SS Estimates (Sell-Side Consensus)</div>';
             html += fin.ss_estimates ? '<div class="memo-item-content">' + escapeHtml(fin.ss_estimates) + '</div>' : '<div class="memo-placeholder">Not yet populated</div>';
             html += '</div>';
 
             // #7 Modal Case Forecasts [RB]
-            html += '<div class="memo-item">';
+            html += '<div class="memo-item" id="memo-item-7">';
             html += '<div class="memo-item-title">#7 Modal Case Forecasts</div>';
             html += '<div class="memo-rb-placeholder">[RB] Awaiting Richard\'s input</div>';
             html += '</div>';
 
             // #8 TSR DuPont [RB]
-            html += '<div class="memo-item">';
+            html += '<div class="memo-item" id="memo-item-8">';
             html += '<div class="memo-item-title">#8 TSR DuPont</div>';
             html += '<div class="memo-rb-placeholder">[RB] Awaiting Richard\'s input</div>';
             html += '</div>';
@@ -9547,20 +9860,13 @@
         function renderMemoSectionB(stock, treeData, stageRatings, pillars, expanded) {
             var memo = treeData.memo || {};
             var expClass = expanded ? ' expanded' : '';
-            var html = '<div class="memo-section">';
+            var html = '<div class="memo-section" id="memo-sec-b">';
             html += '<div class="memo-section-header' + expClass + '" onclick="memoToggleSection(this)">';
             html += '<span class="memo-section-chevron">\u25B6</span>';
             html += '<span class="memo-section-label">Section B: Summary</span>';
             html += '<span class="memo-section-tag">#1\u2013#4</span>';
             html += '</div>';
             html += '<div class="memo-section-body">';
-
-            // #1 Ratings table — all 6 pillars, stages as columns
-            html += '<div class="memo-item">';
-            html += '<div class="memo-item-title">#1 Ratings Progression</div>';
-            html += '<table class="memo-ratings-table">';
-            html += '<thead><tr><th>Pillar</th><th>Triaging</th><th>ESA</th><th>DD</th></tr></thead>';
-            html += '<tbody>';
 
             var pillarIds = ['p1', 'p2', 'p3', 'p4', 'p5', 'p6'];
             var pillarLabels = {
@@ -9571,59 +9877,55 @@
                 p5: 'P5 SS Earnings Momentum',
                 p6: 'P6 Valuation'
             };
+            // Map pillars to their detail anchor IDs
+            var pillarDetailAnchors = {
+                p1: 'memo-item-2', p2: 'memo-item-2', p3: 'memo-item-p3detail',
+                p4: 'memo-item-p4detail', p5: 'memo-item-2', p6: 'memo-item-2'
+            };
 
-            for (var pi = 0; pi < pillarIds.length; pi++) {
-                var pid = pillarIds[pi];
-                html += '<tr>';
-                html += '<td>' + pillarLabels[pid] + '</td>';
-                var stageKeys = ['triaging', 'esa', 'dd'];
-                for (var ski = 0; ski < stageKeys.length; ski++) {
-                    var sk = stageKeys[ski];
-                    var rating = (stageRatings[sk] && stageRatings[sk][pid]) ? stageRatings[sk][pid] : '';
-                    if (rating) {
-                        html += '<td><span class="rating-badge ' + getRatingClass(rating) + '">' + escapeHtml(rating) + '</span></td>';
-                    } else {
-                        html += '<td><span style="color:#484f58;">\u2014</span></td>';
-                    }
-                }
-                html += '</tr>';
-            }
+            // #1 Ratings table — all 6 pillars, stages as columns
+            html += '<div class="memo-item" id="memo-item-1">';
+            html += '<div class="memo-item-title">#1 Ratings Progression</div>';
 
-            html += '</tbody></table>';
+            // Detail level toggle buttons
+            html += '<div class="memo-ratings-depth" id="memo-ratings-depth">';
+            html += '<button type="button" class="memo-depth-btn active" onclick="memoSetRatingsDepth(\'pillars\')">Pillars</button>';
+            html += '<button type="button" class="memo-depth-btn" onclick="memoSetRatingsDepth(\'families\')">Families</button>';
+            html += '<button type="button" class="memo-depth-btn" onclick="memoSetRatingsDepth(\'tcs\')">TCs</button>';
+            html += '<button type="button" class="memo-depth-btn" onclick="memoSetRatingsDepth(\'attributes\')">Attributes</button>';
+            html += '<button type="button" class="memo-depth-btn" onclick="memoSetRatingsDepth(\'questions\')">Questions</button>';
             html += '</div>';
 
-            // #2 Written judgements per pillar
-            html += '<div class="memo-item">';
-            html += '<div class="memo-item-title">#2 Pillar Judgements</div>';
+            html += '<div id="memo-ratings-table-container">';
+            html += renderMemoRatingsTable(pillarIds, pillarLabels, pillarDetailAnchors, stageRatings, pillars, 'pillars');
+            html += '</div>';
+            html += '</div>';
+
+            // #2 Pillar Judgements + Analysis (merged, 2x3 grid)
+            html += '<div class="memo-item" id="memo-item-2">';
+            html += '<div class="memo-item-title">#2 Pillar Judgements &amp; Analysis</div>';
+            html += '<div class="memo-pillar-grid" id="memo-item-3">';
             for (var pj = 0; pj < pillarIds.length; pj++) {
                 var pKey = pillarIds[pj];
                 var pData = pillars[pKey];
+                html += '<div class="memo-pillar-grid-cell" id="memo-judgement-' + pKey + '">';
+                html += '<div class="memo-pillar-grid-label">' + pillarLabels[pKey] + ' <span class="rating-badge ' + getRatingClass(pData ? pData.rating : '') + '" style="font-size:10px;">' + escapeHtml(pData ? pData.rating || '\u2014' : '\u2014') + '</span></div>';
                 if (pData && pData.judgement && pData.judgement.length > 0) {
-                    html += '<div style="margin-bottom:12px;">';
-                    html += '<div style="font-size:12px;font-weight:700;color:#a371f7;margin-bottom:4px;padding-bottom:3px;border-bottom:1px solid rgba(167,139,250,0.15);">' + pillarLabels[pKey] + ' <span class="rating-badge ' + getRatingClass(pData.rating) + '" style="font-size:10px;">' + escapeHtml(pData.rating) + '</span></div>';
                     html += renderJudgementBullets(pData.judgement);
-                    html += '</div>';
                 }
+                if (pData && pData.analysis && pData.analysis.length > 0) {
+                    html += '<div style="margin-top:4px;opacity:0.85;">' + renderAnalysisBullets(pData.analysis) + '</div>';
+                }
+                if ((!pData || (!pData.judgement || pData.judgement.length === 0) && (!pData.analysis || pData.analysis.length === 0))) {
+                    html += '<div class="memo-placeholder">Not yet populated</div>';
+                }
+                html += '</div>';
             }
             html += '</div>';
-
-            // #3 Written analysis per pillar
-            html += '<div class="memo-item">';
-            html += '<div class="memo-item-title">#3 Pillar Analysis</div>';
-            for (var pa = 0; pa < pillarIds.length; pa++) {
-                var paKey = pillarIds[pa];
-                var paData = pillars[paKey];
-                if (paData && paData.analysis && paData.analysis.length > 0) {
-                    html += '<div style="margin-bottom:12px;">';
-                    html += '<div style="font-size:12px;font-weight:700;color:#58a6ff;margin-bottom:4px;padding-bottom:3px;border-bottom:1px solid rgba(88,166,255,0.15);">' + pillarLabels[paKey] + '</div>';
-                    html += renderAnalysisBullets(paData.analysis);
-                    html += '</div>';
-                }
-            }
             html += '</div>';
 
             // #4 IC written summary
-            html += '<div class="memo-item">';
+            html += '<div class="memo-item" id="memo-item-4">';
             html += '<div class="memo-item-title">#4 IC Written Summary</div>';
             html += memo.ic_summary ? '<div class="memo-item-content">' + escapeHtml(memo.ic_summary) + '</div>' : '<div class="memo-placeholder">Not yet populated</div>';
             html += '</div>';
@@ -9637,7 +9939,7 @@
             var pillars = treeData.pillars || {};
             var icItems = memo.ic_items || {};
             var expClass = expanded ? ' expanded' : '';
-            var html = '<div class="memo-section">';
+            var html = '<div class="memo-section" id="memo-sec-c">';
             html += '<div class="memo-section-header' + expClass + '" onclick="memoToggleSection(this)">';
             html += '<span class="memo-section-chevron">\u25B6</span>';
             html += '<span class="memo-section-label">Section C: IC Analysis</span>';
@@ -9646,18 +9948,18 @@
             html += '<div class="memo-section-body">';
 
             // #9 Basic checks
-            html += '<div class="memo-item">';
+            html += '<div class="memo-item" id="memo-item-9">';
             html += '<div class="memo-item-title">#9 Basic Checks (Pre-Analysis Gate)</div>';
             html += '<div class="memo-placeholder">Not yet populated</div>';
             html += '</div>';
 
             // P3 + P4 detail rendering
-            html += '<div class="memo-item">';
+            html += '<div class="memo-item" id="memo-item-p3detail">';
             html += '<div class="memo-item-title">P3 Fundamental Change \u2014 Detail</div>';
             html += renderMemoPillarDetail(pillars.p3);
             html += '</div>';
 
-            html += '<div class="memo-item">';
+            html += '<div class="memo-item" id="memo-item-p4detail">';
             html += '<div class="memo-item-title">P4 Building Blocks \u2014 Detail</div>';
             html += renderMemoPillarDetail(pillars.p4);
             html += '</div>';
@@ -9680,7 +9982,7 @@
             for (var ic = 0; ic < icSections.length; ic++) {
                 var sec = icSections[ic];
                 var val = icItems[sec.key];
-                html += '<div class="memo-item">';
+                html += '<div class="memo-item" id="memo-item-' + sec.num + '">';
                 html += '<div class="memo-item-title">#' + sec.num + ' ' + sec.label + '</div>';
                 if (sec.isList && Array.isArray(val) && val.length > 0) {
                     html += '<ul class="memo-item-content">';
@@ -9777,7 +10079,7 @@
         function renderMemoSectionD(memo, stock, expanded) {
             var actions = memo.actions || {};
             var expClass = expanded ? ' expanded' : '';
-            var html = '<div class="memo-section">';
+            var html = '<div class="memo-section" id="memo-sec-d">';
             html += '<div class="memo-section-header' + expClass + '" onclick="memoToggleSection(this)">';
             html += '<span class="memo-section-chevron">\u25B6</span>';
             html += '<span class="memo-section-label">Section D: Actions</span>';
@@ -9786,7 +10088,7 @@
             html += '<div class="memo-section-body">';
 
             // #21 APM Recommendation
-            html += '<div class="memo-item">';
+            html += '<div class="memo-item" id="memo-item-21">';
             html += '<div class="memo-item-title">#21 APM Recommendation (Progress / Park / Invest)</div>';
             var rec = actions.recommendation || (stock.actions ? stock.actions.apm_recommendation : '');
             if (rec) {
@@ -9797,7 +10099,7 @@
             html += '</div>';
 
             // #22 KQs for next stage
-            html += '<div class="memo-item">';
+            html += '<div class="memo-item" id="memo-item-22">';
             html += '<div class="memo-item-title">#22 Key Questions for Next Stage</div>';
             if (actions.next_stage_kqs && actions.next_stage_kqs.length > 0) {
                 html += '<ul class="memo-item-content">';
@@ -9811,19 +10113,19 @@
             html += '</div>';
 
             // #23 Parking reasons
-            html += '<div class="memo-item">';
+            html += '<div class="memo-item" id="memo-item-23">';
             html += '<div class="memo-item-title">#23 Parking Reasons</div>';
             html += actions.parking_reasons ? '<div class="memo-item-content">' + escapeHtml(actions.parking_reasons) + '</div>' : '<div class="memo-placeholder">Not yet populated</div>';
             html += '</div>';
 
             // #24 Re-assessment criteria
-            html += '<div class="memo-item">';
+            html += '<div class="memo-item" id="memo-item-24">';
             html += '<div class="memo-item-title">#24 Re-Assessment Criteria</div>';
             html += actions.reassessment_criteria ? '<div class="memo-item-content">' + escapeHtml(actions.reassessment_criteria) + '</div>' : '<div class="memo-placeholder">Not yet populated</div>';
             html += '</div>';
 
             // #25 Monitoring plan
-            html += '<div class="memo-item">';
+            html += '<div class="memo-item" id="memo-item-25">';
             html += '<div class="memo-item-title">#25 Monitoring Plan</div>';
             html += actions.monitoring_plan ? '<div class="memo-item-content">' + escapeHtml(actions.monitoring_plan) + '</div>' : '<div class="memo-placeholder">Not yet populated</div>';
             html += '</div>';
