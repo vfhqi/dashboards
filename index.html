@@ -7083,6 +7083,13 @@
 										"ss_estimates": ""
 									},
 									"ic_items": {
+										"basic_checks": [
+											{ "label": "Average Daily Volume > $3m", "value": "$8.2m (90D avg)", "pass": true },
+											{ "label": "Market Cap > $1bn", "value": "EUR 4.8bn", "pass": true },
+											{ "label": "Listed > 12 months", "value": "Listed since 2013", "pass": true },
+											{ "label": "Free float > 25%", "value": "62%", "pass": true },
+											{ "label": "Analyst coverage \u2265 3", "value": "9 analysts", "pass": true }
+										],
 										"icds": [],
 										"ach_scenarios": "",
 										"key_confusions": [],
@@ -9509,7 +9516,7 @@
             if (title) {
                 title.innerHTML = '<span class="memo-modal-ticker">' + escapeHtml(stock.ticker) + '</span>'
                     + escapeHtml(stock.company_name)
-                    + '<span class="memo-modal-subtitle">Investment Case MEMO \u00b7 ' + escapeHtml(stock.stage || '') + '</span>';
+                    + '<span class="memo-modal-subtitle">Investment Case \u2014 Analysis &amp; Judgement \u00b7 ' + escapeHtml(stock.stage || '') + '</span>';
             }
 
             var body = document.getElementById('memo-modal-body');
@@ -9627,11 +9634,11 @@
             // ========== Section B: Summary ==========
             html += renderMemoSectionB(stock, treeData, stageRatings, pillars, true);
 
+            // ========== Section D: Actions (before C per Richard's preference) ==========
+            html += renderMemoSectionD(memo, stock, true);
+
             // ========== Section C: IC Analysis ==========
             html += renderMemoSectionC(treeData, memo, true);
-
-            // ========== Section D: Actions ==========
-            html += renderMemoSectionD(memo, stock, true);
 
             return html;
         }
@@ -9647,8 +9654,8 @@
             html += '<div class="memo-toc-group-label" onclick="memoScrollTo(\'memo-sec-a\')">A: Financials</div>';
             html += '<ul class="memo-toc-items">';
             html += '<li onclick="memoScrollTo(\'memo-item-5\')">#5 Guidance</li>';
-            html += '<li onclick="memoScrollTo(\'memo-item-6\')">#6 SS Estimates</li>';
-            html += '<li onclick="memoScrollTo(\'memo-item-7\')" class="memo-toc-rb">#7 Modal Case [RB]</li>';
+            html += '<li onclick="memoScrollTo(\'memo-item-6\')">#6 Financial Estimates</li>';
+            html += '<li onclick="memoScrollTo(\'memo-item-7\')" class="memo-toc-rb">#7 Forecasts [RB]</li>';
             html += '<li onclick="memoScrollTo(\'memo-item-8\')" class="memo-toc-rb">#8 TSR DuPont [RB]</li>';
             html += '</ul></div>';
 
@@ -9656,30 +9663,28 @@
             html += '<div class="memo-toc-group">';
             html += '<div class="memo-toc-group-label" onclick="memoScrollTo(\'memo-sec-b\')">B: Summary</div>';
             html += '<ul class="memo-toc-items">';
-            html += '<li onclick="memoScrollTo(\'memo-item-1\')">#1 Ratings Progression</li>';
+            html += '<li onclick="memoScrollTo(\'memo-item-1\')">#1 Ratings</li>';
             html += '<li onclick="memoScrollTo(\'memo-item-2\')">#2/#3 Judgements &amp; Analysis</li>';
             html += '<li onclick="memoScrollTo(\'memo-item-4\')">#4 IC Written Summary</li>';
             html += '</ul></div>';
 
-            // Section C
-            html += '<div class="memo-toc-group">';
-            html += '<div class="memo-toc-group-label" onclick="memoScrollTo(\'memo-sec-c\')">C: IC Analysis</div>';
-            html += '<ul class="memo-toc-items">';
-            html += '<li onclick="memoScrollTo(\'memo-item-9\')">#9 Basic Checks</li>';
-            html += '<li onclick="memoScrollTo(\'memo-item-p3detail\')">P3 Detail</li>';
-            html += '<li onclick="memoScrollTo(\'memo-item-p4detail\')">P4 Detail</li>';
-            html += '<li onclick="memoScrollTo(\'memo-item-10\')">#10\u2013#20 IC Items</li>';
-            html += '</ul></div>';
-
-            // Section D
+            // Section D (before C per Richard's preference)
             html += '<div class="memo-toc-group">';
             html += '<div class="memo-toc-group-label" onclick="memoScrollTo(\'memo-sec-d\')">D: Actions</div>';
             html += '<ul class="memo-toc-items">';
             html += '<li onclick="memoScrollTo(\'memo-item-21\')">#21 Recommendation</li>';
-            html += '<li onclick="memoScrollTo(\'memo-item-22\')">#22 Next Stage KQs</li>';
+            html += '<li onclick="memoScrollTo(\'memo-item-22\')">#22 KQs/KAs</li>';
             html += '<li onclick="memoScrollTo(\'memo-item-23\')">#23 Parking Reasons</li>';
             html += '<li onclick="memoScrollTo(\'memo-item-24\')">#24 Re-Assessment</li>';
             html += '<li onclick="memoScrollTo(\'memo-item-25\')">#25 Monitoring Plan</li>';
+            html += '</ul></div>';
+
+            // Section C
+            html += '<div class="memo-toc-group">';
+            html += '<div class="memo-toc-group-label" onclick="memoScrollTo(\'memo-sec-c\')">C: IC Analysis &amp; Judgements</div>';
+            html += '<ul class="memo-toc-items">';
+            html += '<li onclick="memoScrollTo(\'memo-item-9\')">#9 Basic Checks</li>';
+            html += '<li onclick="memoScrollTo(\'memo-item-10\')">#10\u2013#20 IC Items</li>';
             html += '</ul></div>';
 
             html += '</div></div>';
@@ -9823,26 +9828,26 @@
             var html = '<div class="memo-section" id="memo-sec-a">';
             html += '<div class="memo-section-header' + expClass + '" onclick="memoToggleSection(this)">';
             html += '<span class="memo-section-chevron">\u25B6</span>';
-            html += '<span class="memo-section-label">Section A: Financials</span>';
+            html += '<span class="memo-section-label">Section A: Financials Section</span>';
             html += '<span class="memo-section-tag">#5\u2013#8</span>';
             html += '</div>';
             html += '<div class="memo-section-body">';
 
             // #5 Guidance
             html += '<div class="memo-item" id="memo-item-5">';
-            html += '<div class="memo-item-title">#5 Guidance (EGP, Key Financial Milestones)</div>';
+            html += '<div class="memo-item-title">#5 Guidance</div>';
             html += fin.guidance ? '<div class="memo-item-content">' + escapeHtml(fin.guidance) + '</div>' : '<div class="memo-placeholder">Not yet populated</div>';
             html += '</div>';
 
             // #6 SS Estimates
             html += '<div class="memo-item" id="memo-item-6">';
-            html += '<div class="memo-item-title">#6 SS Estimates (Sell-Side Consensus)</div>';
+            html += '<div class="memo-item-title">#6 Financial Estimates \u2014 SS</div>';
             html += fin.ss_estimates ? '<div class="memo-item-content">' + escapeHtml(fin.ss_estimates) + '</div>' : '<div class="memo-placeholder">Not yet populated</div>';
             html += '</div>';
 
             // #7 Modal Case Forecasts [RB]
             html += '<div class="memo-item" id="memo-item-7">';
-            html += '<div class="memo-item-title">#7 Modal Case Forecasts</div>';
+            html += '<div class="memo-item-title">#7 Financial Forecasts \u2014 Modal Case</div>';
             html += '<div class="memo-rb-placeholder">[RB] Awaiting Richard\'s input</div>';
             html += '</div>';
 
@@ -9863,7 +9868,7 @@
             var html = '<div class="memo-section" id="memo-sec-b">';
             html += '<div class="memo-section-header' + expClass + '" onclick="memoToggleSection(this)">';
             html += '<span class="memo-section-chevron">\u25B6</span>';
-            html += '<span class="memo-section-label">Section B: Summary</span>';
+            html += '<span class="memo-section-label">Section B: Summary Section</span>';
             html += '<span class="memo-section-tag">#1\u2013#4</span>';
             html += '</div>';
             html += '<div class="memo-section-body">';
@@ -9885,7 +9890,7 @@
 
             // #1 Ratings table — all 6 pillars, stages as columns
             html += '<div class="memo-item" id="memo-item-1">';
-            html += '<div class="memo-item-title">#1 Ratings Progression</div>';
+            html += '<div class="memo-item-title">#1 Ratings \u2014 All Pillars, TCs, Attributes &amp; Questions</div>';
 
             // Detail level toggle buttons
             html += '<div class="memo-ratings-depth" id="memo-ratings-depth">';
@@ -9901,22 +9906,33 @@
             html += '</div>';
             html += '</div>';
 
-            // #2 Pillar Judgements + Analysis (merged, 2x3 grid)
+            // #2/#3 Pillar Judgements + Analysis (merged, 2x3 grid with expandable detail)
             html += '<div class="memo-item" id="memo-item-2">';
-            html += '<div class="memo-item-title">#2 Pillar Judgements &amp; Analysis</div>';
+            html += '<div class="memo-item-title">#2/#3 Written Judgements &amp; Analysis \u2014 All Pillars, TCs, Attributes &amp; Questions</div>';
             html += '<div class="memo-pillar-grid" id="memo-item-3">';
             for (var pj = 0; pj < pillarIds.length; pj++) {
                 var pKey = pillarIds[pj];
                 var pData = pillars[pKey];
                 html += '<div class="memo-pillar-grid-cell" id="memo-judgement-' + pKey + '">';
                 html += '<div class="memo-pillar-grid-label">' + pillarLabels[pKey] + ' <span class="rating-badge ' + getRatingClass(pData ? pData.rating : '') + '" style="font-size:10px;">' + escapeHtml(pData ? pData.rating || '\u2014' : '\u2014') + '</span></div>';
+                var hasContent = false;
                 if (pData && pData.judgement && pData.judgement.length > 0) {
                     html += renderJudgementBullets(pData.judgement);
+                    hasContent = true;
                 }
                 if (pData && pData.analysis && pData.analysis.length > 0) {
                     html += '<div style="margin-top:4px;opacity:0.85;">' + renderAnalysisBullets(pData.analysis) + '</div>';
+                    hasContent = true;
                 }
-                if ((!pData || (!pData.judgement || pData.judgement.length === 0) && (!pData.analysis || pData.analysis.length === 0))) {
+                // Expandable family/children detail
+                if (pData && pData.families && pData.families.length > 0) {
+                    html += '<span class="memo-detail-toggle" onclick="memoToggleDetail(this)" style="margin-top:6px;display:inline-block;">[show families/detail]</span>';
+                    html += '<div class="memo-detail-body">';
+                    html += renderMemoPillarDetail(pData);
+                    html += '</div>';
+                    hasContent = true;
+                }
+                if (!hasContent) {
                     html += '<div class="memo-placeholder">Not yet populated</div>';
                 }
                 html += '</div>';
@@ -9926,7 +9942,7 @@
 
             // #4 IC written summary
             html += '<div class="memo-item" id="memo-item-4">';
-            html += '<div class="memo-item-title">#4 IC Written Summary</div>';
+            html += '<div class="memo-item-title">#4 Investment Case Written Summary</div>';
             html += memo.ic_summary ? '<div class="memo-item-content">' + escapeHtml(memo.ic_summary) + '</div>' : '<div class="memo-placeholder">Not yet populated</div>';
             html += '</div>';
 
@@ -9942,41 +9958,43 @@
             var html = '<div class="memo-section" id="memo-sec-c">';
             html += '<div class="memo-section-header' + expClass + '" onclick="memoToggleSection(this)">';
             html += '<span class="memo-section-chevron">\u25B6</span>';
-            html += '<span class="memo-section-label">Section C: IC Analysis</span>';
+            html += '<span class="memo-section-label">Section C: Investment Case \u2014 Analysis &amp; Judgements</span>';
             html += '<span class="memo-section-tag">#9\u2013#20</span>';
             html += '</div>';
             html += '<div class="memo-section-body">';
 
             // #9 Basic checks
             html += '<div class="memo-item" id="memo-item-9">';
-            html += '<div class="memo-item-title">#9 Basic Checks (Pre-Analysis Gate)</div>';
-            html += '<div class="memo-placeholder">Not yet populated</div>';
+            html += '<div class="memo-item-title">#9 Basic Checks (ADV &gt; $3m, Market Cap &gt; $1bn, Listed &gt; 12 Months)</div>';
+            var basicChecks = icItems.basic_checks;
+            if (basicChecks && basicChecks.length > 0) {
+                html += '<table class="memo-ratings-table" style="margin-top:6px;">';
+                html += '<thead><tr><th>Check</th><th>Value</th><th>Pass</th></tr></thead><tbody>';
+                for (var bc = 0; bc < basicChecks.length; bc++) {
+                    var chk = basicChecks[bc];
+                    var passClass = chk.pass ? 'color:#3fb950;' : 'color:#f85149;';
+                    html += '<tr><td>' + escapeHtml(chk.label) + '</td><td>' + escapeHtml(chk.value) + '</td>';
+                    html += '<td style="' + passClass + 'font-weight:700;">' + (chk.pass ? '\u2713 PASS' : '\u2717 FAIL') + '</td></tr>';
+                }
+                html += '</tbody></table>';
+            } else {
+                html += '<div class="memo-placeholder">Not yet populated</div>';
+            }
             html += '</div>';
 
-            // P3 + P4 detail rendering
-            html += '<div class="memo-item" id="memo-item-p3detail">';
-            html += '<div class="memo-item-title">P3 Fundamental Change \u2014 Detail</div>';
-            html += renderMemoPillarDetail(pillars.p3);
-            html += '</div>';
-
-            html += '<div class="memo-item" id="memo-item-p4detail">';
-            html += '<div class="memo-item-title">P4 Building Blocks \u2014 Detail</div>';
-            html += renderMemoPillarDetail(pillars.p4);
-            html += '</div>';
-
-            // #10-#20 IC Items
+            // #10-#20 IC Items (titles from MEMO view Excel worksheet)
             var icSections = [
-                { num: 10, key: 'icds', label: 'Investment Case Drivers (ICDs)', isList: true },
-                { num: 11, key: 'ach_scenarios', label: 'ACH Scenarios', isList: false },
-                { num: 12, key: 'key_confusions', label: 'Key Confusions / Key Uncertainties', isList: true },
-                { num: 13, key: 'key_risks', label: 'Key Risks', isList: true },
-                { num: 14, key: 'key_hypothesis_failures', label: 'Key Hypothesis Failures', isList: true },
-                { num: 15, key: 'key_positive_outcomes', label: 'Key Positive Outcomes', isList: true },
-                { num: 16, key: 'key_questions', label: 'Key Questions', isList: true },
-                { num: 17, key: 'key_assumptions', label: 'Key Assumptions', isList: true },
-                { num: 18, key: 'invalidation_thresholds', label: 'Invalidation Thresholds', isList: true },
-                { num: 19, key: 'negative_expected_developments', label: 'Negative Expected Developments', isList: true },
-                { num: 20, key: 'monitoring_plan', label: 'Monitoring Plan', isList: true }
+                { num: 10, key: 'icds', label: 'Drivers of Investment Case (ICDs) \u2014 Qualitative Inputs &amp; Financial Outputs', isList: true },
+                { num: 11, key: 'ach_scenarios', label: '10 General/Standard Invalidation ACH Scenarios', isList: false },
+                { num: 12, key: 'key_confusions', label: 'Key Confusions (KCs) &amp; Key Unknowns (KUs)', isList: true },
+                { num: 13, key: 'key_risks', label: 'Key Concerns/Risks (KRs)', isList: true },
+                { num: 14, key: 'key_hypothesis_failures', label: 'Key Hygiene Factors/Assumptions (KHF/As)', isList: true },
+                { num: 15, key: 'key_positive_outcomes', label: 'Key Positive Optionality Beyond Modal Case (KPOs)', isList: true },
+                { num: 16, key: 'key_questions', label: 'Key Questions (KQs) to Be Answered Before Capital Deployed', isList: true },
+                { num: 17, key: 'key_assumptions', label: 'Key Actions for Next Stage [KAs]', isList: true },
+                { num: 18, key: 'invalidation_thresholds', label: 'Plausible Fundamental Invalidation Thresholds/Developments', isList: true },
+                { num: 19, key: 'negative_expected_developments', label: 'Negative, Should-Be Expected Developments', isList: true },
+                { num: 20, key: 'monitoring_plan', label: 'Monitoring Plan for TIs, ICDs &amp; Peers/Value Chain', isList: true }
             ];
 
             for (var ic = 0; ic < icSections.length; ic++) {
@@ -10082,14 +10100,14 @@
             var html = '<div class="memo-section" id="memo-sec-d">';
             html += '<div class="memo-section-header' + expClass + '" onclick="memoToggleSection(this)">';
             html += '<span class="memo-section-chevron">\u25B6</span>';
-            html += '<span class="memo-section-label">Section D: Actions</span>';
+            html += '<span class="memo-section-label">Section D: Actions \u2014 Next-Stage Go/No-Go</span>';
             html += '<span class="memo-section-tag">#21\u2013#25</span>';
             html += '</div>';
             html += '<div class="memo-section-body">';
 
             // #21 APM Recommendation
             html += '<div class="memo-item" id="memo-item-21">';
-            html += '<div class="memo-item-title">#21 APM Recommendation (Progress / Park / Invest)</div>';
+            html += '<div class="memo-item-title">#21 Recommendation to Prioritise vs Other Opportunities</div>';
             var rec = actions.recommendation || (stock.actions ? stock.actions.apm_recommendation : '');
             if (rec) {
                 html += '<div class="memo-item-content"><span class="stage-badge stage-live">' + escapeHtml(rec) + '</span></div>';
@@ -10100,7 +10118,7 @@
 
             // #22 KQs for next stage
             html += '<div class="memo-item" id="memo-item-22">';
-            html += '<div class="memo-item-title">#22 Key Questions for Next Stage</div>';
+            html += '<div class="memo-item-title">#22 Specific KQs/KAs if Progressed to Next Stage</div>';
             if (actions.next_stage_kqs && actions.next_stage_kqs.length > 0) {
                 html += '<ul class="memo-item-content">';
                 for (var ki = 0; ki < actions.next_stage_kqs.length; ki++) {
@@ -10114,19 +10132,19 @@
 
             // #23 Parking reasons
             html += '<div class="memo-item" id="memo-item-23">';
-            html += '<div class="memo-item-title">#23 Parking Reasons</div>';
+            html += '<div class="memo-item-title">#23 Reasons for Parking \u2014 Gaps Analysis</div>';
             html += actions.parking_reasons ? '<div class="memo-item-content">' + escapeHtml(actions.parking_reasons) + '</div>' : '<div class="memo-placeholder">Not yet populated</div>';
             html += '</div>';
 
             // #24 Re-assessment criteria
             html += '<div class="memo-item" id="memo-item-24">';
-            html += '<div class="memo-item-title">#24 Re-Assessment Criteria</div>';
+            html += '<div class="memo-item-title">#24 Re-Assessment Criteria to Trigger Re-Activation</div>';
             html += actions.reassessment_criteria ? '<div class="memo-item-content">' + escapeHtml(actions.reassessment_criteria) + '</div>' : '<div class="memo-placeholder">Not yet populated</div>';
             html += '</div>';
 
             // #25 Monitoring plan
             html += '<div class="memo-item" id="memo-item-25">';
-            html += '<div class="memo-item-title">#25 Monitoring Plan</div>';
+            html += '<div class="memo-item-title">#25 Monitoring Plan for Re-Assessment Criteria</div>';
             html += actions.monitoring_plan ? '<div class="memo-item-content">' + escapeHtml(actions.monitoring_plan) + '</div>' : '<div class="memo-placeholder">Not yet populated</div>';
             html += '</div>';
 
