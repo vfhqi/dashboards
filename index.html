@@ -1879,7 +1879,7 @@
             transform: translateY(1px);
         }
 
-        /* LIST modal overlay — same pattern as MAP */
+        /* LIST modal overlay — comparison matrix */
         .list-modal-overlay {
             display: none;
             position: fixed;
@@ -1897,12 +1897,12 @@
         }
         .list-modal-frame {
             position: relative;
-            max-width: 900px;
+            max-width: 1200px;
             margin: 8px auto;
             background: #0d1117;
             border: 1px solid #1f2a3a;
             border-radius: 6px;
-            padding: 10px 16px 14px;
+            padding: 10px 12px 14px;
             box-shadow: 0 18px 64px rgba(0, 0, 0, 0.65);
         }
         .list-modal-header {
@@ -1947,82 +1947,142 @@
             color: #e6edf3;
         }
 
-        /* Section headers — colour coded by category */
-        .list-section {
-            margin-bottom: 12px;
+        /* Comparison matrix table */
+        .list-matrix {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
         }
-        .list-section-header {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 10px;
-            border-radius: 4px;
-            margin-bottom: 4px;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 0.3px;
-        }
-        .list-section-header .list-section-numeral {
-            font-size: 13px;
-            font-weight: 800;
-            min-width: 24px;
-        }
-        .list-section-header .list-section-rating {
-            margin-left: auto;
-        }
-        /* Category colours */
-        .list-cat-technical  { background: rgba(88, 166, 255, 0.10); color: #79c0ff; border-left: 3px solid #58a6ff; }
-        .list-cat-thematic   { background: rgba(167, 139, 250, 0.10); color: #c4b5fd; border-left: 3px solid #a78bfa; }
-        .list-cat-fundamentals { background: rgba(63, 185, 80, 0.10); color: #7ee787; border-left: 3px solid #3fb950; }
-        .list-cat-earnings   { background: rgba(240, 214, 92, 0.10); color: #f0d65c; border-left: 3px solid #f0d65c; }
-        .list-cat-returns    { background: rgba(255, 123, 114, 0.10); color: #ffa198; border-left: 3px solid #ff7b72; }
-
-        /* Individual list items */
-        .list-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 5px 10px 5px 36px;
+        .list-matrix th,
+        .list-matrix td {
+            padding: 4px 6px;
+            font-size: 11px;
             border-bottom: 1px solid #161b22;
-            cursor: pointer;
-            transition: background 0.1s;
-            font-size: 12px;
+            vertical-align: middle;
+        }
+        /* Label column — wider */
+        .list-matrix th.list-label-col,
+        .list-matrix td.list-label-col {
+            width: 38%;
+            text-align: left;
             color: #c9d1d9;
         }
-        .list-item:hover {
+        /* Stock columns — equal width, centred */
+        .list-matrix th.list-stock-col,
+        .list-matrix td.list-stock-col {
+            text-align: center;
+            cursor: pointer;
+        }
+        .list-matrix td.list-stock-col:hover {
             background: rgba(88, 166, 255, 0.06);
         }
-        .list-item-num {
-            font-size: 10px;
-            color: #484f58;
-            font-weight: 600;
-            min-width: 16px;
-            text-align: right;
-            flex-shrink: 0;
+
+        /* Ticker header cells */
+        .list-ticker-header {
+            position: relative;
+            cursor: pointer;
+            padding: 6px 4px;
         }
-        .list-item-label {
-            flex: 1;
+        .list-ticker-header .list-ticker-name {
+            font-size: 12px;
+            font-weight: 700;
+            color: #58a6ff;
+            display: block;
         }
-        .list-item-detail {
-            font-size: 10px;
+        .list-ticker-header .list-ticker-company {
+            font-size: 9px;
             color: #8b949e;
-            margin-left: 6px;
+            display: block;
             white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
-        .list-item-rating {
-            flex-shrink: 0;
+        .list-ticker-header.list-primary .list-ticker-name {
+            color: #f0d65c;
+        }
+        .list-ticker-header.list-empty .list-ticker-name {
+            color: #484f58;
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        /* Section header rows */
+        .list-section-row td {
+            padding: 8px 6px 4px;
+            font-weight: 700;
+            font-size: 11px;
+            letter-spacing: 0.3px;
+            border-bottom: 1px solid #30363d;
+        }
+        .list-section-row td.list-label-col {
+            padding-left: 4px;
+        }
+        /* Category colours for section rows */
+        .list-cat-technical td  { color: #79c0ff; border-bottom-color: rgba(88, 166, 255, 0.3); }
+        .list-cat-thematic td   { color: #c4b5fd; border-bottom-color: rgba(167, 139, 250, 0.3); }
+        .list-cat-fundamentals td { color: #7ee787; border-bottom-color: rgba(63, 185, 80, 0.3); }
+        .list-cat-earnings td   { color: #f0d65c; border-bottom-color: rgba(240, 214, 92, 0.3); }
+        .list-cat-returns td    { color: #ffa198; border-bottom-color: rgba(255, 123, 114, 0.3); }
+
+        /* Ticker search dropdown */
+        .list-search-container {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            z-index: 10001;
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 4px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+            display: none;
+        }
+        .list-search-container.active {
+            display: block;
+        }
+        .list-search-input {
+            width: 100%;
+            padding: 6px 8px;
+            background: #0d1117;
+            border: none;
+            border-bottom: 1px solid #30363d;
+            color: #e6edf3;
+            font-size: 12px;
+            font-family: inherit;
+            outline: none;
+            box-sizing: border-box;
+        }
+        .list-search-results {
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        .list-search-option {
+            padding: 6px 8px;
+            font-size: 11px;
+            color: #c9d1d9;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+        .list-search-option:hover {
+            background: rgba(88, 166, 255, 0.12);
+        }
+        .list-search-option .list-search-sector {
+            font-size: 9px;
+            color: #8b949e;
         }
 
         @media (max-width: 760px) {
             .list-modal-frame {
                 margin: 4px;
-                padding: 10px 8px 18px;
+                padding: 8px 6px 14px;
                 max-width: 100%;
                 border-radius: 4px;
             }
-            .list-item {
-                padding-left: 20px;
-                font-size: 11px;
+            .list-matrix th,
+            .list-matrix td {
+                font-size: 10px;
+                padding: 3px 3px;
             }
         }
 
@@ -2419,6 +2479,7 @@
                     ticker: "HTRO",
                     company_name: "Hexatronic Group",
                     sector: "Cables / Fibre Optics",
+                    industry: "Fibre Optic Cable",
                     market_cap_eur_bn: 1.2,
                     stage: "Triaging",
                     status: "Active",
@@ -2444,6 +2505,7 @@
                     ticker: "IGG",
                     company_name: "IG Group Holdings",
                     sector: "Financial Services / Retail Derivatives",
+                    industry: "Retail Derivatives",
                     market_cap_eur_bn: 6.3,
                     stage: "ESA",
                     status: "Active",
@@ -2481,6 +2543,7 @@
 								"ticker": "NVTK",
 								"company_name": "NovaTech Industries AG",
 								"sector": "Industrials / Automation & Robotics",
+								"industry": "Factory Automation",
 								"market_cap_eur_bn": 8.4,
 								"stage": "Triaging",
 								"status": "Active",
@@ -8380,10 +8443,12 @@
         }
 
         // ================================================================
-        // LIST View — flat checklist overlay
+        // LIST View — comparison matrix overlay
         // ================================================================
 
         var currentListStockIndex = -1;
+        // Session persistence: { primaryTicker: [peerTicker1, peerTicker2, ...] }
+        var listPeerSelections = {};
 
         // LIST structure definition — maps Excel LIST view to dashboard data
         var LIST_STRUCTURE = [
@@ -8395,13 +8460,13 @@
                 items: [
                     { n: 1, label: "Minervini 8-points", pillarId: "p1", familyIdx: 0 },
                     { n: 2, label: "Months qualifying in L12M", pillarId: "p1", familyIdx: -1 },
-                    { n: 3, label: "High relative strength (stock \u2194 sector \u2194 industry \u2194 market)", pillarId: "p1", familyIdx: -1 },
-                    { n: 4, label: "Number of healthy pullback tests in current run", pillarId: "p1", familyIdx: -1 }
+                    { n: 3, label: "High relative strength", pillarId: "p1", familyIdx: -1 },
+                    { n: 4, label: "Healthy pullback tests in current run", pillarId: "p1", familyIdx: -1 }
                 ]
             },
             {
                 numeral: "II",
-                title: "Good case/business fit with current market paradigm",
+                title: "Good case/business fit with market paradigm",
                 category: "thematic",
                 pillarId: "p2",
                 items: [
@@ -8416,38 +8481,38 @@
                 category: "fundamentals",
                 pillarId: "p3",
                 items: [
-                    { n: 1, label: "Strong outputs, limited negatives", detail: "5 TCs, 9 As, 12 Qs", pillarId: "p3", familyIdx: 0, afNumber: 1 },
-                    { n: 2, label: "Strong inputs, limited negatives", detail: "2 TCs, 6 Qs", pillarId: "p3", familyIdx: 1, afNumber: 2 },
-                    { n: 3, label: "Profitable setup, no overlap with false friend/must-avoid", detail: "1 TC, 5 Fs, 6 SUs", pillarId: "p3", familyIdx: 2, afNumber: 3 }
+                    { n: 1, label: "Strong outputs, limited negatives", pillarId: "p3", familyIdx: 0, afNumber: 1 },
+                    { n: 2, label: "Strong inputs, limited negatives", pillarId: "p3", familyIdx: 1, afNumber: 2 },
+                    { n: 3, label: "Profitable setup, no false friend overlap", pillarId: "p3", familyIdx: 2, afNumber: 3 }
                 ]
             },
             {
                 numeral: "IV",
-                title: "Investment case building blocks \u2014 sufficient robustness/bankability",
+                title: "Building blocks \u2014 robustness/bankability",
                 category: "fundamentals",
                 pillarId: "p4",
                 items: [
-                    { n: 1, label: "Required simplicity guardrails for case", detail: "7 TCs, 7 Qs", pillarId: "p4", familyIdx: 0, afNumber: 1 },
-                    { n: 2, label: "Required foundation quality \u2014 operator, business, value chain", detail: "3 TCs, 6 As, X Qs", pillarId: "p4", familyIdx: 1, afNumber: 2 },
-                    { n: 3, label: "Strong fit with environment paradigm", detail: "1 TC, 3 Qs", pillarId: "p4", familyIdx: 2, afNumber: 3 },
-                    { n: 4, label: "No seek-to-avoid attributes", detail: "1 TC, 4 Qs", pillarId: "p4", familyIdx: 3, afNumber: 4 },
-                    { n: 5, label: "Minimal size-limiting attributes", detail: "1 TC, 1 Q", pillarId: "p4", familyIdx: 4, afNumber: 5 },
-                    { n: 6, label: "No invalidating attributes", detail: "5 TCs, 10 Qs", pillarId: "p4", familyIdx: 5, afNumber: 6 },
-                    { n: 7, label: "Congruency of case with recent outcomes", detail: "2 TCs, 4 As", pillarId: "p4", familyIdx: 6, afNumber: 7 },
-                    { n: 8, label: "Bonus: nice-to-have attributes", detail: "2 TCs, 2 Qs", pillarId: "p4", familyIdx: 7, afNumber: 8 }
+                    { n: 1, label: "Simplicity guardrails", pillarId: "p4", familyIdx: 0, afNumber: 1 },
+                    { n: 2, label: "Foundation quality", pillarId: "p4", familyIdx: 1, afNumber: 2 },
+                    { n: 3, label: "Environment paradigm fit", pillarId: "p4", familyIdx: 2, afNumber: 3 },
+                    { n: 4, label: "No seek-to-avoid", pillarId: "p4", familyIdx: 3, afNumber: 4 },
+                    { n: 5, label: "Minimal size-limiting", pillarId: "p4", familyIdx: 4, afNumber: 5 },
+                    { n: 6, label: "No invalidating", pillarId: "p4", familyIdx: 5, afNumber: 6 },
+                    { n: 7, label: "Case/outcome congruency", pillarId: "p4", familyIdx: 6, afNumber: 7 },
+                    { n: 8, label: "Nice-to-have", pillarId: "p4", familyIdx: 7, afNumber: 8 }
                 ]
             },
             {
                 numeral: "V",
-                title: "Sell-side earnings momentum \u2014 strong/improving",
+                title: "SS earnings momentum \u2014 strong/improving",
                 category: "earnings",
                 pillarId: "p5",
                 items: [
-                    { n: 1, label: "EPS", momentumKey: "eps_change", pillarId: "p5", familyIdx: -1 },
-                    { n: 2, label: "EBITDA", momentumKey: "ebitda_change", pillarId: "p5", familyIdx: -1 },
-                    { n: 3, label: "Revenue", momentumKey: "revenue_change", pillarId: "p5", familyIdx: -1 },
-                    { n: 4, label: "Price targets", momentumKey: "price_target_change", pillarId: "p5", familyIdx: -1 },
-                    { n: 5, label: "% Buy", momentumKey: "pct_buy_change", pillarId: "p5", familyIdx: -1 }
+                    { n: 1, label: "EPS \u2014 L3M", momentumKey: "eps_change", pillarId: "p5", familyIdx: -1 },
+                    { n: 2, label: "EBITDA \u2014 L3M", momentumKey: "ebitda_change", pillarId: "p5", familyIdx: -1 },
+                    { n: 3, label: "Revenue \u2014 L3M", momentumKey: "revenue_change", pillarId: "p5", familyIdx: -1 },
+                    { n: 4, label: "Price targets \u2014 L3M", momentumKey: "price_target_change", pillarId: "p5", familyIdx: -1 },
+                    { n: 5, label: "% Buy \u2014 L3M", momentumKey: "pct_buy_change", pillarId: "p5", familyIdx: -1 }
                 ]
             },
             {
@@ -8459,7 +8524,8 @@
             }
         ];
 
-        // Get momentum data for a stock (from tree data or fallback)
+        // --- Helper functions ---
+
         function getStockMomentumData(stock) {
             var treeKey = 'treeData' + stock.ticker;
             if (window[treeKey] && window[treeKey].p5 && window[treeKey].p5.momentum_data) {
@@ -8471,26 +8537,19 @@
             return null;
         }
 
-        // Get valuation metrics for a stock
         function getStockValuationData(stock) {
             var treeKey = 'treeData' + stock.ticker;
-            if (window[treeKey] && window[treeKey].p6) {
-                return window[treeKey].p6;
-            }
-            if (valuationDataByTicker[stock.ticker]) {
-                return valuationDataByTicker[stock.ticker];
-            }
+            if (window[treeKey] && window[treeKey].p6) { return window[treeKey].p6; }
+            if (valuationDataByTicker[stock.ticker]) { return valuationDataByTicker[stock.ticker]; }
             return null;
         }
 
-        // Format momentum change: "+3.2%" or "0.0%"
         function fmtMomentumPct(val) {
             if (val === undefined || val === null) return "\u2014";
             var sign = val > 0 ? "+" : "";
             return sign + val.toFixed(1) + "%";
         }
 
-        // Directional score: -1, 0, +1
         function momentumDirection(val) {
             if (val === undefined || val === null) return "\u2014";
             if (val > 0) return "+1";
@@ -8498,9 +8557,8 @@
             return "0";
         }
 
-        // Get the pillar-level rating for a section
         function getListSectionRating(stock, pillarId) {
-            var pillarMap = {
+            var m = {
                 "p1": stock.pillars.p1_technical_momentum,
                 "p2": stock.pillars.p2_market_paradigm_fit,
                 "p3": stock.pillars.p3_fundamental_change,
@@ -8508,24 +8566,17 @@
                 "p5": stock.pillars.p5_ss_earnings_momentum,
                 "p6": stock.pillars.p6_valuation
             };
-            return pillarMap[pillarId] || "\u2014";
+            return m[pillarId] || "\u2014";
         }
 
-        // Get the family-level rating for an item (if available)
         function getListItemRating(stock, item) {
             if (!item.pillarId) return "\u2014";
             var pillar = getPillarById(stock, item.pillarId);
             if (!pillar) {
-                // Check fallback data
-                if (item.pillarId === "p5" && momentumDataByTicker[stock.ticker]) {
-                    pillar = momentumDataByTicker[stock.ticker];
-                } else if (item.pillarId === "p6" && valuationDataByTicker[stock.ticker]) {
-                    pillar = valuationDataByTicker[stock.ticker];
-                }
+                if (item.pillarId === "p5" && momentumDataByTicker[stock.ticker]) pillar = momentumDataByTicker[stock.ticker];
+                else if (item.pillarId === "p6" && valuationDataByTicker[stock.ticker]) pillar = valuationDataByTicker[stock.ticker];
             }
             if (!pillar || !pillar.families) return getListSectionRating(stock, item.pillarId);
-
-            // Try to find the specific family
             var family = null;
             if (item.familyIdx >= 0 && item.familyIdx < pillar.families.length) {
                 family = pillar.families[item.familyIdx];
@@ -8533,87 +8584,280 @@
                 var idx = getFamilyIdxByAfNumber(pillar, item.afNumber);
                 if (idx >= 0) family = pillar.families[idx];
             }
-
-            if (family && family.rating && family.rating !== "\u2014") {
-                return family.rating;
-            }
-            // Fall back to pillar rating
+            if (family && family.rating && family.rating !== "\u2014") return family.rating;
             return getListSectionRating(stock, item.pillarId);
         }
 
-        // Render the full LIST content for a stock
-        function renderListContent(stock) {
-            var html = '';
+        // Find stock object by ticker
+        function findStockByTicker(ticker) {
+            for (var i = 0; i < masterData.stocks.length; i++) {
+                if (masterData.stocks[i].ticker === ticker) return masterData.stocks[i];
+            }
+            return null;
+        }
 
-            for (var s = 0; s < LIST_STRUCTURE.length; s++) {
-                var section = LIST_STRUCTURE[s];
-                var catClass = 'list-cat-' + section.category;
-                var sectionRating = getListSectionRating(stock, section.pillarId);
+        // Find stock index by ticker
+        function findStockIndexByTicker(ticker) {
+            for (var i = 0; i < masterData.stocks.length; i++) {
+                if (masterData.stocks[i].ticker === ticker) return i;
+            }
+            return -1;
+        }
 
-                html += '<div class="list-section">';
-                html += '<div class="list-section-header ' + catClass + '">';
-                html += '<span class="list-section-numeral">' + section.numeral + '</span>';
-                html += '<span>' + escapeHtml(section.title) + '</span>';
-                html += '<span class="list-section-rating"><span class="rating-badge ' + getRatingClass(sectionRating) + '">' + sectionRating + '</span></span>';
+        // Get default sector peers for a stock (up to 4, excluding self)
+        function getDefaultSectorPeers(stock) {
+            var peers = [];
+            var sector = (stock.sector || "").split("/")[0].trim().toLowerCase();
+            if (!sector) return peers;
+            for (var i = 0; i < masterData.stocks.length; i++) {
+                var s = masterData.stocks[i];
+                if (s.ticker === stock.ticker) continue;
+                var sSector = (s.sector || "").split("/")[0].trim().toLowerCase();
+                if (sSector === sector) peers.push(s.ticker);
+                if (peers.length >= 4) break;
+            }
+            return peers;
+        }
+
+        // Get the 5 stocks for the comparison matrix (primary + 4 peers)
+        function getListStocks(primaryStock) {
+            var ticker = primaryStock.ticker;
+            var peers;
+            if (listPeerSelections[ticker]) {
+                peers = listPeerSelections[ticker].slice();
+            } else {
+                peers = getDefaultSectorPeers(primaryStock);
+                listPeerSelections[ticker] = peers.slice();
+            }
+            // Pad to 4
+            while (peers.length < 4) peers.push(null);
+            var stocks = [primaryStock];
+            for (var i = 0; i < 4; i++) {
+                stocks.push(peers[i] ? findStockByTicker(peers[i]) : null);
+            }
+            return stocks;
+        }
+
+        // --- Render the comparison matrix ---
+
+        function renderRatingCell(stock, pillarId, familyIdx, afNumber, momentumKey) {
+            if (!stock) return '<td class="list-stock-col"><span class="rating-badge rating-blank">\u2014</span></td>';
+
+            // P5 momentum: show pct + direction
+            if (pillarId === "p5" && momentumKey) {
+                var mData = getStockMomentumData(stock);
+                var mVals = mData && mData[momentumKey] ? mData[momentumKey] : null;
+                var pct = mVals ? fmtMomentumPct(mVals.l3m) : "\u2014";
+                var dir = mVals ? momentumDirection(mVals.l3m) : "\u2014";
+                var clr = "";
+                if (mVals && mVals.l3m > 0) clr = "color:#3fb950;";
+                else if (mVals && mVals.l3m < 0) clr = "color:#ff7b72;";
+                return '<td class="list-stock-col" style="font-size:10px;' + clr + '">' + pct + ' <b>' + dir + '</b></td>';
+            }
+
+            // P6 valuation: show percentile
+            if (pillarId === "p6" && familyIdx === -1 && !afNumber) {
+                var vData = getStockValuationData(stock);
+                var pctile = "\u2014";
+                var rating = getListSectionRating(stock, "p6");
+                if (vData && vData.metrics && vData.metrics.percentile_in_range) {
+                    pctile = vData.metrics.percentile_in_range;
+                }
+                return '<td class="list-stock-col"><span style="font-size:10px;color:#8b949e;">' + escapeHtml(pctile) + '</span> <span class="rating-badge ' + getRatingClass(rating) + '">' + rating + '</span></td>';
+            }
+
+            // Normal: show rating badge
+            var item = { pillarId: pillarId, familyIdx: (familyIdx !== undefined ? familyIdx : -1) };
+            if (afNumber !== undefined) item.afNumber = afNumber;
+            var rating = getListItemRating(stock, item);
+            return '<td class="list-stock-col"><span class="rating-badge ' + getRatingClass(rating) + '">' + rating + '</span></td>';
+        }
+
+        function renderSectionRatingCell(stock, pillarId) {
+            if (!stock) return '<td class="list-stock-col"><span class="rating-badge rating-blank">\u2014</span></td>';
+            var rating = getListSectionRating(stock, pillarId);
+            return '<td class="list-stock-col"><span class="rating-badge ' + getRatingClass(rating) + '">' + rating + '</span></td>';
+        }
+
+        function renderListMatrix(primaryStock) {
+            var stocks = getListStocks(primaryStock);
+            var html = '<table class="list-matrix">';
+
+            // Ticker header row
+            html += '<thead><tr>';
+            html += '<th class="list-label-col" style="vertical-align:bottom;font-size:10px;color:#8b949e;">Checklist Item</th>';
+            for (var c = 0; c < 5; c++) {
+                var s = stocks[c];
+                var isPrimary = (c === 0);
+                var headerClass = isPrimary ? 'list-ticker-header list-primary' : (s ? 'list-ticker-header' : 'list-ticker-header list-empty');
+                html += '<th class="list-stock-col" style="position:relative;">';
+                html += '<div class="' + headerClass + '" ' + (isPrimary ? '' : 'onclick="openListSearch(event,' + c + ')"') + '>';
+                if (s) {
+                    html += '<span class="list-ticker-name">' + escapeHtml(s.ticker) + '</span>';
+                    html += '<span class="list-ticker-company">' + escapeHtml(s.company_name) + '</span>';
+                } else {
+                    html += '<span class="list-ticker-name">+ Select</span>';
+                    html += '<span class="list-ticker-company">Click to choose</span>';
+                }
                 html += '</div>';
+                html += '</th>';
+            }
+            html += '</tr></thead>';
 
-                // Special handling for P5 (momentum items)
+            // Body rows
+            html += '<tbody>';
+            for (var s2 = 0; s2 < LIST_STRUCTURE.length; s2++) {
+                var section = LIST_STRUCTURE[s2];
+                var catClass = 'list-cat-' + section.category;
+
+                // Section header row
+                html += '<tr class="list-section-row ' + catClass + '">';
+                html += '<td class="list-label-col">' + section.numeral + '. ' + escapeHtml(section.title) + '</td>';
+                for (var sc = 0; sc < 5; sc++) {
+                    html += renderSectionRatingCell(stocks[sc], section.pillarId);
+                }
+                html += '</tr>';
+
+                // P5: momentum items
                 if (section.pillarId === "p5") {
-                    var mData = getStockMomentumData(stock);
                     for (var m = 0; m < section.items.length; m++) {
                         var mi = section.items[m];
-                        var mVals = mData && mi.momentumKey && mData[mi.momentumKey] ? mData[mi.momentumKey] : null;
-                        var l3mPct = mVals ? fmtMomentumPct(mVals.l3m) : "\u2014";
-                        var l3mDir = mVals ? momentumDirection(mVals.l3m) : "\u2014";
-                        var dirClass = "";
-                        if (mVals && mVals.l3m > 0) dirClass = "color:#3fb950;";
-                        else if (mVals && mVals.l3m < 0) dirClass = "color:#ff7b72;";
-
-                        html += '<div class="list-item" onclick="listItemNavigate(\'' + mi.pillarId + '\',' + mi.familyIdx + ')">';
-                        html += '<span class="list-item-num">' + mi.n + '</span>';
-                        html += '<span class="list-item-label">' + escapeHtml(mi.label) + ' \u2014 L3M</span>';
-                        html += '<span class="list-item-detail">' + l3mPct + '</span>';
-                        html += '<span class="list-item-rating" style="' + dirClass + 'font-weight:700;font-size:12px;min-width:24px;text-align:center;">' + l3mDir + '</span>';
-                        html += '</div>';
+                        html += '<tr>';
+                        html += '<td class="list-label-col" style="padding-left:20px;cursor:pointer;" onclick="listItemNavigate(\'' + mi.pillarId + '\',' + mi.familyIdx + ')">';
+                        html += '<span style="color:#484f58;margin-right:4px;">' + mi.n + '.</span> ' + escapeHtml(mi.label);
+                        html += '</td>';
+                        for (var mc = 0; mc < 5; mc++) {
+                            html += renderRatingCell(stocks[mc], mi.pillarId, mi.familyIdx, undefined, mi.momentumKey);
+                        }
+                        html += '</tr>';
                     }
                 }
-                // Special handling for P6 (valuation — single line, no sub-items)
+                // P6: single valuation row
                 else if (section.pillarId === "p6") {
-                    var vData = getStockValuationData(stock);
-                    var pctile = "\u2014";
-                    if (vData && vData.metrics && vData.metrics.percentile_in_range) {
-                        pctile = vData.metrics.percentile_in_range;
+                    html += '<tr>';
+                    html += '<td class="list-label-col" style="padding-left:20px;cursor:pointer;" onclick="listItemNavigate(\'p6\',-1)">';
+                    html += 'Percentile in 10Y range</td>';
+                    for (var vc = 0; vc < 5; vc++) {
+                        html += renderRatingCell(stocks[vc], "p6", -1, undefined, undefined);
                     }
-                    html += '<div class="list-item" onclick="listItemNavigate(\'p6\',-1)">';
-                    html += '<span class="list-item-num"></span>';
-                    html += '<span class="list-item-label">Percentile in 10Y range</span>';
-                    html += '<span class="list-item-detail">' + escapeHtml(pctile) + '</span>';
-                    html += '<span class="list-item-rating"><span class="rating-badge ' + getRatingClass(sectionRating) + '">' + sectionRating + '</span></span>';
-                    html += '</div>';
+                    html += '</tr>';
                 }
-                // Normal items (P1-P4)
+                // Normal items
                 else {
                     for (var i = 0; i < section.items.length; i++) {
                         var item = section.items[i];
-                        var itemRating = getListItemRating(stock, item);
-                        var detailSpan = item.detail ? '<span class="list-item-detail">[' + escapeHtml(item.detail) + ']</span>' : '';
-
-                        html += '<div class="list-item" onclick="listItemNavigate(\'' + item.pillarId + '\',' + item.familyIdx + ')">';
-                        html += '<span class="list-item-num">' + item.n + '</span>';
-                        html += '<span class="list-item-label">' + escapeHtml(item.label) + '</span>';
-                        html += detailSpan;
-                        html += '<span class="list-item-rating"><span class="rating-badge ' + getRatingClass(itemRating) + '">' + itemRating + '</span></span>';
-                        html += '</div>';
+                        html += '<tr>';
+                        html += '<td class="list-label-col" style="padding-left:20px;cursor:pointer;" onclick="listItemNavigate(\'' + item.pillarId + '\',' + item.familyIdx + ')">';
+                        html += '<span style="color:#484f58;margin-right:4px;">' + item.n + '.</span> ' + escapeHtml(item.label);
+                        html += '</td>';
+                        for (var ic = 0; ic < 5; ic++) {
+                            html += renderRatingCell(stocks[ic], item.pillarId, item.familyIdx, item.afNumber, undefined);
+                        }
+                        html += '</tr>';
                     }
                 }
-
-                html += '</div>'; // .list-section
             }
 
+            html += '</tbody></table>';
             return html;
         }
 
-        // Open LIST modal for a given stock row
+        // --- Ticker search dropdown ---
+
+        var activeSearchCol = -1;
+
+        function openListSearch(evt, colIndex) {
+            if (evt) evt.stopPropagation();
+            activeSearchCol = colIndex;
+
+            // Close any existing search
+            var existing = document.querySelectorAll('.list-search-container.active');
+            for (var i = 0; i < existing.length; i++) existing[i].classList.remove('active');
+
+            // Find or create the search container in the header cell
+            var headerCells = document.querySelectorAll('.list-matrix thead th.list-stock-col');
+            if (!headerCells || colIndex >= headerCells.length) return;
+            var cell = headerCells[colIndex];
+
+            var container = cell.querySelector('.list-search-container');
+            if (!container) {
+                container = document.createElement('div');
+                container.className = 'list-search-container';
+                container.innerHTML = '<input type="text" class="list-search-input" placeholder="Type ticker...">' +
+                    '<div class="list-search-results"></div>';
+                cell.appendChild(container);
+
+                var input = container.querySelector('.list-search-input');
+                input.addEventListener('input', function() {
+                    filterListSearch(this.value, container, colIndex);
+                });
+                input.addEventListener('click', function(e) { e.stopPropagation(); });
+                container.addEventListener('click', function(e) { e.stopPropagation(); });
+            }
+
+            container.classList.add('active');
+            var input2 = container.querySelector('.list-search-input');
+            input2.value = '';
+            filterListSearch('', container, colIndex);
+
+            setTimeout(function() { input2.focus(); }, 50);
+        }
+
+        function filterListSearch(query, container, colIndex) {
+            var results = container.querySelector('.list-search-results');
+            var q = query.toLowerCase();
+            var primaryStock = masterData.stocks[currentListStockIndex];
+            var html = '';
+
+            // "Clear" option
+            html += '<div class="list-search-option" onclick="selectListPeer(' + colIndex + ', null)">';
+            html += '<span style="color:#8b949e;font-style:italic;">Clear slot</span>';
+            html += '</div>';
+
+            for (var i = 0; i < masterData.stocks.length; i++) {
+                var s = masterData.stocks[i];
+                if (s.ticker === primaryStock.ticker) continue;
+                if (q && s.ticker.toLowerCase().indexOf(q) === -1 && s.company_name.toLowerCase().indexOf(q) === -1) continue;
+                html += '<div class="list-search-option" onclick="selectListPeer(' + colIndex + ', \'' + s.ticker + '\')">';
+                html += '<span><b>' + escapeHtml(s.ticker) + '</b> ' + escapeHtml(s.company_name) + '</span>';
+                html += '<span class="list-search-sector">' + escapeHtml(s.sector || '') + '</span>';
+                html += '</div>';
+            }
+
+            results.innerHTML = html;
+        }
+
+        function selectListPeer(colIndex, ticker) {
+            // colIndex is 1-4 (peer columns), stored as array indices 0-3
+            var primaryStock = masterData.stocks[currentListStockIndex];
+            var key = primaryStock.ticker;
+            if (!listPeerSelections[key]) listPeerSelections[key] = [null, null, null, null];
+
+            // Peer index is colIndex - 1 (col 0 is primary, cols 1-4 are peers)
+            var peerIdx = colIndex - 1;
+            if (peerIdx >= 0 && peerIdx < 4) {
+                listPeerSelections[key][peerIdx] = ticker;
+            }
+
+            // Close search dropdown
+            var containers = document.querySelectorAll('.list-search-container.active');
+            for (var i = 0; i < containers.length; i++) containers[i].classList.remove('active');
+
+            // Re-render the matrix
+            var body = document.getElementById('list-modal-body');
+            if (body) {
+                body.innerHTML = renderListMatrix(primaryStock);
+            }
+        }
+
+        // Close search when clicking outside
+        document.addEventListener('click', function() {
+            var containers = document.querySelectorAll('.list-search-container.active');
+            for (var i = 0; i < containers.length; i++) containers[i].classList.remove('active');
+        });
+
+        // --- Open / Close / Shell ---
+
         function openListView(evt, stockIndex) {
             if (evt && evt.stopPropagation) evt.stopPropagation();
             var stock = masterData.stocks[stockIndex];
@@ -8629,13 +8873,13 @@
             if (title) {
                 title.innerHTML = '<span class="list-modal-ticker">' + escapeHtml(stock.ticker) + '</span>'
                     + escapeHtml(stock.company_name)
-                    + '<span class="list-modal-subtitle">Checklist \u00b7 v19-Apr-26</span>';
+                    + '<span class="list-modal-subtitle">Comparison \u00b7 ' + escapeHtml(stock.sector || '') + '</span>';
             }
 
             var body = document.getElementById('list-modal-body');
             if (body) {
                 try {
-                    body.innerHTML = renderListContent(stock);
+                    body.innerHTML = renderListMatrix(stock);
                 } catch (err) {
                     body.innerHTML = '<div style="color:#ff6b6b;padding:16px;">Error rendering LIST: ' + err.message + '</div>';
                 }
@@ -8654,7 +8898,6 @@
             document.body.style.overflow = '';
         }
 
-        // Build the LIST modal shell once
         function buildListModalShell() {
             var overlay = document.createElement('div');
             overlay.id = 'list-modal-overlay';
@@ -8668,34 +8911,28 @@
                     '<div class="list-modal-body" id="list-modal-body"></div>' +
                 '</div>';
 
-            // Click-outside-frame to close
             overlay.addEventListener('click', function(e) {
-                if (e.target === overlay) {
-                    closeListView();
-                }
+                if (e.target === overlay) closeListView();
             });
 
             document.body.appendChild(overlay);
             return overlay;
         }
 
-        // ESC-key closes LIST modal too
+        // ESC closes LIST
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape' || e.keyCode === 27) {
                 var overlay = document.getElementById('list-modal-overlay');
-                if (overlay && overlay.classList.contains('active')) {
-                    closeListView();
-                }
+                if (overlay && overlay.classList.contains('active')) closeListView();
             }
         });
 
-        // Click-to-navigate from LIST item to pillar/family in main dashboard
+        // Navigate from LIST to pillar/family — uses primary stock
         function listItemNavigate(pillarId, familyIdx) {
             var stockIndex = currentListStockIndex;
             closeListView();
             if (stockIndex < 0) return;
 
-            // Reuse the same navigation logic as MAP
             setTimeout(function() {
                 var masterRow = document.querySelectorAll('#table-body tr.expand-toggle')[stockIndex];
                 if (!masterRow) return;
@@ -8710,27 +8947,18 @@
                     updateStickyPositions();
                 }
 
-                // Expand the pillar card
                 var cardId = 'pillar-' + stockIndex + '-' + pillarId;
                 var card = document.getElementById(cardId);
-                if (card && !card.classList.contains('active-pillar')) {
-                    card.click();
-                }
+                if (card && !card.classList.contains('active-pillar')) card.click();
 
-                // After the pillar opens, expand the specific family
                 setTimeout(function() {
                     if (familyIdx >= 0) {
                         var familyId = 'family-' + pillarId + '-' + familyIdx;
                         var familyCard = document.getElementById(familyId + '-card');
-                        if (familyCard && !familyCard.classList.contains('expanded')) {
-                            familyCard.click();
-                        }
-
+                        if (familyCard && !familyCard.classList.contains('expanded')) familyCard.click();
                         setTimeout(function() {
                             var scrollTarget = document.getElementById(familyId + '-card') || card;
-                            if (scrollTarget && scrollTarget.scrollIntoView) {
-                                scrollTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                            }
+                            if (scrollTarget && scrollTarget.scrollIntoView) scrollTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
                         }, 150);
                     } else if (card && card.scrollIntoView) {
                         card.scrollIntoView({ behavior: 'smooth', block: 'start' });
