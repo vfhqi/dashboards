@@ -662,7 +662,7 @@
         }
         .judgement-bullets .sub-bullets li {
             font-weight: 400;
-            font-size: 11px;
+            font-size: 12px;
             line-height: 1.45;
             color: #4b5563;
             margin-bottom: 2px;
@@ -677,7 +677,7 @@
             margin: 2px 0 0 0;
         }
         .analysis-bullets > li {
-            font-size: 11px;
+            font-size: 12px;
             line-height: 1.5;
             margin-bottom: 3px;
             color: #374151;
@@ -691,7 +691,7 @@
             margin: 2px 0 4px 0;
         }
         .analysis-bullets .sub-bullets li {
-            font-size: 10.5px;
+            font-size: 12px;
             line-height: 1.45;
             color: #6b7280;
             margin-bottom: 2px;
@@ -2360,19 +2360,27 @@
         }
         .memo-pillar-stack-analysis {
             margin-top: 4px;
-            font-size: 11px;
+            font-size: 12px;
             line-height: 1.55;
             color: #4b5563;
         }
         .memo-pillar-stack-analysis li {
             margin-bottom: 3px;
-            font-size: 11px;
+            font-size: 12px;
             color: #4b5563;
         }
         .memo-pillar-stack-analysis .sub-bullets li {
-            font-size: 10.5px;
+            font-size: 12px;
             color: #6b7280;
         }
+
+        /* ---- MEMO: Judgement/Analysis visibility toggles ---- */
+        .memo-hide-judgements .cell-judgement,
+        .memo-hide-judgements .memo-pillar-stack-judgements,
+        .memo-hide-judgements .judgement-bullets { display: none !important; }
+        .memo-hide-analysis .cell-analysis,
+        .memo-hide-analysis .memo-pillar-stack-analysis,
+        .memo-hide-analysis .analysis-bullets { display: none !important; }
 
         /* ---- MEMO: Kill ALL default list bullets globally — dash span is the only marker ---- */
         .memo-modal-frame ul,
@@ -2499,10 +2507,9 @@
             border-bottom: 1px solid rgba(124, 58, 237, 0.15);
         }
         .memo-item-content {
-            font-size: 12px;
+            font-size: 13px;
             color: #1f2328;
             line-height: 1.7;
-            max-width: 900px;
         }
         .memo-item-content li {
             margin-bottom: 5px;
@@ -2523,7 +2530,7 @@
             content: none !important;
         }
         .memo-placeholder {
-            font-size: 11px;
+            font-size: 12px;
             color: #6b7280;
             font-style: italic;
             padding: 6px 0;
@@ -7694,10 +7701,58 @@
 												]}
 											]
 										}
-									},
-									"ic_items": {
-										"basic_checks": [
-											{ "label": "Average Daily Volume > $3m", "value": "$8.2m (90D avg)", "pass": true },
+									,
+									"tsr_dupont": {
+										"stock_name": "NVTK \u2014 NovaTech Industries AG",
+										"period_headers": [
+											{"label":"<<< L0-12M","span":3},{"label":"Today","span":1},{"label":"N0-6M","span":1},{"label":"N6-18M","span":2},{"label":"N18M-3Y","span":3},{"label":"N3Y+","span":4}
+										],
+										"columns": ["H2-24","H1-25","H2-25","Dec-25","H1-26E","H2-26E","H1-27E","H2-27E","H1-28E","H2-28E","H1-29E","H2-29E","H1-30E","H2-30E"],
+										"rows": [
+											{"label":"RB base case forecasts","type":"header"},
+											{"label":"Multiple \u2014 2YF P/E","fmt":"1","highlight":true,"values":[13.8,13.0,11.9,10.9,12.5,14.1,15.7,15.7,15.7,15.7,15.7,15.7,15.7,15.7]},
+											{"label":"1YF P/E","fmt":"1","values":[14.6,14.3,13.8,13.0,14.8,16.4,17.7,17.2,16.9,16.7,16.3,16.0,16.0,16.0]},
+											{"label":"Trailing P/E","fmt":"1","values":[null,null,null,14.3,17.2,19.5,20.9,20.0,19.1,18.4,17.6,17.1,16.7,16.3]},
+											{"label":"Percentile in fair range","fmt":"%","values":[null,null,null,null,null,null,null,null,null,null,null,null,null,null]},
+											{"type":"spacer"},
+											{"label":"1. CURRENT MULTIPLE: Current 2YF P/E multiple is c. 11x","type":"note"},
+											{"label":"2. FAIR RANGE IN SF: 15th pct. 9x, 30th pct. 13x, 50th pct. 15x, 75th pct. 17x, 90th pct. 22x","type":"note"},
+											{"label":"3. ","type":"note"},{"label":"4. ","type":"note"},{"label":"5. ","type":"note"},{"label":"6. ","type":"note"},{"label":"7. ","type":"note"},
+											{"type":"spacer"},
+											{"label":"Revenue (EUR m)","fmt":"0","highlight":true,"values":[1625,1740,1740,3480,1900,1950,2100,2180,2325,2425,2525,2625,2700,2800]},
+											{"label":"Growth [YoY] (%)","fmt":"%","values":[0.071,0.071,0.071,0.071,0.106,0.106,0.112,0.112,0.110,0.110,0.084,0.084,0.068,0.068]},
+											{"type":"spacer"},
+											{"label":"Adj. EBITDA (EUR m)","fmt":"0","values":[293,305,305,626,361,374,428,450,500,521,566,588,620,643]},
+											{"label":"Margin (%)","fmt":"%","values":[0.180,0.175,0.175,0.180,0.190,0.192,0.204,0.206,0.215,0.215,0.224,0.224,0.230,0.230]},
+											{"type":"spacer"},
+											{"label":"Net income [adj.] (EUR m)","fmt":"0","values":[160,165,165,331,195,204,240,252,285,298,320,334,350,366]},
+											{"label":"Margin (%)","fmt":"%","values":[0.099,0.095,0.095,0.095,0.103,0.105,0.114,0.116,0.123,0.123,0.127,0.127,0.130,0.131]},
+											{"type":"spacer"},
+											{"label":"EPS [adj.] (EUR)","fmt":"2","highlight":true,"values":[1.60,1.65,1.65,2.80,1.95,2.04,2.40,2.52,2.85,2.98,3.20,3.34,3.50,3.66]},
+											{"label":"Growth (%)","fmt":"%","values":[-0.05,0.03,0.03,0.07,0.20,0.20,0.23,0.24,0.19,0.18,0.12,0.12,0.09,0.10]},
+											{"type":"spacer"},
+											{"label":"DPS (EUR)","fmt":"2","values":[0.55,0,0.57,0,1.05,0,1.17,0,1.43,0,1.70,0,1.91,0]},
+											{"label":"Cumulative dividends (EUR)","fmt":"2","values":[0,0,0,0,1.05,1.05,2.22,2.22,3.65,3.65,5.35,5.35,7.26,7.26]},
+											{"label":"Payout ratio (%)","fmt":"%","values":[0.34,0,0.35,0,0.35,0,0.35,0,0.35,0,0.35,0,0.35,0]},
+											{"label":"Yield (%)","fmt":"%","values":[0.011,0,0.012,0,0.021,0,0.021,0,0.023,0,0.025,0,0.025,0]},
+											{"type":"spacer"},
+											{"label":"Share price (EUR)","fmt":"2","highlight":true,"values":[48.00,48.00,48.00,48.00,49.50,53.20,62.40,63.80,66.50,67.90,69.20,70.50,71.80,73.00]},
+											{"type":"spacer"},
+											{"label":"Fair value per share (EUR)","fmt":"2","values":[null,null,null,null,49.50,53.20,62.40,63.80,66.50,67.90,69.20,70.50,71.80,73.00]},
+											{"label":"TSR (%)","fmt":"%","highlight":true,"subtotal":true,"values":[null,null,null,null,0.031,0.108,0.300,0.329,0.385,0.415,0.442,0.469,0.496,0.521]},
+											{"label":"IRR (%)","fmt":"%","values":[null,null,null,null,0.063,0.108,0.173,0.134,0.119,0.104,0.093,0.084,0.076,0.069]},
+											{"type":"spacer"},
+											{"label":"TSR Buildup","type":"header"},
+											{"label":"  Dividends","fmt":"%","values":[null,null,null,null,0.022,0.022,0.046,0.046,0.076,0.076,0.111,0.111,0.151,0.151]},
+											{"label":"  Multiple expansion","fmt":"%","values":[null,null,null,null,0.009,0.086,0.150,0.150,0.150,0.150,0.150,0.150,0.150,0.150]},
+											{"label":"  EPS growth","fmt":"%","values":[null,null,null,null,0.000,0.000,0.104,0.133,0.159,0.189,0.181,0.208,0.195,0.220]},
+											{"label":"  TSR buildup","fmt":"%","subtotal":true,"values":[null,null,null,null,0.031,0.108,0.300,0.329,0.385,0.415,0.442,0.469,0.496,0.521]}
+										]
+									}
+								},
+								"ic_items": {
+									"basic_checks": [
+										{ "label": "Average Daily Volume > $3m", "value": "$8.2m (90D avg)", "pass": true },
 											{ "label": "Market Cap > $1bn", "value": "EUR 4.8bn", "pass": true },
 											{ "label": "Listed > 12 months", "value": "Listed since 2013", "pass": true },
 											{ "label": "Free float > 25%", "value": "62%", "pass": true },
@@ -10588,6 +10643,17 @@
             el.textContent = body && body.classList.contains('expanded') ? '[collapse]' : '[expand]';
         }
 
+        function memoToggleJudgements(btn) {
+            btn.classList.toggle('active');
+            var frame = document.querySelector('.memo-modal-frame');
+            if (frame) frame.classList.toggle('memo-hide-judgements');
+        }
+        function memoToggleAnalysis(btn) {
+            btn.classList.toggle('active');
+            var frame = document.querySelector('.memo-modal-frame');
+            if (frame) frame.classList.toggle('memo-hide-analysis');
+        }
+
         function memoSwitchStage(stageKey) {
             currentMemoStage = stageKey;
             var stock = masterData.stocks[currentMemoStockIndex];
@@ -10619,6 +10685,14 @@
                 var activeClass = (s === activeStage) ? ' active' : '';
                 html += '<button type="button" class="memo-stage-btn' + activeClass + '" onclick="memoSwitchStage(\'' + s + '\')">' + stageLabels[s] + '</button>';
             }
+            html += '</div>';
+
+            // COLOUR + JUDGEMENTS + ANALYSIS toggles
+            var colourActive = document.body.classList.contains('colour-mode') ? ' active' : '';
+            html += '<div style="display:inline-flex;gap:6px;margin-left:12px;vertical-align:top;">';
+            html += '<button type="button" class="memo-stage-btn' + colourActive + '" onclick="toggleColourMode();this.classList.toggle(\'active\');" style="font-size:10px;padding:4px 10px;">COLOUR</button>';
+            html += '<button type="button" class="memo-stage-btn" id="memo-toggle-j" onclick="memoToggleJudgements(this)" style="font-size:10px;padding:4px 10px;">JUDGEMENTS</button>';
+            html += '<button type="button" class="memo-stage-btn" id="memo-toggle-a" onclick="memoToggleAnalysis(this)" style="font-size:10px;padding:4px 10px;">ANALYSIS</button>';
             html += '</div>';
 
             // Table of Contents
@@ -10707,7 +10781,7 @@
             html += '<div class="memo-toc-group-label" onclick="memoScrollTo(\'memo-sec-b\')">B: Summary</div>';
             html += '<ul class="memo-toc-items">';
             html += '<li onclick="memoScrollTo(\'memo-item-1\')">#1 Ratings</li>';
-            html += '<li onclick="memoScrollTo(\'memo-item-2\')">#2/#3 Judgements &amp; Analysis</li>';
+            html += '<li onclick="memoScrollTo(\'memo-item-2\')">#2-3 Judgements &amp; Analysis</li>';
             html += '<li onclick="memoScrollTo(\'memo-item-4\')">#4 IC Written Summary</li>';
             html += '</ul></div>';
 
@@ -10862,6 +10936,82 @@
                 p4: 'memo-item-p4detail', p5: 'memo-item-2', p6: 'memo-item-2'
             };
             container.innerHTML = renderMemoRatingsCards(pillarIds, pillarLabels, pillarDetailAnchors, stageRatings, pillars, depth);
+        }
+
+        // ---- TSR DuPont table (mirrors Excel layout J3:Y48) ----
+        function renderTsrDupontTable(fin) {
+            var tsr = (fin && fin.tsr_dupont) ? fin.tsr_dupont : null;
+            if (!tsr) return '<div class="memo-rb-placeholder">[RB] Awaiting Richard\'s input</div>';
+
+            var cols = tsr.columns; // array of column headers (dates/periods)
+            var html = '<div class="fin-model-wrap" style="margin-top:8px;">';
+            html += '<table class="fin-model-table">';
+
+            // Row 1: Stock name + time period headers
+            html += '<tr>';
+            html += '<th class="fin-group-header" style="text-align:left;font-size:13px;color:#7c3aed;">' + escapeHtml(tsr.stock_name || '') + '</th>';
+            // Period group headers
+            var periods = tsr.period_headers || [];
+            for (var ph = 0; ph < periods.length; ph++) {
+                var p = periods[ph];
+                html += '<th class="fin-group-header' + (ph === 0 ? ' fin-col-sep' : '') + '" colspan="' + p.span + '">' + escapeHtml(p.label) + '</th>';
+            }
+            html += '</tr>';
+
+            // Row 2: individual column labels
+            html += '<tr>';
+            html += '<th></th>';
+            for (var ci = 0; ci < cols.length; ci++) {
+                html += '<th>' + escapeHtml(cols[ci]) + '</th>';
+            }
+            html += '</tr>';
+
+            // Data rows
+            var rows = tsr.rows || [];
+            for (var ri = 0; ri < rows.length; ri++) {
+                var row = rows[ri];
+                if (row.type === 'spacer') {
+                    html += '<tr><td colspan="' + (cols.length + 1) + '" style="height:6px;border:none;"></td></tr>';
+                    continue;
+                }
+                if (row.type === 'note') {
+                    html += '<tr><td colspan="' + (cols.length + 1) + '" style="font-size:11px;color:#57606a;font-style:italic;text-align:left;padding:3px 10px;">' + escapeHtml(row.label) + '</td></tr>';
+                    continue;
+                }
+                if (row.type === 'header') {
+                    html += '<tr class="fin-section-header"><td colspan="' + (cols.length + 1) + '">' + escapeHtml(row.label) + '</td></tr>';
+                    continue;
+                }
+                var trCls = '';
+                if (row.highlight) trCls += ' fin-highlight';
+                if (row.subtotal) trCls += ' fin-subtotal';
+                html += '<tr class="' + trCls + '">';
+                html += '<td>' + escapeHtml(row.label) + '</td>';
+                var vals = row.values || [];
+                for (var vi = 0; vi < cols.length; vi++) {
+                    var v = vi < vals.length ? vals[vi] : null;
+                    var formatted = '';
+                    if (v === null || v === undefined || v === '') {
+                        formatted = '';
+                    } else if (row.fmt === '%') {
+                        formatted = (v * 100).toFixed(1) + '%';
+                    } else if (row.fmt === '2') {
+                        formatted = v.toFixed(2);
+                    } else if (row.fmt === '1') {
+                        formatted = v.toFixed(1) + 'x';
+                    } else if (row.fmt === '0') {
+                        formatted = Math.round(v).toLocaleString();
+                    } else {
+                        formatted = typeof v === 'number' ? v.toFixed(2) : String(v);
+                    }
+                    var negCls = (v !== null && typeof v === 'number' && v < 0) ? ' fin-negative' : '';
+                    html += '<td class="' + negCls + '">' + formatted + '</td>';
+                }
+                html += '</tr>';
+            }
+
+            html += '</table></div>';
+            return html;
         }
 
         // ---- Section A: Financials ----
@@ -11095,8 +11245,8 @@
 
             // #8 TSR DuPont [RB]
             html += '<div class="memo-item" id="memo-item-8">';
-            html += '<div class="memo-item-title">#8 TSR DuPont</div>';
-            html += '<div class="memo-rb-placeholder">[RB] Awaiting Richard\'s input</div>';
+            html += '<div class="memo-item-title">#8 TSR DUPONT</div>';
+            html += renderTsrDupontTable(fin);
             html += '</div>';
 
             html += '</div></div>';
@@ -11155,9 +11305,9 @@
             html += '</div>';
             html += '</div>';
 
-            // ---- #2/#3 Pillar Judgements + Analysis (single column, full width) ----
+            // ---- #2-3 Pillar Judgements + Analysis (single column, full width) ----
             html += '<div class="memo-item" id="memo-item-2">';
-            html += '<div class="memo-item-title">#2/#3 Written Judgements &amp; Analysis \u2014 All Pillars, TCs, Attributes &amp; Questions</div>';
+            html += '<div class="memo-item-title">#2-3 Written Judgements &amp; Analysis \u2014 All Pillars, TCs, Attributes &amp; Questions</div>';
             html += '<div class="memo-pillar-stack" id="memo-item-3">';
             for (var pj = 0; pj < pillarIds.length; pj++) {
                 var pKey = pillarIds[pj];
