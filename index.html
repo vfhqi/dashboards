@@ -1838,6 +1838,194 @@
             transform: translateY(1px);
         }
 
+        /* ========================================================== */
+        /* LIST View — flat checklist overlay                          */
+        /* ========================================================== */
+
+        .list-column-header {
+            text-align: center;
+            width: 50px;
+            min-width: 50px;
+            white-space: nowrap;
+            color: #58a6ff;
+            letter-spacing: 0.5px;
+        }
+        .list-column-cell {
+            text-align: center;
+            width: 50px;
+            min-width: 50px;
+            padding: 4px 2px;
+        }
+        .list-button {
+            display: inline-block;
+            padding: 3px 8px;
+            font-family: inherit;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.6px;
+            color: #58a6ff;
+            background: rgba(88, 166, 255, 0.08);
+            border: 1px solid rgba(88, 166, 255, 0.45);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.12s, border-color 0.12s, color 0.12s;
+        }
+        .list-button:hover {
+            background: rgba(88, 166, 255, 0.18);
+            border-color: rgba(88, 166, 255, 0.85);
+            color: #a5d4ff;
+        }
+        .list-button:active {
+            transform: translateY(1px);
+        }
+
+        /* LIST modal overlay — same pattern as MAP */
+        .list-modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(3, 6, 12, 0.92);
+            z-index: 9999;
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        .list-modal-overlay.active {
+            display: block;
+        }
+        .list-modal-frame {
+            position: relative;
+            max-width: 900px;
+            margin: 8px auto;
+            background: #0d1117;
+            border: 1px solid #1f2a3a;
+            border-radius: 6px;
+            padding: 10px 16px 14px;
+            box-shadow: 0 18px 64px rgba(0, 0, 0, 0.65);
+        }
+        .list-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #1f2a3a;
+        }
+        .list-modal-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #e6edf3;
+            letter-spacing: 0.3px;
+            line-height: 1.2;
+        }
+        .list-modal-title .list-modal-ticker {
+            color: #58a6ff;
+            margin-right: 8px;
+        }
+        .list-modal-subtitle {
+            display: inline-block;
+            font-size: 10px;
+            font-weight: 500;
+            color: #8b949e;
+            margin-left: 6px;
+        }
+        .list-modal-close {
+            background: rgba(139, 148, 158, 0.1);
+            border: 1px solid #30363d;
+            border-radius: 4px;
+            color: #8b949e;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 5px 12px;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        .list-modal-close:hover {
+            background: rgba(139, 148, 158, 0.2);
+            color: #e6edf3;
+        }
+
+        /* Section headers — colour coded by category */
+        .list-section {
+            margin-bottom: 12px;
+        }
+        .list-section-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 10px;
+            border-radius: 4px;
+            margin-bottom: 4px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+        }
+        .list-section-header .list-section-numeral {
+            font-size: 13px;
+            font-weight: 800;
+            min-width: 24px;
+        }
+        .list-section-header .list-section-rating {
+            margin-left: auto;
+        }
+        /* Category colours */
+        .list-cat-technical  { background: rgba(88, 166, 255, 0.10); color: #79c0ff; border-left: 3px solid #58a6ff; }
+        .list-cat-thematic   { background: rgba(167, 139, 250, 0.10); color: #c4b5fd; border-left: 3px solid #a78bfa; }
+        .list-cat-fundamentals { background: rgba(63, 185, 80, 0.10); color: #7ee787; border-left: 3px solid #3fb950; }
+        .list-cat-earnings   { background: rgba(240, 214, 92, 0.10); color: #f0d65c; border-left: 3px solid #f0d65c; }
+        .list-cat-returns    { background: rgba(255, 123, 114, 0.10); color: #ffa198; border-left: 3px solid #ff7b72; }
+
+        /* Individual list items */
+        .list-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 5px 10px 5px 36px;
+            border-bottom: 1px solid #161b22;
+            cursor: pointer;
+            transition: background 0.1s;
+            font-size: 12px;
+            color: #c9d1d9;
+        }
+        .list-item:hover {
+            background: rgba(88, 166, 255, 0.06);
+        }
+        .list-item-num {
+            font-size: 10px;
+            color: #484f58;
+            font-weight: 600;
+            min-width: 16px;
+            text-align: right;
+            flex-shrink: 0;
+        }
+        .list-item-label {
+            flex: 1;
+        }
+        .list-item-detail {
+            font-size: 10px;
+            color: #8b949e;
+            margin-left: 6px;
+            white-space: nowrap;
+        }
+        .list-item-rating {
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 760px) {
+            .list-modal-frame {
+                margin: 4px;
+                padding: 10px 8px 18px;
+                max-width: 100%;
+                border-radius: 4px;
+            }
+            .list-item {
+                padding-left: 20px;
+                font-size: 11px;
+            }
+        }
+
         /* Modal overlay */
         .map-modal-overlay {
             display: none;
@@ -2145,7 +2333,7 @@
                 <table id="master-table">
                     <thead>
                         <tr class="pillar-group-header">
-                            <th colspan="5"></th>
+                            <th colspan="6"></th>
                             <th colspan="2" class="group-label">Timeliness</th>
                             <th colspan="2" class="group-label">Case Strength</th>
                             <th colspan="1" class="group-label">Market Recognition</th>
@@ -2158,6 +2346,7 @@
                             <th>Company</th>
                             <th>Stage</th>
                             <th class="map-column-header">MAP</th>
+                            <th class="list-column-header">LIST</th>
                             <th class="pillar-column standard-col">P1<br>Technical Momentum</th>
                             <th class="pillar-column standard-col">P2<br>Market Paradigm</th>
                             <th class="pillar-column standard-col">P3<br>Fund Change</th>
@@ -7540,6 +7729,7 @@
                         '<td>' + escapeHtml(stock.company_name) + '</td>' +
                         '<td><span class="stage-badge ' + getStageClass(stock.stage) + '">' + stock.stage + '</span></td>' +
                         '<td class="map-column-cell"><button type="button" class="map-button" onclick="openMapView(event,' + index + ')" title="Open summary MAP for ' + escapeHtml(stock.ticker) + '">MAP</button></td>' +
+                        '<td class="list-column-cell"><button type="button" class="list-button" onclick="openListView(event,' + index + ')" title="Open LIST checklist for ' + escapeHtml(stock.ticker) + '">LIST</button></td>' +
                         '<td class="pillar-column standard-col" onclick="onPillarBadgeClick(event,' + index + ',\'p1\')" style="cursor:pointer;"><span class="rating-badge ' + getRatingClass(stock.pillars.p1_technical_momentum) + '">' + stock.pillars.p1_technical_momentum + '</span></td>' +
                         '<td class="pillar-column standard-col" onclick="onPillarBadgeClick(event,' + index + ',\'p2\')" style="cursor:pointer;"><span class="rating-badge ' + getRatingClass(stock.pillars.p2_market_paradigm_fit) + '">' + stock.pillars.p2_market_paradigm_fit + '</span></td>' +
                         '<td class="pillar-column standard-col" onclick="onPillarBadgeClick(event,' + index + ',\'p3\')" style="cursor:pointer;"><span class="rating-badge ' + getRatingClass(stock.pillars.p3_fundamental_change) + '">' + stock.pillars.p3_fundamental_change + '</span></td>' +
@@ -7567,7 +7757,7 @@
                         pillarHtml = '<div style="color:#ff6b6b;padding:12px;">Error rendering pillars for ' + stock.ticker + ': ' + pillarErr.message + '</div>';
                     }
 
-                    treeRow.innerHTML = '<td colspan="27"><div class="tree-container expanded">' +
+                    treeRow.innerHTML = '<td colspan="28"><div class="tree-container expanded">' +
                         '<div class="pillars-sticky-header" id="pillars-sticky-' + index + '">' +
                         '<h3 style="font-size: 14px; margin-bottom: 12px;">6 Pillars — ' + escapeHtml(stock.ticker) + '</h3>' +
                         '<div class="pillars-row">' + pillarHtml + '</div>' +
@@ -7579,7 +7769,7 @@
                 } catch (rowErr) {
                     // Append an error row so the user sees something
                     var errRow = document.createElement('tr');
-                    errRow.innerHTML = '<td colspan="27" style="color:#ff6b6b;padding:12px;">Error rendering ' + (stock ? stock.ticker : 'unknown') + ': ' + rowErr.message + '</td>';
+                    errRow.innerHTML = '<td colspan="28" style="color:#ff6b6b;padding:12px;">Error rendering ' + (stock ? stock.ticker : 'unknown') + ': ' + rowErr.message + '</td>';
                     tbody.appendChild(errRow);
                 }
             });
@@ -8176,6 +8366,366 @@
                             familyCard.click();
                         }
                         // Scroll the family card into view
+                        setTimeout(function() {
+                            var scrollTarget = document.getElementById(familyId + '-card') || card;
+                            if (scrollTarget && scrollTarget.scrollIntoView) {
+                                scrollTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            }
+                        }, 150);
+                    } else if (card && card.scrollIntoView) {
+                        card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }, 120);
+            }, 60);
+        }
+
+        // ================================================================
+        // LIST View — flat checklist overlay
+        // ================================================================
+
+        var currentListStockIndex = -1;
+
+        // LIST structure definition — maps Excel LIST view to dashboard data
+        var LIST_STRUCTURE = [
+            {
+                numeral: "I",
+                title: "Strong technical momentum",
+                category: "technical",
+                pillarId: "p1",
+                items: [
+                    { n: 1, label: "Minervini 8-points", pillarId: "p1", familyIdx: 0 },
+                    { n: 2, label: "Months qualifying in L12M", pillarId: "p1", familyIdx: -1 },
+                    { n: 3, label: "High relative strength (stock \u2194 sector \u2194 industry \u2194 market)", pillarId: "p1", familyIdx: -1 },
+                    { n: 4, label: "Number of healthy pullback tests in current run", pillarId: "p1", familyIdx: -1 }
+                ]
+            },
+            {
+                numeral: "II",
+                title: "Good case/business fit with current market paradigm",
+                category: "thematic",
+                pillarId: "p2",
+                items: [
+                    { n: 1, label: "Late bull / early bear market", pillarId: "p2", familyIdx: -1 },
+                    { n: 2, label: "AI demand / disruption", pillarId: "p2", familyIdx: -1 },
+                    { n: 3, label: "Oil, stagflation, recession, rising rates", pillarId: "p2", familyIdx: -1 }
+                ]
+            },
+            {
+                numeral: "III",
+                title: "Investment case \u2014 sizeable fundamental change",
+                category: "fundamentals",
+                pillarId: "p3",
+                items: [
+                    { n: 1, label: "Strong outputs, limited negatives", detail: "5 TCs, 9 As, 12 Qs", pillarId: "p3", familyIdx: 0, afNumber: 1 },
+                    { n: 2, label: "Strong inputs, limited negatives", detail: "2 TCs, 6 Qs", pillarId: "p3", familyIdx: 1, afNumber: 2 },
+                    { n: 3, label: "Profitable setup, no overlap with false friend/must-avoid", detail: "1 TC, 5 Fs, 6 SUs", pillarId: "p3", familyIdx: 2, afNumber: 3 }
+                ]
+            },
+            {
+                numeral: "IV",
+                title: "Investment case building blocks \u2014 sufficient robustness/bankability",
+                category: "fundamentals",
+                pillarId: "p4",
+                items: [
+                    { n: 1, label: "Required simplicity guardrails for case", detail: "7 TCs, 7 Qs", pillarId: "p4", familyIdx: 0, afNumber: 1 },
+                    { n: 2, label: "Required foundation quality \u2014 operator, business, value chain", detail: "3 TCs, 6 As, X Qs", pillarId: "p4", familyIdx: 1, afNumber: 2 },
+                    { n: 3, label: "Strong fit with environment paradigm", detail: "1 TC, 3 Qs", pillarId: "p4", familyIdx: 2, afNumber: 3 },
+                    { n: 4, label: "No seek-to-avoid attributes", detail: "1 TC, 4 Qs", pillarId: "p4", familyIdx: 3, afNumber: 4 },
+                    { n: 5, label: "Minimal size-limiting attributes", detail: "1 TC, 1 Q", pillarId: "p4", familyIdx: 4, afNumber: 5 },
+                    { n: 6, label: "No invalidating attributes", detail: "5 TCs, 10 Qs", pillarId: "p4", familyIdx: 5, afNumber: 6 },
+                    { n: 7, label: "Congruency of case with recent outcomes", detail: "2 TCs, 4 As", pillarId: "p4", familyIdx: 6, afNumber: 7 },
+                    { n: 8, label: "Bonus: nice-to-have attributes", detail: "2 TCs, 2 Qs", pillarId: "p4", familyIdx: 7, afNumber: 8 }
+                ]
+            },
+            {
+                numeral: "V",
+                title: "Sell-side earnings momentum \u2014 strong/improving",
+                category: "earnings",
+                pillarId: "p5",
+                items: [
+                    { n: 1, label: "EPS", momentumKey: "eps_change", pillarId: "p5", familyIdx: -1 },
+                    { n: 2, label: "EBITDA", momentumKey: "ebitda_change", pillarId: "p5", familyIdx: -1 },
+                    { n: 3, label: "Revenue", momentumKey: "revenue_change", pillarId: "p5", familyIdx: -1 },
+                    { n: 4, label: "Price targets", momentumKey: "price_target_change", pillarId: "p5", familyIdx: -1 },
+                    { n: 5, label: "% Buy", momentumKey: "pct_buy_change", pillarId: "p5", familyIdx: -1 }
+                ]
+            },
+            {
+                numeral: "VI",
+                title: "Valuation in fair range (2YF P/E)",
+                category: "returns",
+                pillarId: "p6",
+                items: []
+            }
+        ];
+
+        // Get momentum data for a stock (from tree data or fallback)
+        function getStockMomentumData(stock) {
+            var treeKey = 'treeData' + stock.ticker;
+            if (window[treeKey] && window[treeKey].p5 && window[treeKey].p5.momentum_data) {
+                return window[treeKey].p5.momentum_data;
+            }
+            if (momentumDataByTicker[stock.ticker] && momentumDataByTicker[stock.ticker].momentum_data) {
+                return momentumDataByTicker[stock.ticker].momentum_data;
+            }
+            return null;
+        }
+
+        // Get valuation metrics for a stock
+        function getStockValuationData(stock) {
+            var treeKey = 'treeData' + stock.ticker;
+            if (window[treeKey] && window[treeKey].p6) {
+                return window[treeKey].p6;
+            }
+            if (valuationDataByTicker[stock.ticker]) {
+                return valuationDataByTicker[stock.ticker];
+            }
+            return null;
+        }
+
+        // Format momentum change: "+3.2%" or "0.0%"
+        function fmtMomentumPct(val) {
+            if (val === undefined || val === null) return "\u2014";
+            var sign = val > 0 ? "+" : "";
+            return sign + val.toFixed(1) + "%";
+        }
+
+        // Directional score: -1, 0, +1
+        function momentumDirection(val) {
+            if (val === undefined || val === null) return "\u2014";
+            if (val > 0) return "+1";
+            if (val < 0) return "\u22121";
+            return "0";
+        }
+
+        // Get the pillar-level rating for a section
+        function getListSectionRating(stock, pillarId) {
+            var pillarMap = {
+                "p1": stock.pillars.p1_technical_momentum,
+                "p2": stock.pillars.p2_market_paradigm_fit,
+                "p3": stock.pillars.p3_fundamental_change,
+                "p4": stock.pillars.p4_building_blocks,
+                "p5": stock.pillars.p5_ss_earnings_momentum,
+                "p6": stock.pillars.p6_valuation
+            };
+            return pillarMap[pillarId] || "\u2014";
+        }
+
+        // Get the family-level rating for an item (if available)
+        function getListItemRating(stock, item) {
+            if (!item.pillarId) return "\u2014";
+            var pillar = getPillarById(stock, item.pillarId);
+            if (!pillar) {
+                // Check fallback data
+                if (item.pillarId === "p5" && momentumDataByTicker[stock.ticker]) {
+                    pillar = momentumDataByTicker[stock.ticker];
+                } else if (item.pillarId === "p6" && valuationDataByTicker[stock.ticker]) {
+                    pillar = valuationDataByTicker[stock.ticker];
+                }
+            }
+            if (!pillar || !pillar.families) return getListSectionRating(stock, item.pillarId);
+
+            // Try to find the specific family
+            var family = null;
+            if (item.familyIdx >= 0 && item.familyIdx < pillar.families.length) {
+                family = pillar.families[item.familyIdx];
+            } else if (item.afNumber !== undefined) {
+                var idx = getFamilyIdxByAfNumber(pillar, item.afNumber);
+                if (idx >= 0) family = pillar.families[idx];
+            }
+
+            if (family && family.rating && family.rating !== "\u2014") {
+                return family.rating;
+            }
+            // Fall back to pillar rating
+            return getListSectionRating(stock, item.pillarId);
+        }
+
+        // Render the full LIST content for a stock
+        function renderListContent(stock) {
+            var html = '';
+
+            for (var s = 0; s < LIST_STRUCTURE.length; s++) {
+                var section = LIST_STRUCTURE[s];
+                var catClass = 'list-cat-' + section.category;
+                var sectionRating = getListSectionRating(stock, section.pillarId);
+
+                html += '<div class="list-section">';
+                html += '<div class="list-section-header ' + catClass + '">';
+                html += '<span class="list-section-numeral">' + section.numeral + '</span>';
+                html += '<span>' + escapeHtml(section.title) + '</span>';
+                html += '<span class="list-section-rating"><span class="rating-badge ' + getRatingClass(sectionRating) + '">' + sectionRating + '</span></span>';
+                html += '</div>';
+
+                // Special handling for P5 (momentum items)
+                if (section.pillarId === "p5") {
+                    var mData = getStockMomentumData(stock);
+                    for (var m = 0; m < section.items.length; m++) {
+                        var mi = section.items[m];
+                        var mVals = mData && mi.momentumKey && mData[mi.momentumKey] ? mData[mi.momentumKey] : null;
+                        var l3mPct = mVals ? fmtMomentumPct(mVals.l3m) : "\u2014";
+                        var l3mDir = mVals ? momentumDirection(mVals.l3m) : "\u2014";
+                        var dirClass = "";
+                        if (mVals && mVals.l3m > 0) dirClass = "color:#3fb950;";
+                        else if (mVals && mVals.l3m < 0) dirClass = "color:#ff7b72;";
+
+                        html += '<div class="list-item" onclick="listItemNavigate(\'' + mi.pillarId + '\',' + mi.familyIdx + ')">';
+                        html += '<span class="list-item-num">' + mi.n + '</span>';
+                        html += '<span class="list-item-label">' + escapeHtml(mi.label) + ' \u2014 L3M</span>';
+                        html += '<span class="list-item-detail">' + l3mPct + '</span>';
+                        html += '<span class="list-item-rating" style="' + dirClass + 'font-weight:700;font-size:12px;min-width:24px;text-align:center;">' + l3mDir + '</span>';
+                        html += '</div>';
+                    }
+                }
+                // Special handling for P6 (valuation — single line, no sub-items)
+                else if (section.pillarId === "p6") {
+                    var vData = getStockValuationData(stock);
+                    var pctile = "\u2014";
+                    if (vData && vData.metrics && vData.metrics.percentile_in_range) {
+                        pctile = vData.metrics.percentile_in_range;
+                    }
+                    html += '<div class="list-item" onclick="listItemNavigate(\'p6\',-1)">';
+                    html += '<span class="list-item-num"></span>';
+                    html += '<span class="list-item-label">Percentile in 10Y range</span>';
+                    html += '<span class="list-item-detail">' + escapeHtml(pctile) + '</span>';
+                    html += '<span class="list-item-rating"><span class="rating-badge ' + getRatingClass(sectionRating) + '">' + sectionRating + '</span></span>';
+                    html += '</div>';
+                }
+                // Normal items (P1-P4)
+                else {
+                    for (var i = 0; i < section.items.length; i++) {
+                        var item = section.items[i];
+                        var itemRating = getListItemRating(stock, item);
+                        var detailSpan = item.detail ? '<span class="list-item-detail">[' + escapeHtml(item.detail) + ']</span>' : '';
+
+                        html += '<div class="list-item" onclick="listItemNavigate(\'' + item.pillarId + '\',' + item.familyIdx + ')">';
+                        html += '<span class="list-item-num">' + item.n + '</span>';
+                        html += '<span class="list-item-label">' + escapeHtml(item.label) + '</span>';
+                        html += detailSpan;
+                        html += '<span class="list-item-rating"><span class="rating-badge ' + getRatingClass(itemRating) + '">' + itemRating + '</span></span>';
+                        html += '</div>';
+                    }
+                }
+
+                html += '</div>'; // .list-section
+            }
+
+            return html;
+        }
+
+        // Open LIST modal for a given stock row
+        function openListView(evt, stockIndex) {
+            if (evt && evt.stopPropagation) evt.stopPropagation();
+            var stock = masterData.stocks[stockIndex];
+            if (!stock) return;
+            currentListStockIndex = stockIndex;
+
+            var overlay = document.getElementById('list-modal-overlay');
+            if (!overlay) {
+                overlay = buildListModalShell();
+            }
+
+            var title = document.getElementById('list-modal-title');
+            if (title) {
+                title.innerHTML = '<span class="list-modal-ticker">' + escapeHtml(stock.ticker) + '</span>'
+                    + escapeHtml(stock.company_name)
+                    + '<span class="list-modal-subtitle">Checklist \u00b7 v19-Apr-26</span>';
+            }
+
+            var body = document.getElementById('list-modal-body');
+            if (body) {
+                try {
+                    body.innerHTML = renderListContent(stock);
+                } catch (err) {
+                    body.innerHTML = '<div style="color:#ff6b6b;padding:16px;">Error rendering LIST: ' + err.message + '</div>';
+                }
+            }
+
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            window.scrollTo(0, 0);
+        }
+
+        function closeListView() {
+            var overlay = document.getElementById('list-modal-overlay');
+            if (overlay) {
+                overlay.classList.remove('active');
+            }
+            document.body.style.overflow = '';
+        }
+
+        // Build the LIST modal shell once
+        function buildListModalShell() {
+            var overlay = document.createElement('div');
+            overlay.id = 'list-modal-overlay';
+            overlay.className = 'list-modal-overlay';
+            overlay.innerHTML =
+                '<div class="list-modal-frame" id="list-modal-frame">' +
+                    '<div class="list-modal-header">' +
+                        '<div class="list-modal-title" id="list-modal-title"></div>' +
+                        '<button type="button" class="list-modal-close" onclick="closeListView()">Close \u2715</button>' +
+                    '</div>' +
+                    '<div class="list-modal-body" id="list-modal-body"></div>' +
+                '</div>';
+
+            // Click-outside-frame to close
+            overlay.addEventListener('click', function(e) {
+                if (e.target === overlay) {
+                    closeListView();
+                }
+            });
+
+            document.body.appendChild(overlay);
+            return overlay;
+        }
+
+        // ESC-key closes LIST modal too
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' || e.keyCode === 27) {
+                var overlay = document.getElementById('list-modal-overlay');
+                if (overlay && overlay.classList.contains('active')) {
+                    closeListView();
+                }
+            }
+        });
+
+        // Click-to-navigate from LIST item to pillar/family in main dashboard
+        function listItemNavigate(pillarId, familyIdx) {
+            var stockIndex = currentListStockIndex;
+            closeListView();
+            if (stockIndex < 0) return;
+
+            // Reuse the same navigation logic as MAP
+            setTimeout(function() {
+                var masterRow = document.querySelectorAll('#table-body tr.expand-toggle')[stockIndex];
+                if (!masterRow) return;
+                var treeRow = document.getElementById('tree-' + stockIndex);
+
+                if (!masterRow.classList.contains('expanded')) {
+                    masterRow.classList.add('expanded');
+                    masterRow.classList.add('active-stock');
+                    if (treeRow) treeRow.classList.add('expanded');
+                    var stickyHeader = document.getElementById('pillars-sticky-' + stockIndex);
+                    if (stickyHeader) stickyHeader.classList.add('is-sticky');
+                    updateStickyPositions();
+                }
+
+                // Expand the pillar card
+                var cardId = 'pillar-' + stockIndex + '-' + pillarId;
+                var card = document.getElementById(cardId);
+                if (card && !card.classList.contains('active-pillar')) {
+                    card.click();
+                }
+
+                // After the pillar opens, expand the specific family
+                setTimeout(function() {
+                    if (familyIdx >= 0) {
+                        var familyId = 'family-' + pillarId + '-' + familyIdx;
+                        var familyCard = document.getElementById(familyId + '-card');
+                        if (familyCard && !familyCard.classList.contains('expanded')) {
+                            familyCard.click();
+                        }
+
                         setTimeout(function() {
                             var scrollTarget = document.getElementById(familyId + '-card') || card;
                             if (scrollTarget && scrollTarget.scrollIntoView) {
