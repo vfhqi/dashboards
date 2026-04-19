@@ -2616,6 +2616,27 @@
             background: rgba(87, 96, 106, 0.15);
             color: #1f2328;
         }
+        .list-density-btn {
+            background: transparent;
+            border: 1px solid #d8dee4;
+            border-radius: 4px;
+            color: #57606a;
+            font-size: 10px;
+            font-weight: 600;
+            padding: 3px 10px;
+            cursor: pointer;
+            letter-spacing: 0.3px;
+            margin-left: 8px;
+        }
+        .list-density-btn:hover {
+            background: rgba(87, 96, 106, 0.08);
+            color: #1f2328;
+        }
+        .list-density-btn.active {
+            background: rgba(37, 99, 235, 0.1);
+            border-color: rgba(37, 99, 235, 0.4);
+            color: #2563eb;
+        }
 
         /* Comparison matrix table */
         .list-matrix {
@@ -2629,6 +2650,29 @@
             font-size: 11px;
             border-bottom: 1px solid #f6f8fa;
             vertical-align: middle;
+            transition: padding 0.15s;
+        }
+        /* TIGHT mode — 25% less padding */
+        .list-tight .list-matrix th,
+        .list-tight .list-matrix td {
+            padding: 2px 6px;
+        }
+        .list-tight .list-section-row td {
+            padding: 5px 6px 2px;
+        }
+        .list-tight .list-ticker-header {
+            padding: 3px 4px;
+        }
+        /* SPACED mode — 25% more padding */
+        .list-spaced .list-matrix th,
+        .list-spaced .list-matrix td {
+            padding: 6px 6px;
+        }
+        .list-spaced .list-section-row td {
+            padding: 11px 6px 6px;
+        }
+        .list-spaced .list-ticker-header {
+            padding: 8px 4px;
         }
         /* Label column — wider */
         .list-matrix th.list-label-col,
@@ -9839,7 +9883,8 @@
                 if (vData && vData.metrics && vData.metrics.percentile_in_range) {
                     pctile = vData.metrics.percentile_in_range;
                 }
-                return '<td class="list-stock-col"><span style="font-size:10px;color:#57606a;">' + escapeHtml(pctile) + '</span> <span class="rating-badge ' + getRatingClass(rating) + '">' + rating + '</span></td>';
+                var pctHtml = (pctile !== "\u2014") ? '<span style="font-size:10px;color:#57606a;">' + escapeHtml(pctile) + '</span> ' : '';
+                return '<td class="list-stock-col">' + pctHtml + '<span class="rating-badge ' + getRatingClass(rating) + '">' + rating + '</span></td>';
             }
 
             // Normal: show rating badge
@@ -10074,6 +10119,28 @@
             document.body.style.overflow = '';
         }
 
+        // TIGHT / default / SPACED density toggle
+        var listDensityState = 0; // 0=default, 1=tight, 2=spaced
+        function toggleListDensity() {
+            var frame = document.getElementById('list-modal-frame');
+            var btn = document.getElementById('list-density-btn');
+            if (!frame || !btn) return;
+            frame.classList.remove('list-tight', 'list-spaced');
+            listDensityState = (listDensityState + 1) % 3;
+            if (listDensityState === 1) {
+                frame.classList.add('list-tight');
+                btn.textContent = 'SPACED';
+                btn.classList.add('active');
+            } else if (listDensityState === 2) {
+                frame.classList.add('list-spaced');
+                btn.textContent = 'DEFAULT';
+                btn.classList.add('active');
+            } else {
+                btn.textContent = 'TIGHT';
+                btn.classList.remove('active');
+            }
+        }
+
         function buildListModalShell() {
             var overlay = document.createElement('div');
             overlay.id = 'list-modal-overlay';
@@ -10082,7 +10149,10 @@
                 '<div class="list-modal-frame" id="list-modal-frame">' +
                     '<div class="list-modal-header">' +
                         '<div class="list-modal-title" id="list-modal-title"></div>' +
-                        '<button type="button" class="list-modal-close" onclick="closeListView()">Close \u2715</button>' +
+                        '<div style="display:flex;align-items:center;gap:4px;">' +
+                            '<button type="button" class="list-density-btn" id="list-density-btn" onclick="toggleListDensity()">TIGHT</button>' +
+                            '<button type="button" class="list-modal-close" onclick="closeListView()">Close \u2715</button>' +
+                        '</div>' +
                     '</div>' +
                     '<div class="list-modal-body" id="list-modal-body"></div>' +
                 '</div>';
