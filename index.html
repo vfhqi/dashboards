@@ -2550,6 +2550,130 @@
             border-radius: 2px;
         }
 
+        /* ---- Financial Model Table ---- */
+        .fin-model-wrap {
+            overflow-x: auto;
+            margin-top: 8px;
+            border: 1px solid #d8dee4;
+            border-radius: 6px;
+            background: #fff;
+        }
+        .fin-model-toggle {
+            display: inline-flex;
+            gap: 0;
+            margin-bottom: 10px;
+            border: 1px solid #d8dee4;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .fin-model-toggle button {
+            padding: 5px 14px;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border: none;
+            background: #f6f8fa;
+            color: #57606a;
+            cursor: pointer;
+            border-right: 1px solid #d8dee4;
+        }
+        .fin-model-toggle button:last-child { border-right: none; }
+        .fin-model-toggle button.active {
+            background: #7c3aed;
+            color: #fff;
+        }
+        .fin-model-toggle button:hover:not(.active) {
+            background: #eaeff5;
+        }
+        .fin-model-table {
+            width: max-content;
+            min-width: 100%;
+            border-collapse: collapse;
+            font-size: 11px;
+        }
+        .fin-model-table th,
+        .fin-model-table td {
+            padding: 4px 10px;
+            white-space: nowrap;
+            text-align: right;
+            border-bottom: 1px solid #eef0f3;
+            font-variant-numeric: tabular-nums;
+        }
+        .fin-model-table th {
+            font-size: 9px;
+            font-weight: 700;
+            color: #57606a;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            background: #f6f8fa;
+            border-bottom: 2px solid #d0d7de;
+            position: sticky;
+            top: 0;
+            z-index: 2;
+        }
+        .fin-model-table td:first-child,
+        .fin-model-table th:first-child {
+            text-align: left;
+            position: sticky;
+            left: 0;
+            background: #fff;
+            z-index: 1;
+            font-weight: 600;
+            color: #1f2328;
+            min-width: 180px;
+            border-right: 2px solid #d0d7de;
+        }
+        .fin-model-table th:first-child {
+            background: #f6f8fa;
+            z-index: 3;
+        }
+        .fin-model-table tr.fin-section-header td {
+            font-weight: 700;
+            font-size: 10px;
+            color: #7c3aed;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid #e5e7eb;
+            padding-top: 10px;
+            background: #faf8ff;
+        }
+        .fin-model-table tr.fin-section-header td:first-child {
+            background: #faf8ff;
+        }
+        .fin-model-table tr.fin-subtotal td {
+            font-weight: 700;
+            border-top: 1px solid #9ca3af;
+            border-bottom: 2px solid #6b7280;
+        }
+        .fin-model-table tr.fin-highlight td {
+            font-weight: 700;
+            color: #1f2328;
+        }
+        .fin-model-table td.fin-negative {
+            color: #dc2626;
+        }
+        /* Column group separators */
+        .fin-model-table .fin-col-hist { }
+        .fin-model-table .fin-col-guide { background: rgba(124, 58, 237, 0.03); }
+        .fin-model-table .fin-col-ss { background: rgba(37, 99, 235, 0.03); }
+        .fin-model-table .fin-col-rb { background: rgba(22, 163, 74, 0.03); }
+        .fin-model-table th.fin-col-guide { background: rgba(124, 58, 237, 0.08); color: #7c3aed; }
+        .fin-model-table th.fin-col-ss { background: rgba(37, 99, 235, 0.08); color: #2563eb; }
+        .fin-model-table th.fin-col-rb { background: rgba(22, 163, 74, 0.08); color: #16a34a; }
+        /* Group header spanning row */
+        .fin-model-table th.fin-group-header {
+            text-align: center;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 0.6px;
+            padding: 6px 10px;
+            border-bottom: 1px solid #d0d7de;
+        }
+        .fin-col-sep {
+            border-left: 2px solid #d0d7de !important;
+        }
+
         /* Memo family/attribute detail */
         .memo-family-block {
             margin-bottom: 14px;
@@ -7518,7 +7642,58 @@
 									"ic_summary": "NovaTech Industries AG is a demand-driven EPSU setup underpinned by a European factory automation supercycle. Order intake surged +34% YoY in Q4-25, signalling genuine structural demand supported by EU Chips Act (EUR 43bn committed), US IRA nearshoring incentives, and a 15-year manufacturing vacancy high. The dual-setup \u2014 external demand cycle plus corporate change under a new CEO (ex-Siemens, Sep-25 appointment) \u2014 provides redundancy: either driver alone supports a B rating at Triaging depth. The triple ratchet mechanism (volume +34%, margin expansion 18%\u219222% via mix shift, multiple re-rating from 14x to 17-18x when Automation crosses 50% revenue) drives a modal case of 16% EPS CAGR over 3 years (EUR 2.80\u21924.35). Technicals confirm institutional accumulation with a Stage 2 breakout (7/8 Minervini criteria met, RS +47% YTD vs STOXX 600). Valuation at 14x 2YF P/E vs 18-22x automation peers leaves meaningful upside if execution delivers. Key gap: financial model not yet built and revenue conversion lag (2-3Q) means P&L validation is H2-26 earliest. Primary risk: single quarter of strong orders may reflect EU Chips Act deadline pull-forward rather than durable demand shift. Progress to ESA recommended \u2014 commission RESEARCHER queries, build financial model, stress-test order sustainability.",
 									"financials": {
 										"guidance": "FY2026 guidance: Revenue EUR 3.8-4.0bn (+10-15% YoY), EBITDA margin 19-20% (vs 18% in FY2025), EPS EUR 3.30-3.50. Capital returns: 35-40% payout ratio maintained. Capex EUR 280m (of which EUR 120m Automation R&D). Management has beaten guidance by 5-8% in each of the last 3 years. Guidance midpoint EUR 3.40 EPS is 6% above consensus EUR 3.20, suggesting conservative messaging continues.",
-										"ss_estimates": "Consensus 2026E: Revenue EUR 3.72bn, EBITDA EUR 708m (19.0% margin), EPS EUR 3.20. Consensus 2027E: Revenue EUR 4.15bn, EBITDA EUR 830m (20.0% margin), EPS EUR 3.75. Coverage: 9 analysts (4 Buy, 3 Outperform, 2 Hold). L90D revisions: 6 up, 0 down, 2 unchanged for CFY; 3 up, 1 down, 4 unchanged for NFY. Mean price target EUR 58.50 (+22% upside from EUR 48). Consensus still below guidance midpoint \u2014 unusual and suggests SS has not fully priced order momentum."
+										"ss_estimates": "Consensus 2026E: Revenue EUR 3.72bn, EBITDA EUR 708m (19.0% margin), EPS EUR 3.20. Consensus 2027E: Revenue EUR 4.15bn, EBITDA EUR 830m (20.0% margin), EPS EUR 3.75. Coverage: 9 analysts (4 Buy, 3 Outperform, 2 Hold). L90D revisions: 6 up, 0 down, 2 unchanged for CFY; 3 up, 1 down, 4 unchanged for NFY. Mean price target EUR 58.50 (+22% upside from EUR 48). Consensus still below guidance midpoint \u2014 unusual and suggests SS has not fully priced order momentum.",
+										"model": {
+											"currency": "EUR m",
+											"hist_years": ["FY18","FY19","FY20","FY21","FY22","FY23","FY24","FY25"],
+											"fwd_years": ["FY26E","FY27E","FY28E","FY29E","FY30E"],
+											"guidance_years": ["FY26E","FY27E","FY28E"],
+											"ss_years": ["FY26E","FY27E","FY28E"],
+											"rb_years": ["FY26E","FY27E","FY28E","FY29E","FY30E"],
+											"sections": [
+												{ "id": "pnl", "label": "P&L", "rows": [
+													{ "label": "Revenue", "fmt": "0", "hist": [2180,2290,1950,2340,2680,2920,3250,3480], "guide": [3900,4300,4700,null,null], "ss": [3720,4150,4580,null,null], "rb": [3850,4280,4750,5150,5500], "highlight": true },
+													{ "label": "  yoy %", "fmt": "%", "hist": [null,5.0,-14.8,20.0,14.5,9.0,11.3,7.1], "guide": [12.1,10.3,9.3,null,null], "ss": [6.9,11.6,10.4,null,null], "rb": [10.6,11.2,11.0,8.4,6.8] },
+													{ "label": "Gross Profit", "fmt": "0", "hist": [872,939,761,983,1152,1285,1463,1601], "guide": [1794,2021,2256,null,null], "ss": [1674,1909,2153,null,null], "rb": [1771,2012,2304,2524,2728] },
+													{ "label": "  GP Margin %", "fmt": "%", "hist": [40.0,41.0,39.0,42.0,43.0,44.0,45.0,46.0], "guide": [46.0,47.0,48.0,null,null], "ss": [45.0,46.0,47.0,null,null], "rb": [46.0,47.0,48.5,49.0,49.6] },
+													{ "label": "EBITDA", "fmt": "0", "hist": [327,343,273,398,483,555,618,626], "guide": [741,860,987,null,null], "ss": [708,830,961,null,null], "rb": [735,878,1021,1133,1232] },
+													{ "label": "  EBITDA Margin %", "fmt": "%", "hist": [15.0,15.0,14.0,17.0,18.0,19.0,19.0,18.0], "guide": [19.0,20.0,21.0,null,null], "ss": [19.0,20.0,21.0,null,null], "rb": [19.1,20.5,21.5,22.0,22.4] },
+													{ "label": "D&A", "fmt": "0", "hist": [-109,-115,-107,-117,-134,-146,-163,-174], "guide": [-195,-215,-235,null,null], "ss": [-186,-208,-229,null,null], "rb": [-193,-214,-238,-258,-275] },
+													{ "label": "EBIT", "fmt": "0", "hist": [218,228,166,281,349,409,455,452], "guide": [546,645,752,null,null], "ss": [522,622,732,null,null], "rb": [542,664,783,875,957] },
+													{ "label": "  EBIT Margin %", "fmt": "%", "hist": [10.0,10.0,8.5,12.0,13.0,14.0,14.0,13.0], "guide": [14.0,15.0,16.0,null,null], "ss": [14.0,15.0,16.0,null,null], "rb": [14.1,15.5,16.5,17.0,17.4] },
+													{ "label": "Net Interest", "fmt": "0", "hist": [-22,-25,-28,-20,-18,-15,-12,-10], "guide": [-10,-8,-6,null,null], "ss": [-12,-10,-8,null,null], "rb": [-10,-8,-5,-3,-2] },
+													{ "label": "PBT", "fmt": "0", "hist": [196,203,138,261,331,394,443,442], "guide": [536,637,746,null,null], "ss": [510,612,724,null,null], "rb": [532,656,778,872,955] },
+													{ "label": "Tax", "fmt": "0", "hist": [-49,-51,-35,-65,-83,-99,-111,-111], "guide": [-134,-159,-187,null,null], "ss": [-128,-153,-181,null,null], "rb": [-133,-164,-195,-218,-239] },
+													{ "label": "  Tax Rate %", "fmt": "%", "hist": [25.0,25.1,25.4,24.9,25.1,25.1,25.1,25.1], "guide": [25.0,25.0,25.0,null,null], "ss": [25.1,25.0,25.0,null,null], "rb": [25.0,25.0,25.0,25.0,25.0] },
+													{ "label": "Net Income", "fmt": "0", "hist": [147,152,103,196,248,295,332,331], "guide": [402,478,559,null,null], "ss": [382,459,543,null,null], "rb": [399,492,583,654,716], "highlight": true },
+													{ "label": "EPS (EUR)", "fmt": "2", "hist": [1.47,1.52,1.03,1.96,2.48,2.55,2.77,2.80], "guide": [3.40,3.95,4.55,null,null], "ss": [3.20,3.75,4.30,null,null], "rb": [3.35,4.10,4.85,5.45,5.95], "highlight": true },
+													{ "label": "DPS (EUR)", "fmt": "2", "hist": [0.55,0.57,0.39,0.74,0.93,0.96,1.04,1.05], "guide": [1.20,1.40,1.60,null,null], "ss": [1.12,1.31,1.50,null,null], "rb": [1.17,1.43,1.70,1.91,2.08] },
+													{ "label": "Shares Out (m)", "fmt": "0", "hist": [100,100,100,100,100,100,100,100], "guide": [100,100,100,null,null], "ss": [100,100,100,null,null], "rb": [100,100,100,100,100] }
+												]},
+												{ "id": "fcf", "label": "Free Cash Flow", "rows": [
+													{ "label": "EBITDA", "fmt": "0", "hist": [327,343,273,398,483,555,618,626], "guide": [741,860,987,null,null], "ss": [708,830,961,null,null], "rb": [735,878,1021,1133,1232] },
+													{ "label": "Cash Tax Paid", "fmt": "0", "hist": [-45,-48,-32,-60,-78,-92,-105,-105], "guide": [-128,-152,-178,null,null], "ss": [-122,-146,-172,null,null], "rb": [-127,-156,-186,-209,-228] },
+													{ "label": "Change in NWC", "fmt": "0", "hist": [-22,-18,35,-42,-38,-30,-45,-32], "guide": [-50,-45,-40,null,null], "ss": [-48,-42,-38,null,null], "rb": [-48,-44,-40,-35,-30] },
+													{ "label": "Other Operating", "fmt": "0", "hist": [5,3,-2,4,6,5,8,7], "guide": [8,8,10,null,null], "ss": [7,7,9,null,null], "rb": [8,8,10,10,10] },
+													{ "label": "Operating CF", "fmt": "0", "hist": [265,280,274,300,373,438,476,496], "guide": [571,671,779,null,null], "ss": [545,649,760,null,null], "rb": [568,686,805,899,984], "subtotal": true },
+													{ "label": "Capex", "fmt": "0", "hist": [-130,-140,-110,-150,-175,-195,-230,-250], "guide": [-280,-290,-300,null,null], "ss": [-265,-275,-290,null,null], "rb": [-275,-285,-295,-300,-305] },
+													{ "label": "  Capex/Revenue %", "fmt": "%", "hist": [6.0,6.1,5.6,6.4,6.5,6.7,7.1,7.2], "guide": [7.2,6.7,6.4,null,null], "ss": [7.1,6.6,6.3,null,null], "rb": [7.1,6.7,6.2,5.8,5.5] },
+													{ "label": "Acquisitions/Disposals", "fmt": "0", "hist": [-20,0,-5,-35,0,-10,-15,25], "guide": [0,0,0,null,null], "ss": [0,0,0,null,null], "rb": [30,0,0,0,0] },
+													{ "label": "Free Cash Flow", "fmt": "0", "hist": [115,140,159,115,198,233,231,271], "guide": [291,381,479,null,null], "ss": [280,374,470,null,null], "rb": [323,401,510,599,679], "highlight": true, "subtotal": true },
+													{ "label": "FCF Yield %", "fmt": "%", "hist": [2.4,2.9,3.3,2.4,4.1,4.9,4.8,5.6], "guide": [6.1,7.9,10.0,null,null], "ss": [5.8,7.8,9.8,null,null], "rb": [6.7,8.4,10.6,12.5,14.1] }
+												]},
+												{ "id": "bs", "label": "Balance Sheet", "rows": [
+													{ "label": "Net Debt / (Cash)", "fmt": "0", "hist": [320,295,310,380,340,280,250,195], "guide": [160,100,20,null,null], "ss": [175,115,40,null,null], "rb": [147,31,-180,-480,-860] },
+													{ "label": "  Net Debt/EBITDA x", "fmt": "1", "hist": [1.0,0.9,1.1,1.0,0.7,0.5,0.4,0.3], "guide": [0.2,0.1,0.0,null,null], "ss": [0.2,0.1,0.0,null,null], "rb": [0.2,0.0,-0.2,-0.4,-0.7] },
+													{ "label": "Total Equity", "fmt": "0", "hist": [980,1075,1130,1270,1440,1650,1890,2120], "guide": [2400,2720,3080,null,null], "ss": [2380,2700,3050,null,null], "rb": [2395,2740,3153,3616,4124] },
+													{ "label": "ROCE %", "fmt": "%", "hist": [16.8,16.3,11.9,19.5,20.5,22.0,21.5,19.2], "guide": [21.3,22.4,23.2,null,null], "ss": [20.5,21.6,22.7,null,null], "rb": [21.3,22.8,23.5,23.1,22.3], "highlight": true },
+													{ "label": "ROE %", "fmt": "%", "hist": [15.0,14.1,9.1,15.4,17.2,17.9,17.6,15.6], "guide": [16.8,17.6,18.2,null,null], "ss": [16.1,17.0,17.8,null,null], "rb": [16.7,18.0,18.5,18.1,17.4] },
+													{ "label": "Total Assets", "fmt": "0", "hist": [1850,1980,2050,2350,2580,2780,3050,3280], "guide": [3600,3900,4200,null,null], "ss": [3550,3850,4150,null,null], "rb": [3580,3870,4250,4600,4950] },
+													{ "label": "Goodwill & Intangibles", "fmt": "0", "hist": [420,415,410,435,430,425,420,440], "guide": [435,430,425,null,null], "ss": [438,433,428,null,null], "rb": [470,465,460,455,450] },
+													{ "label": "Net Working Capital", "fmt": "0", "hist": [310,328,293,335,373,403,448,480], "guide": [530,575,615,null,null], "ss": [528,570,608,null,null], "rb": [528,572,612,647,677] }
+												]}
+											]
+										}
 									},
 									"ic_items": {
 										"basic_checks": [
@@ -10690,8 +10865,183 @@
         }
 
         // ---- Section A: Financials ----
+        var finModelMode = 'group'; // 'group' or 'byyear'
+
+        function toggleFinModelMode(mode) {
+            finModelMode = mode;
+            var btns = document.querySelectorAll('.fin-model-toggle button');
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].classList.toggle('active', btns[i].getAttribute('data-mode') === mode);
+            }
+            rerenderFinModel();
+        }
+
+        function rerenderFinModel() {
+            var container = document.getElementById('fin-model-container');
+            if (!container) return;
+            var stock = masterData.stocks[currentMemoStockIndex];
+            if (!stock) return;
+            var treeData = getTreeDataForStock(stock);
+            if (!treeData || !treeData.memo) return;
+            var model = (treeData.memo.financials || {}).model;
+            if (!model) return;
+            container.innerHTML = renderFinModelTable(model, finModelMode);
+        }
+
+        function fmtFinVal(val, fmt) {
+            if (val === null || val === undefined) return '\u2014';
+            if (fmt === '%') return val.toFixed(1) + '%';
+            if (fmt === '2') return val.toFixed(2);
+            if (fmt === '1') return val.toFixed(1) + 'x';
+            // integer with commas
+            var neg = val < 0;
+            var abs = Math.round(Math.abs(val));
+            var s = abs.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+            return neg ? '(' + s + ')' : s;
+        }
+
+        function renderFinModelTable(model, mode) {
+            if (!model || !model.sections) return '<div class="memo-placeholder">No financial model data</div>';
+            var hist = model.hist_years || [];
+            var fwd = model.fwd_years || [];
+            var guideYrs = model.guidance_years || [];
+            var ssYrs = model.ss_years || [];
+            var rbYrs = model.rb_years || [];
+
+            // Build column definitions based on mode
+            var cols = []; // {label, source, yearIdx, cls}
+            // Always start with historical
+            for (var h = 0; h < hist.length; h++) {
+                cols.push({ label: hist[h], source: 'hist', yearIdx: h, cls: 'fin-col-hist', sep: h === 0 });
+            }
+
+            if (mode === 'group') {
+                // Guidance block
+                for (var g = 0; g < guideYrs.length; g++) {
+                    var gi = fwd.indexOf(guideYrs[g]);
+                    cols.push({ label: guideYrs[g], source: 'guide', yearIdx: gi, cls: 'fin-col-guide', sep: g === 0 });
+                }
+                // SS block
+                for (var s = 0; s < ssYrs.length; s++) {
+                    var si = fwd.indexOf(ssYrs[s]);
+                    cols.push({ label: ssYrs[s], source: 'ss', yearIdx: si, cls: 'fin-col-ss', sep: s === 0 });
+                }
+                // RB block
+                for (var r = 0; r < rbYrs.length; r++) {
+                    var ri = fwd.indexOf(rbYrs[r]);
+                    cols.push({ label: rbYrs[r], source: 'rb', yearIdx: ri, cls: 'fin-col-rb', sep: r === 0 });
+                }
+            } else {
+                // By Year mode — for each forward year, show Guide/SS/RB side by side
+                for (var y = 0; y < fwd.length; y++) {
+                    var yr = fwd[y];
+                    var hasGuide = guideYrs.indexOf(yr) >= 0;
+                    var hasSS = ssYrs.indexOf(yr) >= 0;
+                    var hasRB = rbYrs.indexOf(yr) >= 0;
+                    var isFirst = true;
+                    if (hasGuide) {
+                        cols.push({ label: 'Guide', source: 'guide', yearIdx: y, cls: 'fin-col-guide', sep: isFirst, yearLabel: yr });
+                        isFirst = false;
+                    }
+                    if (hasSS) {
+                        cols.push({ label: 'SS', source: 'ss', yearIdx: y, cls: 'fin-col-ss', sep: isFirst, yearLabel: yr });
+                        isFirst = false;
+                    }
+                    if (hasRB) {
+                        cols.push({ label: 'RB', source: 'rb', yearIdx: y, cls: 'fin-col-rb', sep: isFirst, yearLabel: yr });
+                    }
+                }
+            }
+
+            var html = '<table class="fin-model-table">';
+            // Header row 1: group headers (only in by-year mode or group mode for source blocks)
+            if (mode === 'group') {
+                html += '<tr>';
+                html += '<th rowspan="2" style="vertical-align:bottom;">(' + escapeHtml(model.currency) + ')</th>';
+                // Historical
+                html += '<th class="fin-group-header fin-col-hist fin-col-sep" colspan="' + hist.length + '">HISTORICAL</th>';
+                html += '<th class="fin-group-header fin-col-guide fin-col-sep" colspan="' + guideYrs.length + '">GUIDANCE</th>';
+                html += '<th class="fin-group-header fin-col-ss fin-col-sep" colspan="' + ssYrs.length + '">SELL-SIDE</th>';
+                html += '<th class="fin-group-header fin-col-rb fin-col-sep" colspan="' + rbYrs.length + '">RICHARD</th>';
+                html += '</tr>';
+            } else {
+                html += '<tr>';
+                html += '<th rowspan="2" style="vertical-align:bottom;">(' + escapeHtml(model.currency) + ')</th>';
+                html += '<th class="fin-group-header fin-col-hist fin-col-sep" colspan="' + hist.length + '">HISTORICAL</th>';
+                // Group by year
+                for (var yy = 0; yy < fwd.length; yy++) {
+                    var yrr = fwd[yy];
+                    var cnt = 0;
+                    if (guideYrs.indexOf(yrr) >= 0) cnt++;
+                    if (ssYrs.indexOf(yrr) >= 0) cnt++;
+                    if (rbYrs.indexOf(yrr) >= 0) cnt++;
+                    if (cnt > 0) {
+                        html += '<th class="fin-group-header fin-col-sep" colspan="' + cnt + '">' + yrr + '</th>';
+                    }
+                }
+                html += '</tr>';
+            }
+
+            // Header row 2: individual column labels
+            html += '<tr>';
+            for (var c = 0; c < cols.length; c++) {
+                var col = cols[c];
+                var sepCls = col.sep ? ' fin-col-sep' : '';
+                if (mode === 'group') {
+                    html += '<th class="' + col.cls + sepCls + '">' + col.label + '</th>';
+                } else {
+                    // In by-year mode, show source label (Guide/SS/RB) for fwd, year label for hist
+                    if (col.source === 'hist') {
+                        html += '<th class="' + col.cls + sepCls + '">' + col.label + '</th>';
+                    } else {
+                        html += '<th class="' + col.cls + sepCls + '">' + col.label + '</th>';
+                    }
+                }
+            }
+            html += '</tr>';
+
+            // Data rows
+            for (var si2 = 0; si2 < model.sections.length; si2++) {
+                var sec = model.sections[si2];
+                // Section header row
+                html += '<tr class="fin-section-header"><td colspan="' + (cols.length + 1) + '">' + escapeHtml(sec.label) + '</td></tr>';
+
+                for (var ri2 = 0; ri2 < sec.rows.length; ri2++) {
+                    var row = sec.rows[ri2];
+                    var trCls = '';
+                    if (row.subtotal) trCls += ' fin-subtotal';
+                    if (row.highlight) trCls += ' fin-highlight';
+                    html += '<tr class="' + trCls + '">';
+                    html += '<td>' + escapeHtml(row.label) + '</td>';
+
+                    for (var ci2 = 0; ci2 < cols.length; ci2++) {
+                        var col2 = cols[ci2];
+                        var sepCls2 = col2.sep ? ' fin-col-sep' : '';
+                        var val = null;
+                        if (col2.source === 'hist') {
+                            val = row.hist ? row.hist[col2.yearIdx] : null;
+                        } else if (col2.source === 'guide') {
+                            val = row.guide ? row.guide[col2.yearIdx] : null;
+                        } else if (col2.source === 'ss') {
+                            val = row.ss ? row.ss[col2.yearIdx] : null;
+                        } else if (col2.source === 'rb') {
+                            val = row.rb ? row.rb[col2.yearIdx] : null;
+                        }
+                        var formatted = fmtFinVal(val, row.fmt);
+                        var negCls = (val !== null && val < 0 && row.fmt === '0') ? ' fin-negative' : '';
+                        html += '<td class="' + col2.cls + sepCls2 + negCls + '">' + formatted + '</td>';
+                    }
+                    html += '</tr>';
+                }
+            }
+
+            html += '</table>';
+            return html;
+        }
+
         function renderMemoSectionA(memo, expanded) {
             var fin = memo.financials || {};
+            var model = fin.model;
             var expClass = expanded ? ' expanded' : '';
             var html = '<div class="memo-section" id="memo-sec-a">';
             html += '<div class="memo-section-header' + expClass + '" onclick="memoToggleSection(this)">';
@@ -10702,17 +11052,40 @@
             html += '</div>';
             html += '<div class="memo-section-body">';
 
-            // #5 Guidance
-            html += '<div class="memo-item" id="memo-item-5">';
-            html += '<div class="memo-item-title">#5 Guidance</div>';
-            html += fin.guidance ? '<div class="memo-item-content">' + escapeHtml(fin.guidance) + '</div>' : '<div class="memo-placeholder">Not yet populated</div>';
-            html += '</div>';
+            if (model) {
+                // Toggle
+                html += '<div class="fin-model-toggle">';
+                html += '<button type="button" data-mode="group" class="' + (finModelMode === 'group' ? 'active' : '') + '" onclick="toggleFinModelMode(\'group\')">GROUP</button>';
+                html += '<button type="button" data-mode="byyear" class="' + (finModelMode === 'byyear' ? 'active' : '') + '" onclick="toggleFinModelMode(\'byyear\')">BY YEAR</button>';
+                html += '</div>';
 
-            // #6 SS Estimates
-            html += '<div class="memo-item" id="memo-item-6">';
-            html += '<div class="memo-item-title">#6 Financial Estimates \u2014 SS</div>';
-            html += fin.ss_estimates ? '<div class="memo-item-content">' + escapeHtml(fin.ss_estimates) + '</div>' : '<div class="memo-placeholder">Not yet populated</div>';
-            html += '</div>';
+                html += '<div class="fin-model-wrap" id="fin-model-container">';
+                html += renderFinModelTable(model, finModelMode);
+                html += '</div>';
+
+                // Guidance text (collapsible)
+                html += '<div class="memo-item" id="memo-item-5" style="margin-top:16px;">';
+                html += '<div class="memo-item-title">#5 Guidance Commentary</div>';
+                html += fin.guidance ? '<div class="memo-item-content">' + escapeHtml(fin.guidance) + '</div>' : '<div class="memo-placeholder">Not yet populated</div>';
+                html += '</div>';
+
+                // SS Estimates text (collapsible)
+                html += '<div class="memo-item" id="memo-item-6">';
+                html += '<div class="memo-item-title">#6 SS Estimates Commentary</div>';
+                html += fin.ss_estimates ? '<div class="memo-item-content">' + escapeHtml(fin.ss_estimates) + '</div>' : '<div class="memo-placeholder">Not yet populated</div>';
+                html += '</div>';
+            } else {
+                // Fallback: text only
+                html += '<div class="memo-item" id="memo-item-5">';
+                html += '<div class="memo-item-title">#5 Guidance</div>';
+                html += fin.guidance ? '<div class="memo-item-content">' + escapeHtml(fin.guidance) + '</div>' : '<div class="memo-placeholder">Not yet populated</div>';
+                html += '</div>';
+
+                html += '<div class="memo-item" id="memo-item-6">';
+                html += '<div class="memo-item-title">#6 Financial Estimates \u2014 SS</div>';
+                html += fin.ss_estimates ? '<div class="memo-item-content">' + escapeHtml(fin.ss_estimates) + '</div>' : '<div class="memo-placeholder">Not yet populated</div>';
+                html += '</div>';
+            }
 
             // #7 Modal Case Forecasts [RB]
             html += '<div class="memo-item" id="memo-item-7">';
