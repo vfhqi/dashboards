@@ -2272,6 +2272,18 @@
             font-style: italic;
             padding: 8px 0;
         }
+        .memo-meta {
+            font-size: 9px;
+            color: #484f58;
+            margin-top: 2px;
+            letter-spacing: 0.2px;
+        }
+        .memo-section-meta {
+            font-size: 9px;
+            color: #484f58;
+            margin-left: 8px;
+            letter-spacing: 0.2px;
+        }
         .memo-rb-placeholder {
             font-size: 11px;
             color: #6e4c00;
@@ -2794,7 +2806,6 @@
             </div>
             <div class="toolbar-separator"></div>
             <div class="toolbar-group">
-                <button class="toolbar-btn active" id="btn-ratings" onclick="toggleView('ratings')">RATINGS</button>
                 <button class="toolbar-btn" id="btn-judgements" onclick="toggleView('judgements')">JUDGEMENTS</button>
                 <button class="toolbar-btn" id="btn-analysis" onclick="toggleView('analysis')">ANALYSIS</button>
             </div>
@@ -7113,6 +7124,23 @@
 										"triaging": { "p1": "B", "p2": "\u2014", "p3": "B", "p4": "C", "p5": "A", "p6": "B" },
 										"esa": { "p1": "", "p2": "", "p3": "", "p4": "", "p5": "", "p6": "" },
 										"dd": { "p1": "", "p2": "", "p3": "", "p4": "", "p5": "", "p6": "" }
+									},
+									"item_meta": {
+										"sec_a": { "edited": "2026-04-19" },
+										"sec_b": { "edited": "2026-04-19" },
+										"sec_c": { "edited": "" },
+										"sec_d": { "edited": "" },
+										"item_1": { "edited": "2026-04-18" },
+										"item_2": { "edited": "2026-04-18" },
+										"item_4": { "edited": "2026-04-19" },
+										"item_5": { "edited": "" },
+										"item_6": { "edited": "" },
+										"item_9": { "edited": "2026-04-19" },
+										"item_21": { "edited": "" },
+										"item_22": { "edited": "" },
+										"item_23": { "edited": "" },
+										"item_24": { "edited": "" },
+										"item_25": { "edited": "" }
 									}
 								}
 };
@@ -9644,6 +9672,53 @@
             return html;
         }
 
+        // ---- Memo metadata helpers ----
+        function memoWordCount(text) {
+            if (!text) return 0;
+            if (typeof text !== 'string') return 0;
+            return text.trim().split(/\s+/).filter(function(w) { return w.length > 0; }).length;
+        }
+
+        function memoContentWordCount(memo, pillars, itemKey) {
+            var wc = 0;
+            if (itemKey === 'sec_a') {
+                var fin = memo.financials || {};
+                wc += memoWordCount(fin.guidance) + memoWordCount(fin.ss_estimates);
+            } else if (itemKey === 'sec_b') {
+                var pids = ['p1','p2','p3','p4','p5','p6'];
+                for (var i = 0; i < pids.length; i++) {
+                    var pd = pillars[pids[i]];
+                    if (pd) {
+                        if (pd.judgement) pd.judgement.forEach(function(b) { wc += memoWordCount(b); });
+                        if (pd.analysis) pd.analysis.forEach(function(b) { wc += memoWordCount(b); });
+                    }
+                }
+                wc += memoWordCount(memo.ic_summary);
+            } else if (itemKey === 'sec_c') {
+                var ic = memo.ic_items || {};
+                var keys = ['icds','key_confusions','key_risks','key_hypothesis_failures','key_positive_outcomes','key_questions','key_assumptions','invalidation_thresholds','negative_expected_developments','monitoring_plan'];
+                keys.forEach(function(k) { if (Array.isArray(ic[k])) ic[k].forEach(function(b) { wc += memoWordCount(b); }); });
+                wc += memoWordCount(ic.ach_scenarios);
+            } else if (itemKey === 'sec_d') {
+                var act = memo.actions || {};
+                wc += memoWordCount(act.recommendation) + memoWordCount(act.parking_reasons) + memoWordCount(act.reassessment_criteria) + memoWordCount(act.monitoring_plan);
+                if (act.next_stage_kqs) act.next_stage_kqs.forEach(function(b) { wc += memoWordCount(b); });
+            } else if (itemKey === 'item_4') {
+                wc = memoWordCount(memo.ic_summary);
+            }
+            return wc;
+        }
+
+        function renderMemoMeta(memo, pillars, itemKey) {
+            var meta = (memo.item_meta && memo.item_meta[itemKey]) ? memo.item_meta[itemKey] : {};
+            var parts = [];
+            var wc = memoContentWordCount(memo, pillars || {}, itemKey);
+            if (wc > 0) parts.push(wc.toLocaleString() + ' words');
+            if (meta.edited) parts.push('edited ' + meta.edited);
+            if (parts.length === 0) return '';
+            return ' <span class="memo-meta">' + parts.join(' \u00b7 ') + '</span>';
+        }
+
         // ---- Memo ToC renderer ----
         function renderMemoToc() {
             var html = '<div class="memo-toc">';
@@ -9831,6 +9906,7 @@
             html += '<span class="memo-section-chevron">\u25B6</span>';
             html += '<span class="memo-section-label">Section A: Financials Section</span>';
             html += '<span class="memo-section-tag">#5\u2013#8</span>';
+            html += renderMemoMeta(memo, {}, 'sec_a');
             html += '</div>';
             html += '<div class="memo-section-body">';
 
@@ -9871,6 +9947,7 @@
             html += '<span class="memo-section-chevron">\u25B6</span>';
             html += '<span class="memo-section-label">Section B: Summary Section</span>';
             html += '<span class="memo-section-tag">#1\u2013#4</span>';
+            html += renderMemoMeta(memo, pillars, 'sec_b');
             html += '</div>';
             html += '<div class="memo-section-body">';
 
@@ -9943,7 +10020,7 @@
 
             // #4 IC written summary
             html += '<div class="memo-item" id="memo-item-4">';
-            html += '<div class="memo-item-title">#4 Investment Case Written Summary</div>';
+            html += '<div class="memo-item-title">#4 Investment Case Written Summary' + renderMemoMeta(memo, pillars, 'item_4') + '</div>';
             html += memo.ic_summary ? '<div class="memo-item-content">' + escapeHtml(memo.ic_summary) + '</div>' : '<div class="memo-placeholder">Not yet populated</div>';
             html += '</div>';
 
@@ -9961,6 +10038,7 @@
             html += '<span class="memo-section-chevron">\u25B6</span>';
             html += '<span class="memo-section-label">Section C: Investment Case \u2014 Analysis &amp; Judgements</span>';
             html += '<span class="memo-section-tag">#9\u2013#20</span>';
+            html += renderMemoMeta(memo, pillars, 'sec_c');
             html += '</div>';
             html += '<div class="memo-section-body">';
 
@@ -10103,6 +10181,7 @@
             html += '<span class="memo-section-chevron">\u25B6</span>';
             html += '<span class="memo-section-label">Section D: Actions \u2014 Next-Stage Go/No-Go</span>';
             html += '<span class="memo-section-tag">#21\u2013#25</span>';
+            html += renderMemoMeta(memo, {}, 'sec_d');
             html += '</div>';
             html += '<div class="memo-section-body">';
 
