@@ -1879,6 +1879,317 @@
             transform: translateY(1px);
         }
 
+        /* ========================================================== */
+        /* MEMO View — structured investment case memo overlay         */
+        /* ========================================================== */
+
+        .memo-column-header {
+            text-align: center;
+            width: 56px;
+            min-width: 56px;
+            white-space: nowrap;
+            color: #a371f7;
+            letter-spacing: 0.5px;
+        }
+        .memo-column-cell {
+            text-align: center;
+            width: 56px;
+            min-width: 56px;
+            padding: 4px 2px;
+        }
+        .memo-button {
+            display: inline-block;
+            padding: 3px 10px;
+            font-family: inherit;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.6px;
+            color: #a371f7;
+            background: rgba(163, 113, 247, 0.08);
+            border: 1px solid rgba(163, 113, 247, 0.45);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.12s, border-color 0.12s, color 0.12s;
+        }
+        .memo-button:hover {
+            background: rgba(163, 113, 247, 0.18);
+            border-color: rgba(163, 113, 247, 0.85);
+            color: #c9a5ff;
+        }
+        .memo-button:active {
+            transform: translateY(1px);
+        }
+
+        /* MEMO modal overlay */
+        .memo-modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(3, 6, 12, 0.92);
+            z-index: 9999;
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        .memo-modal-overlay.active {
+            display: block;
+        }
+        .memo-modal-frame {
+            position: relative;
+            max-width: 1100px;
+            margin: 8px auto;
+            background: #0d1117;
+            border: 1px solid #1f2a3a;
+            border-radius: 6px;
+            padding: 16px 20px 24px;
+            box-shadow: 0 18px 64px rgba(0, 0, 0, 0.65);
+        }
+        .memo-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #1f2a3a;
+        }
+        .memo-modal-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: #e6edf3;
+            letter-spacing: 0.3px;
+            line-height: 1.2;
+        }
+        .memo-modal-title .memo-modal-ticker {
+            color: #a371f7;
+            margin-right: 8px;
+        }
+        .memo-modal-subtitle {
+            display: inline-block;
+            font-size: 10px;
+            font-weight: 500;
+            color: #8b949e;
+            margin-left: 6px;
+        }
+        .memo-modal-close {
+            background: rgba(139, 148, 158, 0.1);
+            border: 1px solid #30363d;
+            border-radius: 4px;
+            color: #8b949e;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 5px 12px;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        .memo-modal-close:hover {
+            background: rgba(139, 148, 158, 0.2);
+            color: #e6edf3;
+        }
+        .memo-modal-body {
+            color: #c9d1d9;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        /* Stage toggle buttons */
+        .memo-stage-toggle {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 16px;
+        }
+        .memo-stage-btn {
+            padding: 5px 14px;
+            font-family: inherit;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: #8b949e;
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.12s, color 0.12s, border-color 0.12s;
+        }
+        .memo-stage-btn:hover {
+            color: #c9d1d9;
+            border-color: #484f58;
+        }
+        .memo-stage-btn.active {
+            color: #a371f7;
+            background: rgba(163, 113, 247, 0.1);
+            border-color: rgba(163, 113, 247, 0.5);
+        }
+
+        /* Memo sections */
+        .memo-section {
+            margin-bottom: 20px;
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        .memo-section-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            background: #1c2333;
+            border-bottom: 1px solid #30363d;
+            cursor: pointer;
+            user-select: none;
+        }
+        .memo-section-header:hover {
+            background: #21293d;
+        }
+        .memo-section-chevron {
+            font-size: 10px;
+            color: #8b949e;
+            transition: transform 0.15s;
+        }
+        .memo-section-header.expanded .memo-section-chevron {
+            transform: rotate(90deg);
+        }
+        .memo-section-label {
+            font-size: 12px;
+            font-weight: 700;
+            color: #e6edf3;
+            letter-spacing: 0.3px;
+        }
+        .memo-section-tag {
+            font-size: 9px;
+            font-weight: 600;
+            color: #8b949e;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        .memo-section-body {
+            padding: 10px 14px;
+            display: none;
+        }
+        .memo-section-header.expanded + .memo-section-body {
+            display: block;
+        }
+
+        /* Ratings progression table */
+        .memo-ratings-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 8px;
+        }
+        .memo-ratings-table th,
+        .memo-ratings-table td {
+            padding: 5px 8px;
+            font-size: 11px;
+            border-bottom: 1px solid #21262d;
+            text-align: center;
+        }
+        .memo-ratings-table th {
+            color: #8b949e;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            font-size: 10px;
+        }
+        .memo-ratings-table td:first-child,
+        .memo-ratings-table th:first-child {
+            text-align: left;
+            color: #c9d1d9;
+        }
+
+        /* Memo sub-items */
+        .memo-item {
+            margin-bottom: 12px;
+        }
+        .memo-item-title {
+            font-size: 11px;
+            font-weight: 700;
+            color: #a371f7;
+            letter-spacing: 0.3px;
+            margin-bottom: 4px;
+        }
+        .memo-item-content {
+            font-size: 11px;
+            color: #c9d1d9;
+            line-height: 1.5;
+        }
+        .memo-placeholder {
+            font-size: 11px;
+            color: #484f58;
+            font-style: italic;
+            padding: 6px 0;
+        }
+        .memo-rb-placeholder {
+            font-size: 11px;
+            color: #484f58;
+            font-style: italic;
+            padding: 6px 0;
+        }
+
+        /* Memo family/attribute detail */
+        .memo-family-block {
+            margin-bottom: 14px;
+            border-left: 2px solid #30363d;
+            padding-left: 10px;
+        }
+        .memo-family-title {
+            font-size: 12px;
+            font-weight: 700;
+            color: #e6edf3;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .memo-child-block {
+            margin: 6px 0 6px 12px;
+            padding-left: 8px;
+            border-left: 1px solid #21262d;
+        }
+        .memo-child-title {
+            font-size: 11px;
+            font-weight: 600;
+            color: #c9d1d9;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 2px;
+        }
+        .memo-child-type {
+            font-size: 9px;
+            font-weight: 600;
+            color: #8b949e;
+            letter-spacing: 0.4px;
+            text-transform: uppercase;
+        }
+        .memo-detail-toggle {
+            font-size: 10px;
+            color: #58a6ff;
+            cursor: pointer;
+            margin-left: 4px;
+            user-select: none;
+        }
+        .memo-detail-toggle:hover {
+            text-decoration: underline;
+        }
+        .memo-detail-body {
+            display: none;
+            margin-top: 4px;
+        }
+        .memo-detail-body.expanded {
+            display: block;
+        }
+
+        @media (max-width: 800px) {
+            .memo-modal-frame {
+                margin: 4px;
+                padding: 10px 8px 14px;
+                max-width: 100%;
+                border-radius: 4px;
+            }
+        }
+
         /* LIST modal overlay — comparison matrix */
         .list-modal-overlay {
             display: none;
@@ -2323,7 +2634,7 @@
             <div class="toolbar-group">
                 <button class="toolbar-btn" id="btn-fundamental" onclick="toggleFundamental()">FUNDAMENTAL</button>
             </div>
-            <div style="margin-left:auto;font-size:10px;color:#8a95a5;letter-spacing:0.3px;align-self:center;padding-right:4px;">Saved 19-Apr-26 07:20</div>
+            <div style="margin-left:auto;font-size:10px;color:#8a95a5;letter-spacing:0.3px;align-self:center;padding-right:4px;">Saved 19-Apr-26 (v3 + MEMO)</div>
         </div>
         <!-- IC Ratings (always visible, tabs removed) -->
         <div id="ratings" class="tab-content active">
@@ -2393,7 +2704,7 @@
                 <table id="master-table">
                     <thead>
                         <tr class="pillar-group-header">
-                            <th colspan="6"></th>
+                            <th colspan="7"></th>
                             <th colspan="2" class="group-label">Timeliness</th>
                             <th colspan="2" class="group-label">Case Strength</th>
                             <th colspan="1" class="group-label">Market Recognition</th>
@@ -2407,6 +2718,7 @@
                             <th>Stage</th>
                             <th class="map-column-header">MAP</th>
                             <th class="list-column-header">LIST</th>
+                            <th class="memo-column-header">MEMO</th>
                             <th class="pillar-column standard-col">P1<br>Technical Momentum</th>
                             <th class="pillar-column standard-col">P2<br>Market Paradigm</th>
                             <th class="pillar-column standard-col">P3<br>Fund Change</th>
@@ -6591,6 +6903,38 @@
 																																"current_sp_eur": 48
 																								}
 																}
+								},
+								"memo": {
+									"ic_summary": "",
+									"financials": {
+										"guidance": "",
+										"ss_estimates": ""
+									},
+									"ic_items": {
+										"icds": [],
+										"ach_scenarios": "",
+										"key_confusions": [],
+										"key_risks": [],
+										"key_hypothesis_failures": [],
+										"key_positive_outcomes": [],
+										"key_questions": [],
+										"key_assumptions": [],
+										"invalidation_thresholds": [],
+										"negative_expected_developments": [],
+										"monitoring_plan": []
+									},
+									"actions": {
+										"recommendation": "",
+										"next_stage_kqs": [],
+										"parking_reasons": "",
+										"reassessment_criteria": "",
+										"monitoring_plan": ""
+									},
+									"stage_ratings": {
+										"triaging": { "p1": "B", "p2": "\u2014", "p3": "B", "p4": "C", "p5": "A", "p6": "B" },
+										"esa": { "p1": "", "p2": "", "p3": "", "p4": "", "p5": "", "p6": "" },
+										"dd": { "p1": "", "p2": "", "p3": "", "p4": "", "p5": "", "p6": "" }
+									}
 								}
 };
 
@@ -7793,6 +8137,7 @@
                         '<td><span class="stage-badge ' + getStageClass(stock.stage) + '">' + stock.stage + '</span></td>' +
                         '<td class="map-column-cell"><button type="button" class="map-button" onclick="openMapView(event,' + index + ')" title="Open summary MAP for ' + escapeHtml(stock.ticker) + '">MAP</button></td>' +
                         '<td class="list-column-cell"><button type="button" class="list-button" onclick="openListView(event,' + index + ')" title="Open LIST checklist for ' + escapeHtml(stock.ticker) + '">LIST</button></td>' +
+                        '<td class="memo-column-cell"><button type="button" class="memo-button" onclick="openMemoView(event,' + index + ')" title="Open MEMO for ' + escapeHtml(stock.ticker) + '">MEMO</button></td>' +
                         '<td class="pillar-column standard-col" onclick="onPillarBadgeClick(event,' + index + ',\'p1\')" style="cursor:pointer;"><span class="rating-badge ' + getRatingClass(stock.pillars.p1_technical_momentum) + '">' + stock.pillars.p1_technical_momentum + '</span></td>' +
                         '<td class="pillar-column standard-col" onclick="onPillarBadgeClick(event,' + index + ',\'p2\')" style="cursor:pointer;"><span class="rating-badge ' + getRatingClass(stock.pillars.p2_market_paradigm_fit) + '">' + stock.pillars.p2_market_paradigm_fit + '</span></td>' +
                         '<td class="pillar-column standard-col" onclick="onPillarBadgeClick(event,' + index + ',\'p3\')" style="cursor:pointer;"><span class="rating-badge ' + getRatingClass(stock.pillars.p3_fundamental_change) + '">' + stock.pillars.p3_fundamental_change + '</span></td>' +
@@ -8965,6 +9310,483 @@
                     }
                 }, 120);
             }, 60);
+        }
+
+        // ================================================================
+        // MEMO View — structured investment case memo
+        // ================================================================
+
+        var currentMemoStockIndex = -1;
+        var currentMemoStage = 'triaging';
+
+        function openMemoView(evt, stockIndex) {
+            if (evt && evt.stopPropagation) evt.stopPropagation();
+            var stock = masterData.stocks[stockIndex];
+            if (!stock) return;
+            currentMemoStockIndex = stockIndex;
+
+            var treeData = getTreeDataForStock(stock);
+
+            var overlay = document.getElementById('memo-modal-overlay');
+            if (!overlay) {
+                overlay = buildMemoModalShell();
+            }
+
+            var title = document.getElementById('memo-modal-title');
+            if (title) {
+                title.innerHTML = '<span class="memo-modal-ticker">' + escapeHtml(stock.ticker) + '</span>'
+                    + escapeHtml(stock.company_name)
+                    + '<span class="memo-modal-subtitle">Investment Case MEMO \u00b7 ' + escapeHtml(stock.stage || '') + '</span>';
+            }
+
+            var body = document.getElementById('memo-modal-body');
+            if (body) {
+                if (!treeData) {
+                    body.innerHTML = '<div style="color:#8b949e;padding:24px;text-align:center;font-style:italic;">MEMO data not yet populated for this stock.</div>';
+                } else {
+                    try {
+                        // Determine current stage from stock data
+                        var stageKey = (stock.stage || 'Triaging').toLowerCase().replace(/\s+/g, '');
+                        if (stageKey === 'ddp1' || stageKey === 'ddro') stageKey = 'dd';
+                        if (stageKey === 'ig') stageKey = 'triaging';
+                        currentMemoStage = stageKey;
+                        body.innerHTML = renderMemoContent(stock, treeData, stageKey);
+                    } catch (err) {
+                        body.innerHTML = '<div style="color:#ff6b6b;padding:16px;">Error rendering MEMO: ' + err.message + '</div>';
+                    }
+                }
+            }
+
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            window.scrollTo(0, 0);
+        }
+
+        function closeMemoView() {
+            var overlay = document.getElementById('memo-modal-overlay');
+            if (overlay) {
+                overlay.classList.remove('active');
+            }
+            document.body.style.overflow = '';
+        }
+
+        function buildMemoModalShell() {
+            var overlay = document.createElement('div');
+            overlay.id = 'memo-modal-overlay';
+            overlay.className = 'memo-modal-overlay';
+            overlay.innerHTML =
+                '<div class="memo-modal-frame" id="memo-modal-frame">' +
+                    '<div class="memo-modal-header">' +
+                        '<div class="memo-modal-title" id="memo-modal-title"></div>' +
+                        '<button type="button" class="memo-modal-close" onclick="closeMemoView()">Close \u2715</button>' +
+                    '</div>' +
+                    '<div class="memo-modal-body" id="memo-modal-body"></div>' +
+                '</div>';
+
+            overlay.addEventListener('click', function(e) {
+                if (e.target === overlay) closeMemoView();
+            });
+
+            document.body.appendChild(overlay);
+            return overlay;
+        }
+
+        // ESC closes MEMO
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' || e.keyCode === 27) {
+                var overlay = document.getElementById('memo-modal-overlay');
+                if (overlay && overlay.classList.contains('active')) {
+                    closeMemoView();
+                    return;
+                }
+            }
+        });
+
+        function memoToggleSection(el) {
+            el.classList.toggle('expanded');
+        }
+
+        function memoToggleDetail(el) {
+            var body = el.nextElementSibling;
+            if (body) body.classList.toggle('expanded');
+            el.textContent = body && body.classList.contains('expanded') ? '[collapse]' : '[expand]';
+        }
+
+        function memoSwitchStage(stageKey) {
+            currentMemoStage = stageKey;
+            var stock = masterData.stocks[currentMemoStockIndex];
+            if (!stock) return;
+            var treeData = getTreeDataForStock(stock);
+            if (!treeData) return;
+            var body = document.getElementById('memo-modal-body');
+            if (body) {
+                try {
+                    body.innerHTML = renderMemoContent(stock, treeData, stageKey);
+                } catch (err) {
+                    body.innerHTML = '<div style="color:#ff6b6b;padding:16px;">Error rendering MEMO: ' + err.message + '</div>';
+                }
+            }
+        }
+
+        function renderMemoContent(stock, treeData, activeStage) {
+            var html = '';
+            var memo = treeData.memo || {};
+            var stageRatings = memo.stage_ratings || {};
+            var pillars = treeData.pillars || {};
+
+            // Stage toggle
+            var stages = ['triaging', 'esa', 'dd'];
+            var stageLabels = { triaging: 'Triaging', esa: 'ESA', dd: 'DD' };
+            html += '<div class="memo-stage-toggle">';
+            for (var si = 0; si < stages.length; si++) {
+                var s = stages[si];
+                var activeClass = (s === activeStage) ? ' active' : '';
+                html += '<button type="button" class="memo-stage-btn' + activeClass + '" onclick="memoSwitchStage(\'' + s + '\')">' + stageLabels[s] + '</button>';
+            }
+            html += '</div>';
+
+            // ========== Section A: Financials ==========
+            html += renderMemoSectionA(memo, true);
+
+            // ========== Section B: Summary ==========
+            html += renderMemoSectionB(stock, treeData, stageRatings, pillars, true);
+
+            // ========== Section C: IC Analysis ==========
+            html += renderMemoSectionC(treeData, memo, true);
+
+            // ========== Section D: Actions ==========
+            html += renderMemoSectionD(memo, stock, true);
+
+            return html;
+        }
+
+        // ---- Section A: Financials ----
+        function renderMemoSectionA(memo, expanded) {
+            var fin = memo.financials || {};
+            var expClass = expanded ? ' expanded' : '';
+            var html = '<div class="memo-section">';
+            html += '<div class="memo-section-header' + expClass + '" onclick="memoToggleSection(this)">';
+            html += '<span class="memo-section-chevron">\u25B6</span>';
+            html += '<span class="memo-section-label">Section A: Financials</span>';
+            html += '<span class="memo-section-tag">#5\u2013#8</span>';
+            html += '</div>';
+            html += '<div class="memo-section-body">';
+
+            // #5 Guidance
+            html += '<div class="memo-item">';
+            html += '<div class="memo-item-title">#5 Guidance (EGP, Key Financial Milestones)</div>';
+            html += fin.guidance ? '<div class="memo-item-content">' + escapeHtml(fin.guidance) + '</div>' : '<div class="memo-placeholder">Not yet populated</div>';
+            html += '</div>';
+
+            // #6 SS Estimates
+            html += '<div class="memo-item">';
+            html += '<div class="memo-item-title">#6 SS Estimates (Sell-Side Consensus)</div>';
+            html += fin.ss_estimates ? '<div class="memo-item-content">' + escapeHtml(fin.ss_estimates) + '</div>' : '<div class="memo-placeholder">Not yet populated</div>';
+            html += '</div>';
+
+            // #7 Modal Case Forecasts [RB]
+            html += '<div class="memo-item">';
+            html += '<div class="memo-item-title">#7 Modal Case Forecasts</div>';
+            html += '<div class="memo-rb-placeholder">[RB] Awaiting Richard\'s input</div>';
+            html += '</div>';
+
+            // #8 TSR DuPont [RB]
+            html += '<div class="memo-item">';
+            html += '<div class="memo-item-title">#8 TSR DuPont</div>';
+            html += '<div class="memo-rb-placeholder">[RB] Awaiting Richard\'s input</div>';
+            html += '</div>';
+
+            html += '</div></div>';
+            return html;
+        }
+
+        // ---- Section B: Summary ----
+        function renderMemoSectionB(stock, treeData, stageRatings, pillars, expanded) {
+            var memo = treeData.memo || {};
+            var expClass = expanded ? ' expanded' : '';
+            var html = '<div class="memo-section">';
+            html += '<div class="memo-section-header' + expClass + '" onclick="memoToggleSection(this)">';
+            html += '<span class="memo-section-chevron">\u25B6</span>';
+            html += '<span class="memo-section-label">Section B: Summary</span>';
+            html += '<span class="memo-section-tag">#1\u2013#4</span>';
+            html += '</div>';
+            html += '<div class="memo-section-body">';
+
+            // #1 Ratings table — all 6 pillars, stages as columns
+            html += '<div class="memo-item">';
+            html += '<div class="memo-item-title">#1 Ratings Progression</div>';
+            html += '<table class="memo-ratings-table">';
+            html += '<thead><tr><th>Pillar</th><th>Triaging</th><th>ESA</th><th>DD</th></tr></thead>';
+            html += '<tbody>';
+
+            var pillarIds = ['p1', 'p2', 'p3', 'p4', 'p5', 'p6'];
+            var pillarLabels = {
+                p1: 'P1 Technical Momentum',
+                p2: 'P2 Market Paradigm',
+                p3: 'P3 Fundamental Change',
+                p4: 'P4 Building Blocks',
+                p5: 'P5 SS Earnings Momentum',
+                p6: 'P6 Valuation'
+            };
+
+            for (var pi = 0; pi < pillarIds.length; pi++) {
+                var pid = pillarIds[pi];
+                html += '<tr>';
+                html += '<td>' + pillarLabels[pid] + '</td>';
+                var stageKeys = ['triaging', 'esa', 'dd'];
+                for (var ski = 0; ski < stageKeys.length; ski++) {
+                    var sk = stageKeys[ski];
+                    var rating = (stageRatings[sk] && stageRatings[sk][pid]) ? stageRatings[sk][pid] : '';
+                    if (rating) {
+                        html += '<td><span class="rating-badge ' + getRatingClass(rating) + '">' + escapeHtml(rating) + '</span></td>';
+                    } else {
+                        html += '<td><span style="color:#484f58;">\u2014</span></td>';
+                    }
+                }
+                html += '</tr>';
+            }
+
+            html += '</tbody></table>';
+            html += '</div>';
+
+            // #2 Written judgements per pillar
+            html += '<div class="memo-item">';
+            html += '<div class="memo-item-title">#2 Pillar Judgements</div>';
+            for (var pj = 0; pj < pillarIds.length; pj++) {
+                var pKey = pillarIds[pj];
+                var pData = pillars[pKey];
+                if (pData && pData.judgement && pData.judgement.length > 0) {
+                    html += '<div style="margin-bottom:8px;">';
+                    html += '<div style="font-size:10px;font-weight:700;color:#a371f7;margin-bottom:2px;">' + pillarLabels[pKey] + ' <span class="rating-badge ' + getRatingClass(pData.rating) + '" style="font-size:9px;">' + escapeHtml(pData.rating) + '</span></div>';
+                    html += renderJudgementBullets(pData.judgement);
+                    html += '</div>';
+                }
+            }
+            html += '</div>';
+
+            // #3 Written analysis per pillar
+            html += '<div class="memo-item">';
+            html += '<div class="memo-item-title">#3 Pillar Analysis</div>';
+            for (var pa = 0; pa < pillarIds.length; pa++) {
+                var paKey = pillarIds[pa];
+                var paData = pillars[paKey];
+                if (paData && paData.analysis && paData.analysis.length > 0) {
+                    html += '<div style="margin-bottom:8px;">';
+                    html += '<div style="font-size:10px;font-weight:700;color:#58a6ff;margin-bottom:2px;">' + pillarLabels[paKey] + '</div>';
+                    html += renderAnalysisBullets(paData.analysis);
+                    html += '</div>';
+                }
+            }
+            html += '</div>';
+
+            // #4 IC written summary
+            html += '<div class="memo-item">';
+            html += '<div class="memo-item-title">#4 IC Written Summary</div>';
+            html += memo.ic_summary ? '<div class="memo-item-content">' + escapeHtml(memo.ic_summary) + '</div>' : '<div class="memo-placeholder">Not yet populated</div>';
+            html += '</div>';
+
+            html += '</div></div>';
+            return html;
+        }
+
+        // ---- Section C: IC Analysis ----
+        function renderMemoSectionC(treeData, memo, expanded) {
+            var pillars = treeData.pillars || {};
+            var icItems = memo.ic_items || {};
+            var expClass = expanded ? ' expanded' : '';
+            var html = '<div class="memo-section">';
+            html += '<div class="memo-section-header' + expClass + '" onclick="memoToggleSection(this)">';
+            html += '<span class="memo-section-chevron">\u25B6</span>';
+            html += '<span class="memo-section-label">Section C: IC Analysis</span>';
+            html += '<span class="memo-section-tag">#9\u2013#20</span>';
+            html += '</div>';
+            html += '<div class="memo-section-body">';
+
+            // #9 Basic checks
+            html += '<div class="memo-item">';
+            html += '<div class="memo-item-title">#9 Basic Checks (Pre-Analysis Gate)</div>';
+            html += '<div class="memo-placeholder">Not yet populated</div>';
+            html += '</div>';
+
+            // P3 + P4 detail rendering
+            html += '<div class="memo-item">';
+            html += '<div class="memo-item-title">P3 Fundamental Change \u2014 Detail</div>';
+            html += renderMemoPillarDetail(pillars.p3);
+            html += '</div>';
+
+            html += '<div class="memo-item">';
+            html += '<div class="memo-item-title">P4 Building Blocks \u2014 Detail</div>';
+            html += renderMemoPillarDetail(pillars.p4);
+            html += '</div>';
+
+            // #10-#20 IC Items
+            var icSections = [
+                { num: 10, key: 'icds', label: 'Investment Case Drivers (ICDs)', isList: true },
+                { num: 11, key: 'ach_scenarios', label: 'ACH Scenarios', isList: false },
+                { num: 12, key: 'key_confusions', label: 'Key Confusions / Key Uncertainties', isList: true },
+                { num: 13, key: 'key_risks', label: 'Key Risks', isList: true },
+                { num: 14, key: 'key_hypothesis_failures', label: 'Key Hypothesis Failures', isList: true },
+                { num: 15, key: 'key_positive_outcomes', label: 'Key Positive Outcomes', isList: true },
+                { num: 16, key: 'key_questions', label: 'Key Questions', isList: true },
+                { num: 17, key: 'key_assumptions', label: 'Key Assumptions', isList: true },
+                { num: 18, key: 'invalidation_thresholds', label: 'Invalidation Thresholds', isList: true },
+                { num: 19, key: 'negative_expected_developments', label: 'Negative Expected Developments', isList: true },
+                { num: 20, key: 'monitoring_plan', label: 'Monitoring Plan', isList: true }
+            ];
+
+            for (var ic = 0; ic < icSections.length; ic++) {
+                var sec = icSections[ic];
+                var val = icItems[sec.key];
+                html += '<div class="memo-item">';
+                html += '<div class="memo-item-title">#' + sec.num + ' ' + sec.label + '</div>';
+                if (sec.isList && Array.isArray(val) && val.length > 0) {
+                    html += '<ul class="memo-item-content">';
+                    for (var vi = 0; vi < val.length; vi++) {
+                        html += '<li>' + escapeHtml(val[vi]) + '</li>';
+                    }
+                    html += '</ul>';
+                } else if (!sec.isList && val && typeof val === 'string' && val.length > 0) {
+                    html += '<div class="memo-item-content">' + escapeHtml(val) + '</div>';
+                } else {
+                    html += '<div class="memo-placeholder">Not yet populated</div>';
+                }
+                html += '</div>';
+            }
+
+            html += '</div></div>';
+            return html;
+        }
+
+        // Render pillar families/children detail for MEMO Section C
+        function renderMemoPillarDetail(pillarData) {
+            if (!pillarData || !pillarData.families || pillarData.families.length === 0) {
+                return '<div class="memo-placeholder">No families populated</div>';
+            }
+            var html = '';
+            for (var fi = 0; fi < pillarData.families.length; fi++) {
+                var fam = pillarData.families[fi];
+                html += '<div class="memo-family-block">';
+                html += '<div class="memo-family-title">';
+                html += '<span class="rating-badge ' + getRatingClass(fam.rating) + '" style="font-size:10px;">' + escapeHtml(fam.rating) + '</span>';
+                html += '<span>' + escapeHtml(fam.label) + '</span>';
+                html += '</div>';
+
+                // Family judgement
+                if (fam.judgement && fam.judgement.length > 0) {
+                    html += '<div style="margin:4px 0;">' + renderJudgementBullets(fam.judgement) + '</div>';
+                }
+
+                // Family analysis (expandable)
+                if (fam.analysis && fam.analysis.length > 0) {
+                    html += '<span class="memo-detail-toggle" onclick="memoToggleDetail(this)">[expand]</span>';
+                    html += '<div class="memo-detail-body">' + renderAnalysisBullets(fam.analysis) + '</div>';
+                }
+
+                // Children (TCs, attributes, questions)
+                if (fam.children && fam.children.length > 0) {
+                    html += renderMemoChildren(fam.children, 0);
+                }
+
+                html += '</div>';
+            }
+            return html;
+        }
+
+        // Recursive child renderer for MEMO
+        function renderMemoChildren(children, depth) {
+            if (!children || children.length === 0) return '';
+            var html = '';
+            for (var ci = 0; ci < children.length; ci++) {
+                var child = children[ci];
+                html += '<div class="memo-child-block">';
+                html += '<div class="memo-child-title">';
+                if (child.rating) {
+                    html += '<span class="rating-badge ' + getRatingClass(child.rating) + '" style="font-size:9px;">' + escapeHtml(child.rating) + '</span>';
+                }
+                if (child.type) {
+                    html += '<span class="memo-child-type">' + escapeHtml(getTypeLabel(child.type)) + '</span>';
+                }
+                html += '<span>' + escapeHtml(child.label || '') + '</span>';
+                html += '</div>';
+
+                // Judgement (inline)
+                if (child.judgement && child.judgement.length > 0) {
+                    html += '<div style="margin:2px 0;">' + renderJudgementBullets(child.judgement) + '</div>';
+                }
+
+                // Analysis (expandable)
+                if (child.analysis && child.analysis.length > 0) {
+                    html += '<span class="memo-detail-toggle" onclick="memoToggleDetail(this)">[expand]</span>';
+                    html += '<div class="memo-detail-body">' + renderAnalysisBullets(child.analysis) + '</div>';
+                }
+
+                // Recurse into nested children
+                if (child.children && child.children.length > 0) {
+                    html += renderMemoChildren(child.children, depth + 1);
+                }
+
+                html += '</div>';
+            }
+            return html;
+        }
+
+        // ---- Section D: Actions ----
+        function renderMemoSectionD(memo, stock, expanded) {
+            var actions = memo.actions || {};
+            var expClass = expanded ? ' expanded' : '';
+            var html = '<div class="memo-section">';
+            html += '<div class="memo-section-header' + expClass + '" onclick="memoToggleSection(this)">';
+            html += '<span class="memo-section-chevron">\u25B6</span>';
+            html += '<span class="memo-section-label">Section D: Actions</span>';
+            html += '<span class="memo-section-tag">#21\u2013#25</span>';
+            html += '</div>';
+            html += '<div class="memo-section-body">';
+
+            // #21 APM Recommendation
+            html += '<div class="memo-item">';
+            html += '<div class="memo-item-title">#21 APM Recommendation (Progress / Park / Invest)</div>';
+            var rec = actions.recommendation || (stock.actions ? stock.actions.apm_recommendation : '');
+            if (rec) {
+                html += '<div class="memo-item-content"><span class="stage-badge stage-live">' + escapeHtml(rec) + '</span></div>';
+            } else {
+                html += '<div class="memo-placeholder">Not yet populated</div>';
+            }
+            html += '</div>';
+
+            // #22 KQs for next stage
+            html += '<div class="memo-item">';
+            html += '<div class="memo-item-title">#22 Key Questions for Next Stage</div>';
+            if (actions.next_stage_kqs && actions.next_stage_kqs.length > 0) {
+                html += '<ul class="memo-item-content">';
+                for (var ki = 0; ki < actions.next_stage_kqs.length; ki++) {
+                    html += '<li>' + escapeHtml(actions.next_stage_kqs[ki]) + '</li>';
+                }
+                html += '</ul>';
+            } else {
+                html += '<div class="memo-placeholder">Not yet populated</div>';
+            }
+            html += '</div>';
+
+            // #23 Parking reasons
+            html += '<div class="memo-item">';
+            html += '<div class="memo-item-title">#23 Parking Reasons</div>';
+            html += actions.parking_reasons ? '<div class="memo-item-content">' + escapeHtml(actions.parking_reasons) + '</div>' : '<div class="memo-placeholder">Not yet populated</div>';
+            html += '</div>';
+
+            // #24 Re-assessment criteria
+            html += '<div class="memo-item">';
+            html += '<div class="memo-item-title">#24 Re-Assessment Criteria</div>';
+            html += actions.reassessment_criteria ? '<div class="memo-item-content">' + escapeHtml(actions.reassessment_criteria) + '</div>' : '<div class="memo-placeholder">Not yet populated</div>';
+            html += '</div>';
+
+            // #25 Monitoring plan
+            html += '<div class="memo-item">';
+            html += '<div class="memo-item-title">#25 Monitoring Plan</div>';
+            html += actions.monitoring_plan ? '<div class="memo-item-content">' + escapeHtml(actions.monitoring_plan) + '</div>' : '<div class="memo-placeholder">Not yet populated</div>';
+            html += '</div>';
+
+            html += '</div></div>';
+            return html;
         }
 
         // Initialize
