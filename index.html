@@ -318,9 +318,10 @@
 
         /* Suffix Tags — inherit font size, bold + underline to stand out */
         .bullet-dash {
-            color: #57606a;
-            margin-right: 4px;
+            color: #9ca3af;
+            margin-right: 3px;
             font-weight: 400;
+            font-size: inherit;
         }
 
         .suffix-tag {
@@ -643,34 +644,67 @@
             margin: 4px 0 0 0;
         }
         .judgement-bullets > li {
-            font-weight: 700 !important;
-            font-size: 11px;
-            line-height: 1.5;
-            margin-bottom: 6px;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 1.55;
+            margin-bottom: 5px;
             color: #1f2328;
+            padding-left: 18px;
+            text-indent: -18px;
         }
         .judgement-bullets > li strong {
-            font-weight: 600;
+            font-weight: 700;
         }
         .judgement-bullets .sub-bullets {
             list-style: none;
-            padding-left: 16px;
-            margin: 2px 0 8px 0;
+            padding-left: 18px;
+            margin: 2px 0 6px 0;
         }
         .judgement-bullets .sub-bullets li {
             font-weight: 400;
             font-size: 11px;
-            line-height: 1.4;
-            color: #1f2328;
+            line-height: 1.45;
+            color: #4b5563;
             margin-bottom: 2px;
+            padding-left: 18px;
+            text-indent: -18px;
+        }
+
+        /* Analysis bullets — always subordinate to judgement bullets */
+        .analysis-bullets {
+            list-style: none;
+            padding: 0;
+            margin: 2px 0 0 0;
+        }
+        .analysis-bullets > li {
+            font-size: 11px;
+            line-height: 1.5;
+            margin-bottom: 3px;
+            color: #374151;
+            font-weight: 400;
+            padding-left: 18px;
+            text-indent: -18px;
+        }
+        .analysis-bullets .sub-bullets {
+            list-style: none;
+            padding-left: 18px;
+            margin: 2px 0 4px 0;
+        }
+        .analysis-bullets .sub-bullets li {
+            font-size: 10.5px;
+            line-height: 1.45;
+            color: #6b7280;
+            margin-bottom: 2px;
+            padding-left: 18px;
+            text-indent: -18px;
         }
 
         .cell-judgement {
             font-size: 12px;
-            color: #57606a;
-            line-height: 1.3;
+            color: #1f2328;
+            line-height: 1.5;
             margin-top: 4px;
-            font-weight: 700 !important;
+            font-weight: 700;
         }
 
         .cell-rating {
@@ -2284,8 +2318,8 @@
             gap: 0;
         }
         .memo-pillar-stack-item {
-            padding: 14px 0;
-            border-bottom: 2px solid #d0d7de;
+            padding: 16px 0;
+            border-bottom: 1px solid #e5e7eb;
         }
         .memo-pillar-stack-item:last-child {
             border-bottom: none;
@@ -2298,33 +2332,75 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            margin-bottom: 8px;
-            padding-bottom: 6px;
-            border-bottom: 1px solid rgba(124, 58, 237, 0.12);
+            margin-bottom: 10px;
         }
         .memo-pillar-stack-label {
-            font-size: 14px;
+            font-size: 12px;
             font-weight: 700;
             color: #7c3aed;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
         }
         .memo-pillar-stack-judgements {
-            margin-bottom: 8px;
-            font-size: 14px;
-            line-height: 1.6;
+            margin-bottom: 10px;
+            font-size: 13px;
+            line-height: 1.65;
         }
         .memo-pillar-stack-judgements .judgement-bullets > li {
             font-weight: 700;
-            line-height: 1.6;
-            margin-bottom: 4px;
+            font-size: 13px;
+            line-height: 1.65;
+            margin-bottom: 5px;
+            color: #1f2328;
+        }
+        .memo-pillar-stack-judgements .judgement-bullets .sub-bullets li {
+            font-size: 12px;
+            font-weight: 400;
+            color: #374151;
         }
         .memo-pillar-stack-analysis {
-            margin-top: 6px;
-            font-size: 14px;
-            line-height: 1.6;
-            opacity: 0.9;
+            margin-top: 4px;
+            font-size: 11px;
+            line-height: 1.55;
+            color: #4b5563;
         }
         .memo-pillar-stack-analysis li {
             margin-bottom: 3px;
+            font-size: 11px;
+            color: #4b5563;
+        }
+        .memo-pillar-stack-analysis .sub-bullets li {
+            font-size: 10.5px;
+            color: #6b7280;
+        }
+
+        /* ---- MEMO: Kill ALL default list bullets — dash is the only marker ---- */
+        .memo-section ul,
+        .memo-pillar-stack ul,
+        .memo-family-block ul,
+        .memo-child-block ul,
+        .memo-detail-body ul,
+        .memo-item-content ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+        .memo-section li,
+        .memo-pillar-stack li,
+        .memo-family-block li,
+        .memo-child-block li,
+        .memo-detail-body li {
+            list-style: none;
+            padding-left: 18px;
+            text-indent: -18px;
+        }
+        /* Sub-bullets get extra left indent */
+        .memo-section .sub-bullets,
+        .memo-pillar-stack .sub-bullets,
+        .memo-family-block .sub-bullets,
+        .memo-child-block .sub-bullets,
+        .memo-detail-body .sub-bullets {
+            padding-left: 18px;
         }
 
         /* Memo sections */
@@ -2339,14 +2415,14 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            padding: 12px 16px;
-            background: #eaeff5;
+            padding: 10px 16px;
+            background: #f0f2f5;
             border-bottom: 1px solid #d8dee4;
             cursor: pointer;
             user-select: none;
         }
         .memo-section-header:hover {
-            background: #e0e4ec;
+            background: #e8eaee;
         }
         .memo-section-chevron {
             font-size: 10px;
@@ -2357,10 +2433,10 @@
             transform: rotate(90deg);
         }
         .memo-section-label {
-            font-size: 15px;
+            font-size: 13px;
             font-weight: 700;
             color: #1f2328;
-            letter-spacing: 0.4px;
+            letter-spacing: 0.3px;
         }
         .memo-section-tag {
             font-size: 10px;
@@ -2370,8 +2446,9 @@
             text-transform: uppercase;
         }
         .memo-section-body {
-            padding: 14px 18px;
+            padding: 18px 22px;
             display: none;
+            background: #ffffff;
         }
         .memo-section-header.expanded + .memo-section-body {
             display: block;
@@ -2415,9 +2492,9 @@
 
         /* Memo sub-items */
         .memo-item {
-            margin-bottom: 14px;
-            padding-bottom: 12px;
-            border-bottom: 1px solid #d0d7de;
+            margin-bottom: 18px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #e5e7eb;
         }
         .memo-item:last-child {
             border-bottom: none;
@@ -2425,13 +2502,14 @@
             padding-bottom: 0;
         }
         .memo-item-title {
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 700;
             color: #7c3aed;
-            letter-spacing: 0.3px;
-            margin-bottom: 6px;
-            padding-bottom: 3px;
-            border-bottom: 1px solid rgba(124, 58, 237, 0.12);
+            letter-spacing: 0.4px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid rgba(124, 58, 237, 0.15);
         }
         .memo-item-content {
             font-size: 12px;
@@ -2440,8 +2518,15 @@
             max-width: 900px;
         }
         .memo-item-content li {
-            margin-bottom: 4px;
+            margin-bottom: 5px;
             line-height: 1.6;
+            padding-left: 16px;
+            text-indent: -16px;
+        }
+        /* Only add dash pseudo-element to plain list items (not inside judgement/analysis bullet renderers) */
+        ul.memo-item-content > li::before {
+            content: "\2013\00a0";
+            color: #9ca3af;
         }
         .memo-placeholder {
             font-size: 11px;
@@ -2480,7 +2565,7 @@
             border-radius: 0 4px 4px 0;
         }
         .memo-family-title {
-            font-size: 14px;
+            font-size: 12px;
             font-weight: 700;
             color: #1f2328;
             margin-bottom: 8px;
@@ -7744,7 +7829,7 @@
         // Convention: strings starting with "  - " are sub-bullets of the previous parent
         // Uses string concatenation for Safari compatibility
         function renderAnalysisBullets(bullets) {
-            var html = '<ul>';
+            var html = '<ul class="analysis-bullets">';
             var inSubList = false;
             bullets.forEach(function(bullet) {
                 var isSub = bullet.indexOf('  - ') === 0;
