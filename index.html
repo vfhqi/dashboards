@@ -883,6 +883,7 @@
         }
         th.fundamental-af { background-color: #e8edf4; }
         th.fundamental-bb { background-color: #e8f4ed; }
+        th.fundamental-other { background-color: #eee8f9; }
         td.fundamental-col {
             text-align: center;
             padding: 6px 4px;
@@ -2199,82 +2200,81 @@
             border-bottom: 1px solid rgba(124,58,237,0.12);
         }
 
-        /* ---- B1 MAP-style ratings cards ---- */
-        .memo-ratings-card-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-        }
-        @media (max-width: 900px) {
-            .memo-ratings-card-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-        @media (max-width: 600px) {
-            .memo-ratings-card-grid { grid-template-columns: 1fr; }
-        }
-        .memo-ratings-card {
+        /* ---- B1 Compact ratings rows ---- */
+        .memo-ratings-compact {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
             background: #ffffff;
             border: 1px solid #d0d7de;
             border-radius: 6px;
-            padding: 10px 12px;
-            transition: border-color 0.15s;
+            overflow: hidden;
         }
-        .memo-ratings-card:hover {
-            border-color: #2563eb;
+        .memo-ratings-row {
+            display: flex;
+            align-items: center;
+            padding: 6px 12px;
+            border-bottom: 1px solid #e8ecf0;
+            gap: 8px;
+            transition: background 0.1s;
         }
-        .memo-ratings-card-header {
+        .memo-ratings-row:last-child { border-bottom: none; }
+        .memo-ratings-row:hover { background: rgba(37, 99, 235, 0.03); }
+        .memo-ratings-row-label {
             display: flex;
             align-items: center;
             gap: 6px;
-            margin-bottom: 8px;
-            padding-bottom: 6px;
-            border-bottom: 1px solid #e1e4e8;
+            min-width: 220px;
+            flex-shrink: 0;
         }
-        .memo-ratings-card-name {
+        .memo-ratings-row-label .pillar-number-badge {
+            font-size: 9px;
+            padding: 1px 4px;
+            margin-right: 0;
+        }
+        .memo-ratings-row-name {
             font-size: 12px;
             font-weight: 700;
             color: #1f2328;
-            flex: 1;
         }
-        .memo-ratings-card-stages {
+        .memo-ratings-row-stages {
             display: flex;
-            gap: 8px;
-            justify-content: space-around;
-        }
-        .memo-ratings-card-stage {
-            display: flex;
-            flex-direction: column;
+            gap: 12px;
             align-items: center;
-            gap: 3px;
+            flex-shrink: 0;
         }
-        .memo-ratings-card-stage-label {
-            font-size: 9px;
+        .memo-ratings-row-stage {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            min-width: 70px;
+        }
+        .memo-ratings-row-stage-label {
+            font-size: 10px;
             font-weight: 600;
             color: #57606a;
-            text-transform: uppercase;
-            letter-spacing: 0.4px;
         }
-        .memo-ratings-card-children {
-            margin-top: 8px;
-            padding-top: 6px;
-            border-top: 1px solid #e1e4e8;
-        }
-        .memo-ratings-card-child {
+        /* Compact child rows (families, TCs, etc.) */
+        .memo-ratings-child-row {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            padding: 2px 4px;
-            font-size: 11px;
-            color: #1f2328;
-            border-radius: 2px;
-        }
-        .memo-ratings-card-child:hover {
-            background: rgba(37, 99, 235, 0.04);
-        }
-        .memo-ratings-card-child-label {
-            flex: 1;
-            padding-right: 6px;
+            padding: 3px 12px 3px 40px;
+            border-bottom: 1px solid #f0f2f5;
+            gap: 8px;
             font-size: 11px;
             color: #57606a;
+        }
+        .memo-ratings-child-row:hover { background: rgba(37, 99, 235, 0.03); }
+        .memo-ratings-child-row.depth-2 { padding-left: 56px; }
+        .memo-ratings-child-row.depth-3 { padding-left: 72px; }
+        .memo-ratings-child-row.depth-4 { padding-left: 88px; }
+        .memo-ratings-child-label {
+            flex: 1;
+            font-size: 11px;
+            color: #57606a;
+        }
+        .memo-ratings-child-rating {
+            flex-shrink: 0;
         }
 
         /* ---- B2/B3 Single-column pillar stack ---- */
@@ -2284,7 +2284,7 @@
             gap: 0;
         }
         .memo-pillar-stack-item {
-            padding: 20px 0;
+            padding: 14px 0;
             border-bottom: 2px solid #d0d7de;
         }
         .memo-pillar-stack-item:last-child {
@@ -2298,8 +2298,8 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            margin-bottom: 12px;
-            padding-bottom: 8px;
+            margin-bottom: 8px;
+            padding-bottom: 6px;
             border-bottom: 1px solid rgba(124, 58, 237, 0.12);
         }
         .memo-pillar-stack-label {
@@ -2329,7 +2329,7 @@
 
         /* Memo sections */
         .memo-section {
-            margin-bottom: 20px;
+            margin-bottom: 16px;
             background: #f6f8fa;
             border: 1px solid #d8dee4;
             border-radius: 6px;
@@ -2415,8 +2415,8 @@
 
         /* Memo sub-items */
         .memo-item {
-            margin-bottom: 18px;
-            padding-bottom: 14px;
+            margin-bottom: 14px;
+            padding-bottom: 12px;
             border-bottom: 1px solid #d0d7de;
         }
         .memo-item:last-child {
@@ -2429,23 +2429,25 @@
             font-weight: 700;
             color: #7c3aed;
             letter-spacing: 0.3px;
-            margin-bottom: 8px;
-            padding-bottom: 4px;
+            margin-bottom: 6px;
+            padding-bottom: 3px;
             border-bottom: 1px solid rgba(124, 58, 237, 0.12);
         }
         .memo-item-content {
             font-size: 12px;
             color: #1f2328;
-            line-height: 1.6;
+            line-height: 1.7;
+            max-width: 900px;
         }
         .memo-item-content li {
             margin-bottom: 4px;
+            line-height: 1.6;
         }
         .memo-placeholder {
             font-size: 11px;
             color: #6b7280;
             font-style: italic;
-            padding: 8px 0;
+            padding: 6px 0;
         }
         .memo-meta {
             font-size: 9px;
@@ -2471,9 +2473,9 @@
 
         /* Memo family/attribute detail */
         .memo-family-block {
-            margin-bottom: 20px;
+            margin-bottom: 14px;
             border-left: 3px solid #7c3aed;
-            padding: 10px 0 10px 14px;
+            padding: 8px 0 8px 14px;
             background: rgba(124, 58, 237, 0.05);
             border-radius: 0 4px 4px 0;
         }
@@ -3223,6 +3225,11 @@
                             <th class="fundamental-col fundamental-bb"><span class="fc-num">BB #6</span><span class="fc-label">Invalidating<br>Constraints</span></th>
                             <th class="fundamental-col fundamental-bb"><span class="fc-num">BB #7</span><span class="fc-label">Past Trend /<br>Momentum</span></th>
                             <th class="fundamental-col fundamental-bb"><span class="fc-num">BB #8</span><span class="fc-label">Nice-to-Have<br>Attributes</span></th>
+                            <!-- Fundamental view — Other Pillars -->
+                            <th class="fundamental-col fundamental-other fc-divider"><span class="fc-num">P1</span><span class="fc-label">Technical<br>Momentum</span></th>
+                            <th class="fundamental-col fundamental-other"><span class="fc-num">P2</span><span class="fc-label">Market<br>Paradigm</span></th>
+                            <th class="fundamental-col fundamental-other"><span class="fc-num">P5</span><span class="fc-label">SS Earnings<br>Momentum</span></th>
+                            <th class="fundamental-col fundamental-other"><span class="fc-num">P6</span><span class="fc-label">Valuation<br>in Range</span></th>
                         </tr>
                     </thead>
                     <tbody id="table-body">
@@ -8887,7 +8894,7 @@
                     treeRow.className = 'tree-row' + (isAlt ? ' stock-row-alt' : '');
                     treeRow.id = 'tree-' + index;
 
-                    treeRow.innerHTML = '<td colspan="28"><div class="tree-container expanded">' +
+                    treeRow.innerHTML = '<td colspan="32"><div class="tree-container expanded">' +
                         '<div class="pillar-detail-panel" id="pillar-detail-panel-' + index + '">' +
                         '<div class="pillar-detail-empty" style="color:#8c959f;font-style:italic;padding:16px;text-align:center;">Click a pillar rating (P1\u2013P6) above to view details</div>' +
                         '</div>' +
@@ -8897,7 +8904,7 @@
                 } catch (rowErr) {
                     // Append an error row so the user sees something
                     var errRow = document.createElement('tr');
-                    errRow.innerHTML = '<td colspan="28" style="color:#ff6b6b;padding:12px;">Error rendering ' + (stock ? stock.ticker : 'unknown') + ': ' + rowErr.message + '</td>';
+                    errRow.innerHTML = '<td colspan="32" style="color:#ff6b6b;padding:12px;">Error rendering ' + (stock ? stock.ticker : 'unknown') + ': ' + rowErr.message + '</td>';
                     tbody.appendChild(errRow);
                 }
             });
@@ -9073,6 +9080,24 @@
                         '<span class="rating-badge ' + getRatingClass(rating) + '">' + escapeHtml(rating) + '</span>' +
                         '</td>';
             }
+
+            // Other Pillars group: P1, P2, P5, P6
+            var otherPillars = [
+                { key: 'p1', field: 'p1_technical_momentum', divider: true },
+                { key: 'p2', field: 'p2_market_paradigm_fit', divider: false },
+                { key: 'p5', field: 'p5_ss_earnings_momentum', divider: false },
+                { key: 'p6', field: 'p6_valuation', divider: false }
+            ];
+            for (var oi = 0; oi < otherPillars.length; oi++) {
+                var op = otherPillars[oi];
+                var opRating = stock.pillars[op.field] || '\u2014';
+                var opCls = 'fundamental-col fundamental-other';
+                if (op.divider) opCls += ' fc-divider';
+                html += '<td class="' + opCls + '" onclick="onPillarBadgeClick(event,' + stockIdx + ',\'' + op.key + '\')" style="cursor:pointer;">' +
+                        '<span class="rating-badge ' + getRatingClass(opRating) + '">' + escapeHtml(opRating) + '</span>' +
+                        '</td>';
+            }
+
             return html;
         }
 
@@ -10722,33 +10747,30 @@
             return html;
         }
 
-        // ---- MAP-style visual card layout for Section B #1 ratings ----
+        // ---- Compact row layout for Section B #1 ratings ----
         function renderMemoRatingsCards(pillarIds, pillarLabels, pillarDetailAnchors, stageRatings, pillars, depth) {
             var stageKeys = ['triaging', 'esa', 'dd'];
             var stageLabels = { triaging: 'Triaging', esa: 'ESA', dd: 'DD' };
             var html = '';
 
-            // Responsive 6-card grid at pillar level
-            html += '<div class="memo-ratings-card-grid">';
+            html += '<div class="memo-ratings-compact">';
             for (var pi = 0; pi < pillarIds.length; pi++) {
                 var pid = pillarIds[pi];
                 var pData = pillars[pid];
-                var pNum = pid.toUpperCase().replace('P', 'P');
+                var pNum = pid.toUpperCase();
 
-                html += '<div class="memo-ratings-card">';
-                // Card header
-                html += '<div class="memo-ratings-card-header">';
+                // Main pillar row: label + stage ratings on same line
+                html += '<div class="memo-ratings-row">';
+                html += '<div class="memo-ratings-row-label">';
                 html += '<span class="pillar-number-badge">' + pNum + '</span>';
-                html += '<span class="memo-ratings-card-name">' + escapeHtml(pillarLabels[pid]) + '</span>';
+                html += '<span class="memo-ratings-row-name">' + escapeHtml(pillarLabels[pid]) + '</span>';
                 html += '</div>';
-
-                // Stage ratings row
-                html += '<div class="memo-ratings-card-stages">';
+                html += '<div class="memo-ratings-row-stages">';
                 for (var ski = 0; ski < stageKeys.length; ski++) {
                     var sk = stageKeys[ski];
                     var rating = (stageRatings[sk] && stageRatings[sk][pid]) ? stageRatings[sk][pid] : '';
-                    html += '<div class="memo-ratings-card-stage">';
-                    html += '<span class="memo-ratings-card-stage-label">' + stageLabels[sk] + '</span>';
+                    html += '<div class="memo-ratings-row-stage">';
+                    html += '<span class="memo-ratings-row-stage-label">' + stageLabels[sk] + ':</span>';
                     if (rating) {
                         html += '<span class="rating-badge ' + getRatingClass(rating) + '" style="font-size:10px;">' + escapeHtml(rating) + '</span>';
                     } else {
@@ -10757,53 +10779,133 @@
                     html += '</div>';
                 }
                 html += '</div>';
+                html += '</div>';
 
-                // Expandable families/children within card
-                if (depth !== 'pillars' && pData && pData.families && pData.families.length > 0) {
-                    html += '<div class="memo-ratings-card-children">';
-                    for (var fi = 0; fi < pData.families.length; fi++) {
-                        var fam = pData.families[fi];
-                        html += '<div class="memo-ratings-card-child">';
-                        html += '<span class="memo-ratings-card-child-label">' + escapeHtml(fam.label || '') + '</span>';
-                        html += renderMemoRatingCell(fam.rating);
-                        html += '</div>';
-
-                        // Deeper levels
-                        if (depth !== 'families' && fam.children) {
-                            html += renderMemoRatingsCardChildren(fam.children, depth, 'tc');
-                        }
-                    }
-                    html += '</div>';
+                // Expanded children (families/TCs/attributes/questions)
+                if (depth !== 'pillars') {
+                    html += renderMemoCompactChildren(pData, depth, pid);
                 }
-
-                html += '</div>'; // end card
             }
             html += '</div>';
 
             return html;
         }
 
-        // Recursive child renderer for MAP-style ratings cards
-        function renderMemoRatingsCardChildren(children, maxDepth, currentLevel) {
+        // Build synthetic family-level rows for pillars that lack a families array
+        // P1: has dimensions array, P5: has momentum_data, P6: has metrics
+        function getSyntheticFamilies(pData, pid) {
+            if (!pData) return [];
+            // If pillar already has families, use them
+            if (pData.families && pData.families.length > 0) return pData.families;
+
+            // P1 — dimensions array
+            if (pid === 'p1' && pData.dimensions && pData.dimensions.length > 0) {
+                var dims = [];
+                for (var i = 0; i < pData.dimensions.length; i++) {
+                    var d = pData.dimensions[i];
+                    dims.push({
+                        label: '#' + d.n + ' ' + d.label,
+                        rating: d.value || '\u2014',
+                        children: []
+                    });
+                }
+                return dims;
+            }
+
+            // P5 — momentum_data
+            if (pid === 'p5' && pData.momentum_data) {
+                var md = pData.momentum_data;
+                var metricLabels = {
+                    eps_change: 'EPS Change',
+                    ebitda_change: 'EBITDA Change',
+                    revenue_change: 'Revenue Change',
+                    price_target_change: 'Price Target Change',
+                    pct_buy_change: '% Buy Change'
+                };
+                var mfams = [];
+                for (var mk in metricLabels) {
+                    if (md[mk]) {
+                        var vals = md[mk];
+                        var summary = 'L1M: ' + (vals.l1m >= 0 ? '+' : '') + vals.l1m + '% | L3M: ' + (vals.l3m >= 0 ? '+' : '') + vals.l3m + '% | L6M: ' + (vals.l6m >= 0 ? '+' : '') + vals.l6m + '%';
+                        // Derive a simple rating from L3M value
+                        var r3 = vals.l3m;
+                        var dimRating = r3 > 5 ? 'PASS' : r3 > 0 ? 'PASS' : r3 === 0 ? '\u2014' : 'FAIL';
+                        mfams.push({
+                            label: metricLabels[mk] + '  (' + summary + ')',
+                            rating: dimRating,
+                            children: []
+                        });
+                    }
+                }
+                return mfams;
+            }
+
+            // P6 — metrics
+            if (pid === 'p6' && pData.metrics) {
+                var met = pData.metrics;
+                var vfams = [];
+                if (met.forward_pe !== undefined) {
+                    vfams.push({ label: 'Forward P/E: ' + met.forward_pe + 'x', rating: '\u2014', children: [] });
+                }
+                if (met.peer_average_pe !== undefined) {
+                    vfams.push({ label: 'Peer Avg P/E: ' + met.peer_average_pe, rating: '\u2014', children: [] });
+                }
+                if (met.percentile_in_range !== undefined) {
+                    vfams.push({ label: 'Percentile in Range: ' + met.percentile_in_range, rating: '\u2014', children: [] });
+                }
+                if (met.historical_range_low !== undefined && met.historical_range_high !== undefined) {
+                    vfams.push({ label: 'Historical Range: ' + met.historical_range_low + 'x \u2013 ' + met.historical_range_high + 'x', rating: '\u2014', children: [] });
+                }
+                if (met.current_sp_eur !== undefined) {
+                    vfams.push({ label: 'Current SP: EUR ' + met.current_sp_eur, rating: '\u2014', children: [] });
+                }
+                return vfams;
+            }
+
+            return [];
+        }
+
+        // Render expanded children for a pillar in compact row format
+        function renderMemoCompactChildren(pData, depth, pid) {
+            var families = getSyntheticFamilies(pData, pid);
+            if (!families || families.length === 0) return '';
+            var html = '';
+            for (var fi = 0; fi < families.length; fi++) {
+                var fam = families[fi];
+                html += '<div class="memo-ratings-child-row">';
+                html += '<span class="memo-ratings-child-label">' + escapeHtml(fam.label || '') + '</span>';
+                html += '<span class="memo-ratings-child-rating">' + renderMemoRatingCell(fam.rating) + '</span>';
+                html += '</div>';
+
+                // Deeper levels (TCs)
+                if (depth !== 'families' && fam.children && fam.children.length > 0) {
+                    html += renderMemoCompactChildrenRecursive(fam.children, depth, 'tc');
+                }
+            }
+            return html;
+        }
+
+        // Recursive child renderer for compact ratings rows
+        function renderMemoCompactChildrenRecursive(children, maxDepth, currentLevel) {
             if (!children || children.length === 0) return '';
             var html = '';
             var nextLevel = { tc: 'attribute', attribute: 'question', question: null };
             var depthOrder = ['pillars', 'families', 'tcs', 'attributes', 'questions'];
             var nextDepthNeeded = { tc: 'tcs', attribute: 'attributes', question: 'questions' };
-            var indentLevel = { tc: 1, attribute: 2, question: 3 };
-            var indent = (indentLevel[currentLevel] || 1) * 12;
+            var depthClass = { tc: 'depth-2', attribute: 'depth-3', question: 'depth-4' };
+            var cls = depthClass[currentLevel] || '';
             for (var ci = 0; ci < children.length; ci++) {
                 var child = children[ci];
-                html += '<div class="memo-ratings-card-child" style="padding-left:' + indent + 'px;">';
-                html += '<span class="memo-ratings-card-child-label" style="font-size:10px;">' + escapeHtml(child.label || '') + '</span>';
-                html += renderMemoRatingCell(child.rating);
+                html += '<div class="memo-ratings-child-row ' + cls + '">';
+                html += '<span class="memo-ratings-child-label">' + escapeHtml(child.label || '') + '</span>';
+                html += '<span class="memo-ratings-child-rating">' + renderMemoRatingCell(child.rating) + '</span>';
                 html += '</div>';
 
                 var next = nextLevel[currentLevel];
                 if (next && child.children && child.children.length > 0) {
                     var nextNeeded = nextDepthNeeded[next];
                     if (nextNeeded && depthOrder.indexOf(maxDepth) >= depthOrder.indexOf(nextNeeded)) {
-                        html += renderMemoRatingsCardChildren(child.children, maxDepth, next);
+                        html += renderMemoCompactChildrenRecursive(child.children, maxDepth, next);
                     }
                 }
             }
