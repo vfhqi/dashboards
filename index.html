@@ -2791,6 +2791,16 @@
             padding: 6px 0 6px 10px;
             border-left: 2px solid #c9c3b0;
         }
+        .memo-bluf-label,
+        .memo-summary-label {
+            font-style: normal;
+            font-weight: 700;
+            letter-spacing: 0.6px;
+            font-size: 10.5px;
+            color: #7a7362;
+            margin-right: 6px;
+            text-transform: uppercase;
+        }
 
         /* Summary — italic closer */
         .memo-summary {
@@ -4511,7 +4521,7 @@
                                   "sub": [
                                     {
                                       "iaja": "A",
-                                      "text": "Bear-case TTF: Yamal-2 ramp masks compression, doesn't add."
+                                      "text": "Branches: (i) TTF stays above EUR30 -- ramp is pure upside; (ii) TTF drops to EUR18-22 -- ramp masks compression, doesn't add."
                                     },
                                     {
                                       "iaja": "I",
@@ -4521,11 +4531,41 @@
                                 },
                                 {
                                   "iaja": "J",
-                                  "text": "TDs are genuine noise over the horizon -- not monitored."
+                                  "text": "PD sensitivity is symmetric -- upside and downside scale linearly with TTF.",
+                                  "sub": [
+                                    {
+                                      "iaja": "A",
+                                      "text": "No step-functions or discontinuities in the modelled path N1-3Y."
+                                    },
+                                    {
+                                      "iaja": "I",
+                                      "text": "Cheniere, Shell IG and Equinor show similar linear leverage -- not an outlier."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "iaja": "J",
+                                  "text": "TDs are genuine noise over the horizon -- not monitored actively.",
+                                  "sub": [
+                                    {
+                                      "iaja": "A",
+                                      "text": "FX drag partially hedged; opex inflation slow-moving and small in magnitude."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "iaja": "J",
+                                  "text": "LIs give us real-time visibility into the PD without waiting for earnings.",
+                                  "sub": [
+                                    {
+                                      "iaja": "A",
+                                      "text": "Weekly: EU storage refill pace (TTF proxy). Monthly: Sabetta shipment count (Yamal-2 ramp proxy)."
+                                    }
+                                  ]
                                 },
                                 {
                                   "iaja": "ACT",
-                                  "text": "Wire LIs 1-2 into weekly review; confirm FactSet feeds."
+                                  "text": "Wire LIs 1-2 into weekly review; confirm FactSet feeds available."
                                 }
                               ],
                               "ratings": []
@@ -4536,7 +4576,7 @@
                               "ratings": []
                             }
                           ],
-                          "word_count": 225
+                          "word_count": 312
                         },
                         {
                           "id": "D.I.2",
@@ -4571,35 +4611,53 @@
                                   "sub": [
                                     {
                                       "iaja": "A",
-                                      "text": "If >70% pre-sold, PD weakens materially -- thesis at risk."
+                                      "text": "Three outcomes: (i) >70% pre-sold -- PD weakens materially, thesis at risk; (ii) 40-70% -- case works but needs blended narrative; (iii) <40% -- PD fully intact."
                                     },
                                     {
                                       "iaja": "I",
-                                      "text": "Peers disclose 85-90% contracted; company silent."
+                                      "text": "Peers disclose 85-90% contracted; Russian state gas strategy favours long-dated Asian offtake."
+                                    },
+                                    {
+                                      "iaja": "I",
+                                      "text": "Company silent on split -- no IR disclosure, no prospectus language, no recent analyst briefings."
                                     },
                                     {
                                       "iaja": "OQ",
-                                      "text": "AS deep research scheduled w/o 27-Apr-26."
+                                      "text": "AS deep research scheduled w/o 27-Apr-26 with explicit ask for contract disclosure."
                                     }
                                   ]
                                 },
                                 {
                                   "iaja": "J",
-                                  "text": "KC-2 (solvable): USD FCF conversion after RUB costs?",
+                                  "text": "KC-2 (solvable): USD FCF conversion after RUB costs -- modellable, just unmodelled.",
                                   "sub": [
                                     {
                                       "iaja": "A",
-                                      "text": "Cost base approx 40% RUB; hedge tenor unclear."
+                                      "text": "(i) Cost base approx 40% RUB; (ii) hedge tenor unclear; both needed to size FX drag."
+                                    },
+                                    {
+                                      "iaja": "A",
+                                      "text": "Material at position-size level for a concentrated 5-15 name book -- not small."
                                     },
                                     {
                                       "iaja": "I",
-                                      "text": "2023 disclosure implied 8-12% FX drag on conversion."
+                                      "text": "2023 disclosure implied 8-12% FX drag on cash conversion over the full year."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "iaja": "J",
+                                  "text": "No KC-3 emerging at Triaging -- confusion set feels complete.",
+                                  "sub": [
+                                    {
+                                      "iaja": "A",
+                                      "text": "All other items either derive from these two or are KRs, not KCs."
                                     }
                                   ]
                                 },
                                 {
                                   "iaja": "ACT",
-                                  "text": "Build KC-2 Excel scenario pre-ESA. Escalate KC-1 to AS."
+                                  "text": "Build KC-2 Excel scenario pre-ESA (2-day task). Escalate KC-1 to AS deep research."
                                 }
                               ],
                               "ratings": []
@@ -4610,7 +4668,7 @@
                               "ratings": []
                             }
                           ],
-                          "word_count": 125
+                          "word_count": 226
                         },
                         {
                           "id": "D.I.4",
@@ -4631,11 +4689,19 @@
                                   "sub": [
                                     {
                                       "iaja": "A",
-                                      "text": "Secondary sanctions re-route volumes; SDN listing = binary for ADRs."
+                                      "text": "Two distinct channels: (i) secondary sanctions re-route volumes but keep them sellable; (ii) SDN listing on Novatek itself is binary for ADR holders."
+                                    },
+                                    {
+                                      "iaja": "A",
+                                      "text": "Probability and magnitude both needed: small probability of large loss is not the same as large probability of small loss."
                                     },
                                     {
                                       "iaja": "I",
-                                      "text": "2022-25 base rate: 3 of 12 Russian energy names went binary."
+                                      "text": "2022-25 base rate: 3 of 12 sanctioned Russian energy names went binary for foreign holders -- 25% base rate."
+                                    },
+                                    {
+                                      "iaja": "I",
+                                      "text": "Current CDS spreads imply ~10-15% probability of SDN listing over 24m -- market thinks possible, not imminent."
                                     }
                                   ]
                                 },
@@ -4645,27 +4711,35 @@
                                   "sub": [
                                     {
                                       "iaja": "A",
-                                      "text": "6m slip pushes volume into weaker TTF cycle; 2026 becomes 2027."
+                                      "text": "A 6m slip has two effects: (i) volume ramp pushes into a weaker TTF cycle; (ii) modelled 2026 contribution becomes a 2027 event."
                                     },
                                     {
                                       "iaja": "I",
-                                      "text": "Arctic-2 on time -- favourable but not a guarantee."
+                                      "text": "Arctic-2 COD was on time despite sanctions pressure -- favourable precedent."
+                                    },
+                                    {
+                                      "iaja": "I",
+                                      "text": "Western equipment supply chain now tighter -- precedent may not transfer cleanly."
                                     }
                                   ]
                                 },
                                 {
                                   "iaja": "J",
-                                  "text": "KR-3: Governance opacity -- reputational, not financial.",
+                                  "text": "KR-3: Governance opacity -- reputational drag, not financial.",
                                   "sub": [
                                     {
                                       "iaja": "A",
-                                      "text": "Post-2022 re-registration; no cash-flow impact."
+                                      "text": "Post-2022 re-registration; no cash-flow impact but complicates any compliance review."
+                                    },
+                                    {
+                                      "iaja": "A",
+                                      "text": "Me-state friction risk: each governance headline is a sell-trigger temptation."
                                     }
                                   ]
                                 },
                                 {
                                   "iaja": "ACT",
-                                  "text": "ESA: kill-switch list per KR with explicit level-1 triggers."
+                                  "text": "ESA: build kill-switch list per KR with explicit level-1 triggers (e.g. halve on SDN news, exit on binary confirmation)."
                                 }
                               ],
                               "ratings": []
@@ -4676,7 +4750,7 @@
                               "ratings": []
                             }
                           ],
-                          "word_count": 150
+                          "word_count": 260
                         },
                         {
                           "id": "D.I.5",
@@ -4697,11 +4771,11 @@
                                   "sub": [
                                     {
                                       "iaja": "A",
-                                      "text": "Net cash $2.4bn vs $1.1bn prior; balance sheet permits."
+                                      "text": "Net cash $2.4bn vs $1.1bn prior year; balance sheet permits."
                                     },
                                     {
                                       "iaja": "I",
-                                      "text": "No buyback since 2021; 'capital review' flagged at FY25."
+                                      "text": "No buyback since 2021; 'capital allocation review' flagged at FY25 without a specific channel."
                                     }
                                   ]
                                 },
@@ -4711,7 +4785,17 @@
                                   "sub": [
                                     {
                                       "iaja": "A",
-                                      "text": "Extends runway past 2030; not in sell-side modal case."
+                                      "text": "Extends LNG runway past 2030; not in sell-side modal case so any positive newsflow is pure upside."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "iaja": "J",
+                                  "text": "KPO-3: Asian buyer base broadening -- reduces single-buyer concentration risk.",
+                                  "sub": [
+                                    {
+                                      "iaja": "A",
+                                      "text": "Incremental Chinese and Indian offtake would soften the sanctions-channel risk in KR-1."
                                     }
                                   ]
                                 }
@@ -4724,10 +4808,10 @@
                               "ratings": []
                             }
                           ],
-                          "word_count": 85
+                          "word_count": 121
                         }
                       ],
-                      "word_count": 648
+                      "word_count": 982
                     },
                     {
                       "id": "D.II",
@@ -4788,8 +4872,8 @@
                   ],
                   "target_words": 1300,
                   "applicable_note": null,
-                  "word_count": 731,
-                  "page_count": 2
+                  "word_count": 1065,
+                  "page_count": 4
                 },
                 "E": {
                   "letter": "E",
@@ -10654,13 +10738,19 @@
         function memoRenderBluf(block) {
             var text = block && block.text ? String(block.text) : '';
             if (!text) return '';
-            return '<div class="memo-bluf">' + memoEscape(text) + '</div>';
+            return '<div class="memo-bluf">' +
+                   '<span class="memo-bluf-label">BLUF:</span>' +
+                   memoEscape(text) +
+                   '</div>';
         }
 
         function memoRenderSummary(block) {
             var text = block && block.text ? String(block.text) : '';
             if (!text) return '';
-            return '<div class="memo-summary">' + memoEscape(text) + '</div>';
+            return '<div class="memo-summary">' +
+                   '<span class="memo-summary-label">SUMMARY:</span>' +
+                   memoEscape(text) +
+                   '</div>';
         }
 
         function memoRenderTreeItem(item) {
@@ -13610,4 +13700,3 @@
     </script>
 </body>
 </html>
-                                                                                                                                                                                                                                                                                                                                                                                             
