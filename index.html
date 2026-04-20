@@ -2322,10 +2322,12 @@
             border: 2px solid #58a6ff;
             border-radius: 6px;
         }
-        body.show-memo .tree-row.expanded .memo-panel { display: block; }
+        /* MEMO visibility fix: show memo-panel everywhere when body.show-memo is on. */
+        body.show-memo .tree-row { display: table-row !important; }
+        body.show-memo .memo-panel { display: block !important; }
         /* When memo is shown, hide the pillars stack (they share the same row). */
-        body.show-memo .tree-row.expanded .pillars-sticky-header,
-        body.show-memo .tree-row.expanded .pillar-detail-panel { display: none; }
+        body.show-memo .pillars-sticky-header,
+        body.show-memo .pillar-detail-panel { display: none !important; }
 
         /* Memo prose column — Tufte-inspired 720px with reserved right margin. */
         .memo-prose {
@@ -9776,7 +9778,24 @@
                 floatBtn.textContent = nowOn ? 'MEMO ON' : 'MEMO';
             }
             document.body.classList.toggle('show-memo', nowOn);
-            if (nowOn) { renderAllMemos(); }
+            if (nowOn) {
+                // Render all memos into their panels
+                renderAllMemos();
+                // Force all tree-rows visible by marking their preceding stock row as expanded
+                document.querySelectorAll('tr.tree-row').forEach(function(tr) {
+                    var prev = tr.previousElementSibling;
+                    if (prev && !prev.classList.contains('expanded')) {
+                        prev.classList.add('expanded');
+                        prev.setAttribute('data-memo-force-expanded', '1');
+                    }
+                });
+            } else {
+                // Restore any rows we force-expanded (leave user-expanded rows alone)
+                document.querySelectorAll('tr[data-memo-force-expanded="1"]').forEach(function(tr) {
+                    tr.classList.remove('expanded');
+                    tr.removeAttribute('data-memo-force-expanded');
+                });
+            }
             updateStickyPositions();
         }
 
