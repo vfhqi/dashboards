@@ -2697,6 +2697,26 @@
         }
         .memo-topic-title { color: #1a1a1a; }
 
+        /* Word count badge — shown on topic / sub-section / section headers */
+        .memo-wc-badge {
+            display: inline-block;
+            float: right;
+            background-color: #efebdc;
+            color: #6b6b6b;
+            font-weight: 500;
+            font-size: 10px;
+            letter-spacing: 0.3px;
+            padding: 1px 6px;
+            border-radius: 2px;
+            margin-left: 8px;
+            vertical-align: 1px;
+            font-variant-numeric: tabular-nums;
+        }
+        .memo-wc-badge.is-over { color: #b4442e; background-color: #f7e1d9; }
+        .memo-wc-badge.is-under { color: #888; }
+        .memo-wc-badge.is-on-target { color: #2f7a3b; background-color: #e2eadd; }
+        .memo-subsection-header .memo-wc-badge { vertical-align: 0; }
+
         /* BLUF — italic opener */
         .memo-bluf {
             font-style: italic;
@@ -3044,7 +3064,9 @@
                           ],
                           "text": "Financials rate B at Triaging. Not outstanding — the FTTH legacy business is still absorbing working capital (104 DIO) and the performance programme is in early stages. But the mix shift is quantified, the DC unit economics are genuinely asset-light, and there is no cash-generation red flag. Worth ESA depth."
                         }
-                      ]
+                      ],
+                      "word_count": 214,
+                      "target_words": 0
                     },
                     {
                       "id": "A.II",
@@ -3056,12 +3078,15 @@
                           "text": "At Triaging depth the financial work is a primer: confirm that the segment-level disclosure supports the thesis (it does), rule out aggressive accounting (no evidence of it from a first-pass read), and note the working-capital drag. Full three-statement review deferred to ESA.",
                           "ratings": []
                         }
-                      ]
+                      ],
+                      "word_count": 42,
+                      "target_words": 0
                     }
                   ],
                   "applicable_note": null,
                   "word_count": 256,
-                  "page_count": 1
+                  "page_count": 1,
+                  "target_words": 0
                 },
                 "B": {
                   "letter": "B",
@@ -3143,12 +3168,15 @@
                           ],
                           "text": "Setup quality is B rather than A because the DC part of the thesis rhymes too closely with the FTTH boom-and-bust the company is still exiting. If DC is FTTH-in-disguise with a 3-5 year lag, the mix-shift thesis compounds rather than diversifies the cyclical risk. ESA needs to pressure-test this directly — the question is not whether DC growth is real, but whether the revenue quality is durable past the hyperscaler capex cycle."
                         }
-                      ]
+                      ],
+                      "word_count": 300,
+                      "target_words": 0
                     }
                   ],
                   "applicable_note": null,
                   "word_count": 300,
-                  "page_count": 1
+                  "page_count": 1,
+                  "target_words": 0
                 },
                 "C": {
                   "letter": "C",
@@ -3365,7 +3393,9 @@
                           "text": "Rollup: Outputs predominantly B, Foundations mixed with A-rated external tailwinds dragged by C-rated legacy competitive position, Management A/C — strategic clarity is the standout, execution evidence is absent by design (new CEO). Two attrs held as 'unclear' — insufficient evidence at Triaging depth, excluded from weighting.",
                           "ratings": []
                         }
-                      ]
+                      ],
+                      "word_count": 314,
+                      "target_words": 0
                     },
                     {
                       "id": "C.II.1",
@@ -3389,7 +3419,9 @@
                           "text": "If the DC segment hits the SEK 3bn 2028 target at 15%+ EBITA, group earnings roughly double from the current trough without Fibre needing to do anything dramatic. The thesis does not require a heroic FTTH recovery — it just requires FTTH to stop getting worse.",
                           "ratings": []
                         }
-                      ]
+                      ],
+                      "word_count": 100,
+                      "target_words": 0
                     },
                     {
                       "id": "C.II.2",
@@ -3432,7 +3464,9 @@
                           ],
                           "ratings": []
                         }
-                      ]
+                      ],
+                      "word_count": 156,
+                      "target_words": 0
                     },
                     {
                       "id": "C.II.3",
@@ -3450,7 +3484,9 @@
                           "text": "Incident history: no material incident flagged. Governance: Swedish listing, no dominant shareholder — double-edged (stewardship thin; activism/takeout optionality up).",
                           "ratings": []
                         }
-                      ]
+                      ],
+                      "word_count": 64,
+                      "target_words": 0
                     },
                     {
                       "id": "C.II.4",
@@ -3476,7 +3512,9 @@
                           "text": "Richard gate question: is small-cap/sub-EUR 1bn liquidity a dealbreaker for this name, or a sizing constraint? This is a pre-ESA decision, not an ESA-to-DD decision.",
                           "ratings": []
                         }
-                      ]
+                      ],
+                      "word_count": 90,
+                      "target_words": 0
                     },
                     {
                       "id": "C.II.5",
@@ -3490,12 +3528,15 @@
                           "text": "Classification: Demand-Driven EPSU/EPT (primary) + Corporate Change EPSU/EPT (nascent, secondary). Maturity: input confirmed + early output. Lineage: rhymes with multi-segment mix-shift pivots historically (industrial restructurings where a new division's incremental economics rerate the whole group). False-friend risk rated low-moderate — the distinct risk is reading DC acceleration as a durable moat when it may be a hyperscaler-capex-cycle phenomenon.",
                           "ratings": []
                         }
-                      ]
+                      ],
+                      "word_count": 58,
+                      "target_words": 0
                     }
                   ],
                   "applicable_note": null,
                   "word_count": 782,
-                  "page_count": 3
+                  "page_count": 3,
+                  "target_words": 0
                 },
                 "D": {
                   "letter": "D",
@@ -3568,7 +3609,9 @@
                           ],
                           "ratings": []
                         }
-                      ]
+                      ],
+                      "word_count": 196,
+                      "target_words": 0
                     },
                     {
                       "id": "D.II",
@@ -3595,7 +3638,9 @@
                           ],
                           "ratings": []
                         }
-                      ]
+                      ],
+                      "word_count": 73,
+                      "target_words": 0
                     },
                     {
                       "id": "D.III",
@@ -3626,12 +3671,15 @@
                           ],
                           "ratings": []
                         }
-                      ]
+                      ],
+                      "word_count": 83,
+                      "target_words": 0
                     }
                   ],
                   "applicable_note": null,
                   "word_count": 352,
-                  "page_count": 1
+                  "page_count": 1,
+                  "target_words": 0
                 },
                 "E": {
                   "letter": "E",
@@ -3658,7 +3706,9 @@
                           "text": "If the DC moat question (KC-1) comes back negative at ESA — i.e. end-to-end differentiation does not survive Corning/Prysmian tier-1 pivot — park. This is a binary check the ESA work must answer.",
                           "ratings": []
                         }
-                      ]
+                      ],
+                      "word_count": 74,
+                      "target_words": 0
                     },
                     {
                       "id": "E.II",
@@ -3680,7 +3730,9 @@
                           ],
                           "ratings": []
                         }
-                      ]
+                      ],
+                      "word_count": 40,
+                      "target_words": 0
                     },
                     {
                       "id": "E.III",
@@ -3699,12 +3751,15 @@
                           ],
                           "ratings": []
                         }
-                      ]
+                      ],
+                      "word_count": 30,
+                      "target_words": 0
                     }
                   ],
                   "applicable_note": null,
                   "word_count": 144,
-                  "page_count": 1
+                  "page_count": 1,
+                  "target_words": 0
                 },
                 "F": {
                   "letter": "F",
@@ -3755,7 +3810,9 @@
                           ],
                           "ratings": []
                         }
-                      ]
+                      ],
+                      "word_count": 62,
+                      "target_words": 0
                     },
                     {
                       "id": "F.II",
@@ -3773,12 +3830,15 @@
                           "text": "Source material for this memo: Files/HTRO/index.json (11 queries, ~69,000 words). Primary feeds for Triaging: IG/01-BD (Business Description, 6.9k w), IG/02-CF (Fundamental Change Forces, 6.4k w), Triaging/06-SS (Sell-Side Commentary, 17.4k w), Triaging/07-KD (Key Drivers Assessment, 4.6k w). Attribute ratings sourced from databases/detail/p3-fundamental-change.json. Setup classification and actions from databases/master/ic-ratings-current.json.",
                           "ratings": []
                         }
-                      ]
+                      ],
+                      "word_count": 97,
+                      "target_words": 0
                     }
                   ],
                   "applicable_note": null,
                   "word_count": 159,
-                  "page_count": 1
+                  "page_count": 1,
+                  "target_words": 0
                 }
               }
             }
@@ -3861,7 +3921,9 @@
                           ],
                           "text": "Numbers are good enough to proceed. Not outstanding — two of the last five years show working-capital absorption that masked real cash conversion. Worth a closer look at ESA, but no disqualifier at Triaging."
                         }
-                      ]
+                      ],
+                      "word_count": 121,
+                      "target_words": 0
                     },
                     {
                       "id": "A.II",
@@ -3873,12 +3935,15 @@
                           "text": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
                           "ratings": []
                         }
-                      ]
+                      ],
+                      "word_count": 44,
+                      "target_words": 0
                     }
                   ],
                   "applicable_note": null,
                   "word_count": 165,
-                  "page_count": 1
+                  "page_count": 1,
+                  "target_words": 0
                 },
                 "B": {
                   "letter": "B",
@@ -3950,12 +4015,15 @@
                           ],
                           "text": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. The strength of the setup is in the asymmetry: if the PRIMARY driver resolves as expected, multiple expansion compounds EPS growth; if it disappoints, downside is cushioned by the net cash position and shareholder yield."
                         }
-                      ]
+                      ],
+                      "word_count": 205,
+                      "target_words": 0
                     }
                   ],
                   "applicable_note": null,
                   "word_count": 205,
-                  "page_count": 1
+                  "page_count": 1,
+                  "target_words": 0
                 },
                 "C": {
                   "letter": "C",
@@ -4142,7 +4210,9 @@
                           ],
                           "ratings": []
                         }
-                      ]
+                      ],
+                      "word_count": 210,
+                      "target_words": 0
                     },
                     {
                       "id": "C.II.1",
@@ -4166,7 +4236,9 @@
                           "text": "Capital allocation rates C because the Yamal-1 overrun and 2021 buyback mistiming show mixed judgement at inflection points. Not a disqualifier; something to watch for recurrence.",
                           "ratings": []
                         }
-                      ]
+                      ],
+                      "word_count": 78,
+                      "target_words": 0
                     },
                     {
                       "id": "C.II.2",
@@ -4196,7 +4268,9 @@
                           ],
                           "ratings": []
                         }
-                      ]
+                      ],
+                      "word_count": 54,
+                      "target_words": 0
                     },
                     {
                       "id": "C.II.3",
@@ -4208,7 +4282,9 @@
                           "text": "Lorem ipsum. Checks clear: no material accounting aggression, no outstanding short-seller case of note, one well-managed incident (Sabetta logistics snag, 2024). Disclosure is thin versus Western peers — flag for ESA but not a red line.",
                           "ratings": []
                         }
-                      ]
+                      ],
+                      "word_count": 36,
+                      "target_words": 0
                     },
                     {
                       "id": "C.II.4",
@@ -4227,7 +4303,9 @@
                           "text": "Headline volatility is the main mismatch. We'd need to size smaller than a standard GARP name to respect the me-state constraint.",
                           "ratings": []
                         }
-                      ]
+                      ],
+                      "word_count": 54,
+                      "target_words": 0
                     },
                     {
                       "id": "C.II.5",
@@ -4241,12 +4319,15 @@
                           "text": "Classification: Demand-Driven EPSU (primary) + Supply-Reset EPT (secondary). Lineage match = CARLB 2023 thesis. That playbook applies with one modification — RUB-denominated earnings need a currency overlay we didn't run for CARLB.",
                           "ratings": []
                         }
-                      ]
+                      ],
+                      "word_count": 32,
+                      "target_words": 0
                     }
                   ],
                   "applicable_note": null,
                   "word_count": 464,
-                  "page_count": 2
+                  "page_count": 2,
+                  "target_words": 0
                 },
                 "D": {
                   "letter": "D",
@@ -4380,7 +4461,8 @@
                               "text": "One-driver cases are the cleanest to own — but they carry concentration risk. Size accordingly.",
                               "ratings": []
                             }
-                          ]
+                          ],
+                          "word_count": 189
                         },
                         {
                           "id": "D.I.2",
@@ -4393,7 +4475,8 @@
                               "text": "At Triaging, no KHFs identified that would disqualify. Structural cost-curve position assumed stable N1–3Y; to be stress-tested at ESA.",
                               "ratings": []
                             }
-                          ]
+                          ],
+                          "word_count": 19
                         },
                         {
                           "id": "D.I.3",
@@ -4452,7 +4535,8 @@
                               "text": "KC-1 is the one that can kill the thesis. If it fails to clear, park.",
                               "ratings": []
                             }
-                          ]
+                          ],
+                          "word_count": 153
                         },
                         {
                           "id": "D.I.4",
@@ -4521,7 +4605,8 @@
                               "text": "Two sizing constraints emerge: smaller starter than a standard GARP name; no add on KR-1 triggers until tail clears.",
                               "ratings": []
                             }
-                          ]
+                          ],
+                          "word_count": 165
                         },
                         {
                           "id": "D.I.5",
@@ -4568,9 +4653,12 @@
                               "text": "Upside optionality is real but not required. Thesis works on PD alone.",
                               "ratings": []
                             }
-                          ]
+                          ],
+                          "word_count": 73
                         }
-                      ]
+                      ],
+                      "target_words": 1050,
+                      "word_count": 632
                     },
                     {
                       "id": "D.II",
@@ -4597,7 +4685,9 @@
                           ],
                           "ratings": []
                         }
-                      ]
+                      ],
+                      "target_words": 150,
+                      "word_count": 49
                     },
                     {
                       "id": "D.III",
@@ -4622,9 +4712,12 @@
                           ],
                           "ratings": []
                         }
-                      ]
+                      ],
+                      "target_words": 100,
+                      "word_count": 34
                     }
                   ],
+                  "target_words": 1300,
                   "applicable_note": null,
                   "word_count": 715,
                   "page_count": 2
@@ -4654,7 +4747,9 @@
                           "text": "If Yamal-2 contract disclosure remains opaque at ESA exit, park — we cannot size a position responsibly without understanding the downside on pricing.",
                           "ratings": []
                         }
-                      ]
+                      ],
+                      "word_count": 54,
+                      "target_words": 0
                     },
                     {
                       "id": "E.II",
@@ -4676,7 +4771,9 @@
                           ],
                           "ratings": []
                         }
-                      ]
+                      ],
+                      "word_count": 37,
+                      "target_words": 0
                     },
                     {
                       "id": "E.III",
@@ -4695,12 +4792,15 @@
                           ],
                           "ratings": []
                         }
-                      ]
+                      ],
+                      "word_count": 21,
+                      "target_words": 0
                     }
                   ],
                   "applicable_note": null,
                   "word_count": 112,
-                  "page_count": 1
+                  "page_count": 1,
+                  "target_words": 0
                 },
                 "F": {
                   "letter": "F",
@@ -4746,7 +4846,9 @@
                           ],
                           "ratings": []
                         }
-                      ]
+                      ],
+                      "word_count": 24,
+                      "target_words": 0
                     },
                     {
                       "id": "F.II",
@@ -4758,12 +4860,15 @@
                           "text": "Supplementary appendix at Triaging is intentionally thin. ESA will add: contract-pricing scenario table, governance deep-dive, sanctions pathway map. DD will add: discounted cash flow model, reverse-DCF market-implied price path, peer sensitivity grid.",
                           "ratings": []
                         }
-                      ]
+                      ],
+                      "word_count": 32,
+                      "target_words": 0
                     }
                   ],
                   "applicable_note": null,
                   "word_count": 56,
-                  "page_count": 1
+                  "page_count": 1,
+                  "target_words": 0
                 }
               }
             }
@@ -10533,12 +10638,32 @@
             }
         }
 
+        function memoWcBadge(wc, target) {
+            wc = +wc || 0;
+            target = +target || 0;
+            if (wc === 0 && target === 0) return '';
+            var txt;
+            var cls = 'memo-wc-badge';
+            if (target > 0) {
+                txt = wc + 'w / ' + target + 't';
+                var ratio = wc / target;
+                if (ratio > 1.15) cls += ' is-over';
+                else if (ratio >= 0.85 && ratio <= 1.15) cls += ' is-on-target';
+                else cls += ' is-under';
+            } else {
+                txt = wc + 'w';
+                cls += ' is-under';
+            }
+            return '<span class="' + cls + '">' + txt + '</span>';
+        }
+
         function memoRenderTopic(topic) {
             var blocks = (topic && topic.blocks) || [];
             var html = '<div class="memo-topic">' +
                        '<div class="memo-topic-header">' +
                          '<span class="memo-topic-id">' + memoEscape(topic.id || '') + '</span>' +
                          '<span class="memo-topic-title">' + memoEscape(topic.title || '') + '</span>' +
+                         memoWcBadge(topic.word_count, topic.target_words) +
                        '</div>';
             for (var i = 0; i < blocks.length; i++) {
                 html += memoRenderBlock(blocks[i]);
@@ -10554,6 +10679,7 @@
                        '<div class="memo-subsection-header">' +
                          '<span class="memo-subsection-id">' + memoEscape(sub.id || '') + '</span>' +
                          memoEscape(sub.title || '') +
+                         memoWcBadge(sub.word_count, sub.target_words) +
                        '</div>';
             // Render sub-section-level blocks first (e.g. a section-level BLUF)
             for (var i = 0; i < blocks.length; i++) {
@@ -10573,12 +10699,15 @@
             var applicable = section.applicable !== false;
             var wc = section.word_count || 0;
             var pp = section.page_count || 0;
+            var target = section.target_words || 0;
             var defaultOpen = !!section.default_open && applicable;
             var verdict = section.inline_verdict;
 
             var metaText;
             if (!applicable) {
                 metaText = section.applicable_note || 'n/a';
+            } else if (target > 0) {
+                metaText = pp + 'pp | ' + wc.toLocaleString() + 'w / ' + target.toLocaleString() + 't';
             } else {
                 metaText = pp + 'pp | ' + wc.toLocaleString() + 'w';
             }
@@ -11209,6 +11338,540 @@
             // Small delay to let the modal finish closing before scrolling
             setTimeout(function() {
                 // 1. Open the stock row if needed
+                var masterRow = document.querySelectorAll('#table-body tr.expand-toggle')[stockIndex];
+                if (!masterRow) return;
+                var treeRow = document.getElementById('tree-' + stockIndex);
+
+                if (!masterRow.classList.contains('expanded')) {
+                    masterRow.classList.add('expanded');
+                    masterRow.classList.add('active-stock');
+                    if (treeRow) treeRow.classList.add('expanded');
+                    var stickyHeader = document.getElementById('pillars-sticky-' + stockIndex);
+                    if (stickyHeader) stickyHeader.classList.add('is-sticky');
+                    updateStickyPositions();
+                }
+
+                // 2. Expand the pillar card
+                var cardId = 'pillar-' + stockIndex + '-' + pillarId;
+                var card = document.getElementById(cardId);
+                if (card && !card.classList.contains('active-pillar')) {
+                    card.click();
+                }
+
+                // 3. After the pillar opens, expand the specific family
+                setTimeout(function() {
+                    if (familyIdx >= 0) {
+                        var familyId = 'family-' + pillarId + '-' + familyIdx;
+                        var familyCard = document.getElementById(familyId + '-card');
+                        if (familyCard && !familyCard.classList.contains('expanded')) {
+                            familyCard.click();
+                        }
+                        // Scroll the family card into view
+                        setTimeout(function() {
+                            var scrollTarget = document.getElementById(familyId + '-card') || card;
+                            if (scrollTarget && scrollTarget.scrollIntoView) {
+                                scrollTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            }
+                        }, 150);
+                    } else if (card && card.scrollIntoView) {
+                        card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }, 120);
+            }, 60);
+        }
+
+        // ================================================================
+        // LIST View — comparison matrix overlay
+        // ================================================================
+
+        var currentListStockIndex = -1;
+        // Session persistence: { primaryTicker: [peerTicker1, peerTicker2, ...] }
+        var listPeerSelections = {};
+
+        // LIST structure definition — maps Excel LIST view to dashboard data
+        var LIST_STRUCTURE = [
+            {
+                numeral: "I",
+                title: "Strong technical momentum",
+                category: "technical",
+                pillarId: "p1",
+                items: [
+                    { n: 1, label: "Minervini 8-points", pillarId: "p1", familyIdx: 0 },
+                    { n: 2, label: "Months qualifying in L12M", pillarId: "p1", familyIdx: -1 },
+                    { n: 3, label: "High relative strength", pillarId: "p1", familyIdx: -1 },
+                    { n: 4, label: "Healthy pullback tests in current run", pillarId: "p1", familyIdx: -1 }
+                ]
+            },
+            {
+                numeral: "II",
+                title: "Good case/business fit with market paradigm",
+                category: "thematic",
+                pillarId: "p2",
+                items: [
+                    { n: 1, label: "Late bull / early bear market", pillarId: "p2", familyIdx: -1 },
+                    { n: 2, label: "AI demand / disruption", pillarId: "p2", familyIdx: -1 },
+                    { n: 3, label: "Oil, stagflation, recession, rising rates", pillarId: "p2", familyIdx: -1 }
+                ]
+            },
+            {
+                numeral: "III",
+                title: "Investment case \u2014 sizeable fundamental change",
+                category: "fundamentals",
+                pillarId: "p3",
+                items: [
+                    { n: 1, label: "Strong outputs, limited negatives", pillarId: "p3", familyIdx: 0, afNumber: 1 },
+                    { n: 2, label: "Strong inputs, limited negatives", pillarId: "p3", familyIdx: 1, afNumber: 2 },
+                    { n: 3, label: "Profitable setup, no false friend overlap", pillarId: "p3", familyIdx: 2, afNumber: 3 }
+                ]
+            },
+            {
+                numeral: "IV",
+                title: "Building blocks \u2014 robustness/bankability",
+                category: "fundamentals",
+                pillarId: "p4",
+                items: [
+                    { n: 1, label: "Simplicity guardrails", pillarId: "p4", familyIdx: 0, afNumber: 1 },
+                    { n: 2, label: "Foundation quality", pillarId: "p4", familyIdx: 1, afNumber: 2 },
+                    { n: 3, label: "Environment paradigm fit", pillarId: "p4", familyIdx: 2, afNumber: 3 },
+                    { n: 4, label: "No seek-to-avoid", pillarId: "p4", familyIdx: 3, afNumber: 4 },
+                    { n: 5, label: "Minimal size-limiting", pillarId: "p4", familyIdx: 4, afNumber: 5 },
+                    { n: 6, label: "No invalidating", pillarId: "p4", familyIdx: 5, afNumber: 6 },
+                    { n: 7, label: "Case/outcome congruency", pillarId: "p4", familyIdx: 6, afNumber: 7 },
+                    { n: 8, label: "Nice-to-have", pillarId: "p4", familyIdx: 7, afNumber: 8 }
+                ]
+            },
+            {
+                numeral: "V",
+                title: "SS earnings momentum \u2014 strong/improving",
+                category: "earnings",
+                pillarId: "p5",
+                items: [
+                    { n: 1, label: "EPS \u2014 L3M", momentumKey: "eps_change", pillarId: "p5", familyIdx: -1 },
+                    { n: 2, label: "EBITDA \u2014 L3M", momentumKey: "ebitda_change", pillarId: "p5", familyIdx: -1 },
+                    { n: 3, label: "Revenue \u2014 L3M", momentumKey: "revenue_change", pillarId: "p5", familyIdx: -1 },
+                    { n: 4, label: "Price targets \u2014 L3M", momentumKey: "price_target_change", pillarId: "p5", familyIdx: -1 },
+                    { n: 5, label: "% Buy \u2014 L3M", momentumKey: "pct_buy_change", pillarId: "p5", familyIdx: -1 }
+                ]
+            },
+            {
+                numeral: "VI",
+                title: "Valuation in fair range (2YF P/E)",
+                category: "returns",
+                pillarId: "p6",
+                items: []
+            }
+        ];
+
+        // --- Helper functions ---
+
+        function getStockMomentumData(stock) {
+            var treeKey = 'treeData' + stock.ticker;
+            if (window[treeKey] && window[treeKey].p5 && window[treeKey].p5.momentum_data) {
+                return window[treeKey].p5.momentum_data;
+            }
+            if (momentumDataByTicker[stock.ticker] && momentumDataByTicker[stock.ticker].momentum_data) {
+                return momentumDataByTicker[stock.ticker].momentum_data;
+            }
+            return null;
+        }
+
+        function getStockValuationData(stock) {
+            var treeKey = 'treeData' + stock.ticker;
+            if (window[treeKey] && window[treeKey].p6) { return window[treeKey].p6; }
+            if (valuationDataByTicker[stock.ticker]) { return valuationDataByTicker[stock.ticker]; }
+            return null;
+        }
+
+        function fmtMomentumPct(val) {
+            if (val === undefined || val === null) return "\u2014";
+            var sign = val > 0 ? "+" : "";
+            return sign + val.toFixed(1) + "%";
+        }
+
+        function momentumDirection(val) {
+            if (val === undefined || val === null) return "\u2014";
+            if (val > 0) return "+1";
+            if (val < 0) return "\u22121";
+            return "0";
+        }
+
+        function getListSectionRating(stock, pillarId) {
+            var m = {
+                "p1": stock.pillars.p1_technical_momentum,
+                "p2": stock.pillars.p2_market_paradigm_fit,
+                "p3": stock.pillars.p3_fundamental_change,
+                "p4": stock.pillars.p4_building_blocks,
+                "p5": stock.pillars.p5_ss_earnings_momentum,
+                "p6": stock.pillars.p6_valuation
+            };
+            return m[pillarId] || "\u2014";
+        }
+
+        function getListItemRating(stock, item) {
+            if (!item.pillarId) return "\u2014";
+            var pillar = getPillarById(stock, item.pillarId);
+            if (!pillar) {
+                if (item.pillarId === "p5" && momentumDataByTicker[stock.ticker]) pillar = momentumDataByTicker[stock.ticker];
+                else if (item.pillarId === "p6" && valuationDataByTicker[stock.ticker]) pillar = valuationDataByTicker[stock.ticker];
+            }
+            if (!pillar || !pillar.families) return getListSectionRating(stock, item.pillarId);
+            var family = null;
+            if (item.familyIdx >= 0 && item.familyIdx < pillar.families.length) {
+                family = pillar.families[item.familyIdx];
+            } else if (item.afNumber !== undefined) {
+                var idx = getFamilyIdxByAfNumber(pillar, item.afNumber);
+                if (idx >= 0) family = pillar.families[idx];
+            }
+            if (family && family.rating && family.rating !== "\u2014") return family.rating;
+            return getListSectionRating(stock, item.pillarId);
+        }
+
+        // Find stock object by ticker
+        function findStockByTicker(ticker) {
+            for (var i = 0; i < masterData.stocks.length; i++) {
+                if (masterData.stocks[i].ticker === ticker) return masterData.stocks[i];
+            }
+            return null;
+        }
+
+        // Find stock index by ticker
+        function findStockIndexByTicker(ticker) {
+            for (var i = 0; i < masterData.stocks.length; i++) {
+                if (masterData.stocks[i].ticker === ticker) return i;
+            }
+            return -1;
+        }
+
+        // Get default sector peers for a stock (up to 4, excluding self)
+        function getDefaultSectorPeers(stock) {
+            var peers = [];
+            var sector = (stock.sector || "").split("/")[0].trim().toLowerCase();
+            if (!sector) return peers;
+            for (var i = 0; i < masterData.stocks.length; i++) {
+                var s = masterData.stocks[i];
+                if (s.ticker === stock.ticker) continue;
+                var sSector = (s.sector || "").split("/")[0].trim().toLowerCase();
+                if (sSector === sector) peers.push(s.ticker);
+                if (peers.length >= 4) break;
+            }
+            return peers;
+        }
+
+        // Get the 5 stocks for the comparison matrix (primary + 4 peers)
+        function getListStocks(primaryStock) {
+            var ticker = primaryStock.ticker;
+            var peers;
+            if (listPeerSelections[ticker]) {
+                peers = listPeerSelections[ticker].slice();
+            } else {
+                peers = getDefaultSectorPeers(primaryStock);
+                listPeerSelections[ticker] = peers.slice();
+            }
+            // Pad to 4
+            while (peers.length < 4) peers.push(null);
+            var stocks = [primaryStock];
+            for (var i = 0; i < 4; i++) {
+                stocks.push(peers[i] ? findStockByTicker(peers[i]) : null);
+            }
+            return stocks;
+        }
+
+        // --- Render the comparison matrix ---
+
+        function renderRatingCell(stock, pillarId, familyIdx, afNumber, momentumKey) {
+            if (!stock) return '<td class="list-stock-col"><span class="rating-badge rating-blank">\u2014</span></td>';
+
+            // P5 momentum: show pct + direction
+            if (pillarId === "p5" && momentumKey) {
+                var mData = getStockMomentumData(stock);
+                var mVals = mData && mData[momentumKey] ? mData[momentumKey] : null;
+                var pct = mVals ? fmtMomentumPct(mVals.l3m) : "\u2014";
+                var dir = mVals ? momentumDirection(mVals.l3m) : "\u2014";
+                var clr = "";
+                if (mVals && mVals.l3m > 0) clr = "color:#3fb950;";
+                else if (mVals && mVals.l3m < 0) clr = "color:#b54248;";
+                return '<td class="list-stock-col" style="font-size:10px;' + clr + '">' + pct + ' <b>' + dir + '</b></td>';
+            }
+
+            // P6 valuation: show percentile
+            if (pillarId === "p6" && familyIdx === -1 && !afNumber) {
+                var vData = getStockValuationData(stock);
+                var pctile = "\u2014";
+                var rating = getListSectionRating(stock, "p6");
+                if (vData && vData.metrics && vData.metrics.percentile_in_range) {
+                    pctile = vData.metrics.percentile_in_range;
+                }
+                return '<td class="list-stock-col"><span style="font-size:10px;color:#6b6b6b;">' + escapeHtml(pctile) + '</span> <span class="rating-badge ' + getRatingClass(rating) + '">' + rating + '</span></td>';
+            }
+
+            // Normal: show rating badge
+            var item = { pillarId: pillarId, familyIdx: (familyIdx !== undefined ? familyIdx : -1) };
+            if (afNumber !== undefined) item.afNumber = afNumber;
+            var rating = getListItemRating(stock, item);
+            return '<td class="list-stock-col"><span class="rating-badge ' + getRatingClass(rating) + '">' + rating + '</span></td>';
+        }
+
+        function renderSectionRatingCell(stock, pillarId) {
+            if (!stock) return '<td class="list-stock-col"><span class="rating-badge rating-blank">\u2014</span></td>';
+            var rating = getListSectionRating(stock, pillarId);
+            return '<td class="list-stock-col"><span class="rating-badge ' + getRatingClass(rating) + '">' + rating + '</span></td>';
+        }
+
+        function renderListMatrix(primaryStock) {
+            var stocks = getListStocks(primaryStock);
+            var html = '<table class="list-matrix">';
+
+            // Ticker header row
+            html += '<thead><tr>';
+            html += '<th class="list-label-col" style="vertical-align:bottom;font-size:10px;color:#6b6b6b;">Checklist Item</th>';
+            for (var c = 0; c < 5; c++) {
+                var s = stocks[c];
+                var isPrimary = (c === 0);
+                var headerClass = isPrimary ? 'list-ticker-header list-primary' : (s ? 'list-ticker-header' : 'list-ticker-header list-empty');
+                html += '<th class="list-stock-col" style="position:relative;">';
+                html += '<div class="' + headerClass + '" ' + (isPrimary ? '' : 'onclick="openListSearch(event,' + c + ')"') + '>';
+                if (s) {
+                    html += '<span class="list-ticker-name">' + escapeHtml(s.ticker) + '</span>';
+                    html += '<span class="list-ticker-company">' + escapeHtml(s.company_name) + '</span>';
+                } else {
+                    html += '<span class="list-ticker-name">+ Select</span>';
+                    html += '<span class="list-ticker-company">Click to choose</span>';
+                }
+                html += '</div>';
+                html += '</th>';
+            }
+            html += '</tr></thead>';
+
+            // Body rows
+            html += '<tbody>';
+            for (var s2 = 0; s2 < LIST_STRUCTURE.length; s2++) {
+                var section = LIST_STRUCTURE[s2];
+                var catClass = 'list-cat-' + section.category;
+
+                // Section header row
+                html += '<tr class="list-section-row ' + catClass + '">';
+                html += '<td class="list-label-col">' + section.numeral + '. ' + escapeHtml(section.title) + '</td>';
+                for (var sc = 0; sc < 5; sc++) {
+                    html += renderSectionRatingCell(stocks[sc], section.pillarId);
+                }
+                html += '</tr>';
+
+                // P5: momentum items
+                if (section.pillarId === "p5") {
+                    for (var m = 0; m < section.items.length; m++) {
+                        var mi = section.items[m];
+                        html += '<tr>';
+                        html += '<td class="list-label-col" style="padding-left:20px;cursor:pointer;" onclick="listItemNavigate(\'' + mi.pillarId + '\',' + mi.familyIdx + ')">';
+                        html += '<span style="color:#9a9380;margin-right:4px;">' + mi.n + '.</span> ' + escapeHtml(mi.label);
+                        html += '</td>';
+                        for (var mc = 0; mc < 5; mc++) {
+                            html += renderRatingCell(stocks[mc], mi.pillarId, mi.familyIdx, undefined, mi.momentumKey);
+                        }
+                        html += '</tr>';
+                    }
+                }
+                // P6: single valuation row
+                else if (section.pillarId === "p6") {
+                    html += '<tr>';
+                    html += '<td class="list-label-col" style="padding-left:20px;cursor:pointer;" onclick="listItemNavigate(\'p6\',-1)">';
+                    html += 'Percentile in 10Y range</td>';
+                    for (var vc = 0; vc < 5; vc++) {
+                        html += renderRatingCell(stocks[vc], "p6", -1, undefined, undefined);
+                    }
+                    html += '</tr>';
+                }
+                // Normal items
+                else {
+                    for (var i = 0; i < section.items.length; i++) {
+                        var item = section.items[i];
+                        html += '<tr>';
+                        html += '<td class="list-label-col" style="padding-left:20px;cursor:pointer;" onclick="listItemNavigate(\'' + item.pillarId + '\',' + item.familyIdx + ')">';
+                        html += '<span style="color:#9a9380;margin-right:4px;">' + item.n + '.</span> ' + escapeHtml(item.label);
+                        html += '</td>';
+                        for (var ic = 0; ic < 5; ic++) {
+                            html += renderRatingCell(stocks[ic], item.pillarId, item.familyIdx, item.afNumber, undefined);
+                        }
+                        html += '</tr>';
+                    }
+                }
+            }
+
+            html += '</tbody></table>';
+            return html;
+        }
+
+        // --- Ticker search dropdown ---
+
+        var activeSearchCol = -1;
+
+        function openListSearch(evt, colIndex) {
+            if (evt) evt.stopPropagation();
+            activeSearchCol = colIndex;
+
+            // Close any existing search
+            var existing = document.querySelectorAll('.list-search-container.active');
+            for (var i = 0; i < existing.length; i++) existing[i].classList.remove('active');
+
+            // Find or create the search container in the header cell
+            var headerCells = document.querySelectorAll('.list-matrix thead th.list-stock-col');
+            if (!headerCells || colIndex >= headerCells.length) return;
+            var cell = headerCells[colIndex];
+
+            var container = cell.querySelector('.list-search-container');
+            if (!container) {
+                container = document.createElement('div');
+                container.className = 'list-search-container';
+                container.innerHTML = '<input type="text" class="list-search-input" placeholder="Type ticker...">' +
+                    '<div class="list-search-results"></div>';
+                cell.appendChild(container);
+
+                var input = container.querySelector('.list-search-input');
+                input.addEventListener('input', function() {
+                    filterListSearch(this.value, container, colIndex);
+                });
+                input.addEventListener('click', function(e) { e.stopPropagation(); });
+                container.addEventListener('click', function(e) { e.stopPropagation(); });
+            }
+
+            container.classList.add('active');
+            var input2 = container.querySelector('.list-search-input');
+            input2.value = '';
+            filterListSearch('', container, colIndex);
+
+            setTimeout(function() { input2.focus(); }, 50);
+        }
+
+        function filterListSearch(query, container, colIndex) {
+            var results = container.querySelector('.list-search-results');
+            var q = query.toLowerCase();
+            var primaryStock = masterData.stocks[currentListStockIndex];
+            var html = '';
+
+            // "Clear" option
+            html += '<div class="list-search-option" onclick="selectListPeer(' + colIndex + ', null)">';
+            html += '<span style="color:#6b6b6b;font-style:italic;">Clear slot</span>';
+            html += '</div>';
+
+            for (var i = 0; i < masterData.stocks.length; i++) {
+                var s = masterData.stocks[i];
+                if (s.ticker === primaryStock.ticker) continue;
+                if (q && s.ticker.toLowerCase().indexOf(q) === -1 && s.company_name.toLowerCase().indexOf(q) === -1) continue;
+                html += '<div class="list-search-option" onclick="selectListPeer(' + colIndex + ', \'' + s.ticker + '\')">';
+                html += '<span><b>' + escapeHtml(s.ticker) + '</b> ' + escapeHtml(s.company_name) + '</span>';
+                html += '<span class="list-search-sector">' + escapeHtml(s.sector || '') + '</span>';
+                html += '</div>';
+            }
+
+            results.innerHTML = html;
+        }
+
+        function selectListPeer(colIndex, ticker) {
+            // colIndex is 1-4 (peer columns), stored as array indices 0-3
+            var primaryStock = masterData.stocks[currentListStockIndex];
+            var key = primaryStock.ticker;
+            if (!listPeerSelections[key]) listPeerSelections[key] = [null, null, null, null];
+
+            // Peer index is colIndex - 1 (col 0 is primary, cols 1-4 are peers)
+            var peerIdx = colIndex - 1;
+            if (peerIdx >= 0 && peerIdx < 4) {
+                listPeerSelections[key][peerIdx] = ticker;
+            }
+
+            // Close search dropdown
+            var containers = document.querySelectorAll('.list-search-container.active');
+            for (var i = 0; i < containers.length; i++) containers[i].classList.remove('active');
+
+            // Re-render the matrix
+            var body = document.getElementById('list-modal-body');
+            if (body) {
+                body.innerHTML = renderListMatrix(primaryStock);
+            }
+        }
+
+        // Close search when clicking outside
+        document.addEventListener('click', function() {
+            var containers = document.querySelectorAll('.list-search-container.active');
+            for (var i = 0; i < containers.length; i++) containers[i].classList.remove('active');
+        });
+
+        // --- Open / Close / Shell ---
+
+        function openListView(evt, stockIndex) {
+            if (evt && evt.stopPropagation) evt.stopPropagation();
+            var stock = masterData.stocks[stockIndex];
+            if (!stock) return;
+            currentListStockIndex = stockIndex;
+
+            var overlay = document.getElementById('list-modal-overlay');
+            if (!overlay) {
+                overlay = buildListModalShell();
+            }
+
+            var title = document.getElementById('list-modal-title');
+            if (title) {
+                title.innerHTML = '<span class="list-modal-ticker">' + escapeHtml(stock.ticker) + '</span>'
+                    + escapeHtml(stock.company_name)
+                    + '<span class="list-modal-subtitle">Comparison \u00b7 ' + escapeHtml(stock.sector || '') + '</span>';
+            }
+
+            var body = document.getElementById('list-modal-body');
+            if (body) {
+                try {
+                    body.innerHTML = renderListMatrix(stock);
+                } catch (err) {
+                    body.innerHTML = '<div style="color:#b54248;padding:16px;">Error rendering LIST: ' + err.message + '</div>';
+                }
+            }
+
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            window.scrollTo(0, 0);
+        }
+
+        function closeListView() {
+            var overlay = document.getElementById('list-modal-overlay');
+            if (overlay) {
+                overlay.classList.remove('active');
+            }
+            document.body.style.overflow = '';
+        }
+
+        function buildListModalShell() {
+            var overlay = document.createElement('div');
+            overlay.id = 'list-modal-overlay';
+            overlay.className = 'list-modal-overlay';
+            overlay.innerHTML =
+                '<div class="list-modal-frame" id="list-modal-frame">' +
+                    '<div class="list-modal-header">' +
+                        '<div class="list-modal-title" id="list-modal-title"></div>' +
+                        '<button type="button" class="list-modal-close" onclick="closeListView()">Close \u2715</button>' +
+                    '</div>' +
+                    '<div class="list-modal-body" id="list-modal-body"></div>' +
+                '</div>';
+
+            overlay.addEventListener('click', function(e) {
+                if (e.target === overlay) closeListView();
+            });
+
+            document.body.appendChild(overlay);
+            return overlay;
+        }
+
+        // ESC closes LIST
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' || e.keyCode === 27) {
+                var overlay = document.getElementById('list-modal-overlay');
+                if (overlay && overlay.classList.contains('active')) closeListView();
+            }
+        });
+
+        // Navigate from LIST to pillar/family — uses primary stock
+        function listItemNavigate(pillarId, familyIdx) {
+            var stockIndex = currentListStockIndex;
+            closeListView();
+            if (stockIndex < 0) return;
+
+            setTimeout(function() {
                 var masterRow = document.querySelectorAll('#table-body tr.expand-toggle')[stockIndex];
                 if (!masterRow) return;
                 var treeRow = document.getElementById('tree-' + stockIndex);
