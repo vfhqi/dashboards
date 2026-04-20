@@ -9765,8 +9765,13 @@
 
         function toggleMemo() {
             var btn = document.getElementById('btn-memo');
-            var nowOn = !btn.classList.contains('active');
-            btn.classList.toggle('active', nowOn);
+            var floatBtn = document.getElementById('btn-memo-floating');
+            var nowOn = \!(btn && btn.classList.contains('active'));
+            if (btn) btn.classList.toggle('active', nowOn);
+            if (floatBtn) {
+                floatBtn.style.background = nowOn ? '#1a7f37' : '#2ea043';
+                floatBtn.textContent = nowOn ? 'MEMO ON' : 'MEMO';
+            }
             document.body.classList.toggle('show-memo', nowOn);
             if (nowOn) { renderAllMemos(); }
             updateStickyPositions();
