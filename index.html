@@ -3008,79 +3008,88 @@
 
         /* MEMO_CSS_END */
     
-        /* === MEMO View — pillar_block / family_block (added v3.0 schema) === */
+        /* === MEMO View — pillar_block / family_block (paper palette, v3.1) === */
+        /* Lives inside .memo-panel (#f7f5ef paper, #1a1a1a text). NO raised
+           backgrounds, NO bordered cards — flat, hierarchy via type weight,
+           rule-thickness and a small left guide on family. */
         .memo-pillar-block {
-            margin: 16px 0;
+            margin: 14px 0 18px;
         }
         .memo-pillar-header {
             display: flex;
-            align-items: center;
+            align-items: baseline;
             gap: 8px;
-            padding: 6px 0;
-            border-bottom: 1px solid #21262d;
+            padding: 0 0 4px 0;
+            border-bottom: 1px solid #d9d5c8;
             margin-bottom: 10px;
         }
         .memo-pillar-id {
             font-weight: 700;
-            font-size: 12px;
-            color: #58a6ff;
-            background: rgba(88, 166, 255, 0.10);
-            padding: 2px 8px;
-            border-radius: 3px;
+            font-size: 11px;
+            color: #555;
             letter-spacing: 0.4px;
+            text-transform: uppercase;
         }
         .memo-pillar-label {
-            font-weight: 600;
+            font-weight: 700;
             font-size: 13px;
-            color: #e6edf3;
+            color: #1a1a1a;
             flex: 1;
+            letter-spacing: 0.2px;
         }
         .memo-pillar-rating {
             margin-left: auto;
+            font-size: 10.5px;
+            padding: 1px 6px;
         }
         .memo-pillar-body {
-            padding-left: 6px;
+            padding-left: 0;
         }
         .memo-family-block {
-            margin: 12px 0 12px 12px;
-            padding: 8px 12px 8px 14px;
-            border-left: 2px solid #30363d;
-            background: rgba(22, 27, 34, 0.45);
-            border-radius: 0 4px 4px 0;
+            margin: 10px 0 10px 10px;
+            padding: 2px 0 2px 12px;
+            border-left: 1px solid #e4e0d0;
+            background: transparent;
         }
         .memo-family-header {
             display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 6px;
+            align-items: baseline;
+            gap: 6px;
+            margin-bottom: 4px;
         }
         .memo-family-badge {
-            font-weight: 700;
-            font-size: 11px;
-            color: #d2a8ff;
-            background: rgba(210, 168, 255, 0.10);
-            padding: 1px 6px;
-            border-radius: 3px;
-            letter-spacing: 0.3px;
+            display: inline-block;
+            background-color: #efebdc;
+            color: #555;
+            font-weight: 600;
+            font-size: 10px;
+            padding: 1px 5px;
+            border-radius: 2px;
+            letter-spacing: 0.4px;
         }
         .memo-family-label {
             font-weight: 600;
             font-size: 12px;
-            color: #c9d1d9;
+            color: #1a1a1a;
             flex: 1;
         }
         .memo-family-rating {
             margin-left: auto;
+            font-size: 10.5px;
+            padding: 1px 6px;
         }
         .memo-family-body {
-            padding-left: 2px;
+            padding-left: 0;
         }
         /* tighten BLUF/SUMMARY when nested inside pillar/family containers */
-        .memo-pillar-body .memo-bluf,
-        .memo-family-body .memo-bluf {
+        .memo-pillar-body > .memo-bluf,
+        .memo-family-body > .memo-bluf {
             font-size: 12px;
+            line-height: 1.5;
             margin: 4px 0 8px 0;
-            padding: 4px 8px;
+            padding: 0;
+            background: transparent;
+            border: none;
         }
 
         </style>
