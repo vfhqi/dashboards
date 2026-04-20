@@ -2378,11 +2378,12 @@
 
         /* ------ Memo prose (light palette) ------ */
 
-        /* Inner column for readability — 960px cap on the text, not the
-           panel. Panel itself remains full-width. */
+        /* Full-width prose — memo panel fills the host row.
+           (Readability cap removed per request so memo fills the window.) */
         .memo-prose {
-            max-width: 960px;
-            margin: 0 auto;
+            width: 100%;
+            max-width: none;
+            margin: 0;
             font-size: 13px;
             line-height: 1.55;
             color: #1a1a1a;
@@ -2911,6 +2912,7 @@
             <div class="toolbar-separator"></div>
             <div class="toolbar-group">
                 <button class="toolbar-btn" id="btn-fundamental" onclick="toggleFundamental()">FUNDAMENTAL</button>
+                <button class="toolbar-btn" id="btn-colour" onclick="toggleMemoColour()">COLOUR</button>
             </div>
             <div style="margin-left:auto;font-size:10px;color:#6b6b6b;letter-spacing:0.3px;align-self:center;padding-right:4px;">Saved 20-Apr-26 (MEMO view shipped)</div>
         </div>
@@ -4491,53 +4493,39 @@
                               "items": [
                                 {
                                   "iaja": "J",
-                                  "text": "Structure is clean -- one PD with a direct financial translation; no cross-effects between variables to muddle the mechanics.",
+                                  "text": "Structure is clean -- one PD, direct to revenue.",
                                   "sub": [
                                     {
                                       "iaja": "A",
-                                      "text": "PD flows to revenue via realised price x volume; margin is near-linear on price given fixed-cost-heavy production economics."
+                                      "text": "PD flows via price x volume; margin near-linear on price."
                                     },
                                     {
                                       "iaja": "I",
-                                      "text": "Rule-of-thumb sensitivity: every EUR5/MWh on TTF equals approx $800m incremental EBITDA at current volume base."
-                                    },
-                                    {
-                                      "iaja": "I",
-                                      "text": "Peer comparison: Cheniere, Shell IG unit and Equinor all show similar leverage profile, so the sensitivity is not an outlier -- it is the norm for LNG exposure."
+                                      "text": "Every EUR5/MWh on TTF is approx $800m EBITDA."
                                     }
                                   ]
                                 },
                                 {
                                   "iaja": "J",
-                                  "text": "SDs are conditional on the PD: Yamal-2 volume only creates EBITDA upside if price holds, otherwise the ramp simply offsets compression.",
+                                  "text": "SDs conditional on PD -- volume only lifts EBITDA if price holds.",
                                   "sub": [
                                     {
                                       "iaja": "A",
-                                      "text": "If TTF drops to bear-case EUR18-22, the volume ramp masks price compression rather than adds to it -- EBITDA flat, not up."
-                                    },
-                                    {
-                                      "iaja": "A",
-                                      "text": "Conversely, if TTF holds above EUR30, Yamal-2 is pure upside -- both revenue and margin move together."
+                                      "text": "Bear-case TTF: Yamal-2 ramp masks compression, doesn't add."
                                     },
                                     {
                                       "iaja": "I",
-                                      "text": "First Yamal-2 train COD is guided for late-2026; full three-train ramp by end-2027 per company IR day May 2025."
+                                      "text": "First train COD late-2026; full ramp by end-2027."
                                     }
                                   ]
                                 },
                                 {
                                   "iaja": "J",
-                                  "text": "TDs are genuine noise over the horizon -- FX and opex inflation won't shift the thesis, so we don't monitor them actively.",
-                                  "sub": [
-                                    {
-                                      "iaja": "A",
-                                      "text": "RUB-USD hedging is partial but sufficient to keep cash-flow conversion within a tight band regardless of spot FX."
-                                    }
-                                  ]
+                                  "text": "TDs are genuine noise over the horizon -- not monitored."
                                 },
                                 {
                                   "iaja": "ACT",
-                                  "text": "Pull ICD monitoring sheet for LIs 1-2; confirm real-time feeds available from FactSet and wire into weekly review."
+                                  "text": "Wire LIs 1-2 into weekly review; confirm FactSet feeds."
                                 }
                               ],
                               "ratings": []
@@ -4548,7 +4536,7 @@
                               "ratings": []
                             }
                           ],
-                          "word_count": 368
+                          "word_count": 225
                         },
                         {
                           "id": "D.I.2",
@@ -4579,51 +4567,39 @@
                               "items": [
                                 {
                                   "iaja": "J",
-                                  "text": "KC-1 (structural): What fraction of Yamal-2 LNG is pre-sold into long-dated take-or-pay contracts vs left exposed to spot?",
+                                  "text": "KC-1 (structural): Yamal-2 contract mix -- pre-sold vs spot?",
                                   "sub": [
                                     {
                                       "iaja": "A",
-                                      "text": "If more than 70% is pre-sold, spot price upside is capped -- and the PD weakens materially, since the thesis rests on captured price upside through 2027."
-                                    },
-                                    {
-                                      "iaja": "A",
-                                      "text": "If between 40-70% pre-sold, the case still works but requires a modelled blend rather than a clean PD narrative."
+                                      "text": "If >70% pre-sold, PD weakens materially -- thesis at risk."
                                     },
                                     {
                                       "iaja": "I",
-                                      "text": "Company disclosure is silent on contract split; peers (Cheniere, Shell) disclose approximately 85-90% contracted which is the industry norm."
-                                    },
-                                    {
-                                      "iaja": "I",
-                                      "text": "Russian state gas strategy post-2022 has historically favoured long-dated Asian offtake agreements, which suggests a higher-than-peer pre-sold ratio is plausible."
+                                      "text": "Peers disclose 85-90% contracted; company silent."
                                     },
                                     {
                                       "iaja": "OQ",
-                                      "text": "Open question: Do any sell-side models address this directly? AlphaSense search scheduled for week of 27-Apr-26."
+                                      "text": "AS deep research scheduled w/o 27-Apr-26."
                                     }
                                   ]
                                 },
                                 {
                                   "iaja": "J",
-                                  "text": "KC-2 (solvable): How much of headline EBITDA converts to USD free cash flow after RUB-denominated opex and capex net of available hedges?",
+                                  "text": "KC-2 (solvable): USD FCF conversion after RUB costs?",
                                   "sub": [
                                     {
                                       "iaja": "A",
-                                      "text": "Reported headline EBITDA is in USD but the underlying cost base is roughly 40% RUB. Hedge ratio and tenor remain unclear from public filings."
-                                    },
-                                    {
-                                      "iaja": "A",
-                                      "text": "Modelling implication: even a 5-8% FX drag on cash conversion is material at position-size decision level, especially for a concentrated 5-15 name book."
+                                      "text": "Cost base approx 40% RUB; hedge tenor unclear."
                                     },
                                     {
                                       "iaja": "I",
-                                      "text": "2023 disclosure implied roughly 8-12% FX drag on cash conversion over the full year -- small in isolation but cumulatively meaningful."
+                                      "text": "2023 disclosure implied 8-12% FX drag on conversion."
                                     }
                                   ]
                                 },
                                 {
                                   "iaja": "ACT",
-                                  "text": "Build minimal Excel scenario for KC-2 before ESA kickoff (2-day task). Escalate KC-1 to AlphaSense deep research with explicit ask for contract-split disclosure."
+                                  "text": "Build KC-2 Excel scenario pre-ESA. Escalate KC-1 to AS."
                                 }
                               ],
                               "ratings": []
@@ -4634,7 +4610,7 @@
                               "ratings": []
                             }
                           ],
-                          "word_count": 293
+                          "word_count": 125
                         },
                         {
                           "id": "D.I.4",
@@ -4651,53 +4627,45 @@
                               "items": [
                                 {
                                   "iaja": "J",
-                                  "text": "KR-1: Sanctions tightening -- tail risk, hard to size, cannot be eliminated through analysis alone.",
+                                  "text": "KR-1: Sanctions tightening -- tail risk, cannot be solved, only sized.",
                                   "sub": [
                                     {
                                       "iaja": "A",
-                                      "text": "Secondary sanctions on Asian buyers would re-route volumes but keep them sellable -- disruptive but not binary at the cash-flow level."
-                                    },
-                                    {
-                                      "iaja": "A",
-                                      "text": "Full SDN listing on Novatek itself would be binary for ADR holders but remains unlikely absent a new geopolitical shock of material magnitude."
+                                      "text": "Secondary sanctions re-route volumes; SDN listing = binary for ADRs."
                                     },
                                     {
                                       "iaja": "I",
-                                      "text": "Base-rate from 2022-25: 3 of 12 sanctioned Russian energy names suffered binary outcomes for foreign holders -- 25% base rate on binary outcome is non-trivial."
-                                    },
-                                    {
-                                      "iaja": "I",
-                                      "text": "Current market pricing implies roughly 10-15% probability of SDN listing over 24m per CDS proxy -- market thinks it's possible, not imminent."
+                                      "text": "2022-25 base rate: 3 of 12 Russian energy names went binary."
                                     }
                                   ]
                                 },
                                 {
                                   "iaja": "J",
-                                  "text": "KR-2: Yamal-2 execution -- base-case risk, most likely to materialise as a schedule slip rather than a project failure.",
+                                  "text": "KR-2: Yamal-2 execution -- most likely a schedule slip, not failure.",
                                   "sub": [
                                     {
                                       "iaja": "A",
-                                      "text": "6-month COD slip would push volume ramp into a weaker part of the TTF cycle, turning a modelled 2026 contribution into essentially a 2027 event."
+                                      "text": "6m slip pushes volume into weaker TTF cycle; 2026 becomes 2027."
                                     },
                                     {
                                       "iaja": "I",
-                                      "text": "Arctic-2 COD was on time despite sanctions pressure -- track record is favourable but not a guarantee for Yamal-2 given tighter Western equipment supply chain."
+                                      "text": "Arctic-2 on time -- favourable but not a guarantee."
                                     }
                                   ]
                                 },
                                 {
                                   "iaja": "J",
-                                  "text": "KR-3: Governance opacity -- reputational drag, not a financial risk in the conventional sense.",
+                                  "text": "KR-3: Governance opacity -- reputational, not financial.",
                                   "sub": [
                                     {
                                       "iaja": "A",
-                                      "text": "Ultimate shareholder structure is opaque post-2022 re-registration. Creates me-state friction and complicates any compliance review but has no direct cash-flow impact."
+                                      "text": "Post-2022 re-registration; no cash-flow impact."
                                     }
                                   ]
                                 },
                                 {
                                   "iaja": "ACT",
-                                  "text": "At ESA, build an explicit kill-switch list tied to each KR; define position adjustments for each level-1 trigger (e.g. halve on SDN news, exit on binary confirmation)."
+                                  "text": "ESA: kill-switch list per KR with explicit level-1 triggers."
                                 }
                               ],
                               "ratings": []
@@ -4708,7 +4676,7 @@
                               "ratings": []
                             }
                           ],
-                          "word_count": 303
+                          "word_count": 150
                         },
                         {
                           "id": "D.I.5",
@@ -4725,25 +4693,25 @@
                               "items": [
                                 {
                                   "iaja": "J",
-                                  "text": "KPO-1: Buyback re-initiation -- plausible but not scheduled.",
+                                  "text": "KPO-1: Buyback re-initiation -- plausible, not scheduled.",
                                   "sub": [
                                     {
                                       "iaja": "A",
-                                      "text": "Net cash at $2.4bn vs $1.1bn prior year; balance sheet permits, and capital allocation signalling is due at next full-year results."
+                                      "text": "Net cash $2.4bn vs $1.1bn prior; balance sheet permits."
                                     },
                                     {
                                       "iaja": "I",
-                                      "text": "No buyback announced since 2021; management cited \"capital allocation review\" at FY25 results without committing to a specific channel."
+                                      "text": "No buyback since 2021; 'capital review' flagged at FY25."
                                     }
                                   ]
                                 },
                                 {
                                   "iaja": "J",
-                                  "text": "KPO-2: Arctic-3 FID signal -- would re-rate terminal value if confirmed.",
+                                  "text": "KPO-2: Arctic-3 FID -- terminal value re-rater if confirmed.",
                                   "sub": [
                                     {
                                       "iaja": "A",
-                                      "text": "Would extend the LNG growth runway past 2030 and re-rate terminal value materially. Currently not in the sell-side modal case so any positive newsflow is pure upside."
+                                      "text": "Extends runway past 2030; not in sell-side modal case."
                                     }
                                   ]
                                 }
@@ -4756,10 +4724,10 @@
                               "ratings": []
                             }
                           ],
-                          "word_count": 128
+                          "word_count": 85
                         }
                       ],
-                      "word_count": 1155
+                      "word_count": 648
                     },
                     {
                       "id": "D.II",
@@ -4820,8 +4788,8 @@
                   ],
                   "target_words": 1300,
                   "applicable_note": null,
-                  "word_count": 1238,
-                  "page_count": 4
+                  "word_count": 731,
+                  "page_count": 2
                 },
                 "E": {
                   "letter": "E",
@@ -10425,6 +10393,14 @@
             updateStickyPositions();
         }
 
+        // COLOUR toggle — tints memo body text by IAJA tag when on.
+        function toggleMemoColour() {
+            var btn = document.getElementById('btn-colour');
+            var nowOn = !btn.classList.contains('active');
+            btn.classList.toggle('active', nowOn);
+            document.body.classList.toggle('memo-color-on', nowOn);
+        }
+
         // =====================================================================
         // MEMO_JS_START — MEMO view toggle + renderer
         // =====================================================================
@@ -10924,8 +10900,7 @@
 
         function renderMemoHTML(memo) {
             if (!memo) return '';
-            var html = memoRenderControlBar();
-            html += memoRenderHeader(memo);
+            var html = memoRenderHeader(memo);
             var sections = memo.sections || {};
             var order = ['A', 'B', 'C', 'D', 'E', 'F'];
             for (var i = 0; i < order.length; i++) {
@@ -10934,23 +10909,6 @@
                 html += memoRenderSection(s);
             }
             return html;
-        }
-
-        function memoRenderControlBar() {
-            var checked = document.body.classList.contains('memo-color-on') ? ' checked' : '';
-            return '<div class="memo-control-bar">' +
-                   '<label class="memo-colour-toggle">' +
-                     '<input type="checkbox" onchange="memoToggleColour(this)"' + checked + '>' +
-                     '<span>COLOUR</span>' +
-                   '</label>' +
-                   '</div>';
-        }
-
-        function memoToggleColour(cb) {
-            document.body.classList.toggle('memo-color-on', !!cb.checked);
-            // Keep all other memo panels\' checkboxes in sync
-            var all = document.querySelectorAll('.memo-colour-toggle input[type="checkbox"]');
-            for (var i = 0; i < all.length; i++) { all[i].checked = !!cb.checked; }
         }
 
         // MEMO_JS_END
@@ -13652,3 +13610,4 @@
     </script>
 </body>
 </html>
+                                                                                                                                                                                                                                                                                                                                                                                             
