@@ -1447,6 +1447,7 @@
             border-bottom: 1px solid #30363d;
             padding: 8px 16px;
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             gap: 12px;
             margin: -16px -16px 16px -16px;
@@ -2618,6 +2619,7 @@
         <div class="toolbar">
             <div class="toolbar-group">
                 <button class="toolbar-btn active" id="btn-expand" onclick="toggleExpandCollapse()">EXPAND</button>
+                <button class="toolbar-btn" id="btn-memo" onclick="toggleMemo()" style="background: #2ea043; color: white; border-color: #2ea043;">MEMO</button>
             </div>
             <div class="toolbar-separator"></div>
             <div class="toolbar-group">
@@ -2633,11 +2635,7 @@
             <div class="toolbar-group">
                 <button class="toolbar-btn" id="btn-fundamental" onclick="toggleFundamental()">FUNDAMENTAL</button>
             </div>
-            <div class="toolbar-separator"></div>
-            <div class="toolbar-group">
-                <button class="toolbar-btn" id="btn-memo" onclick="toggleMemo()">MEMO</button>
-            </div>
-            <div style="margin-left:auto;font-size:10px;color:#8a95a5;letter-spacing:0.3px;align-self:center;padding-right:4px;">Saved 19-Apr-26 07:20</div>
+            <div style="margin-left:auto;font-size:10px;color:#8a95a5;letter-spacing:0.3px;align-self:center;padding-right:4px;">Saved 20-Apr-26 (MEMO view shipped)</div>
         </div>
         <!-- IC Ratings (always visible, tabs removed) -->
         <div id="ratings" class="tab-content active">
