@@ -2533,33 +2533,45 @@
             padding-left: 0;
             margin-bottom: 12px;
         }
-        .memo-bullets li {
+        .memo-bullets > li {
             padding-left: 20px;
             position: relative;
             margin-bottom: 4px;
             font-size: 13px;
             line-height: 1.55;
             color: #1a1a1a;
+            font-weight: 600;
         }
-        .memo-bullets li::before {
+        /* Extra spacing between bullet groups — top-level bullets that follow a sub-list block */
+        .memo-bullets > li.has-sub + li { margin-top: 10px; }
+        .memo-bullets > li::before {
             content: "\2022";
             position: absolute;
             left: 6px;
             top: 0;
             color: #9a9380;
+            font-weight: 400;
         }
         .memo-bullets .memo-sub-bullets {
             list-style: none;
-            margin-top: 2px;
+            margin-top: 4px;
+            margin-bottom: 2px;
             padding-left: 16px;
         }
         .memo-bullets .memo-sub-bullets li {
             padding-left: 20px;
+            position: relative;
             margin-bottom: 2px;
+            font-size: 13px;
+            line-height: 1.55;
+            color: #1a1a1a;
+            font-weight: 400;
         }
         .memo-bullets .memo-sub-bullets li::before {
             content: "\2013";
+            position: absolute;
             left: 4px;
+            top: 0;
             color: #9a9380;
         }
 
@@ -2567,6 +2579,57 @@
         .memo-tag-j { color: #7955bf; font-weight: 700; margin-right: 4px; }   /* purple — judgement */
         .memo-tag-i { color: #3b73c9; font-weight: 600; margin-right: 4px; }   /* blue   — information */
         .memo-tag-a { color: #3b73c9; font-weight: 700; margin-right: 4px; }   /* blue   — analysis */
+
+        /* COLOUR toggle — when body.memo-color-on, tint the bullet/prose body by IAJA */
+        body.memo-color-on .memo-bullets > li[data-iaja="J"],
+        body.memo-color-on .memo-bullets li[data-iaja="J"],
+        body.memo-color-on .memo-para[data-iaja="J"]     { color: #7955bf; }
+        body.memo-color-on .memo-bullets > li[data-iaja="A"],
+        body.memo-color-on .memo-bullets li[data-iaja="A"],
+        body.memo-color-on .memo-para[data-iaja="A"]     { color: #3b73c9; }
+        body.memo-color-on .memo-bullets > li[data-iaja="I"],
+        body.memo-color-on .memo-bullets li[data-iaja="I"],
+        body.memo-color-on .memo-para[data-iaja="I"]     { color: #4a4a4a; }
+        body.memo-color-on .memo-bullets > li[data-iaja="ACT"],
+        body.memo-color-on .memo-bullets > li[data-iaja="T"],
+        body.memo-color-on .memo-para[data-iaja="ACT"],
+        body.memo-color-on .memo-para[data-iaja="T"]     { color: #2f7a3b; }
+        body.memo-color-on .memo-bullets > li[data-iaja="OQ"],
+        body.memo-color-on .memo-bullets li[data-iaja="OQ"],
+        body.memo-color-on .memo-para[data-iaja="OQ"]    { color: #a8691a; }
+        body.memo-color-on .memo-bullets > li[data-iaja="O"],
+        body.memo-color-on .memo-para[data-iaja="O"]     { color: #2f7a3b; }
+        body.memo-color-on .memo-bullets > li[data-iaja="KR"],
+        body.memo-color-on .memo-para[data-iaja="KR"]    { color: #b4442e; }
+
+        /* COLOUR toggle control — sits at top of memo panel */
+        .memo-colour-toggle {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 11px;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            color: #555;
+            cursor: pointer;
+            user-select: none;
+            padding: 4px 10px;
+            border: 1px solid #d9d5c8;
+            border-radius: 3px;
+            background-color: #efebdc;
+        }
+        .memo-colour-toggle:hover { background-color: #e5e0cd; }
+        .memo-colour-toggle input { margin: 0; cursor: pointer; }
+        body.memo-color-on .memo-colour-toggle { background-color: #dfe5f0; border-color: #b9c3d8; color: #2a3f63; }
+        .memo-control-bar {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #e5e1d3;
+        }
 
         /* Inline rating badge. */
         .memo-inline-rating {
@@ -4340,27 +4403,28 @@
                       "id": "D.I",
                       "title": "Mechanics / building blocks",
                       "heading_level": 3,
+                      "target_words": 1050,
                       "blocks": [
                         {
                           "type": "bluf",
-                          "text": "Investment case rests on one Primary Driver (LNG price path) and one structural hygiene factor (cost-curve position). Both look robust at Triaging. One Key Confusion (Yamal-2 contract mix) must clear before ESA promotion.",
+                          "text": "Investment case rests on one Primary Driver (LNG price path) and one structural hygiene factor (cost-curve position). Both look robust at Triaging. One Key Confusion (Yamal-2 contract mix) must clear before ESA promotion, and one Key Risk (sanctions) must be sized rather than solved.",
                           "ratings": []
                         }
                       ],
                       "topics": [
                         {
                           "id": "D.I.1",
-                          "title": "KDICs — Key Drivers of Investment Case",
+                          "title": "KDICs -- Key Drivers of Investment Case",
                           "target_words": 300,
                           "blocks": [
                             {
                               "type": "bluf",
-                              "text": "One Primary Driver dominates: LNG price path N1–3Y. Two Secondaries provide supporting mechanics. Tertiaries noted but de-prioritised.",
+                              "text": "One Primary Driver dominates: LNG price path N1-3Y. Two Secondaries provide supporting mechanics on volume and mix. Tertiaries are noted but de-prioritised. The structure is single-PD and the financial path is simple -- price times volume -- which helps conviction but also means concentration risk lives at the top of the tree.",
                               "ratings": []
                             },
                             {
                               "type": "tree",
-                              "title": "KDICs tree — qualitative drivers → financial outputs",
+                              "title": "KDICs tree -- qualitative drivers to financial outputs",
                               "tiers": [
                                 {
                                   "label": "PDs",
@@ -4368,7 +4432,7 @@
                                   "items": [
                                     {
                                       "text": "LNG realised price N1-3Y",
-                                      "detail": "TTF base-case EUR28–35/MWh through 2027; dominates revenue AND unit margin simultaneously",
+                                      "detail": "TTF base-case EUR28-35/MWh through 2027; dominates revenue AND unit margin simultaneously",
                                       "iaja": "J"
                                     }
                                   ]
@@ -4384,7 +4448,7 @@
                                     },
                                     {
                                       "text": "Contract vs spot mix",
-                                      "detail": "Governs how much of price upside is captured; unresolved — see D.I.3",
+                                      "detail": "Governs how much of price upside is captured; unresolved -- see D.I.3",
                                       "iaja": "A"
                                     }
                                   ]
@@ -4394,7 +4458,7 @@
                                   "name": "Tertiary Drivers",
                                   "items": [
                                     {
-                                      "text": "RUB/USD — noise",
+                                      "text": "RUB/USD -- noise",
                                       "detail": "Largely USD-denominated revenue; cost base partially RUB; net is small"
                                     },
                                     {
@@ -4427,52 +4491,74 @@
                               "items": [
                                 {
                                   "iaja": "J",
-                                  "text": "Structure is clean — one PD with a clear financial path.",
+                                  "text": "Structure is clean -- one PD with a direct financial translation; no cross-effects between variables to muddle the mechanics.",
                                   "sub": [
                                     {
                                       "iaja": "A",
-                                      "text": "PD → revenue via realised price × volume; no complex cross-effects."
+                                      "text": "PD flows to revenue via realised price x volume; margin is near-linear on price given fixed-cost-heavy production economics."
                                     },
                                     {
                                       "iaja": "I",
-                                      "text": "Sensitivity: every EUR5/MWh on TTF = ~$800m EBITDA at current volume base."
+                                      "text": "Rule-of-thumb sensitivity: every EUR5/MWh on TTF equals approx $800m incremental EBITDA at current volume base."
+                                    },
+                                    {
+                                      "iaja": "I",
+                                      "text": "Peer comparison: Cheniere, Shell IG unit and Equinor all show similar leverage profile, so the sensitivity is not an outlier -- it is the norm for LNG exposure."
                                     }
                                   ]
                                 },
                                 {
                                   "iaja": "J",
-                                  "text": "SDs are conditional — Yamal-2 volume only matters if price holds.",
+                                  "text": "SDs are conditional on the PD: Yamal-2 volume only creates EBITDA upside if price holds, otherwise the ramp simply offsets compression.",
                                   "sub": [
                                     {
                                       "iaja": "A",
-                                      "text": "If TTF drops to bear-case EUR18–22, volume ramp masks price compression rather than adds to it."
+                                      "text": "If TTF drops to bear-case EUR18-22, the volume ramp masks price compression rather than adds to it -- EBITDA flat, not up."
+                                    },
+                                    {
+                                      "iaja": "A",
+                                      "text": "Conversely, if TTF holds above EUR30, Yamal-2 is pure upside -- both revenue and margin move together."
+                                    },
+                                    {
+                                      "iaja": "I",
+                                      "text": "First Yamal-2 train COD is guided for late-2026; full three-train ramp by end-2027 per company IR day May 2025."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "iaja": "J",
+                                  "text": "TDs are genuine noise over the horizon -- FX and opex inflation won't shift the thesis, so we don't monitor them actively.",
+                                  "sub": [
+                                    {
+                                      "iaja": "A",
+                                      "text": "RUB-USD hedging is partial but sufficient to keep cash-flow conversion within a tight band regardless of spot FX."
                                     }
                                   ]
                                 },
                                 {
                                   "iaja": "ACT",
-                                  "text": "Action: Pull ICD monitoring sheet for LIs 1–2; confirm real-time feeds available from FactSet."
+                                  "text": "Pull ICD monitoring sheet for LIs 1-2; confirm real-time feeds available from FactSet and wire into weekly review."
                                 }
                               ],
                               "ratings": []
                             },
                             {
                               "type": "summary",
-                              "text": "One-driver cases are the cleanest to own — but they carry concentration risk. Size accordingly.",
+                              "text": "One-driver cases are the cleanest to own -- but they carry concentration risk. Size accordingly; don't overload.",
                               "ratings": []
                             }
                           ],
-                          "word_count": 189
+                          "word_count": 368
                         },
                         {
                           "id": "D.I.2",
-                          "title": "KHF/As — Key Hygiene Factors / Assumptions",
+                          "title": "KHF/As -- Key Hygiene Factors / Assumptions",
                           "target_words": 0,
-                          "stage_note": "Triaging: n.a. — hypothesise only if disqualifying. Full treatment at ESA.",
+                          "stage_note": "Triaging: n.a. -- hypothesise only if disqualifying. Full treatment at ESA.",
                           "blocks": [
                             {
                               "type": "bluf",
-                              "text": "At Triaging, no KHFs identified that would disqualify. Structural cost-curve position assumed stable N1–3Y; to be stress-tested at ESA.",
+                              "text": "At Triaging, no KHFs identified that would disqualify. Structural cost-curve position assumed stable N1-3Y; to be stress-tested at ESA.",
                               "ratings": []
                             }
                           ],
@@ -4480,12 +4566,12 @@
                         },
                         {
                           "id": "D.I.3",
-                          "title": "KCs/KUs — Key Confusions & Unknowns",
+                          "title": "KCs/KUs -- Key Confusions & Unknowns",
                           "target_words": 300,
                           "blocks": [
                             {
                               "type": "bluf",
-                              "text": "Two live confusions. One is structurally important (Yamal-2 contract mix); the other is solvable with a modelling pass (RUB-hedged economics).",
+                              "text": "Two live confusions. One is structurally important and could kill the thesis (Yamal-2 contract mix); the other is solvable with a modelling pass (RUB-hedged economics). KC-1 is the main blocker for ESA promotion.",
                               "ratings": []
                             },
                             {
@@ -4493,59 +4579,71 @@
                               "items": [
                                 {
                                   "iaja": "J",
-                                  "text": "KC-1 (structural): What fraction of Yamal-2 LNG is pre-sold into long-dated take-or-pay contracts?",
+                                  "text": "KC-1 (structural): What fraction of Yamal-2 LNG is pre-sold into long-dated take-or-pay contracts vs left exposed to spot?",
                                   "sub": [
                                     {
                                       "iaja": "A",
-                                      "text": "If >70% pre-sold, spot price upside is capped — and the PD weakens materially."
+                                      "text": "If more than 70% is pre-sold, spot price upside is capped -- and the PD weakens materially, since the thesis rests on captured price upside through 2027."
+                                    },
+                                    {
+                                      "iaja": "A",
+                                      "text": "If between 40-70% pre-sold, the case still works but requires a modelled blend rather than a clean PD narrative."
                                     },
                                     {
                                       "iaja": "I",
-                                      "text": "Company disclosure is silent on contract split; peers (Cheniere, Shell) disclose ~85–90% contracted."
+                                      "text": "Company disclosure is silent on contract split; peers (Cheniere, Shell) disclose approximately 85-90% contracted which is the industry norm."
+                                    },
+                                    {
+                                      "iaja": "I",
+                                      "text": "Russian state gas strategy post-2022 has historically favoured long-dated Asian offtake agreements, which suggests a higher-than-peer pre-sold ratio is plausible."
                                     },
                                     {
                                       "iaja": "OQ",
-                                      "text": "Open question: Do any sell-side models address this directly? AlphaSense search scheduled."
+                                      "text": "Open question: Do any sell-side models address this directly? AlphaSense search scheduled for week of 27-Apr-26."
                                     }
                                   ]
                                 },
                                 {
                                   "iaja": "J",
-                                  "text": "KC-2 (solvable): How much of EBITDA converts to USD free cash flow after RUB-denominated opex + capex?",
+                                  "text": "KC-2 (solvable): How much of headline EBITDA converts to USD free cash flow after RUB-denominated opex and capex net of available hedges?",
                                   "sub": [
                                     {
                                       "iaja": "A",
-                                      "text": "Reported headline is USD; underlying cost base is ~40% RUB. Hedge ratio and timing unclear."
+                                      "text": "Reported headline EBITDA is in USD but the underlying cost base is roughly 40% RUB. Hedge ratio and tenor remain unclear from public filings."
+                                    },
+                                    {
+                                      "iaja": "A",
+                                      "text": "Modelling implication: even a 5-8% FX drag on cash conversion is material at position-size decision level, especially for a concentrated 5-15 name book."
                                     },
                                     {
                                       "iaja": "I",
-                                      "text": "2023 disclosure implied ~8–12% FX drag on cash conversion — small but material at position-size level."
+                                      "text": "2023 disclosure implied roughly 8-12% FX drag on cash conversion over the full year -- small in isolation but cumulatively meaningful."
                                     }
                                   ]
                                 },
                                 {
                                   "iaja": "ACT",
-                                  "text": "Action: Build minimal Excel scenario for KC-2 before ESA kickoff (2-day task). Escalate KC-1 to AS deep research."
+                                  "text": "Build minimal Excel scenario for KC-2 before ESA kickoff (2-day task). Escalate KC-1 to AlphaSense deep research with explicit ask for contract-split disclosure."
                                 }
                               ],
                               "ratings": []
                             },
                             {
                               "type": "summary",
-                              "text": "KC-1 is the one that can kill the thesis. If it fails to clear, park.",
+                              "text": "KC-1 is the one that can kill the thesis. If it fails to clear at ESA, park the name cleanly rather than push on with a weakened PD.",
                               "ratings": []
                             }
                           ],
-                          "word_count": 153
+                          "word_count": 293
                         },
                         {
                           "id": "D.I.4",
-                          "title": "KRs — Key Concerns / Risks",
+                          "title": "KRs -- Key Concerns / Risks",
                           "target_words": 300,
                           "blocks": [
                             {
                               "type": "bluf",
-                              "text": "Three material risks, all headline-adjacent. Sanctions is the main source of tail risk; Yamal-2 execution is the main source of base-case risk.",
+                              "text": "Three material risks, all headline-adjacent and none small. Sanctions is the main source of tail risk and probably not fully solvable; Yamal-2 execution is the main source of base-case risk; governance opacity is a reputational drag rather than a cash-flow threat.",
                               "ratings": []
                             },
                             {
@@ -4553,69 +4651,73 @@
                               "items": [
                                 {
                                   "iaja": "J",
-                                  "text": "KR-1: Sanctions tightening — tail risk, hard to size.",
+                                  "text": "KR-1: Sanctions tightening -- tail risk, hard to size, cannot be eliminated through analysis alone.",
                                   "sub": [
                                     {
                                       "iaja": "A",
-                                      "text": "Secondary sanctions on Asian buyers would re-route volumes but keep them sellable."
+                                      "text": "Secondary sanctions on Asian buyers would re-route volumes but keep them sellable -- disruptive but not binary at the cash-flow level."
                                     },
                                     {
                                       "iaja": "A",
-                                      "text": "Full SDN listing on Novatek itself would be binary for ADR holders but unlikely absent new geopolitical shock."
+                                      "text": "Full SDN listing on Novatek itself would be binary for ADR holders but remains unlikely absent a new geopolitical shock of material magnitude."
                                     },
                                     {
                                       "iaja": "I",
-                                      "text": "Base-rate: 3 of 12 sanctioned Russian energy names suffered binary outcomes over 2022–25."
+                                      "text": "Base-rate from 2022-25: 3 of 12 sanctioned Russian energy names suffered binary outcomes for foreign holders -- 25% base rate on binary outcome is non-trivial."
+                                    },
+                                    {
+                                      "iaja": "I",
+                                      "text": "Current market pricing implies roughly 10-15% probability of SDN listing over 24m per CDS proxy -- market thinks it's possible, not imminent."
                                     }
                                   ]
                                 },
                                 {
                                   "iaja": "J",
-                                  "text": "KR-2: Yamal-2 execution — base-case risk.",
+                                  "text": "KR-2: Yamal-2 execution -- base-case risk, most likely to materialise as a schedule slip rather than a project failure.",
                                   "sub": [
                                     {
                                       "iaja": "A",
-                                      "text": "6-month COD slip would push volume ramp into weaker part of the TTF cycle."
+                                      "text": "6-month COD slip would push volume ramp into a weaker part of the TTF cycle, turning a modelled 2026 contribution into essentially a 2027 event."
                                     },
                                     {
                                       "iaja": "I",
-                                      "text": "Arctic-2 COD was on time; track record favourable but not a guarantee for Yamal-2."
+                                      "text": "Arctic-2 COD was on time despite sanctions pressure -- track record is favourable but not a guarantee for Yamal-2 given tighter Western equipment supply chain."
                                     }
                                   ]
                                 },
                                 {
                                   "iaja": "J",
-                                  "text": "KR-3: Governance opacity — reputational, not financial.",
+                                  "text": "KR-3: Governance opacity -- reputational drag, not a financial risk in the conventional sense.",
                                   "sub": [
                                     {
                                       "iaja": "A",
-                                      "text": "Ultimate shareholder structure is opaque post-2022 re-registration. Creates me-state friction but no cash-flow impact."
+                                      "text": "Ultimate shareholder structure is opaque post-2022 re-registration. Creates me-state friction and complicates any compliance review but has no direct cash-flow impact."
                                     }
                                   ]
                                 },
                                 {
                                   "iaja": "ACT",
-                                  "text": "Action: At ESA, build explicit kill-switch list tied to each KR; define position adjustments for level-1 trigger."
+                                  "text": "At ESA, build an explicit kill-switch list tied to each KR; define position adjustments for each level-1 trigger (e.g. halve on SDN news, exit on binary confirmation)."
                                 }
                               ],
                               "ratings": []
                             },
                             {
                               "type": "summary",
-                              "text": "Two sizing constraints emerge: smaller starter than a standard GARP name; no add on KR-1 triggers until tail clears.",
+                              "text": "Two sizing constraints emerge: smaller starter than a standard GARP name; and no add on KR-1 triggers until the tail event probability has been re-priced.",
                               "ratings": []
                             }
                           ],
-                          "word_count": 165
+                          "word_count": 303
                         },
                         {
                           "id": "D.I.5",
-                          "title": "KPOs — Key Positive Optionality",
+                          "title": "KPOs -- Key Positive Optionality",
                           "target_words": 150,
                           "blocks": [
                             {
                               "type": "bluf",
-                              "text": "Two non-modelled optionalities worth flagging. Neither is required for the base case to work.",
+                              "text": "Two non-modelled optionalities worth flagging. Neither is required for the base case to work -- they are upside toppers rather than load-bearing.",
                               "ratings": []
                             },
                             {
@@ -4623,25 +4725,25 @@
                               "items": [
                                 {
                                   "iaja": "J",
-                                  "text": "KPO-1: Buyback re-initiation.",
+                                  "text": "KPO-1: Buyback re-initiation -- plausible but not scheduled.",
                                   "sub": [
                                     {
                                       "iaja": "A",
-                                      "text": "Net cash at $2.4bn vs $1.1bn prior year; balance sheet permits."
+                                      "text": "Net cash at $2.4bn vs $1.1bn prior year; balance sheet permits, and capital allocation signalling is due at next full-year results."
                                     },
                                     {
                                       "iaja": "I",
-                                      "text": "No buyback announced since 2021; management cited 'capital allocation review' at FY25 results."
+                                      "text": "No buyback announced since 2021; management cited \"capital allocation review\" at FY25 results without committing to a specific channel."
                                     }
                                   ]
                                 },
                                 {
                                   "iaja": "J",
-                                  "text": "KPO-2: Arctic-3 FID signal.",
+                                  "text": "KPO-2: Arctic-3 FID signal -- would re-rate terminal value if confirmed.",
                                   "sub": [
                                     {
                                       "iaja": "A",
-                                      "text": "Would extend growth runway past 2030 and re-rate terminal value. Not in current sell-side modal case."
+                                      "text": "Would extend the LNG growth runway past 2030 and re-rate terminal value materially. Currently not in the sell-side modal case so any positive newsflow is pure upside."
                                     }
                                   ]
                                 }
@@ -4650,15 +4752,14 @@
                             },
                             {
                               "type": "summary",
-                              "text": "Upside optionality is real but not required. Thesis works on PD alone.",
+                              "text": "Upside optionality is real but not required. The thesis works on the PD alone -- KPOs are bonus, not necessary.",
                               "ratings": []
                             }
                           ],
-                          "word_count": 73
+                          "word_count": 128
                         }
                       ],
-                      "target_words": 1050,
-                      "word_count": 632
+                      "word_count": 1155
                     },
                     {
                       "id": "D.II",
@@ -4719,8 +4820,8 @@
                   ],
                   "target_words": 1300,
                   "applicable_note": null,
-                  "word_count": 715,
-                  "page_count": 2
+                  "word_count": 1238,
+                  "page_count": 4
                 },
                 "E": {
                   "letter": "E",
@@ -10473,7 +10574,8 @@
         function memoRenderProse(block) {
             var text = block && block.text ? String(block.text) : '';
             if (!text) return '';
-            return '<p class="memo-para">' +
+            var iajaAttr = block && block.iaja ? ' data-iaja="' + memoEscape(String(block.iaja)) + '"' : '';
+            return '<p class="memo-para"' + iajaAttr + '>' +
                    memoIajaTag(block.iaja) +
                    memoRatingsPrefix(block.ratings) +
                    memoEscape(text) +
@@ -10483,9 +10585,12 @@
         function memoRenderBulletItem(item, isSub) {
             var text = item && item.text ? String(item.text) : '';
             var inner = memoIajaTag(item.iaja) + memoRatingsPrefix(item.ratings) + memoEscape(text);
-            var html = '<li>' + inner;
             var sub = item && item.sub;
-            if (sub && sub.length) {
+            var hasSub = !!(sub && sub.length);
+            var cls = hasSub && !isSub ? ' class="has-sub"' : '';
+            var iajaAttr = item && item.iaja ? ' data-iaja="' + memoEscape(String(item.iaja)) + '"' : '';
+            var html = '<li' + cls + iajaAttr + '>' + inner;
+            if (hasSub) {
                 html += '<ul class="memo-sub-bullets">';
                 for (var i = 0; i < sub.length; i++) {
                     html += memoRenderBulletItem(sub[i], true);
@@ -10819,7 +10924,8 @@
 
         function renderMemoHTML(memo) {
             if (!memo) return '';
-            var html = memoRenderHeader(memo);
+            var html = memoRenderControlBar();
+            html += memoRenderHeader(memo);
             var sections = memo.sections || {};
             var order = ['A', 'B', 'C', 'D', 'E', 'F'];
             for (var i = 0; i < order.length; i++) {
@@ -10828,6 +10934,23 @@
                 html += memoRenderSection(s);
             }
             return html;
+        }
+
+        function memoRenderControlBar() {
+            var checked = document.body.classList.contains('memo-color-on') ? ' checked' : '';
+            return '<div class="memo-control-bar">' +
+                   '<label class="memo-colour-toggle">' +
+                     '<input type="checkbox" onchange="memoToggleColour(this)"' + checked + '>' +
+                     '<span>COLOUR</span>' +
+                   '</label>' +
+                   '</div>';
+        }
+
+        function memoToggleColour(cb) {
+            document.body.classList.toggle('memo-color-on', !!cb.checked);
+            // Keep all other memo panels\' checkboxes in sync
+            var all = document.querySelectorAll('.memo-colour-toggle input[type="checkbox"]');
+            for (var i = 0; i < all.length; i++) { all[i].checked = !!cb.checked; }
         }
 
         // MEMO_JS_END
@@ -11276,6 +11399,1084 @@
                     body.innerHTML = renderMapContent(stock);
                 } catch (err) {
                     body.innerHTML = '<div style="color:#b54248;padding:16px;">Error rendering MAP: ' + err.message + '</div>';
+                }
+            }
+
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+
+            // Scroll to top so the overlay is visible
+            window.scrollTo(0, 0);
+        }
+
+        function closeMapView() {
+            var overlay = document.getElementById('map-modal-overlay');
+            if (overlay) {
+                overlay.classList.remove('active');
+            }
+            document.body.style.overflow = '';
+        }
+
+        // Build the modal shell once and return it
+        function buildMapModalShell() {
+            var overlay = document.createElement('div');
+            overlay.id = 'map-modal-overlay';
+            overlay.className = 'map-modal-overlay';
+            overlay.innerHTML =
+                '<div class="map-modal-frame" id="map-modal-frame">' +
+                    '<div class="map-modal-header">' +
+                        '<div class="map-modal-title" id="map-modal-title"></div>' +
+                        '<button type="button" class="map-modal-close" onclick="closeMapView()">Close \u2715</button>' +
+                    '</div>' +
+                    '<div class="map-modal-body" id="map-modal-body"></div>' +
+                '</div>';
+
+            // Click-outside-frame to close
+            overlay.addEventListener('click', function(e) {
+                if (e.target === overlay) {
+                    closeMapView();
+                }
+            });
+
+            document.body.appendChild(overlay);
+            return overlay;
+        }
+
+        // ESC-key closes modal
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' || e.keyCode === 27) {
+                var overlay = document.getElementById('map-modal-overlay');
+                if (overlay && overlay.classList.contains('active')) {
+                    closeMapView();
+                }
+            }
+        });
+
+        // Child node clicked inside MAP — navigate to pillar/family
+        function mapChildNavigate(pillarId, familyIdx, childLabel) {
+            var stockIndex = currentMapStockIndex;
+            closeMapView();
+            if (stockIndex < 0) return;
+
+            // Small delay to let the modal finish closing before scrolling
+            setTimeout(function() {
+                // 1. Open the stock row if needed
+                var masterRow = document.querySelectorAll('#table-body tr.expand-toggle')[stockIndex];
+                if (!masterRow) return;
+                var treeRow = document.getElementById('tree-' + stockIndex);
+
+                if (!masterRow.classList.contains('expanded')) {
+                    masterRow.classList.add('expanded');
+                    masterRow.classList.add('active-stock');
+                    if (treeRow) treeRow.classList.add('expanded');
+                    var stickyHeader = document.getElementById('pillars-sticky-' + stockIndex);
+                    if (stickyHeader) stickyHeader.classList.add('is-sticky');
+                    updateStickyPositions();
+                }
+
+                // 2. Expand the pillar card
+                var cardId = 'pillar-' + stockIndex + '-' + pillarId;
+                var card = document.getElementById(cardId);
+                if (card && !card.classList.contains('active-pillar')) {
+                    card.click();
+                }
+
+                // 3. After the pillar opens, expand the specific family
+                setTimeout(function() {
+                    if (familyIdx >= 0) {
+                        var familyId = 'family-' + pillarId + '-' + familyIdx;
+                        var familyCard = document.getElementById(familyId + '-card');
+                        if (familyCard && !familyCard.classList.contains('expanded')) {
+                            familyCard.click();
+                        }
+                        // Scroll the family card into view
+                        setTimeout(function() {
+                            var scrollTarget = document.getElementById(familyId + '-card') || card;
+                            if (scrollTarget && scrollTarget.scrollIntoView) {
+                                scrollTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            }
+                        }, 150);
+                    } else if (card && card.scrollIntoView) {
+                        card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }, 120);
+            }, 60);
+        }
+
+        // ================================================================
+        // LIST View — comparison matrix overlay
+        // ================================================================
+
+        var currentListStockIndex = -1;
+        // Session persistence: { primaryTicker: [peerTicker1, peerTicker2, ...] }
+        var listPeerSelections = {};
+
+        // LIST structure definition — maps Excel LIST view to dashboard data
+        var LIST_STRUCTURE = [
+            {
+                numeral: "I",
+                title: "Strong technical momentum",
+                category: "technical",
+                pillarId: "p1",
+                items: [
+                    { n: 1, label: "Minervini 8-points", pillarId: "p1", familyIdx: 0 },
+                    { n: 2, label: "Months qualifying in L12M", pillarId: "p1", familyIdx: -1 },
+                    { n: 3, label: "High relative strength", pillarId: "p1", familyIdx: -1 },
+                    { n: 4, label: "Healthy pullback tests in current run", pillarId: "p1", familyIdx: -1 }
+                ]
+            },
+            {
+                numeral: "II",
+                title: "Good case/business fit with market paradigm",
+                category: "thematic",
+                pillarId: "p2",
+                items: [
+                    { n: 1, label: "Late bull / early bear market", pillarId: "p2", familyIdx: -1 },
+                    { n: 2, label: "AI demand / disruption", pillarId: "p2", familyIdx: -1 },
+                    { n: 3, label: "Oil, stagflation, recession, rising rates", pillarId: "p2", familyIdx: -1 }
+                ]
+            },
+            {
+                numeral: "III",
+                title: "Investment case \u2014 sizeable fundamental change",
+                category: "fundamentals",
+                pillarId: "p3",
+                items: [
+                    { n: 1, label: "Strong outputs, limited negatives", pillarId: "p3", familyIdx: 0, afNumber: 1 },
+                    { n: 2, label: "Strong inputs, limited negatives", pillarId: "p3", familyIdx: 1, afNumber: 2 },
+                    { n: 3, label: "Profitable setup, no false friend overlap", pillarId: "p3", familyIdx: 2, afNumber: 3 }
+                ]
+            },
+            {
+                numeral: "IV",
+                title: "Building blocks \u2014 robustness/bankability",
+                category: "fundamentals",
+                pillarId: "p4",
+                items: [
+                    { n: 1, label: "Simplicity guardrails", pillarId: "p4", familyIdx: 0, afNumber: 1 },
+                    { n: 2, label: "Foundation quality", pillarId: "p4", familyIdx: 1, afNumber: 2 },
+                    { n: 3, label: "Environment paradigm fit", pillarId: "p4", familyIdx: 2, afNumber: 3 },
+                    { n: 4, label: "No seek-to-avoid", pillarId: "p4", familyIdx: 3, afNumber: 4 },
+                    { n: 5, label: "Minimal size-limiting", pillarId: "p4", familyIdx: 4, afNumber: 5 },
+                    { n: 6, label: "No invalidating", pillarId: "p4", familyIdx: 5, afNumber: 6 },
+                    { n: 7, label: "Case/outcome congruency", pillarId: "p4", familyIdx: 6, afNumber: 7 },
+                    { n: 8, label: "Nice-to-have", pillarId: "p4", familyIdx: 7, afNumber: 8 }
+                ]
+            },
+            {
+                numeral: "V",
+                title: "SS earnings momentum \u2014 strong/improving",
+                category: "earnings",
+                pillarId: "p5",
+                items: [
+                    { n: 1, label: "EPS \u2014 L3M", momentumKey: "eps_change", pillarId: "p5", familyIdx: -1 },
+                    { n: 2, label: "EBITDA \u2014 L3M", momentumKey: "ebitda_change", pillarId: "p5", familyIdx: -1 },
+                    { n: 3, label: "Revenue \u2014 L3M", momentumKey: "revenue_change", pillarId: "p5", familyIdx: -1 },
+                    { n: 4, label: "Price targets \u2014 L3M", momentumKey: "price_target_change", pillarId: "p5", familyIdx: -1 },
+                    { n: 5, label: "% Buy \u2014 L3M", momentumKey: "pct_buy_change", pillarId: "p5", familyIdx: -1 }
+                ]
+            },
+            {
+                numeral: "VI",
+                title: "Valuation in fair range (2YF P/E)",
+                category: "returns",
+                pillarId: "p6",
+                items: []
+            }
+        ];
+
+        // --- Helper functions ---
+
+        function getStockMomentumData(stock) {
+            var treeKey = 'treeData' + stock.ticker;
+            if (window[treeKey] && window[treeKey].p5 && window[treeKey].p5.momentum_data) {
+                return window[treeKey].p5.momentum_data;
+            }
+            if (momentumDataByTicker[stock.ticker] && momentumDataByTicker[stock.ticker].momentum_data) {
+                return momentumDataByTicker[stock.ticker].momentum_data;
+            }
+            return null;
+        }
+
+        function getStockValuationData(stock) {
+            var treeKey = 'treeData' + stock.ticker;
+            if (window[treeKey] && window[treeKey].p6) { return window[treeKey].p6; }
+            if (valuationDataByTicker[stock.ticker]) { return valuationDataByTicker[stock.ticker]; }
+            return null;
+        }
+
+        function fmtMomentumPct(val) {
+            if (val === undefined || val === null) return "\u2014";
+            var sign = val > 0 ? "+" : "";
+            return sign + val.toFixed(1) + "%";
+        }
+
+        function momentumDirection(val) {
+            if (val === undefined || val === null) return "\u2014";
+            if (val > 0) return "+1";
+            if (val < 0) return "\u22121";
+            return "0";
+        }
+
+        function getListSectionRating(stock, pillarId) {
+            var m = {
+                "p1": stock.pillars.p1_technical_momentum,
+                "p2": stock.pillars.p2_market_paradigm_fit,
+                "p3": stock.pillars.p3_fundamental_change,
+                "p4": stock.pillars.p4_building_blocks,
+                "p5": stock.pillars.p5_ss_earnings_momentum,
+                "p6": stock.pillars.p6_valuation
+            };
+            return m[pillarId] || "\u2014";
+        }
+
+        function getListItemRating(stock, item) {
+            if (!item.pillarId) return "\u2014";
+            var pillar = getPillarById(stock, item.pillarId);
+            if (!pillar) {
+                if (item.pillarId === "p5" && momentumDataByTicker[stock.ticker]) pillar = momentumDataByTicker[stock.ticker];
+                else if (item.pillarId === "p6" && valuationDataByTicker[stock.ticker]) pillar = valuationDataByTicker[stock.ticker];
+            }
+            if (!pillar || !pillar.families) return getListSectionRating(stock, item.pillarId);
+            var family = null;
+            if (item.familyIdx >= 0 && item.familyIdx < pillar.families.length) {
+                family = pillar.families[item.familyIdx];
+            } else if (item.afNumber !== undefined) {
+                var idx = getFamilyIdxByAfNumber(pillar, item.afNumber);
+                if (idx >= 0) family = pillar.families[idx];
+            }
+            if (family && family.rating && family.rating !== "\u2014") return family.rating;
+            return getListSectionRating(stock, item.pillarId);
+        }
+
+        // Find stock object by ticker
+        function findStockByTicker(ticker) {
+            for (var i = 0; i < masterData.stocks.length; i++) {
+                if (masterData.stocks[i].ticker === ticker) return masterData.stocks[i];
+            }
+            return null;
+        }
+
+        // Find stock index by ticker
+        function findStockIndexByTicker(ticker) {
+            for (var i = 0; i < masterData.stocks.length; i++) {
+                if (masterData.stocks[i].ticker === ticker) return i;
+            }
+            return -1;
+        }
+
+        // Get default sector peers for a stock (up to 4, excluding self)
+        function getDefaultSectorPeers(stock) {
+            var peers = [];
+            var sector = (stock.sector || "").split("/")[0].trim().toLowerCase();
+            if (!sector) return peers;
+            for (var i = 0; i < masterData.stocks.length; i++) {
+                var s = masterData.stocks[i];
+                if (s.ticker === stock.ticker) continue;
+                var sSector = (s.sector || "").split("/")[0].trim().toLowerCase();
+                if (sSector === sector) peers.push(s.ticker);
+                if (peers.length >= 4) break;
+            }
+            return peers;
+        }
+
+        // Get the 5 stocks for the comparison matrix (primary + 4 peers)
+        function getListStocks(primaryStock) {
+            var ticker = primaryStock.ticker;
+            var peers;
+            if (listPeerSelections[ticker]) {
+                peers = listPeerSelections[ticker].slice();
+            } else {
+                peers = getDefaultSectorPeers(primaryStock);
+                listPeerSelections[ticker] = peers.slice();
+            }
+            // Pad to 4
+            while (peers.length < 4) peers.push(null);
+            var stocks = [primaryStock];
+            for (var i = 0; i < 4; i++) {
+                stocks.push(peers[i] ? findStockByTicker(peers[i]) : null);
+            }
+            return stocks;
+        }
+
+        // --- Render the comparison matrix ---
+
+        function renderRatingCell(stock, pillarId, familyIdx, afNumber, momentumKey) {
+            if (!stock) return '<td class="list-stock-col"><span class="rating-badge rating-blank">\u2014</span></td>';
+
+            // P5 momentum: show pct + direction
+            if (pillarId === "p5" && momentumKey) {
+                var mData = getStockMomentumData(stock);
+                var mVals = mData && mData[momentumKey] ? mData[momentumKey] : null;
+                var pct = mVals ? fmtMomentumPct(mVals.l3m) : "\u2014";
+                var dir = mVals ? momentumDirection(mVals.l3m) : "\u2014";
+                var clr = "";
+                if (mVals && mVals.l3m > 0) clr = "color:#3fb950;";
+                else if (mVals && mVals.l3m < 0) clr = "color:#b54248;";
+                return '<td class="list-stock-col" style="font-size:10px;' + clr + '">' + pct + ' <b>' + dir + '</b></td>';
+            }
+
+            // P6 valuation: show percentile
+            if (pillarId === "p6" && familyIdx === -1 && !afNumber) {
+                var vData = getStockValuationData(stock);
+                var pctile = "\u2014";
+                var rating = getListSectionRating(stock, "p6");
+                if (vData && vData.metrics && vData.metrics.percentile_in_range) {
+                    pctile = vData.metrics.percentile_in_range;
+                }
+                return '<td class="list-stock-col"><span style="font-size:10px;color:#6b6b6b;">' + escapeHtml(pctile) + '</span> <span class="rating-badge ' + getRatingClass(rating) + '">' + rating + '</span></td>';
+            }
+
+            // Normal: show rating badge
+            var item = { pillarId: pillarId, familyIdx: (familyIdx !== undefined ? familyIdx : -1) };
+            if (afNumber !== undefined) item.afNumber = afNumber;
+            var rating = getListItemRating(stock, item);
+            return '<td class="list-stock-col"><span class="rating-badge ' + getRatingClass(rating) + '">' + rating + '</span></td>';
+        }
+
+        function renderSectionRatingCell(stock, pillarId) {
+            if (!stock) return '<td class="list-stock-col"><span class="rating-badge rating-blank">\u2014</span></td>';
+            var rating = getListSectionRating(stock, pillarId);
+            return '<td class="list-stock-col"><span class="rating-badge ' + getRatingClass(rating) + '">' + rating + '</span></td>';
+        }
+
+        function renderListMatrix(primaryStock) {
+            var stocks = getListStocks(primaryStock);
+            var html = '<table class="list-matrix">';
+
+            // Ticker header row
+            html += '<thead><tr>';
+            html += '<th class="list-label-col" style="vertical-align:bottom;font-size:10px;color:#6b6b6b;">Checklist Item</th>';
+            for (var c = 0; c < 5; c++) {
+                var s = stocks[c];
+                var isPrimary = (c === 0);
+                var headerClass = isPrimary ? 'list-ticker-header list-primary' : (s ? 'list-ticker-header' : 'list-ticker-header list-empty');
+                html += '<th class="list-stock-col" style="position:relative;">';
+                html += '<div class="' + headerClass + '" ' + (isPrimary ? '' : 'onclick="openListSearch(event,' + c + ')"') + '>';
+                if (s) {
+                    html += '<span class="list-ticker-name">' + escapeHtml(s.ticker) + '</span>';
+                    html += '<span class="list-ticker-company">' + escapeHtml(s.company_name) + '</span>';
+                } else {
+                    html += '<span class="list-ticker-name">+ Select</span>';
+                    html += '<span class="list-ticker-company">Click to choose</span>';
+                }
+                html += '</div>';
+                html += '</th>';
+            }
+            html += '</tr></thead>';
+
+            // Body rows
+            html += '<tbody>';
+            for (var s2 = 0; s2 < LIST_STRUCTURE.length; s2++) {
+                var section = LIST_STRUCTURE[s2];
+                var catClass = 'list-cat-' + section.category;
+
+                // Section header row
+                html += '<tr class="list-section-row ' + catClass + '">';
+                html += '<td class="list-label-col">' + section.numeral + '. ' + escapeHtml(section.title) + '</td>';
+                for (var sc = 0; sc < 5; sc++) {
+                    html += renderSectionRatingCell(stocks[sc], section.pillarId);
+                }
+                html += '</tr>';
+
+                // P5: momentum items
+                if (section.pillarId === "p5") {
+                    for (var m = 0; m < section.items.length; m++) {
+                        var mi = section.items[m];
+                        html += '<tr>';
+                        html += '<td class="list-label-col" style="padding-left:20px;cursor:pointer;" onclick="listItemNavigate(\'' + mi.pillarId + '\',' + mi.familyIdx + ')">';
+                        html += '<span style="color:#9a9380;margin-right:4px;">' + mi.n + '.</span> ' + escapeHtml(mi.label);
+                        html += '</td>';
+                        for (var mc = 0; mc < 5; mc++) {
+                            html += renderRatingCell(stocks[mc], mi.pillarId, mi.familyIdx, undefined, mi.momentumKey);
+                        }
+                        html += '</tr>';
+                    }
+                }
+                // P6: single valuation row
+                else if (section.pillarId === "p6") {
+                    html += '<tr>';
+                    html += '<td class="list-label-col" style="padding-left:20px;cursor:pointer;" onclick="listItemNavigate(\'p6\',-1)">';
+                    html += 'Percentile in 10Y range</td>';
+                    for (var vc = 0; vc < 5; vc++) {
+                        html += renderRatingCell(stocks[vc], "p6", -1, undefined, undefined);
+                    }
+                    html += '</tr>';
+                }
+                // Normal items
+                else {
+                    for (var i = 0; i < section.items.length; i++) {
+                        var item = section.items[i];
+                        html += '<tr>';
+                        html += '<td class="list-label-col" style="padding-left:20px;cursor:pointer;" onclick="listItemNavigate(\'' + item.pillarId + '\',' + item.familyIdx + ')">';
+                        html += '<span style="color:#9a9380;margin-right:4px;">' + item.n + '.</span> ' + escapeHtml(item.label);
+                        html += '</td>';
+                        for (var ic = 0; ic < 5; ic++) {
+                            html += renderRatingCell(stocks[ic], item.pillarId, item.familyIdx, item.afNumber, undefined);
+                        }
+                        html += '</tr>';
+                    }
+                }
+            }
+
+            html += '</tbody></table>';
+            return html;
+        }
+
+        // --- Ticker search dropdown ---
+
+        var activeSearchCol = -1;
+
+        function openListSearch(evt, colIndex) {
+            if (evt) evt.stopPropagation();
+            activeSearchCol = colIndex;
+
+            // Close any existing search
+            var existing = document.querySelectorAll('.list-search-container.active');
+            for (var i = 0; i < existing.length; i++) existing[i].classList.remove('active');
+
+            // Find or create the search container in the header cell
+            var headerCells = document.querySelectorAll('.list-matrix thead th.list-stock-col');
+            if (!headerCells || colIndex >= headerCells.length) return;
+            var cell = headerCells[colIndex];
+
+            var container = cell.querySelector('.list-search-container');
+            if (!container) {
+                container = document.createElement('div');
+                container.className = 'list-search-container';
+                container.innerHTML = '<input type="text" class="list-search-input" placeholder="Type ticker...">' +
+                    '<div class="list-search-results"></div>';
+                cell.appendChild(container);
+
+                var input = container.querySelector('.list-search-input');
+                input.addEventListener('input', function() {
+                    filterListSearch(this.value, container, colIndex);
+                });
+                input.addEventListener('click', function(e) { e.stopPropagation(); });
+                container.addEventListener('click', function(e) { e.stopPropagation(); });
+            }
+
+            container.classList.add('active');
+            var input2 = container.querySelector('.list-search-input');
+            input2.value = '';
+            filterListSearch('', container, colIndex);
+
+            setTimeout(function() { input2.focus(); }, 50);
+        }
+
+        function filterListSearch(query, container, colIndex) {
+            var results = container.querySelector('.list-search-results');
+            var q = query.toLowerCase();
+            var primaryStock = masterData.stocks[currentListStockIndex];
+            var html = '';
+
+            // "Clear" option
+            html += '<div class="list-search-option" onclick="selectListPeer(' + colIndex + ', null)">';
+            html += '<span style="color:#6b6b6b;font-style:italic;">Clear slot</span>';
+            html += '</div>';
+
+            for (var i = 0; i < masterData.stocks.length; i++) {
+                var s = masterData.stocks[i];
+                if (s.ticker === primaryStock.ticker) continue;
+                if (q && s.ticker.toLowerCase().indexOf(q) === -1 && s.company_name.toLowerCase().indexOf(q) === -1) continue;
+                html += '<div class="list-search-option" onclick="selectListPeer(' + colIndex + ', \'' + s.ticker + '\')">';
+                html += '<span><b>' + escapeHtml(s.ticker) + '</b> ' + escapeHtml(s.company_name) + '</span>';
+                html += '<span class="list-search-sector">' + escapeHtml(s.sector || '') + '</span>';
+                html += '</div>';
+            }
+
+            results.innerHTML = html;
+        }
+
+        function selectListPeer(colIndex, ticker) {
+            // colIndex is 1-4 (peer columns), stored as array indices 0-3
+            var primaryStock = masterData.stocks[currentListStockIndex];
+            var key = primaryStock.ticker;
+            if (!listPeerSelections[key]) listPeerSelections[key] = [null, null, null, null];
+
+            // Peer index is colIndex - 1 (col 0 is primary, cols 1-4 are peers)
+            var peerIdx = colIndex - 1;
+            if (peerIdx >= 0 && peerIdx < 4) {
+                listPeerSelections[key][peerIdx] = ticker;
+            }
+
+            // Close search dropdown
+            var containers = document.querySelectorAll('.list-search-container.active');
+            for (var i = 0; i < containers.length; i++) containers[i].classList.remove('active');
+
+            // Re-render the matrix
+            var body = document.getElementById('list-modal-body');
+            if (body) {
+                body.innerHTML = renderListMatrix(primaryStock);
+            }
+        }
+
+        // Close search when clicking outside
+        document.addEventListener('click', function() {
+            var containers = document.querySelectorAll('.list-search-container.active');
+            for (var i = 0; i < containers.length; i++) containers[i].classList.remove('active');
+        });
+
+        // --- Open / Close / Shell ---
+
+        function openListView(evt, stockIndex) {
+            if (evt && evt.stopPropagation) evt.stopPropagation();
+            var stock = masterData.stocks[stockIndex];
+            if (!stock) return;
+            currentListStockIndex = stockIndex;
+
+            var overlay = document.getElementById('list-modal-overlay');
+            if (!overlay) {
+                overlay = buildListModalShell();
+            }
+
+            var title = document.getElementById('list-modal-title');
+            if (title) {
+                title.innerHTML = '<span class="list-modal-ticker">' + escapeHtml(stock.ticker) + '</span>'
+                    + escapeHtml(stock.company_name)
+                    + '<span class="list-modal-subtitle">Comparison \u00b7 ' + escapeHtml(stock.sector || '') + '</span>';
+            }
+
+            var body = document.getElementById('list-modal-body');
+            if (body) {
+                try {
+                    body.innerHTML = renderListMatrix(stock);
+                } catch (err) {
+                    body.innerHTML = '<div style="color:#b54248;padding:16px;">Error rendering LIST: ' + err.message + '</div>';
+                }
+            }
+
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            window.scrollTo(0, 0);
+        }
+
+        function closeListView() {
+            var overlay = document.getElementById('list-modal-overlay');
+            if (overlay) {
+                overlay.classList.remove('active');
+            }
+            document.body.style.overflow = '';
+        }
+
+        function buildListModalShell() {
+            var overlay = document.createElement('div');
+            overlay.id = 'list-modal-overlay';
+            overlay.className = 'list-modal-overlay';
+            overlay.innerHTML =
+                '<div class="list-modal-frame" id="list-modal-frame">' +
+                    '<div class="list-modal-header">' +
+                        '<div class="list-modal-title" id="list-modal-title"></div>' +
+                        '<button type="button" class="list-modal-close" onclick="closeListView()">Close \u2715</button>' +
+                    '</div>' +
+                    '<div class="list-modal-body" id="list-modal-body"></div>' +
+                '</div>';
+
+            overlay.addEventListener('click', function(e) {
+                if (e.target === overlay) closeListView();
+            });
+
+            document.body.appendChild(overlay);
+            return overlay;
+        }
+
+        // ESC closes LIST
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' || e.keyCode === 27) {
+                var overlay = document.getElementById('list-modal-overlay');
+                if (overlay && overlay.classList.contains('active')) closeListView();
+            }
+        });
+
+        // Navigate from LIST to pillar/family — uses primary stock
+        function listItemNavigate(pillarId, familyIdx) {
+            var stockIndex = currentListStockIndex;
+            closeListView();
+            if (stockIndex < 0) return;
+
+            setTimeout(function() {
+                var masterRow = document.querySelectorAll('#table-body tr.expand-toggle')[stockIndex];
+                if (!masterRow) return;
+                var treeRow = document.getElementById('tree-' + stockIndex);
+
+                if (!masterRow.classList.contains('expanded')) {
+                    masterRow.classList.add('expanded');
+                    masterRow.classList.add('active-stock');
+                    if (treeRow) treeRow.classList.add('expanded');
+                    var stickyHeader = document.getElementById('pillars-sticky-' + stockIndex);
+                    if (stickyHeader) stickyHeader.classList.add('is-sticky');
+                    updateStickyPositions();
+                }
+
+                // 2. Expand the pillar card
+                var cardId = 'pillar-' + stockIndex + '-' + pillarId;
+                var card = document.getElementById(cardId);
+                if (card && !card.classList.contains('active-pillar')) {
+                    card.click();
+                }
+
+                // 3. After the pillar opens, expand the specific family
+                setTimeout(function() {
+                    if (familyIdx >= 0) {
+                        var familyId = 'family-' + pillarId + '-' + familyIdx;
+                        var familyCard = document.getElementById(familyId + '-card');
+                        if (familyCard && !familyCard.classList.contains('expanded')) {
+                            familyCard.click();
+                        }
+                        // Scroll the family card into view
+                        setTimeout(function() {
+                            var scrollTarget = document.getElementById(familyId + '-card') || card;
+                            if (scrollTarget && scrollTarget.scrollIntoView) {
+                                scrollTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            }
+                        }, 150);
+                    } else if (card && card.scrollIntoView) {
+                        card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }, 120);
+            }, 60);
+        }
+
+        // ================================================================
+        // LIST View — comparison matrix overlay
+        // ================================================================
+
+        var currentListStockIndex = -1;
+        // Session persistence: { primaryTicker: [peerTicker1, peerTicker2, ...] }
+        var listPeerSelections = {};
+
+        // LIST structure definition — maps Excel LIST view to dashboard data
+        var LIST_STRUCTURE = [
+            {
+                numeral: "I",
+                title: "Strong technical momentum",
+                category: "technical",
+                pillarId: "p1",
+                items: [
+                    { n: 1, label: "Minervini 8-points", pillarId: "p1", familyIdx: 0 },
+                    { n: 2, label: "Months qualifying in L12M", pillarId: "p1", familyIdx: -1 },
+                    { n: 3, label: "High relative strength", pillarId: "p1", familyIdx: -1 },
+                    { n: 4, label: "Healthy pullback tests in current run", pillarId: "p1", familyIdx: -1 }
+                ]
+            },
+            {
+                numeral: "II",
+                title: "Good case/business fit with market paradigm",
+                category: "thematic",
+                pillarId: "p2",
+                items: [
+                    { n: 1, label: "Late bull / early bear market", pillarId: "p2", familyIdx: -1 },
+                    { n: 2, label: "AI demand / disruption", pillarId: "p2", familyIdx: -1 },
+                    { n: 3, label: "Oil, stagflation, recession, rising rates", pillarId: "p2", familyIdx: -1 }
+                ]
+            },
+            {
+                numeral: "III",
+                title: "Investment case \u2014 sizeable fundamental change",
+                category: "fundamentals",
+                pillarId: "p3",
+                items: [
+                    { n: 1, label: "Strong outputs, limited negatives", pillarId: "p3", familyIdx: 0, afNumber: 1 },
+                    { n: 2, label: "Strong inputs, limited negatives", pillarId: "p3", familyIdx: 1, afNumber: 2 },
+                    { n: 3, label: "Profitable setup, no false friend overlap", pillarId: "p3", familyIdx: 2, afNumber: 3 }
+                ]
+            },
+            {
+                numeral: "IV",
+                title: "Building blocks \u2014 robustness/bankability",
+                category: "fundamentals",
+                pillarId: "p4",
+                items: [
+                    { n: 1, label: "Simplicity guardrails", pillarId: "p4", familyIdx: 0, afNumber: 1 },
+                    { n: 2, label: "Foundation quality", pillarId: "p4", familyIdx: 1, afNumber: 2 },
+                    { n: 3, label: "Environment paradigm fit", pillarId: "p4", familyIdx: 2, afNumber: 3 },
+                    { n: 4, label: "No seek-to-avoid", pillarId: "p4", familyIdx: 3, afNumber: 4 },
+                    { n: 5, label: "Minimal size-limiting", pillarId: "p4", familyIdx: 4, afNumber: 5 },
+                    { n: 6, label: "No invalidating", pillarId: "p4", familyIdx: 5, afNumber: 6 },
+                    { n: 7, label: "Case/outcome congruency", pillarId: "p4", familyIdx: 6, afNumber: 7 },
+                    { n: 8, label: "Nice-to-have", pillarId: "p4", familyIdx: 7, afNumber: 8 }
+                ]
+            },
+            {
+                numeral: "V",
+                title: "SS earnings momentum \u2014 strong/improving",
+                category: "earnings",
+                pillarId: "p5",
+                items: [
+                    { n: 1, label: "EPS \u2014 L3M", momentumKey: "eps_change", pillarId: "p5", familyIdx: -1 },
+                    { n: 2, label: "EBITDA \u2014 L3M", momentumKey: "ebitda_change", pillarId: "p5", familyIdx: -1 },
+                    { n: 3, label: "Revenue \u2014 L3M", momentumKey: "revenue_change", pillarId: "p5", familyIdx: -1 },
+                    { n: 4, label: "Price targets \u2014 L3M", momentumKey: "price_target_change", pillarId: "p5", familyIdx: -1 },
+                    { n: 5, label: "% Buy \u2014 L3M", momentumKey: "pct_buy_change", pillarId: "p5", familyIdx: -1 }
+                ]
+            },
+            {
+                numeral: "VI",
+                title: "Valuation in fair range (2YF P/E)",
+                category: "returns",
+                pillarId: "p6",
+                items: []
+            }
+        ];
+
+        // --- Helper functions ---
+
+        function getStockMomentumData(stock) {
+            var treeKey = 'treeData' + stock.ticker;
+            if (window[treeKey] && window[treeKey].p5 && window[treeKey].p5.momentum_data) {
+                return window[treeKey].p5.momentum_data;
+            }
+            if (momentumDataByTicker[stock.ticker] && momentumDataByTicker[stock.ticker].momentum_data) {
+                return momentumDataByTicker[stock.ticker].momentum_data;
+            }
+            return null;
+        }
+
+        function getStockValuationData(stock) {
+            var treeKey = 'treeData' + stock.ticker;
+            if (window[treeKey] && window[treeKey].p6) { return window[treeKey].p6; }
+            if (valuationDataByTicker[stock.ticker]) { return valuationDataByTicker[stock.ticker]; }
+            return null;
+        }
+
+        function fmtMomentumPct(val) {
+            if (val === undefined || val === null) return "\u2014";
+            var sign = val > 0 ? "+" : "";
+            return sign + val.toFixed(1) + "%";
+        }
+
+        function momentumDirection(val) {
+            if (val === undefined || val === null) return "\u2014";
+            if (val > 0) return "+1";
+            if (val < 0) return "\u22121";
+            return "0";
+        }
+
+        function getListSectionRating(stock, pillarId) {
+            var m = {
+                "p1": stock.pillars.p1_technical_momentum,
+                "p2": stock.pillars.p2_market_paradigm_fit,
+                "p3": stock.pillars.p3_fundamental_change,
+                "p4": stock.pillars.p4_building_blocks,
+                "p5": stock.pillars.p5_ss_earnings_momentum,
+                "p6": stock.pillars.p6_valuation
+            };
+            return m[pillarId] || "\u2014";
+        }
+
+        function getListItemRating(stock, item) {
+            if (!item.pillarId) return "\u2014";
+            var pillar = getPillarById(stock, item.pillarId);
+            if (!pillar) {
+                if (item.pillarId === "p5" && momentumDataByTicker[stock.ticker]) pillar = momentumDataByTicker[stock.ticker];
+                else if (item.pillarId === "p6" && valuationDataByTicker[stock.ticker]) pillar = valuationDataByTicker[stock.ticker];
+            }
+            if (!pillar || !pillar.families) return getListSectionRating(stock, item.pillarId);
+            var family = null;
+            if (item.familyIdx >= 0 && item.familyIdx < pillar.families.length) {
+                family = pillar.families[item.familyIdx];
+            } else if (item.afNumber !== undefined) {
+                var idx = getFamilyIdxByAfNumber(pillar, item.afNumber);
+                if (idx >= 0) family = pillar.families[idx];
+            }
+            if (family && family.rating && family.rating !== "\u2014") return family.rating;
+            return getListSectionRating(stock, item.pillarId);
+        }
+
+        // Find stock object by ticker
+        function findStockByTicker(ticker) {
+            for (var i = 0; i < masterData.stocks.length; i++) {
+                if (masterData.stocks[i].ticker === ticker) return masterData.stocks[i];
+            }
+            return null;
+        }
+
+        // Find stock index by ticker
+        function findStockIndexByTicker(ticker) {
+            for (var i = 0; i < masterData.stocks.length; i++) {
+                if (masterData.stocks[i].ticker === ticker) return i;
+            }
+            return -1;
+        }
+
+        // Get default sector peers for a stock (up to 4, excluding self)
+        function getDefaultSectorPeers(stock) {
+            var peers = [];
+            var sector = (stock.sector || "").split("/")[0].trim().toLowerCase();
+            if (!sector) return peers;
+            for (var i = 0; i < masterData.stocks.length; i++) {
+                var s = masterData.stocks[i];
+                if (s.ticker === stock.ticker) continue;
+                var sSector = (s.sector || "").split("/")[0].trim().toLowerCase();
+                if (sSector === sector) peers.push(s.ticker);
+                if (peers.length >= 4) break;
+            }
+            return peers;
+        }
+
+        // Get the 5 stocks for the comparison matrix (primary + 4 peers)
+        function getListStocks(primaryStock) {
+            var ticker = primaryStock.ticker;
+            var peers;
+            if (listPeerSelections[ticker]) {
+                peers = listPeerSelections[ticker].slice();
+            } else {
+                peers = getDefaultSectorPeers(primaryStock);
+                listPeerSelections[ticker] = peers.slice();
+            }
+            // Pad to 4
+            while (peers.length < 4) peers.push(null);
+            var stocks = [primaryStock];
+            for (var i = 0; i < 4; i++) {
+                stocks.push(peers[i] ? findStockByTicker(peers[i]) : null);
+            }
+            return stocks;
+        }
+
+        // --- Render the comparison matrix ---
+
+        function renderRatingCell(stock, pillarId, familyIdx, afNumber, momentumKey) {
+            if (!stock) return '<td class="list-stock-col"><span class="rating-badge rating-blank">\u2014</span></td>';
+
+            // P5 momentum: show pct + direction
+            if (pillarId === "p5" && momentumKey) {
+                var mData = getStockMomentumData(stock);
+                var mVals = mData && mData[momentumKey] ? mData[momentumKey] : null;
+                var pct = mVals ? fmtMomentumPct(mVals.l3m) : "\u2014";
+                var dir = mVals ? momentumDirection(mVals.l3m) : "\u2014";
+                var clr = "";
+                if (mVals && mVals.l3m > 0) clr = "color:#3fb950;";
+                else if (mVals && mVals.l3m < 0) clr = "color:#b54248;";
+                return '<td class="list-stock-col" style="font-size:10px;' + clr + '">' + pct + ' <b>' + dir + '</b></td>';
+            }
+
+            // P6 valuation: show percentile
+            if (pillarId === "p6" && familyIdx === -1 && !afNumber) {
+                var vData = getStockValuationData(stock);
+                var pctile = "\u2014";
+                var rating = getListSectionRating(stock, "p6");
+                if (vData && vData.metrics && vData.metrics.percentile_in_range) {
+                    pctile = vData.metrics.percentile_in_range;
+                }
+                return '<td class="list-stock-col"><span style="font-size:10px;color:#6b6b6b;">' + escapeHtml(pctile) + '</span> <span class="rating-badge ' + getRatingClass(rating) + '">' + rating + '</span></td>';
+            }
+
+            // Normal: show rating badge
+            var item = { pillarId: pillarId, familyIdx: (familyIdx !== undefined ? familyIdx : -1) };
+            if (afNumber !== undefined) item.afNumber = afNumber;
+            var rating = getListItemRating(stock, item);
+            return '<td class="list-stock-col"><span class="rating-badge ' + getRatingClass(rating) + '">' + rating + '</span></td>';
+        }
+
+        function renderSectionRatingCell(stock, pillarId) {
+            if (!stock) return '<td class="list-stock-col"><span class="rating-badge rating-blank">\u2014</span></td>';
+            var rating = getListSectionRating(stock, pillarId);
+            return '<td class="list-stock-col"><span class="rating-badge ' + getRatingClass(rating) + '">' + rating + '</span></td>';
+        }
+
+        function renderListMatrix(primaryStock) {
+            var stocks = getListStocks(primaryStock);
+            var html = '<table class="list-matrix">';
+
+            // Ticker header row
+            html += '<thead><tr>';
+            html += '<th class="list-label-col" style="vertical-align:bottom;font-size:10px;color:#6b6b6b;">Checklist Item</th>';
+            for (var c = 0; c < 5; c++) {
+                var s = stocks[c];
+                var isPrimary = (c === 0);
+                var headerClass = isPrimary ? 'list-ticker-header list-primary' : (s ? 'list-ticker-header' : 'list-ticker-header list-empty');
+                html += '<th class="list-stock-col" style="position:relative;">';
+                html += '<div class="' + headerClass + '" ' + (isPrimary ? '' : 'onclick="openListSearch(event,' + c + ')"') + '>';
+                if (s) {
+                    html += '<span class="list-ticker-name">' + escapeHtml(s.ticker) + '</span>';
+                    html += '<span class="list-ticker-company">' + escapeHtml(s.company_name) + '</span>';
+                } else {
+                    html += '<span class="list-ticker-name">+ Select</span>';
+                    html += '<span class="list-ticker-company">Click to choose</span>';
+                }
+                html += '</div>';
+                html += '</th>';
+            }
+            html += '</tr></thead>';
+
+            // Body rows
+            html += '<tbody>';
+            for (var s2 = 0; s2 < LIST_STRUCTURE.length; s2++) {
+                var section = LIST_STRUCTURE[s2];
+                var catClass = 'list-cat-' + section.category;
+
+                // Section header row
+                html += '<tr class="list-section-row ' + catClass + '">';
+                html += '<td class="list-label-col">' + section.numeral + '. ' + escapeHtml(section.title) + '</td>';
+                for (var sc = 0; sc < 5; sc++) {
+                    html += renderSectionRatingCell(stocks[sc], section.pillarId);
+                }
+                html += '</tr>';
+
+                // P5: momentum items
+                if (section.pillarId === "p5") {
+                    for (var m = 0; m < section.items.length; m++) {
+                        var mi = section.items[m];
+                        html += '<tr>';
+                        html += '<td class="list-label-col" style="padding-left:20px;cursor:pointer;" onclick="listItemNavigate(\'' + mi.pillarId + '\',' + mi.familyIdx + ')">';
+                        html += '<span style="color:#9a9380;margin-right:4px;">' + mi.n + '.</span> ' + escapeHtml(mi.label);
+                        html += '</td>';
+                        for (var mc = 0; mc < 5; mc++) {
+                            html += renderRatingCell(stocks[mc], mi.pillarId, mi.familyIdx, undefined, mi.momentumKey);
+                        }
+                        html += '</tr>';
+                    }
+                }
+                // P6: single valuation row
+                else if (section.pillarId === "p6") {
+                    html += '<tr>';
+                    html += '<td class="list-label-col" style="padding-left:20px;cursor:pointer;" onclick="listItemNavigate(\'p6\',-1)">';
+                    html += 'Percentile in 10Y range</td>';
+                    for (var vc = 0; vc < 5; vc++) {
+                        html += renderRatingCell(stocks[vc], "p6", -1, undefined, undefined);
+                    }
+                    html += '</tr>';
+                }
+                // Normal items
+                else {
+                    for (var i = 0; i < section.items.length; i++) {
+                        var item = section.items[i];
+                        html += '<tr>';
+                        html += '<td class="list-label-col" style="padding-left:20px;cursor:pointer;" onclick="listItemNavigate(\'' + item.pillarId + '\',' + item.familyIdx + ')">';
+                        html += '<span style="color:#9a9380;margin-right:4px;">' + item.n + '.</span> ' + escapeHtml(item.label);
+                        html += '</td>';
+                        for (var ic = 0; ic < 5; ic++) {
+                            html += renderRatingCell(stocks[ic], item.pillarId, item.familyIdx, item.afNumber, undefined);
+                        }
+                        html += '</tr>';
+                    }
+                }
+            }
+
+            html += '</tbody></table>';
+            return html;
+        }
+
+        // --- Ticker search dropdown ---
+
+        var activeSearchCol = -1;
+
+        function openListSearch(evt, colIndex) {
+            if (evt) evt.stopPropagation();
+            activeSearchCol = colIndex;
+
+            // Close any existing search
+            var existing = document.querySelectorAll('.list-search-container.active');
+            for (var i = 0; i < existing.length; i++) existing[i].classList.remove('active');
+
+            // Find or create the search container in the header cell
+            var headerCells = document.querySelectorAll('.list-matrix thead th.list-stock-col');
+            if (!headerCells || colIndex >= headerCells.length) return;
+            var cell = headerCells[colIndex];
+
+            var container = cell.querySelector('.list-search-container');
+            if (!container) {
+                container = document.createElement('div');
+                container.className = 'list-search-container';
+                container.innerHTML = '<input type="text" class="list-search-input" placeholder="Type ticker...">' +
+                    '<div class="list-search-results"></div>';
+                cell.appendChild(container);
+
+                var input = container.querySelector('.list-search-input');
+                input.addEventListener('input', function() {
+                    filterListSearch(this.value, container, colIndex);
+                });
+                input.addEventListener('click', function(e) { e.stopPropagation(); });
+                container.addEventListener('click', function(e) { e.stopPropagation(); });
+            }
+
+            container.classList.add('active');
+            var input2 = container.querySelector('.list-search-input');
+            input2.value = '';
+            filterListSearch('', container, colIndex);
+
+            setTimeout(function() { input2.focus(); }, 50);
+        }
+
+        function filterListSearch(query, container, colIndex) {
+            var results = container.querySelector('.list-search-results');
+            var q = query.toLowerCase();
+            var primaryStock = masterData.stocks[currentListStockIndex];
+            var html = '';
+
+            // "Clear" option
+            html += '<div class="list-search-option" onclick="selectListPeer(' + colIndex + ', null)">';
+            html += '<span style="color:#6b6b6b;font-style:italic;">Clear slot</span>';
+            html += '</div>';
+
+            for (var i = 0; i < masterData.stocks.length; i++) {
+                var s = masterData.stocks[i];
+                if (s.ticker === primaryStock.ticker) continue;
+                if (q && s.ticker.toLowerCase().indexOf(q) === -1 && s.company_name.toLowerCase().indexOf(q) === -1) continue;
+                html += '<div class="list-search-option" onclick="selectListPeer(' + colIndex + ', \'' + s.ticker + '\')">';
+                html += '<span><b>' + escapeHtml(s.ticker) + '</b> ' + escapeHtml(s.company_name) + '</span>';
+                html += '<span class="list-search-sector">' + escapeHtml(s.sector || '') + '</span>';
+                html += '</div>';
+            }
+
+            results.innerHTML = html;
+        }
+
+        function selectListPeer(colIndex, ticker) {
+            // colIndex is 1-4 (peer columns), stored as array indices 0-3
+            var primaryStock = masterData.stocks[currentListStockIndex];
+            var key = primaryStock.ticker;
+            if (!listPeerSelections[key]) listPeerSelections[key] = [null, null, null, null];
+
+            // Peer index is colIndex - 1 (col 0 is primary, cols 1-4 are peers)
+            var peerIdx = colIndex - 1;
+            if (peerIdx >= 0 && peerIdx < 4) {
+                listPeerSelections[key][peerIdx] = ticker;
+            }
+
+            // Close search dropdown
+            var containers = document.querySelectorAll('.list-search-container.active');
+            for (var i = 0; i < containers.length; i++) containers[i].classList.remove('active');
+
+            // Re-render the matrix
+            var body = document.getElementById('list-modal-body');
+            if (body) {
+                body.innerHTML = renderListMatrix(primaryStock);
+            }
+        }
+
+        // Close search when clicking outside
+        document.addEventListener('click', function() {
+            var containers = document.querySelectorAll('.list-search-container.active');
+            for (var i = 0; i < containers.length; i++) containers[i].classList.remove('active');
+        });
+
+        // --- Open / Close / Shell ---
+
+        function openListView(evt, stockIndex) {
+            if (evt && evt.stopPropagation) evt.stopPropagation();
+            var stock = masterData.stocks[stockIndex];
+            if (!stock) return;
+            currentListStockIndex = stockIndex;
+
+            var overlay = document.getElementById('list-modal-overlay');
+            if (!overlay) {
+                overlay = buildListModalShell();
+            }
+
+            var title = document.getElementById('list-modal-title');
+            if (title) {
+                title.innerHTML = '<span class="list-modal-ticker">' + escapeHtml(stock.ticker) + '</span>'
+                    + escapeHtml(stock.company_name)
+                    + '<span class="list-modal-subtitle">Comparison \u00b7 ' + escapeHtml(stock.sector || '') + '</span>';
+            }
+
+            var body = document.getElementById('list-modal-body');
+            if (body) {
+                try {
+                    body.innerHTML = renderListMatrix(stock);
+                } catch (err) {
+                    body.innerHTML = '<div style="color:#b54248;padding:16px;">Error rendering LIST: ' + err.message + '</div>';
                 }
             }
 
