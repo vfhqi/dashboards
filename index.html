@@ -2615,6 +2615,9 @@
     </style>
 </head>
 <body>
+<!-- Floating MEMO button (belt-and-braces visibility) -->
+<button id="btn-memo-floating" onclick="toggleMemo()" style="position: fixed; top: 12px; right: 16px; z-index: 10000; background: #2ea043; color: #ffffff; border: 2px solid #1a7f37; padding: 10px 22px; font-size: 14px; font-weight: 700; letter-spacing: 0.5px; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.4); cursor: pointer; font-family: inherit;">MEMO</button>
+
     <div class="container">
         <div class="toolbar">
             <div class="toolbar-group">
@@ -9766,7 +9769,7 @@
         function toggleMemo() {
             var btn = document.getElementById('btn-memo');
             var floatBtn = document.getElementById('btn-memo-floating');
-            var nowOn = \!(btn && btn.classList.contains('active'));
+            var nowOn = !(btn && btn.classList.contains('active'));
             if (btn) btn.classList.toggle('active', nowOn);
             if (floatBtn) {
                 floatBtn.style.background = nowOn ? '#1a7f37' : '#2ea043';
