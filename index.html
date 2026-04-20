@@ -2566,7 +2566,7 @@
         /* IAJA inline tags — darker on light surface, same hue families. */
         .memo-tag-j { color: #7955bf; font-weight: 700; margin-right: 4px; }   /* purple — judgement */
         .memo-tag-i { color: #3b73c9; font-weight: 600; margin-right: 4px; }   /* blue   — information */
-        .memo-tag-a { color: #1f7a3b; font-weight: 700; margin-right: 4px; }   /* green  — action */
+        .memo-tag-a { color: #3b73c9; font-weight: 700; margin-right: 4px; }   /* blue   — analysis */
 
         /* Inline rating badge. */
         .memo-inline-rating {
@@ -2662,6 +2662,147 @@
             .memo-section-body { padding-left: 14px; }
             .memo-kv-grid { grid-template-columns: max-content 1fr; }
             .memo-kv-grid .memo-kv-delta { grid-column: 2; }
+        }
+
+
+        /* ============================================================
+           3-level taxonomy: Section -> Sub-section -> Topic
+           ============================================================ */
+        .memo-topic {
+            margin-top: 18px;
+            margin-bottom: 18px;
+            padding-left: 0;
+        }
+        .memo-topic:first-of-type { margin-top: 8px; }
+        .memo-topic-header {
+            font-size: 12.5px;
+            font-weight: 700;
+            color: #1a1a1a;
+            letter-spacing: 0.3px;
+            margin-bottom: 8px;
+            padding-bottom: 4px;
+            border-bottom: 1px dashed #d9d5c8;
+        }
+        .memo-topic-id {
+            display: inline-block;
+            background-color: #efebdc;
+            color: #555;
+            font-weight: 600;
+            font-size: 10.5px;
+            padding: 2px 6px;
+            border-radius: 2px;
+            letter-spacing: 0.4px;
+            margin-right: 8px;
+            vertical-align: 1px;
+        }
+        .memo-topic-title { color: #1a1a1a; }
+
+        /* BLUF — italic opener */
+        .memo-bluf {
+            font-style: italic;
+            color: #333;
+            font-size: 12.5px;
+            line-height: 1.55;
+            margin-bottom: 12px;
+            padding: 6px 0 6px 10px;
+            border-left: 2px solid #c9c3b0;
+        }
+
+        /* Summary — italic closer */
+        .memo-summary {
+            font-style: italic;
+            color: #444;
+            font-size: 12.5px;
+            line-height: 1.55;
+            margin-top: 10px;
+            margin-bottom: 4px;
+            padding: 4px 0;
+            border-top: 1px dotted #d9d5c8;
+            padding-top: 8px;
+        }
+
+        /* KDIC tree widget — 4 tiers (PDs / SDs / TDs / LIs) */
+        .memo-tree {
+            margin: 10px 0 14px 0;
+            padding: 10px 12px;
+            background-color: #fbfaf5;
+            border: 1px solid #e0dcce;
+            border-radius: 4px;
+        }
+        .memo-tree-title {
+            font-size: 11px;
+            font-weight: 600;
+            color: #555;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #e8e3d4;
+        }
+        .memo-tree-tier {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            column-gap: 16px;
+            padding: 8px 0;
+            border-bottom: 1px dotted #e0dcce;
+            align-items: start;
+        }
+        .memo-tree-tier:last-child { border-bottom: none; padding-bottom: 0; }
+        .memo-tree-tier-header {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            align-items: flex-start;
+        }
+        .memo-tree-tier-label {
+            display: inline-block;
+            background-color: #7955bf;
+            color: #fff;
+            font-weight: 700;
+            font-size: 10px;
+            padding: 2px 7px;
+            border-radius: 2px;
+            letter-spacing: 0.4px;
+        }
+        .memo-tree-tier[data-tier="SDs"] .memo-tree-tier-label { background-color: #3b73c9; }
+        .memo-tree-tier[data-tier="TDs"] .memo-tree-tier-label { background-color: #8b8673; }
+        .memo-tree-tier[data-tier="LIs"] .memo-tree-tier-label { background-color: #3b8c56; }
+        .memo-tree-tier-name {
+            font-size: 10px;
+            color: #6b6b6b;
+            letter-spacing: 0.3px;
+        }
+        .memo-tree-items {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .memo-tree-item {
+            font-size: 12.5px;
+            color: #1a1a1a;
+            line-height: 1.5;
+        }
+        .memo-tree-item-text { font-weight: 600; color: #111; }
+        .memo-tree-item-detail {
+            display: block;
+            font-size: 11.5px;
+            color: #555;
+            margin-top: 1px;
+            font-weight: 400;
+            line-height: 1.45;
+        }
+        .memo-tree-tier[data-tier="TDs"] .memo-tree-item-text { color: #555; font-weight: 500; }
+
+        /* IAJA tag refinements */
+        .memo-tag-act {
+            color: #1f7a3b;
+            font-weight: 700;
+            margin-right: 4px;
+        }
+        .memo-tag-oq {
+            color: #8d6e00;
+            font-weight: 700;
+            margin-right: 4px;
         }
 
         /* MEMO_CSS_END */
@@ -4116,53 +4257,318 @@
                   "subsections": [
                     {
                       "id": "D.I",
-                      "title": "Mechanics (KDICs, KHFs, KCs, KRs, KPOs)",
+                      "title": "Mechanics / building blocks",
                       "heading_level": 3,
                       "blocks": [
                         {
-                          "type": "bullet_group",
-                          "items": [
-                            {
-                              "iaja": "J",
-                              "text": "KDIC-1: LNG price path N1-3Y — THE driver. All else is noise below this.",
-                              "sub": [
-                                {
-                                  "iaja": "A",
-                                  "text": "Our base case: TTF averages EUR28-35/MWh through 2027."
-                                },
-                                {
-                                  "iaja": "A",
-                                  "text": "Bear case: EUR18-22/MWh if Russian pipeline returns + US capacity adds."
-                                },
-                                {
-                                  "iaja": "A",
-                                  "text": "Bull case: EUR40+/MWh if storage miss + supply disruption."
-                                }
-                              ]
-                            },
-                            {
-                              "iaja": "J",
-                              "text": "KHF-1: cost curve position (structural). Stable for N1-3Y."
-                            },
-                            {
-                              "iaja": "J",
-                              "text": "KC-1: how much of Yamal-2 volumes are already locked in long-dated contracts?",
-                              "sub": [
-                                {
-                                  "text": "Need to resolve before ESA."
-                                }
-                              ]
-                            },
-                            {
-                              "iaja": "J",
-                              "text": "KR-1: sanctions tightening (secondary/headline-path). KR-2: Yamal-2 execution slippage."
-                            },
-                            {
-                              "iaja": "J",
-                              "text": "KPO-1: buyback re-initiation; KPO-2: Arctic-3 FID signal."
-                            }
-                          ],
+                          "type": "bluf",
+                          "text": "Investment case rests on one Primary Driver (LNG price path) and one structural hygiene factor (cost-curve position). Both look robust at Triaging. One Key Confusion (Yamal-2 contract mix) must clear before ESA promotion.",
                           "ratings": []
+                        }
+                      ],
+                      "topics": [
+                        {
+                          "id": "D.I.1",
+                          "title": "KDICs — Key Drivers of Investment Case",
+                          "target_words": 300,
+                          "blocks": [
+                            {
+                              "type": "bluf",
+                              "text": "One Primary Driver dominates: LNG price path N1–3Y. Two Secondaries provide supporting mechanics. Tertiaries noted but de-prioritised.",
+                              "ratings": []
+                            },
+                            {
+                              "type": "tree",
+                              "title": "KDICs tree — qualitative drivers → financial outputs",
+                              "tiers": [
+                                {
+                                  "label": "PDs",
+                                  "name": "Primary Drivers",
+                                  "items": [
+                                    {
+                                      "text": "LNG realised price N1-3Y",
+                                      "detail": "TTF base-case EUR28–35/MWh through 2027; dominates revenue AND unit margin simultaneously",
+                                      "iaja": "J"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "SDs",
+                                  "name": "Secondary Drivers",
+                                  "items": [
+                                    {
+                                      "text": "Yamal-2 volume ramp",
+                                      "detail": "Volume adder through 2027, but price-dependent for margin impact",
+                                      "iaja": "A"
+                                    },
+                                    {
+                                      "text": "Contract vs spot mix",
+                                      "detail": "Governs how much of price upside is captured; unresolved — see D.I.3",
+                                      "iaja": "A"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "TDs",
+                                  "name": "Tertiary Drivers",
+                                  "items": [
+                                    {
+                                      "text": "RUB/USD — noise",
+                                      "detail": "Largely USD-denominated revenue; cost base partially RUB; net is small"
+                                    },
+                                    {
+                                      "text": "Opex inflation",
+                                      "detail": "Structural trend, slow-moving; unlikely to shift thesis N1-3Y"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "LIs",
+                                  "name": "Leading Indicators (of ICDs)",
+                                  "items": [
+                                    {
+                                      "text": "EU storage refill pace",
+                                      "detail": "Real-time TTF proxy; check weekly",
+                                      "iaja": "T"
+                                    },
+                                    {
+                                      "text": "Sabetta shipment count",
+                                      "detail": "Monthly; validates Yamal-2 ramp",
+                                      "iaja": "T"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "ratings": []
+                            },
+                            {
+                              "type": "bullet_group",
+                              "items": [
+                                {
+                                  "iaja": "J",
+                                  "text": "Structure is clean — one PD with a clear financial path.",
+                                  "sub": [
+                                    {
+                                      "iaja": "A",
+                                      "text": "PD → revenue via realised price × volume; no complex cross-effects."
+                                    },
+                                    {
+                                      "iaja": "I",
+                                      "text": "Sensitivity: every EUR5/MWh on TTF = ~$800m EBITDA at current volume base."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "iaja": "J",
+                                  "text": "SDs are conditional — Yamal-2 volume only matters if price holds.",
+                                  "sub": [
+                                    {
+                                      "iaja": "A",
+                                      "text": "If TTF drops to bear-case EUR18–22, volume ramp masks price compression rather than adds to it."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "iaja": "ACT",
+                                  "text": "Action: Pull ICD monitoring sheet for LIs 1–2; confirm real-time feeds available from FactSet."
+                                }
+                              ],
+                              "ratings": []
+                            },
+                            {
+                              "type": "summary",
+                              "text": "One-driver cases are the cleanest to own — but they carry concentration risk. Size accordingly.",
+                              "ratings": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "D.I.2",
+                          "title": "KHF/As — Key Hygiene Factors / Assumptions",
+                          "target_words": 0,
+                          "stage_note": "Triaging: n.a. — hypothesise only if disqualifying. Full treatment at ESA.",
+                          "blocks": [
+                            {
+                              "type": "bluf",
+                              "text": "At Triaging, no KHFs identified that would disqualify. Structural cost-curve position assumed stable N1–3Y; to be stress-tested at ESA.",
+                              "ratings": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "D.I.3",
+                          "title": "KCs/KUs — Key Confusions & Unknowns",
+                          "target_words": 300,
+                          "blocks": [
+                            {
+                              "type": "bluf",
+                              "text": "Two live confusions. One is structurally important (Yamal-2 contract mix); the other is solvable with a modelling pass (RUB-hedged economics).",
+                              "ratings": []
+                            },
+                            {
+                              "type": "bullet_group",
+                              "items": [
+                                {
+                                  "iaja": "J",
+                                  "text": "KC-1 (structural): What fraction of Yamal-2 LNG is pre-sold into long-dated take-or-pay contracts?",
+                                  "sub": [
+                                    {
+                                      "iaja": "A",
+                                      "text": "If >70% pre-sold, spot price upside is capped — and the PD weakens materially."
+                                    },
+                                    {
+                                      "iaja": "I",
+                                      "text": "Company disclosure is silent on contract split; peers (Cheniere, Shell) disclose ~85–90% contracted."
+                                    },
+                                    {
+                                      "iaja": "OQ",
+                                      "text": "Open question: Do any sell-side models address this directly? AlphaSense search scheduled."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "iaja": "J",
+                                  "text": "KC-2 (solvable): How much of EBITDA converts to USD free cash flow after RUB-denominated opex + capex?",
+                                  "sub": [
+                                    {
+                                      "iaja": "A",
+                                      "text": "Reported headline is USD; underlying cost base is ~40% RUB. Hedge ratio and timing unclear."
+                                    },
+                                    {
+                                      "iaja": "I",
+                                      "text": "2023 disclosure implied ~8–12% FX drag on cash conversion — small but material at position-size level."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "iaja": "ACT",
+                                  "text": "Action: Build minimal Excel scenario for KC-2 before ESA kickoff (2-day task). Escalate KC-1 to AS deep research."
+                                }
+                              ],
+                              "ratings": []
+                            },
+                            {
+                              "type": "summary",
+                              "text": "KC-1 is the one that can kill the thesis. If it fails to clear, park.",
+                              "ratings": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "D.I.4",
+                          "title": "KRs — Key Concerns / Risks",
+                          "target_words": 300,
+                          "blocks": [
+                            {
+                              "type": "bluf",
+                              "text": "Three material risks, all headline-adjacent. Sanctions is the main source of tail risk; Yamal-2 execution is the main source of base-case risk.",
+                              "ratings": []
+                            },
+                            {
+                              "type": "bullet_group",
+                              "items": [
+                                {
+                                  "iaja": "J",
+                                  "text": "KR-1: Sanctions tightening — tail risk, hard to size.",
+                                  "sub": [
+                                    {
+                                      "iaja": "A",
+                                      "text": "Secondary sanctions on Asian buyers would re-route volumes but keep them sellable."
+                                    },
+                                    {
+                                      "iaja": "A",
+                                      "text": "Full SDN listing on Novatek itself would be binary for ADR holders but unlikely absent new geopolitical shock."
+                                    },
+                                    {
+                                      "iaja": "I",
+                                      "text": "Base-rate: 3 of 12 sanctioned Russian energy names suffered binary outcomes over 2022–25."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "iaja": "J",
+                                  "text": "KR-2: Yamal-2 execution — base-case risk.",
+                                  "sub": [
+                                    {
+                                      "iaja": "A",
+                                      "text": "6-month COD slip would push volume ramp into weaker part of the TTF cycle."
+                                    },
+                                    {
+                                      "iaja": "I",
+                                      "text": "Arctic-2 COD was on time; track record favourable but not a guarantee for Yamal-2."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "iaja": "J",
+                                  "text": "KR-3: Governance opacity — reputational, not financial.",
+                                  "sub": [
+                                    {
+                                      "iaja": "A",
+                                      "text": "Ultimate shareholder structure is opaque post-2022 re-registration. Creates me-state friction but no cash-flow impact."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "iaja": "ACT",
+                                  "text": "Action: At ESA, build explicit kill-switch list tied to each KR; define position adjustments for level-1 trigger."
+                                }
+                              ],
+                              "ratings": []
+                            },
+                            {
+                              "type": "summary",
+                              "text": "Two sizing constraints emerge: smaller starter than a standard GARP name; no add on KR-1 triggers until tail clears.",
+                              "ratings": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "D.I.5",
+                          "title": "KPOs — Key Positive Optionality",
+                          "target_words": 150,
+                          "blocks": [
+                            {
+                              "type": "bluf",
+                              "text": "Two non-modelled optionalities worth flagging. Neither is required for the base case to work.",
+                              "ratings": []
+                            },
+                            {
+                              "type": "bullet_group",
+                              "items": [
+                                {
+                                  "iaja": "J",
+                                  "text": "KPO-1: Buyback re-initiation.",
+                                  "sub": [
+                                    {
+                                      "iaja": "A",
+                                      "text": "Net cash at $2.4bn vs $1.1bn prior year; balance sheet permits."
+                                    },
+                                    {
+                                      "iaja": "I",
+                                      "text": "No buyback announced since 2021; management cited 'capital allocation review' at FY25 results."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "iaja": "J",
+                                  "text": "KPO-2: Arctic-3 FID signal.",
+                                  "sub": [
+                                    {
+                                      "iaja": "A",
+                                      "text": "Would extend growth runway past 2030 and re-rate terminal value. Not in current sell-side modal case."
+                                    }
+                                  ]
+                                }
+                              ],
+                              "ratings": []
+                            },
+                            {
+                              "type": "summary",
+                              "text": "Upside optionality is real but not required. Thesis works on PD alone.",
+                              "ratings": []
+                            }
+                          ]
                         }
                       ]
                     },
@@ -4220,8 +4626,8 @@
                     }
                   ],
                   "applicable_note": null,
-                  "word_count": 165,
-                  "page_count": 1
+                  "word_count": 715,
+                  "page_count": 2
                 },
                 "E": {
                   "letter": "E",
@@ -9935,8 +10341,12 @@
             if (!tag) return '';
             var t = String(tag).toUpperCase();
             if (t === 'J') return '<span class="memo-tag-j">[J]</span> ';
-            if (t === 'A') return '<span class="memo-tag-a">[ACT]</span> ';
+            if (t === 'A') return '<span class="memo-tag-a">[A]</span> ';
             if (t === 'I') return '<span class="memo-tag-i">[I]</span> ';
+            if (t === 'ACT' || t === 'T') return '<span class="memo-tag-act">[ACT]</span> ';
+            if (t === 'OQ') return '<span class="memo-tag-oq">[OQ]</span> ';
+            if (t === 'O') return '<span class="memo-tag-act">[O]</span> ';
+            if (t === 'KR') return '<span class="memo-tag-act">[KR]</span> ';
             return '';
         }
 
@@ -10055,6 +10465,59 @@
                    '</div>';
         }
 
+        function memoRenderBluf(block) {
+            var text = block && block.text ? String(block.text) : '';
+            if (!text) return '';
+            return '<div class="memo-bluf">' + memoEscape(text) + '</div>';
+        }
+
+        function memoRenderSummary(block) {
+            var text = block && block.text ? String(block.text) : '';
+            if (!text) return '';
+            return '<div class="memo-summary">' + memoEscape(text) + '</div>';
+        }
+
+        function memoRenderTreeItem(item) {
+            var text = item && item.text ? String(item.text) : '';
+            var detail = item && item.detail ? String(item.detail) : '';
+            var html = '<div class="memo-tree-item">' +
+                       memoIajaTag(item.iaja) +
+                       '<span class="memo-tree-item-text">' + memoEscape(text) + '</span>';
+            if (detail) {
+                html += '<span class="memo-tree-item-detail">' + memoEscape(detail) + '</span>';
+            }
+            html += '</div>';
+            return html;
+        }
+
+        function memoRenderTree(block) {
+            var tiers = (block && block.tiers) || [];
+            if (!tiers.length) return '';
+            var html = '<div class="memo-tree">';
+            if (block.title) {
+                html += '<div class="memo-tree-title">' + memoEscape(block.title) + '</div>';
+            }
+            for (var ti = 0; ti < tiers.length; ti++) {
+                var tier = tiers[ti] || {};
+                var items = tier.items || [];
+                html += '<div class="memo-tree-tier" data-tier="' + memoEscape(tier.label || '') + '">';
+                html += '<div class="memo-tree-tier-header">';
+                html += '<span class="memo-tree-tier-label">' + memoEscape(tier.label || '') + '</span>';
+                if (tier.name) {
+                    html += '<span class="memo-tree-tier-name">' + memoEscape(tier.name) + '</span>';
+                }
+                html += '</div>';
+                html += '<div class="memo-tree-items">';
+                for (var ii = 0; ii < items.length; ii++) {
+                    html += memoRenderTreeItem(items[ii]);
+                }
+                html += '</div>';
+                html += '</div>';
+            }
+            html += '</div>';
+            return html;
+        }
+
         function memoRenderBlock(block) {
             if (!block || !block.type) return '';
             switch (block.type) {
@@ -10063,19 +10526,42 @@
                 case 'ratings_table': return memoRenderRatingsTable(block);
                 case 'kv_grid':       return memoRenderKvGrid(block);
                 case 'callout':       return memoRenderCallout(block);
+                case 'bluf':          return memoRenderBluf(block);
+                case 'summary':       return memoRenderSummary(block);
+                case 'tree':          return memoRenderTree(block);
                 default:              return '';
             }
         }
 
+        function memoRenderTopic(topic) {
+            var blocks = (topic && topic.blocks) || [];
+            var html = '<div class="memo-topic">' +
+                       '<div class="memo-topic-header">' +
+                         '<span class="memo-topic-id">' + memoEscape(topic.id || '') + '</span>' +
+                         '<span class="memo-topic-title">' + memoEscape(topic.title || '') + '</span>' +
+                       '</div>';
+            for (var i = 0; i < blocks.length; i++) {
+                html += memoRenderBlock(blocks[i]);
+            }
+            html += '</div>';
+            return html;
+        }
+
         function memoRenderSubsection(sub) {
             var blocks = (sub && sub.blocks) || [];
+            var topics = (sub && sub.topics) || [];
             var html = '<div class="memo-subsection">' +
                        '<div class="memo-subsection-header">' +
                          '<span class="memo-subsection-id">' + memoEscape(sub.id || '') + '</span>' +
                          memoEscape(sub.title || '') +
                        '</div>';
+            // Render sub-section-level blocks first (e.g. a section-level BLUF)
             for (var i = 0; i < blocks.length; i++) {
                 html += memoRenderBlock(blocks[i]);
+            }
+            // Then render topics if present
+            for (var j = 0; j < topics.length; j++) {
+                html += memoRenderTopic(topics[j]);
             }
             html += '</div>';
             return html;
