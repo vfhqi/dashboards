@@ -2310,55 +2310,106 @@
 
         /* =====================================================
            MEMO_CSS_START — managed manually by memo view build
+           Light scheme (off-white / paper) + per-row toggle
            ----------------------------------------------------- */
 
-        /* Panel container: full-width under stock row; only rendered when
-           body.show-memo is active and the row is expanded. */
+        /* ------ Per-row toggle mechanics ------ */
+
+        /* Memo panel — hidden by default. Shown only when its tree-row has
+           the .showing-memo class. */
         .memo-panel {
             display: none;
             margin-top: 12px;
-            padding: 20px 32px 24px;
-            background-color: #0d1117;
-            border: 2px solid #58a6ff;
+            padding: 24px 32px 28px;
+            background-color: #f7f5ef;  /* off-white / paper */
+            color: #1a1a1a;
+            border: 1px solid #d9d5c8;
             border-radius: 6px;
+            /* Take full width of the <td colspan="28"> host cell */
+            width: 100%;
+            box-sizing: border-box;
         }
-        /* MEMO visibility fix: show memo-panel everywhere when body.show-memo is on. */
-        body.show-memo .tree-row { display: table-row !important; }
-        body.show-memo .memo-panel { display: block !important; }
-        /* When memo is shown, hide the pillars stack (they share the same row). */
-        body.show-memo .pillars-sticky-header,
-        body.show-memo .pillar-detail-panel { display: none !important; }
+        /* When the tree-row is in memo mode, hide pillars & show the memo. */
+        tr.tree-row.showing-memo .pillars-sticky-header,
+        tr.tree-row.showing-memo .pillar-detail-panel { display: none !important; }
+        tr.tree-row.showing-memo .memo-panel { display: block !important; }
 
-        /* Memo prose column — Tufte-inspired 720px with reserved right margin. */
+        /* ------ MEMO column (header + cell + button) ------ */
+
+        .memo-column-header {
+            text-align: center;
+            width: 50px;
+            min-width: 50px;
+            white-space: nowrap;
+            color: #7ee787;
+            letter-spacing: 0.5px;
+        }
+        .memo-column-cell {
+            text-align: center;
+            width: 50px;
+            min-width: 50px;
+            padding: 4px 2px;
+        }
+        .memo-button {
+            display: inline-block;
+            padding: 3px 8px;
+            font-family: inherit;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.6px;
+            color: #7ee787;
+            background: rgba(126, 231, 135, 0.08);
+            border: 1px solid rgba(126, 231, 135, 0.45);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.12s, border-color 0.12s, color 0.12s;
+        }
+        .memo-button:hover {
+            background: rgba(126, 231, 135, 0.18);
+            border-color: rgba(126, 231, 135, 0.85);
+            color: #b8f2bf;
+        }
+        .memo-button:active { transform: translateY(1px); }
+        .memo-button.is-active {
+            background: rgba(126, 231, 135, 0.28);
+            border-color: #7ee787;
+            color: #e6edf3;
+        }
+
+        /* ------ Memo prose (light palette) ------ */
+
+        /* Inner column for readability — 960px cap on the text, not the
+           panel. Panel itself remains full-width. */
         .memo-prose {
-            max-width: 720px;
+            max-width: 960px;
+            margin: 0 auto;
             font-size: 13px;
-            line-height: 1.5;
-            color: #c9d1d9;
+            line-height: 1.55;
+            color: #1a1a1a;
         }
 
         /* H1 — stock + stage banner. */
         .memo-h1 {
-            font-size: 16px;
+            font-size: 17px;
             font-weight: 700;
-            color: #e6edf3;
-            letter-spacing: 0.3px;
+            color: #111111;
+            letter-spacing: 0.2px;
             line-height: 1.3;
             margin-bottom: 4px;
         }
         .memo-h1-meta {
             font-size: 11px;
-            color: #8b949e;
+            color: #6b6b6b;
             letter-spacing: 0.3px;
             margin-bottom: 6px;
         }
         .memo-h1-setup {
             font-size: 12px;
-            color: #c9d1d9;
+            color: #333333;
             margin-bottom: 4px;
         }
         .memo-h1-setup .memo-label {
-            color: #8b949e;
+            color: #6b6b6b;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             font-size: 10px;
@@ -2366,18 +2417,18 @@
         }
         .memo-totals {
             font-size: 11px;
-            color: #8b949e;
+            color: #6b6b6b;
             letter-spacing: 0.3px;
             margin-bottom: 18px;
             padding-top: 8px;
-            border-top: 1px solid #21262d;
+            border-top: 1px solid #e0dcce;
         }
 
         /* Section header — layer-cake scan layer. */
         .memo-section {
             padding-top: 24px;
             padding-bottom: 12px;
-            border-top: 1px solid #21262d;
+            border-top: 1px solid #e0dcce;
         }
         .memo-section:first-of-type { border-top: none; padding-top: 8px; }
         .memo-section-header {
@@ -2395,12 +2446,12 @@
             width: 14px;
             text-align: center;
             font-size: 11px;
-            color: #8b949e;
+            color: #6b6b6b;
             flex-shrink: 0;
         }
         .memo-letter-badge {
             display: inline-block;
-            background-color: #58a6ff;
+            background-color: #2a6b3b;
             color: #ffffff;
             font-weight: 700;
             font-size: 11px;
@@ -2412,36 +2463,36 @@
         .memo-section-title {
             font-size: 13px;
             font-weight: 700;
-            color: #e6edf3;
+            color: #111111;
             letter-spacing: 0.5px;
             flex-shrink: 0;
         }
         .memo-section-verdict {
             font-size: 12px;
             font-weight: 600;
-            color: #e6edf3;
+            color: #1a1a1a;
             letter-spacing: 0;
             flex-grow: 1;
             min-width: 0;
         }
         .memo-section-verdict .memo-verdict-label {
-            color: #8b949e;
+            color: #6b6b6b;
             font-weight: 400;
             font-size: 11px;
             margin-right: 4px;
         }
         .memo-section-meta {
             font-size: 11px;
-            color: #8b949e;
+            color: #6b6b6b;
             letter-spacing: 0.3px;
             flex-shrink: 0;
             margin-left: auto;
         }
         .memo-section.not-applicable .memo-letter-badge {
-            background-color: #30363d;
-            color: #8b949e;
+            background-color: #d5d0c0;
+            color: #6b6b6b;
         }
-        .memo-section.not-applicable .memo-section-title { color: #8b949e; }
+        .memo-section.not-applicable .memo-section-title { color: #6b6b6b; }
 
         /* Section body — contains sub-sections. */
         .memo-section-body {
@@ -2450,7 +2501,7 @@
             padding-left: 24px;
         }
         .memo-section.is-open .memo-section-body { display: block; }
-        .memo-section.is-open .memo-chevron { color: #c9d1d9; }
+        .memo-section.is-open .memo-chevron { color: #1a1a1a; }
 
         /* Sub-section. */
         .memo-subsection { margin-bottom: 24px; }
@@ -2458,12 +2509,12 @@
         .memo-subsection-header {
             font-size: 13px;
             font-weight: 600;
-            color: #c9d1d9;
+            color: #333333;
             letter-spacing: 0.3px;
             margin-bottom: 8px;
         }
         .memo-subsection-id {
-            color: #8b949e;
+            color: #6b6b6b;
             font-weight: 400;
             margin-right: 6px;
             font-size: 11px;
@@ -2474,8 +2525,8 @@
         .memo-para {
             margin-bottom: 12px;
             font-size: 13px;
-            line-height: 1.5;
-            color: #c9d1d9;
+            line-height: 1.55;
+            color: #1a1a1a;
         }
         .memo-bullets {
             list-style: none;
@@ -2487,15 +2538,15 @@
             position: relative;
             margin-bottom: 4px;
             font-size: 13px;
-            line-height: 1.5;
-            color: #c9d1d9;
+            line-height: 1.55;
+            color: #1a1a1a;
         }
         .memo-bullets li::before {
             content: "\2022";
             position: absolute;
             left: 6px;
             top: 0;
-            color: #484f58;
+            color: #9a9380;
         }
         .memo-bullets .memo-sub-bullets {
             list-style: none;
@@ -2509,13 +2560,13 @@
         .memo-bullets .memo-sub-bullets li::before {
             content: "\2013";
             left: 4px;
-            color: #484f58;
+            color: #9a9380;
         }
 
-        /* IAJA inline tags. */
-        .memo-tag-j { color: #d2a8ff; font-weight: 600; margin-right: 4px; }
-        .memo-tag-i { color: #79c0ff; margin-right: 4px; }
-        .memo-tag-a { color: #7ee787; font-weight: 600; margin-right: 4px; }
+        /* IAJA inline tags — darker on light surface, same hue families. */
+        .memo-tag-j { color: #6a3cc7; font-weight: 700; margin-right: 4px; }   /* purple — judgement */
+        .memo-tag-i { color: #1f6feb; font-weight: 600; margin-right: 4px; }   /* blue   — information */
+        .memo-tag-a { color: #1f7a3b; font-weight: 700; margin-right: 4px; }   /* green  — action */
 
         /* Inline rating badge. */
         .memo-inline-rating {
@@ -2525,14 +2576,14 @@
         .memo-inline-rating + .memo-rating-attr {
             margin-left: 4px;
             font-size: 10px;
-            color: #8b949e;
+            color: #6b6b6b;
             font-weight: 400;
             letter-spacing: 0.3px;
         }
         .memo-rating-attr {
             margin-left: 4px;
             font-size: 10px;
-            color: #8b949e;
+            color: #6b6b6b;
             font-weight: 400;
             letter-spacing: 0.3px;
         }
@@ -2541,7 +2592,7 @@
         .memo-kv-title {
             font-size: 12px;
             font-weight: 600;
-            color: #e6edf3;
+            color: #111111;
             letter-spacing: 0.3px;
             margin-bottom: 6px;
         }
@@ -2553,15 +2604,15 @@
             margin-bottom: 12px;
             font-size: 12px;
         }
-        .memo-kv-grid .memo-kv-label { color: #8b949e; }
-        .memo-kv-grid .memo-kv-value { color: #e6edf3; font-weight: 600; }
-        .memo-kv-grid .memo-kv-delta { color: #8b949e; font-size: 11px; }
+        .memo-kv-grid .memo-kv-label { color: #6b6b6b; }
+        .memo-kv-grid .memo-kv-value { color: #111111; font-weight: 600; }
+        .memo-kv-grid .memo-kv-delta { color: #6b6b6b; font-size: 11px; }
 
-        /* Ratings table (C.I.1, A.I detailed). */
+        /* Ratings table. */
         .memo-table-title {
             font-size: 12px;
             font-weight: 600;
-            color: #e6edf3;
+            color: #111111;
             letter-spacing: 0.3px;
             margin-bottom: 6px;
         }
@@ -2574,9 +2625,9 @@
         .memo-rtable th {
             text-align: left;
             padding: 6px 8px;
-            background-color: #161b22;
-            border-bottom: 1px solid #30363d;
-            color: #8b949e;
+            background-color: #ece8d9;
+            border-bottom: 1px solid #d9d5c8;
+            color: #333333;
             font-weight: 600;
             letter-spacing: 0.3px;
             font-size: 11px;
@@ -2584,8 +2635,8 @@
         }
         .memo-rtable td {
             padding: 5px 8px;
-            border-bottom: 1px solid #21262d;
-            color: #c9d1d9;
+            border-bottom: 1px solid #e8e3d4;
+            color: #1a1a1a;
             vertical-align: top;
         }
         .memo-rtable tr:last-child td { border-bottom: none; }
@@ -2594,17 +2645,17 @@
         .memo-callout {
             padding: 10px 14px;
             margin-bottom: 12px;
-            border-left: 3px solid #58a6ff;
-            background-color: #161b22;
+            border-left: 3px solid #9a9380;
+            background-color: #efebdc;
             font-size: 13px;
-            line-height: 1.5;
-            color: #c9d1d9;
+            line-height: 1.55;
+            color: #1a1a1a;
             border-radius: 0 4px 4px 0;
         }
-        .memo-callout.tone-judgement { border-left-color: #d2a8ff; }
-        .memo-callout.tone-action { border-left-color: #7ee787; }
-        .memo-callout.tone-risk { border-left-color: #e3b341; }
-        .memo-callout.tone-info { border-left-color: #79c0ff; }
+        .memo-callout.tone-judgement { border-left-color: #6a3cc7; }
+        .memo-callout.tone-action    { border-left-color: #1f7a3b; }
+        .memo-callout.tone-risk      { border-left-color: #b8860b; }
+        .memo-callout.tone-info      { border-left-color: #1f6feb; }
 
         @media (max-width: 820px) {
             .memo-panel { padding: 16px 18px; }
@@ -2617,14 +2668,11 @@
     </style>
 </head>
 <body>
-<!-- Floating MEMO button (belt-and-braces visibility) -->
-<button id="btn-memo-floating" onclick="toggleMemo()" style="position: fixed; top: 12px; right: 16px; z-index: 10000; background: #2ea043; color: #ffffff; border: 2px solid #1a7f37; padding: 10px 22px; font-size: 14px; font-weight: 700; letter-spacing: 0.5px; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.4); cursor: pointer; font-family: inherit;">MEMO</button>
 
     <div class="container">
         <div class="toolbar">
             <div class="toolbar-group">
                 <button class="toolbar-btn active" id="btn-expand" onclick="toggleExpandCollapse()">EXPAND</button>
-                <button class="toolbar-btn" id="btn-memo" onclick="toggleMemo()" style="background: #2ea043; color: white; border-color: #2ea043;">MEMO</button>
             </div>
             <div class="toolbar-separator"></div>
             <div class="toolbar-group">
@@ -2710,7 +2758,7 @@
                 <table id="master-table">
                     <thead>
                         <tr class="pillar-group-header">
-                            <th colspan="6"></th>
+                            <th colspan="7"></th>
                             <th colspan="2" class="group-label">Timeliness</th>
                             <th colspan="2" class="group-label">Case Strength</th>
                             <th colspan="1" class="group-label">Market Recognition</th>
@@ -2724,6 +2772,7 @@
                             <th>Stage</th>
                             <th class="map-column-header">MAP</th>
                             <th class="list-column-header">LIST</th>
+                            <th class="memo-column-header">MEMO</th>
                             <th class="pillar-column standard-col">P1<br>Technical Momentum</th>
                             <th class="pillar-column standard-col">P2<br>Market Paradigm</th>
                             <th class="pillar-column standard-col">P3<br>Fund Change</th>
@@ -4315,7 +4364,6 @@
           }
         };
         // MEMO_DATA_END
-
         // Embedded master data
         var masterData = {
             stocks: [
@@ -9662,6 +9710,7 @@
                         '<td><span class="stage-badge ' + getStageClass(stock.stage) + '">' + stock.stage + '</span></td>' +
                         '<td class="map-column-cell"><button type="button" class="map-button" onclick="openMapView(event,' + index + ')" title="Open summary MAP for ' + escapeHtml(stock.ticker) + '">MAP</button></td>' +
                         '<td class="list-column-cell"><button type="button" class="list-button" onclick="openListView(event,' + index + ')" title="Open LIST checklist for ' + escapeHtml(stock.ticker) + '">LIST</button></td>' +
+                        '<td class="memo-column-cell"><button type="button" class="memo-button" id="memo-btn-' + index + '" onclick="openMemoForStock(event,' + index + ')" title="Open MEMO for ' + escapeHtml(stock.ticker) + '">MEMO</button></td>' +
                         '<td class="pillar-column standard-col" onclick="onPillarBadgeClick(event,' + index + ',\'p1\')" style="cursor:pointer;"><span class="rating-badge ' + getRatingClass(stock.pillars.p1_technical_momentum) + '">' + stock.pillars.p1_technical_momentum + '</span></td>' +
                         '<td class="pillar-column standard-col" onclick="onPillarBadgeClick(event,' + index + ',\'p2\')" style="cursor:pointer;"><span class="rating-badge ' + getRatingClass(stock.pillars.p2_market_paradigm_fit) + '">' + stock.pillars.p2_market_paradigm_fit + '</span></td>' +
                         '<td class="pillar-column standard-col" onclick="onPillarBadgeClick(event,' + index + ',\'p3\')" style="cursor:pointer;"><span class="rating-badge ' + getRatingClass(stock.pillars.p3_fundamental_change) + '">' + stock.pillars.p3_fundamental_change + '</span></td>' +
@@ -9689,7 +9738,7 @@
                         pillarHtml = '<div style="color:#ff6b6b;padding:12px;">Error rendering pillars for ' + stock.ticker + ': ' + pillarErr.message + '</div>';
                     }
 
-                    treeRow.innerHTML = '<td colspan="28"><div class="tree-container expanded">' +
+                    treeRow.innerHTML = '<td colspan="29"><div class="tree-container expanded">' +
                         '<div class="pillars-sticky-header" id="pillars-sticky-' + index + '">' +
                         '<h3 style="font-size: 14px; margin-bottom: 12px;">6 Pillars — ' + escapeHtml(stock.ticker) + '</h3>' +
                         '<div class="pillars-row">' + pillarHtml + '</div>' +
@@ -9702,7 +9751,7 @@
                 } catch (rowErr) {
                     // Append an error row so the user sees something
                     var errRow = document.createElement('tr');
-                    errRow.innerHTML = '<td colspan="28" style="color:#ff6b6b;padding:12px;">Error rendering ' + (stock ? stock.ticker : 'unknown') + ': ' + rowErr.message + '</td>';
+                    errRow.innerHTML = '<td colspan="29" style="color:#ff6b6b;padding:12px;">Error rendering ' + (stock ? stock.ticker : 'unknown') + ': ' + rowErr.message + '</td>';
                     tbody.appendChild(errRow);
                 }
             });
@@ -9768,37 +9817,50 @@
         // MEMO_JS_START — MEMO view toggle + renderer
         // =====================================================================
 
-        function toggleMemo() {
-            var btn = document.getElementById('btn-memo');
-            var floatBtn = document.getElementById('btn-memo-floating');
-            var nowOn = !(btn && btn.classList.contains('active'));
-            if (btn) btn.classList.toggle('active', nowOn);
-            if (floatBtn) {
-                floatBtn.style.background = nowOn ? '#1a7f37' : '#2ea043';
-                floatBtn.textContent = nowOn ? 'MEMO ON' : 'MEMO';
+        // Per-stock MEMO trigger — opens a single stock's memo panel inline.
+        // Coexists with pillars: when a row is in memo mode, pillars are hidden
+        // for that row only (via tr.tree-row.showing-memo CSS).
+        function openMemoForStock(evt, stockIndex) {
+            if (evt) {
+                evt.stopPropagation();
+                if (evt.preventDefault) evt.preventDefault();
             }
-            document.body.classList.toggle('show-memo', nowOn);
+            var masterRows = document.querySelectorAll('tbody tr.expand-toggle');
+            var masterRow = masterRows && masterRows[stockIndex];
+            var treeRow = document.getElementById('tree-' + stockIndex);
+            var memoBtn = document.getElementById('memo-btn-' + stockIndex);
+            if (!masterRow || !treeRow) { return; }
+
+            // Ensure the row is expanded so tree-row is actually visible.
+            if (!masterRow.classList.contains('expanded')) {
+                masterRow.classList.add('expanded');
+                treeRow.classList.add('expanded');
+                masterRow.classList.add('active-stock');
+                var stickyHeader = document.getElementById('pillars-sticky-' + stockIndex);
+                if (stickyHeader) stickyHeader.classList.add('is-sticky');
+            }
+
+            // Toggle memo mode on this tree-row.
+            var nowOn = !treeRow.classList.contains('showing-memo');
+            treeRow.classList.toggle('showing-memo', nowOn);
+            if (memoBtn) memoBtn.classList.toggle('is-active', nowOn);
+
             if (nowOn) {
-                // Render all memos into their panels
-                renderAllMemos();
-                // Force all tree-rows visible by marking their preceding stock row as expanded
-                document.querySelectorAll('tr.tree-row').forEach(function(tr) {
-                    var prev = tr.previousElementSibling;
-                    if (prev && !prev.classList.contains('expanded')) {
-                        prev.classList.add('expanded');
-                        prev.setAttribute('data-memo-force-expanded', '1');
-                    }
-                });
-            } else {
-                // Restore any rows we force-expanded (leave user-expanded rows alone)
-                document.querySelectorAll('tr[data-memo-force-expanded="1"]').forEach(function(tr) {
-                    tr.classList.remove('expanded');
-                    tr.removeAttribute('data-memo-force-expanded');
-                });
+                renderOneMemo(stockIndex);
             }
             updateStickyPositions();
         }
 
+        function renderOneMemo(stockIndex) {
+            if (!masterData || !masterData.stocks) return;
+            var stock = masterData.stocks[stockIndex];
+            if (!stock) return;
+            var panel = document.getElementById('memo-panel-' + stockIndex);
+            if (!panel) return;
+            renderMemoPanelForStock(stock, panel);
+        }
+
+        // Legacy renderAllMemos kept for compatibility — not called from UI now.
         function renderAllMemos() {
             if (typeof memoData === 'undefined' || !memoData) return;
             if (!masterData || !masterData.stocks) return;
@@ -9808,6 +9870,7 @@
                 renderMemoPanelForStock(stock, panel);
             });
         }
+
 
         function pickMemoForStock(stock) {
             if (typeof memoData === 'undefined' || !memoData) return null;
