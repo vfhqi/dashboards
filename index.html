@@ -2504,6 +2504,54 @@
         .memo-section.is-open .memo-section-body { display: block; }
         .memo-section.is-open .memo-chevron { color: #1a1a1a; }
 
+        /* ---- Collapsible sub-section / topic / topic-block / ratings-table ---- */
+        /* Default: collapsible containers are collapsed.  .is-open reveals the body. */
+        .memo-subsection-body,
+        .memo-topic-body,
+        .memo-topic-block-body,
+        .memo-rtable-wrap-body { display: none; }
+        .memo-subsection.is-open > .memo-subsection-body,
+        .memo-topic.is-open > .memo-topic-body,
+        .memo-topic-block.is-open > .memo-topic-block-body,
+        .memo-rtable-wrap.is-open > .memo-rtable-wrap-body { display: block; }
+
+        /* Clickable headers — cursor + light hover tint */
+        .memo-section-header:not([aria-disabled="true"]),
+        .memo-subsection-header[data-toggle],
+        .memo-topic-header[data-toggle],
+        .memo-rtable-title[data-toggle] {
+            cursor: pointer;
+            user-select: none;
+        }
+        .memo-subsection-header[data-toggle]:hover,
+        .memo-topic-header[data-toggle]:hover,
+        .memo-rtable-title[data-toggle]:hover {
+            background-color: rgba(0,0,0,0.03);
+        }
+
+        /* Triangle caret — uses ▸ (\\u25B8) glyph; rotates 90deg via CSS when open. */
+        .memo-caret {
+            display: inline-block;
+            width: 10px;
+            margin-right: 6px;
+            color: #8a8a8a;
+            font-size: 10px;
+            line-height: 1;
+            text-align: center;
+            transition: transform 0.12s ease-out;
+            transform: rotate(0deg);
+            vertical-align: baseline;
+        }
+        .memo-subsection.is-open > .memo-subsection-header .memo-caret,
+        .memo-topic.is-open > .memo-topic-header .memo-caret,
+        .memo-topic-block.is-open > .memo-topic-block-header .memo-caret,
+        .memo-rtable-wrap.is-open > .memo-rtable-title .memo-caret {
+            transform: rotate(90deg);
+            color: #1a1a1a;
+        }
+
+        /* EXPAND ALL / COLLAPSE ALL toolbar buttons share existing toolbar-btn style */
+
         /* Sub-section. */
         .memo-subsection { margin-bottom: 24px; }
         .memo-subsection:last-child { margin-bottom: 0; }
@@ -2959,7 +3007,83 @@
         }
 
         /* MEMO_CSS_END */
-    </style>
+    
+        /* === MEMO View — pillar_block / family_block (added v3.0 schema) === */
+        .memo-pillar-block {
+            margin: 16px 0;
+        }
+        .memo-pillar-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 0;
+            border-bottom: 1px solid #21262d;
+            margin-bottom: 10px;
+        }
+        .memo-pillar-id {
+            font-weight: 700;
+            font-size: 12px;
+            color: #58a6ff;
+            background: rgba(88, 166, 255, 0.10);
+            padding: 2px 8px;
+            border-radius: 3px;
+            letter-spacing: 0.4px;
+        }
+        .memo-pillar-label {
+            font-weight: 600;
+            font-size: 13px;
+            color: #e6edf3;
+            flex: 1;
+        }
+        .memo-pillar-rating {
+            margin-left: auto;
+        }
+        .memo-pillar-body {
+            padding-left: 6px;
+        }
+        .memo-family-block {
+            margin: 12px 0 12px 12px;
+            padding: 8px 12px 8px 14px;
+            border-left: 2px solid #30363d;
+            background: rgba(22, 27, 34, 0.45);
+            border-radius: 0 4px 4px 0;
+        }
+        .memo-family-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 6px;
+        }
+        .memo-family-badge {
+            font-weight: 700;
+            font-size: 11px;
+            color: #d2a8ff;
+            background: rgba(210, 168, 255, 0.10);
+            padding: 1px 6px;
+            border-radius: 3px;
+            letter-spacing: 0.3px;
+        }
+        .memo-family-label {
+            font-weight: 600;
+            font-size: 12px;
+            color: #c9d1d9;
+            flex: 1;
+        }
+        .memo-family-rating {
+            margin-left: auto;
+        }
+        .memo-family-body {
+            padding-left: 2px;
+        }
+        /* tighten BLUF/SUMMARY when nested inside pillar/family containers */
+        .memo-pillar-body .memo-bluf,
+        .memo-family-body .memo-bluf {
+            font-size: 12px;
+            margin: 4px 0 8px 0;
+            padding: 4px 8px;
+        }
+
+        </style>
 </head>
 <body>
 
@@ -6173,1237 +6297,941 @@
                       "target_words": 0
                     },
                     {
-                      "id": "C.II",
-                      "title": "Investment case write-up",
+                      "id": "C.II.1",
+                      "title": "Technical Strength (P1)",
                       "heading_level": 3,
                       "blocks": [
                         {
-                          "type": "topic",
-                          "id": "C.II.1",
-                          "title": "Technical Strength (Pillar 1)",
-                          "word_target": 1500,
-                          "bluf": "**P1 rated B: Stage 2 advance intact; 7/8 Minervini criteria pass; RS leadership confirmed across breadth and timeframe; residual caveats on late-entry, crowding and one consistency miss.** #J",
-                          "sub_topics": [
-                            {
-                              "id": "C.II.1.1",
-                              "title": "Minervini dimensions — price vs 200D/150D/50D MA",
-                              "rating": "B",
-                              "word_target": 180,
-                              "bluf": "**Price stacks above all three MAs — structural long-regime signal confirmed at Triaging.** #J",
-                              "bullets": [
-                                {
-                                  "text": "**Stage 2 advance validated — MA stacking carries institutional conviction, not retail momentum.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "Last EUR 61.20 vs 200D 48.95 (+25%), 150D 52.08 (+18%), 50D 56.41 (+8%) — positive separation at every tier. #I",
-                                      "iaja": "I"
-                                    },
-                                    {
-                                      "text": "(i) Distance from 50D is healthy for continuation; (ii) not extended, not compressed; (iii) spread consistent with mid-trend position. #A",
-                                      "iaja": "A"
-                                    },
-                                    {
-                                      "text": "Breakout above 50D occurred on 11-Mar-26 and the stock has not re-tested from below — a clean structural signature. #I",
-                                      "iaja": "I"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "text": "**Stacking discipline is the durable signature of a real bull regime — not a technical artefact or short-term flow.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "Pattern held through the mid-March drawdown — a meaningful stress test passed without loss of any MA. #I",
-                                      "iaja": "I"
-                                    },
-                                    {
-                                      "text": "Contrast: automation peers (Fanuc, ABB Robotics) lost 50D support on the same move, sharpening the relative read. #A",
-                                      "iaja": "A"
-                                    },
-                                    {
-                                      "text": "In 34 Stage 2 analogues we track, clean MA-stack preservation through a macro shock is an 80%+ predictor of continuation. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "text": "**Risk: a break of 50D (EUR 56.41) is the first technical warning ahead of the 42.30 hard stop.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "Watch volume on any test of the 50D — high-volume breach would force re-assessment of the setup. #A",
-                                      "iaja": "A"
-                                    },
-                                    {
-                                      "text": "Low-volume touches of 50D would be treated as opportunities to size up rather than exit triggers. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "summary_text": "Four dimensions clean; MA architecture intact, institutional in character, and tested by the mid-March macro shock."
-                            },
-                            {
-                              "id": "C.II.1.2",
-                              "title": "Minervini dimensions — 200D slope and 150D consistency",
-                              "rating": "B",
-                              "word_target": 180,
-                              "bluf": "**200D slope is positive but 150D/200D relationship has not been consistent for the full L12M — the only miss in the 8-point.** #J",
-                              "bullets": [
-                                {
-                                  "text": "**Slope is the right direction of travel — base-building volatility explains the consistency miss, not underlying weakness.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "200D 1M ago EUR 48.22 → today 48.95 — a firm positive slope, +1.5% over 30 sessions. #I",
-                                      "iaja": "I"
-                                    },
-                                    {
-                                      "text": "(i) Only 10 of 12 months saw 150D > 200D; (ii) the miss concentrated in the Q4-25 correction; (iii) no other window shows the same pattern. #A",
-                                      "iaja": "A"
-                                    },
-                                    {
-                                      "text": "Read: the miss is a tape event from a specific shock, not evidence of structural trend uncertainty. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "text": "**Provisional view: the consistency miss will roll off by May-26 on a continuation of the current trend.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "If 150D holds above 200D through April, the full 8-point PASS is mechanical by mid-May. #A",
-                                      "iaja": "A"
-                                    },
-                                    {
-                                      "text": "Conservative path: assume one more month of overlap then treat as a confirmed pass. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "text": "**Contra: a re-test of the Q4-25 lows would re-open the consistency question and could degrade P1 to C.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "Monitoring this through a rolling 150D/200D separation chart; alert threshold set at 0.5% narrowing. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "summary_text": "Near-miss, not a structural flag; tracking forward through May-26 with an explicit alert threshold."
-                            },
-                            {
-                              "id": "C.II.1.3",
-                              "title": "Minervini dimensions — range positioning (52W high/low, +30% / −25%)",
-                              "rating": "B",
-                              "word_target": 170,
-                              "bluf": "**Well in the top quartile of the 52W range with a comfortable buffer off the 52W low.** #J",
-                              "bullets": [
-                                {
-                                  "text": "**Range position supports continuation — neither too close to the high nor extended past common resistance bands.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "Price −3.2% below 52W high (EUR 63.20) and +79% above 52W low (EUR 34.10). #I",
-                                      "iaja": "I"
-                                    },
-                                    {
-                                      "text": "(i) Setup is a high-tight handle pattern; (ii) breakout was on +2.1x average volume; (iii) base duration 6 weeks — textbook Minervini range. #A",
-                                      "iaja": "A"
-                                    },
-                                    {
-                                      "text": "In our analogue set, 78% of high-tight handles that break out on ≥2x volume continue for at least 20% further within 12 weeks. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "text": "**Contra: proximity to the 52W high raises late-entry risk — sizing should reflect this rather than avoid the position.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "Starter position only on any new high; full size on a constructive pullback to 50D. #A",
-                                      "iaja": "A"
-                                    },
-                                    {
-                                      "text": "If the breakout fails within 5 sessions, treat as a failed setup and exit to full cash on the line. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "summary_text": "Range positioning supports a Stage 2 read; late-entry risk manageable through a staged entry and a hard failure rule."
-                            },
-                            {
-                              "id": "C.II.1.4",
-                              "title": "Relative strength — absolute and peer-relative",
-                              "rating": "A",
-                              "word_target": 180,
-                              "bluf": "**RS strongly positive across all timeframes — outperforming the STOXX 600 Industrials by 31ppts YTD.** #J",
-                              "bullets": [
-                                {
-                                  "text": "**RS breadth — across 1W/1M/3M and vs multiple peer sets — is the single highest-conviction signal in the set.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "+47% YTD vs STOXX 600 Industrials +16%; +18% L3M vs Fanuc/ABB Robotics/Rockwell basket +5%. #I",
-                                      "iaja": "I"
-                                    },
-                                    {
-                                      "text": "(i) Not a single-name anomaly — NVTK leads the automation cohort; (ii) institutional flow (13F data) reinforces. #A",
-                                      "iaja": "A"
-                                    },
-                                    {
-                                      "text": "Top-20 European institutional holders show net +2.3% position increase in Q1-26 — direct flow confirmation. #I",
-                                      "iaja": "I"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "text": "**Risk: crowded RS leader — any broader risk-off rotation would hit leadership names first.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "Iran conflict overlay raises this probability through Q2-26 — sizing needs discipline. #A",
-                                      "iaja": "A"
-                                    },
-                                    {
-                                      "text": "Historical: 2018 and 2022 corrections saw top-decile RS stocks underperform by 400-600bps in first 30 days of sell-off. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "text": "**The A rating is earned by breadth across metric, timeframe and peer set — rarely achieved in the universe.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "Of ~1,300 European universe stocks, 17 currently satisfy this threshold — ~1.3% strike rate. #I",
-                                      "iaja": "I"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "summary_text": "RS leadership confirmed and institutionally sponsored; position management must respect its crowding risk through sizing rules."
-                            },
-                            {
-                              "id": "C.II.1.5",
-                              "title": "Healthy-pullback tests in current run",
-                              "rating": "A",
-                              "word_target": 170,
-                              "bluf": "**Three pullbacks to 21D EMA since the breakout all held — a clean institutional-accumulation signature.** #J",
-                              "bullets": [
-                                {
-                                  "text": "**Three consecutive holds of a tight-band MA is a near-ideal Stage 2 accumulation read.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "Volume profile compressed on each pullback, expanded on each bounce — textbook. #I",
-                                      "iaja": "I"
-                                    },
-                                    {
-                                      "text": "(i) No single pullback exceeded 6%; (ii) duration of each was 3-5 sessions; (iii) each closed in the upper half of the intraday range. #I",
-                                      "iaja": "I"
-                                    },
-                                    {
-                                      "text": "Cross-reference: the first two pullback-bounces coincided with the March sell-side upgrade window — institutional positioning confirmed in real time. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "text": "**Next test is the key watchpoint — a failure to hold 21D would be the first meaningful warning.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "Set alert at 21D EMA for notification; a close below 21D triggers a size-halving discussion, not an automatic exit. #A",
-                                      "iaja": "A"
-                                    },
-                                    {
-                                      "text": "Two consecutive closes below 21D would escalate to a formal trim decision against the ESA pillar ratings. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "summary_text": "Pullback discipline is a feature, not a bug — supports \"strong hands\" thesis with a clear forward watchpoint."
-                            },
-                            {
-                              "id": "C.II.1.6",
-                              "title": "Months qualifying in L12M",
-                              "rating": "B",
-                              "word_target": 150,
-                              "bluf": "**9 of 12 months qualify under Stage 2 criteria — consistent but not perfect.** #J",
-                              "bullets": [
-                                {
-                                  "text": "**Consistency is good but not exceptional — the three miss-months matter for the full score.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "Misses clustered in Q4-25 — same window as the 150D consistency miss, consistent single-shock narrative. #I",
-                                      "iaja": "I"
-                                    },
-                                    {
-                                      "text": "(i) No evidence of repeated failure pattern; (ii) each miss had a clear macro trigger (ECB guidance shift, Iran flash event, December liquidity window). #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "text": "**Forward: on current trajectory the 12/12 score is reached by August-26, clearing the consistency bar ahead of any DD-stage position expansion.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "Track monthly through the stock framework scorecard. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "summary_text": "Consistency passes the bar; clustering of misses suggests a single shock, not a weak trend; 12/12 reachable by August."
-                            },
-                            {
-                              "id": "C.II.1.7",
-                              "title": "Relative strength rank — extension score",
-                              "rating": "C",
-                              "word_target": 150,
-                              "bluf": "**RS Rank at 62 — below the 70 threshold per the Minervini extension — the single drag on an otherwise strong P1.** #J",
-                              "bullets": [
-                                {
-                                  "text": "**Sub-threshold RS Rank is the reason P1 is a B not an A — a discrete, observable gap.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "Placeholder data pending full RS Breadth dashboard reconciliation. #I",
-                                      "iaja": "I"
-                                    },
-                                    {
-                                      "text": "(i) On provisional scoring, 7/9 criteria met; (ii) closing the gap requires ~2 more months of outperformance at the current rate. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "text": "**This is the highest-probability upgrade path from P1=B to P1=A over the next 8-12 weeks.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "Every +5% monthly relative to STOXX 600 Industrials adds ~3 points to RS Rank on the current methodology. #A",
-                                      "iaja": "A"
-                                    },
-                                    {
-                                      "text": "Reconciliation with the RS Breadth dashboard is the blocker — separately tracked as task #28. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "summary_text": "A resolvable gap rather than a structural flaw — tracking into May-26 with a specific upgrade path defined."
-                            },
-                            {
-                              "id": "C.II.1.8",
-                              "title": "Volume profile — base-building and breakout",
-                              "rating": "B",
-                              "word_target": 160,
-                              "bluf": "**Breakout volume 2.1x 20D average confirmed institutional participation; base volume pattern well-behaved.** #J",
-                              "bullets": [
-                                {
-                                  "text": "**Volume architecture is congruent with a real Stage 2 start — not a short-squeeze or thin-tape artefact.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "Base showed volume dry-up into the pivot — the pre-launch signature Minervini calls \"quiet before the storm\". #I",
-                                      "iaja": "I"
-                                    },
-                                    {
-                                      "text": "(i) Breakout session +2.1x volume; (ii) three follow-through days in the first two weeks; (iii) no distribution days in the 10 sessions after breakout. #A",
-                                      "iaja": "A"
-                                    },
-                                    {
-                                      "text": "Volume pattern matches 3 of the 4 highest-conviction prior Stage 2 starts in our analogue set. #I",
-                                      "iaja": "I"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "text": "**Contra: +2.1x is strong but not extreme — some prior high-quality starts showed +3-4x — leaves a modest degree of uncertainty on sponsorship depth.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "Mitigated by the three follow-through days and the absence of distribution; net-net a constructive read. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "summary_text": "Volume profile clean with minor reservations on breakout magnitude; no red flags on institutional sponsorship."
-                            },
-                            {
-                              "id": "C.II.1.9",
-                              "title": "Stop discipline — 50D hard stop and position sizing",
-                              "rating": "B",
-                              "word_target": 160,
-                              "bluf": "**50D hard stop at EUR 42.30 gives 12% risk from current levels — sizing framework calibrated.** #J",
-                              "bullets": [
-                                {
-                                  "text": "**Stop placement respects the Stage 2 structure — below the MA that has held every pullback.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "A 12% R-multiple at current levels; trim zones pre-defined at +15% / +30% from entry. #I",
-                                      "iaja": "I"
-                                    },
-                                    {
-                                      "text": "(i) Stop is a hard exit, not a trailing stop; (ii) re-entry rules documented if whipsaw occurs; (iii) re-entry requires a fresh Stage 2 setup, not just a bounce. #A",
-                                      "iaja": "A"
-                                    },
-                                    {
-                                      "text": "Position-sizing rule: 2% portfolio risk at entry → starter position EUR 800k of NAV, half-size full at pullback. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "text": "**Stop-at-50D is the right level for this setup but must be reviewed at ESA once dual-segment modelling is done.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "If ESA identifies a fundamental event window (e.g. 24-Apr earnings), consider earnings-stop adjustments separately. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "summary_text": "Stop discipline codified with a defined sizing rule; execution risk is the residual to manage."
-                            },
-                            {
-                              "id": "C.II.1.10",
-                              "title": "Residual caveats and watchpoints",
-                              "rating": "B",
-                              "word_target": 200,
-                              "bluf": "**Three residual caveats: late-entry risk, crowded RS leader, unresolved consistency miss — none are disqualifying at Triaging.** #J",
-                              "bullets": [
-                                {
-                                  "text": "**Late-entry risk is the primary technical concern — mitigated by disciplined sizing and stop placement.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "+47% YTD move may partially front-run order data; risk of a mean-reversion leg before resumption. #I",
-                                      "iaja": "I"
-                                    },
-                                    {
-                                      "text": "(i) Starter position justified; (ii) full size deferred until a constructive pullback to 50D; (iii) adds resumed only on confirmed bounce. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "text": "**Crowded RS leadership amplifies drawdown risk in a broader risk-off rotation.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "Iran conflict overlay keeps this live through Q2-26; monitor STOXX 600 Industrials breadth daily. #A",
-                                      "iaja": "A"
-                                    },
-                                    {
-                                      "text": "Cross-reference with the Pullback Monitor signals (see task-pipeline) before adding. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "text": "**Consistency miss on 150D/200D will mechanically roll off if current trend holds through May-26.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "This is the lowest-concern of the three — a timing issue rather than a structural one. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "text": "**Technical setup net-net: sufficient for a starter position at Triaging depth; full conviction requires ESA fundamental closure.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "Decision gate: proceed to ESA on pillar 1 alone if pillars 3/4 cleanly rated; standalone P1=B is not a buy signal. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "summary_text": "Three live caveats, none disqualifying — management through sizing, stops, and a clear decision gate for ESA progression."
-                            }
-                          ],
-                          "summary": "**NVTK technicals support entry with discipline — Stage 2 structure, clean volume, stacked MAs, institutional flow confirmation.** The gap to A is the RS Rank extension (62 vs 70) and the 150D consistency miss; both are resolvable, not structural. Sizing should respect late-entry risk; a staged entry with a 50D hard stop at EUR 42.30 codifies the discipline. #J",
+                          "type": "bluf",
+                          "text": "P1 rated B: Stage 2 advance intact; 7/8 Minervini criteria pass; RS leadership confirmed across breadth and timeframe; residual caveats on late-entry, crowding and one consistency miss.",
                           "ratings": []
                         },
                         {
-                          "type": "topic",
-                          "id": "C.II.2",
-                          "title": "Fundamental Investment Case (Pillars 3 + 4)",
-                          "word_target": 1500,
-                          "bluf": "**P3 rated B, P4 rated C: credible triple-ratchet step-up supported by structural demand with independent customer corroboration; dual-segment structure drives the lower P4 rating and defines the ESA agenda.** #J",
-                          "sub_topics": [
+                          "type": "pillar_block",
+                          "pillar_id": "p1",
+                          "label": "Technical Momentum",
+                          "rating": "B",
+                          "blocks": [
                             {
-                              "id": "C.II.2.1",
-                              "title": "AF#1 Required Case Outputs — Triple ratchet step-up",
-                              "rating": "B",
-                              "word_target": 180,
-                              "bluf": "**Order intake +34% YoY and margin trajectory to 2028 underwrite a credible triple-ratchet EPS path.** #J",
-                              "bullets": [
+                              "type": "bullet_group",
+                              "items": [
                                 {
-                                  "text": "**Demand-driven fundamental change is validated at Triaging depth — outputs are consistent with a durable step-up, not a one-quarter surprise.** #J",
                                   "iaja": "J",
-                                  "children": [
+                                  "rating": "B",
+                                  "text": "Minervini dimensions — price vs 200D/150D/50D MA — Price stacks above all three MAs — structural long-regime signal confirmed at Triaging.",
+                                  "sub": [
                                     {
-                                      "text": "L12M orders EUR 14.3bn (+34% YoY); backlog 2.1x L12M revenue. #I",
-                                      "iaja": "I"
+                                      "iaja": "I",
+                                      "text": "Last EUR 61.20 vs 200D 48.95 (+25%), 150D 52.08 (+18%), 50D 56.41 (+8%) — positive separation at every tier."
                                     },
                                     {
-                                      "text": "(i) EBIT margin trajectory 11.5% (2025A) → 15.5% (2028E); (ii) EPS CAGR 16% through 2028; (iii) explicit margin path in guidance supported by fixed-cost absorption math. #I",
-                                      "iaja": "I"
-                                    },
-                                    {
-                                      "text": "Margin bridge decomposition: volume absorption +220bps, mix shift +180bps, price +100bps, offsetting +100bps input cost inflation. #A",
-                                      "iaja": "A"
+                                      "iaja": "A",
+                                      "text": "(i) Distance from 50D is healthy for continuation; (ii) not extended, not compressed; (iii) spread consistent with mid-trend position."
                                     }
                                   ]
                                 },
                                 {
-                                  "text": "**The three ratchets — volume, mix, price — are observable in the order book, not just in guidance.** #J",
                                   "iaja": "J",
-                                  "children": [
+                                  "rating": "B",
+                                  "text": "Minervini dimensions — 200D slope and 150D consistency — 200D slope is positive but 150D/200D relationship has not been consistent for the full L12M — the only miss in the 8-point.",
+                                  "sub": [
                                     {
-                                      "text": "Volume +18%, mix (Automation share 65%→72%) +180bps of margin, price +3% YoY. #A",
-                                      "iaja": "A"
+                                      "iaja": "I",
+                                      "text": "200D 1M ago EUR 48.22 → today 48.95 — a firm positive slope, +1.5% over 30 sessions."
                                     },
                                     {
-                                      "text": "Each ratchet has a 2026 H2 proof point: volume in order conversion rate, mix in segment reporting, price in contract renewal data. #A",
-                                      "iaja": "A"
+                                      "iaja": "A",
+                                      "text": "(i) Only 10 of 12 months saw 150D > 200D; (ii) the miss concentrated in the Q4-25 correction; (iii) no other window shows the same pattern."
                                     }
                                   ]
                                 },
                                 {
-                                  "text": "**Residual: order → revenue conversion timing risk; 6-9 month lag means 2026 H2 is the key proof point for the 2027 consensus.** #J",
                                   "iaja": "J",
-                                  "children": [
+                                  "rating": "B",
+                                  "text": "Minervini dimensions — range positioning (52W high/low, +30% / −25%) — Well in the top quartile of the 52W range with a comfortable buffer off the 52W low.",
+                                  "sub": [
                                     {
-                                      "text": "If Q2-26 orders re-accelerate rather than plateau, 2027 consensus has 8-12% upside. #A",
-                                      "iaja": "A"
+                                      "iaja": "I",
+                                      "text": "Price −3.2% below 52W high (EUR 63.20) and +79% above 52W low (EUR 34.10)."
                                     },
                                     {
-                                      "text": "If Q2-26 orders soften, 2027 consensus is at risk and the B rating is under pressure toward C. #A",
-                                      "iaja": "A"
+                                      "iaja": "A",
+                                      "text": "(i) Setup is a high-tight handle pattern; (ii) breakout was on +2.1x average volume; (iii) base duration 6 weeks — textbook Minervini range."
                                     }
                                   ]
+                                },
+                                {
+                                  "iaja": "J",
+                                  "rating": "A",
+                                  "text": "Relative strength — absolute and peer-relative — RS strongly positive across all timeframes — outperforming the STOXX 600 Industrials by 31ppts YTD.",
+                                  "sub": [
+                                    {
+                                      "iaja": "I",
+                                      "text": "+47% YTD vs STOXX 600 Industrials +16%; +18% L3M vs Fanuc/ABB Robotics/Rockwell basket +5%."
+                                    },
+                                    {
+                                      "iaja": "A",
+                                      "text": "(i) Not a single-name anomaly — NVTK leads the automation cohort; (ii) institutional flow (13F data) reinforces."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "iaja": "J",
+                                  "rating": "A",
+                                  "text": "Healthy-pullback tests in current run — Three pullbacks to 21D EMA since the breakout all held — a clean institutional-accumulation signature.",
+                                  "sub": [
+                                    {
+                                      "iaja": "I",
+                                      "text": "Volume profile compressed on each pullback, expanded on each bounce — textbook."
+                                    },
+                                    {
+                                      "iaja": "I",
+                                      "text": "(i) No single pullback exceeded 6%; (ii) duration of each was 3-5 sessions; (iii) each closed in the upper half of the intraday range."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "iaja": "J",
+                                  "rating": "B",
+                                  "text": "Months qualifying in L12M — 9 of 12 months qualify under Stage 2 criteria — consistent but not perfect.",
+                                  "sub": [
+                                    {
+                                      "iaja": "I",
+                                      "text": "Misses clustered in Q4-25 — same window as the 150D consistency miss, consistent single-shock narrative."
+                                    },
+                                    {
+                                      "iaja": "A",
+                                      "text": "(i) No evidence of repeated failure pattern; (ii) each miss had a clear macro trigger (ECB guidance shift, Iran flash event, December liquidity window)."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "iaja": "A",
+                                  "rating": "B",
+                                  "text": "Plus 4 further dimensions covered in C.I.1 ratings table — full Minervini scoring grid attached."
                                 }
-                              ],
-                              "summary_text": "AF#1 rated B on outputs clarity and credibility; conversion timing is the residual and Q2-26 is the key dated milestone."
-                            },
-                            {
-                              "id": "C.II.2.2",
-                              "title": "AF#2 Required Case Inputs — Structural demand tailwind",
-                              "rating": "A",
-                              "word_target": 180,
-                              "bluf": "**EU Chips Act, US IRA reshoring and capacity shortage combine into a multi-year demand tailwind — rare breadth of driver alignment.** #J",
-                              "bullets": [
-                                {
-                                  "text": "**Three structurally reinforcing drivers is the strongest A-rated inputs case in the current pipeline.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "EU Chips Act: EUR 43bn committed, +EUR 8bn incremental capex for automation customers through 2027. #I",
-                                      "iaja": "I"
-                                    },
-                                    {
-                                      "text": "(i) US IRA reshoring: +EUR 12bn automation TAM through 2028; (ii) capacity shortage: 18-month lead times at top 5 customers; (iii) NVTK capture rate on new builds ~8%. #A",
-                                      "iaja": "A"
-                                    },
-                                    {
-                                      "text": "Cross-triangulation: NVTK guidance lines up with customer capex disclosures from TSMC, Intel, Samsung and STMicro — independent corroboration. #I",
-                                      "iaja": "I"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "text": "**Contra: policy reversal risk post-2026 US election; single-election exposure on ~25% of incremental TAM.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "Scenario-weighted case still delivers +14% CAGR even under adverse policy outcome (vs +16% base). #A",
-                                      "iaja": "A"
-                                    },
-                                    {
-                                      "text": "EU Chips Act has bipartisan structural support and is less exposed — the robust 75% of the driver set. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "text": "**The breadth of driver alignment is what justifies A — single-driver names rarely clear this bar.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "Of prior A-rated inputs cases in our sample, 11 of 13 achieved >15% EPS CAGR over the subsequent 3 years. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "summary_text": "AF#2 rated A on driver breadth with independent customer corroboration; policy risk priced but not disqualifying."
-                            },
-                            {
-                              "id": "C.II.2.3",
-                              "title": "AF#3 Profitable setup — Demand-driven EPSU, no false-friend overlap",
-                              "rating": "B",
-                              "word_target": 170,
-                              "bluf": "**Demand-driven Earnings Power Step-Up setup, clean of false-friend overlaps (no currency, no pandemic echo, no one-off destocking benefit).** #J",
-                              "bullets": [
-                                {
-                                  "text": "**Setup integrity is high — earnings change is driven by real unit economics, not accounting or cyclical noise.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "No FX tailwind (EUR-neutral customer mix); no pandemic base effect (2022 baseline already clean). #I",
-                                      "iaja": "I"
-                                    },
-                                    {
-                                      "text": "(i) Destocking completed Q3-24; (ii) no benefit from inventory build; (iii) price up modestly, not aggressively; (iv) no M&A distortion. #A",
-                                      "iaja": "A"
-                                    },
-                                    {
-                                      "text": "Underlying operating leverage math: 3.5% revenue growth → 8% EPS growth at current mix; 18% revenue growth → 22-28% EPS growth given operating deleverage reversal. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "text": "**The setup pattern matches 60-70% of our historical high-conviction EPSU cases — high prior on success.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "Analogue matching: similar triple-ratchet setups in Dassault Systemes (2016), Siemens Healthineers (2019), Sartorius (2020). #I",
-                                      "iaja": "I"
-                                    },
-                                    {
-                                      "text": "(i) 2/3 analogues delivered 20%+ 3Y EPS CAGR; (ii) the one miss underperformed due to mix reversal, the specific risk we model here. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "summary_text": "Setup integrity clean; no identified false-friend overlap; analogue-base supports a moderately high prior."
-                            },
-                            {
-                              "id": "C.II.2.4",
-                              "title": "AF#4 Simplicity guardrails — Dual-segment structure",
-                              "rating": "C",
-                              "word_target": 170,
-                              "bluf": "**Dual-segment (Automation 65% + Legacy 35%) adds analytical complexity — Simplicity rated C, the weakest building block.** #J",
-                              "bullets": [
-                                {
-                                  "text": "**Dual-segment structure is the single biggest Triaging-to-ESA transition risk — depth of modelling must increase materially.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "Segment margins diverge: Automation ~18%, Legacy ~6% — blended read obscures. #I",
-                                      "iaja": "I"
-                                    },
-                                    {
-                                      "text": "(i) Legacy is in secular decline at -8%/yr; (ii) mix shift alone adds 120bps/yr of blended margin; (iii) risk of misattribution between mix vs underlying. #A",
-                                      "iaja": "A"
-                                    },
-                                    {
-                                      "text": "Modelling choice at ESA: discrete Automation and Legacy models with explicit mix-bridge, not blended assumptions. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "text": "**Actionable: require segment-level modelling at ESA — cannot rely on group-level EPS trajectory.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "Separate segment P&Ls from 2026-2030; explicit decline curve for Legacy; runway analysis on Automation capacity. #A",
-                                      "iaja": "A"
-                                    },
-                                    {
-                                      "text": "Break-point analysis: at what Legacy decline rate does group margin inflect negative? Answer: -14%/yr vs current -8% — meaningful buffer but not infinite. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "text": "**The C rating is the binding constraint on overall P4 — closing to B requires ESA-depth segment clarity.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "P4 cannot exceed a C until AF#4 upgrades — cascading effect worth making explicit to prevent confusion at ESA gate. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "summary_text": "Simplicity is the weakest building block; ESA must model segments separately with explicit break-point analysis."
-                            },
-                            {
-                              "id": "C.II.2.5",
-                              "title": "AF#5 Foundation quality — Balance sheet and cash conversion",
-                              "rating": "B",
-                              "word_target": 150,
-                              "bluf": "**Net cash position EUR 2.1bn; cash conversion 95%; foundation adequate for a capex-heavy growth phase.** #J",
-                              "bullets": [
-                                {
-                                  "text": "**Foundation quality supports the growth trajectory without financing risk — a B-rated enabler.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "Net cash EUR 2.1bn vs EUR 1.8bn 2025 capex commitment. #I",
-                                      "iaja": "I"
-                                    },
-                                    {
-                                      "text": "(i) Cash conversion 95%; (ii) no dilution risk; (iii) dividend cover 2.3x; (iv) M&A capacity EUR 3-4bn without leverage. #A",
-                                      "iaja": "A"
-                                    },
-                                    {
-                                      "text": "Debt profile: EUR 1.2bn gross debt, average maturity 6.3 years, weighted cost 2.4% — well below cost of equity. #I",
-                                      "iaja": "I"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "text": "**The gap to A on Foundation is the concentration of cash in one currency and one treasury policy; ESA-level review required.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "Treasury risk is bounded but not zero; review at ESA for completeness. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "summary_text": "Balance sheet is an enabler not a constraint; no financing risk; small treasury-policy review for ESA."
-                            },
-                            {
-                              "id": "C.II.2.6",
-                              "title": "AF#6 No seek-to-avoid — Governance, accounting, related parties",
-                              "rating": "B",
-                              "word_target": 150,
-                              "bluf": "**No red flags on governance, accounting or related-party transactions — clean at Triaging.** #J",
-                              "bullets": [
-                                {
-                                  "text": "**Standard checks pass; no features triggering the seek-to-avoid framework.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "Independent board majority; Big-4 auditor; no material RPTs disclosed. #I",
-                                      "iaja": "I"
-                                    },
-                                    {
-                                      "text": "(i) No CEO/Chair role combined; (ii) no unusual revenue recognition; (iii) working capital ratios stable; (iv) no aggressive capitalisation. #A",
-                                      "iaja": "A"
-                                    },
-                                    {
-                                      "text": "ISS / Glass Lewis governance scores both in top quartile for European industrials. #I",
-                                      "iaja": "I"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "text": "**Deeper accounting review deferred to ESA — no triggers requiring immediate attention at Triaging.** #J",
-                                  "iaja": "J"
-                                }
-                              ],
-                              "summary_text": "Governance and accounting clean; no seek-to-avoid triggers; deeper review deferred to ESA."
-                            },
-                            {
-                              "id": "C.II.2.7",
-                              "title": "AF#7 Size-limiting dynamics — TAM, market share, concentration",
-                              "rating": "B",
-                              "word_target": 160,
-                              "bluf": "**TAM EUR 180bn (L12M share 4%), top-5 customers 18% of revenue — growth headroom without concentration risk.** #J",
-                              "bullets": [
-                                {
-                                  "text": "**TAM depth and customer diversification both support scale without forcing limiting dynamics.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "Market share 4% of EUR 180bn TAM; top-5 customers 18% (no single customer >6%). #I",
-                                      "iaja": "I"
-                                    },
-                                    {
-                                      "text": "(i) Geographic spread 40% EU / 35% US / 25% ROW; (ii) end-market split: 5 verticals each 10-25%; (iii) no single vertical >25%. #A",
-                                      "iaja": "A"
-                                    },
-                                    {
-                                      "text": "Share gain math: 25bps/yr share gain alone adds 2.5-3% revenue growth without market expansion; a plausible base case. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "text": "**Contra: at +18% volume growth for 4 years, capacity becomes the ceiling; ESA must include capacity runway analysis.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "Current capacity utilisation 78%; +EUR 1.2bn capex brings it to 95% by 2027 — cliff-edge risk if demand continues to grow. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "summary_text": "No structural ceiling visible at current scale; capacity runway is the second-order constraint for ESA."
-                            },
-                            {
-                              "id": "C.II.2.8",
-                              "title": "AF#8 Case/outcome congruency — What ties the thesis together",
-                              "rating": "B",
-                              "word_target": 150,
-                              "bluf": "**The case (structural demand × margin lever × setup integrity) ties to the outcome (16% EPS CAGR, 2YF P/E 14x) coherently.** #J",
-                              "bullets": [
-                                {
-                                  "text": "**Cross-check passes: each driver maps to a measurable outcome with an observable proof point.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "Demand → orders (+34% YoY); margin → mix (Automation share); setup → EPSU (no FX/pandemic noise). #I",
-                                      "iaja": "I"
-                                    },
-                                    {
-                                      "text": "(i) No orphan drivers; (ii) each piece has a 2026 H2 validation checkpoint; (iii) the thesis would be falsifiable by any single driver breakdown. #A",
-                                      "iaja": "A"
-                                    },
-                                    {
-                                      "text": "Congruency is a higher bar than plausibility — a case can be plausible without being congruent; this one is both. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "text": "**The dependence on mix shift is the congruency-risk point to monitor.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "If Legacy revenue flattens rather than declines, mix shift slows and the 2028 margin target is at risk. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "summary_text": "Case structure coheres; mix-shift dependence is the single tight coupling to monitor."
-                            },
-                            {
-                              "id": "C.II.2.9",
-                              "title": "Driver classification — Primary / Secondary / Tertiary",
-                              "rating": "B",
-                              "word_target": 170,
-                              "bluf": "**Primary driver: structural automation demand × margin mix lever. Secondary: capacity shortage pricing. Tertiary: policy support duration.** #J",
-                              "bullets": [
-                                {
-                                  "text": "**Clean primary/secondary/tertiary hierarchy — no ambiguous \"co-primaries\" that often signal woolly thinking.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "Primary (70% of upside): automation demand + mix shift to high-margin Automation segment. #I",
-                                      "iaja": "I"
-                                    },
-                                    {
-                                      "text": "(i) Secondary (20%): capacity-led pricing discipline; (ii) Tertiary (10%): IRA/Chips Act duration; (iii) explicit weightings are falsifiable via scenario modelling. #A",
-                                      "iaja": "A"
-                                    },
-                                    {
-                                      "text": "This decomposition drives the pre-mortem targeting — monitor the 70% driver with the most granular KPIs. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "text": "**Primary-driver KPIs to instrument at ESA: order book growth rate, Automation segment mix, Automation segment margin.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "Weekly order data where available; monthly segment splits from IR; quarterly margin print. #A",
-                                      "iaja": "A"
-                                    },
-                                    {
-                                      "text": "Any primary-KPI breach triggers a full thesis re-read, not just a position-size review. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "summary_text": "Driver hierarchy clean; primary KPIs instrumented for ESA; decision rules defined for KPI breach."
-                            },
-                            {
-                              "id": "C.II.2.10",
-                              "title": "Fundamental case — residual risks and ESA agenda",
-                              "rating": "B",
-                              "word_target": 180,
-                              "bluf": "**Two residual risks for ESA: (i) Automation segment margin sustainability at scale; (ii) Legacy segment decline curve timing.** #J",
-                              "bullets": [
-                                {
-                                  "text": "**ESA agenda is tight and tractable — two specific unknowns, not a broad canvas of doubt.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "Automation margin at scale: is 18% sustainable at +50% volume, or does competition compress? #I",
-                                      "iaja": "I"
-                                    },
-                                    {
-                                      "text": "Legacy decline timing: −8%/yr assumed; actual run-rate may be faster, which compresses the mix-shift tailwind window. #A",
-                                      "iaja": "A"
-                                    },
-                                    {
-                                      "text": "ESA deliverables: (i) competitor-level margin analysis; (ii) Legacy decline scenario analysis with customer-level data; (iii) combined segment model. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "text": "**Progression to ESA approved on current evidence; the two unknowns are sharpenable at ESA depth, not blockers.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "Pillar-gate logic: P3=B + P4=C → pass to ESA on condition that AF#4 gets segment-level modelling attention. #A",
-                                      "iaja": "A"
-                                    },
-                                    {
-                                      "text": "If ESA segment work reveals margin compression risk >200bps, downgrade P3 to C and re-read the case. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "summary_text": "ESA agenda focused on two specific risks; progression approved with a clear scope and pre-defined downgrade trigger."
+                              ]
                             }
                           ],
-                          "summary": "**Fundamental case progresses to ESA with two specific unknowns to resolve: Automation segment margin sustainability at scale, and Legacy decline timing.** Driver hierarchy is clean; setup integrity is high; balance sheet is an enabler. The C on Simplicity is the cost of the dual-segment structure, manageable through segment-level modelling at ESA. Pillar-gate pass approved with a clear downgrade trigger (margin compression >200bps → P3 to C). #J",
                           "ratings": []
                         },
                         {
-                          "type": "topic",
-                          "id": "C.II.3",
-                          "title": "Fit for Market Paradigm (Pillar 2)",
-                          "word_target": 600,
-                          "bluf": "**P2 remains unrated at Triaging: Iran risk-off and cyclical read sit over genuine AI-infrastructure paradigm fit; ESA must formalise regime-dependent valuation scenarios before position sizes beyond starter.** #J",
-                          "sub_topics": [
-                            {
-                              "id": "C.II.3.1",
-                              "title": "Late bull / early bear market context",
-                              "rating": "—",
-                              "word_target": 220,
-                              "bluf": "**Iran-conflict-driven risk-off overlay sits over a late-bull/early-bear equity regime — NVTK's capex-exposed profile is vulnerable but carries offsetting structural demand.** #J",
-                              "bullets": [
-                                {
-                                  "text": "**Paradigm fit is the single largest unresolved overlay — cannot be closed at Triaging without broader sector work.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "Iran conflict compresses multiples on capex-exposed industrials regardless of micro fundamentals. #I",
-                                      "iaja": "I"
-                                    },
-                                    {
-                                      "text": "(i) NVTK 2YF P/E 14x vs 3Y average 16x — partial compression already priced; (ii) peer basket 18-22x. #A",
-                                      "iaja": "A"
-                                    },
-                                    {
-                                      "text": "Historical analogue: 2018-Q4 Iran tension compressed European industrials by ~11% on multiples over 6 weeks before recovery; 2026 episode may rhyme. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "text": "**Structural demand offsets cyclical read — the question is how much, and over what time horizon.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "EU Chips / US IRA spending is committed, not discretionary — lower cyclical sensitivity than general capex. #A",
-                                      "iaja": "A"
-                                    },
-                                    {
-                                      "text": "Committed-capex mix is ~55% of NVTK order book — a genuine buffer against pure-play cyclical exposure. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "text": "**Decision gate: P2 remains unrated at Triaging; ESA must formalise regime-dependent valuation scenarios before position is sized beyond starter.** #J",
-                                  "iaja": "J"
-                                }
-                              ],
-                              "summary_text": "Paradigm fit remains TBD; ESA must include explicit regime-dependent valuation scenarios; position capped at starter until closure."
-                            },
-                            {
-                              "id": "C.II.3.2",
-                              "title": "AI demand / disruption angle",
-                              "rating": "—",
-                              "word_target": 200,
-                              "bluf": "**Automation for AI infrastructure (data-centre cooling, chip fab automation) is a direct NVTK beneficiary — a credible structural paradigm fit.** #J",
-                              "bullets": [
-                                {
-                                  "text": "**The AI infrastructure build-out is a genuine secular driver, not just a narrative — NVTK's exposure is real and measurable.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "~18% of L12M orders linked to data-centre / chip-fab automation projects. #I",
-                                      "iaja": "I"
-                                    },
-                                    {
-                                      "text": "(i) Nvidia Blackwell supply chain includes 3 NVTK automation contracts; (ii) TSMC Arizona fab has NVTK cells; (iii) Samsung Texas expansion includes NVTK. #A",
-                                      "iaja": "A"
-                                    },
-                                    {
-                                      "text": "AI-linked revenue grew +87% YoY L12M vs group +18% — the discrete high-growth driver within the mix. #I",
-                                      "iaja": "I"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "text": "**Risk: AI capex cycle sensitivity; any deceleration in hyperscaler capex would hit 2026 order flow.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "Hyperscaler capex guidance implies +40% in 2026 — high bar, vulnerable to any demand surprise. #A",
-                                      "iaja": "A"
-                                    },
-                                    {
-                                      "text": "Monitoring: Microsoft, Meta, Alphabet, Amazon quarterly capex prints; first signal of moderation triggers ESA re-read. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "summary_text": "AI paradigm fit credible and measurable; cycle risk real but not disqualifying; hyperscaler capex is the live monitoring signal."
-                            },
-                            {
-                              "id": "C.II.3.3",
-                              "title": "Oil / stagflation / recession / rising-rates sensitivity",
-                              "rating": "—",
-                              "word_target": 200,
-                              "bluf": "**Backlog visibility (2.1x L12M revenue) partially insulates near-term earnings from a hard-landing scenario — but multiple compression remains the key cyclical risk.** #J",
-                              "bullets": [
-                                {
-                                  "text": "**Earnings are better insulated than the share price — a real distinction for a backlog-heavy industrial.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "Backlog covers 80% of 2026 revenue; earnings sensitivity to 2026 orders is limited. #I",
-                                      "iaja": "I"
-                                    },
-                                    {
-                                      "text": "(i) Share price sensitivity to rates is higher than earnings sensitivity; (ii) multiple compression risk dominates the drawdown scenario. #A",
-                                      "iaja": "A"
-                                    },
-                                    {
-                                      "text": "Duration sensitivity: 100bps rate move historically = ~2x P/E turns compression for European industrials. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "text": "**In a stagflation scenario, pricing power is the key unknown — NVTK has shown +3% price YoY in 2025.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "Cost inflation pass-through capacity is the single clearest stagflation test; H1-26 margin prints are the diagnostic. #A",
-                                      "iaja": "A"
-                                    },
-                                    {
-                                      "text": "Historical: in the 2022 inflation episode NVTK passed through 78% of input cost inflation within 6 months — a constructive read. #I",
-                                      "iaja": "I"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "text": "**Synthesis: P2 sensitivity is higher on the multiple than on the earnings; position sizing should reflect this asymmetry.** #J",
-                                  "iaja": "J"
-                                }
-                              ],
-                              "summary_text": "Fundamental insulation is real; valuation sensitivity is the live risk; stagflation test passed in 2022 analogue."
-                            }
-                          ],
-                          "summary": "**Paradigm fit is the main overlay to close at ESA.** AI infrastructure exposure is real and measurable (~18% of orders, growing +87% YoY); backlog provides earnings insulation but not multiple insulation; Iran overlay caps entry conviction until the cyclical read is resolved. Position capped at starter size until P2 closure. #J",
-                          "ratings": []
-                        },
-                        {
-                          "type": "topic",
-                          "id": "C.II.4",
-                          "title": "Sell-Side Momentum (Pillar 5)",
-                          "word_target": 300,
-                          "bluf": "**P5 rated A: all 15 momentum metrics positive with acceleration pattern across all 5 metric families; crowding risk is the price of the conviction.** #J",
-                          "sub_topics": [
-                            {
-                              "id": "C.II.4.1",
-                              "title": "EPS and EBITDA revisions — acceleration pattern",
-                              "rating": "A",
-                              "word_target": 100,
-                              "bluf": "**EPS revisions +3.2% L1M, +8.5% L3M, +12.1% L6M — acceleration pattern confirms trend is durable, not a one-off.** #J",
-                              "bullets": [
-                                {
-                                  "text": "**Acceleration (L1M < L3M < L6M reversed direction) is the high-quality signature of a sustained consensus upgrade cycle.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "EBITDA shows identical pattern: +2.8% / +7.2% / +10.5%; revenue catching up more slowly. #I",
-                                      "iaja": "I"
-                                    },
-                                    {
-                                      "text": "(i) Pattern present in all 5 momentum metrics; (ii) rare breadth of consensus conviction. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "summary_text": "EPS/EBITDA acceleration clean; consensus upgrade cycle has not peaked."
-                            },
-                            {
-                              "id": "C.II.4.2",
-                              "title": "Price targets and % Buy revisions",
-                              "rating": "A",
-                              "word_target": 100,
-                              "bluf": "**Price targets +11.2% L3M (strongest single metric); % Buy up +5pp L3M (58% → 63%) — upgrade cycle still has breadth room.** #J",
-                              "bullets": [
-                                {
-                                  "text": "**PTs and rating breadth both still moving in the same direction — signal has not exhausted.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "PT acceleration: +5.1% / +11.2% / +15.3% (L1M/L3M/L6M). #I",
-                                      "iaja": "I"
-                                    },
-                                    {
-                                      "text": "(i) % Buy has room: 63% is not yet crowded; (ii) historical peak conviction levels sit ~70%. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "summary_text": "PT/%Buy breadth suggests signal has not yet peaked; monitoring watchpoint."
-                            },
-                            {
-                              "id": "C.II.4.3",
-                              "title": "Residual risk — consensus crowding",
-                              "rating": "A",
-                              "word_target": 100,
-                              "bluf": "**Perfect 15/15 momentum score may reflect consensus crowding — any earnings miss would trigger outsized downgrades.** #J",
-                              "bullets": [
-                                {
-                                  "text": "**Crowding risk is the price of the A — monitor for the first negative inflection with heightened attention.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "Asymmetric downside on miss: historical analogues show 1.5-2x magnitude relative to beat-response. #I",
-                                      "iaja": "I"
-                                    },
-                                    {
-                                      "text": "(i) Next print 24-Apr-26; (ii) consensus EPS EUR 2.85 ±0.04 — tight range, high sensitivity. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "summary_text": "Crowding risk live ahead of 24-Apr print; sizing should reflect."
-                            }
-                          ],
-                          "summary": "**Breadth and acceleration both confirm a durable upgrade cycle — the 24-Apr-26 print is the next calibration point.** Crowding risk asymmetric on miss; sizing discipline critical through the print. #J",
-                          "ratings": []
-                        },
-                        {
-                          "type": "topic",
-                          "id": "C.II.5",
-                          "title": "Upside (Pillar 6 — Valuation, cross-ref A.II.3 TSR DuPont)",
-                          "word_target": 300,
-                          "bluf": "**P6 rated B: 14x 2YF P/E sits at 30th percentile own history and ~30% discount to peers; modal-case TSR 23-26% annualised.** #J",
-                          "sub_topics": [
-                            {
-                              "id": "C.II.5.1",
-                              "title": "Absolute valuation — 2YF P/E",
-                              "rating": "B",
-                              "word_target": 100,
-                              "bluf": "**14x 2YF P/E sits at the ~30th percentile of own 3-year range (10-24x) — absolute cheap on own history.** #J",
-                              "bullets": [
-                                {
-                                  "text": "**Absolute valuation read is supportive but not extreme — the setup relies on peer/historical relatives for the upside case.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "SP EUR 48; 2YF EPS EUR 3.43 → 14.0x. #I",
-                                      "iaja": "I"
-                                    },
-                                    {
-                                      "text": "(i) Historical low 10x (Q1-23); (ii) historical high 24x (H2-24); (iii) median 16x. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "summary_text": "Own-history read is constructive; not a deep value case."
-                            },
-                            {
-                              "id": "C.II.5.2",
-                              "title": "Peer relative valuation",
-                              "rating": "B",
-                              "word_target": 100,
-                              "bluf": "**18-22x peer average (Fanuc, ABB Robotics, Rockwell) vs NVTK 14x — ~30% discount to peers on a growth-adjusted basis similar to peer group.** #J",
-                              "bullets": [
-                                {
-                                  "text": "**Peer-relative discount is the primary upside mechanic — closing half the gap (to 18x) delivers ~28% return over 2YF window.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "Peer range 18-22x; NVTK 16% EPS CAGR vs peer average ~10%. #I",
-                                      "iaja": "I"
-                                    },
-                                    {
-                                      "text": "(i) PEG: NVTK 0.87x vs peers 1.8x-2.2x; (ii) unusual for a name outgrowing the peer group. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "summary_text": "Peer-relative discount is the main TSR driver; PEG gap is the opportunity."
-                            },
-                            {
-                              "id": "C.II.5.3",
-                              "title": "TSR DuPont cross-reference to A.II.3",
-                              "rating": "B",
-                              "word_target": 100,
-                              "bluf": "**Modal-case TSR DuPont (see A.II.3): EPS CAGR 16% + dividend yield 2.5% + multiple re-rating 5-8%/yr = 23-26% annualised modal TSR.** #J",
-                              "bullets": [
-                                {
-                                  "text": "**Modal TSR mix — three contributors, none reliant on hope; each has an observable proof point.** #J",
-                                  "iaja": "J",
-                                  "children": [
-                                    {
-                                      "text": "EPS growth: observable in order book; yield: funded from current free cash flow; re-rating: mechanical if peer gap closes. #I",
-                                      "iaja": "I"
-                                    },
-                                    {
-                                      "text": "(i) Sensitivity: ±500bps per contributor = 8-44% TSR range; (ii) downside-weighted still ~+12%. #A",
-                                      "iaja": "A"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "summary_text": "TSR DuPont supports an A rating on upside mechanics; downside case still modestly positive."
-                            }
-                          ],
-                          "summary": "**Valuation is the unifying mechanic for the upside case — absolute cheap on own history, relative cheap vs peers, and backed by genuinely superior EPS growth.** The B rather than A reflects the peer-gap dependence; upgrade to A requires independent re-rating evidence. #J",
+                          "type": "summary",
+                          "text": "NVTK technicals support entry with discipline — Stage 2 structure, clean volume, stacked MAs, institutional flow confirmation. The gap to A is the RS Rank extension (62 vs 70) and the 150D consistency miss; both are resolvable, not structural. Sizing should respect late-entry risk; a staged entry with a 50D hard stop at EUR 42.30 codifies the discipline.",
                           "ratings": []
                         }
                       ],
-                      "word_count": 0,
+                      "word_count": 85,
+                      "target_words": 0
+                    },
+                    {
+                      "id": "C.II.2",
+                      "title": "Fundamental Investment Case (P3+P4)",
+                      "heading_level": 3,
+                      "blocks": [
+                        {
+                          "type": "bluf",
+                          "text": "P3 rated B, P4 rated C: credible triple-ratchet step-up supported by structural demand with independent customer corroboration; dual-segment structure drives the lower P4 rating and defines the ESA agenda.",
+                          "ratings": []
+                        },
+                        {
+                          "type": "pillar_block",
+                          "pillar_id": "p3",
+                          "label": "Fundamental Change",
+                          "rating": "B",
+                          "blocks": [
+                            {
+                              "type": "bluf",
+                              "text": "P3 (Fundamental Change) carries the load: triple-ratchet step-up validated at Triaging across required Outputs, Inputs, and Setups."
+                            },
+                            {
+                              "type": "family_block",
+                              "badge": "IC#1",
+                              "label": "Required Case OUTPUTS",
+                              "rating": "B",
+                              "blocks": [
+                                {
+                                  "type": "bluf",
+                                  "text": "AF#1 rated B on outputs clarity and credibility; conversion timing is the residual and Q2-26 is the key dated milestone."
+                                },
+                                {
+                                  "type": "bullet_group",
+                                  "items": [
+                                    {
+                                      "iaja": "J",
+                                      "rating": "B",
+                                      "text": "Order intake +34% YoY and margin trajectory to 2028 underwrite a credible triple-ratchet EPS path."
+                                    },
+                                    {
+                                      "iaja": "J",
+                                      "text": "Demand-driven fundamental change is validated at Triaging depth — outputs are consistent with a durable step-up, not a one-quarter surprise.",
+                                      "sub": [
+                                        {
+                                          "iaja": "I",
+                                          "text": "L12M orders EUR 14.3bn (+34% YoY); backlog 2.1x L12M revenue."
+                                        },
+                                        {
+                                          "iaja": "I",
+                                          "text": "(i) EBIT margin trajectory 11.5% (2025A) → 15.5% (2028E); (ii) EPS CAGR 16% through 2028; (iii) explicit margin path in guidance supported by fixed-cost absorption math."
+                                        },
+                                        {
+                                          "iaja": "A",
+                                          "text": "Margin bridge decomposition: volume absorption +220bps, mix shift +180bps, price +100bps, offsetting +100bps input cost inflation."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "iaja": "J",
+                                      "text": "The three ratchets — volume, mix, price — are observable in the order book, not just in guidance.",
+                                      "sub": [
+                                        {
+                                          "iaja": "A",
+                                          "text": "Volume +18%, mix (Automation share 65%→72%) +180bps of margin, price +3% YoY."
+                                        },
+                                        {
+                                          "iaja": "A",
+                                          "text": "Each ratchet has a 2026 H2 proof point: volume in order conversion rate, mix in segment reporting, price in contract renewal data."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "iaja": "J",
+                                      "text": "Residual: order → revenue conversion timing risk; 6-9 month lag means 2026 H2 is the key proof point for the 2027 consensus.",
+                                      "sub": [
+                                        {
+                                          "iaja": "A",
+                                          "text": "If Q2-26 orders re-accelerate rather than plateau, 2027 consensus has 8-12% upside."
+                                        },
+                                        {
+                                          "iaja": "A",
+                                          "text": "If Q2-26 orders soften, 2027 consensus is at risk and the B rating is under pressure toward C."
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "family_block",
+                              "badge": "IC#2",
+                              "label": "Required Case INPUTS",
+                              "rating": "A",
+                              "blocks": [
+                                {
+                                  "type": "bluf",
+                                  "text": "AF#2 rated A on driver breadth with independent customer corroboration; policy risk priced but not disqualifying."
+                                },
+                                {
+                                  "type": "bullet_group",
+                                  "items": [
+                                    {
+                                      "iaja": "J",
+                                      "rating": "A",
+                                      "text": "EU Chips Act, US IRA reshoring and capacity shortage combine into a multi-year demand tailwind — rare breadth of driver alignment."
+                                    },
+                                    {
+                                      "iaja": "J",
+                                      "text": "Three structurally reinforcing drivers is the strongest A-rated inputs case in the current pipeline.",
+                                      "sub": [
+                                        {
+                                          "iaja": "I",
+                                          "text": "EU Chips Act: EUR 43bn committed, +EUR 8bn incremental capex for automation customers through 2027."
+                                        },
+                                        {
+                                          "iaja": "A",
+                                          "text": "(i) US IRA reshoring: +EUR 12bn automation TAM through 2028; (ii) capacity shortage: 18-month lead times at top 5 customers; (iii) NVTK capture rate on new builds ~8%."
+                                        },
+                                        {
+                                          "iaja": "I",
+                                          "text": "Cross-triangulation: NVTK guidance lines up with customer capex disclosures from TSMC, Intel, Samsung and STMicro — independent corroboration."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "iaja": "J",
+                                      "text": "Contra: policy reversal risk post-2026 US election; single-election exposure on ~25% of incremental TAM.",
+                                      "sub": [
+                                        {
+                                          "iaja": "A",
+                                          "text": "Scenario-weighted case still delivers +14% CAGR even under adverse policy outcome (vs +16% base)."
+                                        },
+                                        {
+                                          "iaja": "A",
+                                          "text": "EU Chips Act has bipartisan structural support and is less exposed — the robust 75% of the driver set."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "iaja": "J",
+                                      "text": "The breadth of driver alignment is what justifies A — single-driver names rarely clear this bar.",
+                                      "sub": [
+                                        {
+                                          "iaja": "A",
+                                          "text": "Of prior A-rated inputs cases in our sample, 11 of 13 achieved >15% EPS CAGR over the subsequent 3 years."
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "family_block",
+                              "badge": "IC#3",
+                              "label": "Required Case SETUPS",
+                              "rating": "B",
+                              "blocks": [
+                                {
+                                  "type": "bluf",
+                                  "text": "Setup integrity clean; no identified false-friend overlap; analogue-base supports a moderately high prior."
+                                },
+                                {
+                                  "type": "bullet_group",
+                                  "items": [
+                                    {
+                                      "iaja": "J",
+                                      "rating": "B",
+                                      "text": "Demand-driven Earnings Power Step-Up setup, clean of false-friend overlaps (no currency, no pandemic echo, no one-off destocking benefit)."
+                                    },
+                                    {
+                                      "iaja": "J",
+                                      "text": "Setup integrity is high — earnings change is driven by real unit economics, not accounting or cyclical noise.",
+                                      "sub": [
+                                        {
+                                          "iaja": "I",
+                                          "text": "No FX tailwind (EUR-neutral customer mix); no pandemic base effect (2022 baseline already clean)."
+                                        },
+                                        {
+                                          "iaja": "A",
+                                          "text": "(i) Destocking completed Q3-24; (ii) no benefit from inventory build; (iii) price up modestly, not aggressively; (iv) no M&A distortion."
+                                        },
+                                        {
+                                          "iaja": "A",
+                                          "text": "Underlying operating leverage math: 3.5% revenue growth → 8% EPS growth at current mix; 18% revenue growth → 22-28% EPS growth given operating deleverage reversal."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "iaja": "J",
+                                      "text": "The setup pattern matches 60-70% of our historical high-conviction EPSU cases — high prior on success.",
+                                      "sub": [
+                                        {
+                                          "iaja": "I",
+                                          "text": "Analogue matching: similar triple-ratchet setups in Dassault Systemes (2016), Siemens Healthineers (2019), Sartorius (2020)."
+                                        },
+                                        {
+                                          "iaja": "A",
+                                          "text": "(i) 2/3 analogues delivered 20%+ 3Y EPS CAGR; (ii) the one miss underperformed due to mix reversal, the specific risk we model here."
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "ratings": []
+                        },
+                        {
+                          "type": "pillar_block",
+                          "pillar_id": "p4",
+                          "label": "Building Blocks",
+                          "rating": "B",
+                          "blocks": [
+                            {
+                              "type": "bluf",
+                              "text": "P4 (Building Blocks) carries no fatal flaw; foundation quality and governance are clean; size and seek-to-avoid checks pass; nice-to-have attributes light."
+                            },
+                            {
+                              "type": "family_block",
+                              "badge": "BB#1",
+                              "label": "Required Simplicity Guardrails",
+                              "rating": "C",
+                              "blocks": [
+                                {
+                                  "type": "bluf",
+                                  "text": "Simplicity is the weakest building block; ESA must model segments separately with explicit break-point analysis."
+                                },
+                                {
+                                  "type": "bullet_group",
+                                  "items": [
+                                    {
+                                      "iaja": "J",
+                                      "rating": "C",
+                                      "text": "Dual-segment (Automation 65% + Legacy 35%) adds analytical complexity — Simplicity rated C, the weakest building block."
+                                    },
+                                    {
+                                      "iaja": "J",
+                                      "text": "Dual-segment structure is the single biggest Triaging-to-ESA transition risk — depth of modelling must increase materially.",
+                                      "sub": [
+                                        {
+                                          "iaja": "I",
+                                          "text": "Segment margins diverge: Automation ~18%, Legacy ~6% — blended read obscures."
+                                        },
+                                        {
+                                          "iaja": "A",
+                                          "text": "(i) Legacy is in secular decline at -8%/yr; (ii) mix shift alone adds 120bps/yr of blended margin; (iii) risk of misattribution between mix vs underlying."
+                                        },
+                                        {
+                                          "iaja": "A",
+                                          "text": "Modelling choice at ESA: discrete Automation and Legacy models with explicit mix-bridge, not blended assumptions."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "iaja": "J",
+                                      "text": "Actionable: require segment-level modelling at ESA — cannot rely on group-level EPS trajectory.",
+                                      "sub": [
+                                        {
+                                          "iaja": "A",
+                                          "text": "Separate segment P&Ls from 2026-2030; explicit decline curve for Legacy; runway analysis on Automation capacity."
+                                        },
+                                        {
+                                          "iaja": "A",
+                                          "text": "Break-point analysis: at what Legacy decline rate does group margin inflect negative? Answer: -14%/yr vs current -8% — meaningful buffer but not infinite."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "iaja": "J",
+                                      "text": "The C rating is the binding constraint on overall P4 — closing to B requires ESA-depth segment clarity.",
+                                      "sub": [
+                                        {
+                                          "iaja": "A",
+                                          "text": "P4 cannot exceed a C until AF#4 upgrades — cascading effect worth making explicit to prevent confusion at ESA gate."
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "family_block",
+                              "badge": "BB#2",
+                              "label": "Required Foundation Quality",
+                              "rating": "B",
+                              "blocks": [
+                                {
+                                  "type": "bluf",
+                                  "text": "Balance sheet is an enabler not a constraint; no financing risk; small treasury-policy review for ESA."
+                                },
+                                {
+                                  "type": "bullet_group",
+                                  "items": [
+                                    {
+                                      "iaja": "J",
+                                      "rating": "B",
+                                      "text": "Net cash position EUR 2.1bn; cash conversion 95%; foundation adequate for a capex-heavy growth phase."
+                                    },
+                                    {
+                                      "iaja": "J",
+                                      "text": "Foundation quality supports the growth trajectory without financing risk — a B-rated enabler.",
+                                      "sub": [
+                                        {
+                                          "iaja": "I",
+                                          "text": "Net cash EUR 2.1bn vs EUR 1.8bn 2025 capex commitment."
+                                        },
+                                        {
+                                          "iaja": "A",
+                                          "text": "(i) Cash conversion 95%; (ii) no dilution risk; (iii) dividend cover 2.3x; (iv) M&A capacity EUR 3-4bn without leverage."
+                                        },
+                                        {
+                                          "iaja": "I",
+                                          "text": "Debt profile: EUR 1.2bn gross debt, average maturity 6.3 years, weighted cost 2.4% — well below cost of equity."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "iaja": "J",
+                                      "text": "The gap to A on Foundation is the concentration of cash in one currency and one treasury policy; ESA-level review required.",
+                                      "sub": [
+                                        {
+                                          "iaja": "A",
+                                          "text": "Treasury risk is bounded but not zero; review at ESA for completeness."
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "family_block",
+                              "badge": "BB#3",
+                              "label": "Fit for Market Paradigm",
+                              "rating": "B",
+                              "blocks": [
+                                {
+                                  "type": "bluf",
+                                  "text": "Fit for Market Paradigm"
+                                },
+                                {
+                                  "type": "bullet_group",
+                                  "items": [
+                                    {
+                                      "iaja": "J",
+                                      "rating": "B",
+                                      "text": "Fit for Market Paradigm. Cross-references C.II.3 — paradigm-fit verdict for fundamental case is reproduced there. Net: B; congruent with Iran-driven late-cycle setup."
+                                    },
+                                    {
+                                      "iaja": "A",
+                                      "rating": "B",
+                                      "text": "Pre-Triaging coverage is light; this family will be assessed substantively at ESA stage."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "family_block",
+                              "badge": "BB#4",
+                              "label": "Strenuously Seek-to-Avoid Constraints",
+                              "rating": "B",
+                              "blocks": [
+                                {
+                                  "type": "bluf",
+                                  "text": "Governance and accounting clean; no seek-to-avoid triggers; deeper review deferred to ESA."
+                                },
+                                {
+                                  "type": "bullet_group",
+                                  "items": [
+                                    {
+                                      "iaja": "J",
+                                      "rating": "B",
+                                      "text": "No red flags on governance, accounting or related-party transactions — clean at Triaging."
+                                    },
+                                    {
+                                      "iaja": "J",
+                                      "text": "Standard checks pass; no features triggering the seek-to-avoid framework.",
+                                      "sub": [
+                                        {
+                                          "iaja": "I",
+                                          "text": "Independent board majority; Big-4 auditor; no material RPTs disclosed."
+                                        },
+                                        {
+                                          "iaja": "A",
+                                          "text": "(i) No CEO/Chair role combined; (ii) no unusual revenue recognition; (iii) working capital ratios stable; (iv) no aggressive capitalisation."
+                                        },
+                                        {
+                                          "iaja": "I",
+                                          "text": "ISS / Glass Lewis governance scores both in top quartile for European industrials."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "iaja": "J",
+                                      "text": "Deeper accounting review deferred to ESA — no triggers requiring immediate attention at Triaging."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "family_block",
+                              "badge": "BB#5",
+                              "label": "Small Size Constraints",
+                              "rating": "B",
+                              "blocks": [
+                                {
+                                  "type": "bluf",
+                                  "text": "No structural ceiling visible at current scale; capacity runway is the second-order constraint for ESA."
+                                },
+                                {
+                                  "type": "bullet_group",
+                                  "items": [
+                                    {
+                                      "iaja": "J",
+                                      "rating": "B",
+                                      "text": "TAM EUR 180bn (L12M share 4%), top-5 customers 18% of revenue — growth headroom without concentration risk."
+                                    },
+                                    {
+                                      "iaja": "J",
+                                      "text": "TAM depth and customer diversification both support scale without forcing limiting dynamics.",
+                                      "sub": [
+                                        {
+                                          "iaja": "I",
+                                          "text": "Market share 4% of EUR 180bn TAM; top-5 customers 18% (no single customer >6%)."
+                                        },
+                                        {
+                                          "iaja": "A",
+                                          "text": "(i) Geographic spread 40% EU / 35% US / 25% ROW; (ii) end-market split: 5 verticals each 10-25%; (iii) no single vertical >25%."
+                                        },
+                                        {
+                                          "iaja": "A",
+                                          "text": "Share gain math: 25bps/yr share gain alone adds 2.5-3% revenue growth without market expansion; a plausible base case."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "iaja": "J",
+                                      "text": "Contra: at +18% volume growth for 4 years, capacity becomes the ceiling; ESA must include capacity runway analysis.",
+                                      "sub": [
+                                        {
+                                          "iaja": "A",
+                                          "text": "Current capacity utilisation 78%; +EUR 1.2bn capex brings it to 95% by 2027 — cliff-edge risk if demand continues to grow."
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "family_block",
+                              "badge": "BB#6",
+                              "label": "Invalidating Constraints",
+                              "rating": "B",
+                              "blocks": [
+                                {
+                                  "type": "bluf",
+                                  "text": "Case structure coheres; mix-shift dependence is the single tight coupling to monitor."
+                                },
+                                {
+                                  "type": "bullet_group",
+                                  "items": [
+                                    {
+                                      "iaja": "J",
+                                      "rating": "B",
+                                      "text": "The case (structural demand × margin lever × setup integrity) ties to the outcome (16% EPS CAGR, 2YF P/E 14x) coherently."
+                                    },
+                                    {
+                                      "iaja": "J",
+                                      "text": "Cross-check passes: each driver maps to a measurable outcome with an observable proof point.",
+                                      "sub": [
+                                        {
+                                          "iaja": "I",
+                                          "text": "Demand → orders (+34% YoY); margin → mix (Automation share); setup → EPSU (no FX/pandemic noise)."
+                                        },
+                                        {
+                                          "iaja": "A",
+                                          "text": "(i) No orphan drivers; (ii) each piece has a 2026 H2 validation checkpoint; (iii) the thesis would be falsifiable by any single driver breakdown."
+                                        },
+                                        {
+                                          "iaja": "A",
+                                          "text": "Congruency is a higher bar than plausibility — a case can be plausible without being congruent; this one is both."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "iaja": "J",
+                                      "text": "The dependence on mix shift is the congruency-risk point to monitor.",
+                                      "sub": [
+                                        {
+                                          "iaja": "A",
+                                          "text": "If Legacy revenue flattens rather than declines, mix shift slows and the 2028 margin target is at risk."
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "family_block",
+                              "badge": "BB#7",
+                              "label": "Past Trend / Momentum Constraints",
+                              "rating": "B",
+                              "blocks": [
+                                {
+                                  "type": "bluf",
+                                  "text": "Past Trend / Momentum Constraints"
+                                },
+                                {
+                                  "type": "bullet_group",
+                                  "items": [
+                                    {
+                                      "iaja": "J",
+                                      "rating": "B",
+                                      "text": "Past Trend / Momentum Constraints. No constraint binds at Triaging — trend acceleration is ongoing rather than mean-reverting. Re-test at ESA via SS revision panel."
+                                    },
+                                    {
+                                      "iaja": "A",
+                                      "rating": "B",
+                                      "text": "Pre-Triaging coverage is light; this family will be assessed substantively at ESA stage."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "family_block",
+                              "badge": "BB#8",
+                              "label": "Nice-to-Have Attributes",
+                              "rating": "B",
+                              "blocks": [
+                                {
+                                  "type": "bluf",
+                                  "text": "Nice-to-Have Attributes"
+                                },
+                                {
+                                  "type": "bullet_group",
+                                  "items": [
+                                    {
+                                      "iaja": "J",
+                                      "rating": "B",
+                                      "text": "Nice-to-Have Attributes. Capital allocation discipline and balance sheet flexibility are present but not rated separately at Triaging — see C.II.2 BB#2."
+                                    },
+                                    {
+                                      "iaja": "A",
+                                      "rating": "B",
+                                      "text": "Pre-Triaging coverage is light; this family will be assessed substantively at ESA stage."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "ratings": []
+                        },
+                        {
+                          "type": "summary",
+                          "text": "Primary driver: structural automation demand × margin mix lever. Secondary: capacity shortage pricing. Tertiary: policy support duration.",
+                          "ratings": []
+                        }
+                      ],
+                      "word_count": 46,
+                      "target_words": 0
+                    },
+                    {
+                      "id": "C.II.3",
+                      "title": "Fit for Market Paradigm (P2)",
+                      "heading_level": 3,
+                      "blocks": [
+                        {
+                          "type": "bluf",
+                          "text": "P2 remains unrated at Triaging: Iran risk-off and cyclical read sit over genuine AI-infrastructure paradigm fit; ESA must formalise regime-dependent valuation scenarios before position sizes beyond starter.",
+                          "ratings": []
+                        },
+                        {
+                          "type": "pillar_block",
+                          "pillar_id": "p2",
+                          "label": "Market Paradigm Fit",
+                          "rating": "B",
+                          "blocks": [
+                            {
+                              "type": "bullet_group",
+                              "items": [
+                                {
+                                  "iaja": "J",
+                                  "rating": "—",
+                                  "text": "Late bull / early bear market context — Iran-conflict-driven risk-off overlay sits over a late-bull/early-bear equity regime — NVTK's capex-exposed profile is vulnerable but carries offsetting structural demand.",
+                                  "sub": [
+                                    {
+                                      "iaja": "I",
+                                      "text": "Iran conflict compresses multiples on capex-exposed industrials regardless of micro fundamentals."
+                                    },
+                                    {
+                                      "iaja": "A",
+                                      "text": "(i) NVTK 2YF P/E 14x vs 3Y average 16x — partial compression already priced; (ii) peer basket 18-22x."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "iaja": "J",
+                                  "rating": "—",
+                                  "text": "AI demand / disruption angle — Automation for AI infrastructure (data-centre cooling, chip fab automation) is a direct NVTK beneficiary — a credible structural paradigm fit.",
+                                  "sub": [
+                                    {
+                                      "iaja": "I",
+                                      "text": "~18% of L12M orders linked to data-centre / chip-fab automation projects."
+                                    },
+                                    {
+                                      "iaja": "A",
+                                      "text": "(i) Nvidia Blackwell supply chain includes 3 NVTK automation contracts; (ii) TSMC Arizona fab has NVTK cells; (iii) Samsung Texas expansion includes NVTK."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "iaja": "J",
+                                  "rating": "—",
+                                  "text": "Oil / stagflation / recession / rising-rates sensitivity — Backlog visibility (2.1x L12M revenue) partially insulates near-term earnings from a hard-landing scenario — but multiple compression remains the key cyclical risk.",
+                                  "sub": [
+                                    {
+                                      "iaja": "I",
+                                      "text": "Backlog covers 80% of 2026 revenue; earnings sensitivity to 2026 orders is limited."
+                                    },
+                                    {
+                                      "iaja": "A",
+                                      "text": "(i) Share price sensitivity to rates is higher than earnings sensitivity; (ii) multiple compression risk dominates the drawdown scenario."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "ratings": []
+                        },
+                        {
+                          "type": "summary",
+                          "text": "Paradigm fit is the main overlay to close at ESA. AI infrastructure exposure is real and measurable (~18% of orders, growing +87% YoY); backlog provides earnings insulation but not multiple insulation; Iran overlay caps entry conviction until the cyclical read is resolved. Position capped at starter size until P2 closure.",
+                          "ratings": []
+                        }
+                      ],
+                      "word_count": 77,
+                      "target_words": 0
+                    },
+                    {
+                      "id": "C.II.4",
+                      "title": "Sell-Side Momentum (P5)",
+                      "heading_level": 3,
+                      "blocks": [
+                        {
+                          "type": "bluf",
+                          "text": "P5 rated A: all 15 momentum metrics positive with acceleration pattern across all 5 metric families; crowding risk is the price of the conviction.",
+                          "ratings": []
+                        },
+                        {
+                          "type": "pillar_block",
+                          "pillar_id": "p5",
+                          "label": "SS Earnings Momentum",
+                          "rating": "B",
+                          "blocks": [
+                            {
+                              "type": "bullet_group",
+                              "items": [
+                                {
+                                  "iaja": "J",
+                                  "rating": "A",
+                                  "text": "EPS and EBITDA revisions — acceleration pattern — EPS revisions +3.2% L1M, +8.5% L3M, +12.1% L6M — acceleration pattern confirms trend is durable, not a one-off.",
+                                  "sub": [
+                                    {
+                                      "iaja": "I",
+                                      "text": "EBITDA shows identical pattern: +2.8% / +7.2% / +10.5%; revenue catching up more slowly."
+                                    },
+                                    {
+                                      "iaja": "A",
+                                      "text": "(i) Pattern present in all 5 momentum metrics; (ii) rare breadth of consensus conviction."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "iaja": "J",
+                                  "rating": "A",
+                                  "text": "Price targets and % Buy revisions — Price targets +11.2% L3M (strongest single metric); % Buy up +5pp L3M (58% → 63%) — upgrade cycle still has breadth room.",
+                                  "sub": [
+                                    {
+                                      "iaja": "I",
+                                      "text": "PT acceleration: +5.1% / +11.2% / +15.3% (L1M/L3M/L6M)."
+                                    },
+                                    {
+                                      "iaja": "A",
+                                      "text": "(i) % Buy has room: 63% is not yet crowded; (ii) historical peak conviction levels sit ~70%."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "iaja": "J",
+                                  "rating": "A",
+                                  "text": "Residual risk — consensus crowding — Perfect 15/15 momentum score may reflect consensus crowding — any earnings miss would trigger outsized downgrades.",
+                                  "sub": [
+                                    {
+                                      "iaja": "I",
+                                      "text": "Asymmetric downside on miss: historical analogues show 1.5-2x magnitude relative to beat-response."
+                                    },
+                                    {
+                                      "iaja": "A",
+                                      "text": "(i) Next print 24-Apr-26; (ii) consensus EPS EUR 2.85 ±0.04 — tight range, high sensitivity."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "ratings": []
+                        },
+                        {
+                          "type": "summary",
+                          "text": "Breadth and acceleration both confirm a durable upgrade cycle — the 24-Apr-26 print is the next calibration point. Crowding risk asymmetric on miss; sizing discipline critical through the print.",
+                          "ratings": []
+                        }
+                      ],
+                      "word_count": 53,
+                      "target_words": 0
+                    },
+                    {
+                      "id": "C.II.5",
+                      "title": "Upside (P6)",
+                      "heading_level": 3,
+                      "blocks": [
+                        {
+                          "type": "bluf",
+                          "text": "P6 rated B: 14x 2YF P/E sits at 30th percentile own history and ~30% discount to peers; modal-case TSR 23-26% annualised.",
+                          "ratings": []
+                        },
+                        {
+                          "type": "pillar_block",
+                          "pillar_id": "p6",
+                          "label": "Valuation",
+                          "rating": "B",
+                          "blocks": [
+                            {
+                              "type": "bullet_group",
+                              "items": [
+                                {
+                                  "iaja": "J",
+                                  "rating": "B",
+                                  "text": "Absolute valuation — 2YF P/E — 14x 2YF P/E sits at the ~30th percentile of own 3-year range (10-24x) — absolute cheap on own history.",
+                                  "sub": [
+                                    {
+                                      "iaja": "I",
+                                      "text": "SP EUR 48; 2YF EPS EUR 3.43 → 14.0x."
+                                    },
+                                    {
+                                      "iaja": "A",
+                                      "text": "(i) Historical low 10x (Q1-23); (ii) historical high 24x (H2-24); (iii) median 16x."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "iaja": "J",
+                                  "rating": "B",
+                                  "text": "Peer relative valuation — 18-22x peer average (Fanuc, ABB Robotics, Rockwell) vs NVTK 14x — ~30% discount to peers on a growth-adjusted basis similar to peer group.",
+                                  "sub": [
+                                    {
+                                      "iaja": "I",
+                                      "text": "Peer range 18-22x; NVTK 16% EPS CAGR vs peer average ~10%."
+                                    },
+                                    {
+                                      "iaja": "A",
+                                      "text": "(i) PEG: NVTK 0.87x vs peers 1.8x-2.2x; (ii) unusual for a name outgrowing the peer group."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "iaja": "J",
+                                  "rating": "B",
+                                  "text": "TSR DuPont cross-reference to A.II.3 — Modal-case TSR DuPont (see A.II.3): EPS CAGR 16% + dividend yield 2.5% + multiple re-rating 5-8%/yr = 23-26% annualised modal TSR.",
+                                  "sub": [
+                                    {
+                                      "iaja": "I",
+                                      "text": "EPS growth: observable in order book; yield: funded from current free cash flow; re-rating: mechanical if peer gap closes."
+                                    },
+                                    {
+                                      "iaja": "A",
+                                      "text": "(i) Sensitivity: ±500bps per contributor = 8-44% TSR range; (ii) downside-weighted still ~+12%."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "ratings": []
+                        },
+                        {
+                          "type": "summary",
+                          "text": "Valuation is the unifying mechanic for the upside case — absolute cheap on own history, relative cheap vs peers, and backed by genuinely superior EPS growth. The B rather than A reflects the peer-gap dependence; upgrade to A requires independent re-rating evidence.",
+                          "ratings": []
+                        }
+                      ],
+                      "word_count": 63,
                       "target_words": 0
                     }
                   ],
                   "applicable_note": null,
-                  "word_count": 0,
-                  "page_count": 0,
+                  "word_count": 324,
+                  "page_count": 1,
                   "target_words": 0
                 },
                 "D": {
@@ -13646,7 +13474,7 @@
 
         function memoRenderBulletItem(item, isSub) {
             var text = item && item.text ? String(item.text) : '';
-            var inner = memoIajaTag(item.iaja) + memoRatingsPrefix(item.ratings) + memoEscape(text);
+            var inner = memoIajaTag(item.iaja) + memoRatingsPrefix(item.ratings) + memoRatingPrefixSingle(item.rating) + memoEscape(text);
             var sub = item && item.sub;
             var hasSub = !!(sub && sub.length);
             var cls = hasSub && !isSub ? ' class="has-sub"' : '';
@@ -13943,6 +13771,70 @@
             return html;
         }
 
+
+        function memoRatingPrefixSingle(rating) {
+            if (!rating) return '';
+            var r = String(rating).trim();
+            if (!r || r === '-') return '';
+            return '<span class="rating-badge memo-inline-rating ' +
+                   memoGradeClass(r) + '">' + memoEscape(r) + '</span>';
+        }
+
+        function memoRenderPillarBlock(block) {
+            if (!block) return '';
+            var pid = String(block.pillar_id || '').toUpperCase();
+            var label = block.label || '';
+            var rating = block.rating || '';
+            var blocks = block.blocks || [];
+            var html = '<div class="memo-pillar-block" data-pillar-id="' +
+                       memoEscape(pid.toLowerCase()) + '">';
+            html += '<div class="memo-pillar-header">';
+            html += '<span class="memo-pillar-id">' + memoEscape(pid) + '</span>';
+            html += '<span class="memo-pillar-label">' + memoEscape(label) + '</span>';
+            if (rating) {
+                html += '<span class="rating-badge memo-pillar-rating ' +
+                        memoGradeClass(rating) + '">' + memoEscape(rating) +
+                        '</span>';
+            }
+            html += '</div>';
+            html += '<div class="memo-pillar-body">';
+            for (var i = 0; i < blocks.length; i++) {
+                html += memoRenderBlock(blocks[i]);
+            }
+            html += '</div>';
+            html += '</div>';
+            return html;
+        }
+
+        function memoRenderFamilyBlock(block) {
+            if (!block) return '';
+            var badge = block.badge || '';
+            var label = block.label || '';
+            var rating = block.rating || '';
+            var blocks = block.blocks || [];
+            var html = '<div class="memo-family-block">';
+            html += '<div class="memo-family-header">';
+            if (badge) {
+                html += '<span class="memo-family-badge">' +
+                        memoEscape(badge) + '</span>';
+            }
+            html += '<span class="memo-family-label">' +
+                    memoEscape(label) + '</span>';
+            if (rating) {
+                html += '<span class="rating-badge memo-family-rating ' +
+                        memoGradeClass(rating) + '">' + memoEscape(rating) +
+                        '</span>';
+            }
+            html += '</div>';
+            html += '<div class="memo-family-body">';
+            for (var i = 0; i < blocks.length; i++) {
+                html += memoRenderBlock(blocks[i]);
+            }
+            html += '</div>';
+            html += '</div>';
+            return html;
+        }
+
         function memoRenderBlock(block) {
             if (!block || !block.type) return '';
             switch (block.type) {
@@ -13954,6 +13846,8 @@
                 case 'topic':         return memoRenderTopicBlock(block);
                 case 'bluf':          return memoRenderBluf(block);
                 case 'summary':       return memoRenderSummary(block);
+                case 'pillar_block': return memoRenderPillarBlock(block);
+                case 'family_block': return memoRenderFamilyBlock(block);
                 case 'tree':          return memoRenderTree(block);
                 default:              return '';
             }
