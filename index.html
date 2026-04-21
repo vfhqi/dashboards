@@ -3408,7 +3408,197 @@
     text-decoration-color: rgba(0, 0, 0, 0.55);
 }
 /* PATCH_REFINEMENTS_V1_CSS_END */
-/* SIGNPOST_CSS_END */
+/* SIGNPOST_CSS_END *//* SECTION_A_CSS_V1_START */
+
+        /* ---- Section A FINANCIALS ported from V3 (Decision U1: titles from JSON) ---- */
+        .fin-model-wrap {
+            overflow-x: auto;
+            margin-top: 8px;
+            border: 1px solid #d8dee4;
+            border-radius: 6px;
+            background: #fff;
+        }
+        .fin-model-toggle {
+            display: inline-flex;
+            gap: 0;
+            margin-bottom: 10px;
+            border: 1px solid #d8dee4;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .fin-model-toggle button {
+            padding: 5px 14px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border: none;
+            background: #f6f8fa;
+            color: #57606a;
+            cursor: pointer;
+            border-right: 1px solid #d8dee4;
+        }
+        .fin-model-toggle button:last-child { border-right: none; }
+        .fin-model-toggle button.active {
+            background: #7c3aed;
+            color: #fff;
+        }
+        .fin-model-toggle button:hover:not(.active) {
+            background: #eaeff5;
+        }
+        .fin-model-table {
+            width: max-content;
+            min-width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+        .fin-model-table th,
+        .fin-model-table td {
+            padding: 4px 10px;
+            white-space: nowrap;
+            text-align: right;
+            border-bottom: 1px solid #eef0f3;
+            font-variant-numeric: tabular-nums;
+        }
+        .fin-model-table th {
+            font-size: 13px;
+            font-weight: 700;
+            color: #57606a;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            background: #f6f8fa;
+            border-bottom: 2px solid #d0d7de;
+            position: sticky;
+            top: 0;
+            z-index: 2;
+        }
+        .fin-model-table td:first-child,
+        .fin-model-table th:first-child {
+            text-align: left;
+            position: sticky;
+            left: 0;
+            background: #fff;
+            z-index: 1;
+            font-weight: 600;
+            color: #1f2328;
+            min-width: 180px;
+            border-right: 2px solid #d0d7de;
+        }
+        .fin-model-table th:first-child {
+            background: #f6f8fa;
+            z-index: 3;
+        }
+        .fin-model-table tr.fin-section-header td {
+            font-weight: 700;
+            font-size: 13px;
+            color: #7c3aed;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid #e5e7eb;
+            padding-top: 10px;
+            background: #faf8ff;
+        }
+        .fin-model-table tr.fin-section-header td:first-child {
+            background: #faf8ff;
+        }
+        .fin-model-table tr.fin-subtotal td {
+            font-weight: 700;
+            border-top: 1px solid #9ca3af;
+            border-bottom: 2px solid #6b7280;
+        }
+        .fin-model-table tr.fin-highlight td {
+            font-weight: 700;
+            color: #1f2328;
+        }
+        .fin-model-table td.fin-negative {
+            color: #dc2626;
+        }
+        .fin-model-table .fin-col-hist { }
+        .fin-model-table .fin-col-guide { background: rgba(124, 58, 237, 0.03); }
+        .fin-model-table .fin-col-ss { background: rgba(37, 99, 235, 0.03); }
+        .fin-model-table .fin-col-rb { background: rgba(22, 163, 74, 0.03); }
+        .fin-model-table th.fin-col-guide { background: rgba(124, 58, 237, 0.08); color: #7c3aed; }
+        .fin-model-table th.fin-col-ss { background: rgba(37, 99, 235, 0.08); color: #2563eb; }
+        .fin-model-table th.fin-col-rb { background: rgba(22, 163, 74, 0.08); color: #16a34a; }
+        .fin-model-table th.fin-group-header {
+            text-align: center;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 0.6px;
+            padding: 6px 10px;
+            border-bottom: 1px solid #d0d7de;
+        }
+        .fin-col-sep {
+            border-left: 2px solid #d0d7de !important;
+        }
+        /* RB placeholder used when financials.model absent */
+        .memo-rb-placeholder {
+            padding: 16px 14px;
+            border: 1px dashed #c7d2fe;
+            border-radius: 6px;
+            background: #f5f7ff;
+            color: #4338ca;
+            font-style: italic;
+            font-size: 13px;
+        }
+
+        /* SECTION_A_CSS_V1_END */
+/* CI_STYLES_V1_START */
+
+        /* C.I Integration — depth filter + clickable pillar labels */
+        .memo-rtbl-depth {
+            display: inline-flex;
+            gap: 0;
+            margin-right: 12px;
+            border: 1px solid #d8dee4;
+            border-radius: 5px;
+            overflow: hidden;
+            vertical-align: middle;
+        }
+        .memo-rtbl-depth button {
+            padding: 4px 10px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.4px;
+            text-transform: uppercase;
+            background: #fff;
+            border: none;
+            border-right: 1px solid #d8dee4;
+            cursor: pointer;
+            color: #555;
+        }
+        .memo-rtbl-depth button:last-child { border-right: none; }
+        .memo-rtbl-depth button.is-active {
+            background: #3e4a59;
+            color: #fff;
+        }
+        /* Depth filter — hide rows below active level */
+        .memo-rtable-v2.depth-pillars tr.lvl-family,
+        .memo-rtable-v2.depth-pillars tr.lvl-af,
+        .memo-rtable-v2.depth-pillars tr.lvl-tc,
+        .memo-rtable-v2.depth-pillars tr.lvl-attribute,
+        .memo-rtable-v2.depth-pillars tr.lvl-question { display: none; }
+        .memo-rtable-v2.depth-families tr.lvl-tc,
+        .memo-rtable-v2.depth-families tr.lvl-attribute,
+        .memo-rtable-v2.depth-families tr.lvl-question { display: none; }
+        .memo-rtable-v2.depth-tcs tr.lvl-attribute,
+        .memo-rtable-v2.depth-tcs tr.lvl-question { display: none; }
+        .memo-rtable-v2.depth-attributes tr.lvl-question { display: none; }
+        /* depth-questions shows all */
+        /* Clickable pillar labels */
+        .memo-rtable-v2 tr.lvl-pillar td.col-label a.pillar-jump {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 1px dotted rgba(0,0,0,0.35);
+            cursor: pointer;
+        }
+        .memo-rtable-v2 tr.lvl-pillar td.col-label a.pillar-jump:hover {
+            border-bottom-color: #3e4a59;
+            color: #3e4a59;
+        }
+        /* CI_STYLES_V1_END */
+
+        
 </style>
 </head>
 <body>
@@ -26888,6 +27078,7 @@
             return html;
         }
 
+// CI_RENDERER_V1_START
         function memoRenderRatingsTable(block) {
             // Two shapes: legacy (cols+cells) OR v2 (rows with level/id/label/rating/summary).
             var rows = (block && block.rows) || [];
@@ -26919,19 +27110,31 @@
                 return html;
             }
             var hasToggle = !!block.has_toggle;
-            var labels = block.toggle_labels || ['RATINGS ONLY', 'SUMMARIES'];
+            var labels = block.toggle_labels || ['JUDGEMENTS', 'ANALYSIS'];
             var defaultMode = block.default_mode || 'SUMMARIES';
             var showSum = defaultMode === 'SUMMARIES';
             var tbId = 'memo-rtbl-' + Math.random().toString(36).slice(2, 8);
+            var defaultDepth = block.default_depth || 'tcs';
             var out = '';
             if (block.title) out += '<div class="memo-table-title">' + memoEscape(block.title) + '</div>';
+            // Controls row: depth pills + optional toggle
+            out += '<div class="memo-rtbl-controls" style="margin:6px 0 8px;">';
+            out += '<div class="memo-rtbl-depth" role="tablist" aria-label="Depth">';
+            var depths = [['pillars','Pillars'],['families','Families'],['tcs','TCs'],['attributes','Attributes'],['questions','Questions']];
+            for (var di = 0; di < depths.length; di++) {
+                var dk = depths[di][0]; var dl = depths[di][1];
+                var act = dk === defaultDepth ? ' is-active' : '';
+                out += '<button type="button" class="' + act.trim() + '" onclick="memoRtblDepthSet(this,\'' + tbId + '\',\'' + dk + '\')">' + dl + '</button>';
+            }
+            out += '</div>';
             if (hasToggle) {
-                out += '<div class="memo-rtbl-toggle" role="tablist">';
+                out += '<div class="memo-rtbl-toggle" role="tablist" style="display:inline-flex;vertical-align:middle;">';
                 out += '<button type="button" class="memo-rtbl-btn' + (showSum ? '' : ' is-active') + '" onclick="memoRtblToggle(this,\'' + tbId + '\',\'ratings\')">' + memoEscape(labels[0]) + '</button>';
                 out += '<button type="button" class="memo-rtbl-btn' + (showSum ? ' is-active' : '') + '" onclick="memoRtblToggle(this,\'' + tbId + '\',\'summaries\')">' + memoEscape(labels[1]) + '</button>';
                 out += '</div>';
             }
-            var tblCls = 'memo-rtable memo-rtable-v2 ' + (showSum ? 'mode-summaries' : 'mode-ratings');
+            out += '</div>';
+            var tblCls = 'memo-rtable memo-rtable-v2 depth-' + defaultDepth + ' ' + (showSum ? 'mode-summaries' : 'mode-ratings');
             out += '<table id="' + tbId + '" class="' + tblCls + '"><thead><tr>';
             out += '<th class="col-id">ID</th><th class="col-label">Pillar / AF / Attribute</th><th class="col-rating">Rating</th><th class="col-summary">Summary judgement</th>';
             out += '</tr></thead><tbody>';
@@ -26939,10 +27142,17 @@
                 var row = rows[rr] || {};
                 var lvl = row.level || 'row';
                 var rR = row.rating || '';
-                var rHtml = /^[A-F]$/.test(rR) ? '<span class="rating-badge ' + memoGradeClass(rR) + '">' + memoEscape(rR) + '</span>' : '<span class="rating-badge na">' + memoEscape(rR || '\u2014') + '</span>';
+                var isDashRating = !rR || rR === '\u2014' || rR === '--' || rR === '-' || rR === '\u2013';
+                var rHtml = /^[A-F]$/.test(rR) ? '<span class="rating-badge ' + memoGradeClass(rR) + '">' + memoEscape(rR) + '</span>' : (isDashRating ? '<span class="rating-badge na">&mdash;</span>' : '<span class="rating-badge na">' + memoEscape(rR) + '</span>');
                 out += '<tr class="lvl-' + memoEscape(lvl) + '">';
                 out += '<td class="col-id"><code>' + memoEscape(row.id || '') + '</code></td>';
-                out += '<td class="col-label">' + memoEscape(row.label || '') + '</td>';
+                var labelHtml;
+                if (lvl === 'pillar' && row.id) {
+                    labelHtml = '<a class="pillar-jump" onclick="memoCiiJumpTo(\'' + memoEscape(row.id) + '\')">' + memoEscape(row.label || '') + '</a>';
+                } else {
+                    labelHtml = memoEscape(row.label || '');
+                }
+                out += '<td class="col-label">' + labelHtml + '</td>';
                 out += '<td class="col-rating">' + rHtml + '</td>';
                 out += '<td class="col-summary">' + memoEscape(row.summary || '') + '</td>';
                 out += '</tr>';
@@ -26950,6 +27160,8 @@
             out += '</tbody></table>';
             return out;
         }
+        // CI_RENDERER_V1_END
+
 
         // MOMENTUM_TABLE_RENDERER_V1_START — managed by patch_momentum_table_renderer.py
         function memoRenderMomentumTable(block) {
@@ -27518,10 +27730,369 @@
             for (var i = 0; i < order.length; i++) {
                 var s = sections[order[i]];
                 if (!s) continue;
-                html += memoRenderSection(s);
+                // SECTION_A_DISPATCH_V1_START
+                if (order[i] === 'A' && typeof memoRenderSectionAFinancials === 'function') {
+                    html += memoRenderSectionAFinancials(s);
+                } else {
+                    html += memoRenderSection(s);
+                }
+                // SECTION_A_DISPATCH_V1_END
             }
             return html;
         }
+
+        // SECTION_A_JS_V1_START
+
+        // ============================================================
+        // Section A FINANCIALS (ported from V3, adapted for V2 schema)
+        // - V3 read memo.financials (top-level)
+        // - V2 reads section.financials (per-stage)
+        // ============================================================
+        var finModelMode = 'group'; // 'group' or 'byyear'
+
+        function toggleFinModelMode(mode) {
+            finModelMode = mode;
+            var btns = document.querySelectorAll('.fin-model-toggle button');
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].classList.toggle('active', btns[i].getAttribute('data-mode') === mode);
+            }
+            rerenderFinModel();
+        }
+
+        function rerenderFinModel() {
+            var container = document.getElementById('fin-model-container');
+            if (!container) return;
+            // Find the current memo by walking up to .memo-stage-panel.is-active
+            var panel = container.closest('.memo-stage-panel');
+            if (!panel) return;
+            var stage = panel.getAttribute('data-stage');
+            var ticker = panel.closest('[data-memo-ticker]');
+            var tickerKey = ticker ? ticker.getAttribute('data-memo-ticker') : null;
+            if (!tickerKey || !window.MEMO_DATA) return;
+            var memo = (window.MEMO_DATA[tickerKey] || {})[stage];
+            if (!memo) return;
+            var sections = memo.sections || {};
+            var secA = sections.A;
+            var fin = secA ? (secA.financials || {}) : {};
+            var model = fin.model;
+            if (!model) return;
+            container.innerHTML = renderFinModelTable(model, finModelMode);
+        }
+
+        function fmtFinVal(val, fmt) {
+            if (val === null || val === undefined) return '\u2014';
+            if (fmt === '%') return val.toFixed(1) + '%';
+            if (fmt === '2') return val.toFixed(2);
+            if (fmt === '1') return val.toFixed(1) + 'x';
+            var neg = val < 0;
+            var abs = Math.round(Math.abs(val));
+            var s = abs.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+            return neg ? '(' + s + ')' : s;
+        }
+
+        function renderFinModelTable(model, mode) {
+            if (!model || !model.sections) return '<div class="memo-placeholder">No financial model data</div>';
+            var hist = model.hist_years || [];
+            var fwd = model.fwd_years || [];
+            var guideYrs = model.guidance_years || [];
+            var ssYrs = model.ss_years || [];
+            var rbYrs = model.rb_years || [];
+
+            var cols = [];
+            for (var h = 0; h < hist.length; h++) {
+                cols.push({ label: hist[h], source: 'hist', yearIdx: h, cls: 'fin-col-hist', sep: h === 0 });
+            }
+
+            if (mode === 'group') {
+                for (var g = 0; g < guideYrs.length; g++) {
+                    var gi = fwd.indexOf(guideYrs[g]);
+                    cols.push({ label: guideYrs[g], source: 'guide', yearIdx: gi, cls: 'fin-col-guide', sep: g === 0 });
+                }
+                for (var s = 0; s < ssYrs.length; s++) {
+                    var si = fwd.indexOf(ssYrs[s]);
+                    cols.push({ label: ssYrs[s], source: 'ss', yearIdx: si, cls: 'fin-col-ss', sep: s === 0 });
+                }
+                for (var r = 0; r < rbYrs.length; r++) {
+                    var ri = fwd.indexOf(rbYrs[r]);
+                    cols.push({ label: rbYrs[r], source: 'rb', yearIdx: ri, cls: 'fin-col-rb', sep: r === 0 });
+                }
+            } else {
+                for (var y = 0; y < fwd.length; y++) {
+                    var yr = fwd[y];
+                    var hasGuide = guideYrs.indexOf(yr) >= 0;
+                    var hasSS = ssYrs.indexOf(yr) >= 0;
+                    var hasRB = rbYrs.indexOf(yr) >= 0;
+                    var isFirst = true;
+                    if (hasGuide) {
+                        cols.push({ label: 'Guide', source: 'guide', yearIdx: y, cls: 'fin-col-guide', sep: isFirst, yearLabel: yr });
+                        isFirst = false;
+                    }
+                    if (hasSS) {
+                        cols.push({ label: 'SS', source: 'ss', yearIdx: y, cls: 'fin-col-ss', sep: isFirst, yearLabel: yr });
+                        isFirst = false;
+                    }
+                    if (hasRB) {
+                        cols.push({ label: 'RB', source: 'rb', yearIdx: y, cls: 'fin-col-rb', sep: isFirst, yearLabel: yr });
+                    }
+                }
+            }
+
+            var html = '<table class="fin-model-table">';
+            if (mode === 'group') {
+                html += '<tr>';
+                html += '<th rowspan="2" style="vertical-align:bottom;">(' + memoEscape(model.currency || '') + ')</th>';
+                html += '<th class="fin-group-header fin-col-hist fin-col-sep" colspan="' + hist.length + '">HISTORICAL</th>';
+                html += '<th class="fin-group-header fin-col-guide fin-col-sep" colspan="' + guideYrs.length + '">GUIDANCE</th>';
+                html += '<th class="fin-group-header fin-col-ss fin-col-sep" colspan="' + ssYrs.length + '">SELL-SIDE</th>';
+                html += '<th class="fin-group-header fin-col-rb fin-col-sep" colspan="' + rbYrs.length + '">RICHARD</th>';
+                html += '</tr>';
+            } else {
+                html += '<tr>';
+                html += '<th rowspan="2" style="vertical-align:bottom;">(' + memoEscape(model.currency || '') + ')</th>';
+                html += '<th class="fin-group-header fin-col-hist fin-col-sep" colspan="' + hist.length + '">HISTORICAL</th>';
+                for (var yy = 0; yy < fwd.length; yy++) {
+                    var yrr = fwd[yy];
+                    var cnt = 0;
+                    if (guideYrs.indexOf(yrr) >= 0) cnt++;
+                    if (ssYrs.indexOf(yrr) >= 0) cnt++;
+                    if (rbYrs.indexOf(yrr) >= 0) cnt++;
+                    if (cnt > 0) {
+                        html += '<th class="fin-group-header fin-col-sep" colspan="' + cnt + '">' + yrr + '</th>';
+                    }
+                }
+                html += '</tr>';
+            }
+
+            html += '<tr>';
+            for (var c = 0; c < cols.length; c++) {
+                var col = cols[c];
+                var sepCls = col.sep ? ' fin-col-sep' : '';
+                html += '<th class="' + col.cls + sepCls + '">' + col.label + '</th>';
+            }
+            html += '</tr>';
+
+            for (var si2 = 0; si2 < model.sections.length; si2++) {
+                var sec = model.sections[si2];
+                html += '<tr class="fin-section-header"><td colspan="' + (cols.length + 1) + '">' + memoEscape(sec.label) + '</td></tr>';
+                for (var ri2 = 0; ri2 < sec.rows.length; ri2++) {
+                    var row = sec.rows[ri2];
+                    var trCls = '';
+                    if (row.subtotal) trCls += ' fin-subtotal';
+                    if (row.highlight) trCls += ' fin-highlight';
+                    html += '<tr class="' + trCls + '">';
+                    html += '<td>' + memoEscape(row.label) + '</td>';
+                    for (var ci2 = 0; ci2 < cols.length; ci2++) {
+                        var col2 = cols[ci2];
+                        var sepCls2 = col2.sep ? ' fin-col-sep' : '';
+                        var val = null;
+                        if (col2.source === 'hist') {
+                            val = row.hist ? row.hist[col2.yearIdx] : null;
+                        } else if (col2.source === 'guide') {
+                            val = row.guide ? row.guide[col2.yearIdx] : null;
+                        } else if (col2.source === 'ss') {
+                            val = row.ss ? row.ss[col2.yearIdx] : null;
+                        } else if (col2.source === 'rb') {
+                            val = row.rb ? row.rb[col2.yearIdx] : null;
+                        }
+                        var formatted = fmtFinVal(val, row.fmt);
+                        var negCls = (val !== null && val < 0 && row.fmt === '0') ? ' fin-negative' : '';
+                        html += '<td class="' + col2.cls + sepCls2 + negCls + '">' + formatted + '</td>';
+                    }
+                    html += '</tr>';
+                }
+            }
+            html += '</table>';
+            return html;
+        }
+
+        function renderTsrDupontTable(fin) {
+            var tsr = (fin && fin.tsr_dupont) ? fin.tsr_dupont : null;
+            if (!tsr) return '<div class="memo-rb-placeholder">[RB] TSR DuPont awaiting Richard\'s input</div>';
+            var cols = tsr.columns || [];
+            var html = '<div class="fin-model-wrap" style="margin-top:8px;">';
+            html += '<table class="fin-model-table">';
+            html += '<tr>';
+            html += '<th class="fin-group-header" style="text-align:left;font-size:13px;color:#7c3aed;">' + memoEscape(tsr.stock_name || '') + '</th>';
+            var periods = tsr.period_headers || [];
+            for (var ph = 0; ph < periods.length; ph++) {
+                var p = periods[ph];
+                html += '<th class="fin-group-header' + (ph === 0 ? ' fin-col-sep' : '') + '" colspan="' + (p.span || 1) + '">' + memoEscape(p.label || '') + '</th>';
+            }
+            html += '</tr><tr><th></th>';
+            for (var ci = 0; ci < cols.length; ci++) {
+                html += '<th>' + memoEscape(cols[ci]) + '</th>';
+            }
+            html += '</tr>';
+            var rows = tsr.rows || [];
+            for (var ri = 0; ri < rows.length; ri++) {
+                var row = rows[ri];
+                if (row.type === 'spacer') {
+                    html += '<tr><td colspan="' + (cols.length + 1) + '" style="height:6px;border:none;"></td></tr>';
+                    continue;
+                }
+                if (row.type === 'note') {
+                    html += '<tr><td colspan="' + (cols.length + 1) + '" style="font-size:13px;color:#57606a;font-style:italic;text-align:left;padding:3px 10px;">' + memoEscape(row.label || '') + '</td></tr>';
+                    continue;
+                }
+                if (row.type === 'header') {
+                    html += '<tr class="fin-section-header"><td colspan="' + (cols.length + 1) + '">' + memoEscape(row.label || '') + '</td></tr>';
+                    continue;
+                }
+                var trCls = '';
+                if (row.highlight) trCls += ' fin-highlight';
+                if (row.subtotal) trCls += ' fin-subtotal';
+                html += '<tr class="' + trCls + '">';
+                html += '<td>' + memoEscape(row.label || '') + '</td>';
+                var vals = row.values || [];
+                for (var vi = 0; vi < cols.length; vi++) {
+                    var v = vi < vals.length ? vals[vi] : null;
+                    var formatted = '';
+                    if (v === null || v === undefined || v === '') {
+                        formatted = '';
+                    } else if (row.fmt === '%') {
+                        formatted = (v * 100).toFixed(1) + '%';
+                    } else if (row.fmt === '2') {
+                        formatted = v.toFixed(2);
+                    } else if (row.fmt === '1') {
+                        formatted = v.toFixed(1) + 'x';
+                    } else if (row.fmt === '0') {
+                        formatted = Math.round(v).toLocaleString();
+                    } else {
+                        formatted = typeof v === 'number' ? v.toFixed(2) : String(v);
+                    }
+                    var negCls = (v !== null && typeof v === 'number' && v < 0) ? ' fin-negative' : '';
+                    html += '<td class="' + negCls + '">' + formatted + '</td>';
+                }
+                html += '</tr>';
+            }
+            html += '</table></div>';
+            return html;
+        }
+
+        // V2 bridge: render Section A using existing subsection renderer for
+        // A.I + A.II.1-4 prose, AND inject fin model + TSR DuPont when
+        // section.financials object is present.
+        function memoRenderSectionAFinancials(section) {
+            // Reuse the standard memo-section header from memoRenderSection
+            // but inject fin model + TSR DuPont into the body.
+            var letter = section.letter || 'A';
+            var title = section.title || 'FINANCIALS';
+            var applicable = section.applicable !== false;
+            var defaultOpen = section.default_open !== false;
+            var wc = section.word_count || 0;
+            var pp = section.page_count || 0;
+            var target = section.target_words || 0;
+            var verdict = section.inline_verdict;
+            var fin = section.financials || {};
+            var hasModel = fin && fin.model;
+
+            var metaText;
+            if (!applicable) {
+                metaText = section.applicable_note || 'n/a';
+            } else if (target > 0) {
+                metaText = pp + 'pp | ' + wc.toLocaleString() + 'w / ' + target.toLocaleString() + 't';
+            } else {
+                metaText = pp + 'pp | ' + wc.toLocaleString() + 'w';
+            }
+            var chevron = applicable ? (defaultOpen ? '\u25BE' : '\u25B8') : '\u2014';
+            var verdictHtml = '';
+            if (applicable && verdict) {
+                verdictHtml = '<div class="memo-section-verdict">' +
+                              '<span class="memo-verdict-label">\u2014</span>' +
+                              memoEscape(verdict) + '</div>';
+            } else if (applicable) {
+                verdictHtml = '<div class="memo-section-verdict"></div>';
+            }
+            var cls = 'memo-section' + (defaultOpen ? ' is-open' : '') +
+                      (applicable ? '' : ' not-applicable');
+            var headerAttr = applicable ? '' : ' aria-disabled="true"';
+
+            var body = '';
+            if (applicable) {
+                body = '<div class="memo-section-body">';
+                var subs = section.subsections || [];
+                // Render A.I first
+                var aIdone = false;
+                for (var i = 0; i < subs.length; i++) {
+                    var sub = subs[i];
+                    var subId = sub.id || '';
+                    body += memoRenderSubsection(sub);
+                    if (subId === 'A.I' && !aIdone) {
+                        aIdone = true;
+                        // Inject fin model table block right after A.I
+                        if (hasModel) {
+                            body += '<div class="memo-subsection memo-fin-model-block">';
+                            body += '<div class="fin-model-toggle">';
+                            body += '<button type="button" data-mode="group" class="' + (finModelMode === 'group' ? 'active' : '') + '" onclick="toggleFinModelMode(\'group\')">GROUP</button>';
+                            body += '<button type="button" data-mode="byyear" class="' + (finModelMode === 'byyear' ? 'active' : '') + '" onclick="toggleFinModelMode(\'byyear\')">BY YEAR</button>';
+                            body += '</div>';
+                            body += '<div class="fin-model-wrap" id="fin-model-container">';
+                            body += renderFinModelTable(fin.model, finModelMode);
+                            body += '</div>';
+                            body += '</div>';
+                        }
+                    }
+                    // Append TSR DuPont after A.II.4 prose
+                    if (subId === 'A.II.4' && fin && fin.tsr_dupont) {
+                        body += renderTsrDupontTable(fin);
+                    }
+                }
+                body += '</div>';
+            }
+
+            return '<div class="' + cls + '" data-section-letter="A">' +
+                   '<div class="memo-section-header"' + headerAttr + '>' +
+                   '<span class="memo-chevron">' + chevron + '</span>' +
+                   '<span class="memo-letter-badge">' + memoEscape(letter) + '</span>' +
+                   '<span class="memo-section-title">' + memoEscape(title) + '</span>' +
+                   verdictHtml +
+                   '<span class="memo-section-meta">' + memoEscape(metaText) + '</span>' +
+                   '</div>' +
+                   body +
+                   '</div>';
+        }
+
+        // SECTION_A_JS_V1_END
+        // CI_JS_V1_START
+
+        function memoRtblDepthSet(btn, tblId, depth) {
+            var tbl = document.getElementById(tblId);
+            if (!tbl) return;
+            var classes = tbl.className.split(/\s+/).filter(function(c){
+                return c.indexOf('depth-') !== 0;
+            });
+            classes.push('depth-' + depth);
+            tbl.className = classes.join(' ');
+            var parent = btn && btn.parentNode;
+            if (parent) {
+                var siblings = parent.querySelectorAll('button');
+                for (var i=0;i<siblings.length;i++) { siblings[i].classList.remove('is-active'); }
+                btn.classList.add('is-active');
+            }
+        }
+        function memoCiiJumpTo(pillarId) {
+            // pillarId like 'p1' → scroll to anchor id='memo-sub-c-ii-1' if present,
+            // else first element with data-pillar-ref matching.
+            if (!pillarId) return;
+            var m = String(pillarId).toLowerCase().match(/^p(\d+)$/);
+            if (!m) return;
+            var idx = m[1];
+            var target = document.getElementById('memo-sub-c-ii-' + idx);
+            if (!target) {
+                // fallback — find any subsection whose id ends in .ii.<idx>
+                var candidates = document.querySelectorAll('[id^="memo-sub-c-ii-"]');
+                for (var i=0;i<candidates.length;i++) {
+                    if (candidates[i].id.indexOf('memo-sub-c-ii-' + idx) === 0) {
+                        target = candidates[i];
+                        break;
+                    }
+                }
+            }
+            if (target && target.scrollIntoView) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+        // CI_JS_V1_END
 
         // MEMO_JS_END
 
