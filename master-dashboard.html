@@ -1346,7 +1346,9 @@ function renderBP(){
   var h='<div class="summary-tile" id="section-summary"><h3>Basing Plateau &mdash; Sideways Consolidation Screen</h3>'
     +'<div class="sub">Loose (&plusmn;15%) = Early | Medium (&plusmn;10%) = Late | Tight (&plusmn;5%) = Capital</div>'
     +'<div class="summary-stats">'+sumStat("Tight/Capital",xyFmt(cap,rows.length),"green")+sumStat("Medium/Late",xyFmt(lat,rows.length),"amber")+sumStat("Loose/Early",ear)+sumStat("None",non)+sumStat("Shown",xyFmt(rows.length,totalCount))+'</div></div>';
-  h+=buildIndSecTables(rows,null);
+  // FIX-S4-TILES: Group defs for BP industry/sector tiles
+  var bpGroupDefs=[{key:"ga",label:"Loose"},{key:"gb",label:"Medium"},{key:"gc",label:"Tight"}];
+  h+=buildIndSecTables(allRows,bpGroupDefs);
 
   // FIX-2: Qualified Stocks title
   function bpHeaders(){
@@ -1436,7 +1438,8 @@ function renderPB(){
   var h='<div class="summary-tile" id="section-summary"><h3>Probing Bet &mdash; Entry Setup Screen</h3>'
     +'<div class="sub">A=Early (3/5 rising) | B=Late (20D/50D rising) | C=Dead Cat (&ge;30% below 52WH) | D=PB1 Capital (P&gt;20D+rising) | E=PB2 Capital (P&gt;50D+rising)</div>'
     +'<div class="summary-stats">'+sumStat("Capital",xyFmt(cap,rows.length),"green")+sumStat("Late",xyFmt(lat,rows.length),"amber")+sumStat("Early",ear)+sumStat("Dead Cat",dc,"red")+sumStat("Shown",xyFmt(rows.length,totalCount))+'</div></div>';
-  h+=buildIndSecTables(rows,null);
+  var pbGroupDefs=[{key:"ga",label:"Early"},{key:"gb",label:"Late"},{key:"gd",label:"PB1 Capital"},{key:"ge",label:"PB2 Capital"}];
+  h+=buildIndSecTables(allRows,pbGroupDefs);
 
   h+=buildPortfolioTile(currentTab);
   h+='<h3 class="qualified-title" id="section-stocks">Qualified Stocks ('+xyFmt(rows.length,totalCount)+')</h3>';
@@ -1503,6 +1506,8 @@ function renderUTR(){
     // pct values for UTR EWS (boolean tests)
     r.ews_5d_pct=null;r.ews_5r_pct=null;r.ews_10r_pct=null;r.ews_20r_pct=null;r.ews_50r_pct=null;
     r.mm_stage=r.f.mm99.stage;r.pb_stage2=r.f.probing_bet.stage;
+    // FIX-S4-TILES: Compute stage-based groups for ind/sec tiles
+    r.utr_capital=r.utr_stage==="Capital";r.utr_late=r.utr_stage==="Late"||r.utr_stage==="Capital";r.utr_early=r.utr_stage==="Early"||r.utr_stage==="Late"||r.utr_stage==="Capital";
     rows.push(r);
   }
   rows=sortData(rows,currentSort.col,currentSort.dir);
@@ -1512,7 +1517,8 @@ function renderUTR(){
   var h='<div class="summary-tile" id="section-summary"><h3>Uptrend Retest &mdash; Pullback Quality Screen</h3>'
     +'<div class="sub">8 signals (max 8.0) + 5 EWS signals. Capital = composite &ge;6.0 + EWS &ge;4 | Late = &ge;4.5 | Early = &ge;3.0</div>'
     +'<div class="summary-stats">'+sumStat("Capital",xyFmt(cap,rows.length),"green")+sumStat("Late",xyFmt(lat,rows.length),"amber")+sumStat("Early",ear)+sumStat("Shown",xyFmt(rows.length,totalCount))+'</div></div>';
-  h+=buildIndSecTables(rows,null);
+  var utrGroupDefs=[{key:"utr_early",label:"Early+"},{key:"utr_late",label:"Late+"},{key:"utr_capital",label:"Capital"}];
+  h+=buildIndSecTables(allRows,utrGroupDefs);
 
   h+=buildPortfolioTile(currentTab);
   h+='<h3 class="qualified-title" id="section-stocks">Qualified Stocks ('+xyFmt(rows.length,totalCount)+')</h3>';
@@ -1575,7 +1581,8 @@ function renderVCP(){
   var h='<div class="summary-tile" id="section-summary"><h3>VCP &mdash; Volatility Contraction Pattern</h3>'
     +'<div class="sub">Pattern detection pending Phase 2. Currently showing Stage 2 uptrend check (MM99 Groups A+B pass = price above rising 200D+150D).</div>'
     +'<div class="summary-stats">'+sumStat("Stage 2 Uptrend",xyFmt(s2,rows.length),"green")+sumStat("Not Stage 2",rows.length-s2)+sumStat("Shown",xyFmt(rows.length,totalCount))+'</div></div>';
-  h+=buildIndSecTables(rows,null);
+  var vcpGroupDefs=[{key:"stage2",label:"Stage 2"},{key:"mm_ga",label:"P>200D"},{key:"mm_gb",label:"P>150D"}];
+  h+=buildIndSecTables(allRows,vcpGroupDefs);
 
   h+=buildPortfolioTile(currentTab);
   h+='<h3 class="qualified-title" id="section-stocks">Qualified Stocks ('+xyFmt(rows.length,totalCount)+')</h3>';
