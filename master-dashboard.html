@@ -130,8 +130,12 @@ table.data-table th.col-rs,table.data-table td.col-rs{text-align:center}
 table.data-table th.col-ref,table.data-table td.col-ref{text-align:center}
 table.data-table th.col-ratings,table.data-table td.col-ratings{text-align:center}
 table.data-table th.col-price,table.data-table td.col-price{text-align:right}
+/* FIX-S4-COLW: Ticker + Sector columns wider to fit company names and full sector text */
 .col-identity{min-width:60px}
-.company-mode .col-identity:first-child{min-width:140px}.col-price{background:rgba(21,101,192,.03)}.col-filter{background:rgba(141,110,0,.03)}.col-rs{background:rgba(121,85,191,.03)}.col-green{background:rgba(46,125,50,.03)}.col-ref{background:rgba(21,101,192,.03)}
+.col-identity-name{width:120px;min-width:100px}
+.col-identity-sector{width:160px;min-width:120px}
+.company-mode .col-identity-name{width:180px;min-width:160px}
+.col-price{background:rgba(21,101,192,.03)}.col-filter{background:rgba(141,110,0,.03)}.col-rs{background:rgba(121,85,191,.03)}.col-green{background:rgba(46,125,50,.03)}.col-ref{background:rgba(21,101,192,.03)}
 .pass{color:var(--green)}.fail{color:var(--red)}.amber{color:var(--amber)}.neutral{color:var(--text-dim)}
 .badge{display:inline-block;padding:2px 6px;border-radius:3px;font-size:10px;font-weight:600;text-transform:uppercase}
 .badge-pass{background:var(--green-dim);color:var(--green)}.badge-fail{background:var(--red-dim);color:var(--red)}.badge-amber{background:var(--amber-dim);color:var(--amber)}
@@ -978,9 +982,10 @@ function buildPortfolioTile(tabId){
 
 // FIX-7: Common columns - 52W High and 52W Low consolidated into single columns each
 // FIX-9: alignment classes
+// FIX-S4-COLW: Wider Ticker + Sector columns across all tabs
 function commonCols(){
-  return th("Ticker","_display_name","col-txt col-identity","Stock ticker or company name (toggle in header)")
-    +th("Sector","_tax_sector","col-txt col-identity","Industry sector classification")
+  return th("Ticker","_display_name","col-txt col-identity col-identity-name","Stock ticker or company name (toggle in header)")
+    +th("Sector","_tax_sector","col-txt col-identity col-identity-sector","Industry sector classification")
     +th("Price","price","col-num col-price","Current stock price")
     +th("52WH","high_52w","col-num col-price","52-week high (toggle to %)")
     +th("52WL","low_52w","col-num col-price","52-week low (toggle to %)")
@@ -1007,8 +1012,8 @@ function commonTds(r){
   var ma50=r.mas?r.mas["50D"]:null;
   var ma150=r.mas?r.mas["150D"]:null;
   var ma200=r.mas?r.mas["200D"]:null;
-  return'<td class="col-txt col-identity" style="font-weight:600;color:var(--text-bright)">'+dn+'</td>'
-    +'<td class="col-txt col-identity" style="font-size:11px">'+tax.sector+'</td>'
+  return'<td class="col-txt col-identity col-identity-name" style="font-weight:600;color:var(--text-bright)">'+dn+'</td>'
+    +'<td class="col-txt col-identity col-identity-sector" style="font-size:11px">'+tax.sector+'</td>'
     +'<td class="col-num col-price">'+fp(r.price)+'</td>'
     +h52val+l52val
     +'<td class="col-num col-price">'+fp(ma20)+'</td>'
@@ -1684,7 +1689,7 @@ function renderPositions(){
     +'<div class="summary-stats">'+sumStat("Investments",invs.length)+sumStat("Total Trades",totalTrades)+sumStat("Active",xyFmt(activeTrades,totalTrades),"green")+'</div></div>';
 
   h+='<div class="data-table-wrap" id="section-stocks"><table class="data-table"><thead><tr>'
-    +'<th class="col-txt">Ticker</th><th class="col-txt">Company</th><th class="col-txt">Currency</th>'
+    +'<th class="col-txt col-identity-name">Ticker</th><th class="col-txt col-identity-sector">Company</th><th class="col-txt">Currency</th>'
     +'<th>PB1</th><th>PB2</th><th>S1</th><th>S2</th><th>S3</th><th>S4</th>'
     +'<th class="col-txt">Filter Status</th></tr></thead><tbody>';
 
@@ -1773,7 +1778,7 @@ function renderSSEM(){
   h+='<th></th>';
   h+='</tr>';
   h+='<tr>';
-  h+=th("Ticker","_display_name","col-txt col-identity")+th("Sector","_tax_sector","col-txt col-identity")+th("Price","price","col-num col-price")
+  h+=th("Ticker","_display_name","col-txt col-identity col-identity-name")+th("Sector","_tax_sector","col-txt col-identity col-identity-sector")+th("Price","price","col-num col-price")
     +th("EPS 1M","eps_1m","col-num col-filter grp-eps-first")+th("EPS 3M","eps_3m","col-num col-filter")+th("EPS 6M","eps_6m","col-num col-filter")+th("EPS 12M","eps_12m","col-num col-filter grp-eps-last")
     +th("EBITDA 1M","ebitda_1m","col-num col-filter grp-ebitda-first")+th("EBITDA 3M","ebitda_3m","col-num col-filter")+th("EBITDA 6M","ebitda_6m","col-num col-filter")+th("EBITDA 12M","ebitda_12m","col-num col-filter grp-ebitda-last")
     +th("Sales 1M","sales_1m","col-num col-filter grp-sales-first")+th("Sales 3M","sales_3m","col-num col-filter")+th("Sales 6M","sales_6m","col-num col-filter")+th("Sales 12M","sales_12m","col-num col-filter grp-sales-last")
@@ -1856,7 +1861,7 @@ function renderVal(){
   h+='<th colspan="4" style="background:rgba(50,150,50,0.08)">P/E Valuation</th>';
   h+='</tr>';
   h+='<tr>';
-  h+=th("Ticker","_display_name","col-txt col-identity")+th("Sector","_tax_sector","col-txt col-identity")+th("Price","price","col-num col-price")
+  h+=th("Ticker","_display_name","col-txt col-identity col-identity-name")+th("Sector","_tax_sector","col-txt col-identity col-identity-sector")+th("Price","price","col-num col-price")
     +th("P/E","pe_cur","col-num col-filter grp-pe-first")+th("P/E Pctile","pe_pctile","col-num col-filter")+'<th class="col-filter">P/E 10Y Range</th>'
     +th("EPS 24MF","eps_24mf","col-num col-filter grp-pe-last");
   h+='</tr></thead><tbody>';
