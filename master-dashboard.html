@@ -206,17 +206,7 @@ table.data-table th{position:relative}
   <!-- FIX-5 Row 2: TABS label + tab navigation -->
   <div class="header-tabs-row">
     <span class="row-label">Tabs</span>
-    <div class="tab-nav"><button class="tab-btn" data-tab="tech" style="--tab-accent:#2c5282;background:rgba(44,82,130,0.1);border-color:rgba(44,82,130,0.3)" onclick="switchTab('tech')">Technical Data</button>
-          <button class="tab-btn" data-tab="bp" style="--tab-accent:#276749;background:rgba(39,103,73,0.1);border-color:rgba(39,103,73,0.3)" onclick="switchTab('bp')">Basing Plateau</button>
-          <button class="tab-btn" data-tab="pb" style="--tab-accent:#6b46c1;background:rgba(107,70,193,0.1);border-color:rgba(107,70,193,0.3)" onclick="switchTab('pb')">Probing Bet</button>
-          <button class="tab-btn" data-tab="vcp" style="--tab-accent:#9c4221;background:rgba(156,66,33,0.1);border-color:rgba(156,66,33,0.3)" onclick="switchTab('vcp')">VCP</button>
-          <button class="tab-btn tab-active" data-tab="mm99" style="--tab-accent:#1b3d5c;background:rgba(27,61,92,0.1);border-color:rgba(27,61,92,0.3)" onclick="switchTab('mm99')">MM 99</button>
-          <button class="tab-btn" data-tab="utr" style="--tab-accent:#744210;background:rgba(116,66,16,0.1);border-color:rgba(116,66,16,0.3)" onclick="switchTab('utr')">Uptrend Retest</button>
-          <button class="tab-btn" data-tab="ssem" style="--tab-accent:#2b6cb0;background:rgba(43,108,176,0.1);border-color:rgba(43,108,176,0.3)" onclick="switchTab('ssem')">SSEM</button>
-          <button class="tab-btn" data-tab="val" style="--tab-accent:#38a169;background:rgba(56,161,105,0.1);border-color:rgba(56,161,105,0.3)" onclick="switchTab('val')">Valuation</button>
-          <button class="tab-btn" data-tab="combos" style="--tab-accent:#dd6b20;background:rgba(221,107,32,0.1);border-color:rgba(221,107,32,0.3)" onclick="switchTab('combos')">Combinations</button>
-          <button class="tab-btn" data-tab="positions" style="--tab-accent:#319795;background:rgba(49,151,149,0.1);border-color:rgba(49,151,149,0.3)" onclick="switchTab('positions')">Live Investments</button>
-          </div>
+    <div class="tab-nav"><div class="tab-group" style="border:1.5px solid rgba(200,50,50,0.25);border-radius:6px;padding:2px 4px;display:inline-flex;gap:2px"><button class="tab-btn" data-tab="tech" style="--tab-accent:#2c5282;background:rgba(44,82,130,0.1);border-color:rgba(44,82,130,0.3)" onclick="switchTab('tech')">Technical Data</button><button class="tab-btn" data-tab="bp" style="--tab-accent:#276749;background:rgba(39,103,73,0.1);border-color:rgba(39,103,73,0.3)" onclick="switchTab('bp')">Basing Plateau</button><button class="tab-btn" data-tab="pb" style="--tab-accent:#6b46c1;background:rgba(107,70,193,0.1);border-color:rgba(107,70,193,0.3)" onclick="switchTab('pb')">Probing Bet</button><button class="tab-btn" data-tab="vcp" style="--tab-accent:#9c4221;background:rgba(156,66,33,0.1);border-color:rgba(156,66,33,0.3)" onclick="switchTab('vcp')">VCP</button><button class="tab-btn tab-active" data-tab="mm99" style="--tab-accent:#1b3d5c;background:rgba(27,61,92,0.1);border-color:rgba(27,61,92,0.3)" onclick="switchTab('mm99')">MM 99</button><button class="tab-btn" data-tab="utr" style="--tab-accent:#744210;background:rgba(116,66,16,0.1);border-color:rgba(116,66,16,0.3)" onclick="switchTab('utr')">Uptrend Retest</button></div><div class="tab-group" style="border:1.5px solid rgba(120,80,200,0.25);border-radius:6px;padding:2px 4px;display:inline-flex;gap:2px;margin-left:6px"><button class="tab-btn" data-tab="ssem" style="--tab-accent:#2b6cb0;background:rgba(43,108,176,0.1);border-color:rgba(43,108,176,0.3)" onclick="switchTab('ssem')">SSEM</button><button class="tab-btn" data-tab="val" style="--tab-accent:#38a169;background:rgba(56,161,105,0.1);border-color:rgba(56,161,105,0.3)" onclick="switchTab('val')">Valuation</button><button class="tab-btn" data-tab="combos" style="--tab-accent:#dd6b20;background:rgba(221,107,32,0.1);border-color:rgba(221,107,32,0.3)" onclick="switchTab('combos')">Combinations</button><button class="tab-btn" data-tab="positions" style="--tab-accent:#319795;background:rgba(49,151,149,0.1);border-color:rgba(49,151,149,0.3)" onclick="switchTab('positions')">Live Investments</button></div></div>
   </div>
   <!-- Row 3: Toggles + Filters -->
   <div class="header-controls-row">
@@ -232,6 +222,7 @@ table.data-table th{position:relative}
       <a class="anchor-link" onclick="scrollToSection('section-summary')">Summary</a>
       <a class="anchor-link" onclick="scrollToSection('section-industries')">Industries</a>
       <a class="anchor-link" onclick="scrollToSection('section-sectors')">Sectors</a>
+      <a class="anchor-link" onclick="scrollToSection('section-portfolio')">Live Portfolio</a>
       <a class="anchor-link" onclick="scrollToSection('section-stocks')">Qualified Stocks</a>
       <span id="group-links"></span>
     </div>
@@ -730,11 +721,12 @@ function fpc(v){
   if(n<0)return"("+Math.abs(n).toFixed(0)+"%)";
   return n.toFixed(0)+"%";
 }
+// FIX-S4-0DP: All percentages at 0 decimal places
 function fpc1(v){
   if(v==null)return"&mdash;";
   var n=v*100;
-  if(n<0)return"("+Math.abs(n).toFixed(1)+"%)";
-  return n.toFixed(1)+"%";
+  if(n<0)return"("+Math.abs(n).toFixed(0)+"%)";
+  return n.toFixed(0)+"%";
 }
 function fpcRaw(v){
   if(v==null)return"&mdash;";
@@ -846,6 +838,26 @@ function sumStat(l,v,c){return'<div class="summary-stat"><span class="label">'+l
 function xyFmt(x,y){return x+" / "+y}
 
 // Industries + Sectors tables
+// FIX-S4-TILESORT: Sort rows within a tile table when column header clicked
+window.tileSortTable=function(thEl){
+  var table=thEl.closest("table");
+  if(!table)return;
+  var idx=0;var th2=thEl;while(th2.previousElementSibling){th2=th2.previousElementSibling;idx++}
+  var tbody=table.querySelector("tbody");
+  if(!tbody)return;
+  var rowsArr=Array.prototype.slice.call(tbody.querySelectorAll("tr"));
+  var dir=thEl.getAttribute("data-sort-dir")==="asc"?"desc":"asc";
+  thEl.setAttribute("data-sort-dir",dir);
+  rowsArr.sort(function(a,b){
+    var ca=a.children[idx],cb=b.children[idx];
+    if(!ca||!cb)return 0;
+    var va=ca.textContent.trim(),vb=cb.textContent.trim();
+    var na=parseFloat(va.replace(/[^0-9.\-]/g,"")),nb=parseFloat(vb.replace(/[^0-9.\-]/g,""));
+    if(!isNaN(na)&&!isNaN(nb))return dir==="asc"?na-nb:nb-na;
+    return dir==="asc"?va.localeCompare(vb):vb.localeCompare(va);
+  });
+  for(var j=0;j<rowsArr.length;j++)tbody.appendChild(rowsArr[j]);
+};
 function buildIndSecTables(rows,groupDefs){
   var indMap={},secMap={};
   var j,k,t,ind,sec;
@@ -883,8 +895,8 @@ function buildIndSecTables(rows,groupDefs){
   // FIX-10: X / Y in industry/sector counts
   var h='<div class="ind-sec-wrap" id="section-industries">';
   h+='<div class="half-table"><div class="half-title">Industries</div>';
-  h+='<div class="data-table-wrap"><table class="data-table"><thead><tr><th class="col-txt">Industry</th><th class="col-num"># Stocks</th>';
-  if(groupDefs){for(k=0;k<groupDefs.length;k++)h+='<th class="col-num">'+groupDefs[k].label+'</th>'}
+  h+='<div class="data-table-wrap"><table class="data-table"><thead><tr><th class="col-txt" onclick="tileSortTable(this)" style="cursor:pointer">Industry</th><th class="col-num" onclick="tileSortTable(this)" style="cursor:pointer"># Stocks</th>';
+  if(groupDefs){for(k=0;k<groupDefs.length;k++)h+='<th class="col-num" onclick="tileSortTable(this)" style="cursor:pointer">'+groupDefs[k].label+'</th>'}
   h+='</tr></thead><tbody>';
   for(j=0;j<indKeys.length;j++){
     var ik=indKeys[j],iv=indMap[ik];
@@ -903,8 +915,8 @@ function buildIndSecTables(rows,groupDefs){
   h+='</tbody></table></div></div>';
 
   h+='<div class="half-table" id="section-sectors"><div class="half-title">Sectors</div>';
-  h+='<div class="data-table-wrap"><table class="data-table"><thead><tr><th class="col-txt" style="width:35%">Sector</th><th class="col-txt" style="width:20%">Industry</th><th class="col-num" style="width:30px">#</th>';
-  if(groupDefs){for(k=0;k<groupDefs.length;k++)h+='<th class="col-num">'+groupDefs[k].label+'</th>'}
+  h+='<div class="data-table-wrap"><table class="data-table"><thead><tr><th class="col-txt" style="width:35%;cursor:pointer" onclick="tileSortTable(this)">Sector</th><th class="col-txt" style="width:20%;cursor:pointer" onclick="tileSortTable(this)">Industry</th><th class="col-num" style="width:30px;cursor:pointer" onclick="tileSortTable(this)">#</th>';
+  if(groupDefs){for(k=0;k<groupDefs.length;k++)h+='<th class="col-num" onclick="tileSortTable(this)" style="cursor:pointer">'+groupDefs[k].label+'</th>'}
   h+='</tr></thead><tbody>';
   for(j=0;j<secKeys.length;j++){
     var sk=secKeys[j],sv=secMap[sk];
@@ -980,7 +992,7 @@ function buildPortfolioTile(tabId){
 
 // FIX-7: Common columns - 52W High and 52W Low consolidated into single columns each
 // FIX-9: alignment classes
-// FIX-S4-COLW-V3: Inline widths on th — the ONLY way table-layout:fixed respects widths
+// FIX-S4-COLW-V4: table-layout:auto — browser sizes columns by content
 function commonCols(){
   var tkrW=displayMode==="company"?"width:180px":"width:120px";
   return th("Ticker","_display_name","col-txt col-identity","Stock ticker or company name (toggle in header)",tkrW)
@@ -1214,13 +1226,14 @@ function renderMM99(){
   // MM99 table rendering function (reused for portfolio tile and main table)
   function mm99Headers(){
     var hdr='<tr class="group-header-row">';
-    hdr+='<th colspan="2"></th><th colspan="7" style="background:rgba(100,100,100,0.06)">Inputs</th><th></th><th></th>';
+    // FIX-S4-MM99: RS in Inputs group, PB+BP as Setups
+    hdr+='<th colspan="2"></th><th colspan="8" style="background:rgba(100,100,100,0.06)">Inputs</th><th></th>';
     hdr+='<th colspan="2" style="background:rgba(200,50,50,0.08)">Long-term</th>';
     hdr+='<th colspan="2" style="background:rgba(200,150,0,0.08)">Mid-term</th>';
     hdr+='<th colspan="2" style="background:rgba(50,150,50,0.08)">Short-term</th>';
     hdr+='<th colspan="2" style="background:rgba(50,100,200,0.08)">52W Leadership</th>';
     hdr+='<th colspan="3" style="background:rgba(120,80,200,0.08)">Relative Strength</th>';
-    hdr+='<th colspan="2"></th>';
+    hdr+='<th colspan="2" style="background:rgba(180,100,50,0.08)">Setups</th>';
     hdr+=ratingsColHeaders().length>0?'<th colspan="8" class="col-ratings">Ratings</th>':"";
     hdr+='</tr><tr>';
     hdr+=commonCols()+th("Score","mm99_score","col-num col-filter","Minervini 11-test score (8 technical + 3 RS)")
@@ -1229,7 +1242,7 @@ function renderMM99(){
       +th("50>150","t5","col-filter grp-st-first","50-day MA above 150-day MA")+th("P>50D","t6","col-filter grp-st-last","Price above 50-day MA")
       +th("P>20%L","t7","col-filter grp-lead-first","Price at least 20% above 52-week low")+th("P<25%H","t8","col-filter grp-lead-last","Price within 25% of 52-week high")
       +th("Sector","t9","col-filter grp-rs-first","Relative strength vs sector")+th("Industry","t10","col-filter","Relative strength vs industry")+th("Market","t11","col-filter grp-rs-last","Relative strength vs market")
-      +th("Probing Bet","pb_stage","col-txt col-ref")+th("Basing Plateau","bp_stage","col-txt col-ref")
+      +th("Probing","pb_stage","col-txt col-ref","Probing Bet filter stage")+th("Basing","bp_stage","col-txt col-ref","Basing Plateau filter stage")
       +ratingsColHeaders();
     hdr+='</tr>';
     return hdr;
@@ -1249,7 +1262,7 @@ function renderMM99(){
   // Live Portfolio tile — same columns as Qualified Stocks, positions only
   var posRows=filterToPositions(rows);
   if(posRows.length>0){
-    h+='<h3 class="qualified-title">Live Portfolio ('+xyFmt(posRows.length,totalCount)+')</h3>';
+    h+='<h3 class="qualified-title" id="section-portfolio">Live Portfolio ('+xyFmt(posRows.length,totalCount)+')</h3>';
     h+='<div class="data-table-wrap" style="margin-bottom:12px"><table class="data-table"><thead>'+mm99Headers()+'</thead><tbody>';
     for(var pj=0;pj<posRows.length;pj++)h+=mm99Row(posRows[pj]);
     h+='</tbody></table></div>';
@@ -1326,11 +1339,11 @@ function renderBP(){
     hdr+='<th colspan="2"></th>';
     hdr+=ratingsColHeaders().length>0?'<th colspan="8" class="col-ratings">Ratings</th>':"";
     hdr+='</tr><tr>';
-    hdr+=commonCols()+th("Stage","bp_stage","col-txt col-filter")+th("MA Map","ma_map_price","col-filter")
-      +th("P~200 (\u00b115%)","t1","col-filter grp-loose-first")+th("50~200 (\u00b115%)","t2","col-filter grp-loose-last")
-      +th("P~200 (\u00b110%)","t3","col-filter grp-med-first")+th("50~200 (\u00b110%)","t4","col-filter")+th("150~200 (\u00b110%)","t5","col-filter grp-med-last")
-      +th("P~200 (\u00b15%)","t6","col-filter grp-tight-first")+th("50~200 (\u00b15%)","t7","col-filter")+th("150~200 (\u00b15%)","t8","col-filter grp-tight-last")
-      +th("MM 99","mm_stage","col-txt col-ref")+th("Probing Bet","pb_stage2","col-txt col-ref")+ratingsColHeaders();
+    hdr+=commonCols()+th("Stage","bp_stage","col-txt col-filter","Basing qualification stage")+th("MA Map","ma_map_price","col-filter","Visual: relative positions of Price, 200D, 150D, 50D MAs")
+      +th("P~200 (\u00b115%)","t1","col-filter grp-loose-first","Price within 15% of 200D MA")+th("50~200 (\u00b115%)","t2","col-filter grp-loose-last","50D within 15% of 200D MA")
+      +th("P~200 (\u00b110%)","t3","col-filter grp-med-first","Price within 10% of 200D MA")+th("50~200 (\u00b110%)","t4","col-filter","50D within 10% of 200D MA")+th("150~200 (\u00b110%)","t5","col-filter grp-med-last","150D within 10% of 200D MA")
+      +th("P~200 (\u00b15%)","t6","col-filter grp-tight-first","Price within 5% of 200D MA")+th("50~200 (\u00b15%)","t7","col-filter","50D within 5% of 200D MA")+th("150~200 (\u00b15%)","t8","col-filter grp-tight-last","150D within 5% of 200D MA")
+      +th("MM 99","mm_stage","col-txt col-ref","MM99 filter stage")+th("Probing Bet","pb_stage2","col-txt col-ref","Probing Bet filter stage")+ratingsColHeaders();
     hdr+='</tr>';return hdr;
   }
   function bpRow(r){
@@ -1345,7 +1358,7 @@ function renderBP(){
   }
   var posRows=filterToPositions(rows);
   if(posRows.length>0){
-    h+='<h3 class="qualified-title">Live Portfolio ('+xyFmt(posRows.length,totalCount)+')</h3>';
+    h+='<h3 class="qualified-title" id="section-portfolio">Live Portfolio ('+xyFmt(posRows.length,totalCount)+')</h3>';
     h+='<div class="data-table-wrap" style="margin-bottom:12px"><table class="data-table"><thead>'+bpHeaders()+'</thead><tbody>';
     for(var pj=0;pj<posRows.length;pj++)h+=bpRow(posRows[pj]);
     h+='</tbody></table></div>';
@@ -1422,13 +1435,13 @@ function renderPB(){
   h+=ratingsColHeaders().length>0?"<th colspan=\"8\" class=\"col-ratings\">Ratings</th>":"";
   h+='</tr>';
   h+='<tr>';
-  h+=commonCols()+th("Stage","pb_stage","col-txt col-filter")
-    +th("P Up","t1","col-filter")+th("5D Up","t2","col-filter")+th("10D Up","t3","col-filter")+th("20D Up","t4","col-filter")+th("50D Up","t5","col-filter")+th("A(/5)","a_met","col-num col-filter")
-    +th("20D Up","t6","col-filter")+th("50D Up","t7","col-filter")+th("B","gb","col-filter")
-    +th("Dead Cat","dead_cat","col-filter")+th("%<52WH","pct_below","col-num col-filter")
-    +th("P>20D","t9","col-filter")+th("20D Up","t10","col-filter")+th("PB1","gd","col-green")
-    +th("P>50D","t11","col-filter")+th("50D Up","t12","col-filter")+th("PB2","ge","col-green")
-    +th("MM 99","mm_stage","col-txt col-ref")+th("Basing Plateau","bp_stage2","col-txt col-ref")
+  h+=commonCols()+th("Stage","pb_stage","col-txt col-filter","Probing Bet qualification stage")
+    +th("P Up","t1","col-filter","Price rising day-on-day")+th("5D Up","t2","col-filter","5-day MA rising")+th("10D Up","t3","col-filter","10-day MA rising")+th("20D Up","t4","col-filter","20-day MA rising")+th("50D Up","t5","col-filter","50-day MA rising")+th("A(/5)","a_met","col-num col-filter","Group A: count of 5 rising signals met (need 3)")
+    +th("20D Up","t6","col-filter","20-day MA rising (Late)")+th("50D Up","t7","col-filter","50-day MA rising (Late)")+th("B","gb","col-filter","Group B: Late stage (1 of 2)")
+    +th("Dead Cat","dead_cat","col-filter","Price 30%+ below 52W high")+th("%<52WH","pct_below","col-num col-filter","% below 52-week high")
+    +th("P>20D","t9","col-filter","Price above 20D MA (PB1 capital)")+th("20D Up","t10","col-filter","20D MA rising (PB1 capital)")+th("PB1","gd","col-green","PB1 capital qualification")
+    +th("P>50D","t11","col-filter","Price above 50D MA (PB2 capital)")+th("50D Up","t12","col-filter","50D MA rising (PB2 capital)")+th("PB2","ge","col-green","PB2 capital qualification")
+    +th("MM 99","mm_stage","col-txt col-ref","MM99 filter stage")+th("Basing Plateau","bp_stage2","col-txt col-ref","Basing Plateau filter stage")
     +ratingsColHeaders();
   h+='</tr></thead><tbody>';
   for(var j=0;j<rows.length;j++){
@@ -1486,9 +1499,9 @@ function renderUTR(){
   h+=buildPortfolioTile(currentTab);
   h+='<h3 class="qualified-title" id="section-stocks">Qualified Stocks ('+xyFmt(rows.length,totalCount)+')</h3>';
   h+='<div class="data-table-wrap"><table class="data-table"><thead><tr>';
-  h+=commonCols()+th("Stage","utr_stage","col-txt col-filter")+th("Score","composite","col-num col-filter")
-    +th("Depth","s_depth","col-filter")+th("MA150","s_ma150","col-filter")+th("Vol Q","s_vol","col-filter")
-    +th("Up/Dn","s_updown","col-filter")+th("Candle","s_candle","col-filter")+th("Dist","s_dist","col-filter")
+  h+=commonCols()+th("Stage","utr_stage","col-txt col-filter","Uptrend Retest qualification stage")+th("Score","composite","col-num col-filter","Composite pullback quality score (max 8)")
+    +th("Depth","s_depth","col-filter","Pullback depth contained")+th("MA150","s_ma150","col-filter","150D MA holding as support")+th("Vol Q","s_vol","col-filter","Down-day volume quality")
+    +th("Up/Dn","s_updown","col-filter","Up/down day ratio")+th("Candle","s_candle","col-filter","Candle quality on up days")+th("Dist","s_dist","col-filter","Distribution days (penalty)")
     +th("PB Ctr","s_pullback","col-filter")+th("RS","s_rs","col-filter")
     +th("EWS","ews_count","col-num col-green")+th("P>5D","ews_5d","col-green")+th("5D Up","ews_5r","col-green")
     +th("10D Up","ews_10r","col-green")+th("20D Up","ews_20r","col-green")+th("50D Up","ews_50r","col-green")
