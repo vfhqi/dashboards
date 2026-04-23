@@ -376,16 +376,24 @@ window.setChartWidth=function(p){
   for(var j=0;j<b.length;j++)b[j].classList.remove("active");
   if(event&&event.target)event.target.classList.add("active");
 };
-// FIX-S4-CHART: Full chart port from pullback-monitor.html
-var chartZoom="3Y";
+// FIX-S4-CHART-V2: Faithful port of pullback-monitor.html drawChart
+var chartZoom="6M";
 var chartTicker="";
+var chartVis={ma5:true,ma10:true,ma20:true,ma50:true,ma100:true,ma150:true,ma200:true,obv:true,vol:true,vol20:true,vol50:true};
 function fmtVol(v){if(v>=1000000)return(v/1000000).toFixed(1)+"M";if(v>=1000)return(v/1000).toFixed(0)+"K";return v.toFixed(0)}
 function getChartSlice(chart,zoom){
   var n=chart.length;
   var days={"1M":Math.min(n,22),"3M":Math.min(n,63),"6M":Math.min(n,125),"12M":Math.min(n,252),"2Y":Math.min(n,504),"3Y":Math.min(n,756),"5Y":Math.min(n,1260)};
-  var count=days[zoom]||days["3Y"];
+  var count=days[zoom]||days["6M"];
   return chart.slice(Math.max(0,n-count));
 }
+window.toggleChartLayer=function(layer){
+  chartVis[layer]=!chartVis[layer];
+  drawMasterChart(chartTicker);
+  // Update legend opacity
+  var el=document.getElementById("legend-"+layer);
+  if(el)el.style.opacity=chartVis[layer]?"1":"0.3";
+};
 function drawMasterChart(ticker){
   var canvas=document.getElementById("chart-canvas");
   if(!canvas)return;
@@ -394,27 +402,28 @@ function drawMasterChart(ticker){
     document.getElementById("chart-container").innerHTML='<div style="text-align:center;padding:40px;color:var(--text-dim)">No chart data for '+ticker+'</div>';
     return;
   }
+  var vis=chartVis;
   var chart=getChartSlice(chartAll,chartZoom);
   var fullChart=chartAll;
   var W=canvas.parentElement.offsetWidth;
-  var H=Math.max(400,canvas.parentElement.offsetHeight-80);
+  var H=Math.max(500,window.innerHeight-260);
   canvas.width=W;canvas.height=H;
   var ctx=canvas.getContext("2d");
-  var pad={t:20,r:65,b:55,l:70};
+  var pad={t:22,r:68,b:62,l:78};
   var plotW=W-pad.l-pad.r;
   var plotH=H-pad.t-pad.b;
   var n=chart.length;
   var barW=Math.max(4,plotW/n);
   var candleW=Math.max(3,barW*0.78);
 
-  var monthShort=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
   var monthFull=["JANUARY","FEBRUARY","MARCH","APRIL","MAY","JUNE","JULY","AUGUST","SEPTEMBER","OCTOBER","NOVEMBER","DECEMBER"];
+  var monthShort=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  var dayNames=["Su","Mo","Tu","We","Th","Fr","Sa"];
   var dates=[];
-  for(var i=0;i<chart.length;i++)dates.push(new Date(chart[i].d+"T00:00:00"));
+  var i;for(i=0;i<chart.length;i++)dates.push(new Date(chart[i].d+"T00:00:00"));
 
   // Price range
-  var allVals=[];
-  var j,p;
+  var allVals=[];var j,p;
   var maPeriods=[5,10,20,50,100,150,200];
   for(j=0;j<chart.length;j++){
     allVals.push(chart[j].h);allVals.push(chart[j].l);
@@ -424,166 +433,168 @@ function drawMasterChart(ticker){
   var priceMax=Math.max.apply(null,allVals)*1.02;
   var priceRange=priceMax-priceMin||1;
 
-  // Volume range
+  // Volume
   var vols=[];for(j=0;j<chart.length;j++)vols.push(chart[j].v);
   var volMax=Math.max.apply(null,vols)||1;
-  var volZoneH=plotH*0.35;
+  var volZoneH=plotH*0.50;
 
-  // Volume MAs
+  // Volume MAs (20D + 50D)
   var fullVols=[];for(j=0;j<fullChart.length;j++)fullVols.push(fullChart[j].v);
   var visStart=fullChart.length-n;
-  var volMA50=[];
+  var volMA20=[],volMA50=[];
   for(j=0;j<n;j++){
     var ai=visStart+j;
-    var s50=Math.max(0,ai-49);
-    var sl=fullVols.slice(s50,ai+1);
-    volMA50.push(sl.reduce(function(a,b){return a+b},0)/sl.length);
+    var s20=Math.max(0,ai-19);var sl20=fullVols.slice(s20,ai+1);
+    volMA20.push(sl20.reduce(function(a,b){return a+b},0)/sl20.length);
+    var s50=Math.max(0,ai-49);var sl50=fullVols.slice(s50,ai+1);
+    volMA50.push(sl50.reduce(function(a,b){return a+b},0)/sl50.length);
   }
   var avgVol50=volMA50.length>0?volMA50[volMA50.length-1]:volMax*0.5;
+
+  // OBV
+  var obv=[0];
+  for(j=1;j<chart.length;j++){
+    if(chart[j].c>chart[j-1].c)obv.push(obv[j-1]+chart[j].v);
+    else if(chart[j].c<chart[j-1].c)obv.push(obv[j-1]-chart[j].v);
+    else obv.push(obv[j-1]);
+  }
+  var obvMin=Math.min.apply(null,obv);var obvMax=Math.max.apply(null,obv);var obvRange=obvMax-obvMin||1;
 
   // Coordinate functions
   function priceY(v){return pad.t+plotH*(1-(v-priceMin)/priceRange)}
   function volY(v){return pad.t+plotH-(v/volMax)*volZoneH}
+  function volMALineY(v){return pad.t+plotH-(v/volMax)*volZoneH}
+  var obvZoneTop=pad.t+plotH*0.75;var obvZoneBot=pad.t+plotH;var obvZoneH2=obvZoneBot-obvZoneTop;
+  function obvY(v){return obvZoneBot-((v-obvMin)/obvRange)*obvZoneH2}
   function xPos(i){return pad.l+i*barW+barW/2}
 
-  // Colours (light theme)
-  var bgCol="#fbfaf5";var gridCol="rgba(180,190,200,0.6)";var gridColMonth="rgba(140,150,160,0.7)";
-  var textCol="#6b6b6b";var textColBright="#333333";
+  // Light theme colours
+  var bgCol="#ffffff";var gridCol="rgba(180,190,200,0.6)";var gridColMonth="rgba(140,150,160,0.7)";var gridColWeek="rgba(200,210,220,0.5)";
+  var textCol="#4a5568";var textColBright="#1f2328";
   var candleUpStroke="#26a641";var candleDnFill="#da3633";var candleDnStroke="#da3633";
   var maColors={5:"#8b0000",10:"#e88a9a",20:"#e74c3c",50:"#ff8c00",100:"#2ca02c",150:"#1a5276",200:"#4a3d9e"};
-  var maWidths={200:4,150:2.5,100:2,50:2,20:1.5,10:1.2,5:1.2};
+  var maWidths={200:5,150:3,100:2.5,50:2.2,20:1.8,10:1.5,5:1.5};
 
   // Clear
   ctx.fillStyle=bgCol;ctx.fillRect(0,0,W,H);
 
   // Price grid
-  var gridCount=H>400?8:5;
+  var gridCount=H>500?10:6;
   for(var g=0;g<=gridCount;g++){
     var gy=pad.t+plotH*g/gridCount;
     ctx.strokeStyle=gridCol;ctx.lineWidth=0.8;
     ctx.beginPath();ctx.moveTo(pad.l,gy);ctx.lineTo(W-pad.r,gy);ctx.stroke();
     var gv=priceMax-(priceRange*g/gridCount);
-    ctx.fillStyle=textCol;ctx.font="12px monospace";ctx.textAlign="left";
-    ctx.fillText(gv.toFixed(gv<10?2:gv<100?1:0),W-pad.r+4,gy+4);
+    ctx.fillStyle=textCol;ctx.font="13px monospace";ctx.textAlign="left";
+    ctx.fillText(gv.toFixed(gv<10?2:gv<100?1:0),W-pad.r+6,gy+4);
   }
 
-  // Monthly gridlines
-  var lastMonth=-1;
+  // Monthly + weekly gridlines
+  var lastMonth2=-1;
   for(j=0;j<dates.length;j++){
-    var x=xPos(j);var m=dates[j].getMonth();
-    if(m!==lastMonth&&j>0){
-      ctx.strokeStyle=gridColMonth;ctx.lineWidth=1;
-      ctx.beginPath();ctx.moveTo(x,pad.t);ctx.lineTo(x,pad.t+plotH+45);ctx.stroke();
-    }
-    lastMonth=m;
+    var x=xPos(j);var m=dates[j].getMonth();var dow=dates[j].getDay();
+    if(m!==lastMonth2&&j>0){ctx.strokeStyle=gridColMonth;ctx.lineWidth=1.2;ctx.beginPath();ctx.moveTo(x,pad.t);ctx.lineTo(x,pad.t+plotH+52);ctx.stroke()}
+    lastMonth2=m;
+    if(dow===1&&j>0){ctx.strokeStyle=gridColWeek;ctx.lineWidth=0.6;ctx.beginPath();ctx.moveTo(x,pad.t);ctx.lineTo(x,pad.t+plotH+20);ctx.stroke()}
   }
 
-  // Volume bars
-  for(j=0;j<chart.length;j++){
-    var vx=xPos(j)-candleW/2;
-    var bh=(chart[j].v/volMax)*volZoneH;
-    var upDay=j>0?chart[j].c>=chart[j-1].c:true;
-    var highVol=chart[j].v>=avgVol50;
-    if(upDay&&highVol)ctx.fillStyle="rgba(63,185,80,0.45)";
-    else if(upDay&&!highVol)ctx.fillStyle="rgba(63,185,80,0.18)";
-    else if(!upDay&&highVol)ctx.fillStyle="rgba(248,81,73,0.45)";
-    else ctx.fillStyle="rgba(248,81,73,0.18)";
+  // Volume axis
+  function niceVolMax(v){if(v<=0)return 1;var mag=Math.pow(10,Math.floor(Math.log10(v)));var lead=v/mag;var nice;if(lead<=1)nice=1;else if(lead<=2)nice=2;else if(lead<=3)nice=3;else if(lead<=5)nice=5;else nice=10;return nice*mag}
+  var volTickMax=niceVolMax(volMax);
+  ctx.fillStyle=textCol;ctx.font="12px monospace";ctx.textAlign="right";
+  for(var vg=0;vg<=3;vg++){var vVal=volTickMax*vg/3;var vy=volY(vVal);ctx.fillText(fmtVol(vVal),pad.l-8,vy+4)}
+  ctx.save();ctx.translate(14,pad.t+plotH-volZoneH/2);ctx.rotate(-Math.PI/2);
+  ctx.fillStyle=textCol;ctx.font="12px sans-serif";ctx.textAlign="center";ctx.fillText("Volume",0,0);ctx.restore();
+
+  // Volume bars — 4-colour (up/down x high/low vol)
+  if(vis.vol){for(j=0;j<chart.length;j++){
+    var vx=xPos(j)-candleW/2;var bh=(chart[j].v/volMax)*volZoneH;
+    var upDay=j>0?chart[j].c>=chart[j-1].c:true;var highVol=chart[j].v>=avgVol50;
+    if(upDay&&highVol)ctx.fillStyle="rgba(63,185,80,0.50)";
+    else if(upDay)ctx.fillStyle="rgba(63,185,80,0.20)";
+    else if(highVol)ctx.fillStyle="rgba(248,81,73,0.50)";
+    else ctx.fillStyle="rgba(248,81,73,0.20)";
     ctx.fillRect(vx,pad.t+plotH-bh,candleW,bh);
+  }}
+
+  // Volume % labels inside bars (when bars wide enough)
+  if(barW>16&&vis.vol){ctx.textAlign="center";
+    for(j=0;j<chart.length;j++){var x2=xPos(j);var barBottom=pad.t+plotH;
+      var pct50v=volMA50[j]>0?Math.round((chart[j].v/volMA50[j]-1)*100):0;
+      var pct20v=volMA20[j]>0?Math.round((chart[j].v/volMA20[j]-1)*100):0;
+      ctx.fillStyle="#9a6700";ctx.font="9px monospace";ctx.fillText((pct50v>=0?"+":"")+pct50v+"%",x2,barBottom-20);
+      ctx.fillStyle="#0969da";ctx.fillText((pct20v>=0?"+":"")+pct20v+"%",x2,barBottom-10);
+    }
   }
 
-  // Candlesticks
+  // 50D volume MA line
+  if(vis.vol50){ctx.strokeStyle="#9a6700";ctx.lineWidth=1.5;ctx.beginPath();
+    for(j=0;j<volMA50.length;j++){var vx2=xPos(j),vy2=volMALineY(volMA50[j]);if(j===0)ctx.moveTo(vx2,vy2);else ctx.lineTo(vx2,vy2)}ctx.stroke()}
+  // 20D volume MA line
+  if(vis.vol20){ctx.strokeStyle="#0969da";ctx.lineWidth=1.5;ctx.beginPath();
+    for(j=0;j<volMA20.length;j++){var vx3=xPos(j),vy3=volMALineY(volMA20[j]);if(j===0)ctx.moveTo(vx3,vy3);else ctx.lineTo(vx3,vy3)}ctx.stroke()}
+
+  // OBV line
+  if(vis.obv){ctx.strokeStyle="rgba(188,140,255,0.5)";ctx.lineWidth=1.2;ctx.beginPath();
+    for(j=0;j<obv.length;j++){var ox=xPos(j),oy=obvY(obv[j]);if(j===0)ctx.moveTo(ox,oy);else ctx.lineTo(ox,oy)}ctx.stroke()}
+
+  // Candlesticks (thicker wicks + bodies)
   for(j=0;j<chart.length;j++){
-    var cx2=xPos(j);
-    var upD=chart[j].c>=chart[j].o;
-    var bTop=priceY(Math.max(chart[j].o,chart[j].c));
-    var bBot=priceY(Math.min(chart[j].o,chart[j].c));
-    var bH2=Math.max(1,bBot-bTop);
+    var cx2=xPos(j);var upD=chart[j].c>=chart[j].o;
+    var bTop=priceY(Math.max(chart[j].o,chart[j].c));var bBot=priceY(Math.min(chart[j].o,chart[j].c));var bH2=Math.max(1,bBot-bTop);
     ctx.strokeStyle=upD?candleUpStroke:candleDnStroke;ctx.lineWidth=1.5;
     ctx.beginPath();ctx.moveTo(cx2,priceY(chart[j].h));ctx.lineTo(cx2,priceY(chart[j].l));ctx.stroke();
-    if(upD){
-      ctx.fillStyle=bgCol;ctx.fillRect(cx2-candleW/2,bTop,candleW,bH2);
-      ctx.strokeStyle=candleUpStroke;ctx.lineWidth=1.5;ctx.strokeRect(cx2-candleW/2,bTop,candleW,bH2);
-    } else {
-      ctx.fillStyle=candleDnFill;ctx.fillRect(cx2-candleW/2,bTop,candleW,bH2);
-    }
+    if(upD){ctx.fillStyle=bgCol;ctx.fillRect(cx2-candleW/2,bTop,candleW,bH2);ctx.strokeStyle=candleUpStroke;ctx.lineWidth=1.5;ctx.strokeRect(cx2-candleW/2,bTop,candleW,bH2)}
+    else{ctx.fillStyle=candleDnFill;ctx.fillRect(cx2-candleW/2,bTop,candleW,bH2)}
   }
 
-  // MA lines
+  // MA lines (graduated widths, 100D dashed)
   ctx.textAlign="left";
   for(p=0;p<maPeriods.length;p++){
-    var per=maPeriods[p];var mk2="ma"+per;
-    ctx.strokeStyle=maColors[per];ctx.lineWidth=maWidths[per];
-    ctx.setLineDash(per===100?[6,4]:[]);
-    ctx.beginPath();var started=false;
-    for(j=0;j<chart.length;j++){
-      var mv=chart[j][mk2];
-      if(mv){
-        var mx=xPos(j),my=priceY(mv);
-        if(!started){ctx.moveTo(mx,my);started=true}else ctx.lineTo(mx,my);
-      }
-    }
+    var per=maPeriods[p];if(!vis["ma"+per])continue;
+    var mk2="ma"+per;ctx.strokeStyle=maColors[per];ctx.lineWidth=maWidths[per];
+    ctx.setLineDash(per===100?[6,4]:[]);ctx.beginPath();var started=false;
+    for(j=0;j<chart.length;j++){var mv=chart[j][mk2];if(mv){var mx=xPos(j),my=priceY(mv);if(!started){ctx.moveTo(mx,my);started=true}else ctx.lineTo(mx,my)}}
     ctx.stroke();ctx.setLineDash([]);
-    // End-of-line label
-    var lastMaVal=null;
-    for(j=chart.length-1;j>=0;j--){if(chart[j][mk2]){lastMaVal=chart[j][mk2];break}}
-    if(lastMaVal!==null){
-      var ly=priceY(lastMaVal);
-      ctx.fillStyle=maColors[per];ctx.font="bold 11px monospace";ctx.textAlign="left";
-      ctx.fillText(lastMaVal.toFixed(lastMaVal<100?2:1),W-pad.r+4,ly+4);
-    }
+    var lastMaVal=null;for(j=chart.length-1;j>=0;j--){if(chart[j][mk2]){lastMaVal=chart[j][mk2];break}}
+    if(lastMaVal!==null){var ly=priceY(lastMaVal);ctx.fillStyle=maColors[per];ctx.font="bold 12px monospace";ctx.textAlign="left";ctx.fillText(lastMaVal.toFixed(lastMaVal<100?2:1),W-pad.r+6,ly+4)}
   }
 
-  // Current price label
-  if(chart.length>0){
-    var lastC=chart[chart.length-1].c;
-    var lcy2=priceY(lastC);
-    ctx.fillStyle=textColBright;ctx.font="bold 13px monospace";ctx.textAlign="left";
-    ctx.fillText(lastC.toFixed(lastC<100?2:1),W-pad.r+4,lcy2+4);
-  }
+  // Current price label (bold, RHS)
+  if(chart.length>0){var lastC=chart[chart.length-1].c;var lcy2=priceY(lastC);ctx.fillStyle=textColBright;ctx.font="bold 13px monospace";ctx.textAlign="left";ctx.fillText(lastC.toFixed(lastC<100?2:1),W-pad.r+6,lcy2+4)}
 
-  // X-axis labels (months)
+  // X-axis: centred month labels with overlap guard
   var monthSpans2=[];var curMS=0,curM2=dates[0]?dates[0].getMonth():-1;
-  for(j=0;j<dates.length;j++){
-    var m2=dates[j].getMonth();
-    if(m2!==curM2){if(curM2>=0)monthSpans2.push({m:curM2,start:curMS,end:j-1});curMS=j;curM2=m2}
-  }
+  for(j=0;j<dates.length;j++){var m3=dates[j].getMonth();if(m3!==curM2){if(curM2>=0)monthSpans2.push({m:curM2,start:curMS,end:j-1});curMS=j;curM2=m3}}
   if(curM2>=0)monthSpans2.push({m:curM2,start:curMS,end:n-1});
-  ctx.font="bold 11px sans-serif";ctx.fillStyle=textColBright;ctx.textAlign="center";
+  ctx.font="bold 12px sans-serif";ctx.fillStyle=textColBright;ctx.textAlign="center";
   var lastMR=-999;
-  for(j=0;j<monthSpans2.length;j++){
-    var sp=monthSpans2[j];
-    var mcx=(xPos(sp.start)+xPos(sp.end))/2;
-    var mw2=ctx.measureText(monthShort[sp.m]).width;
-    if((mcx-mw2/2)>(lastMR+6)){
-      ctx.fillText(monthShort[sp.m],mcx,pad.t+plotH+16);
-      lastMR=mcx+mw2/2;
-    }
-  }
+  for(j=0;j<monthSpans2.length;j++){var sp=monthSpans2[j];var mcx=(xPos(sp.start)+xPos(sp.end))/2;var mw2=ctx.measureText(monthFull[sp.m]).width;
+    if((mcx-mw2/2)>(lastMR+8)){ctx.fillText(monthFull[sp.m],mcx,pad.t+plotH+48);lastMR=mcx+mw2/2}}
 
-  // Volume axis label
-  ctx.save();ctx.translate(12,pad.t+plotH-volZoneH/2);ctx.rotate(-Math.PI/2);
-  ctx.fillStyle=textCol;ctx.font="11px sans-serif";ctx.textAlign="center";ctx.fillText("Volume",0,0);
-  ctx.restore();
-
-  // Volume axis ticks
-  ctx.fillStyle=textCol;ctx.font="10px monospace";ctx.textAlign="right";
-  for(var vg=0;vg<=2;vg++){
-    var vVal=volMax*vg/2;
-    var vy=volY(vVal);
-    ctx.fillText(fmtVol(vVal),pad.l-6,vy+4);
-  }
+  // Date labels (day-month format, spaced)
+  var labelEvery=1;if(n>60)labelEvery=5;else if(n>25)labelEvery=2;
+  var lastLabelX=-999;ctx.font="12px sans-serif";ctx.fillStyle=textCol;ctx.textAlign="center";
+  for(j=0;j<dates.length;j++){if(j%labelEvery===0){var x3=xPos(j);if(x3-lastLabelX>34){
+    var dateStr=dates[j].getDate()+"-"+monthShort[dates[j].getMonth()];ctx.fillText(dateStr,x3,pad.t+plotH+16);lastLabelX=x3}}}
 }
 
-// MA legend HTML
+// Clickable legend HTML with toggle
 function chartLegendHTML(){
-  var maItems=[{p:5,l:"5D",c:"#8b0000"},{p:10,l:"10D",c:"#e88a9a"},{p:20,l:"20D",c:"#e74c3c"},
-    {p:50,l:"50D",c:"#ff8c00"},{p:100,l:"100D",c:"#2ca02c"},{p:150,l:"150D",c:"#1a5276"},{p:200,l:"200D",c:"#4a3d9e"}];
+  var items=[
+    {key:"ma5",label:"MA-5D",color:"#8b0000"},{key:"ma10",label:"MA-10D",color:"#e88a9a"},
+    {key:"ma20",label:"MA-20D",color:"#e74c3c"},{key:"ma50",label:"MA-50D",color:"#ff8c00"},
+    {key:"ma100",label:"MA-100D",color:"#2ca02c"},{key:"ma150",label:"MA-150D",color:"#1a5276"},
+    {key:"ma200",label:"MA-200D",color:"#4a3d9e"},{key:"obv",label:"OBV",color:"#bc8cff"},
+    {key:"vol",label:"Volume",color:"rgba(204,180,0,0.6)"},{key:"vol50",label:"Vol 50D MA",color:"#9a6700"},
+    {key:"vol20",label:"Vol 20D MA",color:"#0969da"}
+  ];
   var h="";
-  for(var j=0;j<maItems.length;j++){
-    var mi=maItems[j];
-    h+='<span style="display:inline-flex;align-items:center;gap:3px;padding:2px 5px;font-size:10px">';
-    h+='<span style="display:inline-block;width:14px;height:3px;background:'+mi.c+';border-radius:1px"></span>';
-    h+='<span style="color:'+mi.c+';font-weight:600">'+mi.l+'</span></span>';
+  for(var j=0;j<items.length;j++){
+    var it=items[j];var on=chartVis[it.key];
+    h+='<span id="legend-'+it.key+'" onclick="toggleChartLayer(\''+it.key+'\')" style="cursor:pointer;opacity:'+(on?"1":"0.3")+';display:inline-flex;align-items:center;gap:4px;padding:2px 6px;border-radius:4px;border:1px solid '+(on?"var(--border)":"transparent")+';user-select:none">';
+    h+='<span style="display:inline-block;width:18px;height:3px;background:'+it.color+';border-radius:1px"></span>';
+    h+='<span style="font-size:12px;font-weight:600;color:'+it.color+';text-decoration:'+(on?"none":"line-through")+'">'+it.label+'</span></span>';
   }
   return h;
 }
@@ -595,24 +606,21 @@ window.openChart=function(t){
   p.classList.add("open");
   document.body.classList.add("chart-open");
   document.querySelector(".main").style.marginRight="25%";
-
-  // Build chart panel content
   var cont=document.getElementById("chart-container");
   var company="";
   for(var j=0;j<D.universe.length;j++){if(D.universe[j].ticker===t){company=D.universe[j].company_name||"";break}}
-  var h='<div style="font-size:15px;font-weight:600;color:var(--text-bright);margin-bottom:2px">'+t+(company?" &mdash; "+company:"")+'</div>';
-  h+='<div style="display:flex;gap:3px;margin-bottom:6px">';
+  var h='<div style="font-size:13px;font-weight:600;color:var(--text-bright);margin-bottom:4px">PRICE + MAs + VOLUME</div>';
+  h+='<div style="display:flex;flex-wrap:wrap;gap:3px;margin-bottom:6px;line-height:1.8">'+chartLegendHTML()+'</div>';
+  h+='<div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">';
   var zooms=["1M","3M","6M","12M","2Y","3Y","5Y"];
   for(var z=0;z<zooms.length;z++){
     var act=zooms[z]===chartZoom?" active":"";
     h+='<button class="chart-width-btn'+act+'" onclick="setChartZoom(\''+zooms[z]+'\')">'+zooms[z]+'</button>';
   }
   h+='</div>';
-  h+='<div style="margin-bottom:4px;line-height:1.6">'+chartLegendHTML()+'</div>';
+  h+='<div style="font-size:15px;font-weight:600;color:var(--text-bright);margin-bottom:8px">'+t+(company?" &mdash; "+company:"")+'</div>';
   h+='<div id="chart-canvas-wrap" style="width:100%;position:relative"><canvas id="chart-canvas" style="width:100%;display:block"></canvas></div>';
   cont.innerHTML=h;
-
-  // Draw after DOM update
   setTimeout(function(){drawMasterChart(t)},50);
 };
 window.setChartZoom=function(z){
