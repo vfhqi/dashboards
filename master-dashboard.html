@@ -130,11 +130,16 @@ table.data-table th.col-rs,table.data-table td.col-rs{text-align:center}
 table.data-table th.col-ref,table.data-table td.col-ref{text-align:center}
 table.data-table th.col-ratings,table.data-table td.col-ratings{text-align:center}
 table.data-table th.col-price,table.data-table td.col-price{text-align:right}
-/* FIX-S4-COLW: Ticker + Sector columns wider to fit company names and full sector text */
-.col-identity{min-width:60px}
-.col-identity-name{width:120px;min-width:100px}
-.col-identity-sector{width:160px;min-width:120px}
-.company-mode .col-identity-name{width:180px;min-width:160px}
+/* FIX-S4-COLW-V2: Force narrow numeric cols, wide text cols */
+.col-identity-name{width:14%;min-width:110px}
+.col-identity-sector{width:18%;min-width:140px}
+.company-mode .col-identity-name{width:18%;min-width:160px}
+table.data-table th.col-price,table.data-table td.col-price{width:48px}
+table.data-table th.col-filter,table.data-table td.col-filter{width:48px}
+table.data-table th.col-rs,table.data-table td.col-rs{width:36px}
+table.data-table th.col-ref,table.data-table td.col-ref{width:52px}
+table.data-table th.col-ratings,table.data-table td.col-ratings{width:32px}
+table.data-table th.col-green,table.data-table td.col-green{width:40px}
 .col-price{background:rgba(21,101,192,.03)}.col-filter{background:rgba(141,110,0,.03)}.col-rs{background:rgba(121,85,191,.03)}.col-green{background:rgba(46,125,50,.03)}.col-ref{background:rgba(21,101,192,.03)}
 .pass{color:var(--green)}.fail{color:var(--red)}.amber{color:var(--amber)}.neutral{color:var(--text-dim)}
 .badge{display:inline-block;padding:2px 6px;border-radius:3px;font-size:10px;font-weight:600;text-transform:uppercase}
