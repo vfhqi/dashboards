@@ -63,7 +63,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);font-size:13
 
 /* FIX-11: Fixed table layout, no horizontal scroll */
 .data-table-wrap{overflow-x:hidden;border-radius:8px;border:1px solid var(--border)}
-table.data-table{width:100%;border-collapse:collapse;font-size:12px;table-layout:fixed}
+table.data-table{width:100%;border-collapse:collapse;font-size:12px;table-layout:auto}
 table.data-table th{background:#f0ede3;color:#6b6b6b;font-weight:600;font-size:10px;text-transform:uppercase;letter-spacing:.3px;padding:4px 4px;text-align:left;border-bottom:2px solid var(--border);position:sticky;top:0;z-index:5;cursor:pointer;white-space:nowrap;user-select:none;-webkit-user-select:none;overflow:hidden;text-overflow:ellipsis}
 table.data-table th:hover{color:var(--text)}
 table.data-table th .sort-arrow{margin-left:2px;opacity:.4}
@@ -130,16 +130,8 @@ table.data-table th.col-rs,table.data-table td.col-rs{text-align:center}
 table.data-table th.col-ref,table.data-table td.col-ref{text-align:center}
 table.data-table th.col-ratings,table.data-table td.col-ratings{text-align:center}
 table.data-table th.col-price,table.data-table td.col-price{text-align:right}
-/* FIX-S4-COLW-V2: Force narrow numeric cols, wide text cols */
-.col-identity-name{width:14%;min-width:110px}
-.col-identity-sector{width:18%;min-width:140px}
-.company-mode .col-identity-name{width:18%;min-width:160px}
-table.data-table th.col-price,table.data-table td.col-price{width:48px}
-table.data-table th.col-filter,table.data-table td.col-filter{width:48px}
-table.data-table th.col-rs,table.data-table td.col-rs{width:36px}
-table.data-table th.col-ref,table.data-table td.col-ref{width:52px}
-table.data-table th.col-ratings,table.data-table td.col-ratings{width:32px}
-table.data-table th.col-green,table.data-table td.col-green{width:40px}
+/* FIX-S4-COLW-V4: table-layout:auto — browser auto-sizes by content */
+table.data-table td.col-identity{white-space:nowrap}
 .col-price{background:rgba(21,101,192,.03)}.col-filter{background:rgba(141,110,0,.03)}.col-rs{background:rgba(121,85,191,.03)}.col-green{background:rgba(46,125,50,.03)}.col-ref{background:rgba(21,101,192,.03)}
 .pass{color:var(--green)}.fail{color:var(--red)}.amber{color:var(--amber)}.neutral{color:var(--text-dim)}
 .badge{display:inline-block;padding:2px 6px;border-radius:3px;font-size:10px;font-weight:600;text-transform:uppercase}
