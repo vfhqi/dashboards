@@ -206,7 +206,7 @@ table.data-table th{position:relative}
   <!-- FIX-5 Row 2: TABS label + tab navigation -->
   <div class="header-tabs-row">
     <span class="row-label">Tabs</span>
-    <div class="tab-nav"><div class="tab-group" style="border:1.5px solid rgba(200,50,50,0.25);border-radius:6px;padding:2px 4px;display:inline-flex;gap:2px"><button class="tab-btn" data-tab="tech" style="--tab-accent:#2c5282;background:rgba(44,82,130,0.1);border-color:rgba(44,82,130,0.3)" onclick="switchTab('tech')">Technical Data</button><button class="tab-btn" data-tab="bp" style="--tab-accent:#276749;background:rgba(39,103,73,0.1);border-color:rgba(39,103,73,0.3)" onclick="switchTab('bp')">Basing Plateau</button><button class="tab-btn" data-tab="pb" style="--tab-accent:#6b46c1;background:rgba(107,70,193,0.1);border-color:rgba(107,70,193,0.3)" onclick="switchTab('pb')">Probing Bet</button><button class="tab-btn" data-tab="vcp" style="--tab-accent:#9c4221;background:rgba(156,66,33,0.1);border-color:rgba(156,66,33,0.3)" onclick="switchTab('vcp')">VCP</button><button class="tab-btn tab-active" data-tab="mm99" style="--tab-accent:#1b3d5c;background:rgba(27,61,92,0.1);border-color:rgba(27,61,92,0.3)" onclick="switchTab('mm99')">MM 99</button><button class="tab-btn" data-tab="utr" style="--tab-accent:#744210;background:rgba(116,66,16,0.1);border-color:rgba(116,66,16,0.3)" onclick="switchTab('utr')">Uptrend Retest</button></div><div class="tab-group" style="border:1.5px solid rgba(120,80,200,0.25);border-radius:6px;padding:2px 4px;display:inline-flex;gap:2px;margin-left:6px"><button class="tab-btn" data-tab="ssem" style="--tab-accent:#2b6cb0;background:rgba(43,108,176,0.1);border-color:rgba(43,108,176,0.3)" onclick="switchTab('ssem')">SSEM</button><button class="tab-btn" data-tab="val" style="--tab-accent:#38a169;background:rgba(56,161,105,0.1);border-color:rgba(56,161,105,0.3)" onclick="switchTab('val')">Valuation</button><button class="tab-btn" data-tab="combos" style="--tab-accent:#dd6b20;background:rgba(221,107,32,0.1);border-color:rgba(221,107,32,0.3)" onclick="switchTab('combos')">Combinations</button><button class="tab-btn" data-tab="positions" style="--tab-accent:#319795;background:rgba(49,151,149,0.1);border-color:rgba(49,151,149,0.3)" onclick="switchTab('positions')">Live Investments</button></div></div>
+    <div class="tab-nav"><div class="tab-group" style="border:1.5px solid rgba(200,50,50,0.25);border-radius:6px;padding:2px 4px;display:inline-flex;gap:2px"><button class="tab-btn" data-tab="bp" style="--tab-accent:#276749;background:rgba(39,103,73,0.1);border-color:rgba(39,103,73,0.3)" onclick="switchTab('bp')">Basing Plateau</button><button class="tab-btn" data-tab="pb" style="--tab-accent:#6b46c1;background:rgba(107,70,193,0.1);border-color:rgba(107,70,193,0.3)" onclick="switchTab('pb')">Probing Bet</button><button class="tab-btn tab-active" data-tab="mm99" style="--tab-accent:#1b3d5c;background:rgba(27,61,92,0.1);border-color:rgba(27,61,92,0.3)" onclick="switchTab('mm99')">MM 99</button><button class="tab-btn" data-tab="vcp" style="--tab-accent:#9c4221;background:rgba(156,66,33,0.1);border-color:rgba(156,66,33,0.3)" onclick="switchTab('vcp')">VCP</button><button class="tab-btn" data-tab="utr" style="--tab-accent:#744210;background:rgba(116,66,16,0.1);border-color:rgba(116,66,16,0.3)" onclick="switchTab('utr')">Uptrend Retest</button></div><div class="tab-group" style="border:1.5px solid rgba(120,80,200,0.25);border-radius:6px;padding:2px 4px;display:inline-flex;gap:2px;margin-left:6px"><button class="tab-btn" data-tab="tech" style="--tab-accent:#2c5282;background:rgba(44,82,130,0.1);border-color:rgba(44,82,130,0.3)" onclick="switchTab('tech')">Technical Data</button><button class="tab-btn" data-tab="ssem" style="--tab-accent:#2b6cb0;background:rgba(43,108,176,0.1);border-color:rgba(43,108,176,0.3)" onclick="switchTab('ssem')">SSEM</button><button class="tab-btn" data-tab="val" style="--tab-accent:#38a169;background:rgba(56,161,105,0.1);border-color:rgba(56,161,105,0.3)" onclick="switchTab('val')">Valuation</button><button class="tab-btn" data-tab="combos" style="--tab-accent:#dd6b20;background:rgba(221,107,32,0.1);border-color:rgba(221,107,32,0.3)" onclick="switchTab('combos')">Combinations</button><button class="tab-btn" data-tab="positions" style="--tab-accent:#319795;background:rgba(49,151,149,0.1);border-color:rgba(49,151,149,0.3)" onclick="switchTab('positions')">Live Investments</button></div></div>
   </div>
   <!-- Row 3: Toggles + Filters -->
   <div class="header-controls-row">
@@ -230,12 +230,12 @@ table.data-table th{position:relative}
 </div>
 <!-- FIX-1: Key panel overlay -->
 <div class="key-panel" id="key-panel"></div>
-<div class="main ratings-hidden"><div id="tab-tech" class="tab-content" style="display:none"></div>
-    <div id="tab-bp" class="tab-content" style="display:none"></div>
+<div class="main ratings-hidden"><div id="tab-bp" class="tab-content" style="display:none"></div>
     <div id="tab-pb" class="tab-content" style="display:none"></div>
-    <div id="tab-vcp" class="tab-content" style="display:none"></div>
     <div id="tab-mm99" class="tab-content" style="display:block"></div>
+    <div id="tab-vcp" class="tab-content" style="display:none"></div>
     <div id="tab-utr" class="tab-content" style="display:none"></div>
+    <div id="tab-tech" class="tab-content" style="display:none"></div>
     <div id="tab-ssem" class="tab-content" style="display:none"></div>
     <div id="tab-val" class="tab-content" style="display:none"></div>
     <div id="tab-combos" class="tab-content" style="display:none"></div>
@@ -265,10 +265,13 @@ var mm99MinScore=0;
 var displayMode="ticker";
 var valueMode="tick";
 var showRatings=false;
-var TAB_IDS=["tech","bp","pb","vcp","mm99","utr","ssem","val","combos","positions"];
-var TAB_LABELS=["Technical Data","Basing Plateau","Probing Bet","VCP","MM 99","Uptrend Retest","SSEM","Valuation","Combinations","Live Investments"];
-var TAB_ACCENTS=["#2c5282","#276749","#6b46c1","#9c4221","#1b3d5c","#744210","#2b6cb0","#38a169","#dd6b20","#319795"];
+var TAB_IDS=["bp","pb","mm99","vcp","utr","tech","ssem","val","combos","positions"];
+var TAB_LABELS=["Basing Plateau","Probing Bet","MM 99","VCP","Uptrend Retest","Technical Data","SSEM","Valuation","Combinations","Live Investments"];
+var TAB_ACCENTS=["#276749","#6b46c1","#1b3d5c","#9c4221","#744210","#2c5282","#2b6cb0","#38a169","#dd6b20","#319795"];
 var activeGroups={};
+// FIX-S4-PBEXCL: Exclude toggles for PB tab
+var pbExcludes={ex_mm99:false,ex_vcp:false,ex_utr:false};
+window.togglePbExclude=function(k){pbExcludes[k]=!pbExcludes[k];renderTab("pb")};
 
 var CANONICAL_INDUSTRIES=[
   "A. Consumer staples","B. Healthcare","C. Telecoms",
@@ -1041,14 +1044,26 @@ function commonTds(r){
   var ma50=r.mas?r.mas["50D"]:null;
   var ma150=r.mas?r.mas["150D"]:null;
   var ma200=r.mas?r.mas["200D"]:null;
+  // FIX-S4-INPUTPCT: In % mode, MA columns show % distance from MA
+  var ma20td,ma50td,ma150td,ma200td;
+  if(valueMode==="pct"){
+    var p20=ma20?(r.price-ma20)/ma20:null;var p50=ma50?(r.price-ma50)/ma50:null;
+    var p150=ma150?(r.price-ma150)/ma150:null;var p200=ma200?(r.price-ma200)/ma200:null;
+    ma20td='<td class="col-num col-price '+(p20!=null?gradClass(p20):"")+'">'+fpc(p20)+'</td>';
+    ma50td='<td class="col-num col-price '+(p50!=null?gradClass(p50):"")+'">'+fpc(p50)+'</td>';
+    ma150td='<td class="col-num col-price '+(p150!=null?gradClass(p150):"")+'">'+fpc(p150)+'</td>';
+    ma200td='<td class="col-num col-price '+(p200!=null?gradClass(p200):"")+'">'+fpc(p200)+'</td>';
+  } else {
+    ma20td='<td class="col-num col-price">'+fp(ma20)+'</td>';
+    ma50td='<td class="col-num col-price">'+fp(ma50)+'</td>';
+    ma150td='<td class="col-num col-price">'+fp(ma150)+'</td>';
+    ma200td='<td class="col-num col-price">'+fp(ma200)+'</td>';
+  }
   return'<td class="col-txt col-identity col-identity-name" style="font-weight:600;color:var(--text-bright)">'+dn+'</td>'
     +'<td class="col-txt col-identity col-identity-sector" style="font-size:11px">'+tax.sector+'</td>'
     +'<td class="col-num col-price">'+fp(r.price)+'</td>'
     +h52val+l52val
-    +'<td class="col-num col-price">'+fp(ma20)+'</td>'
-    +'<td class="col-num col-price">'+fp(ma50)+'</td>'
-    +'<td class="col-num col-price">'+fp(ma150)+'</td>'
-    +'<td class="col-num col-price">'+fp(ma200)+'</td>'
+    +ma20td+ma50td+ma150td+ma200td
     +'<td class="col-num col-rs" style="font-weight:600;color:'+rc+'">'+(r.rs_pct!=null?r.rs_pct:"&mdash;")+'</td>';
 }
 
@@ -1157,6 +1172,15 @@ function buildHeaderControls(tabId){
     for(var g3=0;g3<pbGrps.length;g3++){
       var act3=activeGroups[pbGrps[g3].k]?" active":"";
       h+='<button class="group-toggle'+act3+'" onclick="toggleGroup(\''+pbGrps[g3].k+'\')">'+pbGrps[g3].l+'</button>';
+    }
+    h+='</div>';
+    // FIX-S4-PBEXCL: Exclude toggles for stocks meeting other filter criteria
+    h+='<span style="border-left:1px solid var(--border);height:20px;margin:0 6px"></span>';
+    h+='<div class="group-toggles">';
+    var exGrps=[{k:"ex_mm99",l:"Exclude MM 99"},{k:"ex_vcp",l:"Exclude VCP"},{k:"ex_utr",l:"Exclude Retest"}];
+    for(var e2=0;e2<exGrps.length;e2++){
+      var eAct=pbExcludes[exGrps[e2].k]?" active":"";
+      h+='<button class="group-toggle'+eAct+'" style="'+(pbExcludes[exGrps[e2].k]?"background:#c62828;border-color:#c62828;color:#fff":"")+'" onclick="togglePbExclude(\''+exGrps[e2].k+'\')">'+exGrps[e2].l+'</button>';
     }
     h+='</div>';
   }
@@ -1420,6 +1444,7 @@ function renderPB(){
     r.t6_pct=null;r.t7_pct=null;r.t8_pct=null;
     r.t9_pct=null;r.t10_pct=null;r.t11_pct=null;r.t12_pct=null;
     r.mm_stage=r.f.mm99.stage;r.bp_stage2=r.f.basing_plateau.stage;
+    r.utr_stage2=r.f.uptrend_retest.stage;r.vcp_s2=r.f.vcp.stage_2_uptrend;
 
     var skip=false;
     if(activeGroups.ga&&!r.ga)skip=true;
@@ -1427,6 +1452,10 @@ function renderPB(){
     if(activeGroups.gc&&!r.gc)skip=true;
     if(activeGroups.gd&&!r.gd)skip=true;
     if(activeGroups.ge&&!r.ge)skip=true;
+    // FIX-S4-PBEXCL: Exclude stocks meeting other filter criteria
+    if(pbExcludes.ex_mm99&&(r.mm_stage==="Capital"||r.mm_stage==="Late"))skip=true;
+    if(pbExcludes.ex_vcp&&r.vcp_s2)skip=true;
+    if(pbExcludes.ex_utr&&(r.utr_stage2==="Capital"||r.utr_stage2==="Late"))skip=true;
     if(skip)continue;
 
     rows.push(r);
