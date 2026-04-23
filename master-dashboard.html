@@ -405,10 +405,23 @@ function drawMasterChart(ticker){
   var vis=chartVis;
   var chart=getChartSlice(chartAll,chartZoom);
   var fullChart=chartAll;
-  var W=canvas.parentElement.offsetWidth;
-  var H=Math.max(500,window.innerHeight-260);
-  canvas.width=W;canvas.height=H;
+  // FIX-S4-CHART-SHARP: DPI-aware canvas for sharp rendering on HiDPI screens
+  var dpr=window.devicePixelRatio||1;
+  var wrap=canvas.parentElement;
+  var W=wrap.offsetWidth;
+  // Height: fill available space in chart panel (panel height minus legend/buttons/title above canvas)
+  var panelEl=document.getElementById("chart-panel");
+  var panelH=panelEl?panelEl.offsetHeight:window.innerHeight;
+  var canvasTop=wrap.getBoundingClientRect().top-(panelEl?panelEl.getBoundingClientRect().top:0);
+  var H=Math.max(400,panelH-canvasTop-16);
+  // Set CSS display size
+  canvas.style.width=W+"px";
+  canvas.style.height=H+"px";
+  // Set actual canvas resolution (scaled by DPI for sharpness)
+  canvas.width=Math.round(W*dpr);
+  canvas.height=Math.round(H*dpr);
   var ctx=canvas.getContext("2d");
+  ctx.scale(dpr,dpr);
   var pad={t:22,r:68,b:62,l:78};
   var plotW=W-pad.l-pad.r;
   var plotH=H-pad.t-pad.b;
