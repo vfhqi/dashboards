@@ -407,23 +407,15 @@ function drawMasterChart(ticker){
   var vis=chartVis;
   var chart=getChartSlice(chartAll,chartZoom);
   var fullChart=chartAll;
-  // FIX-S4-CHART-SHARP-V2: DPI-aware canvas, correct sizing
+  // FIX-S4-CHART-V3: Use canvas.getBoundingClientRect for true rendered size
   var dpr=window.devicePixelRatio||1;
-  var panelEl=document.getElementById("chart-panel");
-  // Get the actual rendered panel width (accounts for slide-in %, padding)
-  var panelStyle=window.getComputedStyle(panelEl);
-  var panelPadLeft=parseFloat(panelStyle.paddingLeft)||16;
-  var panelPadRight=parseFloat(panelStyle.paddingRight)||16;
-  var W=panelEl.clientWidth-panelPadLeft-panelPadRight;
-  // Height: viewport minus space above the canvas
-  var canvasRect=canvas.getBoundingClientRect();
-  var H=Math.max(400,window.innerHeight-canvasRect.top-20);
-  // Set CSS display size explicitly
-  canvas.style.width=W+"px";
+  var rect=canvas.getBoundingClientRect();
+  var W=Math.round(rect.width);
+  var H=Math.max(400,Math.round(window.innerHeight-rect.top-20));
   canvas.style.height=H+"px";
-  // Set internal resolution at DPI scale for sharpness
-  canvas.width=Math.round(W*dpr);
-  canvas.height=Math.round(H*dpr);
+  // Internal resolution = CSS size * DPI
+  canvas.width=W*dpr;
+  canvas.height=H*dpr;
   var ctx=canvas.getContext("2d");
   ctx.scale(dpr,dpr);
   var pad={t:22,r:68,b:62,l:78};
