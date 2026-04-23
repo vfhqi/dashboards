@@ -752,10 +752,11 @@ function fpcRaw(v){
 function pf(v){if(v==null)return"&mdash;";return fpc(v)}
 function nf(v,d){if(v==null)return"&mdash;";return addCommas(Number(v).toFixed(d||0))}
 function sa(c){if(currentSort.col===c)return'<span class="sort-arrow">'+(currentSort.dir==="asc"?"&#9650;":"&#9660;")+'</span>';return'<span class="sort-arrow">&#9650;</span>'}
-function th(l,c,cls,tip){
+function th(l,c,cls,tip,sty){
   var s=currentSort.col===c?" sorted":"";
   var tipHtml=tip?'<span class="key-tip">'+tip+'</span>':"";
-  return'<th class="'+(cls||"")+s+'" onclick="handleSort(\''+c+'\')">'+l+sa(c)+tipHtml+'</th>';
+  var stAttr=sty?' style="'+sty+'"':"";
+  return'<th class="'+(cls||"")+s+'"'+stAttr+' onclick="handleSort(\''+c+'\')">'+l+sa(c)+tipHtml+'</th>';
 }
 
 // FIX-16: graduated colour including grey neutral
@@ -987,18 +988,19 @@ function buildPortfolioTile(tabId){
 
 // FIX-7: Common columns - 52W High and 52W Low consolidated into single columns each
 // FIX-9: alignment classes
-// FIX-S4-COLW: Wider Ticker + Sector columns across all tabs
+// FIX-S4-COLW-V3: Inline widths on th — the ONLY way table-layout:fixed respects widths
 function commonCols(){
-  return th("Ticker","_display_name","col-txt col-identity col-identity-name","Stock ticker or company name (toggle in header)")
-    +th("Sector","_tax_sector","col-txt col-identity col-identity-sector","Industry sector classification")
-    +th("Price","price","col-num col-price","Current stock price")
-    +th("52WH","high_52w","col-num col-price","52-week high (toggle to %)")
-    +th("52WL","low_52w","col-num col-price","52-week low (toggle to %)")
-    +th("20D","_ma20","col-num col-price","20-day moving average")
-    +th("50D","_ma50","col-num col-price","50-day moving average")
-    +th("150D","_ma150","col-num col-price","150-day moving average")
-    +th("200D","_ma200","col-num col-price","200-day moving average")
-    +th("RS","rs_pct","col-num col-rs","Relative Strength percentile 0-100 (IBD composite)");
+  var tkrW=displayMode==="company"?"width:180px":"width:120px";
+  return th("Ticker","_display_name","col-txt col-identity","Stock ticker or company name (toggle in header)",tkrW)
+    +th("Sector","_tax_sector","col-txt col-identity","Industry sector classification",SEC_W)
+    +th("Price","price","col-num col-price","Current stock price","width:52px")
+    +th("52WH","high_52w","col-num col-price","52-week high (toggle to %)","width:52px")
+    +th("52WL","low_52w","col-num col-price","52-week low (toggle to %)","width:52px")
+    +th("20D","_ma20","col-num col-price","20-day moving average","width:46px")
+    +th("50D","_ma50","col-num col-price","50-day moving average","width:46px")
+    +th("150D","_ma150","col-num col-price","150-day moving average","width:46px")
+    +th("200D","_ma200","col-num col-price","200-day moving average","width:46px")
+    +th("RS","rs_pct","col-num col-rs","Relative Strength percentile 0-100 (IBD composite)","width:32px");
 }
 function commonTds(r){
   var tax=getTaxonomy(r.ticker);
@@ -1694,7 +1696,7 @@ function renderPositions(){
     +'<div class="summary-stats">'+sumStat("Investments",invs.length)+sumStat("Total Trades",totalTrades)+sumStat("Active",xyFmt(activeTrades,totalTrades),"green")+'</div></div>';
 
   h+='<div class="data-table-wrap" id="section-stocks"><table class="data-table"><thead><tr>'
-    +'<th class="col-txt col-identity-name">Ticker</th><th class="col-txt col-identity-sector">Company</th><th class="col-txt">Currency</th>'
+    +'<th class="col-txt" style="width:120px">Ticker</th><th class="col-txt" style="width:200px">Company</th><th class="col-txt" style="width:50px">Currency</th>'
     +'<th>PB1</th><th>PB2</th><th>S1</th><th>S2</th><th>S3</th><th>S4</th>'
     +'<th class="col-txt">Filter Status</th></tr></thead><tbody>';
 
@@ -1783,7 +1785,7 @@ function renderSSEM(){
   h+='<th></th>';
   h+='</tr>';
   h+='<tr>';
-  h+=th("Ticker","_display_name","col-txt col-identity col-identity-name")+th("Sector","_tax_sector","col-txt col-identity col-identity-sector")+th("Price","price","col-num col-price")
+  h+=th("Ticker","_display_name","col-txt col-identity","","width:120px")+th("Sector","_tax_sector","col-txt col-identity","","width:200px")+th("Price","price","col-num col-price","","width:52px")
     +th("EPS 1M","eps_1m","col-num col-filter grp-eps-first")+th("EPS 3M","eps_3m","col-num col-filter")+th("EPS 6M","eps_6m","col-num col-filter")+th("EPS 12M","eps_12m","col-num col-filter grp-eps-last")
     +th("EBITDA 1M","ebitda_1m","col-num col-filter grp-ebitda-first")+th("EBITDA 3M","ebitda_3m","col-num col-filter")+th("EBITDA 6M","ebitda_6m","col-num col-filter")+th("EBITDA 12M","ebitda_12m","col-num col-filter grp-ebitda-last")
     +th("Sales 1M","sales_1m","col-num col-filter grp-sales-first")+th("Sales 3M","sales_3m","col-num col-filter")+th("Sales 6M","sales_6m","col-num col-filter")+th("Sales 12M","sales_12m","col-num col-filter grp-sales-last")
@@ -1866,7 +1868,7 @@ function renderVal(){
   h+='<th colspan="4" style="background:rgba(50,150,50,0.08)">P/E Valuation</th>';
   h+='</tr>';
   h+='<tr>';
-  h+=th("Ticker","_display_name","col-txt col-identity col-identity-name")+th("Sector","_tax_sector","col-txt col-identity col-identity-sector")+th("Price","price","col-num col-price")
+  h+=th("Ticker","_display_name","col-txt col-identity","","width:120px")+th("Sector","_tax_sector","col-txt col-identity","","width:200px")+th("Price","price","col-num col-price","","width:52px")
     +th("P/E","pe_cur","col-num col-filter grp-pe-first")+th("P/E Pctile","pe_pctile","col-num col-filter")+'<th class="col-filter">P/E 10Y Range</th>'
     +th("EPS 24MF","eps_24mf","col-num col-filter grp-pe-last");
   h+='</tr></thead><tbody>';
