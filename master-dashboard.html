@@ -992,7 +992,7 @@ function buildPortfolioTile(tabId){
 function commonCols(){
   var tkrW=displayMode==="company"?"width:180px":"width:120px";
   return th("Ticker","_display_name","col-txt col-identity","Stock ticker or company name (toggle in header)",tkrW)
-    +th("Sector","_tax_sector","col-txt col-identity","Industry sector classification",SEC_W)
+    +th("Sector","_tax_sector","col-txt col-identity","Industry sector classification","width:200px")
     +th("Price","price","col-num col-price","Current stock price","width:52px")
     +th("52WH","high_52w","col-num col-price","52-week high (toggle to %)","width:52px")
     +th("52WL","low_52w","col-num col-price","52-week low (toggle to %)","width:52px")
