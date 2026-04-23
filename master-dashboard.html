@@ -375,6 +375,8 @@ window.setChartWidth=function(p){
   var b=document.querySelectorAll(".chart-width-btn");
   for(var j=0;j<b.length;j++)b[j].classList.remove("active");
   if(event&&event.target)event.target.classList.add("active");
+  // Redraw chart at new panel width after transition
+  if(chartTicker)setTimeout(function(){drawMasterChart(chartTicker)},350);
 };
 // FIX-S4-CHART-V2: Faithful port of pullback-monitor.html drawChart
 var chartZoom="6M";
@@ -405,19 +407,21 @@ function drawMasterChart(ticker){
   var vis=chartVis;
   var chart=getChartSlice(chartAll,chartZoom);
   var fullChart=chartAll;
-  // FIX-S4-CHART-SHARP: DPI-aware canvas for sharp rendering on HiDPI screens
+  // FIX-S4-CHART-SHARP-V2: DPI-aware canvas, correct sizing
   var dpr=window.devicePixelRatio||1;
-  var wrap=canvas.parentElement;
-  var W=wrap.offsetWidth;
-  // Height: fill available space in chart panel (panel height minus legend/buttons/title above canvas)
   var panelEl=document.getElementById("chart-panel");
-  var panelH=panelEl?panelEl.offsetHeight:window.innerHeight;
-  var canvasTop=wrap.getBoundingClientRect().top-(panelEl?panelEl.getBoundingClientRect().top:0);
-  var H=Math.max(400,panelH-canvasTop-16);
-  // Set CSS display size
+  // Get the actual rendered panel width (accounts for slide-in %, padding)
+  var panelStyle=window.getComputedStyle(panelEl);
+  var panelPadLeft=parseFloat(panelStyle.paddingLeft)||16;
+  var panelPadRight=parseFloat(panelStyle.paddingRight)||16;
+  var W=panelEl.clientWidth-panelPadLeft-panelPadRight;
+  // Height: viewport minus space above the canvas
+  var canvasRect=canvas.getBoundingClientRect();
+  var H=Math.max(400,window.innerHeight-canvasRect.top-20);
+  // Set CSS display size explicitly
   canvas.style.width=W+"px";
   canvas.style.height=H+"px";
-  // Set actual canvas resolution (scaled by DPI for sharpness)
+  // Set internal resolution at DPI scale for sharpness
   canvas.width=Math.round(W*dpr);
   canvas.height=Math.round(H*dpr);
   var ctx=canvas.getContext("2d");
@@ -634,7 +638,8 @@ window.openChart=function(t){
   h+='<div style="font-size:15px;font-weight:600;color:var(--text-bright);margin-bottom:8px">'+t+(company?" &mdash; "+company:"")+'</div>';
   h+='<div id="chart-canvas-wrap" style="width:100%;position:relative"><canvas id="chart-canvas" style="width:100%;display:block"></canvas></div>';
   cont.innerHTML=h;
-  setTimeout(function(){drawMasterChart(t)},50);
+  // Wait for CSS transition to finish (panel slides in over 300ms)
+  setTimeout(function(){drawMasterChart(t)},350);
 };
 window.setChartZoom=function(z){
   chartZoom=z;
