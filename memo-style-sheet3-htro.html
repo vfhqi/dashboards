@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTRO ESA - Memo Style Sheet 3 V2 (full taxonomy stress test)</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Aptos', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background:#fafaf8; color:#1a1a1a; padding:24px 20px 48px 20px; }
+
+.page-title { font-size:14pt; font-weight:700; margin-bottom:2px; }
+.page-subtitle { font-size:10pt; color:#888; margin-bottom:18px; }
+
+.element-section { margin-bottom:0; }
+
+table.memo { border-collapse:collapse; width:100%; font-size:10pt; table-layout:fixed; }
+table.memo thead th { font-family:'Aptos', sans-serif; font-size:11pt; font-weight:700; background:#FDFCF1; padding:8px 10px; text-align:left; border-bottom:2px solid #d4d2bb; position:sticky; top:0; z-index:2; }
+table.memo tbody td { padding:6px 10px; vertical-align:top; }
+
+/* Column widths: RA 10% / CQ 17% / Rating 6% / A&J 67% (total 100%) */
+table.memo th.col-ra,    table.memo td.col-ra    { width:10%; }
+table.memo th.col-cq,    table.memo td.col-cq    { width:17%; }
+table.memo th.col-rate,  table.memo td.col-rate  { width:6%; text-align:center; }
+table.memo th.col-aj,    table.memo td.col-aj    { width:67%; }
+
+td.col-ra { font-style:italic; font-weight:500; color:#444; }
+td.col-cq { font-weight:700; }
+td.col-aj { font-size:10pt; line-height:1.55; }
+
+p.bullet-anchor { font-weight:600; margin:0 0 6px 0; padding:0; }
+p.bullet-sub    { font-weight:400; margin:0 0 3px 18px; padding:0; color:#333; }
+p.bullet-anchor u { text-decoration-thickness:1.2px; text-underline-offset:2px; text-decoration-color:#333; }
+
+/* IAJA suffix tags */
+.iaja { display:inline-block; font-size:8.5pt; font-weight:700; padding:0 4px; border-radius:3px; margin-left:3px; line-height:1.3; vertical-align:baseline; }
+.iaja-j { background:#EEEDFE; color:#3C3489; }
+.iaja-a { background:#E6F1FB; color:#0C447C; }
+.iaja-i { background:#F1EFE8; color:#666; }
+
+/* Rating chip */
+.rating { display:inline-block; min-width:22px; padding:2px 8px; border-radius:3px; font-weight:600; font-size:10pt; text-align:center; }
+.rating.A { background:#9DD49B; color:#1a4d1a; }
+.rating.B { background:#BFD9F2; color:#0C447C; }
+.rating.C { background:#E7E3AB; color:#5a5526; }
+.rating.D { background:#FFCC66; color:#7a4f00; }
+.rating.F { background:#FF7C80; color:#660000; }
+.rating.NR { background:#e0e0e0; color:#666; }
+
+/* Zebra fills at the RA-group level (each RA is one zebra block, possibly multiple CQ rows). */
+tr.zebra-a td { background:#FAF8D2; }
+tr.zebra-b td { background:#FDFCF1; }
+
+/* Banner rows for pillar / group / element headers */
+tr.pillar-banner td { background:#3C3489; color:#fff; font-size:13pt; font-weight:700; padding:10px 12px; letter-spacing:0.3px; }
+tr.group-banner td  { background:#085041; color:#fff; font-size:11.5pt; font-weight:700; padding:7px 12px; }
+tr.element-banner td { background:#FAEEDA; color:#633806; font-size:11pt; font-weight:700; padding:6px 12px; }
+
+td.col-ra { vertical-align:top; padding-top:8px; }
+
+/* R20-clean: no em-dashes; R21-clean: no trailing periods on bullets. Both enforced at content build time. */
+
+/* No bottom borders between CQ rows of the same RA: only borders below the LAST CQ of each RA group. */
+tr.cq-row td { border:none; }
+tr.cq-row.cq-row-last td { border-bottom:1px solid #ece9d4; }
+
+@media print {
+  body { padding:8mm; }
+  .element-section { page-break-inside:avoid; }
+  table.memo thead th { position:static; }
+}
+</style>
+</head><body>
+<div class="page-title">HTRO &nbsp;|&nbsp; ESA &nbsp;|&nbsp; Full new-taxonomy memo (Sheet 3 V2 stress test)</div>
+<div class="page-subtitle">Sheet 3 visual style &middot; 30-Apr-26 &middot; HTRO real for IC#1+IC#2 (19 CQs); Lorem-Ipsum elsewhere</div>
+<section class="element-section">
+<table class="memo"><thead><tr>
+<th class="col-ra">Required attribute</th>
+<th class="col-cq">Core question</th>
+<th class="col-rate">R</th>
+<th class="col-aj">Analysis and judgement</th>
+</tr></thead>
+<tbody>
+<tr class="pillar-banner"><td colspan="4">Investment Case Elements</td></tr>
+<tr class="element-banner"><td colspan="4">Required "input" forces?</td></tr>
+<tr class="cq-row zebra-a">
+<td class="col-ra" rowspan="7">Strong external change forces / tailwinds?</td>
+<td class="col-cq">Demand: changes in customer purchasing behaviour, volumes, pricing power, discounting, delayed purchasing, routes to market?</td>
+<td class="col-rate"><span class="rating B">B</span></td>
+<td class="col-aj"><p class="bullet-anchor">- DC bandwidth demand grew <u>+330%</u> (2020-24) with hyperscaler capex acceleration confirming the structural shift <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Hyperscaler 2025 capex plans: Meta $60bn+, Google $50bn+, Microsoft $80bn+ <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- HTRO Q4 DC organic growth +62% confirms demand pull is live <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- AI/ML inference workloads adding a second leg of structural demand <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-cq">Competition: changes in industry structure, competitive intensity, new entrants, market share dynamics, barriers to entry/exit, competitor financial health?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Cable/connectivity industry <u>consolidating</u> with HTRO holding stable mid-market position <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Prysmian dominant at top end (EUR 16bn rev); HTRO niche operator at SEK 7.5bn <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Chinese competitive entrants in FS pricing aggressive but contained to commodity segments <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-cq">Disruption: technology disruption, innovative new entrants, substitute offerings, disintermediation?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- DC technology stable; FS substitution by 5G/satellite a <u>real but slow</u> threat over 5+ years <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Optical fibre still dominant for hyperscaler interconnect; no near-term substitute <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- FS broadband substitution risk concentrated in marginal markets <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-cq">Political/regulatory: actual or plausible political and regulatory influence across geographies and sector?</td>
+<td class="col-rate"><span class="rating B">B</span></td>
+<td class="col-aj"><p class="bullet-anchor">- EU Gigabit Infrastructure Act (force May 2024) provides <u>structural FS demand floor</u> <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- German broadband EUR 38bn vs EUR 12bn prior commitment <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- EU Digital Decade target: 100% Gigabit coverage by 2030 <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-cq">Supply side: changes in supplier economics, relationships, concentration, risks, financial health?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Supplier base stable: copper/optical fibre commodities sourced through <u>long-term contracts</u> <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- No single-source supplier concentration risk identified <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Input cost volatility manageable within 200-300bp gross margin band <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-cq">Revenue/demand cycle: cyclicality, predictability, stage of cycle, end-market data beyond company commentary?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- FS in <u>early upcycle</u>; DC structurally non-cyclical (AI capex secular), HE niche stable <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- FS organic -1% FY25 reading like trough; EU subsidy disbursement supports recovery <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- DC bandwidth demand growth secular, not cyclical (AI/ML training + inference) <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a cq-row-last">
+<td class="col-cq">Macroeconomic: broad macro forces on revenue growth and margins over L18M and N3Y?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- ECB rate-cutting cycle <u>tailwind</u> for leverage cost (1.9x); EUR/SEK volatility minor <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Interest rate cycle elevated through 2025 weighed on financing costs <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Forward EUR/SEK assumed ~stable; no large translation hit modelled <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-ra" rowspan="5">Strong internal change forces?</td>
+<td class="col-cq">Leadership: changes in CEO, CFO, IR, board, 2nd-level management, culture, employee turnover?</td>
+<td class="col-rate"><span class="rating B">B</span></td>
+<td class="col-aj"><p class="bullet-anchor">- CEO Fröberg (Mar 2025): <u>external hire</u> from McKinsey, Ahlsell, Ansell signals strategy reset <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Deputy CEO Åberg provides continuity; reduces key-man risk through transition <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- CFO Pernilla Linden continuing; segment EBITA disclosure from Q1 2025 is governance signal <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">Strategy/structure: changes in corporate strategy, strategic priorities, financial goals, org structure, core/non-core perimeter, M&amp;A posture, partnerships/JVs, activism?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Three-pronged: <u>PIP</u> (SEK 110m/yr benefit) + <u>M&amp;A velocity</u> (JOWO Q2 2026) + DC scaling <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- PIP: SEK 230m one-off cost, SEK 110m/yr recurring benefit; in execution Q3 2025+ <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- 20+ acquisitions 2020-24 still need integration discipline; first real test <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">Priorities/ambition: changes in ambition intensity, values, standards, productivity, behaviours: CEO verbal commentary tone and energy?</td>
+<td class="col-rate"><span class="rating B">B</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Mgmt 2028 targets are <u>ambitious</u>: SEK 11bn rev / 12% EBITA margin (vs FY25 9.4%) <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- New CEO commentary tone: operationally focused, segment-by-segment <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Corporate change is real but &lt;18M old; needs 2 quarters of margin proof <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">Financial profile: changes in growth rates, margins, leverage, cash conversion, FCF, shareholder returns, investment intensity (opex/capex/intangibles), benchmarked vs competitors?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Margin trajectory: gross 42.2% (2023) to <u>38.5% (2025)</u>; recovery requires DC mix accretion <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- DC EBITA 15.3% vs group 9.4% Q4 2025: every 5pp mix shift adds 50bp at group <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Capex intensity low (2-3% of sales), preserving FCF for dividends + bolt-on M&amp;A <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b cq-row-last">
+<td class="col-cq">Track record of delivery: guidance vs actuals vs sell-side over L3Y: financial, strategic, operational delivery, internal vs external cause delineation?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Mixed: strong DC build from <u>zero to SEK 1.4bn</u> but FS margin compression weighs <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- FS margin collapsed 2024; clear external cause (Chinese pricing) but operator response slow <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- DC growth track record is the case-defining proof point: 39% Q3 then 62% Q4 organic <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-ra" rowspan="5">Robust base?</td>
+<td class="col-cq">Absence of external headwinds?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Headwinds present but <u>contained to FS</u> (lowest-margin segment); DC and HE clean <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Chinese FS pricing pressure structural not transitory <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- North America 37% of revenue: BEAD program delays create FS demand uncertainty <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-cq">(Well-invested base?)?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Yes: 20+ acquisitions 2020-24 built capability; capex <u>2-3% of revenue</u> steady-state <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Key acquisitions: Rochester Cable (US electro-optical), Tech Optics (UK submarine), Endor (DC services) <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Vertical integration creates IP moat in DC connectivity specifically <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-cq">Past/present fundamental delivery congruency with thesis?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Good: historical narrative (acquisition to margin to diversification) extends <u>naturally</u> to current thesis <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Always an infrastructure enabler: shift is which segment leads (DC replacing FS) <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Q3 +39% then Q4 +62% DC organic = sequential acceleration confirms thesis trajectory <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-cq">Large CfC/mispricing?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Moderate: CfC cleared substantially (CEO + PIP); residual <u>mispricing 30-50%</u> remains <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Current EV/EBITDA 4.3x vs Prysmian 8-10x; ~50% discount excessive for 62% DC growth <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Fair discount given execution risk + leverage = 20-30%; implies 30-50% upside re-rating <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a cq-row-last">
+<td class="col-cq">Low trading multiple?</td>
+<td class="col-rate"><span class="rating B">B</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Yes: <u>4.3x EV/EBITDA</u> / 1.0x EV/Sales / 1.4x P/B all below historical and peer averages <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Peers: Prysmian 8-10x EV/EBITDA, Corning 12-14x <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Discount magnitude excessive for company with 62% DC organic + structural tailwind <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="element-banner"><td colspan="4">Required financial "outputs"?</td></tr>
+<tr class="cq-row zebra-b cq-row-last">
+<td class="col-ra" rowspan="1">#1 Longevity?</td>
+<td class="col-cq">#1  Three-year, mid-term, triple ratchet step-up?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Plausibly present: DC growth + HE +11% + FS cost programme = <u>credible 3Y triple ratchet</u> <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- VF FY28 EPS SEK 3.30-3.60 vs FY25 ~SEK 1.62; ~2x step-up required <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Mgmt 2028: SEK 11bn revenue / 12% EBITA; SS at SEK 9.3bn / 9.9%: gap M&amp;A-dependent <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a cq-row-last">
+<td class="col-ra" rowspan="1">#2 Growth rate?</td>
+<td class="col-cq">#2  12-20% EPS growth p.a.?</td>
+<td class="col-rate"><span class="rating B">B</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Achievable: SS implies <u>20-25% EPS CAGR</u> 2025-28; VF case 12-15% above SS <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Growth mix: ~60% organic DC/HE, ~25% M&amp;A, ~15% cost savings <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Acceleration is back-loaded: DC mix shift compounds through 2027-28 <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b cq-row-last">
+<td class="col-ra" rowspan="1">#3 Improving financials?</td>
+<td class="col-cq">#3  Margin/growth step-up?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Present but early: gross margin 42.2% (2023) to 38.5% (2025); recovery requires <u>DC mix accretion</u> <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Q4 2025 segment EBITA: DC 15.3%, HE 11.4%, FS 5.2%; DC mix shift = 50bp/5pp at group <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- 2026 likely 10-11% EBITA on PIP + DC; 2027-28 inflection toward 12%+ <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a cq-row-last">
+<td class="col-ra" rowspan="1">#4 Setup fit?</td>
+<td class="col-cq">#4  Fit with required setups?</td>
+<td class="col-rate"><span class="rating B">B</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Strong: primary <u>Demand-Driven EPSU/EPT</u> (DC); secondary Corporate Change (CEO + PIP) <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Primary: DC bandwidth +330% (2020-24); HTRO 62% Q4 organic confirms demand pull <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Secondary: CEO Fröberg + PIP = real change, but 20+ prior deals raise integration risk <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-ra" rowspan="2">#5 Timeliness?</td>
+<td class="col-cq">#5  Post CfC clearing / SP turn?</td>
+<td class="col-rate"><span class="rating F">F</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Partially: SP from SEK 16.44 to ~31.50 (90% of 52W high); <u>most CfC clearing already priced</u> <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Major CfC was FS demand collapse + CEO exit; SP bottomed mid-2024 <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Not a classic post-CfC entry: more 'growth re-acceleration at reasonable price' setup <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b cq-row-last">
+<td class="col-cq">#6  Less than 6M after turn?</td>
+<td class="col-rate"><span class="rating F">F</span></td>
+<td class="col-aj"><p class="bullet-anchor">- No: turn was mid-2024; now ~22M post-turn: <u>classic timeliness window has passed</u> <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Mitigant: Q4 +62% DC growth could represent a 'second turn', demand-driven <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- If second-turn thesis holds, timeliness clock effectively resets to early innings <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-ra" rowspan="2">#6 Monitorability?</td>
+<td class="col-cq">#7  Helpful IR re. operating momentum?</td>
+<td class="col-rate"><span class="rating A">A</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Sed ut <u>perspiciatis unde</u> omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a cq-row-last">
+<td class="col-cq">#8  Trackable key leading indicators?</td>
+<td class="col-rate"><span class="rating A">A</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Et harum quidem rerum facilis est et <u>expedita distinctio</u> nam libero tempore cum soluta <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-ra" rowspan="2">#7 Earnings upgrades?</td>
+<td class="col-cq">#9  Modal case 18M EPS &gt; guidance &gt; SS?</td>
+<td class="col-rate"><span class="rating B">B</span></td>
+<td class="col-aj"><p class="bullet-anchor">- At vero eos et accusamus <u>et iusto odio</u> dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b cq-row-last">
+<td class="col-cq">#10 3:1 SS/G EPS raise/lower skew NFY?</td>
+<td class="col-rate"><span class="rating F">F</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Not yet demonstrable: <u>only 1-2 analysts</u>: quantitative ratio untestable on current coverage <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Qualitative skew positive (DC surprising up, FS stabilising) but ratio thin <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Need post-Q4 2025 results to test direction; Q1 2026 will be first clean signal <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-ra" rowspan="2">#8 Bankable multiple?</td>
+<td class="col-cq">#11  Multiple more company that exogenously driven?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Partially: de-rating was <u>company-specific</u> (FS, CEO exit); re-rating drivers mostly internal <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Company-driven: DC growth, PIP execution, M&amp;A track record <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Exogenous: hyperscaler capex cycle, EU subsidies, rate cycle: supportive but not sole driver <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a cq-row-last">
+<td class="col-cq">#12  More than 20% 3Y TSR?</td>
+<td class="col-rate"><span class="rating D">D</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Yes on modal: EPS CAGR 20-25% + re-rate 4.3x to 7-8x = <u>80-120% 3Y TSR</u> (annualised 22-30%) <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Bull: 120% TSR (EPS 25% CAGR + 10x re-rate). Modal: 80%. Bear: 30% <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Current SP SEK 31.50; modal target SEK 55-60 (FY28 EPS 3.30-3.60 x 16-17x P/E) <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="element-banner"><td colspan="4">Required financial outputs (line items)?</td></tr>
+<tr class="cq-row zebra-b cq-row-last">
+<td class="col-ra" rowspan="1">Revenue growth?</td>
+<td class="col-cq">TBD?</td>
+<td class="col-rate"><span class="rating B">B</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Excepteur sint <u>occaecat cupidatat</u> non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a cq-row-last">
+<td class="col-ra" rowspan="1">Margin trends?</td>
+<td class="col-cq">TBD?</td>
+<td class="col-rate"><span class="rating F">F</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Sed ut <u>perspiciatis unde</u> omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b cq-row-last">
+<td class="col-ra" rowspan="1">EPS growth?</td>
+<td class="col-cq">TBD?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Et harum quidem rerum facilis est et <u>expedita distinctio</u> nam libero tempore cum soluta <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a cq-row-last">
+<td class="col-ra" rowspan="1">Cash returns?</td>
+<td class="col-cq">TBD?</td>
+<td class="col-rate"><span class="rating D">D</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Sed ut <u>perspiciatis unde</u> omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b cq-row-last">
+<td class="col-ra" rowspan="1">Change in multiple?</td>
+<td class="col-cq">TBD?</td>
+<td class="col-rate"><span class="rating B">B</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Sed ut <u>perspiciatis unde</u> omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a cq-row-last">
+<td class="col-ra" rowspan="1">FCF generation?</td>
+<td class="col-cq">TBD?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- At vero eos et accusamus <u>et iusto odio</u> dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b cq-row-last">
+<td class="col-ra" rowspan="1">Leverage?</td>
+<td class="col-cq">TBD?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim <u>ad minim veniam</u> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="pillar-banner"><td colspan="4">Investment Case Building Blocks</td></tr>
+<tr class="group-banner"><td colspan="4">Case momentum</td></tr>
+<tr class="element-banner"><td colspan="4">Technical momentum</td></tr>
+<tr class="cq-row zebra-a cq-row-last">
+<td class="col-ra" rowspan="1">TBD?</td>
+<td class="col-cq">TBD?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Duis aute irure dolor in <u>reprehenderit</u> in voluptate velit esse cillum dolore eu fugiat <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b cq-row-last">
+<td class="col-ra" rowspan="1">TBD?</td>
+<td class="col-cq">TBD?</td>
+<td class="col-rate"><span class="rating D">D</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Nemo enim ipsam <u>voluptatem</u> quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a cq-row-last">
+<td class="col-ra" rowspan="1">TBD?</td>
+<td class="col-cq">TBD?</td>
+<td class="col-rate"><span class="rating D">D</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Et harum quidem rerum facilis est et <u>expedita distinctio</u> nam libero tempore cum soluta <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="element-banner"><td colspan="4">Case fit with current market paradigm's thematics?</td></tr>
+<tr class="cq-row zebra-b cq-row-last">
+<td class="col-ra" rowspan="1">Suitability for bear market / economic downturn?</td>
+<td class="col-cq">TBD?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- At vero eos et accusamus <u>et iusto odio</u> dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a cq-row-last">
+<td class="col-ra" rowspan="1">Suitability for AI disruption?</td>
+<td class="col-cq">TBD?</td>
+<td class="col-rate"><span class="rating D">D</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Lorem ipsum dolor sit amet <u>consectetur</u> adipiscing elit sed do eiusmod tempor incididunt <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b cq-row-last">
+<td class="col-ra" rowspan="1">Suitability for Iran oil-price induced onput cost inflation or demand deterioration?</td>
+<td class="col-cq">TBD?</td>
+<td class="col-rate"><span class="rating F">F</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Et harum quidem rerum facilis est et <u>expedita distinctio</u> nam libero tempore cum soluta <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="element-banner"><td colspan="4">Strong sell-side earnings momentum?</td></tr>
+<tr class="cq-row zebra-a">
+<td class="col-ra" rowspan="5">TBD?</td>
+<td class="col-cq">EPS change?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim ad minima veniam quis nostrum <u>exercitationem</u> ullam corporis suscipit laboriosam <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-cq">EBITDA change?</td>
+<td class="col-rate"><span class="rating D">D</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim <u>ad minim veniam</u> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-cq">Revenue change?</td>
+<td class="col-rate"><span class="rating B">B</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Sed ut <u>perspiciatis unde</u> omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-cq">Price target change?</td>
+<td class="col-rate"><span class="rating D">D</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim <u>ad minim veniam</u> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a cq-row-last">
+<td class="col-cq">% of buy change?</td>
+<td class="col-rate"><span class="rating A">A</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Lorem ipsum dolor sit amet <u>consectetur</u> adipiscing elit sed do eiusmod tempor incididunt <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="group-banner"><td colspan="4">Case simplicity</td></tr>
+<tr class="element-banner"><td colspan="4">Required simplicity guardrails</td></tr>
+<tr class="cq-row zebra-b cq-row-last">
+<td class="col-ra" rowspan="1">Focused bet?</td>
+<td class="col-cq">2 or less fulcrum drivers and 4 or less key drivers?</td>
+<td class="col-rate"><span class="rating F">F</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Excepteur sint <u>occaecat cupidatat</u> non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a cq-row-last">
+<td class="col-ra" rowspan="1">Narrow perimeter?</td>
+<td class="col-cq">10 or less geographies and/or business units?</td>
+<td class="col-rate"><span class="rating F">F</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim ad minima veniam quis nostrum <u>exercitationem</u> ullam corporis suscipit laboriosam <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b cq-row-last">
+<td class="col-ra" rowspan="1">Zero headwinds?</td>
+<td class="col-cq">Zero value-chain headwind risks to revenue?</td>
+<td class="col-rate"><span class="rating D">D</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim ad minima veniam quis nostrum <u>exercitationem</u> ullam corporis suscipit laboriosam <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a cq-row-last">
+<td class="col-ra" rowspan="1">Handful of CfCs?</td>
+<td class="col-cq">2 or less CfCs or problems?</td>
+<td class="col-rate"><span class="rating B">B</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Excepteur sint <u>occaecat cupidatat</u> non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b cq-row-last">
+<td class="col-ra" rowspan="1">Conservative IR?</td>
+<td class="col-cq">Company confirms guidance is conservative?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim ad minima veniam quis nostrum <u>exercitationem</u> ullam corporis suscipit laboriosam <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a cq-row-last">
+<td class="col-ra" rowspan="1">Clear CEO transmission mechanism?</td>
+<td class="col-cq">Clear flow from company's strategy to EPS?</td>
+<td class="col-rate"><span class="rating F">F</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Lorem ipsum dolor sit amet <u>consectetur</u> adipiscing elit sed do eiusmod tempor incididunt <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b cq-row-last">
+<td class="col-ra" rowspan="1">Clear TI transmission mechanism?</td>
+<td class="col-cq">Clear flow from value-chain dynamics to EPS?</td>
+<td class="col-rate"><span class="rating D">D</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Excepteur sint <u>occaecat cupidatat</u> non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="element-banner"><td colspan="4">Fit with acceptable case setups?</td></tr>
+<tr class="cq-row zebra-a cq-row-last">
+<td class="col-ra" rowspan="1">Mis-modelled, high-quality EPS upgrader?</td>
+<td class="col-cq">TBD?</td>
+<td class="col-rate"><span class="rating D">D</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Sed ut <u>perspiciatis unde</u> omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-ra" rowspan="5">Big demand change-driven EPSU or EPT?</td>
+<td class="col-cq">Is there a market-wide demand explosion?</td>
+<td class="col-rate"><span class="rating F">F</span></td>
+<td class="col-aj"><p class="bullet-anchor">- At vero eos et accusamus <u>et iusto odio</u> dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">Does the company hold a dominant competitive position?</td>
+<td class="col-rate"><span class="rating D">D</span></td>
+<td class="col-aj"><p class="bullet-anchor">- At vero eos et accusamus <u>et iusto odio</u> dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">Is the business model one-to-many scalable?</td>
+<td class="col-rate"><span class="rating D">D</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim <u>ad minim veniam</u> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">Is the market an oligopoly (structure AND behaviour)?</td>
+<td class="col-rate"><span class="rating A">A</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Neque porro quisquam est qui <u>dolorem ipsum</u> quia dolor sit amet consectetur adipisci <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b cq-row-last">
+<td class="col-cq">Is there fixed cost leverage for margin expansion?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim ad minima veniam quis nostrum <u>exercitationem</u> ullam corporis suscipit laboriosam <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-ra" rowspan="9">Strong corporate change driven EPSU / EPT?</td>
+<td class="col-cq">1 ∆ = Financial guidance increase?</td>
+<td class="col-rate"><span class="rating F">F</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim <u>ad minim veniam</u> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-cq">2 ∆ = Shareholder returns increase?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Duis aute irure dolor in <u>reprehenderit</u> in voluptate velit esse cillum dolore eu fugiat <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-cq">3 ∆ = B/S utilisation increase?</td>
+<td class="col-rate"><span class="rating B">B</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Sed ut <u>perspiciatis unde</u> omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-cq">4 ∆ = Perimeter/composition reduction?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Et harum quidem rerum facilis est et <u>expedita distinctio</u> nam libero tempore cum soluta <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-cq">5 ∆ = Strategically-sensible M&amp;A step-up?</td>
+<td class="col-rate"><span class="rating A">A</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim <u>ad minim veniam</u> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-cq">6 ∆ = Strategy/strategic priorities change?</td>
+<td class="col-rate"><span class="rating B">B</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim ad minima veniam quis nostrum <u>exercitationem</u> ullam corporis suscipit laboriosam <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-cq">7 ∆ = Standards improvement?</td>
+<td class="col-rate"><span class="rating F">F</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Lorem ipsum dolor sit amet <u>consectetur</u> adipiscing elit sed do eiusmod tempor incididunt <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-cq">8 ∆ = Other leadership/actor changes?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Nemo enim ipsam <u>voluptatem</u> quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a cq-row-last">
+<td class="col-cq">9 ∆ = CEO change?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- At vero eos et accusamus <u>et iusto odio</u> dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-ra" rowspan="9">CfC clearing in HQC?</td>
+<td class="col-cq">1. CfC = Internal - ATM - No CEO ?</td>
+<td class="col-rate"><span class="rating D">D</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Lorem ipsum dolor sit amet <u>consectetur</u> adipiscing elit sed do eiusmod tempor incididunt <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">2. CfC = Internal - ATM - Strategy vacuum ?</td>
+<td class="col-rate"><span class="rating B">B</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim <u>ad minim veniam</u> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">3. CfC = Internal - ATM - Investment phase (NT financials ↓), MT financials ↑?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Excepteur sint <u>occaecat cupidatat</u> non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">4. CfC = Internal - ATM - Guidance for MT ? (might be ↑ - TBD)?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Nemo enim ipsam <u>voluptatem</u> quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">5. CfC = Internal - ATM - Company mis-execution (e.g. products) = guidance delivery risk (and weirder/cockroach) ↓?</td>
+<td class="col-rate"><span class="rating A">A</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Sed ut <u>perspiciatis unde</u> omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">6. CfC = External - ATM - Market-level demand ↓?</td>
+<td class="col-rate"><span class="rating D">D</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Nemo enim ipsam <u>voluptatem</u> quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">7. CfC = External - ATM - Competition ↓ (ATM pricing, MT SRCA)?</td>
+<td class="col-rate"><span class="rating A">A</span></td>
+<td class="col-aj"><p class="bullet-anchor">- At vero eos et accusamus <u>et iusto odio</u> dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">8. CfC = External - MT/LT - Disruption to EGP IBC bankability ↓?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim <u>ad minim veniam</u> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b cq-row-last">
+<td class="col-cq">9. High quality business on MT/LT basis?</td>
+<td class="col-rate"><span class="rating D">D</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Neque porro quisquam est qui <u>dolorem ipsum</u> quia dolor sit amet consectetur adipisci <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-ra" rowspan="5">Huge CfC clearing event in solid quality?</td>
+<td class="col-cq">1. Bottom quartile trading multiple (2YF normalised margins)?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Excepteur sint <u>occaecat cupidatat</u> non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-cq">2. SS estimates cut deeply/full across all SS analysts, to conservative levels?</td>
+<td class="col-rate"><span class="rating D">D</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Duis aute irure dolor in <u>reprehenderit</u> in voluptate velit esse cillum dolore eu fugiat <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-cq">3. Company numerical guidance rebased lower, ideally KSed?</td>
+<td class="col-rate"><span class="rating B">B</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Lorem ipsum dolor sit amet <u>consectetur</u> adipiscing elit sed do eiusmod tempor incididunt <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-cq">4. Disruptive impact on day-to-day operations/revenue in LTM delivery, modal forecasts,  guidance, SS?  (Cockroach/Weirder)?</td>
+<td class="col-rate"><span class="rating D">D</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Et harum quidem rerum facilis est et <u>expedita distinctio</u> nam libero tempore cum soluta <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a cq-row-last">
+<td class="col-cq">5. "You know" and "puking/sadness" check re. guidance, SS, SP?  (If not, DK farfalle not occurred yet)?</td>
+<td class="col-rate"><span class="rating A">A</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Neque porro quisquam est qui <u>dolorem ipsum</u> quia dolor sit amet consectetur adipisci <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-ra" rowspan="9">Trough-on-trough turn in solid quality cyclical?</td>
+<td class="col-cq">1. Bottom quartile trading multiple (2YF normalised margins)?</td>
+<td class="col-rate"><span class="rating F">F</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Excepteur sint <u>occaecat cupidatat</u> non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">2. End market demand decreased for 18M+?</td>
+<td class="col-rate"><span class="rating F">F</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Et harum quidem rerum facilis est et <u>expedita distinctio</u> nam libero tempore cum soluta <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">3. Competitive behaviour calmed vs. price-down for volume gain?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Excepteur sint <u>occaecat cupidatat</u> non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">4. New contract pricing levels now stable?</td>
+<td class="col-rate"><span class="rating B">B</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Sed ut <u>perspiciatis unde</u> omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">5. Company has executed right-sizing programme for L6M+?</td>
+<td class="col-rate"><span class="rating D">D</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Duis aute irure dolor in <u>reprehenderit</u> in voluptate velit esse cillum dolore eu fugiat <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">6. Competitors/substitutes have retrenched and executed right-sizing programme for L6M+?</td>
+<td class="col-rate"><span class="rating F">F</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim ad minima veniam quis nostrum <u>exercitationem</u> ullam corporis suscipit laboriosam <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">7. SS estimates cut deeply/full across all SS analysts, to conservative levels?</td>
+<td class="col-rate"><span class="rating D">D</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim ad minima veniam quis nostrum <u>exercitationem</u> ullam corporis suscipit laboriosam <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">8. Company guidance rebased lower, ideally KSed?</td>
+<td class="col-rate"><span class="rating D">D</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim ad minima veniam quis nostrum <u>exercitationem</u> ullam corporis suscipit laboriosam <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b cq-row-last">
+<td class="col-cq">9. "You know" and "puking/sadness" check re. guidance, SS, SP?  (If not, DK farfalle not occurred yet)?</td>
+<td class="col-rate"><span class="rating F">F</span></td>
+<td class="col-aj"><p class="bullet-anchor">- At vero eos et accusamus <u>et iusto odio</u> dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="element-banner"><td colspan="4">Fit with unacceptable case setups [negative]</td></tr>
+<tr class="cq-row zebra-a cq-row-last">
+<td class="col-ra" rowspan="1">Fit with unacceptable case setups? [negative]?</td>
+<td class="col-cq">TBD?</td>
+<td class="col-rate"><span class="rating D">D</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Duis aute irure dolor in <u>reprehenderit</u> in voluptate velit esse cillum dolore eu fugiat <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b cq-row-last">
+<td class="col-ra" rowspan="1">Fit with false friend case setups? [negative]?</td>
+<td class="col-cq">TBD?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Excepteur sint <u>occaecat cupidatat</u> non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="group-banner"><td colspan="4">Business quality</td></tr>
+<tr class="element-banner"><td colspan="4">Business quality - great operator</td></tr>
+<tr class="cq-row zebra-a">
+<td class="col-ra" rowspan="2">Right direction?</td>
+<td class="col-cq">1. Big, big ambition/vision (force; growth as priority, outcompete, innovate, adapt, push)?</td>
+<td class="col-rate"><span class="rating A">A</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim ad minima veniam quis nostrum <u>exercitationem</u> ullam corporis suscipit laboriosam <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a cq-row-last">
+<td class="col-cq">2. Great, smart strategy and right, bold strategic priorities (enabler); mid-term moat widening + growth as priority, plus dynamic strategy to capitalise on plausible range of environments?</td>
+<td class="col-rate"><span class="rating B">B</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Excepteur sint <u>occaecat cupidatat</u> non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-ra" rowspan="6">Right resources?</td>
+<td class="col-cq">1. Great CEO (measured via action, not conjecture; enabler, not ossifier)?</td>
+<td class="col-rate"><span class="rating A">A</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Et harum quidem rerum facilis est et <u>expedita distinctio</u> nam libero tempore cum soluta <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">2. Hiring well is a top CEO priority + CEO has built a great leadership team (enabler)?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim <u>ad minim veniam</u> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">3. Entire business is well-resourced/well-invested (buffer; ant colony; built yesterday for resilience + accelerating forward today)?</td>
+<td class="col-rate"><span class="rating B">B</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim <u>ad minim veniam</u> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">4. Holistic, congruent culture + alignment across total system, e.g. Lifco, Avanza, Ryanair?</td>
+<td class="col-rate"><span class="rating A">A</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Nemo enim ipsam <u>voluptatem</u> quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">5. Conservative guidance (buffer)?</td>
+<td class="col-rate"><span class="rating A">A</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Neque porro quisquam est qui <u>dolorem ipsum</u> quia dolor sit amet consectetur adipisci <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b cq-row-last">
+<td class="col-cq">6. Clear, straightforward and helpful communication, strategy and driver transmission mechanism?</td>
+<td class="col-rate"><span class="rating F">F</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim ad minima veniam quis nostrum <u>exercitationem</u> ullam corporis suscipit laboriosam <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-ra" rowspan="7">Right record/action/behaviour/forward movement?</td>
+<td class="col-cq">1. High RONIC capital allocation?</td>
+<td class="col-rate"><span class="rating B">B</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim ad minima veniam quis nostrum <u>exercitationem</u> ullam corporis suscipit laboriosam <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-cq">2. Acts not just talks [recent record of huge delivery/action, not missing] (enabler, not ossifier)?</td>
+<td class="col-rate"><span class="rating D">D</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Excepteur sint <u>occaecat cupidatat</u> non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-cq">3. Track record of delivery (not missing/justification; irrespective of environments [outperforming in tougher = even better]) [mid-term]?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- At vero eos et accusamus <u>et iusto odio</u> dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-cq">4. Outlier standards, driving higher/faster/better + competitor out-execution record?</td>
+<td class="col-rate"><span class="rating D">D</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim ad minima veniam quis nostrum <u>exercitationem</u> ullam corporis suscipit laboriosam <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-cq">5. Shareholders first &gt; management?</td>
+<td class="col-rate"><span class="rating F">F</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Nemo enim ipsam <u>voluptatem</u> quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-cq">6. Dynamic repurchaser of SBBs + enlightened “capital allocator”, not just operator/generator?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Sed ut <u>perspiciatis unde</u> omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a cq-row-last">
+<td class="col-cq">7. Prudent governance/scaffolding (didn’t need to, did it; evidence-based)?</td>
+<td class="col-rate"><span class="rating B">B</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim ad minima veniam quis nostrum <u>exercitationem</u> ullam corporis suscipit laboriosam <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="element-banner"><td colspan="4">Business quality - Advantaged business + widening SRCA?</td></tr>
+<tr class="cq-row zebra-b">
+<td class="col-ra" rowspan="7">Strong operational/competitive advantages? (”does company demonstrably have…?”) [MOAT]?</td>
+<td class="col-cq">1. Customer-related moats?</td>
+<td class="col-rate"><span class="rating B">B</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Nemo enim ipsam <u>voluptatem</u> quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">2. Production-related moats?</td>
+<td class="col-rate"><span class="rating F">F</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Sed ut <u>perspiciatis unde</u> omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">3. Scale advantage moats?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim ad minima veniam quis nostrum <u>exercitationem</u> ullam corporis suscipit laboriosam <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">4. Regulatory/political moats?</td>
+<td class="col-rate"><span class="rating D">D</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim ad minima veniam quis nostrum <u>exercitationem</u> ullam corporis suscipit laboriosam <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">5. Culture/knowledge moats?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim <u>ad minim veniam</u> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">6. High relative scale (to competitors, other actors; revenue, FTE, etc.)?</td>
+<td class="col-rate"><span class="rating D">D</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Sed ut <u>perspiciatis unde</u> omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b cq-row-last">
+<td class="col-cq">7. Large realistic TAM (to facilitate 12-20% p.a. growth)?</td>
+<td class="col-rate"><span class="rating B">B</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Sed ut <u>perspiciatis unde</u> omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-ra" rowspan="4">Strong operational outputs? (”does company demonstrably deliver…?”) [OPERATE]?</td>
+<td class="col-cq">1. High SCU?</td>
+<td class="col-rate"><span class="rating A">A</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Duis aute irure dolor in <u>reprehenderit</u> in voluptate velit esse cillum dolore eu fugiat <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-cq">2. Leading or non-inferior RSCU (hard to prove, easier to disprove. Ergo, aim is to disprove inferiority in ESA/DD. e.g. Sophos, Bytes, etc.)?</td>
+<td class="col-rate"><span class="rating D">D</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim <u>ad minim veniam</u> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-cq">3. High, utilised pricing power (2% nominal), with de minimis erosion in RSCU (evidence of application, not just conjecture)?</td>
+<td class="col-rate"><span class="rating B">B</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Duis aute irure dolor in <u>reprehenderit</u> in voluptate velit esse cillum dolore eu fugiat <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a cq-row-last">
+<td class="col-cq">4. (Scale economies shared)?</td>
+<td class="col-rate"><span class="rating A">A</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim ad minima veniam quis nostrum <u>exercitationem</u> ullam corporis suscipit laboriosam <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-ra" rowspan="10">Strong financial outputs? (”does company demonstrably generate…?”) [GENERATE]?</td>
+<td class="col-cq">1. 12-20% EPS growth? And revenue growth?</td>
+<td class="col-rate"><span class="rating A">A</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Neque porro quisquam est qui <u>dolorem ipsum</u> quia dolor sit amet consectetur adipisci <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">2. Immediate scope to deploy 20%+ of sales in capital/opex p.a. at high RONIC for 3-5 years (i.e., grow opex/capex at 20% p.a. - drives mid/long-term potential and higher fair multiple)?</td>
+<td class="col-rate"><span class="rating D">D</span></td>
+<td class="col-aj"><p class="bullet-anchor">- At vero eos et accusamus <u>et iusto odio</u> dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">3. High post-tax RONIC (25-30%+)?</td>
+<td class="col-rate"><span class="rating A">A</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim ad minima veniam quis nostrum <u>exercitationem</u> ullam corporis suscipit laboriosam <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">4. High NI to FCF conversion (80%) [NWC, etc.]?</td>
+<td class="col-rate"><span class="rating D">D</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim ad minima veniam quis nostrum <u>exercitationem</u> ullam corporis suscipit laboriosam <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">5. Post-tax ROCE of 15%+?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Nemo enim ipsam <u>voluptatem</u> quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">6. Post-tax ROTC of 30%+?</td>
+<td class="col-rate"><span class="rating A">A</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Excepteur sint <u>occaecat cupidatat</u> non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">7. High gross margins?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- At vero eos et accusamus <u>et iusto odio</u> dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">8. Solid EBIT margins? (20% is solid, 25%+ is great)?</td>
+<td class="col-rate"><span class="rating A">A</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Et harum quidem rerum facilis est et <u>expedita distinctio</u> nam libero tempore cum soluta <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">9. Genuine fixed cost operating leverage? [ref. section D]?</td>
+<td class="col-rate"><span class="rating D">D</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim <u>ad minim veniam</u> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b cq-row-last">
+<td class="col-cq">10. Low tax rate (below 30%) or other non-obvious EPS leakage?</td>
+<td class="col-rate"><span class="rating D">D</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim ad minima veniam quis nostrum <u>exercitationem</u> ullam corporis suscipit laboriosam <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-ra" rowspan="2">Gets stronger as it gets bigger/time passes? Gravitational pull?**?</td>
+<td class="col-cq">1. Gravitational/mechanical forces (not just heroic company dynamism) drive mechanical improvement of SRCA versus peers with each period passing?</td>
+<td class="col-rate"><span class="rating F">F</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Duis aute irure dolor in <u>reprehenderit</u> in voluptate velit esse cillum dolore eu fugiat <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a cq-row-last">
+<td class="col-cq">2. Gravitational/mechanical forces (not just heroic company dynamism) drive improving financials outputs versus peers with each period passing?</td>
+<td class="col-rate"><span class="rating F">F</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Et harum quidem rerum facilis est et <u>expedita distinctio</u> nam libero tempore cum soluta <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-ra" rowspan="4">Plausible scope for improvement over mid-term in the financial outputs? [SCOPE]?</td>
+<td class="col-cq">1. Peer precedents?</td>
+<td class="col-rate"><span class="rating F">F</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Neque porro quisquam est qui <u>dolorem ipsum</u> quia dolor sit amet consectetur adipisci <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">2. Big savings/improvements in a few areas?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim ad minima veniam quis nostrum <u>exercitationem</u> ullam corporis suscipit laboriosam <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">3. Lots of little savings/improvements in many areas?</td>
+<td class="col-rate"><span class="rating B">B</span></td>
+<td class="col-aj"><p class="bullet-anchor">- At vero eos et accusamus <u>et iusto odio</u> dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b cq-row-last">
+<td class="col-cq">4. (Plausibility from congruency with strategy is Q for other sections)?</td>
+<td class="col-rate"><span class="rating F">F</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim ad minima veniam quis nostrum <u>exercitationem</u> ullam corporis suscipit laboriosam <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="element-banner"><td colspan="4">Business quality - Favourable and improving value chain dynamics?</td></tr>
+<tr class="cq-row zebra-a">
+<td class="col-ra" rowspan="2">1. Demand side - strong/robust or fragile/negative?</td>
+<td class="col-cq">1. Customer demand?</td>
+<td class="col-rate"><span class="rating D">D</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Sed ut <u>perspiciatis unde</u> omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a cq-row-last">
+<td class="col-cq">2. Route to market/intermediaries?</td>
+<td class="col-rate"><span class="rating D">D</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Nemo enim ipsam <u>voluptatem</u> quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-ra" rowspan="5">2. Competitive supportiveness or aggression?</td>
+<td class="col-cq">1. Existing competition?</td>
+<td class="col-rate"><span class="rating A">A</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim <u>ad minim veniam</u> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">2. Adjacencies entering?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Nemo enim ipsam <u>voluptatem</u> quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">3. Vanilla new entrants?</td>
+<td class="col-rate"><span class="rating D">D</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Et harum quidem rerum facilis est et <u>expedita distinctio</u> nam libero tempore cum soluta <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">4. Orthogonal / innovative new entrants?</td>
+<td class="col-rate"><span class="rating F">F</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Duis aute irure dolor in <u>reprehenderit</u> in voluptate velit esse cillum dolore eu fugiat <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b cq-row-last">
+<td class="col-cq">5. Substitutes / alternatives?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- At vero eos et accusamus <u>et iusto odio</u> dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a cq-row-last">
+<td class="col-ra" rowspan="1">3. Disruption forces?</td>
+<td class="col-cq">To demand, competition, regulators, suppliers, political, any other actors?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim ad minima veniam quis nostrum <u>exercitationem</u> ullam corporis suscipit laboriosam <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-ra" rowspan="2">4. Political/regulatory?</td>
+<td class="col-cq">1. Regulator SWOT?</td>
+<td class="col-rate"><span class="rating F">F</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Nemo enim ipsam <u>voluptatem</u> quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b cq-row-last">
+<td class="col-cq">2. Political actor SWOT?</td>
+<td class="col-rate"><span class="rating F">F</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Lorem ipsum dolor sit amet <u>consectetur</u> adipiscing elit sed do eiusmod tempor incididunt <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a cq-row-last">
+<td class="col-ra" rowspan="1">5. Supportive supplier side?</td>
+<td class="col-cq">1. Supplier side SWOT?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Excepteur sint <u>occaecat cupidatat</u> non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="element-banner"><td colspan="4">Business quality - Supportive / concentrated industry structure?</td></tr>
+<tr class="cq-row zebra-b">
+<td class="col-ra" rowspan="3">1. Concentrated existing market structure?</td>
+<td class="col-cq">1. This company #1 (or #2)?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Duis aute irure dolor in <u>reprehenderit</u> in voluptate velit esse cillum dolore eu fugiat <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">2. Top 5 &gt; 30% share?</td>
+<td class="col-rate"><span class="rating F">F</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Sed ut <u>perspiciatis unde</u> omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b cq-row-last">
+<td class="col-cq">3. Steep market share distribution curve? E.g. Top 5 companies 5x share of #6-10, etc.?</td>
+<td class="col-rate"><span class="rating B">B</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Neque porro quisquam est qui <u>dolorem ipsum</u> quia dolor sit amet consectetur adipisci <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-ra" rowspan="4">2. Concentrating gravitational pull?</td>
+<td class="col-cq">1. Stability of share over time?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- At vero eos et accusamus <u>et iusto odio</u> dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-cq">2. New entrants’ share?</td>
+<td class="col-rate"><span class="rating D">D</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Nemo enim ipsam <u>voluptatem</u> quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-cq">3. Share consolidates towards largest competitors over time?</td>
+<td class="col-rate"><span class="rating D">D</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Sed ut <u>perspiciatis unde</u> omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a cq-row-last">
+<td class="col-cq">4. Share consolidates to most advantaged competitors?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim ad minima veniam quis nostrum <u>exercitationem</u> ullam corporis suscipit laboriosam <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-ra" rowspan="4">3. Benign competitor attitudes + stability thereof?</td>
+<td class="col-cq">1. Benign-ness?</td>
+<td class="col-rate"><span class="rating D">D</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Nemo enim ipsam <u>voluptatem</u> quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">2. MOL instability or stable attitude?</td>
+<td class="col-rate"><span class="rating F">F</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Neque porro quisquam est qui <u>dolorem ipsum</u> quia dolor sit amet consectetur adipisci <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">3. Shark attack if weakness sensed?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim <u>ad minim veniam</u> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b cq-row-last">
+<td class="col-cq">4. Volume / ROCE prioritisation? (Price down when volume down?)?</td>
+<td class="col-rate"><span class="rating B">B</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim <u>ad minim veniam</u> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a cq-row-last">
+<td class="col-ra" rowspan="1">4. Positive or negative competitiveness trends?</td>
+<td class="col-cq">1 Positive or negative competitiveness trends?</td>
+<td class="col-rate"><span class="rating B">B</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Et harum quidem rerum facilis est et <u>expedita distinctio</u> nam libero tempore cum soluta <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="element-banner"><td colspan="4">Business quality - High secular / long-term growth potential?</td></tr>
+<tr class="cq-row zebra-b">
+<td class="col-ra" rowspan="4">High long term growth?</td>
+<td class="col-cq">Clear, actionable adjacencies to expand into (where company might have an SRCA over time)? Adjacent TAMs?</td>
+<td class="col-rate"><span class="rating B">B</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Excepteur sint <u>occaecat cupidatat</u> non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">Structurally increasing volume demand for company offerings?</td>
+<td class="col-rate"><span class="rating A">A</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Lorem ipsum dolor sit amet <u>consectetur</u> adipiscing elit sed do eiusmod tempor incididunt <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-cq">Pricing rising faster than costs/inflation in LT?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Lorem ipsum dolor sit amet <u>consectetur</u> adipiscing elit sed do eiusmod tempor incididunt <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b cq-row-last">
+<td class="col-cq">Historical growth rate at sector/industry level higher than GDP?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- At vero eos et accusamus <u>et iusto odio</u> dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="element-banner"><td colspan="4">Business quality - Fit with stock market paradigm  / regime / thematics?</td></tr>
+<tr class="cq-row zebra-a cq-row-last">
+<td class="col-ra" rowspan="1">Summarise answer given in other section, focusing on business not just investment case?</td>
+<td class="col-cq">Summarise answer given to that Pillar in C.II.3?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim ad minima veniam quis nostrum <u>exercitationem</u> ullam corporis suscipit laboriosam <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="group-banner"><td colspan="4">Case riskiness</td></tr>
+<tr class="element-banner"><td colspan="4">Invalidating attributes</td></tr>
+<tr class="cq-row zebra-b cq-row-last">
+<td class="col-ra" rowspan="1">General ACHs?</td>
+<td class="col-cq">No overlap with 10x general invalidating ACHs?</td>
+<td class="col-rate"><span class="rating A">A</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Nemo enim ipsam <u>voluptatem</u> quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-ra" rowspan="3">Plain sight risks?</td>
+<td class="col-cq">No slowing of core engine vs. company's DNA?</td>
+<td class="col-rate"><span class="rating F">F</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Et harum quidem rerum facilis est et <u>expedita distinctio</u> nam libero tempore cum soluta <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-cq">No mediocre CEOs or weird, silly simple choices?</td>
+<td class="col-rate"><span class="rating A">A</span></td>
+<td class="col-aj"><p class="bullet-anchor">- At vero eos et accusamus <u>et iusto odio</u> dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a cq-row-last">
+<td class="col-cq">No big 'Hmmms'?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim ad minima veniam quis nostrum <u>exercitationem</u> ullam corporis suscipit laboriosam <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-ra" rowspan="2">No mediocrity?</td>
+<td class="col-cq">3 or more Ds or Fs?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Duis aute irure dolor in <u>reprehenderit</u> in voluptate velit esse cillum dolore eu fugiat <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b cq-row-last">
+<td class="col-cq">8 or more Cs?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Duis aute irure dolor in <u>reprehenderit</u> in voluptate velit esse cillum dolore eu fugiat <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a">
+<td class="col-ra" rowspan="2">Negative earnings momentum?</td>
+<td class="col-cq">No recent earnings cuts (unless CfC part of case)?</td>
+<td class="col-rate"><span class="rating D">D</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Nemo enim ipsam <u>voluptatem</u> quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a cq-row-last">
+<td class="col-cq">No peers having problems?</td>
+<td class="col-rate"><span class="rating A">A</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Et harum quidem rerum facilis est et <u>expedita distinctio</u> nam libero tempore cum soluta <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-ra" rowspan="2">Lessons check?</td>
+<td class="col-cq">No overlap with negative lessons and setups?</td>
+<td class="col-rate"><span class="rating F">F</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Nemo enim ipsam <u>voluptatem</u> quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b cq-row-last">
+<td class="col-cq">No fit with unacceptable / false friend setups?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Lorem ipsum dolor sit amet <u>consectetur</u> adipiscing elit sed do eiusmod tempor incididunt <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="element-banner"><td colspan="4">Strenuously seek-to-avoid attributes</td></tr>
+<tr class="cq-row zebra-a">
+<td class="col-ra" rowspan="2">Crash through stops risk?</td>
+<td class="col-cq">Risk of fundamental sudden, high magnitude, low probability (SHMLP) risks?</td>
+<td class="col-rate"><span class="rating D">D</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim <u>ad minim veniam</u> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a cq-row-last">
+<td class="col-cq">How wide is the skew in plausible outcomes (i.e. low case predictability)?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Sed ut <u>perspiciatis unde</u> omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b">
+<td class="col-ra" rowspan="2">Mark-to-market risk?</td>
+<td class="col-cq">How large is the downside to fair trough multiple?</td>
+<td class="col-rate"><span class="rating F">F</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Lorem ipsum dolor sit amet <u>consectetur</u> adipiscing elit sed do eiusmod tempor incididunt <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b cq-row-last">
+<td class="col-cq">How much is the trading multiple influenced by the industry rather than the company?</td>
+<td class="col-rate"><span class="rating F">F</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim ad minima veniam quis nostrum <u>exercitationem</u> ullam corporis suscipit laboriosam <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-a cq-row-last">
+<td class="col-ra" rowspan="1">Sector strength?</td>
+<td class="col-cq">Are peers technicals' RS &gt; 70% versus industry and market? Are any peers suffering deterioration in fundamentals, SSEM or technicals?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Et harum quidem rerum facilis est et <u>expedita distinctio</u> nam libero tempore cum soluta <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-a">[A]</span></p></td>
+</tr>
+<tr class="element-banner"><td colspan="4">AUM-constraining attributes</td></tr>
+<tr class="cq-row zebra-b cq-row-last">
+<td class="col-ra" rowspan="1">Sentiment risk?</td>
+<td class="col-cq">Sentiment-related SHMLP risks?</td>
+<td class="col-rate"><span class="rating F">F</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Lorem ipsum dolor sit amet <u>consectetur</u> adipiscing elit sed do eiusmod tempor incididunt <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="group-banner"><td colspan="4">Case optionality</td></tr>
+<tr class="element-banner"><td colspan="4">Nice to have attributes</td></tr>
+<tr class="cq-row zebra-a cq-row-last">
+<td class="col-ra" rowspan="1">Additional upside?</td>
+<td class="col-cq">Big positive optionality above/beyond modal case?</td>
+<td class="col-rate"><span class="rating C">C</span></td>
+<td class="col-aj"><p class="bullet-anchor">- Ut enim <u>ad minim veniam</u> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit <span class="iaja iaja-a">[A]</span></p><p class="bullet-sub">- Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="cq-row zebra-b cq-row-last">
+<td class="col-ra" rowspan="1">Self-righting behaviour ATM?</td>
+<td class="col-cq">Rapid self-righting MMO?</td>
+<td class="col-rate"><span class="rating B">B</span></td>
+<td class="col-aj"><p class="bullet-anchor">- At vero eos et accusamus <u>et iusto odio</u> dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-j">[J]</span></p><p class="bullet-sub">- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-i">[I]</span></p><p class="bullet-sub">- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+</tbody></table>
+</section>
+</body></html>
