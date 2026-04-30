@@ -37,8 +37,9 @@ body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif
 .v-drop-child { display:flex; align-items:flex-start; position:relative; padding:2px 0; }
 .v-drop-child::before { content:''; position:absolute; left:-12px; top:var(--vd-arm-y, 14px); width:12px; height:1.5px; background:#999; }
 
-/* Pillar-to-children stem (vertical line under pillar pill) */
-.pillar-stem { width:1.5px; height:14px; background:#999; margin-left:24px; }
+/* Pillar-to-children stem (vertical line under pillar pill).
+ * Position is set by JS via --stem-left so it aligns with the horizontal bar's leftmost X. */
+.pillar-stem { width:1.5px; height:14px; background:#999; margin-left:var(--stem-left, 24px); }
 
 /* Horizontal spread — children share row equally */
 .h-spread { display:flex; flex-direction:row; flex-wrap:nowrap; align-items:flex-start; position:relative; margin-top:0; padding:0; width:100%; }
@@ -288,8 +289,16 @@ function render() {
     h += '<\/div>';
     el.innerHTML = h;
 
-    /* Run connector geometry AFTER paint so pill rects are accurate. */
-    requestAnimationFrame(fixConnectors);
+    /* Run connector geometry AFTER paint so pill rects are accurate.
+     * Use double rAF + setTimeout fallback to survive font load delays. */
+    requestAnimationFrame(function() {
+        requestAnimationFrame(function() {
+            fixConnectors();
+        });
+    });
+    setTimeout(fixConnectors, 50);
+    setTimeout(fixConnectors, 200);
+    setTimeout(fixConnectors, 600);
 }
 
 /* ============================================================
@@ -349,6 +358,19 @@ function fixConnectors() {
         bar.style.left = minLeft + "px";
         bar.style.width = (maxLeft - minLeft) + "px";
         sp.appendChild(bar);
+        /* Align the pillar stem above this bar with the bar's leftmost X.
+         * The stem is the previous-previous sibling: pillar-section > [pill, pillar-stem, h-spread]. */
+        var section = sp.parentNode;
+        if (section && section.classList && section.classList.contains("pillar-section")) {
+            var stem = section.querySelector(":scope > .pillar-stem");
+            if (stem) {
+                var sectionRect = section.getBoundingClientRect();
+                /* minLeft is in spread-coordinates; convert to section-coordinates */
+                var minLeftAbs = spRect.left + minLeft;
+                var stemLeftInSection = minLeftAbs - sectionRect.left;
+                stem.style.setProperty("--stem-left", stemLeftInSection + "px");
+            }
+        }
     }
 
     /* 3 + 4. v-drop rails and arms */
@@ -415,33 +437,4 @@ function buildHeaderControls() {
     mh += '<button class="depth-btn" data-d="group" onclick="setDepth(\'group\')">Groups<\/button>';
     mh += '<button class="depth-btn active" data-d="element" onclick="setDepth(\'element\')">+ Elements<\/button>';
     mh += '<button class="depth-btn" data-d="attr" onclick="setDepth(\'attr\')">+ Required attributes<\/button>';
-    mh += '<button class="depth-btn" data-d="cq" onclick="setDepth(\'cq\')">+ Core questions<\/button>';
-    mh += '<\/div>';
-    /* Item length */
-    mh += '<div class="btn-group">';
-    mh += '<span class="btn-group-label">Item length<\/span>';
-    mh += '<button class="len-btn active" data-l="short" onclick="setLen(\'short\')">Short<\/button>';
-    mh += '<button class="len-btn" data-l="long" onclick="setLen(\'long\')">Long<\/button>';
-    mh += '<\/div>';
-    headM.innerHTML = mh;
-
-    /* Legend (right) */
-    var rh = "";
-    rh += '<span><span class="lp pill-pillar">P<\/span> Pillar<\/span>';
-    rh += '<span><span class="lp pill-group">G<\/span> Group<\/span>';
-    rh += '<span><span class="lp pill-element">E<\/span> Element<\/span>';
-    rh += '<span><span class="lp pill-attr">RA<\/span> Required attribute<\/span>';
-    rh += '<span><span class="lp pill-cq">CQ<\/span> Core question<\/span>';
-    headR.innerHTML = rh;
-}
-
-/* ============================================================
- * BOOT
- * ============================================================ */
-buildHeaderControls();
-render();
-window.addEventListener("resize", function() { fixConnectors(); });
-
-</script>
-</body>
-</html>
+    mh += '<button class="depth-btn" dat
