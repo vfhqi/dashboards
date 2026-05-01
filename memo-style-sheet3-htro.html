@@ -2,7 +2,7 @@
 <html lang="en"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HTRO ESA - Memo Style Sheet 3 V16 (nav button polish: rename + reorder + smaller + spacers)</title>
+<title>HTRO ESA - Memo Style Sheet 3 V17 (Element details defaults ON + stronger active-state visual)</title>
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
 body { font-family: 'Aptos', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background:#fafaf8; color:#1a1a1a; }
@@ -213,7 +213,9 @@ tr.line-items-placeholder td { background:#fafaf8; padding:18px 12px; color:#666
 
 /* V14: Nav header — wrap toggles in a flex container */
 .nav-header-controls { display:flex; flex-wrap:wrap; gap:4px; align-items:center; justify-content:flex-end; }
-.nav-header-controls .nav-toggle-btn { font-size:7.5pt; padding:1px 5px; }
+.nav-header-controls .nav-toggle-btn { font-size:7.5pt; padding:1px 5px; background:rgba(255,255,255,0.08); color:rgba(255,255,255,0.65); border-color:rgba(255,255,255,0.18); transition:background 0.15s, color 0.15s; }
+.nav-header-controls .nav-toggle-btn:hover { background:rgba(255,255,255,0.18); color:#fff; }
+.nav-header-controls .nav-toggle-btn.active { background:#fff; color:#3C3489; border-color:#fff; font-weight:700; box-shadow:0 0 0 1px rgba(255,255,255,0.4); }
 .nav-toggle-spacer { display:inline-block; width:10px; flex:0 0 10px; }
 
 /* V14: Nav audit chip — hidden by default; shown when body.show-audit */
@@ -287,14 +289,14 @@ tr.group-summary-row-multi[data-row-index="0"] td {
   border-bottom: none;
 }
 </style>
-</head><body class="show-pills">
+</head><body class="show-pills element-details">
 <div class="app-shell">
 <aside class="nav-pane">
 <div class="nav-header">
 <div class="nav-title">Memo navigation</div>
 <div class="nav-header-controls">
 <button class="nav-toggle-btn active" id="pill-toggle" title="Toggle rating chip labels">Ratings</button>
-<button class="nav-toggle-btn" id="element-details-toggle" title="Show all RAs + CQs for the focused element">Element details</button>
+<button class="nav-toggle-btn active" id="element-details-toggle" title="Show all RAs + CQs for the focused element">Element details</button>
 <span class="nav-toggle-spacer"></span>
 <button class="nav-toggle-btn" id="ras-on-toggle" title="Always show all RAs in the taxonomy">All RAs on</button>
 <button class="nav-toggle-btn" id="cqs-on-toggle" title="Always show all CQs in the taxonomy">All CQs on</button>
@@ -763,7 +765,7 @@ tr.group-summary-row-multi[data-row-index="0"] td {
 </aside>
 <main class="main-pane">
 <div class="main-header">
-<div class="page-title">HTRO &nbsp;|&nbsp; ESA &nbsp;|&nbsp; Full new-taxonomy memo (V16)</div>
+<div class="page-title">HTRO &nbsp;|&nbsp; ESA &nbsp;|&nbsp; Full new-taxonomy memo (V17)</div>
 <div class="page-subtitle">1-May-26 &middot; v3.8 doctrine + V14 delta: 4 new nav toggles (Audit, RAs on, CQs on, Element details)</div>
 </div>
 <table class="memo"><thead><tr>
