@@ -1,0 +1,3615 @@
+{
+  "schema_version": "1.0",
+  "ticker": "HTRO",
+  "company_name": "Hexatronic Group",
+  "stage": "ESA",
+  "stage_date": "2026-04-22",
+  "authored_by": "Watson (APM)",
+  "driver_terminology": "PRIMARY/SECONDARY/TERTIARY",
+  "header": {
+    "primary_setup": "Demand-Driven EPSU/EPT — DC segment displacing legacy FTTH via hyperscaler infrastructure + services pivot",
+    "primary_setup_verdict": "confirmed present; DC +37% organic 2025, +62% Q4, margin 15.3%, asset-light model verified",
+    "secondary_setup": "Corporate Change EPSU/EPT — new CEO Fröberg + decentralised M&A engine + SEK 120m cost programme",
+    "conviction": "C+ — strengthening; DC growth confirmed, moat question partially answered, M&A execution remains the constraint",
+    "time_horizon": "N1-3Y, fulcrum event inside 12m (BEAD resolution + DC growth re-affirmation in Q1-Q2 2026)"
+  },
+  "sections": {
+    "A": {
+      "letter": "A",
+      "title": "FINANCIALS",
+      "applicable": true,
+      "inline_verdict": "[Left blank — Richard's instruction]",
+      "default_open": false,
+      "applicable_note": null,
+      "word_count": 0,
+      "page_count": 0,
+      "target_words": 0,
+      "subsections": [
+        {
+          "id": "A.I",
+          "title": "Financial summary",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "kv_grid",
+              "title": "Last reported period -- headline",
+              "rows": [],
+              "ratings": []
+            },
+            {
+              "type": "prose",
+              "iaja": "I",
+              "text": "",
+              "ratings": []
+            },
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "A.II.1",
+          "title": "Guidance -- Watson analysis/judgement",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "text": "",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "A.II.2",
+          "title": "Financial estimates -- sell-side -- Watson analysis/judgement",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "text": "",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "A.II.3",
+          "title": "Financial forecasts -- VF modal case -- Watson analysis/judgement",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "text": "",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "A.II.4",
+          "title": "TSR Dupont -- Watson analysis/judgement",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "text": "",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        }
+      ],
+      "financials": {
+        "guidance": [],
+        "ss_estimates": [],
+        "model": {
+          "currency": "SEK m",
+          "hist_years": [
+            "FY20",
+            "FY21",
+            "FY22",
+            "FY23",
+            "FY24",
+            "FY25"
+          ],
+          "fwd_years": [
+            "FY26E",
+            "FY27E",
+            "FY28E",
+            "FY29E",
+            "FY30E"
+          ],
+          "guidance_years": [
+            "FY26E",
+            "FY27E",
+            "FY28E"
+          ],
+          "ss_years": [
+            "FY26E",
+            "FY27E",
+            "FY28E"
+          ],
+          "rb_years": [
+            "FY26E",
+            "FY27E",
+            "FY28E",
+            "FY29E",
+            "FY30E"
+          ],
+          "sections": [
+            {
+              "id": "pnl",
+              "label": "P&L",
+              "rows": []
+            },
+            {
+              "id": "fcf",
+              "label": "Free Cash Flow",
+              "rows": []
+            },
+            {
+              "id": "bs",
+              "label": "Balance Sheet",
+              "rows": []
+            }
+          ]
+        },
+        "tsr_dupont": {
+          "stock_name": "HTRO — Hexatronic Group AB",
+          "period_headers": [],
+          "columns": [],
+          "rows": []
+        }
+      }
+    },
+    "B": {
+      "letter": "B",
+      "title": "EXECUTIVE SUMMARY",
+      "applicable": true,
+      "inline_verdict": "Compelling mix-shift trade with genuine asymmetry; DC moat YELLOW, M&A ORANGE — ESA clears for starter position",
+      "default_open": true,
+      "subsections": [
+        {
+          "id": "B.I.1",
+          "title": "Executive summary",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "callout",
+              "iaja": "J",
+              "text": "ESA confirms the Triaging thesis with higher conviction. Hexatronic's DC segment is real, scaling, and profitable (Q4-25: +62% organic, 15.3% EBITA, asset-light). The hyperscaler AI buildout is a multi-year structural tailwind confirmed by Corning's $6bn Meta contract. HTRO's mid-market niche (Tier-2 cloud, regional DCs, enterprise) is less competed than Tier-1 hyperscaler direct supply. ESA-depth research confirms: (i) DC moat is narrow but defensible via local service execution + installed base stickiness — YELLOW, not ORANGE; (ii) M&A execution remains the binding constraint — Weterings write-off is a flag, but Fröberg's Ahlsell track record (20+ deals) is relevant. Overall IC strengthens from C+ to C+ (upper end). Starter position (1.0-1.5%) is justified at current entry (~SEK 28). Do NOT size up before Q1-26 DC print confirms.",
+              "kind": "verdict"
+            },
+            {
+              "type": "prose",
+              "iaja": "A",
+              "text": "ESA-depth analysis adds three layers beyond Triaging: (1) Sector primer confirms fibre optic industry is bifurcating between vertically integrated giants (Corning, Prysmian — preform + cable) and service-led integrators (HTRO niche). Preform manufacturers capture 70% of industry profit pool — HTRO cannot access this. But HTRO's 15%+ DC services margin is competitive with system integrator peers (~11.5% average). (2) Value chain analysis shows HTRO is deliberately moving downstream (design → install → day-two services) where switching costs are higher and competition from giants is less intense. The Communication Zone acquisition exemplifies this — local service capability in US Midwest for hyperscale clients. (3) Earnings history reveals a pattern: management under-promises after misses (H1-25) then over-delivers (H2-25). Q4-25 EBITA beat +10.8% is consistent with conservative guidance reset. This pattern is favourable for EPS revision momentum — expect continued positive surprises if DC sustains."
+            },
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "PRIMARY driver: DC segment scaling — fulcrum. Q4-25 organic growth +62% confirms momentum; 15.3% EBITA margin is 2x group average.",
+                  "sub": [
+                    {
+                      "iaja": "I",
+                      "text": "DC + HE = ~40% of sales but ~60% of adj. EBITA by Q4-25. Mix shift is the numbers story."
+                    },
+                    {
+                      "iaja": "I",
+                      "text": "Cloud/hyperscaler = 40% of DC sales; enterprise = 60%. Dual customer base reduces single-customer risk."
+                    },
+                    {
+                      "iaja": "A",
+                      "text": "Management targets 3-6 DC acquisitions/year at 5-7x EBITDA, EV <EUR 50m. Pipeline appears real given US market fragmentation."
+                    }
+                  ]
+                },
+                {
+                  "iaja": "J",
+                  "text": "SECONDARY driver: BEAD programme materialisation — triggers legacy FTTH volume recovery in H2-26.",
+                  "sub": [
+                    {
+                      "iaja": "I",
+                      "text": "$42.5bn US subsidy; 50 of 56 state proposals approved. 74% of early allocations still going to fibre despite technology-neutral rule change."
+                    },
+                    {
+                      "iaja": "A",
+                      "text": "BEAD impact timing has been pushed right repeatedly. Management now guides H2-26; sell-side expects 2027 for meaningful revenue contribution."
+                    }
+                  ]
+                },
+                {
+                  "iaja": "J",
+                  "text": "TERTIARY driver: Harsh Environment defence/offshore tailwind — structural, secular, non-cyclical ballast.",
+                  "sub": [
+                    {
+                      "iaja": "I",
+                      "text": "HE segment: +11% organic 2025, 11.2% EBITA margin rising toward 15% target. JOWO acquisition (EUR 11.8m, 4.7x EBITDA) adds European defence exposure."
+                    },
+                    {
+                      "iaja": "A",
+                      "text": "NATO spending commitments provide 5-10 year visibility. Rochester Cable operational improvements are margin-accretive."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "prose",
+              "iaja": "A",
+              "text": "Key risk: the DC boom-bust parallel. Sell-side (Redeye) explicitly warns that hyperscaler capex could exhibit the same boom-bust as FTTH. The FTTH cycle saw Hexatronic's revenue surge 33% CAGR then collapse — if DC follows the same pattern, the 2028 targets are unachievable. Mitigant: DC business is services-led (design, installation, day-two) vs. FTTH which was product-distribution; services have higher switching costs and recurring revenue characteristics. This distinction needs pressure-testing at ESA."
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        }
+      ],
+      "applicable_note": null,
+      "word_count": 0,
+      "page_count": 0,
+      "target_words": 0
+    },
+    "C": {
+      "letter": "C",
+      "title": "REQUIRED ATTRIBUTES",
+      "applicable": true,
+      "inline_verdict": "C+ (upper) — DC growth confirmed, moat narrow but defensible, M&A is the binding constraint",
+      "default_open": true,
+      "applicable_note": null,
+      "word_count": 0,
+      "page_count": 0,
+      "target_words": 0,
+      "subsections": [
+        {
+          "id": "C.I",
+          "title": "Ratings (graphical form)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "ratings_table",
+              "id": "ratings-overview",
+              "title": "Ratings — all six pillars, Required Attribute Families, TCs, Required Attributes and Core Questions (HTRO, ESA)",
+              "word_target": 0,
+              "has_toggle": true,
+              "toggle_labels": [
+                "RATINGS ONLY",
+                "SUMMARIES"
+              ],
+              "default_mode": "SUMMARIES",
+              "default_expansion": "full",
+              "rows": [
+                {
+                  "level": "pillar",
+                  "id": "p1",
+                  "label": "P1: Technical Strength",
+                  "rating": "C+",
+                  "summary": "Post-trough recovery; MAs turning up but Stage 2 not confirmed. SP ~SEK 28, well below SEK 65+ peak."
+                },
+                {
+                  "level": "family",
+                  "id": "p1.mn",
+                  "label": "Minervini dimensions (8 point + extension)",
+                  "rating": "C",
+                  "summary": "Estimated 4-5 / 9 PASS — post-trough recovery, not confirmed Stage 2."
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d1",
+                  "label": "D1: Price > 200D MA",
+                  "rating": "PASS",
+                  "summary": "SP ~SEK 28 above 200D MA ~SEK 22-23 (post-trough recovery)."
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d2",
+                  "label": "D2: 200D MA trending up (≥1M)",
+                  "rating": "FAIL",
+                  "summary": "200D MA has been declining; only recently flattening. Not confirmed uptrend."
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d3",
+                  "label": "D3: Price > 150D MA",
+                  "rating": "PASS",
+                  "summary": "SP above 150D MA which is turning up."
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d4",
+                  "label": "D4: 150D > 200D MA",
+                  "rating": "FAIL",
+                  "summary": "Golden cross not yet confirmed — 150D still below 200D MA."
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d5",
+                  "label": "D5: 50D > 150D MA",
+                  "rating": "PASS",
+                  "summary": "50D MA has crossed above 150D on post-Q4 momentum."
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d6",
+                  "label": "D6: Price > 50D MA",
+                  "rating": "PASS",
+                  "summary": "SP trading above 50D MA post-Q4 beat."
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d7",
+                  "label": "D7: Price > 30% above 52W low",
+                  "rating": "PASS",
+                  "summary": "52W low SEK 16.44; SP SEK 28 = +70% above low."
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d8",
+                  "label": "D8: Price within 25% of 52W high",
+                  "rating": "PASS",
+                  "summary": "52W high SEK 34.94; SP SEK 28 = -20% below high."
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d9",
+                  "label": "D9: RS Rank ≥70 (provisional)",
+                  "rating": "FAIL",
+                  "summary": "RS Rank not confirmed — need FactSet data. Estimated below 70."
+                },
+                {
+                  "level": "pillar",
+                  "id": "p2",
+                  "label": "P2: Fit for Market Paradigm",
+                  "rating": "B-",
+                  "summary": "AI/DC infrastructure paradigm-aligned; defence/HE fits risk-off. FTTH legacy is paradigm-negative."
+                },
+                {
+                  "level": "paradigm",
+                  "id": "p2.1",
+                  "label": "Paradigm 1: Late bull / early bear market",
+                  "rating": "C+",
+                  "summary": "Mixed — DC/HE are defensive growth; FTTH is cyclically exposed. Net neutral."
+                },
+                {
+                  "level": "paradigm",
+                  "id": "p2.2",
+                  "label": "Paradigm 2: AI demand / disruption",
+                  "rating": "B+",
+                  "summary": "Directly paradigm-aligned — DC fibre infrastructure is the physical layer of AI buildout."
+                },
+                {
+                  "level": "paradigm",
+                  "id": "p2.3",
+                  "label": "Paradigm 3: Oil, stagflation, recession, rising rates",
+                  "rating": "B-",
+                  "summary": "No Iran exposure. HE defence/offshore benefits from geopolitical tensions. Tariff risk limited (<5% sales)."
+                },
+                {
+                  "level": "pillar",
+                  "id": "p3",
+                  "label": "P3: Fundamental Case (Outputs)",
+                  "rating": "C+ (upper)",
+                  "summary": "ESA confirms change forces and early outputs. DC organic +37% FY25, +62% Q4 with 15.3% EBITA margin. Moat narrow but defensible."
+                },
+                {
+                  "level": "family",
+                  "id": "p3.ic1",
+                  "label": "IC#1: Required Case OUTPUTS",
+                  "rating": "C+",
+                  "summary": "EPS path plausibly present but based on DC scaling + mix shift assumptions. Triple ratchet mechanism identified."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic1.tc1",
+                  "label": "TC: Strong financial profile?",
+                  "rating": "C+",
+                  "summary": "EPS path SEK 1.62 → SEK 3.30-3.60 by FY28 (+55%, ~20% CAGR) driven by DC scaling + mix shift + cost savings."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc1.a1",
+                  "label": "A1: Sufficient longevity of case (baton)?",
+                  "rating": "C+",
+                  "summary": "DC hyperscaler buildout provides multi-year visibility (Corning $6bn Meta contract through 2030). BEAD adds N3-5Y tail."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc1.q1",
+                  "label": "Q1: Three-year, mid-term, triple ratchet step-up?",
+                  "rating": "C+",
+                  "summary": "Plausibly present. Volume (DC +37%), margin (mix shift to 15%+ DC margin), multiple (re-rate from 12.5x to 18-20x)."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc1.a2",
+                  "label": "A2: Sufficient growth rate?",
+                  "rating": "B-",
+                  "summary": "Modal case ~20-25% EPS CAGR 2025-28. VF case 12-15% above SS. In GARP sweet spot."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc1.q2",
+                  "label": "Q2: 12-20% EPS growth p.a.?",
+                  "rating": "B-",
+                  "summary": "Yes — modal 20%+ EPS CAGR. Growth mix: ~60% organic DC/HE, ~25% M&A, ~15% cost savings."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc1.a3",
+                  "label": "A3: Sufficient improvement in financials?",
+                  "rating": "C+",
+                  "summary": "EBITA margin path 7.2% (2025) → 12% (2028 target). Mix shift from 15%+ DC margin vs 6.4% Fibre Solutions."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc1.q3",
+                  "label": "Q3: Margin/growth step-up?",
+                  "rating": "C+",
+                  "summary": "Clear margin step-up via mix shift. DC/HE = 40% of sales but 60% of adj. EBITA. Each % mix shift is accretive."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic1.tc2",
+                  "label": "TC: Acceptable case setup?",
+                  "rating": "B-",
+                  "summary": "Demand-Driven EPSU/EPT confirmed. DC hyperscaler buildout = large exogenous demand shift. Corporate Change overlay credible."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc2.a4",
+                  "label": "A4: Sufficient setup fit?",
+                  "rating": "B-",
+                  "summary": "Demand-Driven EPSU: hyperscaler AI buildout → DC fibre demand → volume + margin expansion → EPS step-up. Classic pattern."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc2.q4",
+                  "label": "Q4: Fit with required setups?",
+                  "rating": "B-",
+                  "summary": "Strong fit. Primary: Demand-Driven EPSU/EPT. Secondary: Corporate Change (CEO + restructuring). Both legible."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc2.a5",
+                  "label": "A5: Goldilocks timeliness?",
+                  "rating": "C+",
+                  "summary": "Post-trough but not confirmed Stage 2. Entry before momentum fully confirmed — earlier than ideal but DC data supports."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc2.q5",
+                  "label": "Q5: Post CfC clearing / SP turn?",
+                  "rating": "C+",
+                  "summary": "SP turn forming post-Q4 beat but not confirmed. Base building at SEK 25-30 range."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc2.q6",
+                  "label": "Q6: Less than 6M after turn?",
+                  "rating": "C",
+                  "summary": "Turn not yet confirmed — cannot assess timeliness relative to turn."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic1.tc3",
+                  "label": "TC: Sufficient case navigatability?",
+                  "rating": "C+",
+                  "summary": "Trackable via quarterly DC organic growth, segment margins, M&A announcements. IR untested."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc3.a6",
+                  "label": "A6: Sufficiently trackable, updatable, and invalidatable early?",
+                  "rating": "C+",
+                  "summary": "Key indicators trackable: DC organic growth (quarterly), segment EBITA margins (quarterly), M&A pipeline (event-driven)."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc3.q7",
+                  "label": "Q7: Helpful IR re. operating momentum?",
+                  "rating": "",
+                  "summary": "Not yet engaged. Unclear — need to test at ESA/DD."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc3.q8",
+                  "label": "Q8: Trackable key leading indicators?",
+                  "rating": "B-",
+                  "summary": "Yes — DC order pipeline, hyperscaler capex announcements, BEAD state allocation data, Corning/Prysmian commentary."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic1.tc4",
+                  "label": "TC: Earnings upgrades?",
+                  "rating": "C+",
+                  "summary": "Post-Q4 beat triggered DNB Carnegie upgrade. VF modal 12-15% above SS. Upgrade path probable if DC sustains."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc4.a7",
+                  "label": "A7: Sufficient earnings upgrades / beats?",
+                  "rating": "C+",
+                  "summary": "Q4-25 beat: EBITA +10.8% vs consensus, revenue +8.6%. Pattern of conservative guidance reset suggests ongoing beat potential."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc4.q9",
+                  "label": "Q9: Modal case 18M EPS > guidance > SS?",
+                  "rating": "C+",
+                  "summary": "Probable. VF modal EPS 12-15% above SS consensus. If DC organic >25% in Q1-Q2 2026, 60-70% probability of positive revision."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc4.q10",
+                  "label": "Q10: 3:1 SS/G EPS raise/lower skew NFY?",
+                  "rating": "C",
+                  "summary": "Insufficient data — only 4 covering analysts. Post-Q4 beat, 1 upgrade (DNB Carnegie). Skew turning positive but not 3:1 confirmed."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic1.tc5",
+                  "label": "TC: Limited drawdown risk?",
+                  "rating": "C",
+                  "summary": "Drawdown risk material. Bear case SEK 12-15 (40-50% downside). DC boom-bust parallel is the key risk."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc5.a8",
+                  "label": "A8: Sufficiently robust / bankable multiple?",
+                  "rating": "C",
+                  "summary": "Blended multiple hostage to mix shift pace. DC services 15-18x vs FTTH legacy 10-12x. Partly company, partly industry driven."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc5.q11",
+                  "label": "Q11: Multiple more company than exogenously driven?",
+                  "rating": "C",
+                  "summary": "Mixed — ~50/50 split. DC services multiple is company-driven (pivot); FTTH portion exogenously gated (rates, BEAD)."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc5.a9",
+                  "label": "A9: Sufficient returns?",
+                  "rating": "C+",
+                  "summary": "Modal case: 60-100% upside (SEK 55-70). Bear case: 40-50% downside (SEK 12-15). R/R positive but asymmetry depends on DC moat."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc5.q12",
+                  "label": "Q12: More than 20% 3Y TSR?",
+                  "rating": "B-",
+                  "summary": "Yes on modal case — ~35-45% TSR p.a. if DC thesis proves out. Bear case is survivable but painful."
+                },
+                {
+                  "level": "family",
+                  "id": "p3.ic2",
+                  "label": "IC#2: Required Case INPUTS",
+                  "rating": "B-",
+                  "summary": "External change forces strong and confirmed: hyperscaler AI capex, NATO defence, BEAD. Duration is the question."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic2.tc1",
+                  "label": "TC: Sufficient change forces?",
+                  "rating": "B-",
+                  "summary": "Strong. Three independent external forces + CEO-led internal restructuring."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic2.tc1.q1",
+                  "label": "Q1: External change forces / tailwinds?",
+                  "rating": "B",
+                  "summary": "Strong. Hyperscaler AI buildout (Corning $6bn Meta contract), NATO 2% GDP, BEAD $42.5bn. Multi-year structural."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic2.tc1.q2",
+                  "label": "Q2: Internal change forces?",
+                  "rating": "C+",
+                  "summary": "Moderate-positive. New CEO Fröberg (ex-Ahlsell, 20+ deals). SEK 120m cost programme. 3-segment reorganisation."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic2.tc2",
+                  "label": "TC: Sufficient base?",
+                  "rating": "C+",
+                  "summary": "Base mixed — DC strong, FTTH weak. No fatal headwinds but FTTH overcapacity is a drag."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic2.tc2.q3",
+                  "label": "Q3: Absence of external headwinds?",
+                  "rating": "C",
+                  "summary": "FTTH overcapacity is a material headwind. Technology-neutral BEAD rules allow LEO/FWA competition. FX headwinds (SEK strength)."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic2.tc2.q3b",
+                  "label": "Q3b: Well-invested base?",
+                  "rating": "C+",
+                  "summary": "DC segment well-invested (asset-light, 1% capex). FTTH requires restructuring (SEK 120m programme). Harsh Env well-positioned."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic2.tc2.q4",
+                  "label": "Q4: Thesis congruency with past/present?",
+                  "rating": "C+",
+                  "summary": "Partially congruent. DC growth confirms mix shift narrative. But FTTH boom-bust history creates pattern risk."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic2.tc2.q5",
+                  "label": "Q5: Large CfC/mispricing?",
+                  "rating": "B-",
+                  "summary": "Yes — market prices HTRO as FTTH company (12.5x) not DC-services business (15-18x). 35% discount to peers."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic2.tc2.q6",
+                  "label": "Q6: Low trading multiple?",
+                  "rating": "B-",
+                  "summary": "12.5x forward P/E vs DC-services peers at 15-18x. Attractive if mix shift delivers."
+                },
+                {
+                  "level": "family",
+                  "id": "p3.ic3",
+                  "label": "IC#3: Required Case SETUPS",
+                  "rating": "C+",
+                  "summary": "Demand-Driven EPSU/EPT plausibly present. Corporate Change overlay credible. No false-friend overlap detected."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic3.tc1",
+                  "label": "TC: Mechanical EPS upgrades from mis-modelling",
+                  "rating": "NR",
+                  "summary": "Not applicable at current stage — no proprietary model built."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic3.tc1.a1",
+                  "label": "A1: Mis-modelled, high-quality EPS upgrader",
+                  "rating": "NR",
+                  "summary": "Cannot assess — no proprietary model vs SS comparison available."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc1.a1.q1",
+                  "label": "Q1: Is EPS consensus >10% below our estimate?",
+                  "rating": "NR",
+                  "summary": "VF modal sits 12-15% above SS — suggests potential, but no formal model built."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc1.a1.q2",
+                  "label": "Q2: What specific line items are mis-modelled?",
+                  "rating": "NR",
+                  "summary": "Likely DC segment revenue growth and margin — SS appears to underweight DC scaling."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc1.a1.q3",
+                  "label": "Q3: Is the modelling gap structural or one-off?",
+                  "rating": "NR",
+                  "summary": "Structural if DC growth sustains — SS models likely built on pre-pivot segment mix."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic3.tc2",
+                  "label": "TC: Idiosyncratic, exogenous inflection",
+                  "rating": "C+",
+                  "summary": "Primary setup — Demand-Driven EPSU/EPT. Hyperscaler AI buildout is the exogenous force."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic3.tc2.a1",
+                  "label": "A1: Big demand change-driven EPSU or EPT",
+                  "rating": "C+",
+                  "summary": "Demand-Driven EPSU validated by DC organic growth +37% FY25, +62% Q4."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc2.a1.q1",
+                  "label": "Q1: Is there a market-wide demand explosion?",
+                  "rating": "B",
+                  "summary": "Yes — AI/hyperscaler infrastructure buildout. DCI market ~25% CAGR to $3bn by 2028."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc2.a1.q2",
+                  "label": "Q2: Does the company hold a dominant competitive position?",
+                  "rating": "C",
+                  "summary": "Mid-market niche, not dominant. ~1% US FTTH share. DC services market fragmented — consolidator, not leader."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc2.a1.q3",
+                  "label": "Q3: Is the business model one-to-many scalable?",
+                  "rating": "C+",
+                  "summary": "Services model scales via local execution + bolt-on M&A. Not platform-scalable like software."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc2.a1.q4",
+                  "label": "Q4: Is the market an oligopoly (structure AND behaviour)?",
+                  "rating": "D",
+                  "summary": "No — fibre market is fragmented with intense competition. DC services more fragmented still. Not oligopolistic."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc2.a1.q5",
+                  "label": "Q5: Is there fixed cost leverage for margin expansion?",
+                  "rating": "C+",
+                  "summary": "Limited — services model is variable-cost heavy. Leverage comes from mix shift to higher-margin DC, not fixed cost absorption."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic3.tc3",
+                  "label": "TC: Huge internal push/improvement",
+                  "rating": "C+",
+                  "summary": "Secondary setup — Corporate Change. New CEO + cost programme + M&A engine."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic3.tc3.a1",
+                  "label": "A1: Strong internal changes driven EPSU / EPT",
+                  "rating": "C+",
+                  "summary": "CEO Fröberg driving 3-pronged restructuring: segment reorganisation, cost programme, M&A pivot to DC."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc3.a1.q1",
+                  "label": "Q1: Is management credible on execution?",
+                  "rating": "C+",
+                  "summary": "Early signs positive — conservative guidance reset, Q3-Q4 beats. Ex-Ahlsell (20+ deals). Untested in fibre industry."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc3.a1.q2",
+                  "label": "Q2: What is the specific internal change programme?",
+                  "rating": "B-",
+                  "summary": "Clear: SEK 120m cost savings, 3-segment reorganisation, decentralised M&A (3-6 deals/year at 5-7x EBITDA)."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc3.a1.q3",
+                  "label": "Q3: What is the track record of delivery so far?",
+                  "rating": "C",
+                  "summary": "12 months only. Q3-Q4 beats after H1 miss. Weterings closure is a capital destruction flag. Too early."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic3.tc4",
+                  "label": "TC: Clearing of (idiosyncratic) negative sentiment",
+                  "rating": "NR",
+                  "summary": "Not primary setup — but FTTH sentiment clearing could provide secondary catalyst."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic3.tc4.a1",
+                  "label": "A1: Oversold/rebounding quality compounder",
+                  "rating": "NR",
+                  "summary": "Not applicable as primary setup. HTRO is not a quality compounder at this stage."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc4.a1.q1",
+                  "label": "Q1: Is the negative sentiment idiosyncratic or sector-wide?",
+                  "rating": "NR",
+                  "summary": "FTTH sentiment is sector-wide. DC sentiment is positive. Mixed."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc4.a1.q2",
+                  "label": "Q2: Is the underlying business quality intact despite sentiment?",
+                  "rating": "NR",
+                  "summary": "DC quality is intact and accelerating. FTTH quality is genuinely impaired."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc4.a1.q3",
+                  "label": "Q3: What specific catalyst clears the overhang?",
+                  "rating": "NR",
+                  "summary": "BEAD materialisation + DC mix shift diluting FTTH impact on group numbers."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic3.tc4.a2",
+                  "label": "A2: Huge C/C clearing event in solid quality (CVS-type)",
+                  "rating": "NR",
+                  "summary": "Not applicable."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc4.a2.q1",
+                  "label": "Q1: Is there a specific clearing event identified?",
+                  "rating": "NR",
+                  "summary": "Not applicable."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc4.a2.q2",
+                  "label": "Q2: Is business quality sufficient to justify rebound post-clearing?",
+                  "rating": "NR",
+                  "summary": "Not applicable."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic3.tc5",
+                  "label": "TC: Standard exogenous reversion to mean",
+                  "rating": "NR",
+                  "summary": "Not applicable — HTRO is not a mean-reversion play."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic3.tc5.a1",
+                  "label": "A1: Mean-reverting quality business post-temporary headwind",
+                  "rating": "NR",
+                  "summary": "Not applicable — FTTH headwind may be structural, not temporary."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc5.a1.q1",
+                  "label": "Q1: Is the headwind genuinely temporary?",
+                  "rating": "NR",
+                  "summary": "FTTH headwind may be structural (LEO satellite competition, overcapacity). Not confirmed temporary."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc5.a1.q2",
+                  "label": "Q2: What is the normalised earnings level to revert to?",
+                  "rating": "NR",
+                  "summary": "Not applicable."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc5.a1.q3",
+                  "label": "Q3: Is the quality of the franchise intact through the headwind?",
+                  "rating": "NR",
+                  "summary": "DC franchise intact and growing. FTTH franchise quality impaired."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic3.tc6",
+                  "label": "TC: Trough-on-trough turn in solid quality cyclical",
+                  "rating": "C",
+                  "summary": "Partially applicable — FTTH segment is at/near trough. But HTRO is not a pure cyclical play."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic3.tc6.a1",
+                  "label": "A1: Cyclical quality compounder at trough earnings",
+                  "rating": "C",
+                  "summary": "FTTH segment at cyclical trough (6.4% EBITA margin vs 15% target). Group earnings depressed by FTTH drag."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc6.a1.q1",
+                  "label": "Q1: Are earnings genuinely at trough?",
+                  "rating": "C+",
+                  "summary": "FTTH segment likely at/near trough. Group earnings suppressed by mix. DC is accelerating, not at trough."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc6.a1.q2",
+                  "label": "Q2: Is business quality sufficient to hold through the full cycle?",
+                  "rating": "C",
+                  "summary": "DC segment quality supports holding. FTTH quality is questionable — structural decline possible."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc6.a1.q3",
+                  "label": "Q3: What leading indicators confirm the cyclical turn?",
+                  "rating": "C",
+                  "summary": "BEAD state allocations, Corning FTTH commentary, housing starts. Early positive signals but not confirmed."
+                },
+                {
+                  "level": "pillar",
+                  "id": "p4",
+                  "label": "P4: Fundamental Case (Inputs)",
+                  "rating": "C+",
+                  "summary": "Foundation quality mixed — strong DC economics, weak FTTH. Moderate complexity (3 segments, 9 countries). M&A execution ORANGE."
+                },
+                {
+                  "level": "family",
+                  "id": "p4.bb1",
+                  "label": "BB#1: Required Simplicity Guardrails",
+                  "rating": "C",
+                  "summary": "4 KDs narrowly focused. But 18 production sites, 9 countries, 3 segments = moderate complexity. Customer concentration flag."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb1.tc1",
+                  "label": "TC: Narrowly focused bet?",
+                  "rating": "C+",
+                  "summary": "2 fulcrum + 3 key drivers = manageable. Focus is narrow."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb1.tc1.q1",
+                  "label": "Q1: 2 or less fulcrum drivers and 4 or less key drivers?",
+                  "rating": "B-",
+                  "summary": "Yes — 2 fulcrum (DC moat, M&A execution) + 3 key drivers (FTTH recovery, CEO quality, EPS bridge). Narrowly focused."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb1.tc2",
+                  "label": "TC: Narrow perimeter?",
+                  "rating": "C",
+                  "summary": "3 segments × 9 countries = 27 units. Above ideal but manageable as DC/HE are the focus segments."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb1.tc2.q2",
+                  "label": "Q2: 10 or less geographies x business units?",
+                  "rating": "C",
+                  "summary": "No — 3 segments × 9 countries = 27. Above threshold. Mitigant: DC + HE = 2 focus segments."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb1.tc3",
+                  "label": "TC: No headwinds?",
+                  "rating": "C",
+                  "summary": "FTTH overcapacity and FX headwinds present. DC has no material headwinds."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb1.tc3.q3",
+                  "label": "Q3: Zero value chain headwinds to revenue?",
+                  "rating": "C",
+                  "summary": "No — FTTH overcapacity, LEO satellite competition, FX (SEK strength -9% impact). DC clean."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb1.tc4",
+                  "label": "TC: Narrow range of issues?",
+                  "rating": "C+",
+                  "summary": "Two primary uncertainty axes: DC moat durability and M&A execution quality."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb1.tc4.q4",
+                  "label": "Q4: 2 or less CfCs or problems?",
+                  "rating": "C+",
+                  "summary": "Borderline — 2 fulcrum concerns (DC moat, M&A) + 1 structural issue (FTTH overcapacity) = 3. Slightly above ideal."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb1.tc5",
+                  "label": "TC: Conservative IR?",
+                  "rating": "C+",
+                  "summary": "New CEO appears conservative (reset expectations, then beat Q3-Q4). But only 12 months of data."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb1.tc5.q5",
+                  "label": "Q5: Company confirms conservative guidance?",
+                  "rating": "C+",
+                  "summary": "Pattern suggests conservative-setter behaviour. H1-25 miss followed by Q3-Q4 beats. Need more data points."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb1.tc6",
+                  "label": "TC: Clear investment case?",
+                  "rating": "B-",
+                  "summary": "Clear: DC demand → volume + margin mix shift → EPS step-up. Transmission mechanism legible."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb1.tc6.q6",
+                  "label": "Q6: Clear strategy-to-EPS transmission mechanism?",
+                  "rating": "B-",
+                  "summary": "Yes — DC scaling + mix shift + cost savings → EBITA margin recovery → EPS growth. Quantifiable."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb1.tc7",
+                  "label": "TC: Trackable case drivers?",
+                  "rating": "C+",
+                  "summary": "DC organic growth (quarterly), segment margins, M&A activity are trackable. BEAD less so."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb1.tc7.q7",
+                  "label": "Q7: Clear VC/Co inputs-to-EPS transmission mechanism?",
+                  "rating": "C+",
+                  "summary": "Partially — DC demand trackable via hyperscaler capex announcements. FTTH recovery harder to track (BEAD timing uncertain)."
+                },
+                {
+                  "level": "family",
+                  "id": "p4.bb2",
+                  "label": "BB#2: Required Foundation Quality",
+                  "rating": "C+",
+                  "summary": "ESA confirms: DC services moat narrow but defensible via local execution + installed base stickiness. FTTH remains commoditised."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb2.tc1",
+                  "label": "TC: Supportive Industry Structure",
+                  "rating": "C",
+                  "summary": "Fibre industry fragmented with intense competition from vertical integrators. DC services market more favourable."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc1.a1",
+                  "label": "A: Concentrated existing market structure",
+                  "rating": "D",
+                  "summary": "FTTH market dominated by Corning/Prysmian. HTRO has ~1% US share. Not concentrated in HTRO's favour."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a1.q1",
+                  "label": "Q: This company #1 (or #2)?",
+                  "rating": "D",
+                  "summary": "No — HTRO is a small player in global fibre. Mid-market niche in DC services."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a1.q2",
+                  "label": "Q: Top 5 > 30% share?",
+                  "rating": "C",
+                  "summary": "In DC services mid-market, possibly. In overall fibre, no."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a1.q3",
+                  "label": "Q: Steep market share distribution curve?",
+                  "rating": "D",
+                  "summary": "No — fragmented market. Corning/Prysmian are giants but market is not concentrated."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc1.a2",
+                  "label": "A: Concentrating gravitational pull",
+                  "rating": "C",
+                  "summary": "DC services market fragmenting → consolidation opportunity. FTTH market stable/declining."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a2.q1",
+                  "label": "Q: Stability of share over time?",
+                  "rating": "C",
+                  "summary": "HTRO's share has been volatile — grew via M&A 2021-23, then contracted with FTTH downturn."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a2.q2",
+                  "label": "Q: New entrants' share?",
+                  "rating": "C",
+                  "summary": "DC services seeing new entrants as hyperscaler demand grows. FTTH barriers low."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a2.q3",
+                  "label": "Q: Share consolidates towards largest competitors over time?",
+                  "rating": "C-",
+                  "summary": "Yes for FTTH (Corning/Prysmian gaining). DC services still fragmenting."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a2.q4",
+                  "label": "Q: Share consolidates to most advantaged competitors?",
+                  "rating": "C",
+                  "summary": "In FTTH, yes — vertical integrators winning. In DC services, local service capability matters more."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc1.a3",
+                  "label": "A: Benign competitor attitudes + stability thereof",
+                  "rating": "C",
+                  "summary": "Competitive attitudes moderately benign — Corning/Prysmian focused on Tier-1. Could pivot if Tier-1 slows."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a3.q1",
+                  "label": "Q: Benign-ness?",
+                  "rating": "C",
+                  "summary": "Currently benign — giants focused on hyperscaler direct supply. Risk: pivot to mid-market if Tier-1 slows."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a3.q2",
+                  "label": "Q: MOL instability or stable attitude?",
+                  "rating": "C",
+                  "summary": "Potentially unstable — if hyperscaler capex pauses, Corning/Prysmian may redirect capacity."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a3.q3",
+                  "label": "Q: Shark attack if weakness sensed?",
+                  "rating": "C-",
+                  "summary": "Scale advantage overwhelming in a price war. Corning/Prysmian could undercut HTRO in FTTH."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a3.q4",
+                  "label": "Q: Volume / ROCE prioritisation?",
+                  "rating": "C",
+                  "summary": "FTTH shows volume prioritisation over ROCE (overcapacity dynamics). DC services more ROCE-focused."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc1.a4",
+                  "label": "A: Competitiveness trends",
+                  "rating": "C",
+                  "summary": "DC services competitiveness improving via M&A consolidation. FTTH competitiveness deteriorating."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb2.tc2",
+                  "label": "TC: Supportive Value Chain Dynamics",
+                  "rating": "C",
+                  "summary": "Unfavourable — no vertical integration into glass preform (70% of industry profit pool)."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc2.a1",
+                  "label": "A: Demand side",
+                  "rating": "B-",
+                  "summary": "DC demand structural and growing. FTTH demand cyclical and uncertain."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a1.q1",
+                  "label": "Q: Customer demand?",
+                  "rating": "B-",
+                  "summary": "DC: strong, hyperscaler-driven, multi-year. FTTH: weak, BEAD-dependent. HE: steady, defence-driven."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a1.q2",
+                  "label": "Q: Route to market / intermediaries?",
+                  "rating": "C+",
+                  "summary": "Direct to hyperscalers/enterprises for DC. Through contractors for FTTH. No disintermediation risk."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc2.a2",
+                  "label": "A: Competition",
+                  "rating": "C",
+                  "summary": "Intense from vertical integrators in FTTH. Fragmented in DC services — consolidation opportunity."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a2.q1",
+                  "label": "Q: Existing competition?",
+                  "rating": "C",
+                  "summary": "Corning, Prysmian, Nexans in FTTH. DC services fragmented — smaller local players."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a2.q2",
+                  "label": "Q: Adjacencies entering?",
+                  "rating": "C",
+                  "summary": "Risk: Corning/Prysmian pivoting to DC services. Opportunity: IT integrators lack fibre expertise."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a2.q3",
+                  "label": "Q: Vanilla new entrants?",
+                  "rating": "C+",
+                  "summary": "Low barrier in FTTH distribution. Higher in DC services (requires local expertise + certifications)."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a2.q4",
+                  "label": "Q: Orthogonal / innovative new entrants?",
+                  "rating": "C",
+                  "summary": "LEO satellite (Starlink) is an orthogonal entrant to FTTH. No equivalent in DC services."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a2.q5",
+                  "label": "Q: Substitutes / alternatives?",
+                  "rating": "C",
+                  "summary": "LEO/FWA for FTTH in rural markets. No viable substitute for fibre in DC interconnect."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc2.a3",
+                  "label": "A: Disruption forces",
+                  "rating": "C",
+                  "summary": "LEO satellite is a medium-term disruption risk for FTTH TAM. AI workloads create disruption opportunity for DC."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc2.a4",
+                  "label": "A: Political / regulatory",
+                  "rating": "B-",
+                  "summary": "BEAD is supportive (fibre subsidies). NATO spending supportive for HE. No adverse regulatory risk identified."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a4.q1",
+                  "label": "Q: Regulators?",
+                  "rating": "B-",
+                  "summary": "No adverse regulatory risk. Fibre infrastructure is politically supported across EU and US."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a4.q2",
+                  "label": "Q: Political actors?",
+                  "rating": "B-",
+                  "summary": "BEAD, NATO, EU digital infrastructure investment all supportive. Technology-neutral rules are minor risk."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc2.a5",
+                  "label": "A: Supplier side",
+                  "rating": "C",
+                  "summary": "Not vertically integrated into glass preform. Dependent on third-party glass producers. Supply shortage risk."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb2.tc3",
+                  "label": "TC: Advantaged Business / Widening Moats (SRCA)",
+                  "rating": "C",
+                  "summary": "DC services moat narrow: local execution + installed base stickiness, not IP or scale. FTTH moat absent."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc3.a1",
+                  "label": "A: Strong operational/competitive advantages (MOAT)",
+                  "rating": "C",
+                  "summary": "Narrow and segment-specific. DC: local execution, day-two service contracts. FTTH: no moat."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a1.q1",
+                  "label": "Q: Customer-related moats?",
+                  "rating": "C+",
+                  "summary": "DC: installed base stickiness + day-two service contracts. FTTH: low switching costs."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a1.q2",
+                  "label": "Q: Production-related moats?",
+                  "rating": "C",
+                  "summary": "Limited — manufacturing is not highly differentiated. Microduct technology is not proprietary."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a1.q3",
+                  "label": "Q: Scale advantage moats?",
+                  "rating": "D",
+                  "summary": "No scale advantage — ~1% market share. Corning/Prysmian have overwhelming scale in FTTH."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a1.q4",
+                  "label": "Q: Regulatory/political moats?",
+                  "rating": "C",
+                  "summary": "None identified. Fibre market is open."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a1.q5",
+                  "label": "Q: Culture/knowledge moats?",
+                  "rating": "C+",
+                  "summary": "Local service expertise in DC installation is a knowledge moat. Decentralised model preserves entrepreneurial culture."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a1.q6",
+                  "label": "Q: High relative scale (to competitors)?",
+                  "rating": "D",
+                  "summary": "No — small relative to Corning/Prysmian. Mid-market player in DC services."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a1.q7",
+                  "label": "Q: Large realistic TAM?",
+                  "rating": "B-",
+                  "summary": "DC services TAM growing at ~25% CAGR to $3bn by 2028. Large enough for HTRO's growth targets."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc3.a2",
+                  "label": "A: Strong operational outputs (OPERATE)",
+                  "rating": "C+",
+                  "summary": "DC segment operational outputs strong: 15.3% EBITA margin, asset-light, 235% cash conversion Q4-25."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a2.q1",
+                  "label": "Q: High SCU?",
+                  "rating": "C",
+                  "summary": "Mixed — DC high, FTTH low. Blended group SCU below peers."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a2.q2",
+                  "label": "Q: Leading or non-inferior RSCU?",
+                  "rating": "C",
+                  "summary": "DC services competitive. FTTH inferior to vertically integrated peers."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a2.q3",
+                  "label": "Q: High, utilised pricing power?",
+                  "rating": "C",
+                  "summary": "Limited pricing power in FTTH (commodity). DC services have moderate pricing power (service differentiation)."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a2.q4",
+                  "label": "Q: Scale economies shared?",
+                  "rating": "C",
+                  "summary": "Not applicable at current scale. Would emerge if M&A consolidation succeeds."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc3.a3",
+                  "label": "A: Strong financial outputs (GENERATE)",
+                  "rating": "C",
+                  "summary": "DC financial outputs strong. Group-level suppressed by FTTH drag."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a3.q1",
+                  "label": "Q: 12-20% EPS growth?",
+                  "rating": "C+",
+                  "summary": "Modal case achieves 20%+ CAGR. But from a depressed base — not proven sustainable."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a3.q2",
+                  "label": "Q: Scope to deploy at high RONIC?",
+                  "rating": "C+",
+                  "summary": "M&A pipeline at 5-7x EBITDA implies strong RONIC on acquisitions. Organic DC growth is capital-light."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a3.q3",
+                  "label": "Q: High post-tax RONIC (25-30%+)?",
+                  "rating": "C",
+                  "summary": "DC segment likely yes. Group blended RONIC depressed by FTTH. Need financial model."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a3.q4",
+                  "label": "Q: High NI to FCF conversion (80%)?",
+                  "rating": "B",
+                  "summary": "Yes — Q4-25 cash conversion 235%. Low capex (1% of sales). Strong WC management."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a3.q5",
+                  "label": "Q: Post-tax ROCE of 15%+?",
+                  "rating": "C",
+                  "summary": "Not at current margins. Would achieve at 12% EBITA target. Goodwill-heavy balance sheet depresses ROCE."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a3.q6",
+                  "label": "Q: Post-tax ROTC of 30%+?",
+                  "rating": "C",
+                  "summary": "Unlikely given current margin profile and goodwill base."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a3.q7",
+                  "label": "Q: High gross margins?",
+                  "rating": "C",
+                  "summary": "38.5% gross margin (2025). Below peers (Prysmian 46%, Nexans 42%). Compression from 42% peak."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a3.q8",
+                  "label": "Q: Solid EBIT margins?",
+                  "rating": "C-",
+                  "summary": "7.6% EBIT margin (2025). Below 20% threshold. Target 12% EBITA by 2028. Work to do."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a3.q9",
+                  "label": "Q: Genuine fixed cost operating leverage?",
+                  "rating": "C",
+                  "summary": "Limited in services model. Leverage comes from mix shift, not fixed cost absorption."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a3.q10",
+                  "label": "Q: Low tax rate?",
+                  "rating": "C+",
+                  "summary": "Swedish corporate tax 20.6%. Reasonable. No unusual tax leakage identified."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc3.a4",
+                  "label": "A: Gets stronger as it gets bigger (Gravitational pull)",
+                  "rating": "C",
+                  "summary": "M&A consolidation in DC services could create scale advantages over time. Not evident yet."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a4.q1",
+                  "label": "Q: Mechanical forces drive SRCA improvement vs peers?",
+                  "rating": "C",
+                  "summary": "Potential via M&A consolidation — larger installed base creates service stickiness. Not proven."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a4.q2",
+                  "label": "Q: Mechanical forces drive improving financial outputs vs peers?",
+                  "rating": "C",
+                  "summary": "Mix shift mechanically improves group financials as DC grows faster than FTTH."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc3.a5",
+                  "label": "A: Plausible scope for mid-term improvement (SCOPE)",
+                  "rating": "C+",
+                  "summary": "Clear scope: DC scaling + FTTH cost programme + M&A. Three independent improvement paths."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a5.q1",
+                  "label": "Q: Peer precedents?",
+                  "rating": "C",
+                  "summary": "No direct peer precedent for FTTH-to-DC services pivot at this scale."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a5.q2",
+                  "label": "Q: Big savings/improvements in a few areas?",
+                  "rating": "C+",
+                  "summary": "SEK 120m cost programme in Fibre Solutions. DC margin expansion via mix shift."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a5.q3",
+                  "label": "Q: Lots of little savings in many areas?",
+                  "rating": "C",
+                  "summary": "Decentralised M&A model creates many small improvement opportunities. Not yet demonstrated."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb2.tc4",
+                  "label": "TC: Great Operator / Allocator",
+                  "rating": "C+",
+                  "summary": "New CEO — early signs positive but untested in fibre industry stress. M&A background relevant."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc4.a1",
+                  "label": "A: Right direction",
+                  "rating": "C+",
+                  "summary": "Strategic pivot to DC/HE is directionally correct. Cost programme in Fibre Solutions appropriate."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a1.q1",
+                  "label": "Q: Big ambition/vision?",
+                  "rating": "B-",
+                  "summary": "SEK 11bn revenue target by 2028 with 12% EBITA margin. Ambitious relative to current SEK 7.5bn / 7.2%."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a1.q2",
+                  "label": "Q: Great, smart strategy?",
+                  "rating": "C+",
+                  "summary": "DC pivot is smart. Question is execution capability, not strategic direction."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc4.a2",
+                  "label": "A: Right resources",
+                  "rating": "C",
+                  "summary": "CEO 12 months in. Board + mgmt own ~13%. Team untested in new configuration."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a2.q1",
+                  "label": "Q: Great CEO?",
+                  "rating": "C+",
+                  "summary": "Fröberg has relevant background (Ahlsell, 20+ deals) but untested in fibre industry."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a2.q2",
+                  "label": "Q: Built great leadership team?",
+                  "rating": "C",
+                  "summary": "Too early — Martin Åberg (DC) is key. Team stability post-reorganisation TBD."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a2.q3",
+                  "label": "Q: Well-resourced/well-invested?",
+                  "rating": "C",
+                  "summary": "DC segment well-invested (Communication Zone acquisition). Fibre Solutions needs restructuring."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a2.q4",
+                  "label": "Q: Holistic culture + alignment?",
+                  "rating": "C",
+                  "summary": "Decentralised model — culture alignment across 9 countries untested under Fröberg."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a2.q5",
+                  "label": "Q: Conservative guidance?",
+                  "rating": "C+",
+                  "summary": "Pattern suggests conservative-setter — Q3-Q4 beats after H1 miss reset. Need more data."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a2.q6",
+                  "label": "Q: Clear communication?",
+                  "rating": "C",
+                  "summary": "Improving — 3-segment reporting adds clarity. Still limited IR engagement depth."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc4.a3",
+                  "label": "A: Right record / action / behaviour",
+                  "rating": "C",
+                  "summary": "12 months of data only. One capital destruction event (Weterings). Q3-Q4 beats are positive."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a3.q1",
+                  "label": "Q: High RONIC capital allocation?",
+                  "rating": "C",
+                  "summary": "JOWO acquisition at 4.7x EBITDA is good. Weterings closure is a flag. Mixed evidence."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a3.q2",
+                  "label": "Q: Acts not just talks?",
+                  "rating": "C+",
+                  "summary": "Cost programme executing. Segment reorganisation done. M&A activity restarting."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a3.q3",
+                  "label": "Q: Track record of delivery?",
+                  "rating": "C",
+                  "summary": "Too early — 12 months. Q3-Q4 beats are positive data points."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a3.q4",
+                  "label": "Q: Outlier standards?",
+                  "rating": "C",
+                  "summary": "Not yet demonstrated. Need more data."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a3.q5",
+                  "label": "Q: Shareholders first?",
+                  "rating": "C",
+                  "summary": "Zero dividend policy — reinvesting. Board/mgmt own ~13%. Aligned but not aggressive."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a3.q6",
+                  "label": "Q: Dynamic repurchaser?",
+                  "rating": "D",
+                  "summary": "No buyback programme. Zero dividend. All capital allocated to M&A + organic growth."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a3.q7",
+                  "label": "Q: Prudent governance?",
+                  "rating": "C+",
+                  "summary": "No red flags. Erik Selin related-party lease is immaterial (SEK 7m/year). Standard governance."
+                },
+                {
+                  "level": "family",
+                  "id": "p4.bb3",
+                  "label": "BB#3: Fit for Market Paradigm",
+                  "rating": "B-",
+                  "summary": "AI/DC infrastructure paradigm-aligned. Defence fits risk-off. Exit discipline via 10 ACHs."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb3.tc1",
+                  "label": "TC: Exit discipline when negatives manifest?",
+                  "rating": "B-",
+                  "summary": "10 HTRO-specific ACH invalidation scenarios armed. Exit triggers clearly defined."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb3.tc1.q1",
+                  "label": "Q1: Market cycle — downturn?",
+                  "rating": "B-",
+                  "summary": "DC demand structural, not cyclical. But hyperscaler capex could exhibit cycle. Exit: DC organic <+10% for 2 consecutive Q."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb3.tc1.q2",
+                  "label": "Q2: AI disruption?",
+                  "rating": "B",
+                  "summary": "HTRO benefits from AI — DC fibre is the physical layer. No disruption risk from AI; it's the enabler."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb3.tc1.q3",
+                  "label": "Q3: Input cost inflation (Iran)?",
+                  "rating": "B-",
+                  "summary": "No Iran/Middle East exposure. HE segment benefits from defence escalation. Tariff risk limited (<5%)."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb3.tc1.q4",
+                  "label": "Q4: No overlap with 10x general invalidating ACHs?",
+                  "rating": "B-",
+                  "summary": "No overlap identified at current assessment. 10 HTRO-specific ACHs armed."
+                },
+                {
+                  "level": "family",
+                  "id": "p4.bb4",
+                  "label": "BB#4: Strenuously Seek-to-Avoid Constraints",
+                  "rating": "C",
+                  "summary": "YELLOW flag. FTTH boom-bust risk. Bear case SEK 12-15 (40-50% downside). Multiple partly industry-driven."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb4.tc1",
+                  "label": "TC: No fundamental SHMLP risks?",
+                  "rating": "C",
+                  "summary": "DC boom-bust is a material risk. Bear case downside 40-50%."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb4.tc1.q1",
+                  "label": "Q: What is downside to trough SP?",
+                  "rating": "C-",
+                  "summary": "Redeye bear case SEK 12-15. 40-50% downside from current ~SEK 28."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb4.tc1.q2",
+                  "label": "Q: Can thesis survive a -30% drawdown?",
+                  "rating": "C",
+                  "summary": "At starter size (1.0-1.5%), a -30% drawdown is manageable. Would require ACH re-assessment."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb4.tc1.q3",
+                  "label": "Q: What invalidates at trough?",
+                  "rating": "C",
+                  "summary": "DC boom-bust confirmation + FTTH permanent impairment. 10 ACH scenarios cover this."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb4.tc2",
+                  "label": "TC: No wide skew in outcomes?",
+                  "rating": "C",
+                  "summary": "Wide skew: bull SEK 55-70 vs bear SEK 12-15. 4-5x range."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb4.tc2.q1",
+                  "label": "Q: Range of bull vs bear case EPS >50%?",
+                  "rating": "C-",
+                  "summary": "Yes — very wide. Bull 2028 EPS SEK 3.30-3.60 vs bear SEK 0.80-1.00. >200% range."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb4.tc2.q2",
+                  "label": "Q: Is case predictability high or low?",
+                  "rating": "C",
+                  "summary": "Low at group level — DC accelerating but FTTH uncertain. Two segments pulling opposite directions."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb4.tc2.q3",
+                  "label": "Q: How many independent variables?",
+                  "rating": "C",
+                  "summary": "5+ major variables: DC growth rate, M&A execution, FTTH recovery, BEAD timing, competitive dynamics."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb4.tc3",
+                  "label": "TC: No large downside to trough multiple?",
+                  "rating": "C",
+                  "summary": "FTTH peers have traded at 6-8x trough EBITDA. Current 12.5x P/E has downside to 8-10x."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb4.tc3.q1",
+                  "label": "Q: What is trough EV/EBIT for this sector?",
+                  "rating": "C",
+                  "summary": "Fibre peers: 8-10x trough EV/EBITDA. DC services peers haven't been through a trough."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb4.tc3.q2",
+                  "label": "Q: How far is current multiple from trough?",
+                  "rating": "C",
+                  "summary": "Current ~12.5x P/E. Trough could be 8-10x. 20-35% multiple downside risk."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb4.tc3.q3",
+                  "label": "Q: What drove the last trough?",
+                  "rating": "C+",
+                  "summary": "FTTH overcapacity + interest rate impact on housing. 2023-24 trough well-documented."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb4.tc4",
+                  "label": "TC: Multiple more company than industry?",
+                  "rating": "C",
+                  "summary": "~50/50 company vs industry. DC mix shift is company-driven; FTTH portion industry-driven."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb4.tc4.q1",
+                  "label": "Q: Correlation of stock multiple to sector multiple?",
+                  "rating": "C",
+                  "summary": "High correlation to Nordic mid-cap industrials and fibre peers."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb4.tc4.q2",
+                  "label": "Q: What % of SP move is company vs. sector driven?",
+                  "rating": "C",
+                  "summary": "Estimated 50/50. DC pivot creates company-specific catalyst; FTTH ties to sector."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb4.tc4.q3",
+                  "label": "Q: Does valuation hold if sector de-rates?",
+                  "rating": "C",
+                  "summary": "Partially — DC business should hold but FTTH would de-rate with sector."
+                },
+                {
+                  "level": "family",
+                  "id": "p4.bb5",
+                  "label": "BB#5: Small Size Constraints",
+                  "rating": "C",
+                  "summary": "Market cap SEK 5.8bn (~EUR 0.5bn). Below ideal but above minimum. Liquidity adequate."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb5.tc1",
+                  "label": "TC: Sufficient market cap?",
+                  "rating": "C+",
+                  "summary": "SEK 5.8bn = ~EUR 0.5bn. Below sweet spot ($5-50bn) but not disqualifying."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb5.tc1.q1",
+                  "label": "Q: $10m ADV minimum met?",
+                  "rating": "B-",
+                  "summary": "Yes — 1.7m shares/day × SEK 28 = ~SEK 48m/day (~$4.6m). Close to threshold."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb5.tc1.q2",
+                  "label": "Q: $1.5bn market cap minimum met?",
+                  "rating": "D",
+                  "summary": "No — SEK 5.8bn = ~$560m. Below $1.5bn minimum. Size constraint flag."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb5.tc1.q3",
+                  "label": "Q: Can position be built without moving the price?",
+                  "rating": "C",
+                  "summary": "At 1.0-1.5% portfolio, yes. At target size (3%), may need multi-day accumulation."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb5.tc2",
+                  "label": "TC: Sufficient liquidity?",
+                  "rating": "C",
+                  "summary": "Adequate for starter position. Constrained for larger sizing."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb5.tc2.q1",
+                  "label": "Q: Bid-ask spread acceptable (<50bps)?",
+                  "rating": "C+",
+                  "summary": "Nasdaq Stockholm — spread typically <50bps for mid-cap names."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb5.tc2.q2",
+                  "label": "Q: Average daily volume supports 5-day entry/exit?",
+                  "rating": "C+",
+                  "summary": "1.7m shares/day. At 1.5% portfolio, ~5-day entry feasible."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb5.tc2.q3",
+                  "label": "Q: Float sufficient (>50% free float)?",
+                  "rating": "C+",
+                  "summary": "No controlling shareholder. Handelsbanken Fonder 9.3% is largest. Estimated ~70% free float."
+                },
+                {
+                  "level": "family",
+                  "id": "p4.bb6",
+                  "label": "BB#6: Invalidating Constraints",
+                  "rating": "C+",
+                  "summary": "No immediate invalidation flags. DC performance non-mediocre. FTTH mediocre but being restructured."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb6.tc1",
+                  "label": "TC: No slowing of core engine?",
+                  "rating": "C+",
+                  "summary": "DC engine accelerating (+62% Q4 organic). Fibre Solutions engine declining but being restructured."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc1.q1",
+                  "label": "Q: Is core business momentum intact?",
+                  "rating": "C+",
+                  "summary": "DC momentum strong. Group momentum mixed due to FTTH drag."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc1.q2",
+                  "label": "Q: Any degradation in unit economics?",
+                  "rating": "C",
+                  "summary": "FTTH unit economics deteriorating (margin compression). DC unit economics improving."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb6.tc2",
+                  "label": "TC: No mediocre CEO/weird choices?",
+                  "rating": "C+",
+                  "summary": "No weird choices. Weterings closure is a flag but explicable. Strategic direction coherent."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc2.q1",
+                  "label": "Q: Any questionable strategic decisions?",
+                  "rating": "C",
+                  "summary": "Weterings closure (acquired 2021 for EUR 5.6m, closed 2025). Capital destruction but small."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc2.q2",
+                  "label": "Q: CEO track record consistent?",
+                  "rating": "C+",
+                  "summary": "12 months only. Conservative reset + Q3-Q4 beats. Consistent so far but insufficient data."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb6.tc3",
+                  "label": "TC: No big 'Hmmms'?",
+                  "rating": "C+",
+                  "summary": "DC boom-bust question is the 'Hmmm'. Not a red flag, but requires monitoring."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc3.q1",
+                  "label": "Q: Any gut-level discomfort?",
+                  "rating": "C",
+                  "summary": "DC boom-bust parallel with FTTH history creates legitimate discomfort."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc3.q2",
+                  "label": "Q: Anything that doesn't add up?",
+                  "rating": "C+",
+                  "summary": "Non-GAAP adjustments increasing (SEK 202m Q3, SEK 97m Q4). Explicable but worth monitoring."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb6.tc4",
+                  "label": "TC: No red flags (2+ Fs)?",
+                  "rating": "B-",
+                  "summary": "1 F (relative scale). No cluster of F ratings."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc4.q1",
+                  "label": "Q: Count of F-rated attributes?",
+                  "rating": "B-",
+                  "summary": "Zero F-rated at pillar/family level. Some D/F at individual question level (scale, market share)."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc4.q2",
+                  "label": "Q: Are any F-ratings in critical areas?",
+                  "rating": "B-",
+                  "summary": "No F-ratings in critical areas. D on relative scale is structural, not thesis-breaking."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb6.tc5",
+                  "label": "TC: No mediocrity (8+ Ds)?",
+                  "rating": "C+",
+                  "summary": "Several C ratings but limited D cluster. Not mediocre — DC segment distinctly non-mediocre."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc5.q1",
+                  "label": "Q: Count of D-rated attributes?",
+                  "rating": "C+",
+                  "summary": "~4-5 D ratings (scale, market share, concentration). Below 8 threshold."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc5.q2",
+                  "label": "Q: Pattern of weakness or isolated?",
+                  "rating": "C+",
+                  "summary": "Isolated — concentrated in structural scale disadvantage, not operational weakness."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb6.tc6",
+                  "label": "TC: No recent earnings cuts?",
+                  "rating": "C+",
+                  "summary": "Post-Q4 beat, revisions turning positive. No recent cuts."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc6.q1",
+                  "label": "Q: Any SS estimate cuts in L3M?",
+                  "rating": "B-",
+                  "summary": "No — post-Q4 beat triggered upgrade (DNB Carnegie). Revisions positive."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc6.q2",
+                  "label": "Q: Direction of consensus revisions?",
+                  "rating": "C+",
+                  "summary": "Turning positive. 2 Buy / 1 Hold / 1 Sell. DNB Carnegie TP upgrade SEK 38→42.50."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb6.tc7",
+                  "label": "TC: No peer problems?",
+                  "rating": "C+",
+                  "summary": "Corning seeing FTTH inflection. Prysmian strong. No peer profit warnings in DC services."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc7.q1",
+                  "label": "Q: Are sector peers showing deterioration?",
+                  "rating": "B-",
+                  "summary": "No — Corning seeing FTTH inflection, Prysmian reporting strong cable demand."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc7.q2",
+                  "label": "Q: Any peer profit warnings in L6M?",
+                  "rating": "B-",
+                  "summary": "No peer profit warnings in DC services or cable sector."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb6.tc8",
+                  "label": "TC: No negative lessons overlap?",
+                  "rating": "C",
+                  "summary": "FTTH boom-bust pattern overlaps with known cyclical traps. DC services is new — no historical parallel."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc8.q1",
+                  "label": "Q: Overlap with past losing patterns?",
+                  "rating": "C",
+                  "summary": "FTTH cycle mirrors classic boom-bust cyclical trap. DC services is genuinely different (services vs product)."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc8.q2",
+                  "label": "Q: Similarity to previously failed investments?",
+                  "rating": "C+",
+                  "summary": "No direct parallel. Check Fasadgruppen/XVIVO for Nordic mid-cap liquidity lessons."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb6.tc9",
+                  "label": "TC: No false friend setup?",
+                  "rating": "C+",
+                  "summary": "No false-friend overlap detected. Demand-Driven EPSU/EPT is a valid setup classification."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc9.q1",
+                  "label": "Q: Does case fit any unacceptable setup profile?",
+                  "rating": "B-",
+                  "summary": "No — Demand-Driven EPSU/EPT is an approved setup type."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc9.q2",
+                  "label": "Q: Is apparent quality actually a complexity trap?",
+                  "rating": "C+",
+                  "summary": "Risk — 3 segments, 9 countries, M&A-dependent growth could be a complexity trap. Monitor."
+                },
+                {
+                  "level": "family",
+                  "id": "p4.bb7",
+                  "label": "BB#7: Past Trend / Momentum Constraints",
+                  "rating": "C+",
+                  "summary": "Improving — post-trough, MAs turning up. SS revisions positive. Peers inflecting."
+                },
+                {
+                  "level": "family",
+                  "id": "p4.bb8",
+                  "label": "BB#8: Nice-to-Have Attributes",
+                  "rating": "C",
+                  "summary": "No dividend. No buyback. BEAD acceleration and edge DC proliferation are positive optionality."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb8.tc1",
+                  "label": "TC: Additional upside?",
+                  "rating": "C+",
+                  "summary": "BEAD acceleration, edge DC proliferation, defence budget escalation. Multiple re-rating on mix shift."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb8.tc1.q1",
+                  "label": "Q: Cash return yield >3%?",
+                  "rating": "F",
+                  "summary": "No — zero dividend policy. All cash reinvested."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb8.tc1.q2",
+                  "label": "Q: Progressive dividend policy?",
+                  "rating": "F",
+                  "summary": "No dividend policy. Reinvesting in growth + M&A."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb8.tc1.q3",
+                  "label": "Q: Share buyback programme active?",
+                  "rating": "F",
+                  "summary": "No buyback programme."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb8.tc2",
+                  "label": "TC: Self-righting behaviour ATM?",
+                  "rating": "C+",
+                  "summary": "Cost programme demonstrates self-righting. Cash conversion exceptional (235% Q4-25)."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb8.tc2.q1",
+                  "label": "Q: Management has significant skin in game (>5%)?",
+                  "rating": "B-",
+                  "summary": "Board + mgmt own ~13%. Above 5% threshold. Aligned."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb8.tc2.q2",
+                  "label": "Q: Company featured in quality screens?",
+                  "rating": "C",
+                  "summary": "Not currently — margins too low. Would appear if EBITA reaches 12% target."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb8.tc2.q3",
+                  "label": "Q: Institutional ownership increasing?",
+                  "rating": "C",
+                  "summary": "Stable — Handelsbanken Fonder 9.3%, Accendo Capital 5.9%. No major inflows detected."
+                },
+                {
+                  "level": "pillar",
+                  "id": "p5",
+                  "label": "P5: Sell-Side Momentum",
+                  "rating": "C+",
+                  "summary": "2 Buy / 1 Hold / 1 Sell. Revisions turning positive post-Q4 beat. Limited coverage depth."
+                },
+                {
+                  "level": "metric",
+                  "id": "p5.eps_change",
+                  "label": "EPS revisions",
+                  "rating": "C+",
+                  "summary": "L1M +2-3% · L3M +5-7% · L6M flat (limited data)"
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.eps_change.l1m",
+                  "label": "L1M",
+                  "rating": "C+",
+                  "summary": "Post-Q4 beat, modest positive revisions."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.eps_change.l3m",
+                  "label": "L3M",
+                  "rating": "C+",
+                  "summary": "Turning positive — recovery from H1-25 miss."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.eps_change.l6m",
+                  "label": "L6M",
+                  "rating": "C",
+                  "summary": "Flat to slightly negative — H1-25 miss still in window."
+                },
+                {
+                  "level": "metric",
+                  "id": "p5.ebitda_change",
+                  "label": "EBITDA revisions",
+                  "rating": "C+",
+                  "summary": "L1M positive · L3M positive · L6M mixed"
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.ebitda_change.l1m",
+                  "label": "L1M",
+                  "rating": "C+",
+                  "summary": "Post-Q4 EBITA beat +10.8% driving positive revisions."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.ebitda_change.l3m",
+                  "label": "L3M",
+                  "rating": "C+",
+                  "summary": "Positive trend from Q3-Q4 beats."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.ebitda_change.l6m",
+                  "label": "L6M",
+                  "rating": "C",
+                  "summary": "Mixed — H1-25 negative, H2-25 positive."
+                },
+                {
+                  "level": "metric",
+                  "id": "p5.revenue_change",
+                  "label": "Revenue revisions",
+                  "rating": "C",
+                  "summary": "L1M flat · L3M slightly positive · L6M negative"
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.revenue_change.l1m",
+                  "label": "L1M",
+                  "rating": "C",
+                  "summary": "Revenue revisions muted — DC strong but FTTH offsetting."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.revenue_change.l3m",
+                  "label": "L3M",
+                  "rating": "C+",
+                  "summary": "Slightly positive — DC contribution lifting group."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.revenue_change.l6m",
+                  "label": "L6M",
+                  "rating": "C",
+                  "summary": "Negative — FTTH weakness dominated L6M window."
+                },
+                {
+                  "level": "metric",
+                  "id": "p5.price_target_change",
+                  "label": "Price target revisions",
+                  "rating": "C+",
+                  "summary": "L1M DNB Carnegie upgrade SEK 38→42.50 · L3M positive"
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.price_target_change.l1m",
+                  "label": "L1M",
+                  "rating": "B-",
+                  "summary": "DNB Carnegie TP upgrade SEK 38→42.50 post-Q4 beat."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.price_target_change.l3m",
+                  "label": "L3M",
+                  "rating": "C+",
+                  "summary": "Positive — 1 upgrade, 0 downgrades in L3M."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.price_target_change.l6m",
+                  "label": "L6M",
+                  "rating": "C",
+                  "summary": "Mixed — some downgrades during H1-25 weakness."
+                },
+                {
+                  "level": "metric",
+                  "id": "p5.pct_buy_change",
+                  "label": "% Buy change",
+                  "rating": "C",
+                  "summary": "Stable — 2 Buy / 1 Hold / 1 Sell. Limited coverage."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.pct_buy_change.l1m",
+                  "label": "L1M",
+                  "rating": "C",
+                  "summary": "No rating changes in L1M."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.pct_buy_change.l3m",
+                  "label": "L3M",
+                  "rating": "C",
+                  "summary": "Stable — limited coverage makes % changes noisy."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.pct_buy_change.l6m",
+                  "label": "L6M",
+                  "rating": "C",
+                  "summary": "Stable — Kepler Hold and Danske Sell are potential converts if Q1-26 DC >30%."
+                },
+                {
+                  "level": "pillar",
+                  "id": "p6",
+                  "label": "P6: Valuation",
+                  "rating": "B-",
+                  "summary": "12.5x forward P/E vs DC-services peers 15-18x. 35% discount. If mix shift delivers, re-rate to 18-20x."
+                },
+                {
+                  "level": "valuation",
+                  "id": "p6.fwd_pe",
+                  "label": "2YF P/E — absolute",
+                  "rating": "B-",
+                  "summary": "~12.5x on FY26E. Attractive for mix-shift story."
+                },
+                {
+                  "level": "valuation",
+                  "id": "p6.hist_range",
+                  "label": "2YF P/E vs own history",
+                  "rating": "C+",
+                  "summary": "~30th percentile of 5-year range. Near historical lows (reflecting FTTH trough)."
+                },
+                {
+                  "level": "valuation",
+                  "id": "p6.peer",
+                  "label": "2YF P/E vs peers",
+                  "rating": "B-",
+                  "summary": "35% discount to DC-services peer group (15-18x). Discount reflects FTTH drag + size."
+                }
+              ],
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "C.II.1",
+          "title": "Technical Strength (Pillar 1)",
+          "heading_level": 3,
+          "target_pages": 1,
+          "blocks": [
+            {
+              "type": "bluf",
+              "text": "_Post-trough recovery underway; MAs turning up but Stage 2 not confirmed. Technical setup is forming, not mature._"
+            },
+            {
+              "type": "pillar_block",
+              "pillar_id": "p1",
+              "label": "Technical Strength",
+              "rating": "C+",
+              "blocks": [
+                {
+                  "type": "bluf",
+                  "text": "SP ~SEK 28, well below SEK 65+ peak. Post-trough base forming on Q4-25 beat volume."
+                },
+                {
+                  "type": "family_block",
+                  "family_id": "MN",
+                  "label": "Minervini Dimensions",
+                  "rating": "C",
+                  "blocks": [
+                    {
+                      "type": "bluf",
+                      "text": "Estimated 4-5 / 9 PASS. Key fails: 200D MA trend not confirmed, 150D/200D golden cross missing, RS Rank likely below 70."
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "**PASS (5):** Price > 200D MA, Price > 150D MA, 50D > 150D MA, Price > 50D MA, Price > 30% above 52W low, Price within 25% of 52W high.",
+                          "iaja": "I"
+                        },
+                        {
+                          "text": "**FAIL (3-4):** 200D MA not yet trending up (flattening only), 150D not above 200D (golden cross pending), RS Rank likely below 70.",
+                          "iaja": "I"
+                        },
+                        {
+                          "text": "**Need FactSet confirmation** for precise MA levels and RS Rank.",
+                          "iaja": "A"
+                        }
+                      ],
+                      "ratings": []
+                    }
+                  ]
+                }
+              ],
+              "ratings": []
+            },
+            {
+              "type": "summary",
+              "text": "_Technical picture is constructive but not confirmed. Stage 1→2 transition is the key technical catalyst. Monitor MAs for golden cross confirmation._",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "C.II.2",
+          "title": "Fundamental Investment Case (P3+P4)",
+          "heading_level": 3,
+          "target_pages": 4,
+          "blocks": [
+            {
+              "type": "bluf",
+              "text": "_DC segment is the thesis. Mix shift from FTTH (6.4% margin) to DC (15.3% margin) is the EPS engine. Change forces confirmed; moat question outstanding._"
+            },
+            {
+              "type": "pillar_block",
+              "pillar_id": "p3",
+              "label": "Fundamental Change",
+              "rating": "C+ (upper)",
+              "blocks": [
+                {
+                  "type": "bluf",
+                  "text": "Change forces confirmed and large. DC organic +37% FY25, +62% Q4. Setup: Demand-Driven EPSU/EPT plausibly present."
+                },
+                {
+                  "type": "family_block",
+                  "family_id": "IC#1",
+                  "label": "IC#1: Required Case OUTPUTS",
+                  "rating": "C+",
+                  "blocks": [
+                    {
+                      "type": "bluf",
+                      "text": "EPS path plausibly present. Triple ratchet: volume (DC scaling) + margin (mix shift) + multiple (re-rate from 12.5x to 18-20x)."
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "iaja": "J",
+                          "signpost": {
+                            "level": "cq",
+                            "ref": "IC#1.CQ1",
+                            "label": "Three-year triple ratchet step-up",
+                            "style": "prefix"
+                          },
+                          "text": "**IC#1 CQ1 — Three-year triple ratchet step-up:** Plausibly present. DC organic growth trajectory (39% Q3, 62% Q4 2025) combined with HE +11% and Fibre Solutions cost programme creates a credible path to 20%+ EPS CAGR over 2025-28.",
+                          "sub": [
+                            {
+                              "iaja": "A",
+                              "text": "VF modal case: FY28 EPS SEK 3.30-3.60 vs FY25 ~SEK 1.62. Triple ratchet requires sustained DC scaling + mix shift + cost savings."
+                            },
+                            {
+                              "iaja": "I",
+                              "text": "Management 2028 targets: SEK 11bn revenue, 12% EBITA margin. SS consensus lower at SEK 9.3bn / 9.9% margin — gap is M&A-dependent."
+                            }
+                          ]
+                        },
+                        {
+                          "iaja": "J",
+                          "signpost": {
+                            "level": "cq",
+                            "ref": "IC#1.CQ2",
+                            "label": "12-20% EPS growth pa",
+                            "style": "prefix"
+                          },
+                          "text": "**IC#1 CQ2 — 12-20% EPS growth pa:** Achievable on modal case. SS consensus implies ~20-25% EPS CAGR 2025-28. VF case sits 12-15% above SS. GARP sweet spot.",
+                          "sub": [
+                            {
+                              "iaja": "A",
+                              "text": "Growth mix: ~60% organic DC/HE, ~25% M&A, ~15% cost savings. EPS acceleration is back-loaded (mix shift compounds)."
+                            }
+                          ]
+                        },
+                        {
+                          "iaja": "J",
+                          "signpost": {
+                            "level": "cq",
+                            "ref": "IC#1.CQ4",
+                            "label": "Fit with required setups",
+                            "style": "prefix"
+                          },
+                          "text": "**IC#1 CQ4 — Fit with required setups:** Demand-Driven EPSU/EPT is the primary fit. DC hyperscaler buildout = large, identifiable exogenous demand shift. Secondary: Corporate Change (CEO + restructuring). Both setups are legible."
+                        },
+                        {
+                          "iaja": "J",
+                          "signpost": {
+                            "level": "cq",
+                            "ref": "IC#1.CQ9",
+                            "label": "Modal case 18M EPS > guidance > SS",
+                            "style": "prefix"
+                          },
+                          "text": "**IC#1 CQ9 — EPS upgrade path:** Probable. VF modal EPS sits 12-15% above SS consensus. If Q1-Q2 2026 DC organic sustains >25%, probability of positive EPS revision is 60-70%.",
+                          "sub": [
+                            {
+                              "iaja": "A",
+                              "text": "Q4-25 beat: EBITA +10.8% vs consensus, revenue +8.6%. Pattern suggests sandbagging after H1-25 miss — new CEO resetting expectations conservatively."
+                            }
+                          ]
+                        },
+                        {
+                          "iaja": "J",
+                          "signpost": {
+                            "level": "cq",
+                            "ref": "IC#1.CQ11",
+                            "label": "Company-driven vs exogenous multiple",
+                            "style": "prefix"
+                          },
+                          "text": "**IC#1 CQ11 — Multiple bankability:** Mixed. DC services command 15-18x; legacy FTTH trades at 10-12x. Blended multiple is hostage to mix shift pace. Multiple is partly company-driven (services pivot) but FTTH portion remains exogenously gated (interest rates, BEAD)."
+                        }
+                      ],
+                      "ratings": []
+                    }
+                  ]
+                },
+                {
+                  "type": "family_block",
+                  "family_id": "IC#2",
+                  "label": "IC#2: Required Case INPUTS",
+                  "rating": "B-",
+                  "blocks": [
+                    {
+                      "type": "bluf",
+                      "text": "Change forces are confirmed and large: hyperscaler AI capex, NATO defence spending, BEAD subsidies. Duration and defensibility are the questions."
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "iaja": "J",
+                          "signpost": {
+                            "level": "cq",
+                            "ref": "IC#2.CQ1",
+                            "label": "External change forces",
+                            "style": "prefix"
+                          },
+                          "text": "**IC#2 CQ1 — External change forces:** Strong. (i) Hyperscaler AI infrastructure buildout — Corning $6bn Meta contract through 2030 is a proxy for multi-year demand. (ii) NATO 2% GDP commitment driving defence cable/connectivity spend. (iii) BEAD $42.5bn US broadband programme, 74% allocated to fibre.",
+                          "sub": [
+                            {
+                              "iaja": "A",
+                              "text": "AI workloads projected to add 150-200m fibre-km to global baseline demand. DCI market growing at ~25% CAGR to $3bn by 2028."
+                            },
+                            {
+                              "iaja": "I",
+                              "text": "Risk: technology-neutral BEAD rules allow LEO/FWA competition. Starlink Gen 3 satellites at 1 Tbit/s capacity could narrow fibre performance gap."
+                            }
+                          ]
+                        },
+                        {
+                          "iaja": "J",
+                          "signpost": {
+                            "level": "cq",
+                            "ref": "IC#2.CQ2",
+                            "label": "Internal change forces",
+                            "style": "prefix"
+                          },
+                          "text": "**IC#2 CQ2 — Internal change forces:** Moderate-positive. New CEO Fröberg (ex-Ahlsell, 20+ acquisitions) driving strategic pivot. Performance Improvement Programme delivering SEK 120m cost savings. Reorganisation into 3 market-facing segments (Fibre/DC/HE) improves capital allocation clarity."
+                        },
+                        {
+                          "iaja": "J",
+                          "signpost": {
+                            "level": "tc",
+                            "ref": "IC#3.TC1",
+                            "label": "Setup classification",
+                            "style": "prefix"
+                          },
+                          "text": "**IC#3 TC1 — Setup classification:** Primary = Demand-Driven EPSU/EPT (DC hyperscaler buildout). Secondary = Corporate Change EPSU/EPT (CEO + restructuring). Both are acceptable setups. No false-friend overlap detected at Triaging depth."
+                        }
+                      ],
+                      "ratings": []
+                    }
+                  ]
+                },
+                {
+                  "type": "family_block",
+                  "family_id": "IC#3",
+                  "label": "IC#3: Required Case SETUPS",
+                  "rating": "C+",
+                  "blocks": [
+                    {
+                      "type": "bluf",
+                      "text": "Primary: Demand-Driven EPSU/EPT (hyperscaler buildout). Secondary: Corporate Change (CEO + restructuring). Both legible."
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "**Primary setup: Demand-Driven EPSU/EPT** — Hyperscaler AI/cloud infrastructure buildout creates large exogenous demand shift for DC fibre services. Q4-25 +62% organic confirms.",
+                          "iaja": "J"
+                        },
+                        {
+                          "text": "**Secondary setup: Corporate Change EPSU/EPT** — New CEO (ex-Ahlsell, M&A specialist), 3-segment reorganisation, SEK 120m cost programme.",
+                          "iaja": "J"
+                        },
+                        {
+                          "text": "**Setup verdict: Plausibly present.** Change forces confirmed; outputs showing; moat question outstanding.",
+                          "iaja": "J"
+                        }
+                      ],
+                      "ratings": []
+                    }
+                  ]
+                }
+              ],
+              "ratings": []
+            },
+            {
+              "type": "pillar_block",
+              "pillar_id": "p4",
+              "label": "Building Blocks",
+              "rating": "C+",
+              "blocks": [
+                {
+                  "type": "bluf",
+                  "text": "Foundation quality mixed. DC economics verified (asset-light, 15%+ margin). FTTH commoditised. M&A execution ORANGE."
+                },
+                {
+                  "type": "family_block",
+                  "family_id": "BB#1",
+                  "label": "BB#1: Simplicity Guardrails",
+                  "rating": "C",
+                  "blocks": [
+                    {
+                      "type": "bluf",
+                      "text": "4 KDs narrowly focused. 18 production sites, 9 countries, 3 segments = moderate complexity."
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "**2 fulcrum drivers** (DC moat, M&A execution) + **3 key drivers** (FTTH recovery, CEO quality, EPS bridge) = narrowly focused.",
+                          "iaja": "J",
+                          "rating": "C"
+                        },
+                        {
+                          "text": "**Complexity flag:** 18 sites × 9 countries × 3 segments. Customer concentration (top 10 = ~50% sales).",
+                          "iaja": "I"
+                        },
+                        {
+                          "text": "**Transmission mechanism clear:** DC demand → volume + margin mix shift → EPS step-up. Trackable via quarterly segment data.",
+                          "iaja": "A"
+                        }
+                      ],
+                      "ratings": []
+                    }
+                  ]
+                },
+                {
+                  "type": "family_block",
+                  "family_id": "BB#2",
+                  "label": "BB#2: Foundation Quality",
+                  "rating": "C+",
+                  "blocks": [
+                    {
+                      "type": "bluf",
+                      "text": "DC segment differentiated (services, microduct). FTTH commoditised. No vertical integration into glass preform (70% of industry profit pool)."
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "**Operator (C+):** New CEO early signs positive but untested in fibre industry stress. M&A background (Ahlsell) relevant.",
+                          "iaja": "J",
+                          "rating": "C+"
+                        },
+                        {
+                          "text": "**Business (C+):** DC has genuine differentiation (end-to-end services, microduct flexibility). FTTH is commoditised.",
+                          "iaja": "J",
+                          "rating": "C+"
+                        },
+                        {
+                          "text": "**Value chain (C):** Unfavourable — no vertical integration into glass preform. Dependent on 3rd-party glass producers.",
+                          "iaja": "J",
+                          "rating": "C"
+                        },
+                        {
+                          "text": "**Industry structure (C):** Fragmented, intense competition from vertically integrated giants (Corning, Prysmian).",
+                          "iaja": "J",
+                          "rating": "C"
+                        },
+                        {
+                          "text": "**SRCA: narrow and segment-specific.** DC moat is about local execution + installed base stickiness, not IP or scale.",
+                          "iaja": "A"
+                        }
+                      ],
+                      "ratings": []
+                    }
+                  ]
+                },
+                {
+                  "type": "family_block",
+                  "family_id": "BB#3",
+                  "label": "BB#3: Fit for Market Paradigm",
+                  "rating": "B-",
+                  "blocks": [
+                    {
+                      "type": "bluf",
+                      "text": "AI/DC infrastructure fully paradigm-aligned. Defence/HE fits risk-off. Exit discipline via 10 HTRO-specific ACHs."
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "**AI/DC infrastructure** is the investment zeitgeist. HTRO is a physical-layer beneficiary.",
+                          "iaja": "J",
+                          "rating": "B"
+                        },
+                        {
+                          "text": "**No Iran conflict exposure** (no Middle East operations). Tariff risk limited (<5% sales).",
+                          "iaja": "I"
+                        },
+                        {
+                          "text": "**Exit triggers defined:** 10 ACH invalidation scenarios with HTRO-specific thresholds.",
+                          "iaja": "J"
+                        }
+                      ],
+                      "ratings": []
+                    }
+                  ]
+                },
+                {
+                  "type": "family_block",
+                  "family_id": "BB#4",
+                  "label": "BB#4: Strenuously Seek-to-Avoid",
+                  "rating": "C",
+                  "blocks": [
+                    {
+                      "type": "bluf",
+                      "text": "YELLOW flag. FTTH boom-bust risk. Bear case SEK 12-15 (40-50% downside). Multiple partly industry-driven."
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "**Predictability (C):** FTTH segment demonstrated boom-bust. DC could repeat this pattern.",
+                          "iaja": "J",
+                          "rating": "C"
+                        },
+                        {
+                          "text": "**Trough multiple risk (C-):** Bear case SEK 12-15, 40-50% downside from current.",
+                          "iaja": "J",
+                          "rating": "C-"
+                        },
+                        {
+                          "text": "**Multiple (C):** Partly industry-driven (FTTH overhang depresses blended multiple).",
+                          "iaja": "J",
+                          "rating": "C"
+                        }
+                      ],
+                      "ratings": []
+                    }
+                  ]
+                },
+                {
+                  "type": "family_block",
+                  "family_id": "BB#5",
+                  "label": "BB#5: Small Size Constraints",
+                  "rating": "C",
+                  "blocks": [
+                    {
+                      "type": "bluf",
+                      "text": "Market cap SEK 5.8bn (~EUR 0.5bn). Below sweet spot but above minimum. Liquidity adequate for starter position."
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "**Market cap ~$560m** — below $1.5bn minimum. Size constraint flag for larger sizing.",
+                          "iaja": "I",
+                          "rating": "D"
+                        },
+                        {
+                          "text": "**ADV ~$4.6m** — close to $10m minimum. Can build 1.0-1.5% position over 5 days.",
+                          "iaja": "I",
+                          "rating": "C"
+                        },
+                        {
+                          "text": "**Free float ~70%** — adequate. No controlling shareholder.",
+                          "iaja": "I",
+                          "rating": "C+"
+                        }
+                      ],
+                      "ratings": []
+                    }
+                  ]
+                },
+                {
+                  "type": "family_block",
+                  "family_id": "BB#6",
+                  "label": "BB#6: Invalidating Constraints",
+                  "rating": "C+",
+                  "blocks": [
+                    {
+                      "type": "bluf",
+                      "text": "No immediate invalidation flags. DC performance non-mediocre. FTTH mediocre but being restructured."
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "**Mediocrity test:** DC is distinctly non-mediocre (+62% Q4 organic, 15.3% margin). FTTH is mediocre but actively restructured.",
+                          "iaja": "J",
+                          "rating": "C+"
+                        },
+                        {
+                          "text": "**No big 'Hmmms'** beyond DC boom-bust question. Non-GAAP adjustments increasing but explicable.",
+                          "iaja": "J",
+                          "rating": "C+"
+                        },
+                        {
+                          "text": "**No false-friend overlap.** Demand-Driven EPSU/EPT is a valid setup. No overlap with 10x general invalidating ACHs.",
+                          "iaja": "J",
+                          "rating": "B-"
+                        }
+                      ],
+                      "ratings": []
+                    }
+                  ]
+                },
+                {
+                  "type": "family_block",
+                  "family_id": "BB#7",
+                  "label": "BB#7: Past Trend / Momentum",
+                  "rating": "C+",
+                  "blocks": [
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "**Price momentum:** post-trough, MAs turning up. Volume improving on Q4 beat.",
+                          "iaja": "J"
+                        },
+                        {
+                          "text": "**SS momentum:** revisions turning positive post-Q4 beat. DNB Carnegie TP upgrade.",
+                          "iaja": "J"
+                        },
+                        {
+                          "text": "**Peers:** Corning seeing FTTH inflection. DC services sector healthy.",
+                          "iaja": "I"
+                        },
+                        {
+                          "text": "**Company delivery:** improving — Q3-Q4 2025 both beat consensus after H1 miss.",
+                          "iaja": "I"
+                        }
+                      ],
+                      "ratings": []
+                    }
+                  ]
+                },
+                {
+                  "type": "family_block",
+                  "family_id": "BB#8",
+                  "label": "BB#8: Nice-to-Have Attributes",
+                  "rating": "C",
+                  "blocks": [
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "**Positive optionality:** BEAD acceleration, edge DC proliferation, defence budget escalation.",
+                          "iaja": "J"
+                        },
+                        {
+                          "text": "**Self-righting:** CEO cost programme + cash conversion 235% Q4-25. Active restructuring.",
+                          "iaja": "J"
+                        },
+                        {
+                          "text": "**No dividend/buyback** — all capital to M&A + organic growth. Not a nice-to-have deficiency for growth stage.",
+                          "iaja": "I"
+                        }
+                      ],
+                      "ratings": []
+                    }
+                  ]
+                }
+              ],
+              "ratings": []
+            },
+            {
+              "type": "summary",
+              "text": "_Fundamental case rates C+ overall. DC growth is real, change forces confirmed, and valuation attractive. The binding constraints are DC moat durability and M&A execution quality — both require ESA/DD depth to resolve._",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "C.II.3",
+          "title": "Fit for Market Paradigm (Pillar 2)",
+          "heading_level": 3,
+          "target_pages": 1,
+          "blocks": [
+            {
+              "type": "bluf",
+              "text": "_AI/DC infrastructure is fully paradigm-aligned. Defence/HE fits risk-off positioning. FTTH legacy is paradigm-negative but being diluted by mix shift._"
+            },
+            {
+              "type": "pillar_block",
+              "pillar_id": "p2",
+              "label": "Market Paradigm Fit",
+              "rating": "B-",
+              "blocks": [
+                {
+                  "type": "bullet_group",
+                  "items": [
+                    {
+                      "text": "**Paradigm 1 (Late bull/early bear): C+.** Mixed — DC/HE are defensive growth; FTTH cyclically exposed.",
+                      "iaja": "J",
+                      "rating": "C+"
+                    },
+                    {
+                      "text": "**Paradigm 2 (AI demand): B+.** Directly paradigm-aligned — DC fibre is the physical layer of AI infrastructure buildout.",
+                      "iaja": "J",
+                      "rating": "B+"
+                    },
+                    {
+                      "text": "**Paradigm 3 (Oil/stagflation): B-.** No Iran exposure. HE/defence benefits from geopolitical tensions. Tariff risk limited.",
+                      "iaja": "J",
+                      "rating": "B-"
+                    }
+                  ],
+                  "ratings": []
+                }
+              ],
+              "ratings": []
+            },
+            {
+              "type": "summary",
+              "text": "_Net paradigm fit is positive. The AI/DC infrastructure alignment is the strongest paradigm attribute. FTTH legacy is the drag._",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "C.II.4",
+          "title": "Sell Side Momentum (Pillar 5)",
+          "heading_level": 3,
+          "target_pages": 1,
+          "blocks": [
+            {
+              "type": "bluf",
+              "text": "_Limited coverage (4 analysts) but revisions turning positive post-Q4 beat. Kepler Hold and Danske Sell are potential converts._"
+            },
+            {
+              "type": "momentum_table",
+              "title": "SS Consensus Momentum — HTRO",
+              "metrics": [
+                {
+                  "key": "eps_change",
+                  "label": "EPS revisions",
+                  "values": {
+                    "l1m": 2.5,
+                    "l3m": 5.0,
+                    "l6m": -1.0
+                  }
+                },
+                {
+                  "key": "ebitda_change",
+                  "label": "EBITDA revisions",
+                  "values": {
+                    "l1m": 3.0,
+                    "l3m": 6.0,
+                    "l6m": 0.0
+                  }
+                },
+                {
+                  "key": "revenue_change",
+                  "label": "Revenue revisions",
+                  "values": {
+                    "l1m": 0.5,
+                    "l3m": 2.0,
+                    "l6m": -3.0
+                  }
+                },
+                {
+                  "key": "price_target_change",
+                  "label": "Price target revisions",
+                  "values": {
+                    "l1m": 8.0,
+                    "l3m": 5.0,
+                    "l6m": -2.0
+                  }
+                },
+                {
+                  "key": "pct_buy_change",
+                  "label": "% Buy change",
+                  "values": {
+                    "l1m": 0.0,
+                    "l3m": 0.0,
+                    "l6m": 0.0
+                  }
+                }
+              ],
+              "ratings": []
+            },
+            {
+              "type": "pillar_block",
+              "pillar_id": "p5",
+              "label": "SS Earnings Momentum",
+              "rating": "C+",
+              "blocks": [
+                {
+                  "type": "bullet_group",
+                  "items": [
+                    {
+                      "text": "**Coverage:** 2 Buy (DNB Carnegie, Pareto) / 1 Hold (Kepler) / 1 Sell (Danske). Limited but turning positive.",
+                      "iaja": "I"
+                    },
+                    {
+                      "text": "**Post-Q4 catalyst:** DNB Carnegie TP upgrade SEK 38→42.50. EBITA beat +10.8% vs consensus.",
+                      "iaja": "I"
+                    },
+                    {
+                      "text": "**Potential converts:** Kepler Hold and Danske Sell are most likely to upgrade if Q1-26 DC prints >30%.",
+                      "iaja": "A"
+                    },
+                    {
+                      "text": "**Revision trajectory:** turning positive. VF modal 12-15% above consensus creates structural upward revision pressure.",
+                      "iaja": "J"
+                    }
+                  ],
+                  "ratings": []
+                }
+              ],
+              "ratings": []
+            },
+            {
+              "type": "summary",
+              "text": "_SS momentum is forming, not confirmed. Limited coverage makes signals noisy. Q1-26 DC print is the catalyst for broader coverage + upgrades._",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "C.II.5",
+          "title": "Upside (Pillar 6 + TSR Dupont)",
+          "heading_level": 3,
+          "target_pages": 1,
+          "blocks": [
+            {
+              "type": "bluf",
+              "text": "_Valuation offers genuine asymmetry: 12.5x forward P/E vs 15-18x DC-services peers. If mix shift delivers, fair value SEK 55-70 (60-100% upside)._"
+            },
+            {
+              "type": "pillar_block",
+              "pillar_id": "p6",
+              "label": "Valuation",
+              "rating": "B-",
+              "blocks": [
+                {
+                  "type": "bullet_group",
+                  "items": [
+                    {
+                      "text": "**Forward P/E ~12.5x** on FY26E. DC-services peer group trades at 15-18x. 35% discount.",
+                      "iaja": "I",
+                      "rating": "B-"
+                    },
+                    {
+                      "text": "**Discount drivers:** FTTH drag on group margins + sub-$1bn market cap (Swedish mid-cap discount).",
+                      "iaja": "A"
+                    },
+                    {
+                      "text": "**Re-rating catalyst:** when DC/HE crosses 50% of revenue, blended multiple should re-rate from FTTH-legacy 10-12x toward services 15-18x.",
+                      "iaja": "A"
+                    },
+                    {
+                      "text": "**Modal fair value SEK 55-70** (60-100% upside). Bear case SEK 12-15 (40-50% downside). R/R positive at starter size.",
+                      "iaja": "J",
+                      "rating": "B-"
+                    }
+                  ],
+                  "ratings": []
+                }
+              ],
+              "ratings": []
+            },
+            {
+              "type": "summary",
+              "text": "_Valuation is the strongest pillar. The 35% discount to DC-services peers creates genuine asymmetry. The question is whether the discount closes (DC thesis proves out) or widens (boom-bust materialises)._",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        }
+      ]
+    },
+    "D": {
+      "letter": "D",
+      "title": "COMPONENTS",
+      "applicable": true,
+      "inline_verdict": "10 INVALIDATION ACHs armed with HTRO-specific triggers; 3 KOQs for ESA",
+      "default_open": false,
+      "subsections": [
+        {
+          "id": "D.I.1",
+          "title": "KDICs — Key Drivers of Investment Case",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "**FULCRUM #1: DC segment competitive moat durability** — Can HTRO's mid-market DC services niche sustain 20%+ organic growth and 15%+ margins against Corning/Prysmian pivot? KD Rating: YELLOW."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**FULCRUM #2: M&A execution quality** — Requires 3-6 acquisitions/year at 5-7x EBITDA with successful integration. Weterings closure (acquired 2021 for EUR 5.6m, closed 2025) is a capital destruction flag. KD Rating: ORANGE."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KEY DRIVER #3: FTTH recovery trajectory** — BEAD impact timing (H2-26 per mgmt, 2027 per SS). Fibre Solutions margin rebound from 6.4% to 10% target. KD Rating: YELLOW."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KEY DRIVER #4: CEO quality (Fröberg)** — 12 months in; conservative guidance reset + Q3-Q4 beats. M&A background (Ahlsell) is relevant. Untested in fibre industry downturn. KD Rating: YELLOW."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KEY DRIVER #5: EPS bridge to 2028** — SEK 515m EBITA (7.2% margin, 2025) → SEK 1.32bn EBITA (12%, 2028). 2.6x growth required. Achievable if DC sustains + M&A executes + costs land. KD Rating: YELLOW."
+                }
+              ]
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "D.I.2",
+          "title": "KHF/As — Key Hygiene Factors / Assumptions",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "I",
+                  "text": "**KHF-1: Balance sheet health.** Net debt SEK 1,582m, leverage 1.9x EBITDA. Covenant headroom adequate. No immediate refinancing risk."
+                },
+                {
+                  "iaja": "I",
+                  "text": "**KHF-2: Cash conversion.** Q4-25 operating cash flow conversion 235%. Strong WC management (inventory -SEK 144m, AR -SEK 94m). Payback on restructuring ~1.1 years."
+                },
+                {
+                  "iaja": "I",
+                  "text": "**KHF-3: Governance.** No controlling shareholder (largest: Handelsbanken Fonder 9.3%). Board + mgmt own ~13%. Erik Selin related-party lease (SEK 7m/year) is minor. No red flags."
+                },
+                {
+                  "iaja": "A",
+                  "text": "**KA-1: Assumption — hyperscaler capex sustains.** Modal case assumes 15% CAGR in cloud DC market over N5Y. If AI monetisation disappoints, capex could pause (bear case trigger)."
+                },
+                {
+                  "iaja": "A",
+                  "text": "**KA-2: Assumption — HTRO can acquire at 5-7x EBITDA.** If PE buyers inflate DC service company multiples, M&A engine stalls."
+                },
+                {
+                  "iaja": "A",
+                  "text": "**KA-3: Assumption — Fibre Solutions stabilises at 10% EBITA.** Requires cost programme delivery + BEAD-driven volume recovery. If overcapacity persists, margin stays at 6-7%."
+                }
+              ]
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "D.I.3",
+          "title": "KCs/KUs — Key Confusions & Unknowns",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "**KC-1: DC switching costs.** No disclosed customer lock-in periods. Microduct is not proprietary — CommMesh, Corning, others offer similar systems. 'Flexibility' helps the customer, not HTRO. Is the moat real or perceived?"
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KC-2: M&A integration model.** Decentralised integration (preserving entrepreneurial culture) works at small scale. Does it scale to 12+ acquisitions over 3 years without creating coordination failure?"
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KC-3: FTTH structural floor.** Is the FTTH business permanently impaired (negative terminal growth per Redeye bear case) or cyclically depressed with secular catch-up in US/UK/Germany?"
+                }
+              ]
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "D.I.4",
+          "title": "KRs — Key Concerns / Risks",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "**KR-1: DC boom-bust risk.** Redeye explicitly warns DC hyperscaler demand shares FTTH boom-bust characteristics. If capex pauses, HTRO's DC segment could decelerate from +37% to <10% within 2-3 quarters. Probability: 20-30% over N2Y."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KR-2: Customer concentration.** Top 10 = ~50% of sales. Loss or procurement shift by 1-2 major hyperscalers could cause a revenue miss of 5-10%."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KR-3: Corning/Prysmian competitive pivot.** If Tier-1 carrier demand stalls, these giants redirect excess capacity and salesforce to Tier-2/3 alt-nets — HTRO's core customer base. Scale advantage is overwhelming in a price war."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KR-4: CEO execution risk.** Fröberg lacks fibre industry experience. 12 months is insufficient to judge turnaround capability in a structurally challenged segment."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KR-5: FX headwinds.** Strong SEK vs USD/EUR erodes translated revenue. 9% negative FX impact on sales in late 2025."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KR-6: Glass preform supply vulnerability.** Not vertically integrated. Relies on third-party glass producers. If synchronised demand boom hits, supply shortages could cap revenue growth."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KR-7: LEO satellite substitution.** Starlink/Amazon Kuiper receiving BEAD funding eligibility. Gen-3 satellites at 1 Tbit/s could narrow fibre performance gap in rural/remote markets, capping FTTH TAM."
+                }
+              ]
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "D.I.5",
+          "title": "KPOs — Key Positive Optionality",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "**KPO-1: BEAD acceleration.** If US fibre deployment ramps faster than expected, Fibre Solutions could recover to mid-teens margins, adding SEK 200-300m incremental EBITA."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KPO-2: Edge DC proliferation.** Next wave of infrastructure (distributed edge DCs closer to end users) could extend DC growth runway beyond 2028. HTRO's local service model is well-positioned for fragmented edge deployment."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KPO-3: Multiple re-rating on mix shift.** As DC/HE reaches 50% of revenue, the blended multiple should re-rate from FTTH-legacy 10-12x toward services 15-18x. This is the biggest source of TSR asymmetry."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KPO-4: Defence budget escalation.** Geopolitical tensions (Iran, Russia) could accelerate NATO defence spending beyond 2% commitments, providing additional HE segment tailwind."
+                }
+              ]
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "D.II.1",
+          "title": "10 standard ACH invalidation scenarios",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bluf",
+              "text": "_{10_INVALIDATION_ACHS} **Live-case invalidation discipline.** These ten one-strike rules apply __while we own this case__ and are explicitly different from the screening thresholds used for new investments. Any single trip → __APM escalates to Richard__ with a sell/trim recommendation; no waiting for a second confirmation. State of each threshold is tracked below._"
+            },
+            {
+              "type": "prose",
+              "text": "**Single-event invalidations (rules 1–5)** — fundamental triggers that fire on a single condition."
+            },
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "text": "**1. Top-line invalidation** — One __probable or actual near-term revenue cut__ to SS/G caused by an exogenous problem. HTRO-specific: DC segment organic growth drops below +10% for two consecutive quarters, OR Fibre Solutions revenue declines >15% YoY without BEAD offset.",
+                  "iaja": "J",
+                  "state": "not-armed"
+                },
+                {
+                  "text": "**2. Cockroach invalidation** — __One actual AND one probable__, OR __three probable/likely__ current/near-term problems. HTRO-specific: (i) M&A write-down (second Weterings-type capital destruction), (ii) DC customer loss (top-3 hyperscaler terminates or significantly reduces procurement), (iii) FTTH overcapacity worsens despite cost programme.",
+                  "iaja": "J",
+                  "state": "not-armed"
+                },
+                {
+                  "text": "**3. Ditherer invalidation** — __Deterioration in operator assessment__ AND one or more problems. HTRO-specific: CEO Fröberg loses credibility (guidance miss >20%, strategic reversal on DC pivot, unexplained departure of key DC segment leaders) AND concurrent FTTH deterioration or DC deceleration.",
+                  "iaja": "J",
+                  "state": "not-armed"
+                },
+                {
+                  "text": "**4. Cyclical invalidation** — __SP underperformance of 15% or 3M__ FOLLOWED BY a plausible+ near-term revenue cut caused by threshold+ exogenous problem. HTRO-specific: SP drops below SEK 24 (15% from ~SEK 28) FOLLOWED BY hyperscaler capex freeze or BEAD programme cancellation/major reallocation to satellite.",
+                  "iaja": "J",
+                  "state": "not-armed"
+                },
+                {
+                  "text": "**5. NT/MT one-two invalidation** — __SP underperformance of 15% or 3M__ FOLLOWED BY any probable/actual near-term profit cut. HTRO-specific: SP drops below SEK 24 FOLLOWED BY Fibre Solutions margin falling below 5% or DC margin contracting below 12% (profitability squeeze from either segment).",
+                  "iaja": "J",
+                  "state": "not-armed"
+                }
+              ]
+            },
+            {
+              "type": "prose",
+              "text": "**SP-conditional & composite invalidations (rules 6–10)** — sequence-dependent triggers (price action × fundamentals)."
+            },
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "text": "**6. Wisdom of crowd invalidation** — __SP underperformance of 15% or 3M__ FOLLOWED BY any plausible+ VF or actual SM threshold+ concerns re. __mid/long-term growth, margins, SRCAs__ or predictability thereof. HTRO-specific: SP <SEK 24 FOLLOWED BY evidence that DC services lack sustainable competitive advantage (e.g., Corning/Prysmian successfully enter mid-market DC services at scale, margin compression across DC peer group).",
+                  "iaja": "J",
+                  "state": "not-armed"
+                },
+                {
+                  "text": "**7. Market catch-up with our existential concerns invalidation** — __VF plausible+ threshold+ concerns__ re. mid/long-term growth/margins/SRCAs FOLLOWED BY __SP underperformance of 15% or 3M__. HTRO-specific: Watson identifies DC boom-bust pattern confirmation (e.g., hyperscaler order cancellations, DC services pricing deflation >10%) FOLLOWED BY SP <SEK 24.",
+                  "iaja": "J",
+                  "state": "not-armed"
+                },
+                {
+                  "text": "**8. Narrow frame invalidation** — __Peerset underperformance of 15% or 3M__ FOLLOWED BY any __actual cut/problem__. HTRO-specific: HTRO underperforms Nordic mid-cap industrials peer group by >15% FOLLOWED BY actual earnings cut, M&A write-down, or customer loss.",
+                  "iaja": "J",
+                  "state": "not-armed"
+                },
+                {
+                  "text": "**9. SS EEG invalidation** — __[2]% or greater SS EPS cuts__ AND __SP underperformance of 15% or 3M__ (either order). HTRO-specific: consensus EPS cut of ≥2% (i.e., from SEK 2.25 to SEK 2.20 or below) combined with SP <SEK 24.",
+                  "iaja": "J",
+                  "state": "not-armed"
+                },
+                {
+                  "text": "**10. Case outputs/attributes invalidation** — __[8] or more case-output thresholds at D or F__. HTRO-specific: if 8+ of the IC#1 output CQs/TCs degrade to D or F ratings (e.g., EPS growth <5%, no upgrade path, multiple de-rates to <10x, case navigability collapses), the thesis is fundamentally broken regardless of SP.",
+                  "iaja": "J",
+                  "state": "not-armed"
+                }
+              ]
+            },
+            {
+              "type": "summary",
+              "text": "_Escalation protocol: when a threshold trips, APM (i) records the trip in the case file with date and evidence, (ii) re-rates the affected pillar(s), (iii) escalates with __trigger evidence, thesis impact, recommended action__ (sell / trim X% / hold-with-tighter-stop) and reasoning chain, and (iv) flips the state in this section to TRIPPED. This sits __upstream of__ the 30-Day Shot Clock — the shot clock applies for deterioration without a tripped threshold; once a threshold trips, APM acts._"
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "D.II.2",
+          "title": "Plausible fundamental invalidation thresholds",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "**Plausible invalidation scenarios (not yet ACH-level, but watchlist):**\n\n(i) AI monetisation disappointment — if hyperscaler revenue growth from AI products disappoints (e.g., Meta/Google AI ad revenue plateaus), capex could be cut 20-30%, directly impacting DC fibre demand. Plausibility: 15-20% over N2Y.\n\n(ii) FTTH permanent impairment — if North American FTTH demand never recovers to 2022 levels and BEAD is substantially reallocated to satellite/FWA, Fibre Solutions becomes a structurally declining business. Bear case terminal margin: 4-5% EBIT. Plausibility: 25-30% over N3Y.\n\n(iii) M&A multiple inflation — PE competition for DC service companies inflates acquisition multiples to 10-12x EBITDA, making HTRO's 5-7x target unachievable and stalling the inorganic growth engine. Plausibility: 20% over N2Y."
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "D.II.3",
+          "title": "Negative, should-be-expected developments",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "iaja": "I",
+              "text": "**Short seller coverage:** No documented short-seller campaigns from major activist firms. No specific short interest data available. Shareholder base: institutional long-only dominated (Handelsbanken Fonder 9.3%, Accendo Capital 5.9%, pension funds)."
+            },
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "**ESA-depth bear case assessment: ORANGE credibility.** The bear case is fundamentally operational, not accounting-driven: (i) FTTH boom-bust is confirmed fact — profit warning July 2025, SEK 299m restructuring charges, Fibre Solutions EBITA collapsed to 5.2% in Q4-25. (ii) DC boom-bust is speculative but credible — Redeye explicitly warns; hyperscaler capex patterns are historically volatile. (iii) Redeye bear case models SEK 12-15/share (40-50% downside), terminal growth -2% to -3%, EBIT margin 4-5%. (iv) Quality of earnings concern: non-GAAP adjustments increasing — SEK 202m in Q3-25, SEK 97m in Q4-25. Adjusted vs reported EBITA gap widening."
+            },
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "**ESA counter-assessment:** (i) DC segment is accelerating, not contracting — directly contradicts bear thesis at current juncture. (ii) Cash conversion is exceptional (235% Q4-25) — suggests earnings quality is understated, not overstated. (iii) Non-GAAP adjustments are explicable (one-time restructuring of known operations) — not suspicious. (iv) No governance red flags (related-party lease is SEK 7m/year, immaterial). (v) Historical ROIC volatility is a legitimate structural concern but reflects FTTH cyclicality, not management fraud. **Net assessment: bears have a plausible downside scenario but no smoking gun. The bet against HTRO is a cyclicality bet, not an integrity bet.**"
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "D.III.1",
+          "title": "KOQs — Key Open Questions",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "**KOQ-1: DC switching costs — real or perceived?** Need ESA-depth evidence of customer lock-in: contract lengths, proprietary integration, service dependency, reference customer interviews. This is the moat question."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KOQ-2: M&A pipeline quality.** What is the actual pipeline? How many targets identified? At what multiples? What is the integration failure rate historically? Weterings is a flag — is it an outlier or a pattern?"
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KOQ-3: Fröberg's DC expertise.** Does the CEO understand the DC services market specifically, or is he applying an industrial wholesale playbook (Ahlsell) to a technology services market? What is his view on the boom-bust risk?"
+                }
+              ]
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "D.III.2",
+          "title": "KAs — Key Actions",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "**KA-1: Monitor Q1-26 DC organic print (April 2026).** >+30% = conviction-building → consider upsize to 2.0%. <+15% = KC-1 moat concern escalates → hold size, re-assess at Q2."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KA-2: Track first post-Fröberg M&A deal.** When announced: check (i) target EV/EBITDA multiple, (ii) strategic fit (DC services? geography?), (iii) funding (cash flow funded or debt-funded?). Compare to Weterings as calibration."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KA-3: Run Minervini 8-point technical.** Confirm Stage 1→2 transition. Set alerts at SEK 24 (ACH zone) and SEK 32 (breakout)."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KA-4: Check Corning/Prysmian Q1-26 results for mid-market commentary.** If either signals pivot to Tier-2/3 DC services, KC-1 moat risk escalates."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KA-5: Check BEAD state allocation data.** Track % allocated to fibre vs satellite/FWA. If fibre share drops below 60%, KR-7 LEO substitution risk escalates."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KA-6: Request Richard track-record check.** Any parallels with Fasadgruppen/XVIVO on Nordic mid-cap illiquidity? Market cap SEK 5.8bn is above XVIVO but liquidity gate should be explicitly assessed."
+                }
+              ]
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        }
+      ],
+      "applicable_note": null,
+      "word_count": 0,
+      "page_count": 0,
+      "target_words": 0
+    },
+    "E": {
+      "letter": "E",
+      "title": "ACTIONS",
+      "applicable": true,
+      "inline_verdict": "PROCEED — starter position (1.0-1.5%) justified at SEK ~28; sizing gates at Q1-26 DC print and first M&A deal",
+      "default_open": true,
+      "applicable_note": null,
+      "word_count": 0,
+      "page_count": 0,
+      "target_words": 0,
+      "subsections": [
+        {
+          "id": "E.I.1",
+          "title": "Pros/cons of prioritising vs other opportunities",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "**Pros of prioritising HTRO:** (i) Genuine asymmetry — 60-100% upside on modal case vs 40-50% downside on bear case at starter size. (ii) AI/DC paradigm alignment — rare in European mid-cap space. (iii) Fulcrum event inside 12m (Q1-26 DC print). (iv) Counter-cyclical to portfolio if positioned in risk-off sectors.\n\n**Cons:** (i) Below $1.5bn market cap — liquidity constraint for larger sizing. (ii) M&A execution risk is hard to assess remotely. (iii) FTTH legacy creates headline risk even if DC thesis is correct. (iv) Competes for capital with PRY/NKT cables theme which has better scale/vertical integration.\n\n**Net assessment:** Justified at starter position (1.0-1.5%). Do not prioritise over higher-conviction pipeline names (DCC, CARLB) for capital allocation.",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "E.II.1",
+          "title": "Monitoring plan (RESEARCHER) for TIs/ICDs/peers",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "**Trackable Indicators (TIs):** (i) DC segment organic growth (quarterly — must sustain >25% to confirm thesis). (ii) DC EBITA margin (quarterly — must stay >12% to confirm unit economics). (iii) Group M&A activity (event-driven — check multiples, strategic fit, integration). (iv) Fibre Solutions margin trajectory (quarterly — cost programme delivery check).\n\n**Investment Case Drivers (ICDs):** (i) Hyperscaler capex announcements (Meta, Microsoft, Google quarterly results). (ii) BEAD state allocation data (quarterly NTIA updates). (iii) Corning/Prysmian quarterly commentary on DC services and mid-market pivot.\n\n**Peer monitoring:** Corning (GLW), Prysmian (PRY), CommScope (COMM), NKT. Track for competitive dynamics, pricing, capacity.",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "E.II.2",
+          "title": "KQs/KAs if/when progressed to next stage",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "**Key Questions for DD P1:** (i) DC switching costs — contract lengths, customer lock-in mechanisms, reference interviews. (ii) M&A pipeline — detailed target list, multiples, integration failure rate. (iii) Financial model — build full 3-statement model with segment-level detail. (iv) Fröberg deep-dive — management interviews, board assessment.\n\n**Key Actions for DD P1:** (i) Build proprietary financial model (segment P&L, consolidated FCF, balance sheet). (ii) Map DC services competitive landscape at ESA+ depth. (iii) Run Corning/Prysmian competitive analysis — are they pivoting to mid-market? (iv) Assess BEAD allocation data for fibre vs satellite/FWA trends.",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "E.III.1",
+          "title": "Reasons for parking ('gaps' analysis)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "**Would park if:** (i) DC organic growth drops below +15% for one quarter — suggests momentum fading. (ii) Corning/Prysmian successfully enter mid-market DC services at scale — moat collapses. (iii) Second M&A write-down (Weterings pattern repeats) — execution credibility destroyed. (iv) FTTH overcapacity worsens despite cost programme — structural impairment confirmed.\n\n**Gaps remaining after ESA:** DC switching costs not evidenced at customer level. M&A integration model untested at scale (12+ deals over 3 years). Financial model not built.",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "E.III.2",
+          "title": "Re-assessment criteria for re-activation",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "**Re-activate if:** (i) DC organic sustains >30% for 4 consecutive quarters — confirms structural demand, not one-off. (ii) M&A track record improves — 3+ post-Fröberg deals with disclosed RONIC above 15%. (iii) FTTH recovery materialises — BEAD volumes visible in Fibre Solutions revenue. (iv) Stage 2 technical breakout confirmed — MAs align, RS Rank >70.",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "E.III.3",
+          "title": "Monitoring plan for re-assessment criteria",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "**Monitoring cadence if parked:** (i) Quarterly: HTRO earnings for DC organic growth + segment margins. (ii) Quarterly: Corning/Prysmian results for DC services competitive dynamics. (iii) Monthly: BEAD state allocation data from NTIA. (iv) Event-driven: M&A announcements for deal quality assessment. (v) Weekly: FactSet price alerts at SEK 24 (ACH zone) and SEK 32 (breakout).",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        }
+      ]
+    },
+    "F": {
+      "letter": "F",
+      "title": "APPENDICES",
+      "applicable": true,
+      "inline_verdict": "Basic checks pass; no red flags",
+      "default_open": false,
+      "subsections": [
+        {
+          "id": "F.I",
+          "title": "Basic checks",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "kv_grid",
+              "title": "Quick reference — HTRO (Hexatronic Group AB)",
+              "rows": [
+                {
+                  "label": "Ticker",
+                  "value": "HTRO-SE (Nasdaq Stockholm Mid Cap)"
+                },
+                {
+                  "label": "Currency",
+                  "value": "SEK"
+                },
+                {
+                  "label": "Market cap",
+                  "value": "SEK 5.8bn (~EUR 0.5bn)"
+                },
+                {
+                  "label": "Enterprise value",
+                  "value": "SEK 7.4bn"
+                },
+                {
+                  "label": "Share price",
+                  "value": "~SEK 28"
+                },
+                {
+                  "label": "Shares outstanding",
+                  "value": "209.5m"
+                },
+                {
+                  "label": "30-day avg volume",
+                  "value": "1,728K shares/day"
+                },
+                {
+                  "label": "Net debt",
+                  "value": "SEK 1,582m (1.9x EBITDA)"
+                },
+                {
+                  "label": "Dividend",
+                  "value": "None (reinvesting in growth + M&A)"
+                },
+                {
+                  "label": "Largest shareholder",
+                  "value": "Handelsbanken Fonder 9.3%"
+                },
+                {
+                  "label": "Board + mgmt ownership",
+                  "value": "~13%"
+                },
+                {
+                  "label": "Segments",
+                  "value": "Fibre Solutions (65%), Data Center (20%), Harsh Environment (15%)"
+                },
+                {
+                  "label": "2028 targets",
+                  "value": "SEK 11bn revenue, 12% EBITA margin"
+                },
+                {
+                  "label": "CEO",
+                  "value": "Rikard Fröberg (since March 2025, ex-Ahlsell/Ansell)"
+                },
+                {
+                  "label": "Employees",
+                  "value": "~2,500 across 18 facilities in 9 countries"
+                },
+                {
+                  "label": "FY end",
+                  "value": "December"
+                }
+              ]
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "F.II",
+          "title": "Supplementary notes",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "iaja": "I",
+              "text": "**Research coverage:** 11 RESEARCHER queries completed (IG: BD [C+AS], CF [C+AS]; Triaging: SS Commentary [AS], KD Assessment [AS]; ESA: BM Primer [C+AS], Earnings History [AS], Short Sellers [C+AS], VC Map [C], VC Analysis [AS], Guidance [AS], KD Assessment ESA [C+AS]). Total word count: ~69,000 across all files. All posted to Notion."
+            },
+            {
+              "type": "prose",
+              "iaja": "A",
+              "text": "**Data gaps at Triaging depth:** (i) No FactSet technical momentum charts — need to confirm Stage 1→2 transition. (ii) No primary source management interviews — relying on earnings call transcripts and press releases. (iii) Limited peer comparison depth — Prysmian and Corning covered qualitatively but not modelled. (iv) Short interest data unavailable. (v) No Richard track-record parallel for Nordic mid-cap fibre plays — check if Fasadgruppen/XVIVO liquidity lessons apply given similar market cap."
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        }
+      ],
+      "applicable_note": null,
+      "word_count": 0,
+      "page_count": 0,
+      "target_words": 0
+    }
+  }
+}

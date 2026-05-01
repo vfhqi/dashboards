@@ -1,0 +1,2131 @@
+{
+  "schema_version": "1.0",
+  "ticker": "HTRO",
+  "company_name": "Hexatronic Group",
+  "stage": "ESA",
+  "stage_date": "2026-04-20",
+  "authored_by": "Watson (APM)",
+  "driver_terminology": "PRIMARY/SECONDARY/TERTIARY",
+  "header": {
+    "primary_setup": "Demand-Driven EPSU/EPT — DC & Harsh Environment displacing legacy FTTH",
+    "primary_setup_verdict": "plausibly present; input confirmed + early output",
+    "secondary_setup": "Corporate Change EPSU/EPT (nascent) — new CEO + decentralised M&A engine",
+    "conviction": "C — forming; small-cap liquidity gate outstanding",
+    "time_horizon": "N1-3Y, fulcrum event inside 12m (BEAD resolution + DC growth re-affirmation)"
+  },
+  "sections": {
+    "A": {
+      "letter": "A",
+      "title": "FINANCIALS",
+      "applicable": true,
+      "inline_verdict": "Light pass — mix shift is the numbers story",
+      "default_open": false,
+      "subsections": [
+        {
+          "id": "A.I",
+          "title": "Financial summary",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "kv_grid",
+              "title": "Last reported period (Q4-25) — headline",
+              "rows": [
+                {
+                  "label": "Group sales (TTM)",
+                  "value": "SEK 7.7bn / ~$0.77bn",
+                  "delta": "-5% y/y organic on legacy, offset by DC +37% & HE +11%"
+                },
+                {
+                  "label": "Market cap",
+                  "value": "EUR 0.8bn / SEK ~9.4bn",
+                  "delta": "Nordic mid-cap, liquid but small"
+                },
+                {
+                  "label": "Segment mix (2025)",
+                  "value": "DC+HE = ~40% of sales",
+                  "delta": "but ~60% of adj. EBITA — the mix-shift story"
+                },
+                {
+                  "label": "DC growth",
+                  "value": "+37% organic 2025",
+                  "delta": "Q4 alone +62% organic"
+                },
+                {
+                  "label": "Fibre Solutions margin",
+                  "value": "6.4% adj. EBITA",
+                  "delta": "down from mid-teens in FTTH peak; cost programme SEK 120m run-rate"
+                },
+                {
+                  "label": "DC segment economics",
+                  "value": "15%+ EBITA margin, ~12-14% NWC, ~1% capex",
+                  "delta": "asset-light services model"
+                },
+                {
+                  "label": "Customer concentration",
+                  "value": "Top 10 = ~50% sales",
+                  "delta": "KR flag — but diversifying via acquisitions"
+                }
+              ]
+            },
+            {
+              "type": "prose",
+              "iaja": "I",
+              "text": "The numbers at Triaging tell a mix-shift story rather than an absolute-growth story. Group organic was roughly flat in 2025 as Fibre Solutions declined ~5% on overcapacity, offset by DC +37% and HE +11%. What matters is that DC+HE are now a third of sales but ~60% of adjusted EBITA — the legacy business has become dilutive both to growth and to margin."
+            },
+            {
+              "type": "prose",
+              "iaja": "J",
+              "ratings": [
+                {
+                  "grade": "B",
+                  "attr": "financial quality"
+                }
+              ],
+              "text": "Financials rate B at Triaging. Not outstanding — the FTTH legacy business is still absorbing working capital (104 DIO) and the performance programme is in early stages. But the mix shift is quantified, the DC unit economics are genuinely asset-light, and there is no cash-generation red flag. Worth ESA depth."
+            }
+          ]
+        },
+        {
+          "id": "A.II",
+          "title": "Written analysis and judgement",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "text": "At Triaging depth the financial work is a primer: confirm that the segment-level disclosure supports the thesis (it does), rule out aggressive accounting (no evidence of it from a first-pass read), and note the working-capital drag. Full three-statement review deferred to ESA."
+            }
+          ]
+        }
+      ]
+    },
+    "B": {
+      "letter": "B",
+      "title": "EXECUTIVE SUMMARY",
+      "applicable": true,
+      "inline_verdict": "Plausibly compelling; progress to ESA with a Richard liquidity gate",
+      "default_open": true,
+      "subsections": [
+        {
+          "id": "B.I.1",
+          "title": "Executive summary",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "callout",
+              "tone": "verdict",
+              "iaja": "J",
+              "text": "Progress to ESA. Demand-Driven EPSU/EPT is legibly present and early outputs are showing (DC +37% organic, HE +11%). Two material gates: (i) does the DC niche moat survive Corning/Prysmian pivot if Tier-1 telco demand stalls, and (ii) is Richard comfortable at sub-EUR 1bn liquidity given the Fasadgruppen/XVIVO experience."
+            },
+            {
+              "type": "prose",
+              "iaja": "A",
+              "text": "The thesis is a mix-shift trade. Hexatronic is pivoting from a commoditised FTTH supplier (where it has ~1% US market share vs Corning/Prysmian/Dura-Line) to a services-led DC and Harsh Environment player. The pivot is measurable: DC+HE revenue share 35% → 40% in one year, EBITA share ~60%. The risk is that the hyperscaler build-out has 'boom-and-bust' characteristics identical to the FTTH cycle that just broke — trading one cyclical trap for another."
+            },
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "PRIMARY driver: DC segment scaling to SEK 3bn by 2028 — the fulcrum. Proof point is Q4-25 +62% organic.",
+                  "sub": [
+                    {
+                      "iaja": "I",
+                      "text": "Cloud now ~40% of DC segment sales; hyperscaler concentration is the obvious risk."
+                    },
+                    {
+                      "iaja": "I",
+                      "text": "Management targets 3-6 acquisitions/year at 5-7x EBITDA, EV <EUR 50m each."
+                    }
+                  ]
+                },
+                {
+                  "iaja": "J",
+                  "text": "SECONDARY driver: BEAD programme materialisation — triggers legacy FTTH recovery.",
+                  "sub": [
+                    {
+                      "iaja": "A",
+                      "text": "$42.5bn US subsidy stalled. Inflection now H2-26 per management."
+                    },
+                    {
+                      "iaja": "A",
+                      "text": "Rule changes made it 'technology-neutral' — LEO/FWA now eligible. 74% of early-state allocations still go to fibre."
+                    }
+                  ]
+                },
+                {
+                  "iaja": "J",
+                  "text": "TERTIARY driver: New CEO Rikard Fröberg execution (from March 2025). Nascent Corporate Change input — too early to rate.",
+                  "sub": [
+                    {
+                      "iaja": "I",
+                      "text": "Ex-Ansell — international/US experience but no prior fibre/connectivity role."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "prose",
+              "iaja": "A",
+              "ratings": [
+                {
+                  "grade": "B",
+                  "attr": "setup quality"
+                }
+              ],
+              "text": "Setup quality is B rather than A because the DC part of the thesis rhymes too closely with the FTTH boom-and-bust the company is still exiting. If DC is FTTH-in-disguise with a 3-5 year lag, the mix-shift thesis compounds rather than diversifies the cyclical risk. ESA needs to pressure-test this directly — the question is not whether DC growth is real, but whether the revenue quality is durable past the hyperscaler capex cycle."
+            }
+          ]
+        }
+      ]
+    },
+    "C": {
+      "letter": "C",
+      "title": "REQUIRED ATTRIBUTES",
+      "applicable": true,
+      "inline_verdict": "Outputs B-heavy; Foundations OK; FFF has A-rated catalysts",
+      "default_open": false,
+      "subsections": [
+        {
+          "id": "C.I.1",
+          "title": "Required Attribute ratings",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "ratings_table",
+              "title": "HTRO required-attribute ratings — 22 RAs graded, 2 unclear (Triaging depth)",
+              "columns": [
+                "Pillar",
+                "Required Attribute",
+                "Grade",
+                "1-line"
+              ],
+              "rows": [
+                {
+                  "cells": [
+                    "Outputs (P4)",
+                    "4.1 Sales growth",
+                    "B",
+                    "Flat organic 2025; DC/HE offsetting Fibre decline"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Outputs",
+                    "4.2 Margin progression",
+                    "B",
+                    "Mix shift to 60% EBITA from DC+HE is structural"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Outputs",
+                    "4.3 EPS growth",
+                    "B",
+                    "Depressed cycle base; leverage into recovery"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Outputs",
+                    "4.4 Cash conversion",
+                    "B",
+                    "WC drag on Fibre, clean on DC services"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Outputs",
+                    "4.5 Capital returns",
+                    "B",
+                    "RONIC c-12-15% under mix-shift"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Outputs",
+                    "4.6 Balance sheet",
+                    "C",
+                    "Acquisition-funded; moderate leverage creeping up"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Outputs",
+                    "4.7 Investor relations",
+                    "unclear",
+                    "Insufficient evidence at Triaging depth"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Outputs",
+                    "4.8 Capital allocation",
+                    "B",
+                    "M&A discipline claimed — 5-7x EBITDA target"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Outputs",
+                    "4.9 Returns on incremental capital",
+                    "B",
+                    "DC incremental margins visibly higher than fibre"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Outputs",
+                    "4.10 Risk/reward skew",
+                    "unclear",
+                    "Insufficient evidence at Triaging depth"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Outputs",
+                    "4.11 Earnings quality",
+                    "B",
+                    "Segment disclosure adequate; one-offs flagged"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Outputs",
+                    "4.12 Dividend/buyback",
+                    "B",
+                    "Modest dividend; buyback optionality present"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Foundations (P1)",
+                    "1.1 External tailwinds",
+                    "A",
+                    "AI/DC build-out; NATO defence uplift; BEAD latent"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Foundations",
+                    "1.2 Industry structure",
+                    "B",
+                    "Fragmented DC services; Fibre commoditised"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Foundations",
+                    "1.3 Competitive position (legacy)",
+                    "C",
+                    "1% US share in FTTH vs Corning/Prysmian/Dura-Line"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Foundations",
+                    "1.3b Competitive position (DC/HE)",
+                    "B",
+                    "End-to-end passive + services differentiation real"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Foundations",
+                    "1.4 Moat durability",
+                    "B",
+                    "Installer-friendly products; integration story credible"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Foundations",
+                    "1.5 Customer concentration",
+                    "B",
+                    "Top-10 = 50% — flagged but improving"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Foundations",
+                    "1.6 Supply chain",
+                    "B",
+                    "Not vertically integrated in glass — reliance on Corning/Prysmian"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Mgmt (P3/core)",
+                    "m1 Strategic clarity",
+                    "A",
+                    "Three-pillar pivot is legible and measurable"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Mgmt",
+                    "m2 Execution track record",
+                    "C",
+                    "New CEO from March 2025 — not yet demonstrated"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Mgmt",
+                    "m3 Capital stewardship",
+                    "C",
+                    "M&A-heavy; PE valuations could inflate"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Mgmt",
+                    "m4 Incentive alignment",
+                    "B",
+                    "No dominant shareholder — both +/- read"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "Rollup: Outputs predominantly B, Foundations mixed with A-rated external tailwinds dragged by C-rated legacy competitive position, Management A/C — strategic clarity is the standout, execution evidence is absent by design (new CEO). Two attrs held as 'unclear' — insufficient evidence at Triaging depth, excluded from weighting."
+            }
+          ]
+        },
+        {
+          "id": "C.II.1",
+          "title": "Case — Outputs",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "iaja": "A",
+              "ratings": [
+                {
+                  "grade": "B",
+                  "attr": "outputs rollup"
+                }
+              ],
+              "text": "Outputs are a classic mix-shift read. Nothing A-rated because the group is still cycle-depressed; nothing below B except the balance sheet which is acquisition-funded. The interesting line is 4.9 (returns on incremental capital) — DC services is genuinely asset-light with ~1% capex and 12-14% NWC, which drops incremental ROIC meaningfully above the group average."
+            },
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "If the DC segment hits the SEK 3bn 2028 target at 15%+ EBITA, group earnings roughly double from the current trough without Fibre needing to do anything dramatic. The thesis does not require a heroic FTTH recovery — it just requires FTTH to stop getting worse."
+            }
+          ]
+        },
+        {
+          "id": "C.II.2",
+          "title": "Case — Foundations",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bluf",
+              "text": "P3+P4 at ESA — full canonical CQ -> RA -> TC structure. PoC content (placeholder text, real signpost coverage)."
+            },
+            {
+              "type": "pillar_block",
+              "pillar_id": "p3",
+              "label": "Fundamental Change",
+              "rating": "B",
+              "blocks": [
+                {
+                  "type": "bluf",
+                  "text": "P3 (Fundamental Change) at ESA — placeholder."
+                },
+                {
+                  "type": "family_block",
+                  "family_id": "IC#1",
+                  "label": "IC#1: Required Case OUTPUTS",
+                  "rating": "B",
+                  "blocks": [
+                    {
+                      "type": "bluf",
+                      "text": "Required Case OUTPUTS synthesis at ESA: Ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore __et dolore__ magna aliqua ut enim."
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "Ipsum dolor sit amet consectetur adipiscing __elit sed__ do eiusmod tempor incididunt ut labore et dolore.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "family",
+                            "ref": "IC#1",
+                            "label": "Required Case OUTPUTS",
+                            "style": "prefix"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "Sed do eiusmod tempor incididunt ut labore et dolore __magna aliqua ut__ enim ad minim veniam.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "RA",
+                            "ref": "IC#1.RA1",
+                            "label": "Sufficient longevity of case (baton)?",
+                            "style": "prefix",
+                            "synthesises": [
+                              "IC#1.CQ1"
+                            ]
+                          }
+                        },
+                        {
+                          "text": "__et dolore__ magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#1.CQ1",
+                            "label": "Three-year, mid-term, triple ratchet step-up?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Et dolore magna aliqua ut enim __ad minim__ veniam quis nostrud exercitation ullamco laboris.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "Minim veniam quis nostrud exercitation ullamco laboris nisi ut __aliquip ex ea__ commodo consequat.",
+                              "iaja": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Duis aute irure dolor in reprehenderit in voluptate velit __esse cillum dolore__ eu fugiat nulla pariatur.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "RA",
+                            "ref": "IC#1.RA2",
+                            "label": "Sufficient growth rate?",
+                            "style": "prefix",
+                            "synthesises": [
+                              "IC#1.CQ2"
+                            ]
+                          }
+                        },
+                        {
+                          "text": "__voluptate velit__ esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#1.CQ2",
+                            "label": "12-20% EPS growth p.a.?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Voluptate velit esse cillum dolore eu fugiat nulla __pariatur excepteur__ sint occaecat cupidatat non.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "Nulla __pariatur excepteur sint__ occaecat cupidatat non proident sunt in culpa qui officia deserunt.",
+                              "iaja": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Mollit anim id est laborum Lorem ipsum dolor sit __amet consectetur adipiscing__ elit sed do eiusmod.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "RA",
+                            "ref": "IC#1.RA3",
+                            "label": "Sufficient improvement in financials?",
+                            "style": "prefix",
+                            "synthesises": [
+                              "IC#1.CQ3"
+                            ]
+                          }
+                        },
+                        {
+                          "text": "__dolor sit__ amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#1.CQ3",
+                            "label": "Margin/growth step-up?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "__dolor sit__ amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "Do eiusmod tempor __incididunt ut labore__ et dolore magna aliqua ut enim ad minim.",
+                              "iaja": "A"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "Veniam quis nostrud exercitation ullamco laboris nisi ut aliquip __ex ea commodo__ consequat duis aute irure.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "RA",
+                            "ref": "IC#1.RA4",
+                            "label": "Sufficient setup fit?",
+                            "style": "prefix",
+                            "synthesises": [
+                              "IC#1.CQ4"
+                            ]
+                          }
+                        },
+                        {
+                          "text": "__ut aliquip__ ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#1.CQ4",
+                            "label": "Fit with required setups?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Ut aliquip __ex ea__ commodo consequat duis aute irure dolor in reprehenderit in voluptate.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "Aute irure dolor in reprehenderit __in voluptate velit__ esse cillum dolore eu fugiat nulla.",
+                              "iaja": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Pariatur excepteur sint occaecat cupidatat non proident sunt in __culpa qui officia__ deserunt mollit anim id.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "RA",
+                            "ref": "IC#1.RA5",
+                            "label": "Goldilocks timeliness?",
+                            "style": "prefix",
+                            "synthesises": [
+                              "IC#1.CQ5",
+                              "IC#1.CQ6"
+                            ]
+                          }
+                        },
+                        {
+                          "text": "__sunt in__ culpa qui officia deserunt mollit anim id est laborum Lorem ipsum dolor sit amet.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#1.CQ5",
+                            "label": "Post CfC clearing / SP turn?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Sunt in culpa qui __officia deserunt__ mollit anim id est laborum Lorem ipsum dolor.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "Anim id est laborum Lorem ipsum dolor __sit amet consectetur__ adipiscing elit sed do.",
+                              "iaja": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Eiusmod tempor incididunt ut labore et dolore magna aliqua __ut enim ad__ minim veniam quis nostrud.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#1.CQ6",
+                            "label": "Less than 6M after turn?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Eiusmod tempor incididunt __ut labore et__ dolore magna aliqua ut enim ad minim veniam.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "Magna aliqua ut enim ad minim __veniam quis__ nostrud exercitation ullamco laboris nisi ut.",
+                              "iaja": "A"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "Aliquip ex ea commodo consequat duis __aute irure__ dolor in reprehenderit in voluptate velit esse cillum.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "RA",
+                            "ref": "IC#1.RA6",
+                            "label": "Sufficiently trackable, updatable, and invalidatable early?",
+                            "style": "prefix",
+                            "synthesises": [
+                              "IC#1.CQ7",
+                              "IC#1.CQ8"
+                            ]
+                          }
+                        },
+                        {
+                          "text": "Irure dolor in reprehenderit in voluptate velit esse cillum __dolore eu fugiat__ nulla pariatur excepteur sint.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#1.CQ7",
+                            "label": "Helpful IR re. operating momentum?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Irure dolor in reprehenderit in __voluptate velit esse__ cillum dolore eu fugiat nulla pariatur.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "Esse cillum dolore eu fugiat nulla pariatur excepteur __sint occaecat__ cupidatat non proident sunt.",
+                              "iaja": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "In culpa qui officia deserunt mollit __anim id__ est laborum Lorem ipsum dolor sit amet consectetur.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#1.CQ8",
+                            "label": "Trackable key leading indicators?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "In culpa qui officia __deserunt mollit__ anim id est laborum Lorem ipsum dolor sit.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "Id est laborum Lorem ipsum dolor sit __amet consectetur adipiscing__ elit sed do eiusmod.",
+                              "iaja": "A"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "Tempor incididunt ut __labore et dolore__ magna aliqua ut enim ad minim veniam quis nostrud exercitation.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "RA",
+                            "ref": "IC#1.RA7",
+                            "label": "Sufficient earnings upgrades / beats?",
+                            "style": "prefix",
+                            "synthesises": [
+                              "IC#1.CQ9",
+                              "IC#1.CQ10"
+                            ]
+                          }
+                        },
+                        {
+                          "text": "Aliqua ut enim ad minim veniam __quis nostrud__ exercitation ullamco laboris nisi ut aliquip ex ea.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#1.CQ9",
+                            "label": "Modal case 18M EPS > guidance > SS?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Aliqua ut enim ad minim veniam __quis nostrud__ exercitation ullamco laboris nisi ut aliquip.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "Nostrud exercitation ullamco laboris nisi ut aliquip ex ea __commodo consequat duis__ aute irure.",
+                              "iaja": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Dolor in reprehenderit __in voluptate velit__ esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#1.CQ10",
+                            "label": "3:1 SS/G EPS raise/lower skew NFY?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Dolor in reprehenderit in voluptate __velit esse cillum__ dolore eu fugiat nulla pariatur excepteur.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "Cillum dolore eu fugiat nulla pariatur excepteur sint __occaecat cupidatat__ non proident sunt in.",
+                              "iaja": "A"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "__culpa qui__ officia deserunt mollit anim id est laborum Lorem ipsum dolor sit amet consectetur adipiscing.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "RA",
+                            "ref": "IC#1.RA8",
+                            "label": "Sufficiently robust / bankable multiple?",
+                            "style": "prefix",
+                            "synthesises": [
+                              "IC#1.CQ11"
+                            ]
+                          }
+                        },
+                        {
+                          "text": "Est laborum Lorem __ipsum dolor sit__ amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#1.CQ11",
+                            "label": "Multiple more company that exogenously driven?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Est laborum Lorem ipsum dolor sit amet __consectetur adipiscing elit__ sed do eiusmod tempor.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "__consectetur adipiscing__ elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                              "iaja": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "__ut enim__ ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "RA",
+                            "ref": "IC#1.RA9",
+                            "label": "Sufficient returns?",
+                            "style": "prefix",
+                            "synthesises": [
+                              "IC#1.CQ12"
+                            ]
+                          }
+                        },
+                        {
+                          "text": "Exercitation ullamco laboris __nisi ut aliquip__ ex ea commodo consequat duis aute irure dolor in reprehenderit.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#1.CQ12",
+                            "label": "More than 20% 3Y TSR?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Exercitation ullamco laboris nisi ut aliquip ex ea commodo __consequat duis aute__ irure dolor.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "Ea commodo __consequat duis__ aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+                              "iaja": "A"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "family_block",
+                  "family_id": "IC#2",
+                  "label": "IC#2: Required Case INPUTS",
+                  "rating": "A",
+                  "blocks": [
+                    {
+                      "type": "bluf",
+                      "text": "Required Case INPUTS synthesis at ESA: Enim ad minim veniam quis nostrud exercitation ullamco __laboris nisi__ ut aliquip ex ea commodo consequat duis aute irure dolor."
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "__enim ad__ minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                          "iaja": "J",
+                          "rating": "A",
+                          "signpost": {
+                            "level": "family",
+                            "ref": "IC#2",
+                            "label": "Required Case INPUTS",
+                            "style": "prefix"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "Ullamco laboris nisi __ut aliquip ex__ ea commodo consequat duis aute irure dolor in reprehenderit in.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "RA",
+                            "ref": "IC#2.RA1",
+                            "label": "Sufficient change forces",
+                            "style": "prefix",
+                            "synthesises": [
+                              "IC#2.CQ1",
+                              "IC#2.CQ2"
+                            ]
+                          }
+                        },
+                        {
+                          "text": "Commodo consequat duis aute irure dolor __in reprehenderit__ in voluptate velit esse cillum dolore eu fugiat.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#2.CQ1",
+                            "label": "External change forces / tailwinds?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Commodo consequat duis aute irure dolor __in reprehenderit__ in voluptate velit esse cillum dolore.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "Reprehenderit in voluptate velit esse cillum dolore eu fugiat __nulla pariatur excepteur__ sint occaecat.",
+                              "iaja": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Cupidatat non proident __sunt in culpa__ qui officia deserunt mollit anim id est laborum Lorem ipsum.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#2.CQ2",
+                            "label": "Internal change forces?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Cupidatat non proident sunt in __culpa qui officia__ deserunt mollit anim id est laborum.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "Officia deserunt mollit anim id est laborum Lorem __ipsum dolor__ sit amet consectetur adipiscing.",
+                              "iaja": "A"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "__elit sed__ do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "RA",
+                            "ref": "IC#2.RA2",
+                            "label": "Sufficient base (to build a strong case on)",
+                            "style": "prefix",
+                            "synthesises": [
+                              "IC#2.CQ3",
+                              "IC#2.CQ4",
+                              "IC#2.CQ5",
+                              "IC#2.CQ6",
+                              "IC#2.CQ7"
+                            ]
+                          }
+                        },
+                        {
+                          "text": "Labore et dolore __magna aliqua ut__ enim ad minim veniam quis nostrud exercitation ullamco laboris nisi.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#2.CQ3",
+                            "label": "Absence of external headwinds?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Labore et dolore magna aliqua ut enim __ad minim veniam__ quis nostrud exercitation ullamco.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "__ad minim__ veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
+                              "iaja": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "__consequat duis__ aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#2.CQ4",
+                            "label": "(Well-invested base?)",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Consequat duis aute irure dolor in __reprehenderit in__ voluptate velit esse cillum dolore eu.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "In voluptate velit esse cillum dolore eu fugiat nulla __pariatur excepteur sint__ occaecat cupidatat.",
+                              "iaja": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Non proident sunt in culpa qui officia deserunt mollit __anim id est__ laborum Lorem ipsum dolor.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#2.CQ5",
+                            "label": "Thesis congruency with past/present?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Non proident sunt in culpa __qui officia deserunt__ mollit anim id est laborum Lorem.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "Deserunt mollit anim id est laborum Lorem ipsum __dolor sit__ amet consectetur adipiscing elit.",
+                              "iaja": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Sed do eiusmod tempor incididunt ut __labore et__ dolore magna aliqua ut enim ad minim veniam.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#2.CQ6",
+                            "label": "Large CfC/mispricing?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Sed do eiusmod tempor __incididunt ut__ labore et dolore magna aliqua ut enim ad.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "Et dolore magna aliqua ut enim ad __minim veniam quis__ nostrud exercitation ullamco laboris.",
+                              "iaja": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Nisi ut aliquip __ex ea commodo__ consequat duis aute irure dolor in reprehenderit in voluptate velit.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#2.CQ7",
+                            "label": "Low trading multiple?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Nisi ut aliquip __ex ea commodo__ consequat duis aute irure dolor in reprehenderit in.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "Duis aute irure dolor in reprehenderit __in voluptate__ velit esse cillum dolore eu fugiat.",
+                              "iaja": "A"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "family_block",
+                  "family_id": "IC#3",
+                  "label": "IC#3: Required Case SETUPS",
+                  "rating": "B",
+                  "blocks": [
+                    {
+                      "type": "bluf",
+                      "text": "Required Case SETUPS synthesis at ESA: __in reprehenderit__ in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt in."
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "__in reprehenderit__ in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "family",
+                            "ref": "IC#3",
+                            "label": "Required Case SETUPS",
+                            "style": "prefix"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "Dolore eu fugiat __nulla pariatur excepteur__ sint occaecat cupidatat non proident sunt in culpa qui officia.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "RA",
+                            "ref": "IC#3.RA1",
+                            "label": "Mis-modelled, high-quality EPS upgrader",
+                            "style": "prefix",
+                            "synthesises": [
+                              "IC#3.CQ1",
+                              "IC#3.CQ2",
+                              "IC#3.CQ3"
+                            ]
+                          }
+                        },
+                        {
+                          "text": "Occaecat cupidatat non proident sunt in __culpa qui__ officia deserunt mollit anim id est laborum Lorem.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ1",
+                            "label": "Is EPS consensus >10% below our estimate?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Occaecat cupidatat non proident sunt in __culpa qui__ officia deserunt mollit anim id est.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "Qui officia deserunt mollit anim id est laborum Lorem __ipsum dolor sit__ amet consectetur.",
+                              "iaja": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Adipiscing elit sed __do eiusmod tempor__ incididunt ut labore et dolore magna aliqua ut enim ad.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ2",
+                            "label": "What specific line items are mis-modelled?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Adipiscing elit sed do eiusmod __tempor incididunt ut__ labore et dolore magna aliqua ut.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "Ut labore et dolore magna aliqua ut enim __ad minim__ veniam quis nostrud exercitation.",
+                              "iaja": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "__ullamco laboris__ nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ3",
+                            "label": "Is the modelling gap structural or one-off?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Ullamco laboris nisi ut __aliquip ex__ ea commodo consequat duis aute irure dolor in.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "Commodo consequat duis aute irure dolor in __reprehenderit in voluptate__ velit esse cillum dolore.",
+                              "iaja": "A"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "Eu fugiat nulla pariatur excepteur sint occaecat cupidatat non __proident sunt in__ culpa qui officia deserunt.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "RA",
+                            "ref": "IC#3.RA2",
+                            "label": "Big demand change-driven EPSU or EPT",
+                            "style": "prefix",
+                            "synthesises": [
+                              "IC#3.CQ4",
+                              "IC#3.CQ5",
+                              "IC#3.CQ6",
+                              "IC#3.CQ7",
+                              "IC#3.CQ8"
+                            ]
+                          }
+                        },
+                        {
+                          "text": "__cupidatat non__ proident sunt in culpa qui officia deserunt mollit anim id est laborum Lorem ipsum.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ4",
+                            "label": "Is there a market-wide demand explosion?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Cupidatat non proident sunt in culpa __qui officia__ deserunt mollit anim id est laborum.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "Officia deserunt mollit anim id est laborum Lorem ipsum __dolor sit amet__ consectetur adipiscing.",
+                              "iaja": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Elit sed do eiusmod tempor incididunt ut labore et __dolore magna aliqua__ ut enim ad minim.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ5",
+                            "label": "Does the company hold a dominant competitive position?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Elit sed do eiusmod tempor __incididunt ut labore__ et dolore magna aliqua ut enim.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "Labore et dolore magna aliqua ut enim ad __minim veniam__ quis nostrud exercitation ullamco.",
+                              "iaja": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Laboris nisi ut aliquip ex ea __commodo consequat__ duis aute irure dolor in reprehenderit in voluptate.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ6",
+                            "label": "Is the business model one-to-many scalable?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Laboris nisi ut aliquip __ex ea__ commodo consequat duis aute irure dolor in reprehenderit.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "Consequat duis aute irure dolor in reprehenderit __in voluptate velit__ esse cillum dolore eu.",
+                              "iaja": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Fugiat nulla pariatur __excepteur sint occaecat__ cupidatat non proident sunt in culpa qui officia deserunt mollit.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ7",
+                            "label": "Is the market an oligopoly (structure AND behaviour)?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Fugiat nulla pariatur __excepteur sint occaecat__ cupidatat non proident sunt in culpa qui officia.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "Non proident sunt in culpa qui __officia deserunt__ mollit anim id est laborum Lorem.",
+                              "iaja": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "__ipsum dolor__ sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ8",
+                            "label": "Is there fixed cost leverage for margin expansion?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Ipsum dolor __sit amet__ consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "Sed do eiusmod tempor incididunt __ut labore et__ dolore magna aliqua ut enim ad.",
+                              "iaja": "A"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "Minim veniam quis nostrud exercitation ullamco laboris nisi ut __aliquip ex ea__ commodo consequat duis aute.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "RA",
+                            "ref": "IC#3.RA3",
+                            "label": "Strong internal changes driven EPSU / EPT",
+                            "style": "prefix",
+                            "synthesises": [
+                              "IC#3.CQ9",
+                              "IC#3.CQ10",
+                              "IC#3.CQ11"
+                            ]
+                          }
+                        },
+                        {
+                          "text": "__nisi ut__ aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate velit.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ9",
+                            "label": "Is management credible on execution?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Nisi ut aliquip ex __ea commodo__ consequat duis aute irure dolor in reprehenderit in.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "Duis aute irure dolor in reprehenderit in __voluptate velit esse__ cillum dolore eu fugiat.",
+                              "iaja": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Nulla pariatur excepteur sint occaecat cupidatat non proident sunt __in culpa qui__ officia deserunt mollit anim.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ10",
+                            "label": "What is the specific internal change programme?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Nulla pariatur excepteur __sint occaecat cupidatat__ non proident sunt in culpa qui officia deserunt.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "Proident sunt in culpa qui officia __deserunt mollit__ anim id est laborum Lorem ipsum.",
+                              "iaja": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Dolor sit amet consectetur adipiscing elit __sed do__ eiusmod tempor incididunt ut labore et dolore magna.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ11",
+                            "label": "What is the track record of delivery so far?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Dolor sit __amet consectetur__ adipiscing elit sed do eiusmod tempor incididunt ut labore et.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "Do eiusmod tempor incididunt ut __labore et dolore__ magna aliqua ut enim ad minim.",
+                              "iaja": "A"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "Veniam quis nostrud __exercitation ullamco laboris__ nisi ut aliquip ex ea commodo consequat duis aute irure.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "RA",
+                            "ref": "IC#3.RA4",
+                            "label": "Oversold/rebounding quality compounder",
+                            "style": "prefix",
+                            "synthesises": [
+                              "IC#3.CQ12",
+                              "IC#3.CQ13",
+                              "IC#3.CQ14"
+                            ]
+                          }
+                        },
+                        {
+                          "text": "Ut aliquip ex ea commodo consequat __duis aute__ irure dolor in reprehenderit in voluptate velit esse.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ12",
+                            "label": "Is the negative sentiment idiosyncratic or sector-wide?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Ut aliquip ex ea __commodo consequat__ duis aute irure dolor in reprehenderit in voluptate.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "Aute irure dolor in reprehenderit in voluptate __velit esse cillum__ dolore eu fugiat nulla.",
+                              "iaja": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Pariatur excepteur sint __occaecat cupidatat non__ proident sunt in culpa qui officia deserunt mollit anim id.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ13",
+                            "label": "Is the underlying business quality intact despite sentiment?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Pariatur excepteur sint __occaecat cupidatat non__ proident sunt in culpa qui officia deserunt mollit.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "Sunt in culpa qui officia deserunt __mollit anim__ id est laborum Lorem ipsum dolor.",
+                              "iaja": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "__sit amet__ consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ14",
+                            "label": "What specific catalyst clears the overhang?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Sit amet __consectetur adipiscing__ elit sed do eiusmod tempor incididunt ut labore et dolore.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "Eiusmod tempor incididunt ut labore __et dolore magna__ aliqua ut enim ad minim veniam.",
+                              "iaja": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex __ea commodo consequat__ duis aute irure dolor.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "RA",
+                            "ref": "IC#3.RA5",
+                            "label": "Huge CfC (Cause for concern) clearing event in solid quality",
+                            "style": "prefix",
+                            "synthesises": [
+                              "IC#3.CQ15",
+                              "IC#3.CQ16"
+                            ]
+                          }
+                        },
+                        {
+                          "text": "__aliquip ex__ ea commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ15",
+                            "label": "Is there a specific clearing event identified?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Aliquip ex ea commodo __consequat duis__ aute irure dolor in reprehenderit in voluptate velit.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "Irure dolor in reprehenderit in voluptate velit __esse cillum dolore__ eu fugiat nulla pariatur.",
+                              "iaja": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Excepteur sint occaecat cupidatat non proident sunt in culpa __qui officia deserunt__ mollit anim id est.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ16",
+                            "label": "Is business quality sufficient to justify rebound post-clear",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Excepteur sint occaecat __cupidatat non proident__ sunt in culpa qui officia deserunt mollit anim.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "In culpa qui officia deserunt mollit __anim id__ est laborum Lorem ipsum dolor sit.",
+                              "iaja": "A"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "Amet consectetur adipiscing elit sed do __eiusmod tempor__ incididunt ut labore et dolore magna aliqua ut.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "RA",
+                            "ref": "IC#3.RA6",
+                            "label": "Mean-reverting quality business post-temporary headwind",
+                            "style": "prefix",
+                            "synthesises": [
+                              "IC#3.CQ17",
+                              "IC#3.CQ18",
+                              "IC#3.CQ19"
+                            ]
+                          }
+                        },
+                        {
+                          "text": "Tempor incididunt ut labore et dolore magna aliqua ut __enim ad minim__ veniam quis nostrud exercitation.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ17",
+                            "label": "Is the headwind genuinely temporary?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Tempor incididunt ut labore et __dolore magna aliqua__ ut enim ad minim veniam quis.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "Aliqua ut enim ad minim veniam quis nostrud __exercitation ullamco__ laboris nisi ut aliquip.",
+                              "iaja": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Ex ea commodo consequat duis aute __irure dolor__ in reprehenderit in voluptate velit esse cillum dolore.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ18",
+                            "label": "What is the normalised earnings level to revert to?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Ex ea commodo consequat __duis aute__ irure dolor in reprehenderit in voluptate velit esse.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "Dolor in reprehenderit in voluptate velit esse __cillum dolore eu__ fugiat nulla pariatur excepteur.",
+                              "iaja": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Sint occaecat cupidatat __non proident sunt__ in culpa qui officia deserunt mollit anim id est laborum.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ19",
+                            "label": "Is the quality of the franchise intact through the headwind?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Sint occaecat cupidatat __non proident sunt__ in culpa qui officia deserunt mollit anim id.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "Culpa qui officia deserunt mollit anim __id est__ laborum Lorem ipsum dolor sit amet.",
+                              "iaja": "A"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "__consectetur adipiscing__ elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "RA",
+                            "ref": "IC#3.RA7",
+                            "label": "Trough-on-trough turn in solid quality cyclical",
+                            "style": "prefix",
+                            "synthesises": [
+                              "IC#3.CQ20",
+                              "IC#3.CQ21",
+                              "IC#3.CQ22"
+                            ]
+                          }
+                        },
+                        {
+                          "text": "Incididunt ut labore __et dolore magna__ aliqua ut enim ad minim veniam quis nostrud exercitation ullamco.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ20",
+                            "label": "Are earnings genuinely at trough?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Incididunt ut labore et dolore __magna aliqua ut__ enim ad minim veniam quis nostrud.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "Ut enim ad minim veniam quis nostrud exercitation __ullamco laboris__ nisi ut aliquip ex.",
+                              "iaja": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "__ea commodo__ consequat duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ21",
+                            "label": "Is business quality sufficient to hold through the full cycl",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Ea commodo consequat duis __aute irure__ dolor in reprehenderit in voluptate velit esse cillum.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "In reprehenderit in voluptate velit esse cillum __dolore eu fugiat__ nulla pariatur excepteur sint.",
+                              "iaja": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Occaecat cupidatat non proident sunt in culpa qui officia __deserunt mollit anim__ id est laborum Lorem.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ22",
+                            "label": "What leading indicators confirm the cyclical turn?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Occaecat cupidatat non __proident sunt in__ culpa qui officia deserunt mollit anim id est.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "Qui officia deserunt mollit anim id __est laborum__ Lorem ipsum dolor sit amet consectetur.",
+                              "iaja": "A"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "Adipiscing elit sed do eiusmod tempor __incididunt ut__ labore et dolore magna aliqua ut enim ad.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "RA",
+                            "ref": "IC#3.RA8",
+                            "label": "Does not overlap with unacceptable setup",
+                            "style": "prefix",
+                            "synthesises": [
+                              "IC#3.CQ23"
+                            ]
+                          }
+                        },
+                        {
+                          "text": "Ut labore et dolore magna aliqua ut enim ad __minim veniam quis__ nostrud exercitation ullamco laboris.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ23",
+                            "label": "Does the case avoid any of the unacceptable setup patterns?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Ut labore et dolore magna __aliqua ut enim__ ad minim veniam quis nostrud exercitation.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "Enim ad minim veniam quis nostrud exercitation ullamco __laboris nisi__ ut aliquip ex ea.",
+                              "iaja": "A"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "Commodo consequat duis aute irure dolor __in reprehenderit__ in voluptate velit esse cillum dolore eu fugiat.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "RA",
+                            "ref": "IC#3.RA9",
+                            "label": "Does not overlap with false friend setup",
+                            "style": "prefix",
+                            "synthesises": [
+                              "IC#3.CQ24"
+                            ]
+                          }
+                        },
+                        {
+                          "text": "Reprehenderit in voluptate velit esse cillum dolore eu fugiat __nulla pariatur excepteur__ sint occaecat cupidatat non.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ24",
+                            "label": "Does the case avoid any of the false friend setup patterns?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Reprehenderit in voluptate velit esse cillum dolore __eu fugiat nulla__ pariatur excepteur sint occaecat.",
+                              "iaja": "I"
+                            },
+                            {
+                              "text": "__eu fugiat__ nulla pariatur excepteur sint occaecat cupidatat non proident sunt in culpa qui.",
+                              "iaja": "A"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "summary",
+              "text": "PoC summary at ESA: structure mirrors canonical pillar tree; rated tiers and signpost coverage demonstrate the target shape."
+            }
+          ]
+        },
+        {
+          "id": "C.II.3",
+          "title": "Case — Checks",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "text": "Checks clear at Triaging depth. No aggressive accounting flagged in a first-pass read of Q4-25 and 2025 annual disclosures. Segment reporting is adequate. One bearish short report identified (Triaging/10 covers this at ESA depth) — standard FTTH-bear thesis, partly priced, will be pressure-tested at ESA."
+            },
+            {
+              "type": "prose",
+              "iaja": "I",
+              "text": "Incident history: no material incident flagged. Governance: Swedish listing, no dominant shareholder — double-edged (stewardship thin; activism/takeout optionality up)."
+            }
+          ]
+        },
+        {
+          "id": "C.II.4",
+          "title": "Case — Fitness-for-fighting",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "iaja": "A",
+              "text": "Catalyst density is high for a small-cap Nordic industrial. Four identifiable events in the next 12m: DC Q1-26 print (organic trajectory from +62% Q4 base), BEAD state-level disbursements ramping, Harsh Environment project lumpiness resolving, performance programme SEK 120m run-rate landing end-Q1."
+            },
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "Liquidity is the mismatch — EUR 0.8bn market cap, sub-billion. Reassessment trigger flag in master data explicitly references Fasadgruppen/XVIVO lessons. Size starter position accordingly."
+            },
+            {
+              "type": "callout",
+              "tone": "gate",
+              "iaja": "J",
+              "text": "Richard gate question: is small-cap/sub-EUR 1bn liquidity a dealbreaker for this name, or a sizing constraint? This is a pre-ESA decision, not an ESA-to-DD decision."
+            }
+          ]
+        },
+        {
+          "id": "C.II.5",
+          "title": "Case — Setup classification",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "callout",
+              "tone": "classification",
+              "iaja": "J",
+              "text": "Classification: Demand-Driven EPSU/EPT (primary) + Corporate Change EPSU/EPT (nascent, secondary). Maturity: input confirmed + early output. Lineage: rhymes with multi-segment mix-shift pivots historically (industrial restructurings where a new division's incremental economics rerate the whole group). False-friend risk rated low-moderate — the distinct risk is reading DC acceleration as a durable moat when it may be a hyperscaler-capex-cycle phenomenon."
+            }
+          ]
+        }
+      ]
+    },
+    "D": {
+      "letter": "D",
+      "title": "COMPONENTS",
+      "applicable": true,
+      "inline_verdict": "Mechanics legible; two ACHs around DC cyclicality to test at ESA",
+      "default_open": false,
+      "subsections": [
+        {
+          "id": "D.I",
+          "title": "Mechanics (KDICs, KHFs, KCs, KRs, KPOs)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "KDIC-1: DC segment scaling to SEK 3bn by 2028. THE driver — this is the fulcrum.",
+                  "sub": [
+                    {
+                      "iaja": "A",
+                      "text": "Base case: SEK 3bn at 15% EBITA → ~SEK 450m segment EBITA, roughly doubles current group EBITA from today's run-rate."
+                    },
+                    {
+                      "iaja": "A",
+                      "text": "Bear case: hyperscaler pause stalls DC at SEK 1.5bn — group mix-shift story breaks, stock becomes pure Fibre cyclical."
+                    },
+                    {
+                      "iaja": "A",
+                      "text": "Bull case: DC beats at SEK 4bn + HE compounds → group re-rates to tech-services multiple."
+                    }
+                  ]
+                },
+                {
+                  "iaja": "J",
+                  "text": "KDIC-2: BEAD programme materialisation — secondary driver, triggers Fibre Solutions recovery.",
+                  "sub": [
+                    {
+                      "iaja": "I",
+                      "text": "$42.5bn federal subsidy, 74% of early state allocations still fibre despite rule change."
+                    },
+                    {
+                      "iaja": "A",
+                      "text": "Inflection moved to H2-26 per management. If slips to 2027, Fibre compresses further."
+                    }
+                  ]
+                },
+                {
+                  "iaja": "J",
+                  "text": "KHF-1: AI/hyperscaler capex cycle (structural for N1-3Y; cyclicality risk past that). KHF-2: NATO defence budgets supporting Harsh Environment."
+                },
+                {
+                  "iaja": "J",
+                  "text": "KC-1: Does DC niche moat (end-to-end + installer time savings) hold if Corning/Prysmian pivot in?",
+                  "sub": [
+                    {
+                      "text": "Highest-priority ESA question. If answer is no, the setup thesis collapses to FTTH-redux."
+                    }
+                  ]
+                },
+                {
+                  "iaja": "J",
+                  "text": "KR-1: Customer concentration — top 10 = ~50%. KR-2: Supply chain (not vertically integrated in glass). KR-3: Integration complexity from the M&A engine."
+                },
+                {
+                  "iaja": "J",
+                  "text": "KPO-1: CEO execution proof point (first 12m); KPO-2: M&A pipeline delivery at disciplined multiples; KPO-3: BEAD state-level award flow."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "D.II",
+          "title": "Violations (ACHs, exit triggers, expected negatives)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "ACH-1 (active): DC 'boom-and-bust' parallel to FTTH. Multiple sell-side notes explicitly flag this. Must stress-test at ESA."
+                },
+                {
+                  "iaja": "J",
+                  "text": "ACH-2 (active): LEO/FWA substitution threat to FTTH baseline. Satellite capacity projected to 1Tbps/sat on Starlink Gen 3."
+                },
+                {
+                  "text": "Exit triggers per master data: Minervini <7/8 sustained; DC quarterly growth <20% x2 consecutive; BEAD cancelled/delayed >24m; value-destructive M&A."
+                },
+                {
+                  "text": "Expected negatives: 1-2 quarters of DC growth deceleration are very likely across a 24m hold — not in themselves thesis-breaking."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "D.III",
+          "title": "Open topics (KOQs, KAs)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "text": "KOQ-1: Is DC niche moat durable against Corning/Prysmian tier-1 incursion? (ESA top-priority)"
+                },
+                {
+                  "text": "KOQ-2: Fasadgruppen/XVIVO comparison — small-cap liquidity comfort for Richard's portfolio?"
+                },
+                {
+                  "text": "KOQ-3: M&A pipeline quality — are targets actually available at 5-7x EBITDA in 2026, or has PE caught on?"
+                },
+                {
+                  "text": "KA-1: Q14 Key Drivers Assessment (C+AS) — the explicit next step from master data actions."
+                },
+                {
+                  "text": "KA-2: Pressure-test the 'DC = FTTH-redux' bear thesis in a directed AS deep-research query."
+                },
+                {
+                  "text": "KA-3: Run small-cap liquidity overlay — 3m ADV, ADR/GDR availability, borrow, drawdown tolerance."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "E": {
+      "letter": "E",
+      "title": "ACTIONS",
+      "applicable": true,
+      "inline_verdict": "Progress to ESA subject to small-cap gate",
+      "default_open": true,
+      "subsections": [
+        {
+          "id": "E.I",
+          "title": "Summary judgement",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "callout",
+              "tone": "judgement",
+              "iaja": "J",
+              "text": "Progress to ESA. Setup is legible (Demand-Driven EPSU/EPT with Corporate Change overlay), PRIMARY driver is clean and measurable (DC scaling), attribute ratings are mixed B-heavy with A-rated external tailwinds. One gate before ESA: Richard to confirm small-cap comfort given Fasadgruppen/XVIVO experience."
+            },
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "If the DC moat question (KC-1) comes back negative at ESA — i.e. end-to-end differentiation does not survive Corning/Prysmian tier-1 pivot — park. This is a binary check the ESA work must answer."
+            }
+          ]
+        },
+        {
+          "id": "E.II",
+          "title": "If compelling",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "text": "Initial size: 1.0-1.5% (half a standard starter given EUR 0.8bn market cap)."
+                },
+                {
+                  "text": "Build to 2.5-3% on first confirming DC print + M&A deal at claimed multiples."
+                },
+                {
+                  "text": "Pair-trade optionality against a large-cap fibre peer if available — defer decision to ESA."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "E.III",
+          "title": "If uncompelling",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "text": "Park [-] with 6m re-review trigger on next two DC prints + BEAD disbursement trajectory."
+                },
+                {
+                  "text": "Keep CARLB / CRBN / HTWS as alternative fibre-adjacent infrastructure expressions (no gap in coverage)."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "F": {
+      "letter": "F",
+      "title": "APPENDICES",
+      "applicable": true,
+      "inline_verdict": "Light at Triaging per stage-depth matrix",
+      "default_open": false,
+      "subsections": [
+        {
+          "id": "F.I",
+          "title": "Basic checks",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "kv_grid",
+              "title": "Basic checks",
+              "rows": [
+                {
+                  "label": "Listing",
+                  "value": "Stockholm (Nasdaq First North Premier)",
+                  "delta": "HTRO"
+                },
+                {
+                  "label": "Market cap",
+                  "value": "EUR 0.8bn / SEK ~9.4bn",
+                  "delta": "sub-billion — liquidity gate"
+                },
+                {
+                  "label": "Sector",
+                  "value": "Technology Hardware & IT / Fibre Optics",
+                  "delta": ""
+                },
+                {
+                  "label": "Stage in master DB",
+                  "value": "ESA (per ic-ratings-current.json)",
+                  "delta": "Triaging memo produced retrospectively for system build-out"
+                },
+                {
+                  "label": "Next event",
+                  "value": "Q1-26 interim report (early May)",
+                  "delta": "first post-2025 annual print"
+                },
+                {
+                  "label": "Source queries run",
+                  "value": "11 queries across IG/Triaging/ESA",
+                  "delta": "~69k words in Files/HTRO/"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "F.II",
+          "title": "Supplementary",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "text": "Supplementary at Triaging is intentionally thin. ESA will add: DC-moat pressure test, BEAD programme scenario tree, hyperscaler capex-cycle analogy to FTTH with explicit bear-case construction, M&A pipeline quality deep-dive, Fasadgruppen/XVIVO liquidity comparable overlay. DD will add: three-statement model, scenario-weighted valuation, reverse-DCF market-implied DC 2028 trajectory, Harsh Environment project backlog decomposition."
+            },
+            {
+              "type": "prose",
+              "iaja": "I",
+              "text": "Source material for this memo: Files/HTRO/index.json (11 queries, ~69,000 words). Primary feeds for Triaging: IG/01-BD (Business Description, 6.9k w), IG/02-CF (Fundamental Change Forces, 6.4k w), Triaging/06-SS (Sell-Side Commentary, 17.4k w), Triaging/07-KD (Key Drivers Assessment, 4.6k w). Attribute ratings sourced from databases/detail/p3-fundamental-change.json. Setup classification and actions from databases/master/ic-ratings-current.json."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

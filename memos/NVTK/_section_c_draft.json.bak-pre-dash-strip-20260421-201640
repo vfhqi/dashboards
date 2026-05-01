@@ -1,0 +1,413 @@
+{
+  "letter": "C",
+  "title": "REQUIRED ATTRIBUTES",
+  "applicable": true,
+  "inline_verdict": "6-pillar FCS case — B/B/B/C/A/B with P2 not yet assessed",
+  "default_open": true,
+  "subsections": [
+    {
+      "id": "C.I",
+      "title": "Ratings",
+      "heading_level": 3,
+      "blocks": [
+        {
+          "type": "ratings_table",
+          "id": "C.I.1",
+          "title": "Ratings — all pillars, AFs, attributes",
+          "word_target": 0,
+          "has_toggle": true,
+          "toggle_labels": ["RATINGS ONLY", "SUMMARIES"],
+          "default_mode": "SUMMARIES",
+          "default_expansion": "full",
+          "rows": [
+            {"level": "pillar", "id": "P1", "label": "Technical Momentum", "rating": "B", "summary": "Stage 2 advance intact; 7/8 Minervini passes; 21D EMA holds on three pullbacks.", "nature": "formulaic"},
+            {"level": "pillar", "id": "P2", "label": "Fit with Market Paradigm", "rating": "—", "summary": "Not yet assessed at Triaging; Iran risk-off overlay still being mapped.", "nature": "qualitative"},
+            {"level": "pillar", "id": "P3", "label": "Fundamental Change — Investment Case", "rating": "B", "summary": "Demand-driven EPSU validated by +34% orders and margin trajectory; IR untested.", "nature": "qualitative"},
+              {"level": "af", "id": "P3.AF1", "label": "AF#1 Required Case Outputs", "rating": "B", "summary": "Triple ratchet drives 16% EPS CAGR; navigability partial."},
+              {"level": "af", "id": "P3.AF2", "label": "AF#2 Required Case Inputs", "rating": "A", "summary": "Structural multi-year demand tailwind; EU Chips + US IRA + capacity shortage."},
+              {"level": "af", "id": "P3.AF3", "label": "AF#3 Required Case Setups", "rating": "B", "summary": "Demand-driven EPSU dominant; internal change supports — not a false-friend pattern."},
+            {"level": "pillar", "id": "P4", "label": "Building Blocks — Robustness", "rating": "C", "summary": "Foundations good; guardrails compromised by complexity; late-cycle concerns unresolved.", "nature": "qualitative"},
+              {"level": "af", "id": "P4.AF1", "label": "AF#1 Simplicity Guardrails", "rating": "C", "summary": "3 fulcrum drivers (vs ≤2 limit); 14 geos (vs ≤10); guidance optics tight."},
+              {"level": "af", "id": "P4.AF2", "label": "AF#2 Foundation Quality", "rating": "B", "summary": "New CEO executing; advantaged business; industry structure solid but VC dynamics mid-cycle."},
+              {"level": "af", "id": "P4.AF3", "label": "AF#3 Fit for Market Paradigm", "rating": "B", "summary": "Cyclical exposure a concern in risk-off regime but AI-capex tailwind offsets."},
+              {"level": "af", "id": "P4.AF4", "label": "AF#4 Seek-to-Avoid", "rating": "—", "summary": "Not yet scored — wide-skew and SHMLP checks deferred to ESA."},
+              {"level": "af", "id": "P4.AF5", "label": "AF#5 Size-Limiting", "rating": "—", "summary": "Not yet scored."},
+              {"level": "af", "id": "P4.AF6", "label": "AF#6 Invalidating", "rating": "—", "summary": "Not yet scored — 10 checks deferred to ESA."},
+              {"level": "af", "id": "P4.AF7", "label": "AF#7 Congruency with Recent Outcomes", "rating": "—", "summary": "Partial — technicals + SS congruent; peers + company delivery not yet checked."},
+              {"level": "af", "id": "P4.AF8", "label": "AF#8 Nice-to-Have", "rating": "—", "summary": "Not yet scored."},
+            {"level": "pillar", "id": "P5", "label": "SS Earnings Momentum", "rating": "A", "summary": "Positive revisions across EPS/EBITDA/Rev/PTs/%buy over L3M; 3:1 skew favourable.", "nature": "momentum"},
+            {"level": "pillar", "id": "P6", "label": "Valuation in Range", "rating": "B", "summary": "2YF P/E ~14.2x, mid of 10-18x five-year range; TSR DuPont (A.II.3) supportive.", "nature": "valuation"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C.II",
+      "title": "Investment case write-up",
+      "heading_level": 3,
+      "blocks": [
+        {
+          "type": "topic",
+          "id": "C.II.1",
+          "title": "Technical Strength (P1)",
+          "word_target": 1500,
+          "bluf": "**Technicals support entry with residual caveats.** Stage 2 advance intact on volume; 7/8 Minervini passes; three pullbacks to 21D EMA held; hard stop at 50D (EUR 42.30) gives 12% risk. #J",
+          "sub_topics": [
+            {
+              "id": "C.II.1.A.1",
+              "title": "Minervini Pair 1 — Price / MA position (dims 1+6)",
+              "word_target": 150,
+              "bullets": [
+                {"text": "**Price sits above both 200D and 50D MAs** — dims 1 and 6 both PASS. #A", "iaja": "A", "children": [
+                  {"text": "Last EUR 61.20 vs 200D EUR 48.95 (+25%) and 50D EUR 56.41 (+8%). #I", "iaja": "I"},
+                  {"text": "Distance from 50D healthy for continuation; (i) not extended, (ii) not compressed. #A", "iaja": "A"}
+                ]}
+              ],
+              "summary_text": "Pair 1 clean pass; no warning flags on basic MA positioning."
+            },
+            {
+              "id": "C.II.1.A.2",
+              "title": "Minervini Pair 2 — MA stacking (dims 4+5)",
+              "word_target": 150,
+              "bullets": [
+                {"text": "**Golden-cross alignment holds** — 150D > 200D and 50D > 150D both PASS. #A", "iaja": "A", "children": [
+                  {"text": "50D EUR 56.41 > 150D EUR 52.08 > 200D EUR 48.95. #I", "iaja": "I"},
+                  {"text": "MA ordering is the structural signature of Stage 2 — confirms institutional trend. #J", "iaja": "J"}
+                ]}
+              ],
+              "summary_text": "Pair 2 clean pass; stack integrity is a durable bull-regime marker."
+            },
+            {
+              "id": "C.II.1.A.3",
+              "title": "Minervini Pair 3 — 200D trajectory (dims 2+3)",
+              "word_target": 150,
+              "bullets": [
+                {"text": "**200D trending up for ≥1M and price > 150D** — partial pass, the only miss in the 8. #A", "iaja": "A", "children": [
+                  {"text": "(i) 200D slope positive — EUR 48.22 one month ago → EUR 48.95 today. #I", "iaja": "I"},
+                  {"text": "(ii) dim 2 flagged INCONSISTENT — 150D has not stayed consistently above 200D for full L12M window. #I", "iaja": "I"},
+                  {"text": "Concern: reflects base-building volatility during last correction; no structural bear read from it. #A", "iaja": "A"}
+                ]}
+              ],
+              "summary_text": "Pair 3 1.5/2 — a near-miss rather than a material flag; tracking for next qualifying month."
+            },
+            {
+              "id": "C.II.1.A.4",
+              "title": "Minervini Pair 4 — Range positioning (dims 7+8)",
+              "word_target": 150,
+              "bullets": [
+                {"text": "**Stock well inside Minervini's preferred window** — both dims PASS. #A", "iaja": "A", "children": [
+                  {"text": "52W low EUR 34.10 → +79% above (dim 7 needs >30%). #I", "iaja": "I"},
+                  {"text": "52W high EUR 63.20 → −3.2% below (dim 8 needs within 25%). #I", "iaja": "I"},
+                  {"text": "**Contra:** +47% YTD may reflect front-running of order data — late-entry timing risk. #A", "iaja": "A"}
+                ]}
+              ],
+              "summary_text": "Pair 4 clean pass but flagged for late-entry — size smaller on first slice."
+            },
+            {
+              "id": "C.II.1.B",
+              "title": "Relative Strength analysis",
+              "word_target": 400,
+              "bullets": [
+                {"text": "**RS positive across all four reference universes.** #J", "iaja": "J", "children": [
+                  {"text": "Stock +47% YTD vs STOXX 600 Industrials +16% — 31ppts outperformance. #I", "iaja": "I"},
+                  {"text": "Sector (Industrials/Automation) leads market 8 of last 12 weeks. #I", "iaja": "I"},
+                  {"text": "Industry (Factory Automation) within top quartile of STOXX 600 Industry RS. #I", "iaja": "I"},
+                  {"text": "RS Rank 62 (provisional) — below preferred ≥70 — only soft caveat. #A", "iaja": "A"}
+                ]},
+                {"text": "**Cross-reference: RS Breadth dashboard** currently broken — separate fix brief pending. #OQ", "iaja": "OQ", "children": [
+                  {"text": "Placeholder: once live, will surface sector-vs-market and industry-vs-sector RS time series. #I", "iaja": "I"},
+                  {"text": "At Triaging, bilateral stock-vs-index RS is sufficient; dashboard will deepen ESA assessment. #A", "iaja": "A"}
+                ]},
+                {"text": "**Timeframe consistency matters** — 1W, 1M, 3M all positive. #A", "iaja": "A", "children": [
+                  {"text": "1M excess return only marginally positive — the single reason P1 is B not A. #I", "iaja": "I"}
+                ]}
+              ],
+              "summary_text": "RS is the standout P1 positive but RS Rank sub-70 and sub-dashboard unavailability keep rating at B."
+            },
+            {
+              "id": "C.II.1.C",
+              "title": "Months qualifying in L12M",
+              "word_target": 200,
+              "bullets": [
+                {"text": "**9 of last 12 months qualified** on the 8-point screen. #A", "iaja": "A", "children": [
+                  {"text": "3 missed months were during Q4-25 correction; stock re-qualified Jan-26 and has held monthly since. #I", "iaja": "I"},
+                  {"text": "Re-qualification on volume breakout mid-Mar-26 adds weight to Stage 2 call. #A", "iaja": "A"}
+                ]},
+                {"text": "**Trajectory improving** — last 3M scored 7/8, 8/8, 8/8 — consistent with tightening technical posture. #J", "iaja": "J"}
+              ],
+              "summary_text": "Qualifying months density is a B+ read; trend of improvement matters more than absolute count."
+            },
+            {
+              "id": "C.II.1.D",
+              "title": "Healthy pullback tests in current run",
+              "word_target": 250,
+              "bullets": [
+                {"text": "**Three pullbacks to 21D EMA since mid-Mar breakout — all held.** #J", "iaja": "J", "children": [
+                  {"text": "Test 1: 27-Mar-26 — (i) −6.4% depth, (ii) 4 days, (iii) volume dry-up on decline, (iv) held 21D. #I", "iaja": "I"},
+                  {"text": "Test 2: 08-Apr-26 — (i) −4.1%, (ii) 3 days, (iii) low volume, (iv) bounced off 21D intraday. #I", "iaja": "I"},
+                  {"text": "Test 3: 16-Apr-26 — (i) −5.2%, (ii) 2 days, (iii) volume light, (iv) 21D + trendline coincident support. #I", "iaja": "I"}
+                ]},
+                {"text": "**No 50D test yet** — hard stop defined but untouched; implies institutional bid sitting above the stop. #A", "iaja": "A", "children": [
+                  {"text": "Contra: could mean narrow base of holders; a single distribution day could widen pullback materially. #A", "iaja": "A"}
+                ]}
+              ],
+              "summary_text": "Pullback pattern is the cleanest bullish signal in P1 — institutional accumulation signature."
+            }
+          ],
+          "summary": "P1 rated **B** — Minervini 7/8, RS positive across universes, pullback discipline intact. Not A because (i) 1M excess return marginal, (ii) dim 2 consistency miss, (iii) RS Rank 62 sub-70."
+        },
+        {
+          "type": "topic",
+          "id": "C.II.2",
+          "title": "Fundamental Investment Case (P3 + P4)",
+          "word_target": 1500,
+          "bluf": "**Demand-driven EPSU validated at Triaging depth by order intake (+34%) and margin trajectory (+400bps). Building Blocks mixed: foundations good, guardrails compromised by complexity.** #J",
+          "sub_topics": [
+            {
+              "id": "C.II.2.1",
+              "title": "P3 — Fundamental Change",
+              "word_target": 600,
+              "bluf": "**Case outputs directionally strong, inputs structurally robust, setup fits a primary playbook.** #J",
+              "sub_sub_topics": [
+                {
+                  "id": "C.II.2.1.1",
+                  "title": "AF#1 Required Case Outputs",
+                  "word_target": 250,
+                  "rating": "B",
+                  "bullets": [
+                    {"text": "**Triple ratchet step-up signposted** — EPS path EUR 2.80 → 4.35 (16% CAGR). #A", "iaja": "A", "children": [
+                      {"text": "Mix + volume + price all contribute; no single-lever fragility. #I", "iaja": "I"},
+                      {"text": "18M EPS > guidance > SS framework intact — guidance raised Feb-26. #I", "iaja": "I"}
+                    ]},
+                    {"text": "**Trackable key leading indicators present** — book-to-bill, Automation order intake, chip-fab capex. #A", "iaja": "A"},
+                    {"text": "**Concern: >20% 3Y TSR target implies no multiple compression** — unlikely in risk-off regime. #A", "iaja": "A"}
+                  ],
+                  "summary_text": "Outputs AF rated B — navigability partial pending IR test."
+                },
+                {
+                  "id": "C.II.2.1.2",
+                  "title": "AF#2 Required Case Inputs",
+                  "word_target": 200,
+                  "rating": "A",
+                  "bullets": [
+                    {"text": "**External change forces — rated A.** EU Chips Act EUR 43bn + US IRA + 15Y-high manufacturing vacancy. #A", "iaja": "A"},
+                    {"text": "**Internal change forces — rated B.** New CEO (appointed Sep-25); portfolio refocus on Automation division. #A", "iaja": "A"},
+                    {"text": "**Low trading multiple** — 2YF P/E 14.2x vs 5Y average 15.8x. #I", "iaja": "I"}
+                  ],
+                  "summary_text": "Inputs AF rated A — the strongest sub-pillar; structural multi-year demand thesis."
+                },
+                {
+                  "id": "C.II.2.1.3",
+                  "title": "AF#3 Required Case Setups",
+                  "word_target": 150,
+                  "rating": "B",
+                  "bullets": [
+                    {"text": "**Primary setup: Demand-Driven EPSU.** Secondary overlay: Internal Changes EPSU. Dual-setup provides redundancy. #J", "iaja": "J"},
+                    {"text": "No overlap with false-friend setups (e.g. cyclical peak disguised as structural). #A", "iaja": "A"}
+                  ],
+                  "summary_text": "Setup AF rated B — fit clean; dual-setup gives resilience."
+                }
+              ],
+              "summary": "P3 rated B — order book + margin trajectory the anchor points; order-to-revenue conversion lag means P&L validation is H2-26."
+            },
+            {
+              "id": "C.II.2.2",
+              "title": "P4 — Building Blocks",
+              "word_target": 900,
+              "bluf": "**Mixed AF scorecard.** Foundations and Fit rated B; Guardrails rated C (complexity); 5 of 8 AFs not yet scored at Triaging. #J",
+              "sub_sub_topics": [
+                {
+                  "id": "C.II.2.2.1",
+                  "title": "AF#1 Simplicity Guardrails",
+                  "word_target": 180,
+                  "rating": "C",
+                  "bullets": [
+                    {"text": "**Rated C — guardrails compromised.** #J", "iaja": "J", "children": [
+                      {"text": "(i) 3 fulcrum drivers vs ≤2 preferred; (ii) 14 geos vs ≤10 preferred; (iii) conservative guidance only partially met. #A", "iaja": "A"},
+                      {"text": "Strategy-to-EPS mechanism traceable; VC/Co inputs-to-EPS mechanism thinly modelled at Triaging. #I", "iaja": "I"}
+                    ]}
+                  ],
+                  "summary_text": "C rating driven by driver count and geographic spread — not fatal but a watchpoint for ESA."
+                },
+                {
+                  "id": "C.II.2.2.2",
+                  "title": "AF#2 Foundation Quality",
+                  "word_target": 200,
+                  "rating": "B",
+                  "bullets": [
+                    {"text": "**Operator, business, VC all rated positively.** #J", "iaja": "J", "children": [
+                      {"text": "New CEO executing; 7-month track record consistent with stated plan. #A", "iaja": "A"},
+                      {"text": "Advantaged business — top-3 market share in 4 of 6 Automation sub-segments. #I", "iaja": "I"},
+                      {"text": "VC dynamics: mid-cycle, with supplier consolidation trend favourable to incumbents. #A", "iaja": "A"}
+                    ]}
+                  ],
+                  "summary_text": "Foundation Quality rated B — solid without being outstanding; CEO still on shorter leash."
+                },
+                {
+                  "id": "C.II.2.2.3",
+                  "title": "AF#3 Fit for Market Paradigm",
+                  "word_target": 120,
+                  "rating": "B",
+                  "bullets": [
+                    {"text": "**AI-capex tailwind offsets cyclical concern in Iran risk-off environment.** #J", "iaja": "J"},
+                    {"text": "Input cost inflation neutral — steel/copper passed through via contract escalators. #I", "iaja": "I"}
+                  ],
+                  "summary_text": "Fit rated B — cyclical exposure live but AI structural offset is credible."
+                },
+                {
+                  "id": "C.II.2.2.4",
+                  "title": "AF#4 Seek-to-Avoid",
+                  "word_target": 80,
+                  "rating": "—",
+                  "bullets": [
+                    {"text": "**Not yet scored at Triaging** — 4 checks (SHMLP risks, skew, downside, industry-vs-company multiple) deferred to ESA. #OQ", "iaja": "OQ"}
+                  ],
+                  "summary_text": "Deferred."
+                },
+                {
+                  "id": "C.II.2.2.5",
+                  "title": "AF#5 Size-Limiting",
+                  "word_target": 60,
+                  "rating": "—",
+                  "bullets": [
+                    {"text": "**Not yet scored** — sentiment-related SHMLP check deferred to ESA. #OQ", "iaja": "OQ"}
+                  ],
+                  "summary_text": "Deferred."
+                },
+                {
+                  "id": "C.II.2.2.6",
+                  "title": "AF#6 Invalidating",
+                  "word_target": 140,
+                  "rating": "—",
+                  "bullets": [
+                    {"text": "**10-check invalidating screen deferred to ESA.** No obvious hits at Triaging depth. #OQ", "iaja": "OQ", "children": [
+                      {"text": "Preliminary scan: no mediocre CEO, no red flags, no recent earnings cuts, no false-friend setup. #I", "iaja": "I"},
+                      {"text": "Full 10x ACH overlap check pending. #I", "iaja": "I"}
+                    ]}
+                  ],
+                  "summary_text": "Preliminary clean but full screen deferred."
+                },
+                {
+                  "id": "C.II.2.2.7",
+                  "title": "AF#7 Congruency with Recent Outcomes",
+                  "word_target": 100,
+                  "rating": "—",
+                  "bullets": [
+                    {"text": "**Partial read** — (i) technicals congruent with case, (ii) sell-side congruent, (iii) peers + company delivery not yet checked. #A", "iaja": "A"}
+                  ],
+                  "summary_text": "Partial; full cross-check at ESA."
+                },
+                {
+                  "id": "C.II.2.2.8",
+                  "title": "AF#8 Nice-to-Have",
+                  "word_target": 40,
+                  "rating": "—",
+                  "bullets": [
+                    {"text": "**Positive optionality above modal case** — China Automation re-opening if materialised. #KPO", "iaja": "OQ"}
+                  ],
+                  "summary_text": "Single optionality flagged."
+                }
+              ],
+              "summary": "P4 rated C — Foundations solid, Guardrails compromised, 5 of 8 AFs not yet scored. Deferred items flagged for ESA."
+            }
+          ],
+          "summary": "C.II.2 net: **P3 rated B** (case change validated), **P4 rated C** (complexity drag). Fundamental case is present but not yet pristine."
+        },
+        {
+          "type": "topic",
+          "id": "C.II.3",
+          "title": "Fit for Market Paradigm (P2)",
+          "word_target": 600,
+          "bluf": "**Not yet formally rated — Iran-driven risk-off overlay still being mapped; AI/capex tailwind is the partial offset.** #J",
+          "sub_topics": [
+            {
+              "id": "C.II.3.1",
+              "title": "Late bull / early bear market",
+              "word_target": 200,
+              "bullets": [
+                {"text": "**Regime read: late-cycle, risk-off tilting bearish since Mar-26 Iran escalation.** #J", "iaja": "J", "children": [
+                  {"text": "Richard's active stance: targeting recurring non-cyclical revenues + domestic EU exposure. #I", "iaja": "I"},
+                  {"text": "NVTK doesn't fit the sector preferences (not bank/insurance/cables/healthcare) — a structural headwind to multiple. #A", "iaja": "A"}
+                ]}
+              ],
+              "summary_text": "Regime negative for NVTK multiple — earnings growth must outrun de-rating."
+            },
+            {
+              "id": "C.II.3.2",
+              "title": "AI demand / disruption",
+              "word_target": 200,
+              "bullets": [
+                {"text": "**AI-driven capex the dominant tailwind** for Factory Automation. #J", "iaja": "J", "children": [
+                  {"text": "Chip fab capex cycle 2026-28 structurally above historical average. #I", "iaja": "I"},
+                  {"text": "Automation platform unlikely to be disrupted by AI at direct product level. #A", "iaja": "A"}
+                ]}
+              ],
+              "summary_text": "AI effect net-positive; orthogonal to direct disruption risk."
+            },
+            {
+              "id": "C.II.3.3",
+              "title": "Oil, stagflation, recession, rising rates",
+              "word_target": 200,
+              "bullets": [
+                {"text": "**Oil price spike (Iran) adds input-cost pressure to end-customers.** #A", "iaja": "A", "children": [
+                  {"text": "2nd-order: European IP contracts in a stagflationary backdrop — a cyclical hit. #A", "iaja": "A"},
+                  {"text": "3rd-order: rate hikes discount long-dated growth more harshly — multiple de-rating vector. #A", "iaja": "A"}
+                ]},
+                {"text": "Net: (i) earnings growth needs to beat consensus materially, or (ii) multiple needs to stay above recession trough. #J", "iaja": "J"}
+              ],
+              "summary_text": "Macro overlay net-negative for P2; de-rating is the main multi-bagger risk."
+            }
+          ],
+          "summary": "P2 directionally rated low-B to C at Triaging — AI tailwind offsets Iran risk-off only partially. Formal rating at ESA."
+        },
+        {
+          "type": "topic",
+          "id": "C.II.4",
+          "title": "Sell-Side Earnings Momentum (P5)",
+          "word_target": 300,
+          "bluf": "**P5 rated A — positive SS revisions across all five metrics L3M with favourable skew.** #J",
+          "sub_topics": [
+            {"id": "C.II.4.1", "title": "EPS — L3M", "word_target": 50, "bullets": [
+              {"text": "+3.2% EPS revisions L3M; consensus EUR 2.95 for FY26. #A", "iaja": "A"}
+            ], "summary_text": "+"},
+            {"id": "C.II.4.2", "title": "EBITDA — L3M", "word_target": 50, "bullets": [
+              {"text": "+2.8% EBITDA revisions L3M; operating leverage embedded. #A", "iaja": "A"}
+            ], "summary_text": "+"},
+            {"id": "C.II.4.3", "title": "Revenue — L3M", "word_target": 50, "bullets": [
+              {"text": "+1.9% Revenue revisions L3M; primarily Automation segment. #A", "iaja": "A"}
+            ], "summary_text": "+"},
+            {"id": "C.II.4.4", "title": "PTs — L3M", "word_target": 50, "bullets": [
+              {"text": "Average PT EUR 68 (+11% vs 3M ago); 3 raises, 1 cut. #A", "iaja": "A"}
+            ], "summary_text": "+"},
+            {"id": "C.II.4.5", "title": "% of buy — L3M", "word_target": 50, "bullets": [
+              {"text": "Buy ratings 71% (+4ppts L3M); 0 sells; neutrals 29%. #A", "iaja": "A"}
+            ], "summary_text": "+"}
+          ],
+          "summary": "P5 rated A — 5/5 metrics positive with 3:1 raise/lower skew; the strongest single pillar."
+        },
+        {
+          "type": "topic",
+          "id": "C.II.5",
+          "title": "Upside — Valuation (P6 + A.II.3 TSR DuPont)",
+          "word_target": 300,
+          "bluf": "**P6 rated B — 2YF P/E 14.2x mid of 5Y range 10-18x; TSR DuPont (cross-ref A.II.3) supports ≥20% 3Y framework.** #J",
+          "sub_topics": [
+            {"id": "C.II.5.1", "title": "2YF P/E positioning", "word_target": 150, "bullets": [
+              {"text": "**Currently 14.2x vs 5Y range 10.1x–18.4x — 43rd percentile.** #A", "iaja": "A", "children": [
+                {"text": "No multiple expansion embedded in case; any re-rating is upside. #A", "iaja": "A"},
+                {"text": "Downside to trough 10.1x = −29% — tail risk under severe risk-off. #A", "iaja": "A"}
+              ]}
+            ], "summary_text": "Valuation mid-range; asymmetry modest."},
+            {"id": "C.II.5.2", "title": "TSR DuPont cross-reference (A.II.3)", "word_target": 150, "bullets": [
+              {"text": "**Per A.II.3 DuPont: 3Y TSR framework = 16% EPS CAGR + 3% div yield + 2% multiple = 21% target.** #J", "iaja": "J", "children": [
+                {"text": "Framework hits ≥20% threshold with modest multiple assumption. #I", "iaja": "I"},
+                {"text": "Sensitivity: −5 multiple points = 8% TSR — still positive. #A", "iaja": "A"}
+              ]}
+            ], "summary_text": "TSR arithmetic clears the threshold under modal + stressed scenarios."}
+          ],
+          "summary": "P6 rated B — valuation fair; TSR arithmetic supports the ≥20% 3Y TSR requirement with modest assumptions."
+        }
+      ]
+    }
+  ]
+}

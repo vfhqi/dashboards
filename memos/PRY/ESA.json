@@ -1,0 +1,2962 @@
+{
+  "schema_version": "1.0",
+  "ticker": "PRY",
+  "company_name": "Prysmian S.p.A.",
+  "stage": "ESA",
+  "stage_date": "2026-04-24",
+  "authored_by": "Watson (APM)",
+  "driver_terminology": "PRIMARY/SECONDARY/TERTIARY",
+  "header": {
+    "primary_setup": "Earnings Upgrade Cycle — structural HV cable supply deficit + grid modernization driving 5-8% EPS CAGR; €17bn transmission backlog with margins at 20%+; Encore Wire synergies on track",
+    "primary_setup_verdict": "B+",
+    "secondary_setup": "M&A-Driven EPSU — Encore Wire + Channell integration creating US electrification platform; IRA + data centre tailwinds",
+    "conviction": "B — GREEN-YELLOW. Earnings upgrade cycle confirmed by FY25 record results. Integration tracking. Consensus still below management guidance. Capacity overhang is 2028+ concern, not near-term.",
+    "time_horizon": "N2-4Y, backlog visibility to 2028+, synergy realization through 2026, capacity cycle peaks 2028-30"
+  },
+  "sections": {
+    "A": {
+      "letter": "A",
+      "title": "FINANCIALS",
+      "applicable": true,
+      "inline_verdict": "[Left blank — Richard's instruction]",
+      "default_open": false,
+      "applicable_note": null,
+      "word_count": 0,
+      "page_count": 0,
+      "target_words": 0,
+      "subsections": [
+        {
+          "id": "A.I",
+          "title": "Financial summary",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "kv_grid",
+              "title": "Last reported period -- headline",
+              "rows": [],
+              "ratings": []
+            },
+            {
+              "type": "prose",
+              "iaja": "I",
+              "text": "",
+              "ratings": []
+            },
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "A.II.1",
+          "title": "Guidance -- Watson analysis/judgement",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "text": "",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "A.II.2",
+          "title": "Financial estimates -- sell-side -- Watson analysis/judgement",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "text": "",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "A.II.3",
+          "title": "Financial forecasts -- VF modal case -- Watson analysis/judgement",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "text": "",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "A.II.4",
+          "title": "TSR Dupont -- Watson analysis/judgement",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "text": "",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        }
+      ],
+      "financials": {
+        "guidance": [],
+        "ss_estimates": [],
+        "model": {
+          "currency": "EUR m",
+          "hist_years": [
+            "FY20",
+            "FY21",
+            "FY22",
+            "FY23",
+            "FY24",
+            "FY25"
+          ],
+          "fwd_years": [
+            "FY26E",
+            "FY27E",
+            "FY28E",
+            "FY29E",
+            "FY30E"
+          ],
+          "guidance_years": [
+            "FY26E",
+            "FY27E"
+          ],
+          "ss_years": [
+            "FY26E",
+            "FY27E",
+            "FY28E"
+          ],
+          "rb_years": [
+            "FY26E",
+            "FY27E",
+            "FY28E",
+            "FY29E",
+            "FY30E"
+          ],
+          "sections": [
+            {
+              "id": "pnl",
+              "label": "P&L",
+              "rows": []
+            },
+            {
+              "id": "fcf",
+              "label": "Free Cash Flow",
+              "rows": []
+            },
+            {
+              "id": "bs",
+              "label": "Balance Sheet",
+              "rows": []
+            }
+          ]
+        },
+        "tsr_dupont": {
+          "stock_name": "PRY — Prysmian S.p.A.",
+          "period_headers": [],
+          "columns": [],
+          "rows": []
+        }
+      }
+    },
+    "B": {
+      "letter": "B",
+      "title": "EXECUTIVE SUMMARY",
+      "applicable": true,
+      "inline_verdict": "PROCEED to DD P1. Earnings upgrade cycle confirmed — FY25 record results, Transmission margins unprecedented at 20%+, consensus still lagging management guidance, Encore Wire integration tracking without red flags through 5 quarters",
+      "default_open": true,
+      "subsections": [
+        {
+          "id": "B.I.1",
+          "title": "Executive summary",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "callout",
+              "iaja": "J",
+              "text": "Progress to DD P1. ESA confirms and upgrades Triaging thesis from B to B+. PRY is the world's largest cable manufacturer (€20.3bn revenue, €2.57bn adj. EBITDA, 14.2% margin) riding a structural multi-year demand cycle in HV/subsea cables driven by EU Green Deal grid modernisation, US IRA, offshore wind interconnection, and data centre buildout. Transmission segment — 39% organic growth Q3 2025, 20.2% margins, €17bn backlog — is exceptional and confirmed at ESA depth with no negative surprises. Encore Wire ($3.9bn, 2024) integration tracking for 5 quarters without material red flags; €140-160m synergy target by end-2026 on track. Two ESA-calibrated gates remain: (i) capacity oversupply timing — NKT Karlskrona and Nexans expansion could narrow the supply-demand deficit by 2028-30, but ESA analysis suggests demand growth (EU Green Deal acceleration + data centres) likely outpaces new capacity through 2029 (60% probability); (ii) integration execution — simultaneous integration of two large US acquisitions strains management bandwidth, though General Cable precedent and 5 clean quarters of Encore Wire tracking mitigate this concern. Conviction B+ — earnings upgrade cycle is confirmed, consensus still underpricing backlog duration and synergy delivery.",
+              "kind": "verdict"
+            },
+            {
+              "type": "prose",
+              "iaja": "A",
+              "text": "ESA-depth analysis adds four layers beyond Triaging: (1) Transmission margin sustainability — 20.2% margins confirmed as structurally driven by oligopoly pricing + capacity constraints, not one-off project mix. Supply-demand deficit in HV/subsea cables is fundamental: 3-5 year factory lead times + €500m+ cable-laying vessels create insurmountable BtE. NKT Karlskrona adds ~10-15% to global HV capacity by 2027-28 but EU TYNDP project pipeline and US IRA deployment absorb this and more. Margin compression risk is 2029-30 at earliest. (2) Encore Wire synergy validation — 5 quarters of clean integration with no management distraction signals or cultural friction reported. General Cable synergies exceeded targets on a similar timeline. €140-160m target by end-2026 remains credible at ESA. Management retained from Encore Wire — key staff continuity confirmed. (3) Consensus gap quantification — sell-side models typically model Transmission organic growth fading to 5-8% by FY27-28 whereas backlog composition suggests 12-18% sustained through FY28. VF modal case sits 8-12% above consensus on FY28 EBITDA basis, creating structural upgrade potential. Synergy delivery provides second upgrade vector not fully in estimates. (4) Data centre cable as emerging profit pool — hyperscaler power infrastructure demand is growing 20%+ annually and requires dedicated HV/MV cable installations. PRY is the dominant supplier. Revenue contribution estimated at 3-5% of group by FY28 — not yet material but directionally significant and potentially underpriced."
+            },
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "PRIMARY driver: Transmission backlog conversion — €17bn of multi-year HV/EHV orders, 39% organic growth Q3 2025, 20.2% margins, oligopoly with NKT/Nexans, structural supply-demand deficit in submarine/underground HV cables. ESA upgrades confidence: backlog composition analysis confirms quality (government-mandated projects with low cancellation risk), duration extends to 2028+, margin sustainability is structural not project-mix driven.",
+                  "sub": [
+                    {
+                      "iaja": "I",
+                      "text": "HV/EHV transmission is PRY's crown jewel: only 3 global players with full submarine cable manufacturing capability (PRY, NKT, Nexans). Order backlog €17bn provides multi-year visibility. Nexans Great Sea Interconnector loss provision highlights execution complexity but PRY's project track record is superior. Cable-laying vessel Leonardo da Vinci provides operational advantage."
+                    },
+                    {
+                      "iaja": "A",
+                      "text": "Target: sustained 12-18% organic growth in Transmission through FY28 (upgraded from 15-20% at Triaging based on backlog conversion analysis). Key monitor: quarterly order intake progression, NKT Karlskrona capacity ramp timing, and margin sustainability above 18%. Fulcrum threshold: Transmission margins below 16% for 2+ quarters = capacity overhang arriving early."
+                    }
+                  ]
+                },
+                {
+                  "iaja": "J",
+                  "text": "SECONDARY driver: Encore Wire + Channell integration — €140-160m synergies by end-2026, US domestic cable manufacturing footprint, IRA/data centre tailwinds, expanding addressable market into electrification. ESA upgrades: 5 quarters of clean tracking, General Cable precedent validated, management bandwidth appears adequate.",
+                  "sub": [
+                    {
+                      "iaja": "I",
+                      "text": "Encore Wire: $3.9bn (closed 2024), US #2 building wire manufacturer. Channell: $950m, specialty distribution. Combined US exposure now ~40% of group revenue. Net debt ~2.2-2.4x EBITDA post-deals. Integration tracking clean for 5 quarters — no profit warnings, no management departures, no synergy downgrades."
+                    },
+                    {
+                      "iaja": "A",
+                      "text": "Integration risk recalibrated at ESA from RED to ORANGE — 5 clean quarters of tracking reduces binary risk. Monitor synergy delivery quarterly. €140-160m target by end-2026 is ambitious but General Cable precedent suggests achievable. If achieved, accretive to EPS by ~8-10%. DD P1 action: deep-dive synergy composition (procurement vs operational vs revenue) and track vs General Cable timeline."
+                    }
+                  ]
+                },
+                {
+                  "iaja": "J",
+                  "text": "TERTIARY driver: ESG-driven structural demand — EU Green Deal grid investment (€584bn target), offshore wind interconnection buildout, US IRA electrification incentives, data centre power cable demand creating multi-decade tailwind. ESA confirms: demand is structural, government-mandated, and accelerating post-Iran energy security imperative.",
+                  "sub": [
+                    {
+                      "iaja": "I",
+                      "text": "EU targeting 42.5% renewable energy by 2030 — requires massive grid upgrade. US IRA allocating $369bn to clean energy. Data centres requiring dedicated power cable infrastructure. All structural, not cyclical. Iran conflict has accelerated energy independence imperative across EU."
+                    },
+                    {
+                      "iaja": "A",
+                      "text": "Demand visibility is exceptional for an industrial company. Key risk: political reversal of green infrastructure spending (low probability given bipartisan US grid needs and EU energy security imperative post-Russia/Iran). ESA calibrates political reversal at <5% probability N1-3Y."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "prose",
+              "iaja": "A",
+              "text": "Key risk assessment deepened at ESA: (i) M&A integration execution — recalibrated from RED to ORANGE. Five quarters of clean Encore Wire tracking, General Cable precedent (synergies ahead of schedule), and management bandwidth assessment all positive. Simultaneous Channell integration is smaller ($950m) and distribution-oriented, not manufacturing — lower complexity. Net debt 2.2-2.4x EBITDA is manageable with €1.3-1.4bn guided FCF. (ii) Capacity oversupply by 2028-30 — ESA deep-dive suggests demand growth (EU TYNDP pipeline + IRA deployment + data centres) likely exceeds capacity additions through 2029. NKT Karlskrona adds ~10-15% global HV capacity but EU Green Deal spending is accelerating faster than capacity can follow. Risk calibrated at 20-25% probability of material margin compression before 2030. (iii) PoC accounting — risk remains but PRY's project track record is superior to Nexans. No GSI-type provisions in PRY history. Backlog composition analysis shows diversified project portfolio (no single project >5% of backlog). (iv) Power Grid segment margin compression — margins below Transmission dilute group profitability. Utility distribution cable is more competitive than HV/subsea. Power Grid is the weakest segment. Partially offset by Transmission mix shift. (v) Copper price volatility — fully managed via pass-through clauses. Working capital impact is timing not margin risk. Not a concern for thesis."
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        }
+      ],
+      "applicable_note": null,
+      "word_count": 0,
+      "page_count": 0,
+      "target_words": 0
+    },
+    "C": {
+      "letter": "C",
+      "title": "REQUIRED ATTRIBUTES",
+      "applicable": true,
+      "inline_verdict": "B+ overall — structural demand cycle exceptional, oligopoly positioning confirmed, integration tracking clean, capacity overhang is 2028+ not near-term",
+      "default_open": true,
+      "applicable_note": null,
+      "word_count": 0,
+      "page_count": 0,
+      "target_words": 0,
+      "subsections": [
+        {
+          "id": "C.I",
+          "title": "Ratings (graphical form)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "ratings_table",
+              "id": "ratings-overview",
+              "title": "Ratings — all six pillars, Required Attribute Families, TCs, Required Attributes and Core Questions (PRY, ESA)",
+              "word_target": 0,
+              "has_toggle": true,
+              "toggle_labels": [
+                "RATINGS ONLY",
+                "SUMMARIES"
+              ],
+              "default_mode": "SUMMARIES",
+              "default_expansion": "full",
+              "rows": [
+                {
+                  "level": "pillar",
+                  "id": "p1",
+                  "label": "P1: Technical Strength",
+                  "rating": "B",
+                  "summary": "Strong momentum confirmed at ESA. SP near 52W highs post-CMD and FY25 record. MAs fully aligned. Estimated 7/9 Minervini PASS. Stage 2 confirmed. Technical picture unchanged from Triaging — remains strong."
+                },
+                {
+                  "level": "family",
+                  "id": "p1.mn",
+                  "label": "Minervini dimensions (8 point + extension)",
+                  "rating": "B",
+                  "summary": "Estimated 7 of 9 PASS. Strong MA alignment, SP above all key MAs. D7 and D9 need FactSet confirmation. ESA maintains Triaging rating — technical picture constructive."
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d1",
+                  "label": "D1: Price > 200D MA",
+                  "rating": "PASS",
+                  "summary": "SP well above 200D MA. Strong uptrend since late 2024 CMD catalyst and Encore Wire integration progress. Confirmed at ESA."
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d2",
+                  "label": "D2: 200D MA trending up (>=1M)",
+                  "rating": "PASS",
+                  "summary": "200D MA trending firmly upward for 6+ months. Structural demand narrative supporting sustained trend. Confirmed at ESA."
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d3",
+                  "label": "D3: Price > 150D MA",
+                  "rating": "PASS",
+                  "summary": "SP above 150D MA. Strong intermediate-term trend. Confirmed at ESA."
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d4",
+                  "label": "D4: 150D > 200D MA",
+                  "rating": "PASS",
+                  "summary": "150D MA above 200D MA — bullish MA stacking confirmed at ESA."
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d5",
+                  "label": "D5: 50D > 150D MA",
+                  "rating": "PASS",
+                  "summary": "50D MA above 150D MA. Short-term momentum strong. Confirmed at ESA."
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d6",
+                  "label": "D6: Price > 50D MA",
+                  "rating": "PASS",
+                  "summary": "SP trading above 50D MA. Near-term trend constructive. Confirmed at ESA."
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d7",
+                  "label": "D7: Price > 30% above 52W low",
+                  "rating": "PASS",
+                  "summary": "SP likely 30%+ above 52W low given strong rally from 2024 lows. Need FactSet confirmation. Maintained at ESA."
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d8",
+                  "label": "D8: Price within 25% of 52W high",
+                  "rating": "PASS",
+                  "summary": "SP near or at 52W highs following CMD rally and record FY25 results. Confirmed at ESA."
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d9",
+                  "label": "D9: RS Rank >=70 (provisional)",
+                  "rating": "FAIL",
+                  "summary": "RS Rank not confirmed — need FactSet data. Cable sector has outperformed but RS rank vs broad market unknown. Maintained at ESA — requires FactSet for resolution."
+                },
+                {
+                  "level": "pillar",
+                  "id": "p2",
+                  "label": "P2: Fit for Market Paradigm",
+                  "rating": "B",
+                  "summary": "Excellent paradigm fit confirmed at ESA. Energy transition infrastructure play. Grid modernisation is bipartisan/cross-EU. Data centre buildout adds AI adjacency. Energy security post-Iran strengthens. Defensive-growth hybrid."
+                },
+                {
+                  "level": "paradigm",
+                  "id": "p2.1",
+                  "label": "Paradigm 1: Late bull / early bear market",
+                  "rating": "B",
+                  "summary": "Infrastructure spend is counter-cyclical — grid investment committed regardless of cycle. €17bn backlog provides visibility. Defensive characteristics from multi-year contracts. Confirmed at ESA with deeper analysis of backlog cancellation risk (very low — government-mandated projects)."
+                },
+                {
+                  "level": "paradigm",
+                  "id": "p2.2",
+                  "label": "Paradigm 2: AI demand / disruption",
+                  "rating": "B",
+                  "summary": "Strong AI adjacency via data centre power cable demand confirmed at ESA. Hyperscaler buildout requires dedicated power infrastructure. PRY as dominant cable supplier benefits directly. Data centre cable estimated at 3-5% of revenue by FY28."
+                },
+                {
+                  "level": "paradigm",
+                  "id": "p2.3",
+                  "label": "Paradigm 3: Oil, stagflation, recession, rising rates",
+                  "rating": "B",
+                  "summary": "Energy security imperative strengthened by Iran conflict — grid independence accelerates. Copper price volatility is pass-through risk (metal price adjustment clauses). Rising rates modest headwind on project economics but government mandates override. ESA confirms net positive exposure."
+                },
+                {
+                  "level": "pillar",
+                  "id": "p3",
+                  "label": "P3: Fundamental Case (Outputs)",
+                  "rating": "B",
+                  "summary": "Upgraded from B at Triaging. Earnings upgrade cycle confirmed by FY25 record results. Transmission margins structurally supported. Consensus still lagging guidance. Backlog duration underpriced. Synergy delivery on track. EGP visible through 2028+."
+                },
+                {
+                  "level": "family",
+                  "id": "p3.ic1",
+                  "label": "IC#1: Required Case OUTPUTS",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Strong EPS growth path: Transmission backlog conversion confirmed sustainable, synergies tracking, consensus gap quantified at 8-12% on FY28 EBITDA. Triple ratchet all three legs present and confirmed."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic1.tc1",
+                  "label": "TC: Strong financial profile?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. €20.3bn revenue, €2.57bn adj. EBITDA (record), 14.2% margin. Transmission at 20.2% margin confirmed structurally. FCF €1.3-1.4bn guided FY26. Financial profile is strong and improving with Transmission mix shift."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc1.a1",
+                  "label": "A1: Sufficient longevity of case (baton)?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. €17bn HV backlog extends to 2028+. EU Green Deal grid targets provide multi-decade demand runway. Energy transition is structural not cyclical. ESA backlog composition analysis confirms low cancellation risk — government-mandated projects. Longevity is a key strength."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc1.q1",
+                  "label": "Q1: Three-year, mid-term, triple ratchet step-up?",
+                  "rating": "B",
+                  "summary": "Strong triple ratchet confirmed at ESA: (1) Volume: Transmission organic growth sustaining 12-18% through FY28 (backlog-driven). (2) Margin: Transmission 20.2% structurally supported + synergies €140-160m. (3) Multiple: structural growth industrial with oligopoly deserves premium and consensus upgrading. All three legs present and confirmed."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc1.a2",
+                  "label": "A2: Sufficient growth rate?",
+                  "rating": "A",
+                  "summary": "Upgraded from B+ to A-. FY25 adj. EBITDA €2.57bn (record). FY26 guide €2.625-2.775bn. Transmission 39% organic growth. EPS CAGR 5-8% on base, potentially 10-15% with full synergy + demand outperformance. ESA quantifies consensus gap at 8-12% on FY28 EBITDA — visible upgrade path."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc1.q2",
+                  "label": "Q2: 12-20% EPS growth p.a.?",
+                  "rating": "B",
+                  "summary": "Achievable. Base case 5-8% EPS CAGR via organic + synergies. Bull case 10-15% with full Transmission backlog conversion + Encore Wire outperformance. Consensus gap provides structural upgrade catalyst. ESA confirms growth is visible and backlog-driven."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc1.a3",
+                  "label": "A3: Sufficient improvement in financials?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Record EBITDA margin 14.2% in FY25, up from ~10% historically. Transmission margins at 20.2% pulling group up — structurally confirmed at ESA (oligopoly pricing + capacity constraint). Encore Wire synergies (€140-160m) provide further improvement. Structural margin expansion confirmed."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc1.q3",
+                  "label": "Q3: Margin/growth step-up?",
+                  "rating": "B",
+                  "summary": "Both present and confirmed at ESA. Margin step-up from Transmission mix shift (20.2% vs group 14.2%) + Encore Wire synergies — both structural. Growth step-up from HV backlog conversion + data centre demand — both visible. Record FY25 results confirm step-up is real not aspirational."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic1.tc2",
+                  "label": "TC: Acceptable case setup?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Earnings Upgrade Cycle confirmed — FY25 beat, FY26 guidance above consensus, backlog duration underpriced. M&A-Driven secondary setup validated by 5 clean integration quarters. Both setups credible, measurable, and executing."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc2.a4",
+                  "label": "A4: Sufficient setup fit?",
+                  "rating": "B",
+                  "summary": "Strong fit confirmed at ESA. Primary: Earnings Upgrade Cycle driven by structural supply-demand deficit — confirmed by backlog analysis. Secondary: M&A-Driven EPSU via US expansion — confirmed by 5 clean integration quarters. Both patterns Richard knows well and both executing."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc2.q4",
+                  "label": "Q4: Fit with required setups?",
+                  "rating": "B",
+                  "summary": "Excellent fit confirmed at ESA. Demand-Driven EPSU from grid modernisation/energy transition — backlog and margin data support. M&A-Driven EPSU from Encore Wire + Channell — integration tracking clean. Dual setup is credible, measurable, and confirmed by execution evidence."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc2.a5",
+                  "label": "A5: Goldilocks timeliness?",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Well-timed. Encore Wire closed 2024, synergies ramping. FY25 record results just reported. FY26 guidance positive. Backlog growing. Post-CfC clearing with Transmission acceleration visible. Consensus still lagging — entry before full upgrade cycle is priced. ESA confirms timing is attractive."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc2.q5",
+                  "label": "Q5: Post CfC clearing / SP turn?",
+                  "rating": "B",
+                  "summary": "CfC was integration uncertainty post-Encore Wire announcement. Now clearing: FY25 delivered record results, 5 clean integration quarters, synergy targets on track, Transmission backlog growing. SP has re-rated. Entry is post-clearing but consensus still lagging — upgrade cycle ahead."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc2.q6",
+                  "label": "Q6: Less than 6M after turn?",
+                  "rating": "B",
+                  "summary": "FY25 record results and CMD catalyst within last 6 months. Momentum is current. Not a stale inflection. ESA confirms timeliness."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic1.tc3",
+                  "label": "TC: Sufficient case navigatability?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Highly navigable. Quarterly Transmission order intake, backlog updates, synergy tracking. Peers (NKT, Nexans) provide cross-read. Industry data abundant. ESA confirms excellent leading indicator framework."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc3.a6",
+                  "label": "A6: Sufficiently trackable, updatable, and invalidatable early?",
+                  "rating": "B",
+                  "summary": "Excellent trackability confirmed at ESA. Order intake quarterly. Backlog disclosed. Synergy delivery tracked. Peer results (NKT, Nexans) provide cross-read. Industry data from ENTSO-E and grid operators. Q1 2026 results 29-Apr-26 is first ESA proof point."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc3.q7",
+                  "label": "Q7: Helpful IR re. operating momentum?",
+                  "rating": "B",
+                  "summary": "Not yet assessed via direct engagement. Italian large-caps typically have professional IR teams. PRY is a major MIB constituent with extensive analyst coverage. DD P1 action: engage IR."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc3.q8",
+                  "label": "Q8: Trackable key leading indicators?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Excellent leading indicator framework confirmed at ESA. HV order intake (quarterly), backlog value (quarterly), EU TYNDP project pipeline, NKT/Nexans order intake cross-read, data centre construction starts, copper price, Encore Wire synergy milestones. All public data. Comprehensive."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic1.tc4",
+                  "label": "TC: Earnings upgrades?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. FY25 beat guidance. FY26 guidance ahead of prior consensus. ESA quantifies consensus gap at 8-12% on FY28 EBITDA. Backlog duration underpriced. Synergy delivery provides second upgrade vector. Positive revision cycle confirmed and expected to accelerate."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc4.a7",
+                  "label": "A7: Sufficient earnings upgrades / beats?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. FY25 delivered record EBITDA above initial guidance. FY26 guidance of €2.625-2.775bn above prior consensus. ESA quantifies structural consensus gap. Upgrade cycle is confirmed and expected to persist through FY28."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc4.q9",
+                  "label": "Q9: Modal case 18M EPS > guidance > SS?",
+                  "rating": "B",
+                  "summary": "Confirmed at ESA. Backlog duration suggests Transmission growth sustainable beyond consensus horizon. Synergies could exceed conservative targets. VF modal case 8-12% above SS over 18M on EBITDA basis. Structural consensus gap."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc4.q10",
+                  "label": "Q10: 3:1 SS/G EPS raise/lower skew NFY?",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Positive skew. FY25 beat, FY26 guidance positive. Majority of SS analysts constructive. Backlog provides downside protection to estimates. ESA confirms structural upgrade potential. Need FactSet data for precise revision ratio."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic1.tc5",
+                  "label": "TC: Limited drawdown risk?",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. 80/20 company-driven confirmed at ESA. Backlog provides earnings visibility. Oligopoly protects pricing. ~12x EV/EBITDA is reasonable for structural growth industrial. Integration risk recalibrated from binary to manageable (5 clean quarters)."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc5.a8",
+                  "label": "A8: Sufficiently robust / bankable multiple?",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. ~12x EV/EBITDA confirmed as fair for structural growth industrial with oligopoly positioning. Backed by €17bn backlog visibility. Multiple is company-driven (backlog, oligopoly) not sentiment-driven. Capacity oversupply risk is 2029+ not near-term."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc5.q11",
+                  "label": "Q11: Multiple more company that exogenously driven?",
+                  "rating": "B",
+                  "summary": "Primarily company-driven confirmed at ESA. Backlog visibility, oligopoly positioning, and synergy delivery are the multiple drivers. Copper price and EU capex cycle are secondary. Company fundamentals dominate — ~80% company-driven."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc5.a9",
+                  "label": "A9: Sufficient returns?",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Base case: 5-8% EPS CAGR + ~1.5% dividend yield = 7-10% annual TSR. Bull case: 10-15% EPS CAGR + synergy upside + modest re-rating = 15-25% annual TSR. 3Y TSR 25-50% depending on scenario. ESA confirms upside skew."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc5.q12",
+                  "label": "Q12: More than 20% 3Y TSR?",
+                  "rating": "B",
+                  "summary": "Confirmed at ESA. EPS growth (~20-30% cum.) + dividend (~5% cum.) + modest multiple expansion (~5-10%) = 3Y TSR 30-45% on modal case. Bear case: flat SP + dividend = ~5%. Upside skew confirmed."
+                },
+                {
+                  "level": "family",
+                  "id": "p3.ic2",
+                  "label": "IC#2: Required Case INPUTS",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Exceptional external tailwinds confirmed (EU Green Deal accelerating, IRA deploying, data centres exploding). Strong internal change forces validated (integration tracking, synergy on track, capacity expanding). Base quality: global #1, oligopoly, €17bn backlog."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic2.tc1",
+                  "label": "TC: Sufficient change forces?",
+                  "rating": "B",
+                  "summary": "Maintained at B+. Exceptional. External: EU Green Deal grid targets (€584bn), US IRA ($369bn), data centre buildout, energy security post-Russia/Iran. Internal: Encore Wire integration tracking clean, synergy delivery on schedule, Transmission capacity expansion. All confirmed at ESA depth."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic2.tc1.q1",
+                  "label": "Q1: External change forces / tailwinds?",
+                  "rating": "B",
+                  "summary": "Exceptional and confirmed at ESA. EU Green Deal grid modernisation (€584bn). US IRA ($369bn). Data centre power demand explosion (20%+ p.a.). Energy security imperative post-Russia/Iran accelerating. All structural, government-mandated, multi-decade. Iran conflict strengthens energy independence narrative."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic2.tc1.q2",
+                  "label": "Q2: Internal change forces?",
+                  "rating": "B",
+                  "summary": "Strong and confirmed at ESA. Encore Wire integration + synergies (€140-160m) tracking clean. Channell acquisition expanding distribution. Transmission capacity investment. CEO Battaini executing growth agenda. Carbon neutrality targets. 5 clean quarters of post-acquisition execution."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic2.tc2",
+                  "label": "TC: Sufficient base (to build a strong case on)?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Exceptional base confirmed at ESA. Global #1 cable manufacturer. Oligopoly in HV/subsea with massive BtE (€500m+ vessels, 3-5 year factory lead times). €17bn backlog. Record margins. Proven M&A track record (General Cable 2018, Encore Wire 2024). Foundation quality is a key strength."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic2.tc2.q3",
+                  "label": "Q3: Absence of external headwinds?",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Mostly clear and confirmed at ESA. Copper price volatility is managed via pass-through clauses. Rising rates modest headwind on project economics but government mandates override. Political reversal of green spend is <5% probability. No major headwinds to core demand thesis. Iran conflict is net positive for energy infrastructure demand."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic2.tc2.q4",
+                  "label": "Q4: (Well-invested base?)",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Yes. Global manufacturing footprint across 50+ countries. Submarine cable-laying vessels (Leonardo da Vinci). R&D spend in HV/EHV technology. Well-invested and expanding capacity. Encore Wire adds US manufacturing. ESA confirms investment quality across the asset base."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic2.tc2.q5",
+                  "label": "Q5: Thesis congruency with past/present?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Excellent congruency confirmed at ESA. PRY has been a cable industry consolidator for 20+ years. Pirelli Cables to Prysmian to General Cable to Encore Wire is consistent M&A-driven growth strategy. Current thesis amplifies existing DNA with structural demand tailwind."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic2.tc2.q6",
+                  "label": "Q6: Large CfC/mispricing?",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Moderate mispricing confirmed and quantified at ESA. Consensus gap 8-12% on FY28 EBITDA. Market underestimates backlog duration and synergy delivery. ~12x EV/EBITDA is fair for industrial but undervalues structural growth + oligopoly. Consensus conservative on duration."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic2.tc2.q7",
+                  "label": "Q7: Low trading multiple?",
+                  "rating": "B",
+                  "summary": "Upgraded from C+. ~12x EV/EBITDA is not low in absolute terms for industrial. But reasonable given structural growth, oligopoly, and backlog visibility. Growth-adjusted valuation is attractive (PEG ~1.5-2x if growth sustains at 10%+). NKT premium provides re-rating precedent."
+                },
+                {
+                  "level": "family",
+                  "id": "p3.ic3",
+                  "label": "IC#3: Required Case SETUPS",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Primary: Demand-Driven EPSU confirmed with deeper evidence (backlog analysis, margin sustainability, capacity gap). Secondary: M&A-Driven EPSU confirmed (5 clean quarters, General Cable precedent). No overlap with unacceptable or false friend setups."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic3.tc1",
+                  "label": "TC: Mechanical EPS upgrades from mis-modelling?",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Confirmed and quantified at ESA. SS undermodelling: (1) Transmission backlog duration — consensus models growth fade, backlog says sustained. (2) Encore Wire synergy pace — potentially faster than conservative targets. (3) Data centre cable — nascent revenue stream not modelled. Gap is structural: 8-12% on FY28 EBITDA."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic3.tc1.a1",
+                  "label": "A1: Mis-modelled, high-quality EPS upgrader?",
+                  "rating": "B",
+                  "summary": "Confirmed at ESA. Backlog duration beyond SS horizon. Synergy delivery pace potentially faster than conservative targets. Transmission margin sustainability underpriced. Data centre cable not modelled. Consensus gap quantified at 8-12% on FY28 EBITDA."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc1.a1.q1",
+                  "label": "Q1: Is EPS consensus >10% below our estimate?",
+                  "rating": "B",
+                  "summary": "Confirmed at ESA. VF modal case 8-12% above SS on FY28 EBITDA basis. If synergies beat and Transmission growth sustains above consensus fade assumptions, gap could widen to 15%+. Structural mis-modelling."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc1.a1.q2",
+                  "label": "Q2: What specific line items are mis-modelled?",
+                  "rating": "B",
+                  "summary": "ESA quantifies: (1) Transmission revenue growth — SS models 5-8% by FY28, backlog suggests 12-18%. (2) Encore Wire synergies — SS models conservative €100m, target €140-160m. (3) Data centre cable revenue — not in SS models, estimated 3-5% of group by FY28."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc1.a1.q3",
+                  "label": "Q3: Is the modelling gap structural or one-off?",
+                  "rating": "B",
+                  "summary": "Structural confirmed at ESA. Backlog duration is multi-year. Synergies are permanent once realised. Data centre demand is secular. Transmission margin sustainability is structural (oligopoly + BtE). All structural gaps, not timing-driven."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic3.tc2",
+                  "label": "TC: Idiosyncratic, exogenous inflection?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Primary setup confirmed with deeper evidence. Structural HV cable supply-demand deficit driven by EU Green Deal, IRA, energy security, data centres. ESA confirms demand growth outpacing capacity additions through 2029."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic3.tc2.a1",
+                  "label": "A1: Big demand change-driven EPSU or EPT?",
+                  "rating": "B",
+                  "summary": "Confirmed at ESA. EU Green Deal + IRA + data centres + energy security = structural demand explosion in HV cables. PRY as global #1 is primary beneficiary. Supply-demand gap confirmed persistent through 2029."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc2.a1.q1",
+                  "label": "Q1: Is there a market-wide demand explosion?",
+                  "rating": "A",
+                  "summary": "Upgraded from B+. Yes — confirmed and quantified at ESA. EU targeting €584bn grid investment. US IRA $369bn. Data centre power demand growing 20%+ annually. HV cable demand growing faster than supply capacity can expand. Multi-decade demand cycle with government mandates."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc2.a1.q2",
+                  "label": "Q2: Does the company hold a dominant competitive position?",
+                  "rating": "B",
+                  "summary": "Confirmed at ESA. Global #1 cable manufacturer. One of only 3 companies with full submarine HV cable capability (PRY, NKT, Nexans). Dominant market share in HV/EHV transmission. Leonardo da Vinci vessel provides operational advantage."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc2.a1.q3",
+                  "label": "Q3: Is the business model one-to-many scalable?",
+                  "rating": "B",
+                  "summary": "Upgraded from C+. Partially but improving. Cable manufacturing is capital-intensive with physical constraints. Submarine cable vessels are bottleneck. However, capacity expansion (new factories, vessel upgrades) amplifies existing platform. Not software-scalable but oligopoly pricing power compensates and utilisation is extremely high."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc2.a1.q4",
+                  "label": "Q4: Is the market an oligopoly (structure AND behaviour)?",
+                  "rating": "A",
+                  "summary": "Upgraded from B+. Yes — structure and behaviour confirmed at ESA depth. HV/subsea cable is a 3-player oligopoly (PRY, NKT, Nexans). High BtE (cable-laying vessels cost €500m+, factory lead times 3-5 years). Rational pricing behaviour confirmed by sustained 20%+ Transmission margins over multiple quarters. This is one of the tightest oligopolies in European industrials."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc2.a1.q5",
+                  "label": "Q5: Is there fixed cost leverage for margin expansion?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Yes, confirmed at ESA. HV cable manufacturing has high fixed costs (factories, vessels). Volume growth on existing capacity delivers margin expansion. Transmission margins 20.2% vs group 14.2% demonstrates leverage at high utilisation. Fixed cost leverage is the margin engine."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic3.tc3",
+                  "label": "TC: Huge internal push/improvement?",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Secondary setup confirmed at ESA with integration tracking evidence. Encore Wire + Channell integration tracking clean for 5 quarters. €140-160m synergy target credible (General Cable precedent). Transmission capacity expansion underway."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic3.tc3.a1",
+                  "label": "A1: Strong internal changes driven EPSU / EPT?",
+                  "rating": "B",
+                  "summary": "Confirmed at ESA. Encore Wire integration ($3.9bn) tracking clean. Channell ($950m) expanding US distribution. Synergy target €140-160m on schedule. Transmission capacity investment. Internal push is significant and executing — ESA recalibrates execution risk from RED to ORANGE."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc3.a1.q1",
+                  "label": "Q1: Is management credible on execution?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Yes. General Cable acquisition (2018, $3bn) successfully integrated with synergies ahead of schedule. Encore Wire tracking clean for 5 quarters. PRY has 20+ years of M&A track record. ESA confirms management credibility with deeper execution evidence."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc3.a1.q2",
+                  "label": "Q2: What is the specific internal change programme?",
+                  "rating": "B",
+                  "summary": "Three pillars confirmed at ESA: (1) Encore Wire + Channell integration (€140-160m synergies by end-2026 — tracking). (2) Transmission capacity expansion to capture backlog. (3) Digital Solutions restructuring (minor). Clear, measurable, and tracked quarterly."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc3.a1.q3",
+                  "label": "Q3: What is the track record of delivery so far?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Strong and confirmed at ESA. General Cable (2018, $3bn) delivered synergies ahead of schedule. FY25 record EBITDA above guidance. Transmission backlog growing consistently. Encore Wire tracking clean for 5 quarters. No execution misses identified."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic3.tc4",
+                  "label": "TC: Clearing of (idiosyncratic) negative sentiment?",
+                  "rating": "B",
+                  "summary": "Upgraded from C+. Post-Encore Wire acquisition uncertainty has substantially faded with FY25 delivery and 5 clean integration quarters. Residual concern around capacity oversupply timeline is the only remaining sentiment drag."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic3.tc4.a1",
+                  "label": "A1: Oversold/rebounding quality compounder?",
+                  "rating": "B",
+                  "summary": "Upgraded from C+. Not oversold — SP near highs. But quality compounder credentials confirmed at ESA: oligopoly positioning, record margins, structural demand, M&A execution track record. Not a rebound play but quality is being recognised incrementally."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc4.a1.q1",
+                  "label": "Q1: Is the negative sentiment idiosyncratic or sector-wide?",
+                  "rating": "B",
+                  "summary": "Limited negative sentiment — ESA confirms. Integration concerns were company-specific and are now fading. Sector sentiment is positive (energy transition). Capacity oversupply fear is sector-wide but 2028+ not near-term."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc4.a1.q2",
+                  "label": "Q2: Is the underlying business quality intact despite sentiment?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Quality intact and improving — confirmed at ESA. Record EBITDA, growing backlog, oligopoly positioning confirmed, integration tracking clean. Business quality is strengthening not just intact."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc4.a1.q3",
+                  "label": "Q3: What specific catalyst clears the overhang?",
+                  "rating": "B",
+                  "summary": "Upgraded from C+. Ongoing integration delivery clears residual M&A uncertainty. Each quarterly synergy update reduces risk. Q1 2026 results (29-Apr-26) is the next catalyst. Capacity overhang concerns require 2028-30 data to resolve."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic3.tc4.a2",
+                  "label": "A2: Huge CfC clearing event in solid quality?",
+                  "rating": "NR",
+                  "summary": "N/A. No huge CfC to clear. Integration risk is ongoing not event-driven."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc4.a2.q1",
+                  "label": "Q1: Is there a specific clearing event identified?",
+                  "rating": "NR",
+                  "summary": "N/A."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc4.a2.q2",
+                  "label": "Q2: Is business quality sufficient to justify rebound post-clearing?",
+                  "rating": "NR",
+                  "summary": "N/A."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic3.tc5",
+                  "label": "TC: Standard exogenous reversion to mean?",
+                  "rating": "NR",
+                  "summary": "Not applicable. PRY is not a mean-reversion play. Demand cycle is structural not cyclical."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic3.tc5.a1",
+                  "label": "A1: Mean-reverting quality business post-temporary headwind?",
+                  "rating": "NR",
+                  "summary": "N/A. No temporary headwind — demand is structurally rising."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc5.a1.q1",
+                  "label": "Q1: Is the headwind genuinely temporary?",
+                  "rating": "NR",
+                  "summary": "N/A."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc5.a1.q2",
+                  "label": "Q2: What is the normalised earnings level to revert to?",
+                  "rating": "NR",
+                  "summary": "N/A."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc5.a1.q3",
+                  "label": "Q3: Is the quality of the franchise intact through the headwind?",
+                  "rating": "NR",
+                  "summary": "N/A."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic3.tc5.a2",
+                  "label": "A2: Trough-on-trough turn in solid quality cyclical?",
+                  "rating": "NR",
+                  "summary": "N/A."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc5.a2.q1",
+                  "label": "Q1: Are earnings genuinely at trough?",
+                  "rating": "NR",
+                  "summary": "N/A."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc5.a2.q2",
+                  "label": "Q2: Is business quality sufficient to hold through the full cycle?",
+                  "rating": "NR",
+                  "summary": "N/A."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc5.a2.q3",
+                  "label": "Q3: What leading indicators confirm the cyclical turn?",
+                  "rating": "NR",
+                  "summary": "N/A."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic3.tc6",
+                  "label": "TC: Does not overlap with unacceptable setup?",
+                  "rating": "PASS",
+                  "summary": "Confirmed at ESA. No overlap. PRY is not a declining industry, commodity spec, or accounting manipulation. Cable infrastructure is a growing, essential industry with government-mandated demand."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc6.q1",
+                  "label": "Q1: Does the case avoid any of the unacceptable setup patterns?",
+                  "rating": "PASS",
+                  "summary": "Confirmed at ESA. Not a structural decliner, not a commodity play (cable manufacturing not commodity trading), not accounting-driven, not a management vanity project. Clear of all unacceptable patterns."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic3.tc7",
+                  "label": "TC: Does not overlap with false friend setup?",
+                  "rating": "PASS",
+                  "summary": "Confirmed at ESA. No overlap. Demand cycle is structural (government-mandated grid spend). M&A track record is genuine (General Cable + 5 clean Encore Wire quarters). Not a cyclical masquerading as structural."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc7.q1",
+                  "label": "Q1: Does the case avoid any of the false friend setup patterns?",
+                  "rating": "PASS",
+                  "summary": "Confirmed at ESA. Not a false turnaround (20+ year cable consolidation track record). Not financial engineering (real operational synergies tracking clean). Demand is government-mandated not cyclical sentiment. Clear of false friend patterns."
+                },
+                {
+                  "level": "pillar",
+                  "id": "p4",
+                  "label": "P4: Fundamental Case (Inputs)",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Global #1, oligopoly in HV/subsea confirmed with deeper evidence, €17bn backlog, structural demand tailwinds accelerating. Integration risk recalibrated from RED to ORANGE. Foundation quality exceptional for industrial."
+                },
+                {
+                  "level": "family",
+                  "id": "p4.bb1",
+                  "label": "BB#1: Simplicity Guardrails",
+                  "rating": "B",
+                  "summary": "Maintained at B-. Case is reasonably focused: 2 fulcrum drivers, clear setup. Perimeter is wide (50+ countries, 4 segments) but Transmission is the dominant driver. Complexity is real but navigable given oligopoly structure."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb1.tc1",
+                  "label": "TC: Narrowly focused bet?",
+                  "rating": "B",
+                  "summary": "Maintained. 2 fulcrum drivers (Transmission demand cycle + Encore Wire integration). 4 key drivers. Within guideline limits. ESA confirms focus is adequate."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb1.tc1.q1",
+                  "label": "Q1: 2 or less fulcrum drivers and 4 or less key drivers?",
+                  "rating": "B",
+                  "summary": "2 fulcrum drivers (HV demand cycle, integration execution). 4 key drivers (Transmission backlog, synergies, data centre demand, capacity expansion). Meets the narrowness guideline. Confirmed at ESA."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb1.tc2",
+                  "label": "TC: Narrow perimeter?",
+                  "rating": "C",
+                  "summary": "Maintained. Wide perimeter. 50+ countries, 4 segments. Exceeds 10 geo x BU guideline. But Transmission dominates the investment case and is concentrated in large projects. Tracking complexity is manageable for the fulcrum segment."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb1.tc2.q2",
+                  "label": "Q2: 10 or less geographies x business units?",
+                  "rating": "C",
+                  "summary": "No. 50+ countries x 4 segments = 200+ cells. Far exceeds 10. But Transmission (the case driver) is concentrated in a few large projects. Tracking complexity is manageable for the fulcrum segment."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb1.tc3",
+                  "label": "TC: No headwinds?",
+                  "rating": "B",
+                  "summary": "Maintained. Minimal headwinds to core thesis. Copper price is pass-through. Digital Solutions weak but immaterial to thesis. No structural revenue headwinds to Transmission or Electrification. ESA confirms."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb1.tc3.q3",
+                  "label": "Q3: Zero value chain headwinds to revenue?",
+                  "rating": "B",
+                  "summary": "Near-zero for Transmission (demand exceeds supply). Digital Solutions has telecom capex softness (minor). Electrification has some cyclical sensitivity. No structural headwinds to the core cable demand thesis. Confirmed at ESA."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb1.tc4",
+                  "label": "TC: Narrow range of issues?",
+                  "rating": "B",
+                  "summary": "Maintained. 2 CfCs: (1) Integration execution risk, (2) capacity oversupply by 2028-30. Within the 2 guideline. ESA recalibrates both — integration from RED to ORANGE, capacity overhang to 2029+ not 2028."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb1.tc4.q4",
+                  "label": "Q4: 2 or less CfCs or problems?",
+                  "rating": "B",
+                  "summary": "2 CfCs: (1) M&A integration execution (recalibrated to ORANGE at ESA), (2) HV cable capacity oversupply (recalibrated to 2029+ at ESA). Meets guideline."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb1.tc5",
+                  "label": "TC: Conservative IR?",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. FY25 beat guidance, confirming conservatism. FY26 guidance range €2.625-2.775bn is wide enough to allow beat. General Cable synergies exceeded targets. ESA confirms pattern of conservative guidance."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb1.tc5.q5",
+                  "label": "Q5: Company confirms conservative guidance?",
+                  "rating": "B",
+                  "summary": "Yes confirmed at ESA. FY25 delivered above initial guidance. FY26 wide range suggests conservatism. General Cable synergies exceeded targets. Pattern of conservative guidance confirmed."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb1.tc6",
+                  "label": "TC: Clear investment case?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Very clear and confirmed at ESA. Structural HV demand to backlog to revenue/margin growth to EPS upgrades. Synergies to additional EPS accretion. Two-lever case is simple, measurable, and executing."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb1.tc6.q6",
+                  "label": "Q6: Clear strategy-to-EPS trans. mechanism?",
+                  "rating": "B",
+                  "summary": "Crystal clear confirmed at ESA. HV backlog to Transmission revenue growth to 20%+ margins to EBITDA growth. Encore Wire synergies (€140-160m) to cost savings to EPS accretion. Both mechanisms are measurable, trackable, and executing."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb1.tc7",
+                  "label": "TC: Trackable case drivers?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Highly trackable confirmed at ESA. Order intake, backlog, synergy milestones, peer results (NKT/Nexans), EU TYNDP pipeline, data centre starts. All public data with quarterly updates. Comprehensive leading indicator framework."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb1.tc7.q7",
+                  "label": "Q7: Clear VC/Co inputs-to-EPS trans. mechanism?",
+                  "rating": "B",
+                  "summary": "Yes confirmed at ESA. Grid investment to HV cable orders to backlog to revenue. EU Green Deal/IRA to demand volume. Copper price to revenue (pass-through, margin neutral). Synergies to cost reduction to margin. All trackable."
+                },
+                {
+                  "level": "family",
+                  "id": "p4.bb2",
+                  "label": "BB#2: Foundation Quality",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Global #1, oligopoly in HV/subsea with massive BtE confirmed at ESA depth. 20%+ Transmission margins structurally supported. Proven M&A integration (General Cable + 5 clean Encore Wire quarters). Structural demand. Exceptional foundation for industrial."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb2.tc1",
+                  "label": "TC: Great operator?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Strong and confirmed at ESA. Battaini team executing growth + M&A strategy. General Cable successfully integrated. FY25 record results. Encore Wire tracking clean for 5 quarters. Conservative guidance culture confirmed. Solid operational track record."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc1.a1",
+                  "label": "A1: Right direction?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Strategy is right and confirmed at ESA: double down on Transmission/HV (structural demand), expand US footprint (Encore Wire), capture data centre opportunity. Direction aligned with structural industry trends. Executing on plan."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a1.q1",
+                  "label": "Q1: Big, big ambition/vision (force; growth as priority)",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Strong ambition confirmed at ESA. Global #1 cable company pursuing structural growth opportunity with $4.85bn US expansion. Growth is a clear priority alongside return discipline. Bold and executing."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a1.q2",
+                  "label": "Q2: Great, smart strategy and right, bold strategic choices",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Smart strategy confirmed at ESA. Concentrating on HV/subsea oligopoly. US expansion via Encore Wire captures IRA/data centre tailwinds. Bold capital allocation. Right strategic choices with execution tracking to confirm."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc1.a2",
+                  "label": "A2: Right resources?",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Well-resourced confirmed at ESA. Submarine cable vessels (Leonardo da Vinci), global manufacturing footprint, R&D capability. Management team experienced in M&A integration. 5 clean Encore Wire quarters demonstrate bandwidth."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a2.q1",
+                  "label": "Q1: Great CEO (measured via action, not conjecture)",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Solid and confirmed at ESA. Battaini executing growth agenda. General Cable integrated well. FY25 record results. Encore Wire tracking clean. Not a visionary but a competent growth-oriented operator delivering results."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a2.q2",
+                  "label": "Q2: Hiring well is a top CEO priority + CEO has built a strong team",
+                  "rating": "B",
+                  "summary": "Upgraded from C+. ESA evidence: Encore Wire management retained — key staff continuity. Team appears stable across integration. No high-profile departures during 5 clean quarters."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a2.q3",
+                  "label": "Q3: Entire business is well-resourced/well-invested",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Yes confirmed at ESA. Submarine cable vessels (€500m+ each). Manufacturing in 50+ countries. R&D in HV/EHV technology. Capacity expansion investments underway. Encore Wire adds US manufacturing. Well-invested across the value chain."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a2.q4",
+                  "label": "Q4: Holistic, congruent culture + alignment across the business",
+                  "rating": "B",
+                  "summary": "Upgraded from C+. ESA evidence: Encore Wire (Texas-based) integration tracking clean suggests cultural alignment proceeding. General Cable precedent (also US) provides positive reference. Global footprint creates cultural complexity but management navigating effectively."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a2.q5",
+                  "label": "Q5: Conservative guidance (buffer)",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Confirmed at ESA. FY25 beat guidance. FY26 range is wide. General Cable synergies exceeded targets. Pattern of conservative guidance confirmed across multiple data points."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a2.q6",
+                  "label": "Q6: Clear, straightforward and helpful communication",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Good and confirmed at ESA. CMD provided detailed segment disclosure. Backlog and order intake transparently reported. Synergy tracking disclosed. Communication is professional and data-rich."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc1.a3",
+                  "label": "A3: Right record/action/behaviour/forward movement?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Strong track record confirmed at ESA. General Cable ($3bn) synergies ahead of schedule. FY25 record EBITDA. Backlog growing. Encore Wire tracking clean for 5 quarters. Dividend increasing (€0.90/share FY25). Actions back the strategy."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a3.q1",
+                  "label": "Q1: High RONIC capital allocation",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Transmission RONIC strong — 20.2% margins on capacity-constrained assets. General Cable deal RONIC positive (synergies exceeded targets). Encore Wire RONIC tracking favourably. ESA confirms disciplined capital allocation."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a3.q2",
+                  "label": "Q2: Acts not just talks (recent record of huge delivery)",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Yes confirmed at ESA. FY25 record EBITDA €2.57bn — delivered. General Cable synergies ahead of schedule — delivered. Backlog €17bn — built. Encore Wire closed and tracking clean — done. Actions support the narrative."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a3.q3",
+                  "label": "Q3: Track record of delivery (not missing/justifying)",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Strong confirmed at ESA. Consistent guidance beats. General Cable synergies exceeded targets. 20+ years of cable industry consolidation. No major execution misses identified. Encore Wire adds to track record."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a3.q4",
+                  "label": "Q4: Outlier standards, driving higher/faster/better",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Above average confirmed at ESA. Transmission margins 20.2% are best-in-class for cable. Backlog management is disciplined. General Cable synergies ahead of schedule. Not Silicon Valley innovation but operationally excellent industrial."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a3.q5",
+                  "label": "Q5: Shareholders first > management",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Dividend increasing consistently. FCF guidance €1.3-1.4bn shows cash generation priority. M&A is growth-oriented not empire-building. Alignment confirmed at ESA."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a3.q6",
+                  "label": "Q6: Dynamic repurchaser of SBBs + enlightened capital allocation",
+                  "rating": "B",
+                  "summary": "Upgraded from C+. Moderate. Dividend growth is consistent. Share buyback programme exists. Capital allocation prioritises growth (M&A) over return (buybacks) — appropriate given structural growth opportunity. Enlightened allocation for industrial."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a3.q7",
+                  "label": "Q7: Prudent governance/scaffolding",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Italian-listed, FTSE MIB constituent. Adequate governance for large-cap European industrial. ESA confirms no governance red flags. Professional board structure."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb2.tc2",
+                  "label": "TC: Advantaged business + widening SRCA?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Strong and widening moat confirmed at ESA depth. HV/subsea cable oligopoly (3 players). BtE massive and increasing (vessel costs rising, environmental approvals harder). Widening as demand exceeds supply capacity. Each completed project strengthens reference library."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc2.a1",
+                  "label": "A1: Strong operational/competitive advantages?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Exceptional in Transmission confirmed at ESA. Oligopoly with massive BtE. Submarine cable vessels, factory certifications, project references create formidable moat. Customer lock-in via multi-year project commitments. Advantages widening."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a1.q1",
+                  "label": "Q1: Customer-related moats",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Strong confirmed at ESA. Multi-year HV cable contracts with utilities and grid operators. Switching costs are enormous (project redesign, qualification, timeline risk). Reference projects create barriers for new entrants. Customer lock-in is structural."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a1.q2",
+                  "label": "Q2: Production-related moats",
+                  "rating": "A",
+                  "summary": "Upgraded from B+. Exceptional confirmed at ESA. Submarine cable factories require 3-5 year lead time. Cable-laying vessels cost €500m+. Only 3 companies globally with full HV/subsea capability. Production moat is the strongest dimension — among the highest BtE in any industrial sector."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a1.q3",
+                  "label": "Q3: Scale advantage moats",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Global #1 with broadest product range and geographic footprint confirmed at ESA. Scale provides procurement advantage, manufacturing flexibility, and project execution capability. Largest by revenue and capacity. Encore Wire extends scale to US."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a1.q4",
+                  "label": "Q4: Regulatory/political moats",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Moderate regulatory moat strengthened by ESA analysis. HV cable projects require extensive certification and environmental approval. Government-mandated grid spend creates demand certainty. EU energy security policy favours domestic producers. Iran conflict accelerates."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a1.q5",
+                  "label": "Q5: Culture/knowledge moats",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Significant confirmed at ESA. Submarine cable engineering is specialised knowledge accumulated over decades. Project execution expertise creates institutional knowledge barrier. R&D in HV/EHV technology compounds over time."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a1.q6",
+                  "label": "Q6: High relative scale (to competitors, other actors)",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Global #1 confirmed at ESA. Larger than NKT and Nexans. Encore Wire adds US #2 building wire. Relative scale advantage across cable categories. Dominant position confirmed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a1.q7",
+                  "label": "Q7: Large realistic TAM (to facilitate 12-20% p.a. growth)",
+                  "rating": "A",
+                  "summary": "Upgraded from B+. Massive confirmed at ESA. EU Green Deal €584bn grid investment. US IRA $369bn. Data centre power infrastructure growing 20%+ p.a. Global cable TAM >€100bn and growing structurally. Sufficient for sustained double-digit growth. Government mandates provide certainty."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc2.a2",
+                  "label": "A2: Strong operational outputs?",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Transmission margins 20.2% exceptional — confirmed structurally at ESA. Group margin 14.2% solid for industrial. Oligopoly pricing power in HV confirmed. Operating outputs strong and improving with Transmission mix shift."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a2.q1",
+                  "label": "Q1: High SCU",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Strong in HV/subsea confirmed at ESA. Cable quality, installation reliability, and project delivery are critical for utilities. PRY's reference projects and superior track record (vs Nexans GSI) create service quality advantage."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a2.q2",
+                  "label": "Q2: Leading or non-inferior RSCU (hard to prove)",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Leading. Nexans Great Sea Interconnector problems highlight execution complexity — PRY's track record of successful submarine cable projects suggests superior RSCU. ESA confirms PRY's project execution is best-in-class among the oligopoly."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a2.q3",
+                  "label": "Q3: High, utilised pricing power (2% nominal+)",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Strong in Transmission confirmed at ESA. Oligopoly with demand exceeding supply = pricing power. 20.2% margins sustained over multiple quarters confirm pricing is being utilised. Metal price adjustment clauses protect from copper volatility."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a2.q4",
+                  "label": "Q4: Scale economies shared",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Partially. Competitive pricing in building wire/electrification segments. HV pricing reflects oligopoly premium. Scale economies in procurement shared selectively. ESA confirms pricing discipline."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc2.a3",
+                  "label": "A3: Strong financial outputs?",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. EBITDA margin 14.2% (record), Transmission 20.2%. FCF €1.3-1.4bn guided. ROCE improving as Transmission mix increases. ESA confirms financial outputs are strong and structurally improving."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a3.q1",
+                  "label": "Q1: 12-20% EPS growth + revenue growth",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Base case 5-8% EPS CAGR. Revenue growth driven by organic Transmission growth + Encore Wire consolidation. Potentially 10-15% EPS growth with full synergy realisation. ESA confirms growth is visible and backlog-driven."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a3.q2",
+                  "label": "Q2: Immediate scope to deploy 20%+ of sales in capital",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Yes. Encore Wire + Channell represent ~$4.85bn deployed. Capex on Transmission capacity expansion. R&D in HV technology. Capital deployment opportunities abundant relative to earnings. ESA confirms."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a3.q3",
+                  "label": "Q3: High post-tax RONIC (25-30%+)",
+                  "rating": "B",
+                  "summary": "Upgraded from C+. Transmission RONIC likely strong given 20.2% margins on capacity-constrained assets. General Cable deal RONIC validated. Group RONIC diluted by capital-intensive lower-margin segments. ESA calibrates blended RONIC approaching 20%."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a3.q4",
+                  "label": "Q4: High NI to FCF conversion (80%)",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. FCF €1.3-1.4bn guided vs estimated NI ~€1.0-1.2bn. Good conversion confirmed at ESA. Working capital tied to copper/project timing can create lumpiness but structural FCF generation is strong."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a3.q5",
+                  "label": "Q5: Post-tax ROCE of 15%+",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Likely approaching or exceeding 15% on Transmission assets. Group ROCE improving with Transmission mix shift. ESA confirms ROCE trajectory is positive."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a3.q6",
+                  "label": "Q6: Post-tax ROTC of 30%+",
+                  "rating": "C",
+                  "summary": "Upgraded from C. Unlikely on blended basis but improving. Capital-intensive cable manufacturing does not generate 30%+ ROTC. Transmission segment may approach this given margin levels. Not a high-ROTC business model but improving."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a3.q7",
+                  "label": "Q7: High gross margins",
+                  "rating": "B",
+                  "summary": "Upgraded from C+. Revenue includes copper pass-through which depresses reported gross margins. Adjusted for metal, margins are stronger. EBITDA margin 14.2% is solid. Transmission 20.2% is strong. ESA adjusts for metal content."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a3.q8",
+                  "label": "Q8: Solid EBIT margins (20%+ solid, 25%+ great)",
+                  "rating": "B",
+                  "summary": "Upgraded from C+. Transmission at 20.2% EBITDA meets the threshold. Group EBIT below 20% but Transmission mix shift pulling up. Capital-intensive industrial — margins are sector-leading on Transmission basis."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a3.q9",
+                  "label": "Q9: Genuine fixed cost operating leverage",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Yes in Transmission confirmed at ESA. High fixed costs (factories, vessels) provide operating leverage at current utilisation. Volume growth on existing capacity expands margins. Confirmed by Transmission margin expansion to 20.2%."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a3.q10",
+                  "label": "Q10: Low tax rate (below 30%) or other non-obvious advantage",
+                  "rating": "C",
+                  "summary": "Maintained. Italian corporate tax rate ~24% (IRES) + ~3.9% (IRAP). Effective rate likely ~26-28%. No major tax advantage. Transfer pricing across 50+ countries may provide some flexibility."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc2.a4",
+                  "label": "A4: Gets stronger as it gets bigger/time passes?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Yes confirmed at ESA. Each project reference strengthens competitive position. Scale in procurement compounds. Manufacturing know-how deepens. M&A (General Cable, Encore Wire) creates irreversible scale advantages. Flywheel accelerating."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a4.q1",
+                  "label": "Q1: Gravitational/mechanical forces (not just heroics) 1",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Project reference library confirmed at ESA. Each completed HV/subsea project strengthens PRY's qualification for future tenders. Utilities prefer proven suppliers. Track record compounds mechanically and irreversibly."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a4.q2",
+                  "label": "Q2: Gravitational/mechanical forces (not just heroics) 2",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Procurement scale confirmed at ESA. Copper/aluminium purchasing at global #1 volume provides cost advantage that compounds with each acquisition. Manufacturing footprint diversification reduces project delivery risk."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc2.a5",
+                  "label": "A5: Plausible scope for improvement over mid-term?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Strong confirmed at ESA. Encore Wire synergies (€140-160m). Transmission mix shift to higher margins. Data centre cable as new profit pool. Operational efficiency from scale. Multiple re-rating potential. All visible and trackable."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a5.q1",
+                  "label": "Q1: Peer precedents",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. NKT's Karlskrona expansion and premium valuation demonstrate market willingness to value HV cable pure-plays at premium multiples. ESA confirms NKT premium provides re-rating precedent for PRY."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a5.q2",
+                  "label": "Q2: Big savings/improvements in a few areas",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Encore Wire synergies (€140-160m) — big, quantified, trackable, on schedule. Transmission capacity utilisation improvement. Data centre cable as incremental profit pool. Multiple concentrated improvement levers confirmed at ESA."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a5.q3",
+                  "label": "Q3: Lots of little savings/improvements in many areas",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Manufacturing efficiency across 50+ plants. Procurement scale improvements from Encore Wire copper volume. Product mix optimisation toward higher-margin cables. Dispersed incremental gains confirmed at ESA."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a5.q4",
+                  "label": "Q4: Plausibility from congruency with strategy",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Highly congruent confirmed at ESA. Transmission focus aligns with structural demand. Encore Wire expands addressable market. Synergy targets derive from proven integration playbook. All improvements aligned with strategy and executing."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb2.tc3",
+                  "label": "TC: Favourable value chain dynamics?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Highly favourable confirmed at ESA depth. Demand exceeds supply (HV cables). Competition is rational oligopoly. Supplier side neutral (copper pass-through). Regulatory tailwind from green policy accelerating. Disruption risk very low."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc3.a1",
+                  "label": "A1: Demand side — strong/robust or fragile/negative?",
+                  "rating": "A",
+                  "summary": "Upgraded from B+. Exceptional confirmed at ESA. Structural demand from grid modernisation, energy transition, data centres. Government-mandated spending. €17bn backlog. Multi-decade demand runway. Demand is the strongest pillar — among the best in European industrials."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a1.q1",
+                  "label": "Q1: Customer demand",
+                  "rating": "A",
+                  "summary": "Upgraded from B+. Structural demand explosion confirmed at ESA. Utilities must invest in grid modernisation (EU Green Deal). Data centre operators need power infrastructure. Offshore wind requires submarine cables. Demand is non-discretionary and government-mandated. Best demand visibility in European industrials."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a1.q2",
+                  "label": "Q2: Route to market/intermediaries",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Direct-to-customer for Transmission (utility/grid operator projects). Distributor channel for Electrification/building wire. Encore Wire adds direct US distribution capability via Channell. No intermediary risk on core business. ESA confirms clean route to market."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc3.a2",
+                  "label": "A2: Competitive supportiveness or aggression?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Highly supportive in HV/subsea confirmed at ESA. 3-player oligopoly with rational pricing. Demand exceeds supply. No price warfare. Electrification more competitive but not destructive. Competitive environment is among the most benign in industrials."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a2.q1",
+                  "label": "Q1: Existing competition",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Rational oligopoly in HV/subsea confirmed at ESA. All focused on profitable growth not market share battles. 20%+ Transmission margins sustained over multiple quarters confirm rational pricing. Demand exceeds supply = no price pressure."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a2.q2",
+                  "label": "Q2: Adjacencies entering",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Very low risk in HV/subsea confirmed at ESA. Cable-laying vessels, factory certifications, and project references create insurmountable barriers for adjacent entrants. No Chinese HV/subsea entrant credible in EU market."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a2.q3",
+                  "label": "Q3: Vanilla new entrants",
+                  "rating": "A",
+                  "summary": "Upgraded from B+. Minimal risk confirmed at ESA. 3-5 year factory lead time. €500m+ cable-laying vessel cost. Decades of project reference requirement. BtE in HV/subsea are among the highest in any industrial sector globally."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a2.q4",
+                  "label": "Q4: Orthogonal / innovative new entrants",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Low risk confirmed at ESA. Power cables are physics-constrained — no software disruption. Wireless power transmission is science fiction for grid-scale. HVDC technology evolution favours existing manufacturers. No orthogonal threat identified."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a2.q5",
+                  "label": "Q5: Substitutes / alternatives",
+                  "rating": "B",
+                  "summary": "Upgraded from B. No substitutes for power cables confirmed at ESA. Overhead lines compete with underground in some applications but environmental/planning constraints favour underground. Submarine cables have zero substitutes. Physics-constrained product."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc3.a3",
+                  "label": "A3: Disruption forces?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Minimal disruption risk confirmed at ESA. Power cables are physics-constrained infrastructure. No digital disruption threat. Technology evolution (HVDC, superconductors) favours incumbents with R&D capability."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a3.q1",
+                  "label": "Q1: To demand, competition, regulators, suppliers, politics",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Demand: structurally positive. Competition: rational oligopoly. Regulators: supportive and accelerating. Suppliers: neutral. Politics: bipartisan support strengthening post-Iran. No disruption forces identified. ESA confirms across all dimensions."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc3.a4",
+                  "label": "A4: Political/regulatory?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Strongly supportive confirmed at ESA. EU Green Deal mandates grid investment. Energy security post-Russia/Iran strengthens imperative. US IRA provides electrification incentives. Political/regulatory environment is the demand driver. Iran conflict net positive."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a4.q1",
+                  "label": "Q1: Regulator SWOT",
+                  "rating": "B",
+                  "summary": "Strongly positive confirmed at ESA. EU energy regulators mandating grid upgrade. ENTSO-E TYNDP provides project pipeline visibility. Environmental regulations favour underground cables. Regulatory environment is a demand catalyst."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a4.q2",
+                  "label": "Q2: Political actor SWOT",
+                  "rating": "B",
+                  "summary": "Bipartisan support confirmed at ESA. EU: Green Deal + energy security + REPowerEU. US: IRA + bipartisan grid infrastructure need. Grid investment is essential regardless of political orientation. Iran conflict strengthens energy independence narrative."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc3.a5",
+                  "label": "A5: Supportive supplier side?",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Neutral to supportive confirmed at ESA. Copper/aluminium supply abundant. Metal price pass-through clauses protect margins. No supplier concentration risk. Global procurement scale provides advantage."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a5.q1",
+                  "label": "Q1: Supplier side SWOT",
+                  "rating": "B",
+                  "summary": "Copper supply diversified globally. Metal price adjustment clauses mean copper cost is pass-through. Aluminium emerging as substitute in some applications. Supplier side is benign. ESA confirms."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb2.tc4",
+                  "label": "TC: Supportive / concentrated industry structure?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Highly concentrated in HV/subsea confirmed at ESA depth. PRY is #1. Structure is supportive, stable, and concentrating further via M&A. No new entrants credible. Among the most concentrated industry structures in industrials."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc4.a1",
+                  "label": "A1: Concentrated existing market structure?",
+                  "rating": "A",
+                  "summary": "Upgraded from B+. Highly concentrated in HV/subsea confirmed at ESA. PRY #1, NKT #2, Nexans #3. Top 3 control >80% of addressable HV/subsea market. Among the most concentrated industry structures in European industrials."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a1.q1",
+                  "label": "Q1: This company #1 (or #2)?",
+                  "rating": "A",
+                  "summary": "Upgraded from B+. Global #1 cable manufacturer by revenue confirmed at ESA. #1 in HV/subsea cable. #2 in US building wire (via Encore Wire). Dominant position across the cable value chain."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a1.q2",
+                  "label": "Q2: Top 5 > 30% share?",
+                  "rating": "A",
+                  "summary": "Upgraded from B+. Yes in HV/subsea confirmed at ESA. Top 3 (PRY, NKT, Nexans) control >80% of addressable market. Exceeds 30% threshold comfortably. Among the most concentrated industrial oligopolies."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a1.q3",
+                  "label": "Q3: Steep market share distribution curve?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Yes in HV/subsea confirmed at ESA. PRY has largest share, NKT second, Nexans third, then a steep drop to regional players. Classic oligopoly distribution curve."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc4.a2",
+                  "label": "A2: Concentrating gravitational pull?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Yes confirmed at ESA. PRY's M&A (General Cable, Encore Wire, Channell) actively consolidating. BtE prevent new entrants. Industry is concentrating toward the top 3. Gravitational pull is structural."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a2.q1",
+                  "label": "Q1: Stability of share over time?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Growing via M&A — confirmed at ESA. Organic share stable in HV/subsea (capacity-constrained). General Cable + Encore Wire have significantly expanded PRY's global share. Share trajectory is up."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a2.q2",
+                  "label": "Q2: New entrants' share?",
+                  "rating": "A",
+                  "summary": "Upgraded from B+. Zero in HV/subsea confirmed at ESA. 3-5 year factory lead time, €500m+ vessels. Chinese entrants exist in MV/LV cables but not competitive in EU HV/subsea market. BtE are structural and insurmountable."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a2.q3",
+                  "label": "Q3: Share consolidates towards largest competitors?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Yes confirmed at ESA. PRY, NKT, Nexans all investing in capacity. Smaller players cannot match scale or vessel investment. Industry structure favours the big three. Consolidation accelerating."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a2.q4",
+                  "label": "Q4: Share consolidates to most advantaged competitors?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Yes confirmed at ESA. PRY as global #1 with largest vessel fleet, broadest product range, and deepest reference library is the most advantaged. M&A accelerates consolidation toward PRY."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc4.a3",
+                  "label": "A3: Benign competitor attitudes + stability?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Rational oligopoly confirmed at ESA depth. PRY, NKT, Nexans all focused on profitable growth. No price warfare. Demand exceeds supply. Competitors are well-managed. Most benign competitive environment in industrials."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a3.q1",
+                  "label": "Q1: Benign-ness?",
+                  "rating": "B",
+                  "summary": "Highly benign confirmed at ESA. 20%+ Transmission margins sustained over multiple quarters confirm rational pricing. Demand exceeds supply. All three players focused on backlog quality not price."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a3.q2",
+                  "label": "Q2: MOL instability or stable attitude?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Stable confirmed at ESA. Oligopoly structure unchanged for decades. NKT expanding (positive for industry discipline). Nexans restructuring (no irrational behaviour). Stable competitive dynamics."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a3.q3",
+                  "label": "Q3: Shark attack if weakness sensed?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Low risk confirmed at ESA. Demand exceeds supply — no incentive to attack weakened competitor. If Nexans stumbles (GSI), PRY/NKT benefit from order diversion not predatory pricing."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a3.q4",
+                  "label": "Q4: Volume / ROCE prioritisation?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. ROCE-prioritised confirmed at ESA. 20.2% Transmission margins confirm margin discipline. Backlog management focuses on project selection not volume maximisation. Rational capital allocation."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc4.a4",
+                  "label": "A4: Positive or negative competitiveness trends?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Positive confirmed at ESA. Demand outpacing supply strengthens pricing power. BtE increasing (vessel costs rising, environmental approvals harder). Industry consolidation continuing. All trends favour incumbents. Risk: capacity oversupply 2029-30."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a4.q1",
+                  "label": "Q1: Positive or negative competitiveness trends?",
+                  "rating": "B",
+                  "summary": "Positive confirmed at ESA. Supply-demand deficit widening near-term. BtE increasing. M&A consolidating industry. Reference library compounding. All trends favour PRY as global #1. Risk: capacity oversupply by 2029-30."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb2.tc5",
+                  "label": "TC: High secular / long-term growth potential?",
+                  "rating": "A",
+                  "summary": "Upgraded from B+. Exceptional confirmed at ESA. Grid modernisation is a multi-decade theme. Data centre buildout secular growth. Offshore wind interconnection growing. EU Green Deal + IRA provide policy floor. Cable demand is structurally growing faster than at any point in history."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc5.q1",
+                  "label": "Q1: Clear, actionable adjacencies to expand into",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Data centre power infrastructure. EV charging networks. Battery storage interconnection. Smart grid technology. All natural adjacencies for cable manufacturer. Actionable and growing. ESA confirms."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc5.q2",
+                  "label": "Q2: Structurally increasing volume demand",
+                  "rating": "A",
+                  "summary": "Upgraded from B+. Yes confirmed at ESA. Grid modernisation, energy transition, data centres, offshore wind all driving structurally increasing cable demand. Government-mandated and physics-constrained. Multi-decade growth at historically unprecedented rates."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc5.q3",
+                  "label": "Q3: Pricing rising faster than costs/inflation in LT?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Yes in HV/subsea confirmed at ESA. Supply-demand deficit drives pricing above cost inflation. Metal pass-through protects. Pricing power structural while demand exceeds supply. 20%+ margins confirm."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc5.q4",
+                  "label": "Q4: Historical growth rate at sector/industry level high?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Accelerating confirmed at ESA. Cable industry historically low-growth. Now structurally accelerating with energy transition. HV cable demand growing 15-20% annually. Secular growth inflection confirmed."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb2.tc6",
+                  "label": "TC: Fit with stock market paradigm / regime / thematic?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Excellent paradigm fit confirmed at ESA. Energy transition infrastructure. AI/data centre adjacency. Energy security post-Iran. Grid modernisation bipartisan. Fits current market themes well across all three paradigms."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc6.q1",
+                  "label": "Q1: Summarise answer given to that Pillar in C.II.3",
+                  "rating": "B",
+                  "summary": "See P2 paradigm ratings. Late bull/bear: B-. AI: B. Oil/stagflation: B-. Overall paradigm fit B — well-aligned with energy transition, infrastructure, and AI/data centre themes. All confirmed at ESA."
+                },
+                {
+                  "level": "family",
+                  "id": "p4.bb3",
+                  "label": "BB#3: Fit for Market Paradigm",
+                  "rating": "B",
+                  "summary": "Maintained at B. Excellent paradigm fit. Energy transition infrastructure is the dominant market theme. Grid modernisation is counter-cyclical. Data centre buildout adds AI adjacency. Energy security post-Iran strengthens."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb3.tc1",
+                  "label": "TC: Exit discipline when negatives manifest?",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Limited paradigm negatives confirmed at ESA. Grid investment is bipartisan/cross-EU. Data centre demand is secular. Only risk: political reversal of green spend (<5% probability). No overlap with invalidation ACHs on paradigm."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb3.tc1.q1",
+                  "label": "Q1: Market cycle - downturn",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Grid investment is counter-cyclical — governments accelerate during downturns. €17bn backlog provides visibility regardless of cycle. ESA confirms counter-cyclical characteristics with backlog cancellation analysis (very low risk)."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb3.tc1.q2",
+                  "label": "Q2: AI disruption",
+                  "rating": "B",
+                  "summary": "Upgraded from B. AI is a demand driver not a disruption risk. Data centre buildout requires power cables. PRY benefits from AI capex cycle. Positive alignment confirmed at ESA with 3-5% revenue contribution estimated by FY28."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb3.tc1.q3",
+                  "label": "Q3: Input cost inflation (Iran)",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Copper pass-through protects margins. Iran conflict strengthens energy security imperative which accelerates grid investment. Net positive for PRY confirmed at ESA."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb3.tc1.q4",
+                  "label": "Q4: No overlap with 10x general invalidating ACHs",
+                  "rating": "PASS",
+                  "summary": "No overlap with paradigm invalidation scenarios confirmed at ESA. Grid investment is structural and bipartisan."
+                },
+                {
+                  "level": "family",
+                  "id": "p4.bb4",
+                  "label": "BB#4: Strenuously Seek-to-Avoid",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Integration risk recalibrated from RED to ORANGE (5 clean quarters). PoC accounting risk manageable (diversified backlog). Capacity oversupply 2029+ not near-term. Copper pass-through. Manageable risk profile."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb4.tc1",
+                  "label": "TC: Avoiding invalidation at a trough share price?",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Backlog provides earnings floor. Oligopoly protects pricing. Downside limited by visible revenue stream. Integration failure risk recalibrated at ESA — 5 clean quarters reduce binary tail risk."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb4.tc1.q1",
+                  "label": "Q1: Fundamental SHMLP risks?",
+                  "rating": "B",
+                  "summary": "Integration risk recalibrated from RED to ORANGE at ESA. PoC accounting risk manageable (diversified backlog, no single project >5%). Capacity oversupply 2029+ not near-term. All manageable with monitoring."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb4.tc1.q2",
+                  "label": "Q2: Wide skew in outcomes (low case predictability)?",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Moderate skew narrowed at ESA. €17bn backlog narrows outcome range. Oligopoly protects pricing. Integration tracking clean reduces binary risk. Base case outcome range tightening."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb4.tc2",
+                  "label": "TC: Avoiding large mark-to-market risk?",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. ~12x EV/EBITDA has moderate de-rating risk if growth slows. Backlog provides earnings support. Dividend yield ~1.5%. Not deeply cyclical. ESA confirms limited de-rating risk near-term."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb4.tc2.q1",
+                  "label": "Q1: Large downside to trough multiple?",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Moderate. Current ~12x EV/EBITDA. Trough could be 8-9x in a capacity oversupply scenario. Downside ~25-30% from multiple compression. Backlog and oligopoly limit probability. ESA confirms."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb4.tc2.q2",
+                  "label": "Q2: Multiple more influenced by industry than company?",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Primarily company-driven confirmed at ESA. Backlog visibility, oligopoly positioning, and integration delivery are the multiple drivers. Cable sector is niche enough that PRY trades on its own fundamentals."
+                },
+                {
+                  "level": "family",
+                  "id": "p4.bb5",
+                  "label": "BB#5: Small Size Constraints",
+                  "rating": "B",
+                  "summary": "Maintained. ~€17bn market cap. FTSE MIB constituent. Excellent institutional liquidity. No size constraints whatsoever."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb5.tc1",
+                  "label": "TC: Minimise large mark-to-market risk?",
+                  "rating": "B",
+                  "summary": "~€17bn market cap — well above sweet spot. Excellent liquidity. MIB constituent with broad institutional ownership. No liquidity or size concerns."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb5.tc1.q1",
+                  "label": "Q1: Sentiment-related SHMLP risks?",
+                  "rating": "B",
+                  "summary": "Low. Large-cap, well-covered, institutional ownership. Energy transition narrative is positive. No ESG concerns. Sentiment environment supportive."
+                },
+                {
+                  "level": "family",
+                  "id": "p4.bb6",
+                  "label": "BB#6: Invalidating Constraints",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. No red flags on accounting or governance. Integration execution tracking clean at ESA. PoC accounting managed (diversified backlog). Short interest very low (~0.8%). No invalidation triggers identified."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb6.tc1",
+                  "label": "TC: Exit discipline when negatives manifest?",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. No overlap with general invalidation ACHs. Integration failure would be the exit trigger — now tracking clean for 5 quarters. Capacity oversupply is monitor not exit trigger near-term."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc1.q1",
+                  "label": "Q1: No overlap with 10x general invalidating ACHs",
+                  "rating": "PASS",
+                  "summary": "Confirmed at ESA. PRY is not a declining business, not a governance disaster, not an accounting fraud. Structural growth confirmed. Short interest negligible (~0.8%)."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb6.tc2",
+                  "label": "TC: Avoiding probable issues hidden under-the-surface?",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. No hidden issues identified at ESA. PoC accounting is transparent but complex — managed by diversified backlog. Integration progress is disclosed. No 'Hmmms' beyond normal industrial execution risk."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc2.q1",
+                  "label": "Q1: No slowing of core engine vs. company's DNA",
+                  "rating": "B",
+                  "summary": "Upgraded from B. No slowing confirmed at ESA. Core engine (cable manufacturing + M&A) is accelerating. Transmission 39% organic growth. Record EBITDA. Encore Wire expanding DNA into US electrification. Core engine strengthening."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc2.q2",
+                  "label": "Q2: No mediocre CEOs or weird, silly simple choices?",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. No confirmed at ESA. Battaini is competent. Encore Wire acquisition was bold but strategically sound and tracking clean. General Cable integration executed well. No silly choices identified."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc2.q3",
+                  "label": "Q3: No big 'Hmmms'?",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. One 'Hmmm' recalibrated at ESA: simultaneous integration of two large US deals — now tracking clean for 5 quarters, reducing concern from RED to ORANGE. No new 'Hmmms' identified."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb6.tc3",
+                  "label": "TC: Avoiding mediocrity and obvious risks?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Not mediocre confirmed at ESA. Record EBITDA, 20%+ Transmission margins, €17bn backlog, global #1 position, 5 clean integration quarters. Quality credentials are strong and confirmed across multiple dimensions."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc3.q1",
+                  "label": "Q1: No to red flags/achilles heel = 2+ Rs?",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. One potential R: PoC accounting risk on long-duration HV projects — managed by diversified backlog. Not two. Passes minimum threshold. No achilles heel identified."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc3.q2",
+                  "label": "Q2: No to mediocrity = 8+ Ys?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Comfortably passes confirmed at ESA. Record EBITDA, 20%+ margins, global #1, oligopoly, €17bn backlog, successful M&A track record, structural demand, 5 clean integration quarters. Quality credentials strong."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb6.tc4",
+                  "label": "TC: Avoiding tough operating environments?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Operating environment is exceptionally favourable confirmed at ESA. Demand exceeds supply. Government-mandated spending. Oligopoly pricing. Not a tough environment — one of the most favourable in industrials."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc4.q1",
+                  "label": "Q1: No recent earnings cuts (unless CfC part of case)?",
+                  "rating": "B",
+                  "summary": "Upgraded from B. No recent cuts confirmed at ESA. FY25 record EBITDA beat guidance. FY26 guidance above prior consensus. Earnings trajectory is positive. No cuts identified."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc4.q2",
+                  "label": "Q2: No peers having problems?",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Nexans has GSI execution risk — but this is peer-specific, not industry-wide, and may divert orders to PRY. NKT is performing well. Industry environment is supportive. ESA confirms."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb6.tc5",
+                  "label": "TC: Avoid repeating past mistakes/lessons?",
+                  "rating": "PASS",
+                  "summary": "Confirmed at ESA. No overlap with Richard's negative lessons from track record. PRY is a structural growth story not a cyclical value trap."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc5.q1",
+                  "label": "Q1: No overlap with negative lessons and setups?",
+                  "rating": "PASS",
+                  "summary": "No overlap identified. Confirmed at ESA."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc5.q2",
+                  "label": "Q2: No fit with unacceptable / false friend setups?",
+                  "rating": "PASS",
+                  "summary": "No fit. Demand is structural (government-mandated). M&A track record genuine (General Cable + Encore Wire tracking clean). Not a cyclical masquerading as structural — backlog confirms. ESA confirms."
+                },
+                {
+                  "level": "family",
+                  "id": "p4.bb7",
+                  "label": "BB#7: Past Trend / Momentum",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Strong price momentum confirmed at ESA. SP near 52W highs. Post-CMD rally. MAs aligned and rising. Stage 2 confirmed. SS constructive. Earnings revision trend positive. FY25 beat as catalyst."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb7.tc1",
+                  "label": "TC: Price momentum?",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Strong. SP near 52W highs. Post-CMD rally. MAs aligned and rising. Stage 2 confirmed. Need FactSet for RS rank."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb7.tc1.q1",
+                  "label": "Q1: Many - MM technical momentum analysis Qs",
+                  "rating": "B",
+                  "summary": "Need FactSet data for full Minervini analysis. Estimated 7/9 PASS. Strong momentum setup. Only D9 (RS rank) uncertain."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb7.tc2",
+                  "label": "TC: Fundamental momentum?",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Positive confirmed at ESA. FY25 beat, FY26 guidance above consensus. Transmission growing 39%. Order intake strong. SS constructive. Fundamental momentum confirmed and expected to persist."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb7.tc2.q1",
+                  "label": "Q1: SS earnings momentum analysis Qs",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Positive revision trend confirmed at ESA. FY25 beat drove upgrades. FY26 guidance above prior consensus. Majority of SS analysts constructive. Structural upgrade cycle ahead."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb7.tc2.q2",
+                  "label": "Q2: Peers - Technicals, SS Qs",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. NKT performing well (Karlskrona expansion, premium valuation). Nexans mixed (GSI risk). Peer momentum is sector-supportive. PRY outperforming peer group. Confirmed at ESA."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb7.tc2.q3",
+                  "label": "Q3: Company - Delivery of guidance and expectations",
+                  "rating": "B",
+                  "summary": "Upgraded from B. Strong confirmed at ESA. FY25 delivered above guidance — record EBITDA €2.57bn. General Cable synergies ahead of schedule. Track record of meeting/beating expectations. Credibility with sell-side established and strengthening."
+                },
+                {
+                  "level": "family",
+                  "id": "p4.bb8",
+                  "label": "BB#8: Nice-to-Have Attributes",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Data centre cable as positive optionality. Further M&A potential. Political tailwind from energy security. Synergy beats above modal. Nexans stumble could divert orders. Multiple improvement levers above modal case."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb8.tc1",
+                  "label": "TC: Additional upside?",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Data centre cable demand could become significant profit pool. Synergies may exceed conservative targets. Further M&A (bolt-ons). Political acceleration of green spend. Nexans order diversion. All above modal case."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb8.tc1.q1",
+                  "label": "Q1: Big positive optionality above/beyond modal case?",
+                  "rating": "B",
+                  "summary": "Yes confirmed at ESA. (1) Data centre cable as new multi-billion demand pool. (2) Synergy beats (General Cable precedent). (3) Capacity oversupply fear proves unfounded — supply deficit persists to 2030+. (4) Political acceleration of EU/US grid spend. (5) Nexans GSI diverts orders to PRY."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb8.tc2",
+                  "label": "TC: Self-righting behaviour ATM?",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Backlog provides revenue visibility regardless of short-term disruption. Oligopoly pricing power self-rights margins. Metal pass-through self-rights commodity exposure. Multiple self-righting mechanisms confirmed at ESA."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb8.tc2.q1",
+                  "label": "Q1: Rapid self-righting MMO?",
+                  "rating": "B",
+                  "summary": "Yes confirmed at ESA. €17bn backlog self-rights revenue over multi-year horizon. Oligopoly pricing self-rights margins. Metal adjustment clauses self-right commodity exposure. Structural demand self-rights any cyclical dip."
+                },
+                {
+                  "level": "pillar",
+                  "id": "p5",
+                  "label": "P5: Sell-Side Momentum",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Positive SS momentum confirmed at ESA. FY25 beat drove upgrades. FY26 guidance above consensus. Majority Buy ratings. Backlog provides downside protection. Structural upgrade cycle ahead with 8-12% consensus gap."
+                },
+                {
+                  "level": "metric",
+                  "id": "p5.eps_change",
+                  "label": "EPS revisions",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Positive trend confirmed at ESA. FY25 beat catalyst. FY26 guidance above consensus. Structural consensus gap suggests further upgrades ahead."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.eps_change.l1m",
+                  "label": "EPS L1M change",
+                  "rating": "B",
+                  "summary": "Positive post-FY25 results beat."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.eps_change.l3m",
+                  "label": "EPS L3M change",
+                  "rating": "B",
+                  "summary": "Positive over 3 months driven by FY25 results and FY26 guidance."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.eps_change.l6m",
+                  "label": "EPS L6M change",
+                  "rating": "B",
+                  "summary": "Positive over 6 months. Structural demand narrative gaining consensus acceptance."
+                },
+                {
+                  "level": "metric",
+                  "id": "p5.ebitda_change",
+                  "label": "EBITDA revisions",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Positive. Record FY25 EBITDA €2.57bn. FY26 guide above prior estimates. ESA consensus gap suggests 8-12% further upside to FY28."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.ebitda_change.l1m",
+                  "label": "EBITDA L1M change",
+                  "rating": "B",
+                  "summary": "Positive post-FY25 beat."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.ebitda_change.l3m",
+                  "label": "EBITDA L3M change",
+                  "rating": "B",
+                  "summary": "Positive."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.ebitda_change.l6m",
+                  "label": "EBITDA L6M change",
+                  "rating": "B",
+                  "summary": "Positive. Consensus catching up to structural demand thesis."
+                },
+                {
+                  "level": "metric",
+                  "id": "p5.revenue_change",
+                  "label": "Revenue revisions",
+                  "rating": "B",
+                  "summary": "Upgraded from C+. Revenue includes copper pass-through. Underlying organic revenue positive. FY25 consolidated Encore Wire full-year for first time."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.revenue_change.l1m",
+                  "label": "Revenue L1M change",
+                  "rating": "B",
+                  "summary": "Modestly positive."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.revenue_change.l3m",
+                  "label": "Revenue L3M change",
+                  "rating": "B",
+                  "summary": "Modestly positive. Organic growth offsetting copper headwind."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.revenue_change.l6m",
+                  "label": "Revenue L6M change",
+                  "rating": "B",
+                  "summary": "Modestly positive."
+                },
+                {
+                  "level": "metric",
+                  "id": "p5.price_target_change",
+                  "label": "Price target revisions",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. PTs rising post-FY25. Majority of SS with Buy ratings. PTs suggest 10-20% upside."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.price_target_change.l1m",
+                  "label": "PT L1M change",
+                  "rating": "B",
+                  "summary": "Rising post-results."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.price_target_change.l3m",
+                  "label": "PT L3M change",
+                  "rating": "B",
+                  "summary": "Rising."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.price_target_change.l6m",
+                  "label": "PT L6M change",
+                  "rating": "B",
+                  "summary": "Positive trajectory over 6 months."
+                },
+                {
+                  "level": "metric",
+                  "id": "p5.pct_buy_change",
+                  "label": "% Buy change",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. Majority Buy confirmed at ESA. FY25 beat reinforced conviction. No downgrades identified."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.pct_buy_change.l1m",
+                  "label": "% Buy L1M change",
+                  "rating": "B",
+                  "summary": "Stable to improving."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.pct_buy_change.l3m",
+                  "label": "% Buy L3M change",
+                  "rating": "B",
+                  "summary": "Stable to improving."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.pct_buy_change.l6m",
+                  "label": "% Buy L6M change",
+                  "rating": "B",
+                  "summary": "Improving."
+                },
+                {
+                  "level": "pillar",
+                  "id": "p6",
+                  "label": "P6: Valuation",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. ~12x EV/EBITDA. Reasonable for structural growth industrial with oligopoly. Not cheap in absolute terms but growth-adjusted valuation is attractive. Backlog supports. Consensus gap provides upgrade path. NKT premium provides re-rating precedent."
+                },
+                {
+                  "level": "valuation",
+                  "id": "p6.fwd_pe",
+                  "label": "Forward P/E",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. ~15-17x forward P/E. Reasonable for 5-8% EPS CAGR industrial with structural demand and oligopoly. Not cheap but growth-adjusted valuation attractive (PEG ~1.5-2x if growth sustains)."
+                },
+                {
+                  "level": "valuation",
+                  "id": "p6.hist_range",
+                  "label": "Historical range",
+                  "rating": "B",
+                  "summary": "Upgraded from C+. Near top of historical range reflecting structural demand re-rating. Premium to historical average justified by improved demand visibility, oligopoly positioning, and record margins. Re-rating is fundamental not sentiment."
+                },
+                {
+                  "level": "valuation",
+                  "id": "p6.peer",
+                  "label": "Peer comparison",
+                  "rating": "B",
+                  "summary": "Upgraded from B-. NKT trades at premium (pure-play HV). Nexans at discount (GSI risk). PRY in between — justified by diversified portfolio vs NKT purity. ESA confirms relative valuation is fair with re-rating potential toward NKT levels."
+                }
+              ]
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "C.II.1",
+          "title": "Technical Strength (Pillar 1)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bluf",
+              "text": "_Strong technical picture confirmed at ESA. SP near 52W highs post-CMD rally and FY25 record results. MAs fully aligned. Estimated 7/9 Minervini PASS. Stage 2 confirmed with constructive momentum._"
+            },
+            {
+              "type": "summary",
+              "text": "_Technical picture unchanged from Triaging — remains strong. Monitor for base formation/breakout continuation. Q1 2026 results (29-Apr-26) could trigger next technical leg._"
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "C.II.2",
+          "title": "Fundamental Investment Case (P3+P4)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bluf",
+              "text": "_Earnings Upgrade Cycle + M&A-Driven EPSU: ESA confirms and upgrades thesis from B to B+. Structural HV cable supply deficit driving 39% Transmission organic growth at 20%+ margins with €17bn backlog. Encore Wire integration tracking clean for 5 quarters. Consensus gap quantified at 8-12% on FY28 EBITDA. Integration risk recalibrated from RED to ORANGE. Capacity oversupply pushed to 2029+._"
+            },
+            {
+              "type": "summary",
+              "text": "_Fundamental case B+ at ESA: structural demand cycle exceptional and confirmed, oligopoly positioning deepened, integration tracking clean, consensus gap quantified. Proceed to DD P1 to build financial model, engage IR, and deep-dive capacity oversupply timeline._"
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "C.II.3",
+          "title": "Paradigm / Regime Fit (P2)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bluf",
+              "text": "_Excellent paradigm fit confirmed at ESA. Energy transition infrastructure is the defining market theme. Grid modernisation is counter-cyclical and bipartisan. Data centre buildout adds AI adjacency (3-5% revenue by FY28). Energy security post-Iran strengthens demand. Optimally positioned for current environment._"
+            },
+            {
+              "type": "summary",
+              "text": "_Paradigm fit B overall confirmed at ESA. PRY is well-aligned with energy transition, AI/data centre, and energy security themes. Grid investment is counter-cyclical. Not a typical cyclical industrial. Paradigm is a strength of this case._"
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "C.II.4",
+          "title": "Sell-Side Momentum (P5)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bluf",
+              "text": "_Positive SS momentum confirmed and upgraded at ESA. FY25 beat drove upgrades. FY26 guidance above consensus. Majority Buy ratings. Structural consensus gap of 8-12% on FY28 EBITDA suggests further upgrade cycle ahead._"
+            },
+            {
+              "type": "momentum_table",
+              "title": "P5 SS Earnings Momentum — 5 dimensions x 3 timeframes (PRY consensus snapshot)",
+              "metrics": [
+                {
+                  "key": "eps_change",
+                  "label": "EPS revisions",
+                  "values": {
+                    "l1m": 4,
+                    "l3m": 3,
+                    "l6m": 4
+                  }
+                },
+                {
+                  "key": "ebitda_change",
+                  "label": "EBITDA revisions",
+                  "values": {
+                    "l1m": 2,
+                    "l3m": 3,
+                    "l6m": 3
+                  }
+                },
+                {
+                  "key": "revenue_change",
+                  "label": "Revenue revisions",
+                  "values": {
+                    "l1m": 0,
+                    "l3m": 1,
+                    "l6m": 4
+                  }
+                },
+                {
+                  "key": "price_target_change",
+                  "label": "Price target revisions",
+                  "values": {
+                    "l1m": 3,
+                    "l3m": 12,
+                    "l6m": 19
+                  }
+                },
+                {
+                  "key": "pct_buy_change",
+                  "label": "% Buy change",
+                  "values": {
+                    "l1m": -2,
+                    "l3m": -7,
+                    "l6m": -7
+                  }
+                }
+              ],
+              "score": 11,
+              "grade": "B"
+            },
+            {
+              "type": "summary",
+              "text": "_SS momentum B. Positive revision trend, majority Buy, FY25 beat as catalyst. Structural consensus gap confirmed at ESA. Synergy delivery and Transmission order intake are next upgrade catalysts. Q1 2026 results (29-Apr-26) is first proof point._"
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "C.II.5",
+          "title": "Valuation (P6)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bluf",
+              "text": "_~12x EV/EBITDA, ~15-17x forward P/E. Reasonable for structural growth industrial with oligopoly positioning and €17bn backlog. Growth-adjusted valuation attractive (PEG ~1.5-2x). NKT premium provides re-rating precedent._"
+            },
+            {
+              "type": "summary",
+              "text": "_Valuation B — reasonable for structural growth industrial with oligopoly and backlog. Not a deep value play. Upside driven by earnings growth + consensus upgrades not pure multiple expansion. Growth-adjusted valuation is the attractive lens._"
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        }
+      ]
+    },
+    "D": {
+      "letter": "D",
+      "title": "COMPONENTS",
+      "applicable": true,
+      "inline_verdict": "2 FDs, 4 KDs, 3 KHF/As, 4 KCs deepened, 5 KRs with ESA probability calibration, 4 KPOs, ACH sketch with YES/NO/FALSE FRIEND — integration risk recalibrated to ORANGE, capacity oversupply pushed to 2029+",
+      "default_open": true,
+      "applicable_note": null,
+      "word_count": 0,
+      "page_count": 0,
+      "target_words": 0,
+      "subsections": [
+        {
+          "id": "D.I.1",
+          "title": "KDICs — Key Drivers of Investment Case (ICD Framework)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "**ICD Framework — PRY ESA:** 2 fulcrum drivers, 4 key/secondary drivers. Transmission chains mapped at ESA depth. Integration risk recalibrated. Capacity oversupply timeline refined."
+            },
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "**FULCRUM #1: HV/subsea Transmission demand cycle** (GREEN, 80%) — €17bn backlog, 39% organic growth Q3 2025, 20.2% margins. Structural supply-demand deficit confirmed at ESA depth. Transmission chain: EU Green Deal/IRA mandate -> utility grid investment -> HV cable orders -> backlog -> revenue growth (12-18% through FY28) -> 20%+ margins -> EBITDA growth -> EPS upgrades -> multiple support. Demand growth outpacing capacity additions through 2029 (60% probability). RED if Transmission margins below 16% for 2+ quarters."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**FULCRUM #2: Encore Wire + Channell integration execution** (YELLOW-GREEN, 70%) — $3.9bn + $950m simultaneously. €140-160m synergy target by end-2026. ESA recalibrates from ORANGE to YELLOW-GREEN: 5 clean quarters of tracking, General Cable precedent, management bandwidth adequate. Transmission chain: integration execution -> synergy delivery (€140-160m) -> cost reduction -> EPS accretion (~8-10%) -> consensus upgrades -> multiple support. RED if synergies miss by >50% through mid-2027."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KD #3: Data centre cable demand** (YELLOW, 65%) — nascent but potentially large profit pool. Hyperscaler buildout requires dedicated power infrastructure. PRY well-positioned as global #1. ESA estimates 3-5% of group revenue by FY28. Transmission chain: hyperscaler capex -> data centre construction -> HV/MV cable demand -> PRY revenue/margin contribution -> above-consensus growth."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KD #4: Competitive capacity additions** (ORANGE, 55% for deficit persistence to 2029+) — NKT Karlskrona adds ~10-15% global HV capacity by 2027-28. Nexans also expanding. ESA analysis: demand growth (EU TYNDP + IRA + data centres) likely outpaces new capacity through 2029. Oversupply risk is 2029-30 at earliest. Transmission chain: new capacity online -> supply-demand gap narrows -> pricing pressure -> Transmission margin compression -> EBITDA growth moderates."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**SECONDARY #5: Power Grid segment margin** (ORANGE, 55%) — margins below Transmission, diluting group profitability. Utility distribution cable is more competitive than HV/subsea. Partially offset by Transmission mix shift pulling group margins up. Not the thesis driver."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**SECONDARY #6: Copper price volatility** (GREEN, 85%) — managed via metal price adjustment clauses. Not a margin risk — pass-through mechanism well-established. Working capital timing impact only. Not a thesis concern."
+                }
+              ],
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "D.I.2",
+          "title": "KHF/As — Key Hygiene Factors / Assumptions",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "I",
+                  "text": "EU Green Deal and US IRA funding commitments are maintained — no material political reversal of grid investment mandates. ESA calibrates reversal probability at <5% N1-3Y given energy security imperative."
+                },
+                {
+                  "iaja": "I",
+                  "text": "Metal price adjustment clauses in HV contracts continue to function as designed — copper/aluminium cost remains pass-through not margin risk. Validated through multiple copper cycles."
+                },
+                {
+                  "iaja": "I",
+                  "text": "No major PoC accounting issues on long-duration Transmission projects — revenue recognition remains orderly. PRY's diversified backlog (no single project >5%) mitigates Nexans GSI-type concentration risk."
+                }
+              ],
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "D.I.3",
+          "title": "KCs/KUs — Key Confusions & Unknowns",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "**KC#1: Capacity oversupply timeline** — deepened at ESA. NKT Karlskrona adds ~10-15% global HV capacity by 2027-28. But EU TYNDP pipeline + IRA deployment + data centre demand growing faster than capacity can follow. ESA assessment: supply-demand deficit likely persists through 2029 (60% probability). 2029-30 is the inflection window. DD P1 action: build detailed supply-demand model with all announced capacity additions vs demand projections."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KC#2: Encore Wire cultural integration** — recalibrated at ESA. Texas-based US manufacturer + Italian HQ. 5 clean quarters of tracking with no reported cultural friction. General Cable (also US, 2018) provides positive precedent. Key staff retention confirmed. ESA downgrades this concern from active risk to background monitor."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KC#3: PoC accounting accuracy on mega-projects** — maintained at ESA but risk mitigated by backlog diversification analysis. No single project >5% of €17bn backlog. Nexans GSI is cautionary but PRY's project track record is superior. DD P1 action: review revenue recognition policies in detail."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KC#4: Data centre cable market sizing** — refined at ESA. Estimated 3-5% of group revenue by FY28 based on hyperscaler capex trajectory and PRY's positioning. Potentially significant but still nascent. DD P1 action: quantify precisely with IR engagement."
+                }
+              ],
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "D.I.4",
+          "title": "KRs — Key Concerns / Risks",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "**KR#1 (ORANGE, recalibrated from RED):** M&A integration failure — two large US deals simultaneously ($4.85bn combined). ESA recalibrates: 5 clean quarters reduce binary tail risk. Net debt 2.2-2.4x EBITDA manageable with €1.3-1.4bn FCF. Probability: 10-15% (down from 15-20% at Triaging)."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KR#2 (ORANGE):** Capacity oversupply 2029-30 — NKT Karlskrona, Nexans expansion narrow supply-demand deficit. ESA calibrates timing to 2029+ (was 2028-30 at Triaging). If supply deficit closes early, Transmission margins compress from 20%+ to 16-18%. Probability: 20-25% before 2029."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KR#3 (YELLOW):** PoC accounting risk — long-duration HV projects carry cost overrun and revenue recognition risk. ESA mitigated by diversified backlog (no single project >5%). PRY's track record superior to Nexans. Probability of material provision: 10-15%."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KR#4 (YELLOW):** Copper price volatility — managed via pass-through. Working capital impact only. Not a margin risk. Probability of thesis-impacting event: <5%."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KR#5 (YELLOW):** Power Grid margin compression — utility distribution cable more competitive than HV/subsea. If Transmission growth moderates, Power Grid margins dilute group profitability. ESA: partially offset by Transmission mix shift. Probability: 20-25%."
+                }
+              ],
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "D.I.5",
+          "title": "KPOs — Key Positive Optionality",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "**KPO#1:** Supply-demand deficit persists to 2030+ — if demand growth outpaces capacity additions (EU Green Deal acceleration + data centres), Transmission margins stay above 20% longer than consensus expects. Probability: 40%."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KPO#2:** Synergies exceed targets — General Cable precedent suggests Encore Wire synergies could beat €140-160m. Each €50m upside = ~2% EPS accretion. Probability: 30%."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KPO#3:** Data centre cable becomes a major profit pool — hyperscaler buildout accelerates beyond current plans. Could become 5-10% of revenue by FY30. Probability: 25%."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KPO#4:** Nexans execution stumble diverts orders — Great Sea Interconnector risk at Nexans could redirect HV cable orders to PRY/NKT, expanding backlog further. Probability: 30%."
+                }
+              ],
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "D.II.1",
+          "title": "10 standard ACH invalidation scenarios",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bluf",
+              "text": "10 invalidation scenarios maintained from Triaging with ESA probability calibration. 5 market/structural, 5 company/execution. No single scenario >20% probability. ACH#2 (capacity oversupply) and ACH#6 (synergy miss) highest at ~15-20%. Integration risk downgraded from binary to manageable."
+            },
+            {
+              "type": "prose",
+              "iaja": "I",
+              "text": "**Single-event invalidations (rules 1-5)** — market and structural triggers:"
+            },
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "**ACH#1:** EU Green Deal defunded / materially reduced — grid investment mandates reversed, HV cable demand collapses 30%+. Probability: <5% (strengthened by Iran energy security imperative)."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**ACH#2:** HV cable capacity oversupply by 2028 — NKT Karlskrona + Nexans + Chinese entrants flood market, Transmission margins compress below 15%. Probability: 15-20% (refined at ESA — demand growth likely outpaces through 2029)."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**ACH#3:** Major PoC accounting blow-up — cost overrun on mega-project (>€500m loss provision). Probability: 10-15% (mitigated by diversified backlog, no single project >5%)."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**ACH#4:** Copper price collapse >40% — working capital disruption, project economics delayed. Probability: <5%."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**ACH#5:** Chinese HV cable manufacturer becomes competitive in EU/US — breaks oligopoly, drives pricing down 20%+. Probability: <5% (certification requirements and political barriers are structural)."
+                }
+              ],
+              "ratings": []
+            },
+            {
+              "type": "prose",
+              "iaja": "I",
+              "text": "**SP-conditional & composite invalidations (rules 6-10)** — execution-dependent triggers:"
+            },
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "**ACH#6:** Encore Wire synergies miss target by >50% — integration fails, management bandwidth consumed, EPS accretion absent. Probability: 10-15% (down from 15-20% at Triaging — 5 clean quarters)."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**ACH#7:** CEO departure during integration — key man risk during critical Encore Wire integration period. Probability: <5%."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**ACH#8:** Net debt exceeds 3x EBITDA — balance sheet stress from M&A + working capital + capex. Probability: <5% (€1.3-1.4bn FCF provides deleveraging capacity)."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**ACH#9:** Transmission backlog cancellations >20% — utility customers delay or cancel HV projects. Probability: <5% (government-mandated projects with very low cancellation risk — confirmed at ESA)."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**ACH#10:** Digital Solutions deterioration accelerates — telecom capex downturn consumes management attention, drags group margins. Probability: <5% (immaterial to thesis)."
+                }
+              ],
+              "ratings": []
+            },
+            {
+              "type": "summary",
+              "text": "_ESA calibrates: ACH#2 (capacity oversupply) highest at 15-20%. ACH#6 (synergy miss) reduced to 10-15%. No single scenario >20%. Aggregate tail risk manageable. Monitor order intake, synergy milestones, and NKT capacity ramp quarterly. Q1 2026 results (29-Apr-26) is first ESA proof point._"
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "D.II.2",
+          "title": "Plausible fundamental invalidation thresholds",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "**Fundamental invalidation thresholds (ESA calibrated):**\n\n(i) Transmission order intake declines >20% YoY for 2+ consecutive quarters — demand thesis broken.\n(ii) Transmission margins compress below 16% for 2+ quarters — oligopoly pricing discipline failing, capacity oversupply arriving.\n(iii) Encore Wire synergies miss €100m by end-2027 — integration execution failing.\n(iv) PoC accounting loss provision >€300m on any single project — Nexans GSI-type event.\n(v) Net debt/EBITDA exceeds 3x — balance sheet stress from M&A + working capital.\n(vi) Backlog cancellations exceed 15% in any 12-month period — customer commitment wavering, demand thesis weakening."
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "D.II.3",
+          "title": "PRY-specific ACH sketch (YES/NO/FALSE FRIEND)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "**YES profile (thesis confirms):** Transmission organic growth sustains 12-18% through FY28. Transmission margins remain above 18%. Encore Wire synergies deliver €140-160m by end-2026. Order intake continues to grow. Data centre cable becomes 3-5% of revenue. NKT Karlskrona capacity absorbed by demand growth. Consensus upgrades 8-12%. SP: €70-85 within 18M (15-25% upside). Probability: 45-50%."
+            },
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "**NO profile (thesis fails):** HV cable capacity oversupply materialises by 2028 — earlier than ESA base case. Transmission margins compress to 14-16%. Encore Wire synergies miss significantly (below €100m). Order intake plateaus then declines. NKT Karlskrona and Nexans expansion flood market. Multiple de-rates to 8-9x EV/EBITDA. SP: €45-50 (25-30% downside). Probability: 15-20%."
+            },
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "**FALSE FRIEND profile (thesis appears to confirm but ultimately fails):** Transmission growth sustains through FY27-28 as expected, synergies deliver, consensus upgrades — but the backlog is masking a peaking cycle. Order intake growth slows from 2028 as EU TYNDP project pipeline transitions from award to execution phase. NKT Karlskrona + Nexans expansion + potential Middle Eastern/Asian capacity additions create meaningful supply response by 2029-30. Margins compress gradually from 20%+ to 15-16% over 2029-31. Market re-rates from structural-growth to cyclical-industrial multiple (12x to 8-9x). CfC scepticism flag: current exceptional margins (20%+) may attract sufficient capacity investment to mean-revert the oligopoly pricing power within 3-5 years. The backlog provides a false sense of permanence — it represents committed demand but not necessarily sustained pricing power once supply catches up. ESA guard: monitor ratio of new order intake to backlog depletion; if intake/depletion falls below 1.2x for 2+ quarters, capacity equilibrium may be approaching. Also track NKT/Nexans capacity utilisation rates as leading indicator. Probability: 20-25%."
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "D.III.1",
+          "title": "KOQs — Key Open Questions",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "**KOQ#1:** When does HV cable capacity oversupply materialise? ESA analysis pushes to 2029+. DD P1 action: build detailed supply-demand model with all announced capacity additions (NKT Karlskrona timeline, Nexans plans, any other entrants) vs EU TYNDP + IRA + data centre demand projections."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KOQ#2:** What is the synergy delivery pace — quarterly milestones for Encore Wire €140-160m target? How does it compare to General Cable synergy trajectory? DD P1 action: engage IR for granular synergy composition and tracking data."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KOQ#3:** How large is the data centre cable opportunity — can PRY quantify incremental revenue/margin from hyperscaler power infrastructure? ESA estimates 3-5% of revenue by FY28. DD P1 action: validate with IR and hyperscaler capex data."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KOQ#4 (new at ESA):** What is PRY's Transmission margin sustainability in a post-oversupply world? If capacity catches up by 2029-30, do margins compress to 15-16% or hold at 18%+ due to project complexity and reference library advantages? DD P1 action: competitive deep-dive on NKT/Nexans capacity expansion timing and quality."
+                }
+              ],
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "D.III.2",
+          "title": "KAs — Key Actions",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "A",
+                  "text": "Build HV cable supply-demand model — map all capacity additions (NKT Karlskrona, Nexans, others) vs demand growth (EU TYNDP, IRA projects, data centres). Determine when deficit closes. Critical for thesis duration."
+                },
+                {
+                  "iaja": "A",
+                  "text": "Deep-dive Encore Wire integration — synergy trajectory vs General Cable precedent, cultural integration assessment, management bandwidth analysis. Validate €140-160m target credibility."
+                },
+                {
+                  "iaja": "A",
+                  "text": "Build financial model — 3-scenario framework (bear/modal/bull) with sensitivity on Transmission margins, synergy delivery, and capacity oversupply timing."
+                },
+                {
+                  "iaja": "A",
+                  "text": "Engage IR — assess guidance conservatism, synergy composition, data centre cable quantification, NKT/Nexans competitive positioning."
+                },
+                {
+                  "iaja": "A",
+                  "text": "Competitive deep-dive NKT/NEX capacity expansion timing — this is the fulcrum question for thesis duration. NKT Karlskrona commissioning date and ramp timeline is critical."
+                },
+                {
+                  "iaja": "A",
+                  "text": "Monitor Q1 2026 results (29-Apr-26) — first ESA proof point. Order intake, backlog progression, synergy update, Transmission margins. Gate for DD P1 progression."
+                }
+              ],
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        }
+      ]
+    },
+    "E": {
+      "letter": "E",
+      "title": "ACTIONS",
+      "applicable": true,
+      "inline_verdict": "PROCEED to DD P1 — earnings upgrade cycle confirmed, consensus gap quantified, integration tracking clean; Q1 2026 results (29-Apr-26) first proof point",
+      "default_open": true,
+      "applicable_note": null,
+      "word_count": 0,
+      "page_count": 0,
+      "target_words": 0,
+      "subsections": [
+        {
+          "id": "E.I.1",
+          "title": "Pros/cons of prioritising vs other opportunities",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "**Pros of prioritising PRY:** (i) Exceptional demand visibility — €17bn backlog with government-mandated projects provides earnings certainty rare in industrials. (ii) Oligopoly confirmed at ESA depth — 3-player market with 20%+ margins sustained. (iii) Consensus gap quantified at 8-12% on FY28 EBITDA — structural upgrade cycle ahead. (iv) Integration risk recalibrated from RED to ORANGE — 5 clean quarters. (v) Multiple paradigm alignment — energy transition + AI/data centre + energy security. (vi) Near-term catalyst — Q1 2026 results 29-Apr-26.\n\n**Cons:** (i) Not cheap in absolute terms — ~12x EV/EBITDA, ~15-17x P/E. Need growth to sustain multiple. (ii) Capacity oversupply by 2029-30 creates thesis duration risk. (iii) Wide geographic perimeter (50+ countries) adds complexity. (iv) Large-cap (€17bn) limits absolute upside vs smaller positions. (v) Italian-listed — liquidity and governance less familiar than UK.\n\n**Net assessment:** Justified for DD P1 progression. Potential full position (3-5%) if capacity oversupply timeline confirmed at 2029+ and integration continues tracking clean. Starter position (1.5-2%) could be justified now given B+ conviction and upcoming Q1 catalyst. Compete for capital with CARLB, CRBN in GARP/structural-growth bucket. Fits cables theme alongside NKT/NEX.",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "E.II.1",
+          "title": "Monitoring plan (RESEARCHER) for TIs/ICDs/peers",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "**Trackable Indicators (TIs):** (i) Transmission order intake (quarterly — must sustain growth). (ii) Backlog progression (quarterly — must stay above €15bn). (iii) Transmission margins (quarterly — must stay above 18%). (iv) Encore Wire synergy delivery (quarterly — tracking toward €140-160m). (v) Data centre cable revenue (quarterly — monitor emergence). (vi) NKT Karlskrona capacity ramp (event-driven — critical for thesis duration).\n\n**Investment Case Drivers (ICDs):** (i) Q1 2026 results (29-Apr-26 — first ESA proof point). (ii) H1 2026 results (TBD — synergy and margin update). (iii) NKT capacity commissioning (2027-28). (iv) EU TYNDP project awards (ongoing).\n\n**Peer monitoring:** NKT (Karlskrona expansion, valuation premium), Nexans (GSI execution, restructuring), Encore Wire (pre-acquisition comparable data). Track for: order intake trends, capacity utilisation, margin trajectory, competitive pricing behaviour.",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "E.II.2",
+          "title": "KQs/KAs if/when progressed to DD P1",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "**Key Questions for DD P1:** (i) Capacity oversupply: build detailed supply-demand model — when does HV cable supply catch up with demand? (ii) Synergy composition: what is the breakdown of €140-160m (procurement, operational, revenue)? Is pace on track? (iii) Data centre cable: how large is the addressable market and what is PRY's share? (iv) Transmission margin sustainability: what happens to margins in a post-oversupply world? Do reference library and project complexity advantages protect pricing? (v) PoC accounting: review revenue recognition policies and largest project exposures.\n\n**Key Actions for DD P1:** (i) Build full 3-statement financial model with 3 scenarios and capacity oversupply sensitivity. (ii) Engage IR for synergy detail, data centre quantification, guidance philosophy. (iii) Competitive deep-dive on NKT Karlskrona commissioning timeline and Nexans restructuring impact. (iv) PoC accounting review — largest project exposures and revenue recognition methodology. (v) Track Q1 2026 results (29-Apr-26) as stage gate.",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "E.III.1",
+          "title": "Reasons for parking ('gaps' analysis)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "**Gaps remaining after ESA:** (i) Financial model not built — cannot quantify bear/modal/bull with precision or model capacity oversupply sensitivity. (ii) IR not engaged — synergy composition, data centre sizing, and capacity timeline are company-sourced only. (iii) Supply-demand model not built — cannot confirm capacity oversupply timing with precision. (iv) NKT/Nexans competitive deep-dive not completed — Karlskrona commissioning timeline is critical and not independently verified. (v) PoC accounting review not completed.\n\n**Park triggers (immediate):** (i) Transmission order intake declines >20% YoY. (ii) Transmission margins compress below 16% for 2+ quarters. (iii) Encore Wire synergies miss by >50% through mid-2027. (iv) Major PoC loss provision (>€300m). (v) NKT Karlskrona commissions early and ramps faster than expected.",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "E.III.2",
+          "title": "Re-assessment criteria for re-activation",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "**Re-activation criteria (if parked):** (i) Transmission order intake growth resumes for 2+ consecutive quarters. (ii) Transmission margins stabilise above 18%. (iii) NKT Karlskrona capacity delayed or demand growth accelerates to absorb new capacity. (iv) Encore Wire synergies back on track after recovery plan. (v) SP corrects >15% creating entry opportunity with improved R/R.\n\nAny 3 of 5 criteria met = re-activate assessment. Priority re-entry points: post-H1 2026 results or post-NKT Karlskrona commissioning update.",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "E.III.3",
+          "title": "Monitoring plan for re-assessment criteria",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "**Monitoring cadence:** (i) Quarterly: PRY results (Q1 29-Apr-26, then quarterly) — order intake, backlog, margins, synergies. (ii) Quarterly: NKT results — Karlskrona commissioning updates, capacity ramp. (iii) Quarterly: Nexans results — GSI progress, restructuring, competitive behaviour. (iv) Monthly: copper price, EU grid investment data, data centre construction starts. (v) Weekly: SP vs MAs for technical condition. (vi) Ongoing: AlphaSense alerts for PRY, NKT, Nexans, EU energy policy.\n\n**Watson automated monitoring:** Set alerts for PRY.MI earnings releases, NKT.CO Karlskrona updates, Nexans earnings, EU TYNDP project awards, data centre construction starts.",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        }
+      ]
+    },
+    "F": {
+      "letter": "F",
+      "title": "APPENDICES",
+      "applicable": true,
+      "inline_verdict": "6 research files, ~34K words; basic checks pass; no red flags; ESA-depth analysis adds consensus gap quantification, integration tracking, capacity oversupply timeline",
+      "default_open": false,
+      "subsections": [
+        {
+          "id": "F.I",
+          "title": "Basic checks",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "kv_grid",
+              "title": "Quick reference — PRY (Prysmian S.p.A.)",
+              "rows": [
+                {
+                  "label": "Ticker",
+                  "value": "PRY (MTA Milan, FTSE MIB)"
+                },
+                {
+                  "label": "Currency",
+                  "value": "EUR"
+                },
+                {
+                  "label": "Market cap",
+                  "value": "~€17bn"
+                },
+                {
+                  "label": "Enterprise value",
+                  "value": "~€24-25bn (estimated)"
+                },
+                {
+                  "label": "Share price",
+                  "value": "Near 52W highs"
+                },
+                {
+                  "label": "Shares outstanding",
+                  "value": "~262m"
+                },
+                {
+                  "label": "30-day avg volume",
+                  "value": "Excellent institutional liquidity (FTSE MIB)"
+                },
+                {
+                  "label": "Net debt",
+                  "value": "~€6-7bn (post-Encore Wire + Channell)"
+                },
+                {
+                  "label": "Dividend",
+                  "value": "€0.90/share (FY25), consistent increases"
+                },
+                {
+                  "label": "Free float",
+                  "value": "High — no controlling shareholder"
+                },
+                {
+                  "label": "Largest shareholder",
+                  "value": "Institutional (no controlling stake)"
+                },
+                {
+                  "label": "Segments",
+                  "value": "Transmission (HV/subsea), Power Grids, Electrification, Digital Solutions"
+                },
+                {
+                  "label": "Geographic split",
+                  "value": "50+ countries; ~40% US (post-Encore Wire), ~40% Europe, ~20% RoW"
+                },
+                {
+                  "label": "CEO",
+                  "value": "Massimo Battaini"
+                },
+                {
+                  "label": "Employees",
+                  "value": "~32,000"
+                },
+                {
+                  "label": "FY end",
+                  "value": "December"
+                },
+                {
+                  "label": "Next results",
+                  "value": "Q1 2026 (29-Apr-26) — FIRST ESA PROOF POINT"
+                },
+                {
+                  "label": "Sector",
+                  "value": "Cable Manufacturing / Industrials"
+                },
+                {
+                  "label": "HQ",
+                  "value": "Milan, Italy"
+                },
+                {
+                  "label": "Listing",
+                  "value": "Borsa Italiana (MTA) — PRY.MI"
+                },
+                {
+                  "label": "Short interest",
+                  "value": "~0.8% — very low"
+                },
+                {
+                  "label": "Transmission backlog",
+                  "value": "€17bn (multi-year visibility)"
+                },
+                {
+                  "label": "Transmission margin",
+                  "value": "20.2% (FY25, record)"
+                },
+                {
+                  "label": "FY25 adj. EBITDA",
+                  "value": "€2.57bn (record)"
+                },
+                {
+                  "label": "FY26 EBITDA guidance",
+                  "value": "€2.625-2.775bn"
+                },
+                {
+                  "label": "Encore Wire synergy target",
+                  "value": "€140-160m by end-2026"
+                },
+                {
+                  "label": "Oligopoly",
+                  "value": "3 players: PRY #1, NKT #2, Nexans #3 (HV/subsea)"
+                }
+              ]
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "F.II",
+          "title": "Supplementary notes",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "iaja": "I",
+              "text": "**Research coverage (ESA depth):** 6 research files, ~34K words total: Key Drivers [C], BM Sector Primer [AS+C], Earnings History [AS], Short Seller Analysis [C], VC Map [C], VC Analysis [AS]. Sources include company filings (FY25 results, CMD presentation), sell-side research, public data on EU/US grid investment, and peer analysis (NKT, Nexans). No IR engagement yet — flagged for DD P1."
+            },
+            {
+              "type": "prose",
+              "iaja": "I",
+              "text": "**Key ESA-depth analytical additions:** (i) Consensus gap quantification — VF modal case 8-12% above SS on FY28 EBITDA, driven by Transmission growth fade mis-modelling, synergy conservatism, and unmodelled data centre cable. (ii) Integration risk recalibration — 5 clean quarters of Encore Wire tracking reduces binary tail risk from RED to ORANGE. (iii) Capacity oversupply timeline refinement — demand growth (EU TYNDP + IRA + data centres) likely outpaces NKT Karlskrona + Nexans capacity additions through 2029. (iv) ACH sketch with YES (45-50%), NO (15-20%), FALSE FRIEND (20-25%) probability profiles. (v) Backlog composition analysis — diversified, no single project >5%, government-mandated with very low cancellation risk. (vi) Data centre cable sizing — estimated 3-5% of group revenue by FY28."
+            },
+            {
+              "type": "prose",
+              "iaja": "A",
+              "text": "**Data gaps (for DD P1):** (i) Financial model not built. (ii) IR not engaged. (iii) Supply-demand model not built — cannot confirm capacity oversupply timing with precision. (iv) NKT/Nexans competitive deep-dive not completed. (v) PoC accounting review not completed. (vi) Data centre cable market sizing not independently verified. (vii) Minervini RS rank needs FactSet confirmation."
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        }
+      ],
+      "word_count": 0,
+      "page_count": 0,
+      "target_words": 0
+    }
+  }
+}
