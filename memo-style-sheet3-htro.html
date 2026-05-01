@@ -2,7 +2,7 @@
 <html lang="en"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HTRO ESA - Memo Style Sheet 3 V18 (nav RA labels: strip Advantaged-business parenthetical)</title>
+<title>HTRO ESA - Memo Style Sheet 3 V19 (Ratings button scoped to nav pane only)</title>
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
 body { font-family: 'Aptos', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background:#fafaf8; color:#1a1a1a; }
@@ -154,16 +154,16 @@ tr.cq-row.cq-row-last td { border-bottom:1px solid #ece9d4; padding-bottom:14px;
 /* Extra spacer after each RA's last CQ row */
 tr.cq-row.cq-row-last + tr { /* visual breathing room handled by padding-bottom above */ }
 
-/* V5: Prefix pills in MAIN pane (when body.show-pills is on, default ON).
- * Inline pills sit immediately before each item label, single-letter, coloured per tier. */
+/* V5: Prefix pills in MAIN pane.
+ * Inline pills sit immediately before each item label, single-letter, coloured per tier.
+ * V19 (1-May-26 PM): main-pane prefix pills are always visible — Ratings button only toggles
+ * nav-pane chips, not main pane. */
 .main-pill { display:inline-block; font-size:7.5pt; font-weight:700; padding:1px 5px; border-radius:3px; margin-right:5px; vertical-align:baseline; }
 .main-pill-p  { background:#EEEDFE; color:#3C3489; }
 .main-pill-g  { background:#E1F5EE; color:#085041; }
 .main-pill-e  { background:#FAEEDA; color:#633806; }
 .main-pill-ra { background:#E6F1FB; color:#0C447C; }
 .main-pill-cq { background:#F1EFE8; color:#555; }
-/* Hide main-pane prefix pills when toggle is off */
-body:not(.show-pills) .main-pill { display:none; }
 
 /* V5: Nav-pane rating pills next to each clickable nav item.
  * Small letter pill showing the rating, coloured per A/B/C/D/F. */
@@ -295,7 +295,7 @@ tr.group-summary-row-multi[data-row-index="0"] td {
 <div class="nav-header">
 <div class="nav-title">Memo navigation</div>
 <div class="nav-header-controls">
-<button class="nav-toggle-btn active" id="pill-toggle" title="Toggle rating chip labels">Ratings</button>
+<button class="nav-toggle-btn active" id="pill-toggle" title="Toggle rating chips in navigation pane">Ratings</button>
 <button class="nav-toggle-btn active" id="element-details-toggle" title="Show all RAs + CQs for the focused element">Element details</button>
 <span class="nav-toggle-spacer"></span>
 <button class="nav-toggle-btn" id="ras-on-toggle" title="Always show all RAs in the taxonomy">All RAs on</button>
@@ -765,7 +765,7 @@ tr.group-summary-row-multi[data-row-index="0"] td {
 </aside>
 <main class="main-pane">
 <div class="main-header">
-<div class="page-title">HTRO &nbsp;|&nbsp; ESA &nbsp;|&nbsp; Full new-taxonomy memo (V18)</div>
+<div class="page-title">HTRO &nbsp;|&nbsp; ESA &nbsp;|&nbsp; Full new-taxonomy memo (V19)</div>
 <div class="page-subtitle">1-May-26 &middot; v3.8 doctrine + V14 delta: 4 new nav toggles (Audit, RAs on, CQs on, Element details)</div>
 </div>
 <table class="memo"><thead><tr>
