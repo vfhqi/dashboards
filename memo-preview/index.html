@@ -3,187 +3,553 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dashboard Memo Read Layer — v0.1 visual preview</title>
+<title>Dashboard Memo Read Layer — v0.2 (Option A) visual preview</title>
 <style>
-  /* ============================================================
-     PREVIEW STYLESHEET — v0.1 stub for visual review only.
-     Phase B will own the production CSS that lives inside the
-     dashboard fence. This is JUST enough styling to let Richard
-     judge structure, fidelity, and information density.
-     ============================================================ */
+/* ============================================================
+   v0.2 (Option A) PREVIEW STYLESHEET — V20-aligned visual doctrine
+   Source: memo-style-sheet3-htro.html + memo-header-design-system-v5
+   This is the side-panel preview only. Phase B production CSS will
+   live inside the dashboard fence.
+   ============================================================ */
 
-  :root {
-    --bg: #fbfaf5;          /* matches dashboard light cream */
-    --bg-panel: #ffffff;
-    --border: #d4cfc0;
-    --text: #2b2b2b;
-    --muted: #6b6b6b;
-    --accent: #7a5b8e;       /* purple = judgement */
-    --accent-blue: #2f5d8e;  /* blue = analysis */
-    --accent-green: #2f6e44; /* green = action */
-    --hl-green: #d3f0d8;
-    --hl-yellow: #fff3b3;
-    --hl-red: #fbd1cf;
-    --grade-a-bg: #1e7a3a; --grade-a-fg: #ffffff;
-    --grade-b-bg: #5b8a3a; --grade-b-fg: #ffffff;
-    --grade-c-bg: #8e8e3a; --grade-c-fg: #ffffff;
-    --grade-d-bg: #b35a2c; --grade-d-fg: #ffffff;
-    --grade-f-bg: #a02c2c; --grade-f-fg: #ffffff;
-    --pill-pass: #2f6e44; --pill-warn: #b08c2a; --pill-fail: #a02c2c; --pill-aslite: #c89a2a;
-  }
-  body {
-    font-family: 'Aptos', 'Segoe UI', system-ui, -apple-system, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    margin: 0;
-    padding: 0;
-    line-height: 1.5;
-  }
-  .preview-shell {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 24px 32px;
-  }
-  .preview-toolbar {
-    background: #f0ece0;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 16px 20px;
-    margin-bottom: 24px;
-    font-size: 13px;
-  }
-  .preview-toolbar h1 {
-    margin: 0 0 8px 0;
-    font-size: 16px;
-    font-weight: 600;
-  }
-  .preview-toolbar p { margin: 4px 0; color: var(--muted); }
-  .preview-tabs {
-    display: flex;
-    gap: 6px;
-    margin-top: 12px;
-    flex-wrap: wrap;
-  }
-  .preview-tabs a {
-    background: var(--bg-panel);
-    border: 1px solid var(--border);
-    color: var(--text);
-    padding: 6px 12px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: 600;
-  }
-  .preview-tabs a.active {
-    background: #2b2b2b;
-    color: #ffffff;
-    border-color: #2b2b2b;
-  }
+* { margin:0; padding:0; box-sizing:border-box; }
 
-  /* ============================================================
-     m-* memo classes — these are what render_memo_to_html.py emits.
-     ============================================================ */
-  .m-memo {
-    background: var(--bg-panel);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 28px 36px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-  }
+body {
+  font-family: 'Aptos', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #fafaf8;
+  color: #1a1a1a;
+  line-height: 1.55;
+}
 
-  /* Header block */
-  .m-meta { border-bottom: 2px solid var(--border); padding-bottom: 16px; margin-bottom: 24px; }
-  .m-title-row { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 12px; }
-  .m-page-title { font-size: 18px; font-weight: 700; margin: 0; flex: 1; line-height: 1.35; }
-  .m-tag-row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; font-size: 12px; }
+.preview-shell {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 28px;
+}
 
-  .m-qc-pill { display: inline-block; padding: 4px 10px; border-radius: 14px; font-size: 11px; font-weight: 700; letter-spacing: 0.4px; white-space: nowrap; flex-shrink: 0; }
-  .m-qc-pass { background: var(--pill-pass); color: #fff; }
-  .m-qc-below_target { background: var(--pill-warn); color: #fff; }
-  .m-qc-as_lite { background: var(--pill-aslite); color: #fff; }
-  .m-qc-failed { background: var(--pill-fail); color: #fff; }
+/* ----- Preview chrome (NOT part of memo) ----- */
+.preview-toolbar {
+  background: #f5f4ee;
+  border: 1px solid #d8d4c0;
+  border-radius: 6px;
+  padding: 14px 18px;
+  margin-bottom: 22px;
+  font-size: 9.5pt;
+}
+.preview-toolbar h1 {
+  margin: 0 0 6px 0;
+  font-size: 12pt;
+  font-weight: 700;
+  color: #3C3489;
+}
+.preview-toolbar p { margin: 4px 0; color: #555; }
+.preview-tabs { display: flex; gap: 6px; margin-top: 10px; flex-wrap: wrap; }
+.preview-tabs a {
+  background: #fff;
+  border: 1px solid #d4d2bb;
+  color: #1a1a1a;
+  padding: 4px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 9pt;
+  font-weight: 600;
+}
+.preview-tabs a.active {
+  background: #3C3489;
+  color: #fff;
+  border-color: #3C3489;
+}
 
-  .m-source-tag { background: #e8e3d4; padding: 3px 8px; border-radius: 4px; font-weight: 700; font-size: 11px; }
-  .m-stage { background: #efe8d4; padding: 3px 8px; border-radius: 4px; font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.4px; }
-  .m-date { color: var(--muted); font-size: 11px; }
-  .m-notion-link { margin-left: auto; background: #2b2b2b; color: #ffffff; padding: 4px 10px; border-radius: 4px; text-decoration: none; font-size: 11px; font-weight: 600; }
-  .m-notion-link:hover { background: #555; }
-  .m-notion-link-missing { background: #ccc; color: #666; padding: 4px 10px; border-radius: 4px; font-size: 11px; }
+/* =====================================================
+   MEMO CONTAINER
+   ===================================================== */
+.m-memo {
+  background: #ffffff;
+  border: 1px solid #d8d4c0;
+  border-radius: 6px;
+  padding: 0 0 24px 0;
+}
 
-  /* Section structure */
-  .m-section { margin-bottom: 28px; }
-  .m-h1 { font-size: 22px; font-weight: 700; margin: 0 0 16px 0; }
-  .m-h2 { font-size: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: #2b2b2b; margin: 28px 0 14px 0; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
-  .m-h3 { font-size: 13px; font-weight: 600; color: #444; margin: 18px 0 10px 0; }
-  .m-h4 { font-size: 12px; font-weight: 600; color: var(--muted); margin: 14px 0 8px 0; text-transform: uppercase; letter-spacing: 0.3px; }
-  .m-p { margin: 8px 0; font-size: 13px; }
+/* =====================================================
+   HEADER BLOCK (top of memo)
+   ===================================================== */
+.m-meta {
+  background: #f5f4ee;
+  border-bottom: 1px solid #d8d4c0;
+  padding: 16px 24px;
+}
+.m-title-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.m-page-title {
+  font-size: 16pt;       /* tier 1 — but compressed for side-panel */
+  font-weight: 700;
+  margin: 0;
+  flex: 1;
+  line-height: 1.3;
+  color: #1a1a1a;
+}
+.m-tag-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 9pt;
+}
 
-  /* Bullets */
-  .m-bullets { padding-left: 22px; margin: 8px 0; }
-  .m-bullets .m-bullets { padding-left: 22px; margin-top: 4px; }
-  .m-li { font-size: 13px; line-height: 1.55; margin-bottom: 6px; }
-  .m-li.m-iaja-j { /* judgement */ border-left: 3px solid var(--accent); padding-left: 10px; margin-left: -13px; list-style: none; }
-  .m-li.m-iaja-a { /* analysis */  border-left: 3px solid var(--accent-blue); padding-left: 10px; margin-left: -13px; list-style: none; }
-  .m-li.m-iaja-i { /* information */ }
-  .m-li.m-iaja-t,
-  .m-li.m-iaja-o,
-  .m-li.m-iaja-kr,
-  .m-li.m-iaja-oq { border-left: 3px solid var(--accent-green); padding-left: 10px; margin-left: -13px; list-style: none; }
+.m-qc-pill {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 9pt;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.m-qc-pass         { background: #d4edda; color: #155724; }
+.m-qc-below_target { background: #fff3cd; color: #856404; }
+.m-qc-as_lite      { background: #FAEEDA; color: #633806; }
+.m-qc-failed       { background: #FF7C80; color: #660000; }
 
-  /* Tables */
-  .m-table { border-collapse: collapse; margin: 12px 0; font-size: 12px; width: 100%; }
-  .m-table th, .m-table td { border: 1px solid var(--border); padding: 6px 10px; text-align: left; }
-  .m-table th { background: #efe8d4; font-weight: 700; }
-  .m-table tbody tr:nth-child(even) { background: #fbfaf5; }
+.m-source-tag {
+  background: #EEEDFE;
+  color: #3C3489;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 8.5pt;
+}
+.m-stage {
+  background: #FAEEDA;
+  color: #633806;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 8.5pt;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+.m-date { color: #888; font-size: 9pt; }
+.m-notion-link {
+  margin-left: auto;
+  background: #3C3489;
+  color: #fff;
+  padding: 3px 9px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 8.5pt;
+  font-weight: 600;
+}
+.m-notion-link:hover { background: #2a2466; }
+.m-notion-link-missing {
+  background: #ddd;
+  color: #777;
+  padding: 3px 9px;
+  border-radius: 4px;
+  font-size: 8.5pt;
+}
 
-  /* HR */
-  .m-hr { border: 0; border-top: 1px dashed var(--border); margin: 20px 0; }
+/* =====================================================
+   SIX-TIER HEADER RAMP (V5 design system)
+   tier 1: H1 (memo title) — handled in m-meta above
+   tier 2: H2 — section banner (deep purple #3C3489)
+   tier 3: H3 — sub-section banner (deep teal #085041)
+   tier 4: H4 — sub-sub-section banner (cream #FAEEDA)
+   ===================================================== */
 
-  /* Sentiment highlights */
-  .m-hl-green { background: var(--hl-green); padding: 0 3px; border-radius: 2px; }
-  .m-hl-yellow { background: var(--hl-yellow); padding: 0 3px; border-radius: 2px; }
-  .m-hl-red { background: var(--hl-red); padding: 0 3px; border-radius: 2px; }
+.m-section { margin: 0; }
 
-  /* Source attribution */
-  .m-attr-as { color: #4a3a6e; font-weight: 600; font-size: 0.92em; }
-  .m-attr-c { color: #2f5d8e; font-weight: 600; font-size: 0.92em; }
-  .m-attr-legacy { background: #f8f3e6; padding: 0 3px; border-radius: 2px; }
+/* H1 inside body — rare; render at small page-title equivalent */
+.m-h1 {
+  font-size: 14pt;
+  font-weight: 700;
+  margin: 24px 24px 12px 24px;
+  line-height: 1.3;
+}
 
-  /* Communication Principles markers */
-  .m-cp-x { color: var(--pill-fail); font-weight: 700; margin-right: 4px; }
-  .m-cp-xx { color: var(--pill-fail); font-weight: 700; margin-right: 4px; letter-spacing: -1px; }
-  .m-cp-rare { background: #f8e6c4; color: #6b3a08; padding: 1px 5px; border-radius: 3px; font-weight: 700; font-size: 0.9em; margin-right: 4px; }
+/* H2 — SECTION BANNER (deep purple) */
+.m-h2 {
+  font-size: 13pt;
+  font-weight: 700;
+  background: #3C3489;
+  color: #ffffff;
+  padding: 10px 24px;
+  margin: 0;
+  letter-spacing: 0.3px;
+  line-height: 1.3;
+}
 
-  /* Grade tokens */
-  .m-grade { display: inline-block; padding: 1px 5px; border-radius: 3px; font-weight: 700; font-size: 0.85em; margin: 0 2px; }
-  .m-grade-a { background: var(--grade-a-bg); color: var(--grade-a-fg); }
-  .m-grade-b { background: var(--grade-b-bg); color: var(--grade-b-fg); }
-  .m-grade-c { background: var(--grade-c-bg); color: var(--grade-c-fg); }
-  .m-grade-d { background: var(--grade-d-bg); color: var(--grade-d-fg); }
-  .m-grade-f { background: var(--grade-f-bg); color: var(--grade-f-fg); }
+/* H3 — SUB-SECTION BANNER (deep teal) */
+.m-h3 {
+  font-size: 11.5pt;
+  font-weight: 700;
+  background: #085041;
+  color: #ffffff;
+  padding: 7px 24px;
+  margin: 14px 0 0 0;
+}
 
-  /* IAJA prefix labels */
-  .m-prefix-j { color: var(--accent); font-weight: 700; }
-  .m-prefix-a { color: var(--accent-blue); font-weight: 700; }
-  .m-prefix-action { color: var(--accent-green); font-weight: 700; }
+/* H4 — SUB-SUB-SECTION BANNER (cream) */
+.m-h4 {
+  font-size: 11pt;
+  font-weight: 700;
+  background: #FAEEDA;
+  color: #633806;
+  padding: 6px 24px;
+  margin: 12px 0 0 0;
+}
 
-  /* Legacy ==text== highlight */
-  .m-legacy-highlight { background: #f4eedc; padding: 0 2px; border-radius: 2px; font-style: italic; }
+/* =====================================================
+   BODY — paragraph + BLUF
+   ===================================================== */
 
-  /* QC footer */
-  .m-qc-audit { margin-top: 32px; padding-top: 18px; border-top: 2px solid var(--border); font-size: 11px; }
-  .m-qc-h { margin: 0 0 10px 0; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--muted); }
-  .m-qc-table { width: 100%; border-collapse: collapse; }
-  .m-qc-table th { text-align: left; width: 18%; padding: 4px 8px 4px 0; vertical-align: top; color: var(--muted); font-weight: 600; font-size: 11px; }
-  .m-qc-table td { padding: 4px 0; font-size: 11px; word-break: break-word; }
+/* Default paragraph */
+.m-p {
+  margin: 8px 24px;
+  font-size: 10pt;
+  line-height: 1.55;
+}
+
+/* BLUF — italic section frame, left-bordered, cream-tinted */
+.m-bluf {
+  font-style: italic;
+  font-weight: 600;
+  color: #5a3a08;
+  background: #FAEEDA;
+  border-left: 4px solid #b8862a;
+  margin: 0 0 0 0;
+  padding: 8px 16px 8px 18px;
+  font-size: 10pt;
+  line-height: 1.5;
+}
+
+/* "Overall rating: ..." pattern detection — promote to BLUF visual */
+.m-p.m-overall-rating {
+  font-style: italic;
+  font-weight: 600;
+  color: #5a3a08;
+  background: #FAEEDA;
+  border-left: 4px solid #b8862a;
+  margin: 0;
+  padding: 8px 16px 8px 18px;
+  font-size: 10pt;
+}
+
+/* =====================================================
+   BULLETS — anchor / sub two-tier rhythm
+   ===================================================== */
+
+.m-bullets {
+  list-style: none;
+  margin: 6px 24px 12px 24px;
+  padding: 0;
+}
+.m-bullets .m-bullets {
+  margin: 4px 0 4px 18px;       /* nested */
+}
+.m-bullets-num {
+  list-style: decimal;
+  margin: 6px 24px 12px 48px;
+  padding: 0;
+}
+
+.m-li {
+  font-size: 10pt;
+  line-height: 1.55;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+/* Anchor bullets (depth 0) — semi-bold */
+.m-li.m-anchor {
+  font-weight: 600;
+  padding-left: 16px;
+  position: relative;
+}
+.m-li.m-anchor::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #999;
+  font-weight: 400;
+}
+
+/* Sub bullets (depth 1+) — normal weight, lighter colour, tighter */
+.m-li.m-sub {
+  font-weight: 400;
+  font-size: 9.5pt;
+  color: #444;
+  padding-left: 14px;
+  margin-left: 4px;
+}
+.m-li.m-sub::before {
+  content: "·";
+  position: absolute;
+  left: 0;
+  top: -2px;
+  color: #999;
+  font-weight: 400;
+  font-size: 14pt;
+  line-height: 1;
+}
+
+/* IAJA visual rules removed — we use the inline pill instead.
+   Kept the class hooks though so renderer-only classes still target. */
+.m-li.m-iaja-j .m-iaja-pill { background:#EEEDFE; color:#3C3489; }
+.m-li.m-iaja-a .m-iaja-pill { background:#E6F1FB; color:#0C447C; }
+.m-li.m-iaja-i .m-iaja-pill { background:#F1EFE8; color:#666; }
+.m-li.m-iaja-t  .m-iaja-pill,
+.m-li.m-iaja-o  .m-iaja-pill,
+.m-li.m-iaja-kr .m-iaja-pill,
+.m-li.m-iaja-oq .m-iaja-pill { background:#E1F5EE; color:#085041; }
+
+/* =====================================================
+   IAJA PILLS — small chip rendered at end of each bullet
+   ===================================================== */
+.m-iaja-pill {
+  display: inline-block;
+  font-size: 7.5pt;
+  font-weight: 700;
+  padding: 1px 5px;
+  border-radius: 3px;
+  margin-left: 5px;
+  vertical-align: baseline;
+  letter-spacing: 0.3px;
+}
+
+/* =====================================================
+   RATING CHIPS — A/B/C/D/F filled pills
+   ===================================================== */
+.m-grade {
+  display: inline-block;
+  min-width: 18px;
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-weight: 700;
+  font-size: 8.5pt;
+  text-align: center;
+  margin: 0 2px;
+  vertical-align: baseline;
+}
+.m-grade-a { background: #9DD49B; color: #1a4d1a; }
+.m-grade-b { background: #BFD9F2; color: #0C447C; }
+.m-grade-c { background: #E7E3AB; color: #5a5526; }
+.m-grade-d { background: #FFCC66; color: #7a4f00; }
+.m-grade-f { background: #FF7C80; color: #660000; }
+.m-grade-mod-plus  { box-shadow: inset 0 0 0 2px #1a4d1a; }
+.m-grade-mod-minus { box-shadow: inset 0 0 0 1px #999; }
+
+/* =====================================================
+   TABLES — V20 .memo style
+   ===================================================== */
+.m-table {
+  border-collapse: collapse;
+  width: calc(100% - 48px);
+  margin: 12px 24px;
+  font-size: 9.5pt;
+  table-layout: auto;
+}
+.m-table thead th {
+  font-size: 10pt;
+  font-weight: 700;
+  background: #FDFCF1;
+  padding: 7px 10px;
+  text-align: left;
+  border-bottom: 2px solid #d4d2bb;
+}
+.m-table tbody td {
+  padding: 5px 10px;
+  vertical-align: top;
+  border-bottom: 1px solid #ece9d4;
+}
+.m-table tbody tr:nth-child(even) { background: #FDFCF1; }
+.m-table tbody tr:hover { background: #FAF8D2; }
+
+/* =====================================================
+   HORIZONTAL RULE — tighter
+   ===================================================== */
+.m-hr {
+  border: 0;
+  border-top: 1px solid #e0ddca;
+  margin: 14px 24px;
+}
+
+/* =====================================================
+   SENTIMENT HIGHLIGHTS — V20 audit-band palette
+   ===================================================== */
+.m-hl-green  { background: #d4edda; color: #155724; padding: 0 3px; border-radius: 2px; }
+.m-hl-yellow { background: #fff3cd; color: #856404; padding: 0 3px; border-radius: 2px; }
+.m-hl-red    { background: #f8d7da; color: #721c24; padding: 0 3px; border-radius: 2px; }
+
+/* =====================================================
+   SOURCE ATTRIBUTION — pills (new and legacy)
+   ===================================================== */
+
+/* New form: <span class="m-attr-as">[AS·Broker]:</span> */
+.m-attr-as {
+  display: inline-block;
+  background: #E6F1FB;
+  color: #0C447C;
+  font-size: 8.5pt;
+  font-weight: 700;
+  padding: 1px 5px;
+  border-radius: 3px;
+  margin: 0 1px;
+  vertical-align: baseline;
+}
+.m-attr-c {
+  display: inline-block;
+  background: #EEEDFE;
+  color: #3C3489;
+  font-size: 8.5pt;
+  font-weight: 700;
+  padding: 1px 5px;
+  border-radius: 3px;
+  margin: 0 1px;
+  vertical-align: baseline;
+}
+.m-attr-company  { background:#FAEEDA; color:#633806; }
+.m-attr-expert   { background:#F1EFE8; color:#5a5526; }
+.m-attr-multiple { background:#E1F5EE; color:#085041; }
+
+/* Legacy form: <span class="m-attr-as m-attr-legacy">Per [AS]/Broker</span>
+   Same pill — legacy is just a sub-class. */
+.m-attr-legacy {
+  /* nothing extra — inherits from m-attr-as / m-attr-c */
+}
+
+/* Legacy generic ==text== highlight (non-attribution case) */
+.m-legacy-highlight {
+  background: #f4eedc;
+  padding: 0 2px;
+  border-radius: 2px;
+  font-style: italic;
+  color: #6b3a08;
+}
+
+/* =====================================================
+   COMMUNICATION PRINCIPLES MARKERS
+   ===================================================== */
+.m-cp-x {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 9pt;
+  margin-right: 3px;
+  color: #FF7C80;
+}
+.m-cp-xx {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 9pt;
+  margin-right: 3px;
+  color: #c83336;
+  letter-spacing: -1px;
+}
+.m-cp-rare {
+  display: inline-block;
+  background: #FAEEDA;
+  color: #633806;
+  font-size: 8.5pt;
+  font-weight: 700;
+  padding: 1px 5px;
+  border-radius: 3px;
+  margin-right: 4px;
+}
+
+/* =====================================================
+   IAJA PREFIX LABELS (Judgement: / Analysis: / Action:)
+   ===================================================== */
+.m-prefix-j      { color: #3C3489; font-weight: 700; }
+.m-prefix-a      { color: #0C447C; font-weight: 700; }
+.m-prefix-action { color: #085041; font-weight: 700; }
+
+/* =====================================================
+   INLINE EMPHASIS — bold / italic / underline / strike
+   ===================================================== */
+strong { font-weight: 700; }
+em     { font-style: italic; }
+u {
+  text-decoration: underline;
+  text-decoration-thickness: 1.2px;
+  text-underline-offset: 2px;
+  text-decoration-color: #1a1a1a;
+}
+del { text-decoration: line-through; color: #888; }
+
+/* =====================================================
+   QC FOOTER — tighter typography
+   ===================================================== */
+.m-qc-audit {
+  margin: 28px 24px 0 24px;
+  padding: 14px 0 0 0;
+  border-top: 2px solid #d4d2bb;
+  font-size: 9pt;
+}
+.m-qc-h {
+  margin: 0 0 8px 0;
+  font-size: 9.5pt;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #555;
+  font-weight: 700;
+}
+.m-qc-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 9pt;
+}
+.m-qc-table th {
+  text-align: left;
+  width: 22%;
+  padding: 4px 8px 4px 0;
+  vertical-align: top;
+  color: #555;
+  font-weight: 700;
+  font-size: 8.5pt;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+.m-qc-table td {
+  padding: 4px 0;
+  word-break: break-word;
+  font-size: 9pt;
+}
+
+/* =====================================================
+   SIGNPOSTS (v0.2 ready — won't fire yet, no source has them)
+   ===================================================== */
+.memo-signpost {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+/* =====================================================
+   PRINT / SMALL-VIEWPORT
+   ===================================================== */
+@media (max-width: 760px) {
+  .preview-shell { padding: 12px; }
+  .m-meta { padding: 12px 16px; }
+  .m-bullets { margin: 6px 16px 10px 16px; }
+  .m-h2 { padding: 8px 16px; font-size: 12pt; }
+  .m-h3 { padding: 6px 16px; }
+  .m-h4 { padding: 5px 16px; }
+  .m-table { width: calc(100% - 32px); margin: 10px 16px; }
+  .m-hr { margin: 10px 16px; }
+  .m-qc-audit { margin: 20px 16px 0 16px; }
+}
 </style>
 </head>
 <body>
 <div class="preview-shell">
   <div class="preview-toolbar">
-    <h1>Dashboard Memo Read Layer — v0.1 visual preview</h1>
-    <p>Renderer: <code>render_memo_to_html.py</code> v0.1 (Phase A1). This stylesheet is <strong>preview-only</strong> — Phase B will own the production CSS inside the dashboard fence. Goal here is just to let you eyeball structure, marker fidelity, and information density.</p>
-    <p>Three test memos below. Switch tabs to view.</p>
+    <h1>Dashboard Memo Read Layer — v0.2 (Option A) visual preview</h1>
+    <p>Renderer: <code>render_memo_to_html.py</code> v0.2. <strong>Option A doctrine</strong>: V20-aligned visual treatment — six-tier header ramp, IAJA pills, rating chips, banner rows, Aptos. No content changes vs v0.1.</p>
+    <p>Three test memos. Switch tabs.</p>
     <div class="preview-tabs">
       <a href="?memo=carlb" id="tab-carlb">CARLB Q5 (legacy syntax era)</a>
       <a href="?memo=art-es" id="tab-art-es">ART-ES Q4 (sentiment highlights)</a>
@@ -195,11 +561,10 @@
 </div>
 
 <script>
-  // Pick which memo to show via ?memo= param. Default: carlb.
   var memos = {
-    'carlb':     { file: 'memo-carlb-q5.html',     label: 'CARLB Q5 (legacy syntax era)' },
-    'art-es':    { file: 'memo-art-es-q4.html',    label: 'ART-ES Q4 (sentiment highlights)' },
-    'synthetic': { file: 'memo-synthetic.html',    label: 'Synthetic (full CP coverage)' }
+    'carlb':     { file: 'memo-carlb-q5.html',   label: 'CARLB Q5' },
+    'art-es':    { file: 'memo-art-es-q4.html',  label: 'ART-ES Q4' },
+    'synthetic': { file: 'memo-synthetic.html',  label: 'Synthetic' }
   };
   var params = new URLSearchParams(location.search);
   var which = params.get('memo') || 'carlb';
@@ -208,7 +573,7 @@
   fetch(memos[which].file)
     .then(function(r) { return r.text(); })
     .then(function(html) { document.getElementById('memo-slot').innerHTML = html; })
-    .catch(function(e) { document.getElementById('memo-slot').innerHTML = '<p style="color:#a02c2c">Failed to load: ' + e + '</p>'; });
+    .catch(function(e) { document.getElementById('memo-slot').innerHTML = '<p style="color:#a02c2c;padding:24px">Failed to load: ' + e + '</p>'; });
 </script>
 </body>
 </html>
