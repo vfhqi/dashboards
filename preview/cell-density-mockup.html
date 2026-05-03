@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lifecycle Cell Density Mockup — SA Dashboard Memo Read Layer</title>
+<title>Lifecycle Cell Density Mockup v2 — SA Dashboard Memo Read Layer</title>
 <style>
 :root {
   --grey: #8a8a8a;
@@ -19,6 +19,7 @@
   --border: #e5e5e3;
   --text: #2a2a28;
   --text-muted: #6b6b68;
+  --hb: #2a2a28; /* Harvey ball signature dark — single colour for all states */
 }
 
 * { box-sizing: border-box; }
@@ -49,9 +50,10 @@ p.lede { color: var(--text-muted); margin: 0 0 16px; }
   margin-bottom: 24px;
 }
 .legend-item { display: flex; align-items: center; gap: 8px; font-size: 12px; }
-.legend-glyph { font-size: 18px; line-height: 1; width: 20px; text-align: center; }
+.legend-glyph { font-size: 18px; line-height: 1; width: 20px; text-align: center; color: var(--hb); }
+.legend-glyph.cancelled { color: var(--grey); }
 
-/* === Cell base === */
+/* === Cell base (compact) === */
 .cell {
   display: inline-flex;
   flex-direction: column;
@@ -73,25 +75,29 @@ p.lede { color: var(--text-muted); margin: 0 0 16px; }
   z-index: 10;
 }
 
+/* Harvey ball — same colour, same size for all states */
 .cell-glyph {
   font-size: 18px;
   line-height: 1;
   font-weight: 500;
+  color: var(--hb);
+  font-family: -apple-system, "Segoe UI Symbol", sans-serif;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  vertical-align: middle;
 }
 
-/* State colours */
-.s1 .cell-glyph { color: var(--grey); }
-.s2 .cell-glyph { color: var(--amber); }
-.s3 .cell-glyph { color: var(--blue); }
-.s4 .cell-glyph { color: var(--purple); }
-.s5 .cell-glyph { color: var(--green); }
+/* Cancelled = ✕ symbol, grey */
 .cancelled .cell-glyph {
   color: var(--grey);
-  text-decoration: line-through;
   font-size: 14px;
+  font-weight: 600;
 }
+
+/* Empty cells */
 .empty {
-  color: var(--grey-light);
   background: var(--bg-alt);
   cursor: default;
 }
@@ -108,7 +114,7 @@ p.lede { color: var(--text-muted); margin: 0 0 16px; }
   50% { box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.4); }
 }
 
-/* Audit border (overlay) */
+/* Audit border (overlay — colour signal) */
 .audit-pass { border-color: var(--green); border-width: 2px; }
 .audit-warn { border-color: var(--amber); border-width: 2px; }
 .audit-fail { border-color: var(--red); border-width: 2px; }
@@ -119,9 +125,9 @@ p.lede { color: var(--text-muted); margin: 0 0 16px; }
   position: absolute;
   top: -2px;
   left: -2px;
-  width: 200px;
+  width: 220px;
   min-height: 80px;
-  padding: 8px;
+  padding: 10px;
   background: var(--bg);
   border: 1px solid var(--text-muted);
   border-radius: 6px;
@@ -139,14 +145,16 @@ p.lede { color: var(--text-muted); margin: 0 0 16px; }
 .expand-header {
   font-weight: 600;
   font-size: 12px;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   display: flex;
   align-items: center;
   gap: 6px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
 }
-.expand-glyph { font-size: 16px; }
-.expand-row { color: var(--text-muted); display: flex; justify-content: space-between; padding: 1px 0; }
-.expand-row strong { color: var(--text); font-weight: 500; }
+.expand-glyph { font-size: 16px; color: var(--hb); }
+.expand-row { color: var(--text-muted); display: flex; justify-content: space-between; padding: 1px 0; gap: 8px; }
+.expand-row strong { color: var(--text); font-weight: 500; text-align: right; }
 .expand-meta { margin-top: 6px; padding-top: 6px; border-top: 1px solid var(--border); }
 .expand-link { color: var(--blue); text-decoration: none; font-size: 11px; }
 .expand-link:hover { text-decoration: underline; }
@@ -173,10 +181,10 @@ table.demo th {
   font-size: 9px;
   font-weight: 500;
   color: var(--text-muted);
-  text-transform: uppercase;
   text-align: center;
   padding: 4px 2px;
   vertical-align: bottom;
+  white-space: nowrap;
 }
 table.demo th.stage-group {
   background: var(--bg-alt);
@@ -184,6 +192,34 @@ table.demo th.stage-group {
   padding-bottom: 4px;
   font-weight: 600;
   color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+table.demo th.query-label {
+  font-size: 8px;
+  color: var(--text-muted);
+  text-transform: none;
+  letter-spacing: 0;
+  max-width: 38px;
+  line-height: 1.15;
+  padding: 4px 1px;
+  height: 60px;
+  vertical-align: bottom;
+}
+table.demo th.query-label .qnum {
+  display: block;
+  font-weight: 600;
+  color: var(--text);
+  font-size: 9px;
+  margin-bottom: 2px;
+}
+table.demo th.query-label .qtitle {
+  display: block;
+  font-weight: 400;
+  color: var(--text-muted);
+  font-size: 8px;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 table.demo td.label {
   padding-right: 12px;
@@ -195,23 +231,10 @@ table.demo td.label {
 }
 table.demo td { padding: 0; }
 
-/* === Variant view (alt density) === */
-.variant {
-  display: inline-block;
-  padding: 14px 18px;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  margin-right: 16px;
-  margin-bottom: 16px;
-  vertical-align: top;
-  background: var(--bg);
-}
-.variant h3 { font-size: 12px; margin: 0 0 10px; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.04em; }
-
-/* Comfortable density variant */
+/* === Comfortable density variant === */
 .cell-comfy {
   width: 64px;
-  height: 56px;
+  height: 50px;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
@@ -220,12 +243,35 @@ table.demo td { padding: 0; }
   border-radius: 4px;
   background: var(--bg);
   font-size: 9px;
-  line-height: 1.3;
-  padding: 2px;
+  line-height: 1.2;
+  padding: 3px;
+  position: relative;
 }
-.cell-comfy .cell-glyph { font-size: 16px; line-height: 1; margin-bottom: 2px; }
-.cell-comfy .date { color: var(--text-muted); font-size: 9px; }
-.cell-comfy .icons { font-size: 9px; margin-top: 1px; }
+.cell-comfy .cell-glyph {
+  font-size: 16px;
+  line-height: 1;
+  margin-bottom: 3px;
+  color: var(--hb);
+}
+.cell-comfy .meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 8px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.cell-comfy .date {
+  font-size: 8px;
+  color: var(--text-muted);
+}
+.cell-comfy .url-icon {
+  font-size: 9px;
+  text-decoration: none;
+  color: var(--blue);
+}
+.cell-comfy.cancelled .cell-glyph { color: var(--grey); font-weight: 600; font-size: 14px; }
 
 .note {
   background: #fef9c3;
@@ -236,25 +282,42 @@ table.demo td { padding: 0; }
   color: var(--text);
 }
 .note strong { font-weight: 600; }
+
+.changes {
+  background: #ecfdf5;
+  border-left: 3px solid var(--green);
+  padding: 10px 14px;
+  margin: 16px 0;
+  font-size: 12px;
+}
+.changes ul { margin: 4px 0 0; padding-left: 20px; }
+.changes li { margin: 2px 0; }
 </style>
 </head>
 <body>
 
-<h1>Lifecycle Cell Density Mockup</h1>
-<p class="lede">SA — Dashboard Memo Read Layer · v1 mockup · 3-May-26 · D-DMRL-22 → D-DMRL-36</p>
+<h1>Lifecycle Cell Density Mockup — v2</h1>
+<p class="lede">SA — Dashboard Memo Read Layer · 3-May-26 · D-DMRL-22 → D-DMRL-36</p>
 
-<div class="note">
-<strong>How to read this:</strong> Each row below is one ticker. Each cell = one (query, stage). Hover any cell to see full detail. The compact pill saves horizontal space; the expand reveals everything you'd need on hover. Mobile/iPad: tap to expand instead of hover.
+<div class="changes">
+<strong>v2 changes from v1:</strong>
+<ul>
+  <li>Harvey balls: all single colour (signature dark) — colour signalling moves to audit border</li>
+  <li>● state-4 normalised to same size as ◔ ◑ ◕ ✓</li>
+  <li>Cancelled = <code>✕</code> symbol (grey), not strikethrough harvey ball</li>
+  <li>Comfortable mode: 🔗 moved to same row as date, both smaller</li>
+  <li>Query column headers show full query title (not just Q1/Q2/...)</li>
+</ul>
 </div>
 
 <h2>Legend</h2>
 <div class="legend">
-  <div class="legend-item"><span class="legend-glyph" style="color:var(--grey)">◔</span> 1 Requested</div>
-  <div class="legend-item"><span class="legend-glyph" style="color:var(--amber)">◑</span> 2 Agreed</div>
-  <div class="legend-item"><span class="legend-glyph" style="color:var(--blue)">◕</span> 3 Submitted</div>
-  <div class="legend-item"><span class="legend-glyph" style="color:var(--purple)">●</span> 4 Extracted</div>
-  <div class="legend-item"><span class="legend-glyph" style="color:var(--green)">✓</span> 5 Published</div>
-  <div class="legend-item"><span class="legend-glyph" style="color:var(--grey);text-decoration:line-through">●</span> Cancelled</div>
+  <div class="legend-item"><span class="legend-glyph">◔</span> 1 Requested</div>
+  <div class="legend-item"><span class="legend-glyph">◑</span> 2 Agreed</div>
+  <div class="legend-item"><span class="legend-glyph">◕</span> 3 Submitted</div>
+  <div class="legend-item"><span class="legend-glyph">●</span> 4 Extracted</div>
+  <div class="legend-item"><span class="legend-glyph">✓</span> 5 Published</div>
+  <div class="legend-item"><span class="legend-glyph cancelled">✕</span> Cancelled</div>
   <div class="legend-item"><span class="legend-glyph" style="color:var(--grey-light)">·</span> Empty / Not requested</div>
   <div class="legend-item"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;border:2px solid var(--red)"></span> Stuck (red ring)</div>
   <div class="legend-item"><span style="display:inline-block;width:12px;height:12px;border:2px solid var(--green);border-radius:2px"></span> Audit PASS (green border)</div>
@@ -275,23 +338,40 @@ table.demo td { padding: 0; }
   <th colspan="4" class="stage-group">Ad-hoc</th>
 </tr>
 <tr>
-  <th>Q1</th><th>Q2</th><th>Q3</th>
-  <th>Q4</th><th>Q5</th><th>Q6</th><th>Q7</th>
-  <th>Q8</th><th>Q9</th><th>Q10</th><th>Q11</th><th>Q12</th><th>Q13</th><th>Q14</th>
-  <th>Q15</th><th>Q16</th><th>Q17</th><th>Q18</th><th>Q19</th>
-  <th>1</th><th>2</th><th>3</th><th>4</th>
+  <th class="query-label"><span class="qnum">Q1</span><span class="qtitle">Business Description</span></th>
+  <th class="query-label"><span class="qnum">Q2</span><span class="qtitle">Change Forces</span></th>
+  <th class="query-label"><span class="qnum">Q3</span><span class="qtitle">Technical Momentum</span></th>
+  <th class="query-label"><span class="qnum">Q4</span><span class="qtitle">Earnings Trends</span></th>
+  <th class="query-label"><span class="qnum">Q5</span><span class="qtitle">Earnings Delivery</span></th>
+  <th class="query-label"><span class="qnum">Q6</span><span class="qtitle">SS Commentary</span></th>
+  <th class="query-label"><span class="qnum">Q7</span><span class="qtitle">KD Triaging</span></th>
+  <th class="query-label"><span class="qnum">Q8</span><span class="qtitle">BM/Sector Primer</span></th>
+  <th class="query-label"><span class="qnum">Q9</span><span class="qtitle">Earnings History</span></th>
+  <th class="query-label"><span class="qnum">Q10</span><span class="qtitle">Short-Sellers</span></th>
+  <th class="query-label"><span class="qnum">Q11</span><span class="qtitle">Value-Chain Map</span></th>
+  <th class="query-label"><span class="qnum">Q12</span><span class="qtitle">Value-Chain Analysis</span></th>
+  <th class="query-label"><span class="qnum">Q13</span><span class="qtitle">Guidance Tracking</span></th>
+  <th class="query-label"><span class="qnum">Q14</span><span class="qtitle">KD ESA</span></th>
+  <th class="query-label"><span class="qnum">Q15</span><span class="qtitle">Insider/Expert</span></th>
+  <th class="query-label"><span class="qnum">Q16</span><span class="qtitle">Mgmt &amp; Governance</span></th>
+  <th class="query-label"><span class="qnum">Q17</span><span class="qtitle">FX Exposure</span></th>
+  <th class="query-label"><span class="qnum">Q18</span><span class="qtitle">CEO Research</span></th>
+  <th class="query-label"><span class="qnum">Q19</span><span class="qtitle">Pre-mortem</span></th>
+  <th class="query-label"><span class="qnum">slot 1</span><span class="qtitle">KQ / CEO-CFO / Thematic</span></th>
+  <th class="query-label"><span class="qnum">slot 2</span><span class="qtitle">KQ / CEO-CFO / Thematic</span></th>
+  <th class="query-label"><span class="qnum">slot 3</span><span class="qtitle">KQ / CEO-CFO / Thematic</span></th>
+  <th class="query-label"><span class="qnum">slot 4</span><span class="qtitle">KQ / CEO-CFO / Thematic</span></th>
 </tr>
 </thead>
 <tbody>
 
-<!-- ROW 1: EKTA — fully published triaging, ESA in progress -->
+<!-- ROW 1: EKTA -->
 <tr>
   <td class="label">EKTA</td>
-  <!-- IG -->
-  <td><div class="cell s5 audit-pass">
+  <td><div class="cell audit-pass">
     <span class="cell-glyph">✓</span>
     <div class="cell-expand">
-      <div class="expand-header"><span class="expand-glyph" style="color:var(--green)">✓</span> Q1 IG · Business Description</div>
+      <div class="expand-header"><span class="expand-glyph">✓</span> Q1 IG · Business Description</div>
       <div class="expand-row"><span>State:</span><strong>Published</strong></div>
       <div class="expand-row"><span>Source:</span><strong>AS</strong> <span class="dr-badge">DR</span></div>
       <div class="expand-row"><span>Published:</span><strong>29-Apr-26</strong></div>
@@ -301,8 +381,8 @@ table.demo td { padding: 0; }
       </div>
     </div>
   </div></td>
-  <td><div class="cell s5 audit-pass"><span class="cell-glyph">✓</span>
-    <div class="cell-expand"><div class="expand-header"><span class="expand-glyph" style="color:var(--green)">✓</span> Q2 IG · Change Forces</div>
+  <td><div class="cell audit-pass"><span class="cell-glyph">✓</span>
+    <div class="cell-expand"><div class="expand-header"><span class="expand-glyph">✓</span> Q2 IG · Change Forces</div>
       <div class="expand-row"><span>State:</span><strong>Published</strong></div>
       <div class="expand-row"><span>Source:</span><strong>C+AS</strong> <span class="dr-badge">DR</span></div>
       <div class="expand-row"><span>Published:</span><strong>29-Apr-26</strong></div>
@@ -310,14 +390,13 @@ table.demo td { padding: 0; }
       <div class="expand-meta"><a href="#" class="expand-link">🔗 AS</a> · <a href="#" class="expand-link">📄 Memo</a></div>
     </div>
   </div></td>
-  <td><div class="cell s5 audit-pass"><span class="cell-glyph">✓</span></div></td>
-  <!-- Triaging -->
-  <td><div class="cell s5 audit-pass"><span class="cell-glyph">✓</span></div></td>
-  <td><div class="cell s5 audit-pass"><span class="cell-glyph">✓</span></div></td>
-  <td><div class="cell s5 audit-warn">
+  <td><div class="cell audit-pass"><span class="cell-glyph">✓</span></div></td>
+  <td><div class="cell audit-pass"><span class="cell-glyph">✓</span></div></td>
+  <td><div class="cell audit-pass"><span class="cell-glyph">✓</span></div></td>
+  <td><div class="cell audit-warn">
     <span class="cell-glyph">✓</span>
     <div class="cell-expand">
-      <div class="expand-header"><span class="expand-glyph" style="color:var(--green)">✓</span> Q6 Triaging · SS Commentary</div>
+      <div class="expand-header"><span class="expand-glyph">✓</span> Q6 Triaging · SS Commentary</div>
       <div class="expand-row"><span>State:</span><strong>Published</strong></div>
       <div class="expand-row"><span>Source:</span><strong>AS</strong> <span class="dr-badge unknown">DR?</span></div>
       <div class="expand-row"><span>Published:</span><strong>30-Apr-26</strong></div>
@@ -325,10 +404,9 @@ table.demo td { padding: 0; }
       <div class="expand-meta"><a href="#" class="expand-link">🔗 AS</a> · <a href="#" class="expand-link">📄 Memo</a></div>
     </div>
   </div></td>
-  <td><div class="cell s5 audit-pass"><span class="cell-glyph">✓</span></div></td>
-  <!-- ESA: mix of states -->
-  <td><div class="cell s4 audit-pass"><span class="cell-glyph">●</span>
-    <div class="cell-expand"><div class="expand-header"><span class="expand-glyph" style="color:var(--purple)">●</span> Q8 ESA · BM/Sector Primer</div>
+  <td><div class="cell audit-pass"><span class="cell-glyph">✓</span></div></td>
+  <td><div class="cell audit-pass"><span class="cell-glyph">●</span>
+    <div class="cell-expand"><div class="expand-header"><span class="expand-glyph">●</span> Q8 ESA · BM/Sector Primer</div>
       <div class="expand-row"><span>State:</span><strong>Extracted</strong></div>
       <div class="expand-row"><span>Source:</span><strong>C+AS</strong> <span class="dr-badge">DR</span></div>
       <div class="expand-row"><span>Submitted:</span><strong>3-May-26 02:00</strong></div>
@@ -337,9 +415,9 @@ table.demo td { padding: 0; }
       <div class="expand-meta"><a href="#" class="expand-link">🔗 AS</a></div>
     </div>
   </div></td>
-  <td><div class="cell s3 stuck">
-    <span class="cell-glyph" style="color:var(--blue)">◕</span>
-    <div class="cell-expand"><div class="expand-header"><span class="expand-glyph" style="color:var(--blue)">◕</span> Q9 ESA · Earnings History <span style="color:var(--red);font-size:10px">⚠ STUCK 14h</span></div>
+  <td><div class="cell stuck">
+    <span class="cell-glyph">◕</span>
+    <div class="cell-expand"><div class="expand-header"><span class="expand-glyph">◕</span> Q9 ESA · Earnings History <span style="color:var(--red);font-size:10px">⚠ STUCK 14h</span></div>
       <div class="expand-row"><span>State:</span><strong>Submitted</strong></div>
       <div class="expand-row"><span>Source:</span><strong>AS</strong> <span class="dr-badge">DR</span></div>
       <div class="expand-row"><span>Submitted:</span><strong>2-May-26 16:00</strong></div>
@@ -347,8 +425,8 @@ table.demo td { padding: 0; }
       <div class="expand-meta"><a href="#" class="expand-link">🔗 AS thread (broken?)</a> · auto-resubmit considered</div>
     </div>
   </div></td>
-  <td><div class="cell s2"><span class="cell-glyph">◑</span>
-    <div class="cell-expand"><div class="expand-header"><span class="expand-glyph" style="color:var(--amber)">◑</span> Q10 ESA · Short-Sellers</div>
+  <td><div class="cell"><span class="cell-glyph">◑</span>
+    <div class="cell-expand"><div class="expand-header"><span class="expand-glyph">◑</span> Q10 ESA · Short-Sellers</div>
       <div class="expand-row"><span>State:</span><strong>Agreed</strong></div>
       <div class="expand-row"><span>Source:</span><strong>C+AS</strong></div>
       <div class="expand-row"><span>Requested:</span><strong>3-May-26 06:00</strong></div>
@@ -356,8 +434,8 @@ table.demo td { padding: 0; }
       <div class="expand-row"><span>Awaiting:</span><strong>Submission Phase 1</strong></div>
     </div>
   </div></td>
-  <td><div class="cell s1"><span class="cell-glyph">◔</span>
-    <div class="cell-expand"><div class="expand-header"><span class="expand-glyph" style="color:var(--grey)">◔</span> Q11 ESA · Value-Chain Map</div>
+  <td><div class="cell"><span class="cell-glyph">◔</span>
+    <div class="cell-expand"><div class="expand-header"><span class="expand-glyph">◔</span> Q11 ESA · Value-Chain Map</div>
       <div class="expand-row"><span>State:</span><strong>Requested</strong></div>
       <div class="expand-row"><span>Source:</span><strong>C</strong></div>
       <div class="expand-row"><span>Requested:</span><strong>3-May-26 06:15</strong></div>
@@ -367,22 +445,20 @@ table.demo td { padding: 0; }
   <td><div class="cell empty"><span class="cell-glyph">·</span></div></td>
   <td><div class="cell empty"><span class="cell-glyph">·</span></div></td>
   <td><div class="cell empty"><span class="cell-glyph">·</span></div></td>
-  <!-- DD all empty -->
   <td><div class="cell empty"><span class="cell-glyph">·</span></div></td>
   <td><div class="cell empty"><span class="cell-glyph">·</span></div></td>
   <td><div class="cell empty"><span class="cell-glyph">·</span></div></td>
   <td><div class="cell empty"><span class="cell-glyph">·</span></div></td>
   <td><div class="cell empty"><span class="cell-glyph">·</span></div></td>
-  <!-- Ad-hoc: 2 KQs filled, 2 empty -->
-  <td><div class="cell s5 audit-pass"><span class="cell-glyph">✓</span>
-    <div class="cell-expand"><div class="expand-header"><span class="expand-glyph" style="color:var(--green)">✓</span> KQ · Hormuz exposure</div>
+  <td><div class="cell audit-pass"><span class="cell-glyph">✓</span>
+    <div class="cell-expand"><div class="expand-header"><span class="expand-glyph">✓</span> Ad-hoc slot 1 · KQ — Hormuz exposure</div>
       <div class="expand-row"><span>State:</span><strong>Published</strong></div>
       <div class="expand-row"><span>Type:</span><strong>KQ Research</strong></div>
       <div class="expand-row"><span>Published:</span><strong>1-May-26</strong></div>
     </div>
   </div></td>
-  <td><div class="cell s3"><span class="cell-glyph">◕</span>
-    <div class="cell-expand"><div class="expand-header"><span class="expand-glyph" style="color:var(--blue)">◕</span> KQ · Capex cycle</div>
+  <td><div class="cell"><span class="cell-glyph">◕</span>
+    <div class="cell-expand"><div class="expand-header"><span class="expand-glyph">◕</span> Ad-hoc slot 2 · KQ — Capex cycle</div>
       <div class="expand-row"><span>State:</span><strong>Submitted</strong></div>
       <div class="expand-row"><span>Submitted:</span><strong>3-May-26 04:00</strong></div>
     </div>
@@ -391,30 +467,30 @@ table.demo td { padding: 0; }
   <td><div class="cell empty"><span class="cell-glyph">·</span></div></td>
 </tr>
 
-<!-- ROW 2: HTRO — fully through DD, one cancelled -->
+<!-- ROW 2: HTRO -->
 <tr>
   <td class="label">HTRO</td>
-  <td><div class="cell s5 audit-pass"><span class="cell-glyph">✓</span></div></td>
-  <td><div class="cell s5 audit-pass"><span class="cell-glyph">✓</span></div></td>
-  <td><div class="cell s5 audit-pass"><span class="cell-glyph">✓</span></div></td>
-  <td><div class="cell s5 audit-pass"><span class="cell-glyph">✓</span></div></td>
-  <td><div class="cell s5 audit-pass"><span class="cell-glyph">✓</span></div></td>
-  <td><div class="cell s5 audit-pass"><span class="cell-glyph">✓</span></div></td>
-  <td><div class="cell s5 audit-pass"><span class="cell-glyph">✓</span></div></td>
-  <td><div class="cell s5 audit-pass"><span class="cell-glyph">✓</span></div></td>
-  <td><div class="cell s5 audit-pass"><span class="cell-glyph">✓</span></div></td>
-  <td><div class="cell cancelled"><span class="cell-glyph">●</span>
+  <td><div class="cell audit-pass"><span class="cell-glyph">✓</span></div></td>
+  <td><div class="cell audit-pass"><span class="cell-glyph">✓</span></div></td>
+  <td><div class="cell audit-pass"><span class="cell-glyph">✓</span></div></td>
+  <td><div class="cell audit-pass"><span class="cell-glyph">✓</span></div></td>
+  <td><div class="cell audit-pass"><span class="cell-glyph">✓</span></div></td>
+  <td><div class="cell audit-pass"><span class="cell-glyph">✓</span></div></td>
+  <td><div class="cell audit-pass"><span class="cell-glyph">✓</span></div></td>
+  <td><div class="cell audit-pass"><span class="cell-glyph">✓</span></div></td>
+  <td><div class="cell audit-pass"><span class="cell-glyph">✓</span></div></td>
+  <td><div class="cell cancelled"><span class="cell-glyph">✕</span>
     <div class="cell-expand"><div class="expand-header" style="color:var(--grey)">Q10 ESA · Short-Sellers (Cancelled)</div>
       <div class="expand-row"><span>State:</span><strong>Cancelled</strong></div>
       <div class="expand-row"><span>Cancelled:</span><strong>28-Apr-26</strong></div>
       <div class="expand-row"><span>Audit-log:</span><a href="#" class="expand-link">stock audit-log.md</a></div>
     </div>
   </div></td>
-  <td><div class="cell s5 audit-pass"><span class="cell-glyph">✓</span></div></td>
-  <td><div class="cell s5 audit-pass"><span class="cell-glyph">✓</span></div></td>
-  <td><div class="cell s5 audit-pass"><span class="cell-glyph">✓</span></div></td>
-  <td><div class="cell s5 audit-fail"><span class="cell-glyph">✓</span>
-    <div class="cell-expand"><div class="expand-header"><span class="expand-glyph" style="color:var(--green)">✓</span> Q14 ESA · KD Assessment</div>
+  <td><div class="cell audit-pass"><span class="cell-glyph">✓</span></div></td>
+  <td><div class="cell audit-pass"><span class="cell-glyph">✓</span></div></td>
+  <td><div class="cell audit-pass"><span class="cell-glyph">✓</span></div></td>
+  <td><div class="cell audit-fail"><span class="cell-glyph">✓</span>
+    <div class="cell-expand"><div class="expand-header"><span class="expand-glyph">✓</span> Q14 ESA · KD Assessment</div>
       <div class="expand-row"><span>State:</span><strong>Published</strong></div>
       <div class="expand-row"><span>Audit:</span><strong style="color:var(--red)">FAIL — issues flagged</strong></div>
       <div class="expand-row"><span>Issues:</span><strong>Section gaps · DR not used</strong></div>
@@ -422,35 +498,35 @@ table.demo td { padding: 0; }
       <div class="expand-meta"><a href="#" class="expand-link">📄 Latest</a> · <a href="#" class="expand-link">v1 archived</a> · <a href="#" class="expand-link">audit-log.md</a></div>
     </div>
   </div></td>
-  <td><div class="cell s5 audit-pass"><span class="cell-glyph">✓</span></div></td>
-  <td><div class="cell s4 audit-pass"><span class="cell-glyph">●</span></div></td>
-  <td><div class="cell s4 audit-pass"><span class="cell-glyph">●</span></div></td>
-  <td><div class="cell s3"><span class="cell-glyph">◕</span></div></td>
-  <td><div class="cell s2"><span class="cell-glyph">◑</span></div></td>
-  <td><div class="cell s5 audit-pass"><span class="cell-glyph">✓</span></div></td>
-  <td><div class="cell s5 audit-pass"><span class="cell-glyph">✓</span></div></td>
-  <td><div class="cell s5 audit-pass"><span class="cell-glyph">✓</span></div></td>
+  <td><div class="cell audit-pass"><span class="cell-glyph">✓</span></div></td>
+  <td><div class="cell audit-pass"><span class="cell-glyph">●</span></div></td>
+  <td><div class="cell audit-pass"><span class="cell-glyph">●</span></div></td>
+  <td><div class="cell"><span class="cell-glyph">◕</span></div></td>
+  <td><div class="cell"><span class="cell-glyph">◑</span></div></td>
+  <td><div class="cell audit-pass"><span class="cell-glyph">✓</span></div></td>
+  <td><div class="cell audit-pass"><span class="cell-glyph">✓</span></div></td>
+  <td><div class="cell audit-pass"><span class="cell-glyph">✓</span></div></td>
   <td><div class="cell empty"><span class="cell-glyph">·</span></div></td>
 </tr>
 
-<!-- ROW 3: DCC — early stage, several stuck -->
+<!-- ROW 3: DCC -->
 <tr>
   <td class="label">DCC</td>
-  <td><div class="cell s5 audit-pass"><span class="cell-glyph">✓</span></div></td>
-  <td><div class="cell s5 audit-warn"><span class="cell-glyph">✓</span></div></td>
-  <td><div class="cell s5 audit-pass"><span class="cell-glyph">✓</span></div></td>
-  <td><div class="cell s4 stuck"><span class="cell-glyph">●</span>
-    <div class="cell-expand"><div class="expand-header"><span class="expand-glyph" style="color:var(--purple)">●</span> Q4 Triaging · Earnings Trends <span style="color:var(--red);font-size:10px">⚠ STUCK 18h</span></div>
+  <td><div class="cell audit-pass"><span class="cell-glyph">✓</span></div></td>
+  <td><div class="cell audit-warn"><span class="cell-glyph">✓</span></div></td>
+  <td><div class="cell audit-pass"><span class="cell-glyph">✓</span></div></td>
+  <td><div class="cell stuck"><span class="cell-glyph">●</span>
+    <div class="cell-expand"><div class="expand-header"><span class="expand-glyph">●</span> Q4 Triaging · Earnings Trends <span style="color:var(--red);font-size:10px">⚠ STUCK 18h</span></div>
       <div class="expand-row"><span>State:</span><strong>Extracted</strong></div>
       <div class="expand-row"><span>Source:</span><strong>C+AS</strong></div>
       <div class="expand-row"><span>Extracted:</span><strong>2-May-26 12:00</strong></div>
       <div class="expand-row"><span>Stuck:</span><strong style="color:var(--red)">18h awaiting publish (threshold 12h)</strong></div>
     </div>
   </div></td>
-  <td><div class="cell s3 stuck"><span class="cell-glyph">◕</span></div></td>
-  <td><div class="cell s2"><span class="cell-glyph">◑</span></div></td>
-  <td><div class="cell s1 stuck"><span class="cell-glyph">◔</span>
-    <div class="cell-expand"><div class="expand-header"><span class="expand-glyph" style="color:var(--grey)">◔</span> Q7 Triaging · KD Assessment <span style="color:var(--red);font-size:10px">⚠ STUCK 6h</span></div>
+  <td><div class="cell stuck"><span class="cell-glyph">◕</span></div></td>
+  <td><div class="cell"><span class="cell-glyph">◑</span></div></td>
+  <td><div class="cell stuck"><span class="cell-glyph">◔</span>
+    <div class="cell-expand"><div class="expand-header"><span class="expand-glyph">◔</span> Q7 Triaging · KD Assessment <span style="color:var(--red);font-size:10px">⚠ STUCK 6h</span></div>
       <div class="expand-row"><span>State:</span><strong>Requested</strong></div>
       <div class="expand-row"><span>Requested:</span><strong>3-May-26 00:30</strong></div>
       <div class="expand-row"><span>Stuck:</span><strong style="color:var(--red)">6h awaiting back-brief (threshold 4h)</strong></div>
@@ -471,14 +547,13 @@ table.demo td { padding: 0; }
   <td><div class="cell empty"><span class="cell-glyph">·</span></div></td>
   <td><div class="cell empty"><span class="cell-glyph">·</span></div></td>
   <td><div class="cell empty"><span class="cell-glyph">·</span></div></td>
-  <td><div class="cell empty"><span class="cell-glyph">·</span></div></td>
 </tr>
 
 </tbody>
 </table>
 
-<h2>Density alternative — comfortable mode (toggle in dashboard)</h2>
-<p class="lede">If compact-by-default feels too tight, here's the same row in comfortable mode (date + URL icons visible always, ~1.7× the height).</p>
+<h2>Comfortable density mode (Richard's preferred — 🔗 + date on same row)</h2>
+<p class="lede">Same data, always-visible date + URL icon. Slightly taller cells. Good for desktop / iPad-landscape; compact mode auto-applies on iPad-portrait + phone.</p>
 
 <table class="demo">
 <thead>
@@ -487,42 +562,67 @@ table.demo td { padding: 0; }
   <th colspan="3" class="stage-group">IG</th>
   <th colspan="4" class="stage-group">Triaging</th>
   <th colspan="3" class="stage-group">ESA (first 3)</th>
+  <th colspan="2" class="stage-group">Ad-hoc</th>
 </tr>
 <tr>
-  <th>Q1</th><th>Q2</th><th>Q3</th>
-  <th>Q4</th><th>Q5</th><th>Q6</th><th>Q7</th>
-  <th>Q8</th><th>Q9</th><th>Q10</th>
+  <th class="query-label" style="max-width:64px"><span class="qnum">Q1</span><span class="qtitle">Business Description</span></th>
+  <th class="query-label" style="max-width:64px"><span class="qnum">Q2</span><span class="qtitle">Change Forces</span></th>
+  <th class="query-label" style="max-width:64px"><span class="qnum">Q3</span><span class="qtitle">Technical Momentum</span></th>
+  <th class="query-label" style="max-width:64px"><span class="qnum">Q4</span><span class="qtitle">Earnings Trends</span></th>
+  <th class="query-label" style="max-width:64px"><span class="qnum">Q5</span><span class="qtitle">Earnings Delivery</span></th>
+  <th class="query-label" style="max-width:64px"><span class="qnum">Q6</span><span class="qtitle">SS Commentary</span></th>
+  <th class="query-label" style="max-width:64px"><span class="qnum">Q7</span><span class="qtitle">KD Triaging</span></th>
+  <th class="query-label" style="max-width:64px"><span class="qnum">Q8</span><span class="qtitle">BM/Sector Primer</span></th>
+  <th class="query-label" style="max-width:64px"><span class="qnum">Q9</span><span class="qtitle">Earnings History</span></th>
+  <th class="query-label" style="max-width:64px"><span class="qnum">Q10</span><span class="qtitle">Short-Sellers</span></th>
+  <th class="query-label" style="max-width:64px"><span class="qnum">slot 1</span><span class="qtitle">Hormuz KQ</span></th>
+  <th class="query-label" style="max-width:64px"><span class="qnum">slot 2</span><span class="qtitle">Capex KQ</span></th>
 </tr>
 </thead>
 <tbody>
 <tr>
   <td class="label">EKTA</td>
-  <td><div class="cell-comfy" style="border-color:var(--green);border-width:2px"><span class="cell-glyph" style="color:var(--green)">✓</span><div class="date">29-Apr</div><div class="icons">🔗</div></div></td>
-  <td><div class="cell-comfy" style="border-color:var(--green);border-width:2px"><span class="cell-glyph" style="color:var(--green)">✓</span><div class="date">29-Apr</div><div class="icons">🔗</div></div></td>
-  <td><div class="cell-comfy" style="border-color:var(--green);border-width:2px"><span class="cell-glyph" style="color:var(--green)">✓</span><div class="date">29-Apr</div><div class="icons"></div></div></td>
-  <td><div class="cell-comfy" style="border-color:var(--green);border-width:2px"><span class="cell-glyph" style="color:var(--green)">✓</span><div class="date">30-Apr</div><div class="icons">🔗</div></div></td>
-  <td><div class="cell-comfy" style="border-color:var(--green);border-width:2px"><span class="cell-glyph" style="color:var(--green)">✓</span><div class="date">30-Apr</div><div class="icons">🔗</div></div></td>
-  <td><div class="cell-comfy" style="border-color:var(--amber);border-width:2px"><span class="cell-glyph" style="color:var(--green)">✓</span><div class="date">30-Apr</div><div class="icons">🔗</div></div></td>
-  <td><div class="cell-comfy" style="border-color:var(--green);border-width:2px"><span class="cell-glyph" style="color:var(--green)">✓</span><div class="date">30-Apr</div><div class="icons">🔗</div></div></td>
-  <td><div class="cell-comfy" style="border-color:var(--green);border-width:2px"><span class="cell-glyph" style="color:var(--purple)">●</span><div class="date">3-May</div><div class="icons">🔗</div></div></td>
-  <td><div class="cell-comfy stuck"><span class="cell-glyph" style="color:var(--blue)">◕</span><div class="date">2-May</div><div class="icons">🔗</div></div></td>
-  <td><div class="cell-comfy"><span class="cell-glyph" style="color:var(--amber)">◑</span><div class="date">3-May</div><div class="icons"></div></div></td>
+  <td><div class="cell-comfy" style="border-color:var(--green);border-width:2px"><span class="cell-glyph">✓</span><div class="meta-row"><span class="date">29-Apr</span><a href="#" class="url-icon">🔗</a></div></div></td>
+  <td><div class="cell-comfy" style="border-color:var(--green);border-width:2px"><span class="cell-glyph">✓</span><div class="meta-row"><span class="date">29-Apr</span><a href="#" class="url-icon">🔗</a></div></div></td>
+  <td><div class="cell-comfy" style="border-color:var(--green);border-width:2px"><span class="cell-glyph">✓</span><div class="meta-row"><span class="date">29-Apr</span></div></div></td>
+  <td><div class="cell-comfy" style="border-color:var(--green);border-width:2px"><span class="cell-glyph">✓</span><div class="meta-row"><span class="date">30-Apr</span><a href="#" class="url-icon">🔗</a></div></div></td>
+  <td><div class="cell-comfy" style="border-color:var(--green);border-width:2px"><span class="cell-glyph">✓</span><div class="meta-row"><span class="date">30-Apr</span><a href="#" class="url-icon">🔗</a></div></div></td>
+  <td><div class="cell-comfy" style="border-color:var(--amber);border-width:2px"><span class="cell-glyph">✓</span><div class="meta-row"><span class="date">30-Apr</span><a href="#" class="url-icon">🔗</a></div></div></td>
+  <td><div class="cell-comfy" style="border-color:var(--green);border-width:2px"><span class="cell-glyph">✓</span><div class="meta-row"><span class="date">30-Apr</span><a href="#" class="url-icon">🔗</a></div></div></td>
+  <td><div class="cell-comfy" style="border-color:var(--green);border-width:2px"><span class="cell-glyph">●</span><div class="meta-row"><span class="date">3-May</span><a href="#" class="url-icon">🔗</a></div></div></td>
+  <td><div class="cell-comfy stuck"><span class="cell-glyph">◕</span><div class="meta-row"><span class="date">2-May</span><a href="#" class="url-icon">🔗</a></div></div></td>
+  <td><div class="cell-comfy"><span class="cell-glyph">◑</span><div class="meta-row"><span class="date">3-May</span></div></div></td>
+  <td><div class="cell-comfy" style="border-color:var(--green);border-width:2px"><span class="cell-glyph">✓</span><div class="meta-row"><span class="date">1-May</span><a href="#" class="url-icon">🔗</a></div></div></td>
+  <td><div class="cell-comfy"><span class="cell-glyph">◕</span><div class="meta-row"><span class="date">3-May</span><a href="#" class="url-icon">🔗</a></div></div></td>
+</tr>
+<tr>
+  <td class="label">HTRO</td>
+  <td><div class="cell-comfy" style="border-color:var(--green);border-width:2px"><span class="cell-glyph">✓</span><div class="meta-row"><span class="date">25-Apr</span><a href="#" class="url-icon">🔗</a></div></div></td>
+  <td><div class="cell-comfy" style="border-color:var(--green);border-width:2px"><span class="cell-glyph">✓</span><div class="meta-row"><span class="date">25-Apr</span><a href="#" class="url-icon">🔗</a></div></div></td>
+  <td><div class="cell-comfy" style="border-color:var(--green);border-width:2px"><span class="cell-glyph">✓</span><div class="meta-row"><span class="date">25-Apr</span></div></div></td>
+  <td><div class="cell-comfy" style="border-color:var(--green);border-width:2px"><span class="cell-glyph">✓</span><div class="meta-row"><span class="date">26-Apr</span><a href="#" class="url-icon">🔗</a></div></div></td>
+  <td><div class="cell-comfy" style="border-color:var(--green);border-width:2px"><span class="cell-glyph">✓</span><div class="meta-row"><span class="date">26-Apr</span><a href="#" class="url-icon">🔗</a></div></div></td>
+  <td><div class="cell-comfy" style="border-color:var(--green);border-width:2px"><span class="cell-glyph">✓</span><div class="meta-row"><span class="date">26-Apr</span><a href="#" class="url-icon">🔗</a></div></div></td>
+  <td><div class="cell-comfy" style="border-color:var(--green);border-width:2px"><span class="cell-glyph">✓</span><div class="meta-row"><span class="date">26-Apr</span><a href="#" class="url-icon">🔗</a></div></div></td>
+  <td><div class="cell-comfy" style="border-color:var(--green);border-width:2px"><span class="cell-glyph">✓</span><div class="meta-row"><span class="date">28-Apr</span><a href="#" class="url-icon">🔗</a></div></div></td>
+  <td><div class="cell-comfy" style="border-color:var(--green);border-width:2px"><span class="cell-glyph">✓</span><div class="meta-row"><span class="date">28-Apr</span><a href="#" class="url-icon">🔗</a></div></div></td>
+  <td><div class="cell-comfy cancelled"><span class="cell-glyph">✕</span><div class="meta-row"><span class="date">28-Apr</span></div></div></td>
+  <td><div class="cell-comfy empty"><span class="cell-glyph" style="color:var(--grey-light)">·</span></div></td>
+  <td><div class="cell-comfy empty"><span class="cell-glyph" style="color:var(--grey-light)">·</span></div></td>
 </tr>
 </tbody>
 </table>
 
 <h2>Notes for review</h2>
 <ul style="font-size:13px;line-height:1.6;color:var(--text)">
-  <li><strong>Compact (default):</strong> 38px wide × 36px tall. Pill only. Date + URL surface on hover. ~10 rows visible per screen at desktop. iPad portrait fits ~14 columns visible at once before horizontal scroll kicks in.</li>
-  <li><strong>Stuck rings</strong> pulse subtly to draw the eye (look at row 3 — DCC has 3 stuck cells).</li>
-  <li><strong>Audit border colour</strong> is independent of state — a published memo can fail audit (HTRO row, Q14 has green-✓ inside red border).</li>
-  <li><strong>Cancelled cells</strong> (HTRO row, Q10) show grey strikethrough — Richard cancelled the SS-reports research on 28-Apr.</li>
-  <li><strong>Hover behaviour:</strong> popover appears with full detail. Real implementation would close on mouse-out / tap-elsewhere.</li>
-  <li><strong>Empty cells</strong> are non-clickable, dimmed, indicate "not requested for this stock."</li>
-  <li><strong>Re-runs</strong> show in expanded view as version count + link to archived versions (HTRO Q14 v2 example).</li>
+  <li><strong>Single-colour Harvey balls:</strong> all states use signature dark (#2a2a28). Distinguished by FILL not COLOUR. Cleaner, more typographic, leaves audit border free to carry colour signal.</li>
+  <li><strong>● state-4 size:</strong> normalised to match ◔ ◑ ◕ — explicit width/height + vertical-align fix.</li>
+  <li><strong>Cancelled = ✕:</strong> grey symbol, no strikethrough — simpler.</li>
+  <li><strong>Comfortable mode:</strong> 🔗 + date on the same row beneath the ball. Both compressed slightly. Cell taller than compact (50px vs 36px) but still works at desktop scale.</li>
+  <li><strong>Query column headers:</strong> show full title, two-line layout (Qnum top in bold, full title below). Tooltips on hover (browser default).</li>
 </ul>
 
-<p style="font-size:11px;color:var(--text-muted);margin-top:32px">Mockup file: <code>scratch/cell-density-mockup.html</code> · D-DMRL-36 · Push live: <code>vfhqi.github.io/dashboards/preview/cell-density-mockup.html</code></p>
+<p style="font-size:11px;color:var(--text-muted);margin-top:32px">Mockup file: <code>scratch/cell-density-mockup.html</code> · v2 · D-DMRL-36</p>
 
 </body>
 </html>
