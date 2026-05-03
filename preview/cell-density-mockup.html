@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lifecycle Cell Density Mockup v2 — SA Dashboard Memo Read Layer</title>
+<title>Lifecycle Cell Density Mockup v3 — SA Dashboard Memo Read Layer</title>
 <style>
 :root {
   --grey: #8a8a8a;
@@ -108,6 +108,25 @@ p.lede { color: var(--text-muted); margin: 0 0 16px; }
 .stuck {
   box-shadow: 0 0 0 2px var(--red);
   animation: pulse 2s ease-in-out infinite;
+  position: relative;
+}
+.stuck::after {
+  content: "!";
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  width: 14px;
+  height: 14px;
+  background: var(--red);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 14px;
+  text-align: center;
+  border-radius: 50%;
+  border: 1.5px solid white;
+  box-shadow: 0 0 0 0.5px var(--red);
+  z-index: 5;
 }
 @keyframes pulse {
   0%, 100% { box-shadow: 0 0 0 2px var(--red); }
@@ -200,10 +219,12 @@ table.demo th.query-label {
   color: var(--text-muted);
   text-transform: none;
   letter-spacing: 0;
-  max-width: 38px;
+  width: 42px;
+  max-width: 42px;
+  min-width: 42px;
   line-height: 1.15;
   padding: 4px 1px;
-  height: 60px;
+  height: 70px;
   vertical-align: bottom;
 }
 table.demo th.query-label .qnum {
@@ -217,9 +238,12 @@ table.demo th.query-label .qtitle {
   display: block;
   font-weight: 400;
   color: var(--text-muted);
-  font-size: 8px;
+  font-size: 9.5px;
+  line-height: 1.2;
   word-wrap: break-word;
+  overflow-wrap: break-word;
   hyphens: auto;
+  white-space: normal;
 }
 table.demo td.label {
   padding-right: 12px;
@@ -296,17 +320,22 @@ table.demo td { padding: 0; }
 </head>
 <body>
 
-<h1>Lifecycle Cell Density Mockup — v2</h1>
+<h1>Lifecycle Cell Density Mockup — v3</h1>
 <p class="lede">SA — Dashboard Memo Read Layer · 3-May-26 · D-DMRL-22 → D-DMRL-36</p>
 
 <div class="changes">
-<strong>v2 changes from v1:</strong>
+<strong>v3 changes:</strong>
 <ul>
-  <li>Harvey balls: all single colour (signature dark) — colour signalling moves to audit border</li>
+  <li>Query column titles wrap properly + slightly bigger (9.5px)</li>
+  <li>Stuck cells now show <strong>!</strong> badge in the red ring</li>
+</ul>
+<strong>v2 changes (locked):</strong>
+<ul>
+  <li>Harvey balls: all single colour (signature dark, Option B locked)</li>
   <li>● state-4 normalised to same size as ◔ ◑ ◕ ✓</li>
-  <li>Cancelled = <code>✕</code> symbol (grey), not strikethrough harvey ball</li>
-  <li>Comfortable mode: 🔗 moved to same row as date, both smaller</li>
-  <li>Query column headers show full query title (not just Q1/Q2/...)</li>
+  <li>Cancelled = <code>✕</code> grey symbol</li>
+  <li>Comfortable mode: 🔗 + date on same row, both smaller</li>
+  <li>Query column headers show full title</li>
 </ul>
 </div>
 
@@ -622,7 +651,7 @@ table.demo td { padding: 0; }
   <li><strong>Query column headers:</strong> show full title, two-line layout (Qnum top in bold, full title below). Tooltips on hover (browser default).</li>
 </ul>
 
-<p style="font-size:11px;color:var(--text-muted);margin-top:32px">Mockup file: <code>scratch/cell-density-mockup.html</code> · v2 · D-DMRL-36</p>
+<p style="font-size:11px;color:var(--text-muted);margin-top:32px">Mockup file: <code>scratch/cell-density-mockup.html</code> · v3 · D-DMRL-36</p>
 
 </body>
 </html>
