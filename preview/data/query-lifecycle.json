@@ -1,0 +1,4351 @@
+{
+  "schema_version": 1,
+  "generated": "2026-05-03T07:00:16.080783Z",
+  "stocks": {
+    "AENA": {
+      "IG": {
+        "Q2": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-18T00:00:00Z",
+            "created": "2026-04-18T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Fundamental Change Forces",
+          "memo_path": "Files/AENA/IG/02-CF",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q3": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-27T00:00:00Z",
+            "created": "2026-04-27T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": "34f35e90-9b0b-8105-96c1-c76648df4964",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Technical Momentum",
+          "memo_path": "Files/AENA/IG/03-TM",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      },
+      "Triaging": {
+        "Q4": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-18T00:00:00Z",
+            "created": "2026-04-18T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Earnings Trends + Delivery",
+          "memo_path": "Files/AENA/Triaging/04-ET-ED",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q6": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-15T00:00:00Z",
+            "created": "2026-04-15T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Sell-Side Analysis",
+          "memo_path": "Files/AENA/Triaging/06-SS",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q7": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-18T00:00:00Z",
+            "created": "2026-04-18T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Key Drivers",
+          "memo_path": "Files/AENA/Triaging/07-KD",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "AIXA": {
+      "IG": {
+        "Q1": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "unknown",
+          "timestamps": {
+            "5_published": "2026-04-04T09:20:53Z",
+            "created": "2026-04-04T09:20:53Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Business Description",
+          "memo_path": "Files/AIXA/IG/01-BD",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q2": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "unknown",
+          "timestamps": {
+            "5_published": "2026-04-04T09:28:11Z",
+            "created": "2026-04-04T09:28:11Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Fundamental Change Forces",
+          "memo_path": "Files/AIXA/IG/02-CF",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "ART-ES": {
+      "IG": {
+        "Q1": {
+          "state": 4,
+          "state_label": "extracted",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-25T09:32:00Z",
+            "created": "2026-04-25T09:32:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "",
+          "memo_path": "Files/ART-ES/IG/01-BD",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q2": {
+          "state": 4,
+          "state_label": "extracted",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-25T09:37:09Z",
+            "created": "2026-04-25T09:37:09Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "",
+          "memo_path": "Files/ART-ES/IG/02-CF",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      },
+      "Triaging": {
+        "Q4": {
+          "state": 4,
+          "state_label": "extracted",
+          "version": 1,
+          "source": "C",
+          "timestamps": {},
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Earnings & Fundamental Trends",
+          "memo_path": "Files/ART-ES/Triaging/04-ET",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q5": {
+          "state": 4,
+          "state_label": "extracted",
+          "version": 1,
+          "source": "C",
+          "timestamps": {},
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Earnings Delivery LTM",
+          "memo_path": "Files/ART-ES/Triaging/05-ED",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q7": {
+          "state": 4,
+          "state_label": "extracted",
+          "version": 1,
+          "source": "C",
+          "timestamps": {},
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Key Drivers Assessment",
+          "memo_path": "Files/ART-ES/Triaging/07-KD",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "ATS": {
+      "IG": {
+        "Q1": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-04T03:44:09Z",
+            "created": "2026-04-04T03:44:09Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Business Description",
+          "memo_path": "Files/ATS/IG/01-BD",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q2": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-04T03:59:03Z",
+            "created": "2026-04-04T03:59:03Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Fundamental Change Forces",
+          "memo_path": "Files/ATS/IG/02-CF",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "AUTO": {
+      "IG": {
+        "Q2": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {},
+          "as_urls": [],
+          "notion_page_id": "35035e90-9b0b-81bc-98c8-eed795805ab5",
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "",
+          "memo_path": "Files/AUTO/IG/02-CF",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q3": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {},
+          "as_urls": [],
+          "notion_page_id": "35035e90-9b0b-8168-9d38-eb83d6e4f503",
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "",
+          "memo_path": "Files/AUTO/IG/03-TM",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      },
+      "Triaging": {
+        "Q4": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {},
+          "as_urls": [],
+          "notion_page_id": "35035e90-9b0b-81ef-99a0-fa9866e70cd9",
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "",
+          "memo_path": "Files/AUTO/Triaging/04-ET",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q5": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {},
+          "as_urls": [],
+          "notion_page_id": "35035e90-9b0b-814e-babb-c64628cb9b66",
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "",
+          "memo_path": "Files/AUTO/Triaging/05-ED",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q7": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {},
+          "as_urls": [],
+          "notion_page_id": "35035e90-9b0b-8128-ae2d-f400f7d78808",
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "",
+          "memo_path": "Files/AUTO/Triaging/07-KD",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "AZA-SE": {
+      "Monitoring": {
+        "Q3": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-20T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": "34835e90-9b0b-81c9-affc-f28ab9412006",
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "",
+          "memo_path": "Files/AZA-SE/Monitoring/03-TM",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "BESI": {
+      "IG": {
+        "Q1": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-09T15:20:40Z",
+            "created": "2026-04-09T15:20:40Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Business Description",
+          "memo_path": "Files/BESI/IG/01-BD",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q2": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-09T15:20:35Z",
+            "created": "2026-04-09T15:20:35Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Fundamental Change Forces",
+          "memo_path": "Files/BESI/IG/02-CF",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "BGN": {
+      "ESA": {
+        "Q8": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "unknown",
+          "timestamps": {
+            "5_published": "2026-04-23T00:00:00Z",
+            "created": "2026-04-23T00:00:00Z"
+          },
+          "as_urls": [
+            "https://research.alpha-sense.com/gensearch/409385__1776947623666"
+          ],
+          "notion_page_id": "34b35e909b0b81b4830ef0e47bc104ee",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Business Model / Sector Primer",
+          "memo_path": "Files/BGN/ESA/08-BM-Sector-Primer",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q9": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "unknown",
+          "timestamps": {
+            "5_published": "2026-04-23T00:00:00Z",
+            "created": "2026-04-23T00:00:00Z"
+          },
+          "as_urls": [
+            "https://research.alpha-sense.com/gensearch/409385__1776969333156"
+          ],
+          "notion_page_id": "35135e909b0b816b8bb5e71348f2a4c0",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Earnings History L3Y",
+          "memo_path": "Files/BGN/ESA/09-Earnings-History",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q10": {
+          "state": 4,
+          "state_label": "extracted",
+          "version": 1,
+          "source": "unknown",
+          "timestamps": {
+            "5_published": "2026-04-23T00:00:00Z",
+            "created": "2026-04-23T00:00:00Z"
+          },
+          "as_urls": [
+            "https://research.alpha-sense.com/gensearch/409385__1777502003241",
+            "https://research.alpha-sense.com/gensearch/511908__1777738462086"
+          ],
+          "notion_page_id": null,
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Short-Sellers Reports / Bear Case",
+          "memo_path": "Files/BGN/ESA/10-Short-Sellers",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q11": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "unknown",
+          "timestamps": {
+            "5_published": "2026-04-23T00:00:00Z",
+            "created": "2026-04-23T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": "34b35e909b0b816f88b3f82a1585ad36",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Value-Chain Map",
+          "memo_path": "Files/BGN/ESA/11-Value-Chain-Map",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q12": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "unknown",
+          "timestamps": {
+            "5_published": "2026-04-23T00:00:00Z",
+            "created": "2026-04-23T00:00:00Z"
+          },
+          "as_urls": [
+            "https://research.alpha-sense.com/gensearch/409385__1776948582631"
+          ],
+          "notion_page_id": "34b35e909b0b81f4b25ccda048070ca3",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Value-Chain Analysis",
+          "memo_path": "Files/BGN/ESA/12-Value-Chain-Analysis",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q13": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "unknown",
+          "timestamps": {
+            "5_published": "2026-04-23T00:00:00Z",
+            "created": "2026-04-23T00:00:00Z"
+          },
+          "as_urls": [
+            "https://research.alpha-sense.com/gensearch/409385__1776947450759"
+          ],
+          "notion_page_id": "34b35e909b0b81529052ec3a386c8ecc",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Guidance & Tracking",
+          "memo_path": "Files/BGN/ESA/13-Guidance-Tracking",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      },
+      "IG": {
+        "Q1": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "unknown",
+          "timestamps": {
+            "5_published": "2026-04-28T00:00:00Z",
+            "created": "2026-04-28T00:00:00Z"
+          },
+          "as_urls": [
+            "https://research.alpha-sense.com/gensearch/409385__1777368629765"
+          ],
+          "notion_page_id": "35435e909b0b816793deed4de5572593",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Business Description",
+          "memo_path": "Files/BGN/IG/01-BD",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q3": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "unknown",
+          "timestamps": {
+            "5_published": "2026-05-02T00:00:00Z",
+            "created": "2026-05-02T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": "35435e909b0b81ab8c71e1619f9b2753",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Technical Momentum",
+          "memo_path": "Files/BGN/IG/03-TM",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      },
+      "Triaging": {
+        "Q7": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "unknown",
+          "timestamps": {
+            "5_published": "2026-04-28T00:00:00Z",
+            "created": "2026-04-28T00:00:00Z"
+          },
+          "as_urls": [
+            "https://research.alpha-sense.com/gensearch/409385__1777369116919"
+          ],
+          "notion_page_id": "35035e909b0b8173856ad32b28883493",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Key Drivers Assessment",
+          "memo_path": "Files/BGN/Triaging/07-KD",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "BRAV": {
+      "ESA": {
+        "Q9": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "unknown",
+          "timestamps": {
+            "5_published": "2026-04-16T10:55:02Z",
+            "created": "2026-04-16T10:55:02Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Earnings History",
+          "memo_path": "Files/BRAV/ESA/09-Earnings",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      },
+      "IG": {
+        "Q2": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-16T04:45:19Z",
+            "created": "2026-04-16T04:45:19Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Fundamental Change Forces",
+          "memo_path": "Files/BRAV/IG/02-CF",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      },
+      "Triaging": {
+        "Q6": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "unknown",
+          "timestamps": {
+            "5_published": "2026-04-16T10:55:02Z",
+            "created": "2026-04-16T10:55:02Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Sell-Side Commentary",
+          "memo_path": "Files/BRAV/Triaging/06-SS",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q7": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "unknown",
+          "timestamps": {
+            "5_published": "2026-04-16T10:55:02Z",
+            "created": "2026-04-16T10:55:02Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Key Drivers Assessment",
+          "memo_path": "Files/BRAV/Triaging/07-KD",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "BUFAB": {
+      "DD": {
+        "Q18": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-10T12:49:14Z",
+            "created": "2026-04-10T12:49:14Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "CEO Research",
+          "memo_path": "Files/BUFAB/DD/18-CEO",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q19": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-10T12:49:14Z",
+            "created": "2026-04-10T12:49:14Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Pre-mortem",
+          "memo_path": "Files/BUFAB/DD/19-PreMortem",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      },
+      "IG": {
+        "Q1": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-10T12:49:13Z",
+            "created": "2026-04-10T12:49:13Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Business Description",
+          "memo_path": "Files/BUFAB/IG/01-BD",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q2": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-10T12:49:13Z",
+            "created": "2026-04-10T12:49:13Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Fundamental Change Forces",
+          "memo_path": "Files/BUFAB/IG/02-CF",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "BYLOT-GR": {
+      "Monitoring": {
+        "Q3": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-20T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": "34835e90-9b0b-81ff-b4f0-dda42e3532fa",
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "",
+          "memo_path": "Files/BYLOT-GR/Monitoring/03-TM",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "CARLB-DK": {
+      "Monitoring": {
+        "Q3": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-20T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": "34835e90-9b0b-8101-8dc4-dba42004e608",
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "",
+          "memo_path": "Files/CARLB-DK/Monitoring/03-TM",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "CARLB": {
+      "AdHoc": {
+        "slot_3": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-30T00:00:00Z",
+            "created": "2026-04-29T00:00:00Z"
+          },
+          "as_urls": [
+            "https://research.alpha-sense.com/gensearch/409385__1777491223594"
+          ],
+          "notion_page_id": "35235e90-9b0b-8152-8e5e-d1e492823780",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "CEO/CFO Meeting Questions",
+          "memo_path": "Files/CARLB/DD/22-cfo-questions",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      },
+      "Triaging": {
+        "Q4": {
+          "state": 4,
+          "state_label": "extracted",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-30T00:00:00Z",
+            "created": "2026-04-30T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Earnings & Fundamental Trends \u2014 Peers/Sector",
+          "memo_path": "Files/CARLB/Triaging/04-peer-earnings-trends",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q5": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-30T00:00:00Z",
+            "created": "2026-04-29T00:00:00Z"
+          },
+          "as_urls": [
+            "https://research.alpha-sense.com/gensearch/409385__1777491094876"
+          ],
+          "notion_page_id": "35235e90-9b0b-819f-8f7a-e2939d8f82ad",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Earnings Delivery LTM",
+          "memo_path": "Files/CARLB/Triaging/05-earnings-delivery",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q6": {
+          "state": 4,
+          "state_label": "extracted",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-30T00:00:00Z",
+            "created": "2026-04-30T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Sell-Side Commentary Summary",
+          "memo_path": "Files/CARLB/Triaging/06-ss-commentary",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "CKN": {
+      "IG": {
+        "Q1": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-24T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": "34c35e90-9b0b-814f-82e4-ed71812cda78",
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "",
+          "memo_path": "Files/CKN/IG/01-BD",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q2": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-24T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": "34c35e90-9b0b-810b-b4e6-f2788d3bee9c",
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "",
+          "memo_path": "Files/CKN/IG/02-CF",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q3": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-24T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": "34c35e90-9b0b-8129-a572-da3c74af5922",
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "",
+          "memo_path": "Files/CKN/IG/03-TM",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "COM-IT": {
+      "IG": {
+        "Q3": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-27T00:00:00Z",
+            "created": "2026-04-27T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": "34f35e90-9b0b-8128-a3a1-e1a054d99dc6",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Technical Momentum",
+          "memo_path": "Files/COM-IT/IG/03-TM",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "DCC": {
+      "ESA": {
+        "Q13": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-14T09:34:25Z",
+            "created": "2026-04-14T09:34:25Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Guidance Tracking",
+          "memo_path": "Files/DCC/ESA/13-Guidance",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      },
+      "IG": {
+        "Q1": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-14T08:27:46Z",
+            "created": "2026-04-14T08:27:46Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Business Description",
+          "memo_path": "Files/DCC/IG/01-BD",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      },
+      "Triaging": {
+        "Q7": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-15T10:55:38Z",
+            "created": "2026-04-15T10:55:38Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Key Drivers Assessment",
+          "memo_path": "Files/DCC/Triaging/07-KD",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "DEC": {
+      "ESA": {
+        "Q8": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-13T12:47:53Z",
+            "created": "2026-04-13T12:47:53Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Business Model & Sector Primer",
+          "memo_path": "Files/DEC/ESA/08-BM",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q13": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-13T12:47:53Z",
+            "created": "2026-04-13T12:47:53Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Guidance Tracking",
+          "memo_path": "Files/DEC/ESA/13-Guidance",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      },
+      "IG": {
+        "Q1": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-12T17:21:20Z",
+            "created": "2026-04-12T17:21:20Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Business Description",
+          "memo_path": "Files/DEC/IG/01-BD",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q2": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-12T17:57:36Z",
+            "created": "2026-04-12T17:57:36Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Fundamental Change Forces",
+          "memo_path": "Files/DEC/IG/02-CF",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      },
+      "Triaging": {
+        "Q5": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-13T12:47:53Z",
+            "created": "2026-04-13T12:47:53Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Earnings Delivery",
+          "memo_path": "Files/DEC/Triaging/05-ED",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q6": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-13T12:47:53Z",
+            "created": "2026-04-13T12:47:53Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Sell-Side Commentary",
+          "memo_path": "Files/DEC/Triaging/06-SS",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "DHER": {
+      "DD": {
+        "Q19": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "unknown",
+          "timestamps": {
+            "5_published": "2026-04-09T06:00:58Z",
+            "created": "2026-04-09T06:00:58Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Pre-mortem",
+          "memo_path": "Files/DHER/DD/19-PreMortem",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      },
+      "ESA": {
+        "Q13": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "unknown",
+          "timestamps": {
+            "5_published": "2026-04-09T06:00:58Z",
+            "created": "2026-04-09T06:00:58Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Guidance Tracking",
+          "memo_path": "Files/DHER/ESA/13-Guidance",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      },
+      "IG": {
+        "Q1": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-09T06:00:58Z",
+            "created": "2026-04-09T06:00:58Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Business Description",
+          "memo_path": "Files/DHER/IG/01-BD",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "DIE": {
+      "DD": {
+        "Q18": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-09T18:18:03Z",
+            "created": "2026-04-09T18:18:03Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "CEO Research",
+          "memo_path": "Files/DIE/DD/18-CEO",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q19": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-09T18:17:57Z",
+            "created": "2026-04-09T18:17:57Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Pre-mortem",
+          "memo_path": "Files/DIE/DD/19-PreMortem",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      },
+      "ESA": {
+        "Q8": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-09T19:36:10Z",
+            "created": "2026-04-09T19:36:10Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Business Model & Sector Primer",
+          "memo_path": "Files/DIE/ESA/08-BM",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q9": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-09T18:20:22Z",
+            "created": "2026-04-09T18:20:22Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Earnings History",
+          "memo_path": "Files/DIE/ESA/09-Earnings",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q10": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-09T18:22:10Z",
+            "created": "2026-04-09T18:22:10Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Short Sellers Reports",
+          "memo_path": "Files/DIE/ESA/10-Short",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q13": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-10T08:53:28Z",
+            "created": "2026-04-10T08:53:28Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Guidance Tracking",
+          "memo_path": "Files/DIE/ESA/13-Guidance",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      },
+      "Triaging": {
+        "Q5": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-10T08:53:28Z",
+            "created": "2026-04-10T08:53:28Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Earnings Delivery",
+          "memo_path": "Files/DIE/Triaging/05-ED",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q6": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-10T08:53:28Z",
+            "created": "2026-04-10T08:53:28Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Sell-Side Commentary",
+          "memo_path": "Files/DIE/Triaging/06-SS",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "DSCV": {
+      "IG": {
+        "Q1": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-12T09:26:35Z",
+            "created": "2026-04-12T09:26:35Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Business Description",
+          "memo_path": "Files/DSCV/IG/01-BD",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q2": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-12T09:26:35Z",
+            "created": "2026-04-12T09:26:35Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Fundamental Change Forces",
+          "memo_path": "Files/DSCV/IG/02-CF",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "EKTA": {
+      "ESA": {
+        "Q8": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-16T05:55:05Z",
+            "created": "2026-04-16T05:55:05Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Business Model & Sector Primer",
+          "memo_path": "Files/EKTA/ESA/08-BM",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q9": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-16T07:02:48Z",
+            "created": "2026-04-16T07:02:48Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Earnings History",
+          "memo_path": "Files/EKTA/ESA/09-Earnings",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q10": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-29T12:43:00+01:00",
+            "created": "2026-04-29T07:30:00+01:00"
+          },
+          "as_urls": [
+            "https://research.alpha-sense.com/gensearch/409385__1777441690040",
+            "https://research.alpha-sense.com/gensearch/409385__1777485588432"
+          ],
+          "notion_page_id": "35135e909b0b81529d19c396543c8662",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Short Sellers Reports",
+          "memo_path": "Files/EKTA/ESA/10-Short",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q11": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-16T05:55:04Z",
+            "created": "2026-04-16T05:55:04Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Value Chain Map",
+          "memo_path": "Files/EKTA/ESA/11-VCMap",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q12": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-16T06:47:46Z",
+            "created": "2026-04-16T06:47:46Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Value Chain Analysis",
+          "memo_path": "Files/EKTA/ESA/12-VCAnalysis",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q13": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-16T05:55:05Z",
+            "created": "2026-04-16T05:55:05Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Guidance Tracking",
+          "memo_path": "Files/EKTA/ESA/13-Guidance",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q14": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-29T12:43:00+01:00",
+            "created": "2026-04-29T07:30:00+01:00"
+          },
+          "as_urls": [
+            "https://research.alpha-sense.com/gensearch/409385__1777442022101",
+            "https://research.alpha-sense.com/gensearch/409385__1777493137794"
+          ],
+          "notion_page_id": "35135e909b0b817f9dc8e503ab9b6c4f",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "KD Assessment ESA",
+          "memo_path": "Files/EKTA/ESA/14-KD",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      },
+      "IG": {
+        "Q1": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-16T05:55:05Z",
+            "created": "2026-04-16T05:55:05Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Business Description",
+          "memo_path": "Files/EKTA/IG/01-BD",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q2": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-16T05:55:05Z",
+            "created": "2026-04-16T05:55:05Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Fundamental Change Forces",
+          "memo_path": "Files/EKTA/IG/02-CF",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      },
+      "Triaging": {
+        "Q4": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-16T06:47:34Z",
+            "created": "2026-04-16T06:47:34Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Earnings Trends",
+          "memo_path": "Files/EKTA/Triaging/04-ET",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q5": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-16T06:47:37Z",
+            "created": "2026-04-16T06:47:37Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Earnings Delivery",
+          "memo_path": "Files/EKTA/Triaging/05-ED",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q6": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-16T06:47:39Z",
+            "created": "2026-04-16T06:47:39Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Sell-Side Commentary",
+          "memo_path": "Files/EKTA/Triaging/06-SS",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q7": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-16T06:47:42Z",
+            "created": "2026-04-16T06:47:42Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Key Drivers Assessment",
+          "memo_path": "Files/EKTA/Triaging/07-KD",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "ELHA-GR": {
+      "IG": {
+        "Q3": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-27T00:00:00Z",
+            "created": "2026-04-27T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": "34f35e90-9b0b-810e-ac47-cd6217c9e34e",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Technical Momentum",
+          "memo_path": "Files/ELHA-GR/IG/03-TM",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "ENAV-IT": {
+      "Monitoring": {
+        "Q3": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-20T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": "34835e90-9b0b-8198-97fe-c8332edf111e",
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "",
+          "memo_path": "Files/ENAV-IT/Monitoring/03-TM",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "ERIC": {
+      "IG": {
+        "Q1": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-04T04:58:02Z",
+            "created": "2026-04-04T04:58:02Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Business Description",
+          "memo_path": "Files/ERIC/IG/01-BD",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q2": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-04T05:10:08Z",
+            "created": "2026-04-04T05:10:08Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Fundamental Change Forces",
+          "memo_path": "Files/ERIC/IG/02-CF",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "FEVR-GB": {
+      "Monitoring": {
+        "Q3": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-20T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": "34835e90-9b0b-81fa-8fea-d07080d69da3",
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "",
+          "memo_path": "Files/FEVR-GB/Monitoring/03-TM",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "GAW": {
+      "ESA": {
+        "Q8": {
+          "state": 4,
+          "state_label": "extracted",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-28T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Business Model & Sector Primer",
+          "memo_path": "Files/GAW/ESA/08-BMSectorPrimer",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q10": {
+          "state": 4,
+          "state_label": "extracted",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-28T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Short Seller Analysis",
+          "memo_path": "Files/GAW/ESA/10-ShortSellers",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q11": {
+          "state": 4,
+          "state_label": "extracted",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-28T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Value Chain Map",
+          "memo_path": "Files/GAW/ESA/11-ValueChainMap",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      },
+      "IG": {
+        "Q2": {
+          "state": 4,
+          "state_label": "extracted",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-28T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Change Forces",
+          "memo_path": "Files/GAW/IG/02-CF",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      },
+      "Triaging": {
+        "Q4": {
+          "state": 4,
+          "state_label": "extracted",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-28T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Earnings Trends",
+          "memo_path": "Files/GAW/Triaging/04-EarningsTrends",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q5": {
+          "state": 4,
+          "state_label": "extracted",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-28T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Earnings Delivery LTM",
+          "memo_path": "Files/GAW/Triaging/05-EarningsDelivery",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q7": {
+          "state": 4,
+          "state_label": "extracted",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-28T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "KD Assessment",
+          "memo_path": "Files/GAW/Triaging/07-KDAssessment",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "GET": {
+      "DD": {
+        "Q19": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-13T05:01:24Z",
+            "created": "2026-04-13T05:01:24Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Pre-mortem",
+          "memo_path": "Files/GET/DD/19-PreMortem",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      },
+      "ESA": {
+        "Q8": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-13T05:44:23Z",
+            "created": "2026-04-13T05:44:23Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Business Model & Sector Primer",
+          "memo_path": "Files/GET/ESA/08-BM",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q9": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-13T05:44:30Z",
+            "created": "2026-04-13T05:44:30Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Earnings History",
+          "memo_path": "Files/GET/ESA/09-Earnings",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q12": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-13T05:56:36Z",
+            "created": "2026-04-13T05:56:36Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Value Chain Analysis",
+          "memo_path": "Files/GET/ESA/12-VCAnalysis",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q13": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-13T05:44:30Z",
+            "created": "2026-04-13T05:44:30Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Guidance Tracking",
+          "memo_path": "Files/GET/ESA/13-Guidance",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      },
+      "IG": {
+        "Q1": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-12T17:21:21Z",
+            "created": "2026-04-12T17:21:21Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Business Description",
+          "memo_path": "Files/GET/IG/01-BD",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q2": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-12T17:57:42Z",
+            "created": "2026-04-12T17:57:42Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Fundamental Change Forces",
+          "memo_path": "Files/GET/IG/02-CF",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      },
+      "Triaging": {
+        "Q5": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-13T10:11:58Z",
+            "created": "2026-04-13T10:11:58Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Earnings Delivery",
+          "memo_path": "Files/GET/Triaging/05-ED",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "GLE-FR": {
+      "IG": {
+        "Q3": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-27T00:00:00Z",
+            "created": "2026-04-27T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": "34f35e90-9b0b-814b-bee9-f5e66fa23e09",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Technical Momentum",
+          "memo_path": "Files/GLE-FR/IG/03-TM",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "GYM": {
+      "IG": {
+        "Q1": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-12T17:21:21Z",
+            "created": "2026-04-12T17:21:21Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Business Description",
+          "memo_path": "Files/GYM/IG/01-BD",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q2": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-12T17:57:41Z",
+            "created": "2026-04-12T17:57:41Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Fundamental Change Forces",
+          "memo_path": "Files/GYM/IG/02-CF",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "HFG": {
+      "ESA": {
+        "Q13": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-08T09:38:08Z",
+            "created": "2026-04-08T09:38:08Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Guidance Tracking",
+          "memo_path": "Files/HFG/ESA/13-Guidance",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      },
+      "Triaging": {
+        "Q5": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-08T09:38:06Z",
+            "created": "2026-04-08T09:38:06Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Earnings Delivery",
+          "memo_path": "Files/HFG/Triaging/05-ED",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q6": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-08T10:01:20Z",
+            "created": "2026-04-08T10:01:20Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Sell-Side Commentary",
+          "memo_path": "Files/HFG/Triaging/06-SS",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "HMS": {
+      "IG": {
+        "Q1": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "unknown",
+          "timestamps": {
+            "5_published": "2026-04-05T08:23:17Z",
+            "created": "2026-04-05T08:23:17Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Business Description",
+          "memo_path": "Files/HMS/IG/01-BD",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q2": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "unknown",
+          "timestamps": {
+            "5_published": "2026-04-05T08:27:10Z",
+            "created": "2026-04-05T08:27:10Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Fundamental Change Forces",
+          "memo_path": "Files/HMS/IG/02-CF",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "HTRO": {
+      "ESA": {
+        "Q8": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-18T00:00:00Z",
+            "created": "2026-04-18T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "08-BM",
+          "memo_path": "Files/HTRO/ESA/08-BM",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q9": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-18T00:00:00Z",
+            "created": "2026-04-18T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "09-Earnings",
+          "memo_path": "Files/HTRO/ESA/09-Earnings",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q10": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-29T09:00:00+01:00",
+            "created": "2026-04-18T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": "35135e909b0b81fd8f45f29ae5dd3381",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "10-Short",
+          "memo_path": "Files/HTRO/ESA/10-Short",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q11": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-18T00:00:00Z",
+            "created": "2026-04-18T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "11-VCMap",
+          "memo_path": "Files/HTRO/ESA/11-VCMap",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q12": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-18T00:00:00Z",
+            "created": "2026-04-18T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "12-VCAnalysis",
+          "memo_path": "Files/HTRO/ESA/12-VCAnalysis",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q13": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-18T00:00:00Z",
+            "created": "2026-04-18T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "13-Guidance",
+          "memo_path": "Files/HTRO/ESA/13-Guidance",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q14": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-18T00:00:00Z",
+            "created": "2026-04-18T00:00:00Z"
+          },
+          "as_urls": [
+            "https://research.alpha-sense.com/gensearch/409385__1777442186370"
+          ],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "14-KD",
+          "memo_path": "Files/HTRO/ESA/14-KD",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      },
+      "IG": {
+        "Q1": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-18T00:00:00Z",
+            "created": "2026-04-18T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "01-BD",
+          "memo_path": "Files/HTRO/IG/01-BD",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q2": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-18T00:00:00Z",
+            "created": "2026-04-18T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "02-CF",
+          "memo_path": "Files/HTRO/IG/02-CF",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      },
+      "Triaging": {
+        "Q6": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-18T00:00:00Z",
+            "created": "2026-04-18T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "06-SS",
+          "memo_path": "Files/HTRO/Triaging/06-SS",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q7": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-18T00:00:00Z",
+            "created": "2026-04-18T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "07-KD",
+          "memo_path": "Files/HTRO/Triaging/07-KD",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "HTWS-GB": {
+      "ESA": {
+        "Q8": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-29T12:55:00+01:00",
+            "created": "2026-04-29T07:30:00+01:00"
+          },
+          "as_urls": [
+            "https://research.alpha-sense.com/gensearch/409385__1777442427025"
+          ],
+          "notion_page_id": "35135e909b0b8178ac1ef06622512f03",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "BM Sector Primer",
+          "memo_path": "Files/HTWS-GB/ESA/08-BM",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q9": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-29T12:55:00+01:00",
+            "created": "2026-04-29T07:30:00+01:00"
+          },
+          "as_urls": [
+            "https://research.alpha-sense.com/gensearch/409385__1777442628381"
+          ],
+          "notion_page_id": "35135e909b0b81039dcfdb1fc030da15",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Earnings History L3Y",
+          "memo_path": "Files/HTWS-GB/ESA/09-Earnings",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q10": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-29T12:55:00+01:00",
+            "created": "2026-04-29T07:30:00+01:00"
+          },
+          "as_urls": [
+            "https://research.alpha-sense.com/gensearch/409385__1777442820705"
+          ],
+          "notion_page_id": "35135e909b0b81dd9c89c4421c10b9ab",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Short Sellers Reports",
+          "memo_path": "Files/HTWS-GB/ESA/10-Short",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q11": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-29T09:30:00+01:00",
+            "created": "2026-04-29T07:30:00+01:00"
+          },
+          "as_urls": [],
+          "notion_page_id": "35135e909b0b8171871adf818546f7a6",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Value Chain Map",
+          "memo_path": "Files/HTWS-GB/ESA/11-VCMap",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q12": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-29T12:55:00+01:00",
+            "created": "2026-04-29T07:30:00+01:00"
+          },
+          "as_urls": [
+            "https://research.alpha-sense.com/gensearch/409385__1777443039307"
+          ],
+          "notion_page_id": "35135e909b0b814e9241c8d807a3b63c",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Value Chain Analysis",
+          "memo_path": "Files/HTWS-GB/ESA/12-VCAnalysis",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q13": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-29T12:55:00+01:00",
+            "created": "2026-04-29T07:30:00+01:00"
+          },
+          "as_urls": [
+            "https://research.alpha-sense.com/gensearch/409385__1777443264067"
+          ],
+          "notion_page_id": "35135e909b0b81589dcfdb1fc030da15",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Guidance Tracking",
+          "memo_path": "Files/HTWS-GB/ESA/13-Guidance",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q14": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-29T12:55:00+01:00",
+            "created": "2026-04-29T07:30:00+01:00"
+          },
+          "as_urls": [
+            "https://research.alpha-sense.com/gensearch/409385__1777443451669",
+            "https://research.alpha-sense.com/gensearch/409385__1777493243309"
+          ],
+          "notion_page_id": "35135e909b0b81338c44f114881e9d9c",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "KD Assessment ESA",
+          "memo_path": "Files/HTWS-GB/ESA/14-KD",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "IGG": {
+      "ESA": {
+        "Q8": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-16T07:26:17Z",
+            "created": "2026-04-16T07:26:17Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Business Model & Sector Primer",
+          "memo_path": "Files/IGG/ESA/08-BM",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q10": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-16T05:58:07Z",
+            "created": "2026-04-16T05:58:07Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Short Sellers Reports",
+          "memo_path": "Files/IGG/ESA/10-Short",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q12": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-16T07:26:17Z",
+            "created": "2026-04-16T07:26:17Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Value Chain Analysis",
+          "memo_path": "Files/IGG/ESA/12-VCAnalysis",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      },
+      "IG": {
+        "Q1": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-16T06:43:22Z",
+            "created": "2026-04-16T06:43:22Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Business Description",
+          "memo_path": "Files/IGG/IG/01-BD",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q2": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-16T07:26:17Z",
+            "created": "2026-04-16T07:26:17Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Fundamental Change Forces",
+          "memo_path": "Files/IGG/IG/02-CF",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      },
+      "Triaging": {
+        "Q4": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-16T06:43:22Z",
+            "created": "2026-04-16T06:43:22Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Earnings Trends",
+          "memo_path": "Files/IGG/Triaging/04-ET",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q5": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-16T06:43:22Z",
+            "created": "2026-04-16T06:43:22Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Earnings Delivery",
+          "memo_path": "Files/IGG/Triaging/05-ED",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q6": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-16T07:26:17Z",
+            "created": "2026-04-16T07:26:17Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Sell-Side Commentary",
+          "memo_path": "Files/IGG/Triaging/06-SS",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q7": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-16T07:26:24Z",
+            "created": "2026-04-16T07:26:24Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Key Drivers Assessment",
+          "memo_path": "Files/IGG/Triaging/07-KD",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "INSTAL": {
+      "ESA": {
+        "Q13": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-08T11:14:29Z",
+            "created": "2026-04-08T11:14:29Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Guidance Tracking",
+          "memo_path": "Files/INSTAL/ESA/13-Guidance",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      },
+      "IG": {
+        "Q2": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-16T04:57:38Z",
+            "created": "2026-04-16T04:57:38Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Fundamental Change Forces",
+          "memo_path": "Files/INSTAL/IG/02-CF",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      },
+      "Triaging": {
+        "Q5": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-08T11:14:29Z",
+            "created": "2026-04-08T11:14:29Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Earnings Delivery",
+          "memo_path": "Files/INSTAL/Triaging/05-ED",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q6": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-08T11:38:25Z",
+            "created": "2026-04-08T11:38:25Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Sell-Side Commentary",
+          "memo_path": "Files/INSTAL/Triaging/06-SS",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "INTERCARS": {
+      "IG": {
+        "Q1": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-09T19:29:21Z",
+            "created": "2026-04-09T19:29:21Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Business Description",
+          "memo_path": "Files/INTERCARS/IG/01-BD",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q2": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-09T19:18:16Z",
+            "created": "2026-04-09T19:18:16Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Fundamental Change Forces",
+          "memo_path": "Files/INTERCARS/IG/02-CF",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "INVEB": {
+      "IG": {
+        "Q1": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-04T07:04:38Z",
+            "created": "2026-04-04T07:04:38Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Business Description",
+          "memo_path": "Files/INVEB/IG/01-BD",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q2": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-04T07:17:25Z",
+            "created": "2026-04-04T07:17:25Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Fundamental Change Forces",
+          "memo_path": "Files/INVEB/IG/02-CF",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "JEN": {
+      "IG": {
+        "Q1": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-04T07:30:04Z",
+            "created": "2026-04-04T07:30:04Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Business Description",
+          "memo_path": "Files/JEN/IG/01-BD",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q2": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-04T07:39:19Z",
+            "created": "2026-04-04T07:39:19Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Fundamental Change Forces",
+          "memo_path": "Files/JEN/IG/02-CF",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "KIT": {
+      "IG": {
+        "Q1": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-04T04:16:08Z",
+            "created": "2026-04-04T04:16:08Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Business Description",
+          "memo_path": "Files/KIT/IG/01-BD",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q2": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-04T04:33:47Z",
+            "created": "2026-04-04T04:33:47Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Fundamental Change Forces",
+          "memo_path": "Files/KIT/IG/02-CF",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "LBTYA": {
+      "IG": {
+        "Q1": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-13T11:43:47Z",
+            "created": "2026-04-13T11:43:47Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Business Description",
+          "memo_path": "Files/LBTYA/IG/01-BD",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q2": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-13T11:43:47Z",
+            "created": "2026-04-13T11:43:47Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Fundamental Change Forces",
+          "memo_path": "Files/LBTYA/IG/02-CF",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "LOG": {
+      "IG": {
+        "Q1": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-15T05:50:23Z",
+            "created": "2026-04-15T05:50:23Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Business Description",
+          "memo_path": "Files/LOG/IG/01-BD",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "LRE": {
+      "IG": {
+        "Q2": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "unknown",
+          "timestamps": {
+            "5_published": "2026-04-15T06:53:37Z",
+            "created": "2026-04-15T06:53:37Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Fundamental Change Forces",
+          "memo_path": "Files/LRE/IG/02-CF",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "LSG": {
+      "IG": {
+        "Q1": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-15T05:41:31Z",
+            "created": "2026-04-15T05:41:31Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Business Description",
+          "memo_path": "Files/LSG/IG/01-BD",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q2": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-15T05:50:23Z",
+            "created": "2026-04-15T05:50:23Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Fundamental Change Forces",
+          "memo_path": "Files/LSG/IG/02-CF",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "NEX": {
+      "IG": {
+        "Q1": {
+          "state": 4,
+          "state_label": "extracted",
+          "version": 1,
+          "source": "unknown",
+          "timestamps": {},
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Business Description",
+          "memo_path": "Files/NEX/IG/01-BD",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q2": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-29T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": "35135e90-9b0b-81a0-8ff4-caa0c7fb4411",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "",
+          "memo_path": "Files/NEX/IG/02-CF",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      },
+      "Triaging": {
+        "Q4": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-29T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": "35135e90-9b0b-81e3-bfe1-d37bdc4a970f",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Earnings & Fundamental Trends",
+          "memo_path": "Files/NEX/Triaging/04-ET",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q5": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "unknown",
+          "timestamps": {
+            "5_published": "2026-04-29T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": "35135e90-9b0b-8180-a34a-cc49a2e04259",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Earnings Delivery (LTM)",
+          "memo_path": "Files/NEX/Triaging/05-ED",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q6": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-29T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": "35135e90-9b0b-81ac-ab78-f41ecffac8e1",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Sell-Side Analysis",
+          "memo_path": "Files/NEX/Triaging/06-SS",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q7": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-29T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": "35135e90-9b0b-8128-b1fb-c866969bf4c7",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Key Drivers Assessment",
+          "memo_path": "Files/NEX/Triaging/07-KD",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "NKT": {
+      "IG": {
+        "Q1": {
+          "state": 4,
+          "state_label": "extracted",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-25T18:30:00Z",
+            "created": "2026-04-25T18:30:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "",
+          "memo_path": "Files/NKT/IG/01-BD",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q2": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-29T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": "35135e90-9b0b-811e-8633-ca34646f22fe",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "",
+          "memo_path": "Files/NKT/IG/02-CF",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      },
+      "Triaging": {
+        "Q4": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-29T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": "35135e90-9b0b-81c5-9306-d9f26b11cc4a",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Earnings & Fundamental Trends \u2014 Peer Comparative Analysis",
+          "memo_path": "Files/NKT/Triaging/04-ET",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q5": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-29T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": "35135e90-9b0b-819b-badb-fb958fe39ddd",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Earnings & Fundamental Delivery (LTM)",
+          "memo_path": "Files/NKT/Triaging/05-ED",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q6": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-29T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": "35135e90-9b0b-81b6-ac9c-c4c248e715d1",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Sell-Side Analysis",
+          "memo_path": "Files/NKT/Triaging/06-SS",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q7": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-29T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": "35135e90-9b0b-8192-ba77-d2ec2043c9a9",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Key Drivers Assessment",
+          "memo_path": "Files/NKT/Triaging/07-KD",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "NOKIA": {
+      "IG": {
+        "Q1": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "unknown",
+          "timestamps": {
+            "5_published": "2026-04-04T09:33:28Z",
+            "created": "2026-04-04T09:33:28Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Business Description",
+          "memo_path": "Files/NOKIA/IG/01-BD",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q2": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "unknown",
+          "timestamps": {
+            "5_published": "2026-04-04T09:39:52Z",
+            "created": "2026-04-04T09:39:52Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Fundamental Change Forces",
+          "memo_path": "Files/NOKIA/IG/02-CF",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "NORDIC": {
+      "IG": {
+        "Q1": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "unknown",
+          "timestamps": {
+            "5_published": "2026-04-04T09:54:28Z",
+            "created": "2026-04-04T09:54:28Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Business Description",
+          "memo_path": "Files/NORDIC/IG/01-BD",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q2": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "unknown",
+          "timestamps": {
+            "5_published": "2026-04-05T07:42:01Z",
+            "created": "2026-04-05T07:42:01Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Fundamental Change Forces",
+          "memo_path": "Files/NORDIC/IG/02-CF",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "OEM": {
+      "IG": {
+        "Q1": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-14T09:03:53Z",
+            "created": "2026-04-14T09:03:53Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Business Description",
+          "memo_path": "Files/OEM/IG/01-BD",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q2": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-14T09:03:53Z",
+            "created": "2026-04-14T09:03:53Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Fundamental Change Forces",
+          "memo_path": "Files/OEM/IG/02-CF",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      },
+      "Triaging": {
+        "Q6": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-14T09:03:53Z",
+            "created": "2026-04-14T09:03:53Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Sell-Side Commentary",
+          "memo_path": "Files/OEM/Triaging/06-SS",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "PANDOX": {
+      "IG": {
+        "Q1": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-04T06:32:01Z",
+            "created": "2026-04-04T06:32:01Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Business Description",
+          "memo_path": "Files/PANDOX/IG/01-BD",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q2": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "unknown",
+          "timestamps": {
+            "5_published": "2026-04-05T08:35:27Z",
+            "created": "2026-04-05T08:35:27Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Fundamental Change Forces",
+          "memo_path": "Files/PANDOX/IG/02-CF",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "PFSE-DE": {
+      "IG": {
+        "Q1": {
+          "state": 4,
+          "state_label": "extracted",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-25T21:30:00Z",
+            "created": "2026-04-25T21:30:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "",
+          "memo_path": "Files/PFSE-DE/IG/01-BD",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q2": {
+          "state": 4,
+          "state_label": "extracted",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-25T09:36:27Z",
+            "created": "2026-04-25T09:36:27Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "",
+          "memo_path": "Files/PFSE-DE/IG/02-CF",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      },
+      "Triaging": {
+        "Q4": {
+          "state": 4,
+          "state_label": "extracted",
+          "version": 1,
+          "source": "C",
+          "timestamps": {},
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Earnings & Fundamental Trends",
+          "memo_path": "Files/PFSE-DE/Triaging/04-ET",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q5": {
+          "state": 4,
+          "state_label": "extracted",
+          "version": 1,
+          "source": "C",
+          "timestamps": {},
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Earnings Delivery LTM",
+          "memo_path": "Files/PFSE-DE/Triaging/05-ED",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q7": {
+          "state": 4,
+          "state_label": "extracted",
+          "version": 1,
+          "source": "C",
+          "timestamps": {},
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Key Drivers Assessment",
+          "memo_path": "Files/PFSE-DE/Triaging/07-KD",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "PRY": {
+      "ESA": {
+        "Q8": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-16T09:40:42Z",
+            "created": "2026-04-16T09:40:42Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Business Model & Sector Primer",
+          "memo_path": "Files/PRY/ESA/08-BM",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q9": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-16T09:40:42Z",
+            "created": "2026-04-16T09:40:42Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Earnings History",
+          "memo_path": "Files/PRY/ESA/09-Earnings",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q10": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-16T05:26:53Z",
+            "created": "2026-04-16T05:26:53Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Short Sellers Reports",
+          "memo_path": "Files/PRY/ESA/10-Short",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q11": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-16T05:29:45Z",
+            "created": "2026-04-16T05:29:45Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Value Chain Map",
+          "memo_path": "Files/PRY/ESA/11-VCMap",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q12": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "unknown",
+          "timestamps": {
+            "5_published": "2026-04-16T10:54:41Z",
+            "created": "2026-04-16T10:54:41Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Value Chain Analysis",
+          "memo_path": "Files/PRY/ESA/12-VCAnalysis",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      },
+      "IG": {
+        "Q1": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-25T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": "35135e90-9b0b-8177-bbcb-f4799686850d",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "",
+          "memo_path": "Files/PRY/IG/01-BD",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q2": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C+AS",
+          "timestamps": {
+            "5_published": "2026-04-29T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": "35135e90-9b0b-81ac-b275-d49574fe6c77",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "",
+          "memo_path": "Files/PRY/IG/02-CF",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      },
+      "Triaging": {
+        "Q4": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-29T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": "35135e90-9b0b-8103-a601-f6358a5e0eed",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Earnings & Fundamental Trends",
+          "memo_path": "Files/PRY/Triaging/04-ET",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q5": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-29T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": "35135e90-9b0b-81d9-8916-c3ffd1a9a716",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Earnings Delivery (LTM)",
+          "memo_path": "Files/PRY/Triaging/05-ED",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q6": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-29T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": "35135e90-9b0b-8107-a0b8-e6f53f442e43",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Sell-Side Analysis",
+          "memo_path": "Files/PRY/Triaging/06-SS",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q7": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-16T10:27:12Z",
+            "created": "2026-04-16T10:27:12Z"
+          },
+          "as_urls": [],
+          "notion_page_id": "35135e90-9b0b-8179-9978-e2ba532fe5c9",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Key Drivers Assessment",
+          "memo_path": "Files/PRY/Triaging/07-KD",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "ROKO": {
+      "IG": {
+        "Q1": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-14T08:35:56Z",
+            "created": "2026-04-14T08:35:56Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Business Description",
+          "memo_path": "Files/ROKO/IG/01-BD",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q2": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-14T09:03:53Z",
+            "created": "2026-04-14T09:03:53Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Fundamental Change Forces",
+          "memo_path": "Files/ROKO/IG/02-CF",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      },
+      "Triaging": {
+        "Q6": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-14T09:03:53Z",
+            "created": "2026-04-14T09:03:53Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Sell-Side Commentary",
+          "memo_path": "Files/ROKO/Triaging/06-SS",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "SPX": {
+      "IG": {
+        "Q2": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-27T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": "34f35e90-9b0b-81aa-b80a-c71b1e605498",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Change Forces",
+          "memo_path": "Files/SPX/IG/02-CF",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q3": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-27T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": "34f35e90-9b0b-81bf-b3da-d0e58d2cdc29",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Technical Momentum",
+          "memo_path": "Files/SPX/IG/03-TM",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      },
+      "Triaging": {
+        "Q4": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-27T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": "34f35e90-9b0b-81b4-a3ae-e7d8ad927014",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Earnings Trends",
+          "memo_path": "Files/SPX/Triaging/04-EarningsTrends",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q5": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-27T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": "34f35e90-9b0b-8170-ae17-fb3b4dd3560e",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Earnings Delivery",
+          "memo_path": "Files/SPX/Triaging/05-EarningsDelivery",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q7": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-27T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": "34f35e90-9b0b-8125-b6e0-d317638d0e41",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "KD Assessment",
+          "memo_path": "Files/SPX/Triaging/07-KDAssessment",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "TEST": {
+      "Triaging": {
+        "Q6": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "unknown",
+          "timestamps": {
+            "5_published": "2026-04-08T12:36:10Z",
+            "created": "2026-04-08T12:36:10Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Sell-Side Commentary",
+          "memo_path": "Files/TEST/Triaging/06-SS",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "THEON-NL": {
+      "Monitoring": {
+        "Q3": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-20T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": "34835e90-9b0b-8181-a6c6-ecd5db3a5645",
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "",
+          "memo_path": "Files/THEON-NL/Monitoring/03-TM",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "VOD-GB": {
+      "IG": {
+        "Q1": {
+          "state": 3,
+          "state_label": "submitted",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-29T00:00:00Z",
+            "created": "2026-04-29T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Business Description",
+          "memo_path": "Files/VOD-GB/IG/01-BD",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q2": {
+          "state": 3,
+          "state_label": "submitted",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-29T00:00:00Z",
+            "created": "2026-04-29T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Change Forces",
+          "memo_path": "Files/VOD-GB/IG/02-CF",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q3": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-29T01:40:00+01:00",
+            "created": "2026-04-29T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": "35135e909b0b813b9001d7dee9919002",
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Technical & Market Context",
+          "memo_path": "Files/VOD-GB/IG/03-TM",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      },
+      "Triaging": {
+        "Q4": {
+          "state": 3,
+          "state_label": "submitted",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-29T00:00:00Z",
+            "created": "2026-04-29T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Earnings & Fundamental Trends",
+          "memo_path": "Files/VOD-GB/Triaging/04-EarningsTrends",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q5": {
+          "state": 3,
+          "state_label": "submitted",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-29T00:00:00Z",
+            "created": "2026-04-29T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Earnings Delivery LTM",
+          "memo_path": "Files/VOD-GB/Triaging/05-EarningsDelivery",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q6": {
+          "state": 3,
+          "state_label": "submitted",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-29T00:00:00Z",
+            "created": "2026-04-29T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Sell-Side Commentary",
+          "memo_path": "Files/VOD-GB/Triaging/06-SS",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q7": {
+          "state": 3,
+          "state_label": "submitted",
+          "version": 1,
+          "source": "C",
+          "timestamps": {
+            "5_published": "2026-04-29T00:00:00Z",
+            "created": "2026-04-29T00:00:00Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": false,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Key Drivers Assessment",
+          "memo_path": "Files/VOD-GB/Triaging/07-KD",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    },
+    "YSN": {
+      "IG": {
+        "Q1": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-04T05:27:13Z",
+            "created": "2026-04-04T05:27:13Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Business Description",
+          "memo_path": "Files/YSN/IG/01-BD",
+          "schema_source": "metadata.json (auto-derived state)"
+        },
+        "Q2": {
+          "state": 5,
+          "state_label": "published",
+          "version": 1,
+          "source": "AS",
+          "timestamps": {
+            "5_published": "2026-04-04T05:40:38Z",
+            "created": "2026-04-04T05:40:38Z"
+          },
+          "as_urls": [],
+          "notion_page_id": null,
+          "notion_posted": true,
+          "stuck": false,
+          "stuck_hours": null,
+          "stuck_state": null,
+          "query_name": "Fundamental Change Forces",
+          "memo_path": "Files/YSN/IG/02-CF",
+          "schema_source": "metadata.json (auto-derived state)"
+        }
+      }
+    }
+  },
+  "_meta": {
+    "total_entries": 213,
+    "by_state": {
+      "1": 0,
+      "2": 0,
+      "3": 6,
+      "4": 22,
+      "5": 185,
+      "cancelled": 0
+    },
+    "by_stage": {
+      "IG": 84,
+      "Triaging": 63,
+      "Monitoring": 6,
+      "ESA": 53,
+      "DD": 6,
+      "AdHoc": 1
+    },
+    "files_processed": 215,
+    "files_skipped": 2,
+    "stuck_count": 0
+  }
+}
