@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COTN-CH Triaging - COMET Holding AG - Memo</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Aptos', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background:#fafaf8; color:#1a1a1a; }
+
+.app-shell { display:flex; flex-direction:row; align-items:stretch; height:100vh; }
+
+.nav-pane { flex:0 0 25%; max-width:25%; min-width:240px; background:#f5f4ee; border-right:1px solid #d8d4c0; display:flex; flex-direction:column; height:100vh; }
+.nav-header { display:flex; align-items:center; justify-content:space-between; padding:10px 12px; background:#3C3489; color:#fff; flex:0 0 auto; }
+.nav-title { font-size:11pt; font-weight:700; letter-spacing:0.3px; }
+.nav-toggle-btn { background:rgba(255,255,255,0.15); color:#fff; border:1px solid rgba(255,255,255,0.3); border-radius:4px; padding:3px 8px; font-size:9pt; cursor:pointer; font-family:inherit; }
+.nav-toggle-btn:hover { background:rgba(255,255,255,0.25); }
+.nav-tree { flex:1 1 auto; overflow-y:auto; padding:8px 6px 24px 6px; font-size:9.5pt; }
+
+.nav-item { padding:2px 4px 2px 4px; cursor:pointer; line-height:1.4; user-select:none; border-radius:3px; transition:background 0.15s; display:block; }
+.nav-item:hover { background:#ece9d4; }
+.nav-item.focused { background:#e6e0ff; font-weight:700; }
+.nav-pillar { font-size:10pt; font-weight:700; color:#3C3489; padding:6px 4px 4px 4px; margin-top:6px; text-transform:uppercase; letter-spacing:0.3px; }
+.nav-pillar:first-child { margin-top:0; }
+.nav-group { margin-left:6px; padding-left:8px; border-left:2px solid #b9b292; font-weight:600; color:#085041; font-size:9.5pt; }
+.nav-element { margin-left:14px; padding-left:8px; border-left:1px solid #b9b292; color:#633806; font-size:9pt; }
+.nav-ra { margin-left:24px; padding-left:8px; border-left:1px dashed #b9b292; color:#0C447C; font-size:8.5pt; display:none; cursor:pointer; }
+.nav-element.expanded + .nav-ra-list { display:block; }
+.nav-ra-list { display:none; }
+.nav-ra-list.expanded { display:block; }
+.nav-ra-list.expanded .nav-ra { display:block; }
+
+.nav-cq-list { display:none; }
+.nav-ra.expanded + .nav-cq-list { display:block; }
+.nav-cq { margin-left:36px; padding-left:6px; border-left:1px dotted #c9c1a3; color:#5a5526; font-size:8pt; line-height:1.4; padding:1px 6px; cursor:pointer; }
+body.show-pills .nav-cq::before { content:'CQ'; display:inline-block; background:#F1EFE8; color:#555; font-size:6.5pt; font-weight:700; padding:1px 3px; border-radius:3px; margin-right:4px; }
+
+body.show-pills .nav-pillar::before { content:'P'; display:inline-block; background:#EEEDFE; color:#3C3489; font-size:7pt; font-weight:700; padding:1px 4px; border-radius:3px; margin-right:4px; }
+body.show-pills .nav-group::before { content:'G'; display:inline-block; background:#E1F5EE; color:#085041; font-size:7pt; font-weight:700; padding:1px 4px; border-radius:3px; margin-right:4px; }
+body.show-pills .nav-element::before { content:'E'; display:inline-block; background:#FAEEDA; color:#633806; font-size:7pt; font-weight:700; padding:1px 4px; border-radius:3px; margin-right:4px; }
+body.show-pills .nav-ra::before { content:'RA'; display:inline-block; background:#E6F1FB; color:#0C447C; font-size:7pt; font-weight:700; padding:1px 4px; border-radius:3px; margin-right:4px; }
+
+.main-pane { flex:1 1 auto; height:100vh; overflow-y:auto; padding:0 22px 48px 22px; }
+
+.main-header { position:sticky; top:0; z-index:4; background:#fafaf8; padding:18px 0 14px 0; border-bottom:1px solid #e0ddca; margin-bottom:0; }
+.page-title { font-size:14pt; font-weight:700; margin-bottom:2px; }
+.page-subtitle { font-size:10pt; color:#888; margin-bottom:0; }
+.controls { display:flex; gap:6px; margin-bottom:14px; align-items:center; flex-wrap:wrap; }
+.controls .btn { padding:3px 9px; font-size:9.5pt; border:1px solid #d4d2bb; border-radius:4px; background:#fff; cursor:pointer; font-family:inherit; }
+.controls .btn:hover { background:#f5f5f5; }
+.controls .btn.active { background:#e6f1fb; color:#185fa5; border-color:#85b7eb; }
+
+table.memo { border-collapse:collapse; width:100%; font-size:10pt; table-layout:fixed; }
+table.memo thead th { font-family:'Aptos', sans-serif; font-size:11pt; font-weight:700; background:#FDFCF1; padding:8px 10px; text-align:left; border-bottom:2px solid #d4d2bb; position:sticky; top:var(--main-header-h, 70px); z-index:2; }
+table.memo tbody td { padding:6px 10px; vertical-align:top; }
+
+table.memo th.col-ra,    table.memo td.col-ra    { width:15%; }
+table.memo th.col-cq,    table.memo td.col-cq    { width:15%; text-align:right; }
+table.memo th.col-rate,  table.memo td.col-rate  { width:6%;  text-align:center; }
+table.memo th.col-aj,    table.memo td.col-aj    { width:64%; }
+
+td.col-ra { position:relative; padding-left:24px !important; }
+td.col-ra::before { content:''; position:absolute; left:8px; top:0; bottom:0; width:1.5px; background:#c9c1a3; }
+td.col-ra::after { content:''; position:absolute; left:8px; top:18px; width:8px; height:1.5px; background:#c9c1a3; }
+tr.cq-row.cq-row-last td.col-ra::before { bottom:auto; height:18px; }
+
+tr.element-banner td { position:sticky; top:calc(var(--main-header-h, 70px) + 30px); z-index:1; }
+
+td.col-ra { font-style:italic; font-weight:500; color:#444; }
+td.col-cq { font-weight:700; }
+td.col-aj { font-size:10pt; line-height:1.55; }
+
+p.bullet-anchor { font-weight:600; margin:0 0 6px 0; padding:0; }
+p.bullet-sub    { font-weight:400; margin:0 0 3px 18px; padding:0; color:#333; }
+p.bullet-anchor u, p.bullet-sub u { text-decoration-thickness:1.2px; text-underline-offset:2px; text-decoration-color:#333; }
+
+.iaja { display:inline-block; font-size:8.5pt; font-weight:700; padding:0 4px; border-radius:3px; margin-left:3px; line-height:1.3; vertical-align:baseline; }
+.iaja-j { background:#EEEDFE; color:#3C3489; }
+.iaja-a { background:#E6F1FB; color:#0C447C; }
+.iaja-i { background:#F1EFE8; color:#666; }
+
+.rating { display:inline-block; min-width:22px; padding:2px 8px; border-radius:3px; font-weight:600; font-size:10pt; text-align:center; }
+.rating.A { background:#9DD49B; color:#1a4d1a; }
+.rating.B { background:#BFD9F2; color:#0C447C; }
+.rating.C { background:#E7E3AB; color:#5a5526; }
+.rating.D { background:#FFCC66; color:#7a4f00; }
+.rating.F { background:#FF7C80; color:#660000; }
+.rating.NR { background:#e0e0e0; color:#666; }
+
+tr.zebra-a td { background:#FAF8D2; }
+tr.zebra-b td { background:#FDFCF1; }
+
+tr.pillar-banner td { background:#3C3489; color:#fff; font-size:13pt; font-weight:700; padding:10px 12px; letter-spacing:0.3px; }
+tr.group-banner td  { background:#085041; color:#fff; font-size:11.5pt; font-weight:700; padding:7px 12px; }
+tr.element-banner td { background:#FAEEDA; color:#633806; font-size:11pt; font-weight:700; padding:6px 12px; }
+
+td.col-ra { vertical-align:top; padding-top:8px; }
+
+.ra-metrics { font-size:7.5pt; color:#777; margin-top:6px; line-height:1.5; font-style:normal; font-weight:400; }
+.ra-metrics .metric-band { padding:1px 5px; border-radius:3px; margin-right:6px; }
+.ra-metrics .metric-band.metric-pass { background:#d4edda; color:#155724; }
+.ra-metrics .metric-band.metric-warn { background:#fff3cd; color:#856404; }
+.ra-metrics .metric-weight { padding:1px 5px; border-radius:3px; margin-right:6px; background:#eee; }
+.ra-metrics .metric-line { display:block; margin-top:2px; color:#666; }
+.ra-metrics .check { font-weight:700; margin:0 2px; }
+.ra-metrics .check.pass { color:#28a745; }
+.ra-metrics .check.fail { color:#dc3545; }
+
+.weight-double { display:inline-block; background:#3C3489; color:#fff; font-size:7.5pt; font-weight:700; padding:1px 5px; border-radius:3px; }
+.weight-half { display:inline-block; background:#aaa; color:#fff; font-size:7.5pt; font-weight:700; padding:1px 5px; border-radius:3px; }
+.weight-normal { display:inline-block; background:#bbb; color:#fff; font-size:7.5pt; font-weight:600; padding:1px 5px; border-radius:3px; }
+
+tr.elem-summary-row td { background:#FAEEDA; border-bottom:1px solid #e8d5a8; padding:4px 12px 10px 12px; border-top:none; }
+.elem-summary-bullet { margin:0 0 4px 0; font-style:italic; font-weight:600; color:#5a3a08; }
+.elem-summary-bullet .elem-summary-ra-ref { display:inline-block; background:#E6F1FB; color:#0C447C; font-size:8.5pt; font-style:normal; font-weight:700; padding:1px 5px; border-radius:3px; margin-right:4px; }
+.elem-summary-bullet .elem-summary-text { font-style:italic; font-weight:600; }
+tr.element-banner + tr.elem-summary-row td { padding-top:2px; }
+tr.element-banner td { border-bottom:none; }
+
+tr.ra-summary-row td { background:#f0f7eb; padding:8px 12px; border-bottom:1px solid #ece9d4; text-align:left; }
+.ra-summary-label { font-size:8.5pt; font-weight:700; color:#155724; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.3px; }
+.ra-summary-bullet { margin:0 0 3px 0; font-style:italic; color:#155724; line-height:1.5; text-align:left; font-weight:400; }
+.ra-summary-bullet.bold { font-weight:700; }
+
+tr.cq-row td { border:none; }
+tr.cq-row.cq-row-last td { border-bottom:1px solid #ece9d4; padding-bottom:14px; }
+
+.main-pill { display:inline-block; font-size:7.5pt; font-weight:700; padding:1px 5px; border-radius:3px; margin-right:5px; vertical-align:baseline; }
+.main-pill-p  { background:#EEEDFE; color:#3C3489; }
+.main-pill-g  { background:#E1F5EE; color:#085041; }
+.main-pill-e  { background:#FAEEDA; color:#633806; }
+.main-pill-ra { background:#E6F1FB; color:#0C447C; }
+.main-pill-cq { background:#F1EFE8; color:#555; }
+
+.nav-rating-pill { display:inline-block; font-size:7.5pt; font-weight:700; padding:1px 5px; border-radius:3px; margin-left:5px; vertical-align:baseline; min-width:14px; text-align:center; }
+.nav-rating-pill.A { background:#9DD49B; color:#1a4d1a; }
+.nav-rating-pill.B { background:#BFD9F2; color:#0C447C; }
+.nav-rating-pill.C { background:#E7E3AB; color:#5a5526; }
+.nav-rating-pill.D { background:#FFCC66; color:#7a4f00; }
+.nav-rating-pill.F { background:#FF7C80; color:#660000; }
+.nav-rating-pill.NR { background:#e0e0e0; color:#666; }
+body:not(.show-pills) .nav-rating-pill { display:none; }
+
+.elem-summary-bullet.elem-summary-general { padding-left:0; font-style:italic; font-weight:600; color:#5a3a08; }
+
+.bullet-anchor-spacer { height:6px; margin:0; padding:0; }
+
+.rating.ra-rating-chip { font-size:8.5pt; padding:1px 6px; min-width:18px; vertical-align:baseline; }
+
+tr.group-summary-row td { background:#E8F5EE; padding:10px 12px; border-bottom:1px solid #c8d8d0; }
+tr.group-banner + tr.group-summary-row td { border-top:none; padding-top:8px; }
+tr.group-banner td { border-bottom:none; }
+.group-summary-flex { display:flex; flex-direction:row; gap:14px; align-items:flex-start; }
+.group-summary-col { flex:1 1 0; min-width:0; padding:0 6px; border-left:1px dashed #b9d0c5; }
+.group-summary-col:first-child { border-left:none; padding-left:0; }
+.group-summary-general-col { flex:0 0 22%; max-width:22%; }
+.group-summary-col-header { font-size:8.5pt; font-weight:700; color:#085041; text-transform:uppercase; letter-spacing:0.3px; margin-bottom:4px; padding-bottom:2px; border-bottom:1px solid #b9d0c5; }
+.group-summary-bullet { margin:0 0 4px 0; font-style:italic; font-weight:600; color:#0a4a3a; font-size:9pt; line-height:1.4; }
+.group-summary-bullet.group-summary-general { font-weight:600; }
+.group-summary-bullet .group-summary-ra-ref { display:inline-block; background:#E6F1FB; color:#0C447C; font-size:7.5pt; font-style:normal; font-weight:700; padding:1px 4px; border-radius:3px; margin-right:3px; }
+
+tr.line-items-placeholder td { background:#fafaf8; padding:18px 12px; color:#666; font-size:10pt; border-bottom:1px solid #ece9d4; }
+
+@media print {
+  .nav-pane { display:none; }
+  .main-pane { padding:8mm; height:auto; overflow:visible; }
+  table.memo thead th { position:static; }
+  tr.element-banner td { position:static; }
+}
+
+.nav-header-controls { display:flex; flex-wrap:wrap; gap:4px; align-items:center; justify-content:flex-end; }
+.nav-header-controls .nav-toggle-btn { font-size:7.5pt; padding:1px 5px; background:rgba(255,255,255,0.08); color:rgba(255,255,255,0.65); border-color:rgba(255,255,255,0.18); transition:background 0.15s, color 0.15s; }
+.nav-header-controls .nav-toggle-btn:hover { background:rgba(255,255,255,0.18); color:#fff; }
+.nav-header-controls .nav-toggle-btn.active { background:#fff; color:#3C3489; border-color:#fff; font-weight:700; box-shadow:0 0 0 1px rgba(255,255,255,0.4); }
+.nav-toggle-spacer { display:inline-block; width:10px; flex:0 0 10px; }
+
+.nav-audit { display:none; margin-left:6px; font-size:7pt; line-height:1.3; vertical-align:baseline; }
+body.show-audit .nav-audit { display:inline; }
+.nav-audit-words { padding:0 4px; border-radius:3px; font-weight:700; }
+.nav-audit-words.nav-audit-pass { background:#d4edda; color:#155724; }
+.nav-audit-words.nav-audit-warn { background:#fff3cd; color:#856404; }
+.nav-audit-target { color:#888; margin:0 2px; }
+.nav-audit-weight { padding:0 4px; border-radius:3px; font-weight:700; text-transform:lowercase; }
+.nav-audit-weight-normal { background:#eee; color:#555; }
+.nav-audit-weight-double { background:#3C3489; color:#fff; }
+.nav-audit-weight-quadruple { background:#A2306E; color:#fff; }
+.nav-audit-weight-half { background:#aaa; color:#fff; }
+
+body.ras-always-on .nav-ra { display:block !important; }
+body.ras-always-on .nav-ra-list { display:block !important; }
+
+body.cqs-always-on .nav-cq-list { display:block !important; }
+body.cqs-always-on .nav-cq { display:block !important; }
+body.cqs-always-on .nav-ra { display:block !important; }
+body.cqs-always-on .nav-ra-list { display:block !important; }
+
+body.element-details .nav-ra.force-show,
+body.element-details .nav-cq.force-show { display:block !important; }
+body.element-details .nav-ra-list.force-show,
+body.element-details .nav-cq-list.force-show { display:block !important; }
+
+.rating.summary-rating-chip {
+  font-size: 7.5pt;
+  padding: 1px 5px;
+  min-width: 16px;
+  line-height: 1.3;
+  vertical-align: baseline;
+}
+
+tr.elem-summary-row td.elem-summary-empty-cq {
+  background: #FAEEDA;
+  border-bottom: 1px solid #e8d5a8;
+  border-top: none;
+  padding: 0;
+}
+tr.elem-summary-row td.elem-summary-body {
+  background: #FAEEDA;
+  border-bottom: 1px solid #e8d5a8;
+  border-top: none;
+  padding: 4px 12px 10px 12px;
+}
+
+.group-summary-spacer-col {
+  background: transparent;
+  border-left: none;
+}
+tr.group-summary-row-multi[data-row-index="1"] td {
+  border-top: none;
+  padding-top: 0;
+}
+tr.group-summary-row-multi[data-row-index="0"] td {
+  padding-bottom: 8px;
+  border-bottom: none;
+}
+</style>
+</head><body class="show-pills element-details">
+<div class="app-shell">
+<aside class="nav-pane">
+<div class="nav-header">
+<div class="nav-title">Memo navigation</div>
+<div class="nav-header-controls">
+<button class="nav-toggle-btn active" id="pill-toggle" title="Toggle rating chips in navigation pane">Ratings</button>
+<button class="nav-toggle-btn active" id="element-details-toggle" title="Show all RAs + CQs for the focused element">Element details</button>
+<span class="nav-toggle-spacer"></span>
+<button class="nav-toggle-btn" id="ras-on-toggle" title="Always show all RAs in the taxonomy">All RAs on</button>
+<button class="nav-toggle-btn" id="cqs-on-toggle" title="Always show all CQs in the taxonomy">All CQs on</button>
+<span class="nav-toggle-spacer"></span>
+<button class="nav-toggle-btn" id="audit-toggle" title="Show RA word count vs target + weight badge">Audit</button>
+</div>
+</div>
+<div class="nav-tree">
+<div class="nav-item nav-pillar" data-anchor="p-p1-technical-strength">P1: Technical Strength<span class="nav-rating-pill NR">NR</span></div>
+<div class="nav-item nav-group" data-anchor="g-minervini-dimensions-8-extension">Minervini dimensions (8 + extension)<span class="nav-rating-pill NR">NR</span></div>
+<div class="nav-item nav-element" data-anchor="e-minervini-dimensions-8-extension">Minervini dimensions (8 + extension)<span class="nav-rating-pill NR">NR</span></div>
+<div class="nav-ra-list">
+<div class="nav-item nav-ra" data-anchor="ra-minervini-dimensions-8-extension-in-minervini-dimensions-8-extension" data-element-id="e-minervini-dimensions-8-extension" data-has-cqs="0">Minervini dimensions (8 + extension)<span class="nav-rating-pill NR">NR</span><span class="nav-audit"><span class="nav-audit-words nav-audit-warn">3w</span><span class="nav-audit-target">/50-80</span><span class="nav-audit-weight nav-audit-weight-normal">normal</span></span></div>
+</div>
+<div class="nav-item nav-pillar" data-anchor="p-p2-fit-for-market-paradigm">P2: Fit for Market Paradigm<span class="nav-rating-pill NR">NR</span></div>
+<div class="nav-item nav-pillar" data-anchor="p-p3-fundamental-case-outputs-inputs-setups">P3: Fundamental Case (Outputs + Inputs + Setups)<span class="nav-rating-pill NR">NR</span></div>
+<div class="nav-item nav-group" data-anchor="g-ic-1-required-case-outputs">IC#1: Required Case OUTPUTS<span class="nav-rating-pill NR">NR</span></div>
+<div class="nav-item nav-group" data-anchor="g-ic-2-required-case-inputs">IC#2: Required Case INPUTS<span class="nav-rating-pill NR">NR</span></div>
+<div class="nav-item nav-group" data-anchor="g-ic-3-required-case-setups">IC#3: Required Case SETUPS<span class="nav-rating-pill NR">NR</span></div>
+<div class="nav-item nav-pillar" data-anchor="p-p4-building-blocks">P4: Building Blocks<span class="nav-rating-pill NR">NR</span></div>
+<div class="nav-item nav-group" data-anchor="g-bb-1-simplicity-guardrails">BB#1: Simplicity Guardrails<span class="nav-rating-pill NR">NR</span></div>
+<div class="nav-item nav-group" data-anchor="g-bb-2-foundation-quality-quadrupled">BB#2: Foundation Quality (QUADRUPLED)<span class="nav-rating-pill NR">NR</span></div>
+<div class="nav-item nav-group" data-anchor="g-bb-3-management-governance">BB#3: Management &amp; Governance<span class="nav-rating-pill NR">NR</span></div>
+<div class="nav-item nav-group" data-anchor="g-bb-4-strenuously-seek-to-avoid">BB#4: Strenuously Seek-to-Avoid<span class="nav-rating-pill NR">NR</span></div>
+<div class="nav-item nav-group" data-anchor="g-bb-5-small-size-constraints">BB#5: Small Size Constraints<span class="nav-rating-pill NR">NR</span></div>
+<div class="nav-item nav-group" data-anchor="g-bb-6-invalidating-constraints">BB#6: Invalidating Constraints<span class="nav-rating-pill NR">NR</span></div>
+<div class="nav-item nav-group" data-anchor="g-bb-7-past-trend-momentum">BB#7: Past Trend / Momentum<span class="nav-rating-pill NR">NR</span></div>
+<div class="nav-item nav-group" data-anchor="g-bb-8-nice-to-have-attributes">BB#8: Nice-to-Have Attributes<span class="nav-rating-pill NR">NR</span></div>
+<div class="nav-item nav-pillar" data-anchor="p-p5-sell-side-momentum">P5: Sell-Side Momentum<span class="nav-rating-pill NR">NR</span></div>
+<div class="nav-item nav-pillar" data-anchor="p-p6-valuation">P6: Valuation<span class="nav-rating-pill NR">NR</span></div>
+</div>
+</aside>
+<main class="main-pane">
+<div class="main-header">
+<div class="page-title">COTN-CH &nbsp;|&nbsp; Triaging &nbsp;|&nbsp; COMET Holding AG</div>
+<div class="page-subtitle">2026-05-02 &middot; 6 pillars rated. P1 B (technical), P2 C (paradigm mixed), P3 C (case forming), P4 C (BB#5 D structural sizing constraint), P5 C (coverage gap), P6 C (R/R asymmetric down). Distribution: 0A / 1B (P1) / 4C / 0D / 0F at pillar level; 1B / 6C / 1D at family level (BB#5 D).</div>
+</div>
+<table class="memo"><thead><tr>
+<th class="col-ra">Required attribute</th>
+<th class="col-cq">Core question</th>
+<th class="col-rate">R</th>
+<th class="col-aj">Analysis and judgement</th>
+</tr></thead>
+<tbody>
+<tr class="pillar-banner" id="p-p1-technical-strength"><td colspan="4"><span class="main-pill main-pill-p">P</span>P1: Technical Strength</td></tr>
+<tr class="group-banner" id="g-minervini-dimensions-8-extension"><td colspan="4"><span class="main-pill main-pill-g">G</span>Minervini dimensions (8 + extension)</td></tr>
+<tr class="element-banner" id="e-minervini-dimensions-8-extension"><td colspan="4"><span class="main-pill main-pill-e">E</span>Minervini dimensions (8 + extension)</td></tr>
+<tr class="cq-row zebra-a cq-row-last" id="ra-minervini-dimensions-8-extension-in-minervini-dimensions-8-extension">
+<td class="col-ra" rowspan="1"><span id="cq-ra-minervini-dimensions-8-extension-in-minervini-dimensions-8-extension-1"></span><span class="main-pill main-pill-ra">RA</span>Minervini dimensions (8 + extension) <span class="rating ra-rating-chip NR">NR</span><div class="ra-metrics"><span class="metric-band metric-warn">3w / target 50-80w</span><span class="metric-weight"><span class='weight-normal'>normal</span></span><span class="metric-line">word limit <span class='check pass'>&#10003;</span></span><span class="metric-line">BP # <span class='check pass'>&#10003;</span></span><span class="metric-line">highlighting density <span class='check fail'>&#10007;1</span></span></div></td>
+<td class="col-cq"><span class="main-pill main-pill-cq">CQ</span>TBD?</td>
+<td class="col-rate"><span class="rating NR">NR</span></td>
+<td class="col-aj"><p class="bullet-anchor">- <span style="color:#aaa;">no content</span> <span class="iaja iaja-i">[I]</span></p></td>
+</tr>
+<tr class="pillar-banner" id="p-p2-fit-for-market-paradigm"><td colspan="4"><span class="main-pill main-pill-p">P</span>P2: Fit for Market Paradigm</td></tr>
+<tr class="pillar-banner" id="p-p3-fundamental-case-outputs-inputs-setups"><td colspan="4"><span class="main-pill main-pill-p">P</span>P3: Fundamental Case (Outputs + Inputs + Setups)</td></tr>
+<tr class="group-banner" id="g-ic-1-required-case-outputs"><td colspan="4"><span class="main-pill main-pill-g">G</span>IC#1: Required Case OUTPUTS</td></tr>
+<tr class="group-banner" id="g-ic-2-required-case-inputs"><td colspan="4"><span class="main-pill main-pill-g">G</span>IC#2: Required Case INPUTS</td></tr>
+<tr class="group-banner" id="g-ic-3-required-case-setups"><td colspan="4"><span class="main-pill main-pill-g">G</span>IC#3: Required Case SETUPS</td></tr>
+<tr class="pillar-banner" id="p-p4-building-blocks"><td colspan="4"><span class="main-pill main-pill-p">P</span>P4: Building Blocks</td></tr>
+<tr class="group-banner" id="g-bb-1-simplicity-guardrails"><td colspan="4"><span class="main-pill main-pill-g">G</span>BB#1: Simplicity Guardrails</td></tr>
+<tr class="group-banner" id="g-bb-2-foundation-quality-quadrupled"><td colspan="4"><span class="main-pill main-pill-g">G</span>BB#2: Foundation Quality (QUADRUPLED)</td></tr>
+<tr class="group-banner" id="g-bb-3-management-governance"><td colspan="4"><span class="main-pill main-pill-g">G</span>BB#3: Management &amp; Governance</td></tr>
+<tr class="group-banner" id="g-bb-4-strenuously-seek-to-avoid"><td colspan="4"><span class="main-pill main-pill-g">G</span>BB#4: Strenuously Seek-to-Avoid</td></tr>
+<tr class="group-banner" id="g-bb-5-small-size-constraints"><td colspan="4"><span class="main-pill main-pill-g">G</span>BB#5: Small Size Constraints</td></tr>
+<tr class="group-banner" id="g-bb-6-invalidating-constraints"><td colspan="4"><span class="main-pill main-pill-g">G</span>BB#6: Invalidating Constraints</td></tr>
+<tr class="group-banner" id="g-bb-7-past-trend-momentum"><td colspan="4"><span class="main-pill main-pill-g">G</span>BB#7: Past Trend / Momentum</td></tr>
+<tr class="group-banner" id="g-bb-8-nice-to-have-attributes"><td colspan="4"><span class="main-pill main-pill-g">G</span>BB#8: Nice-to-Have Attributes</td></tr>
+<tr class="pillar-banner" id="p-p5-sell-side-momentum"><td colspan="4"><span class="main-pill main-pill-p">P</span>P5: Sell-Side Momentum</td></tr>
+<tr class="pillar-banner" id="p-p6-valuation"><td colspan="4"><span class="main-pill main-pill-p">P</span>P6: Valuation</td></tr>
+</tbody></table>
+</main>
+</div>
+<script>
+(function() {
+  function getStickyStackHeight() {
+    var mh = document.querySelector('.main-header');
+    var th = document.querySelector('table.memo thead');
+    var hMain = mh ? mh.getBoundingClientRect().height : 0;
+    var hThead = th ? th.getBoundingClientRect().height : 0;
+    return hMain + hThead;
+  }
+
+  function setMainHeaderCssVar() {
+    var mh = document.querySelector('.main-header');
+    if (!mh) return;
+    var h = Math.ceil(mh.getBoundingClientRect().height);
+    document.documentElement.style.setProperty('--main-header-h', h + 'px');
+  }
+
+  function setupV14Toggles() {
+    var body = document.body;
+    function bindToggle(id, bodyClass) {
+      var btn = document.getElementById(id);
+      if (!btn) return;
+      btn.addEventListener('click', function() {
+        body.classList.toggle(bodyClass);
+        btn.classList.toggle('active');
+        if (bodyClass === 'element-details') applyElementDetails();
+      });
+    }
+    bindToggle('audit-toggle', 'show-audit');
+    bindToggle('ras-on-toggle', 'ras-always-on');
+    bindToggle('cqs-on-toggle', 'cqs-always-on');
+    bindToggle('element-details-toggle', 'element-details');
+  }
+
+  function applyElementDetails() {
+    document.querySelectorAll('.force-show').forEach(function(n) { n.classList.remove('force-show'); });
+    if (!document.body.classList.contains('element-details')) return;
+    var focused = document.querySelector('.nav-item.focused');
+    if (!focused) return;
+    var elemId = focused.getAttribute('data-element-id');
+    if (!elemId) {
+      if (focused.classList.contains('nav-element')) {
+        elemId = focused.getAttribute('data-anchor');
+      } else {
+        return;
+      }
+    }
+    var navElem = document.querySelector('.nav-element[data-anchor="' + elemId + '"]');
+    if (!navElem) return;
+    var raList = navElem.nextElementSibling;
+    if (raList && raList.classList.contains('nav-ra-list')) {
+      raList.classList.add('force-show');
+      raList.querySelectorAll('.nav-ra').forEach(function(ra) { ra.classList.add('force-show'); });
+      raList.querySelectorAll('.nav-cq-list').forEach(function(cqList) { cqList.classList.add('force-show'); });
+      raList.querySelectorAll('.nav-cq').forEach(function(cq) { cq.classList.add('force-show'); });
+    }
+  }
+
+  function setupNavClicks() {
+    var items = document.querySelectorAll('.nav-item');
+    items.forEach(function(item) {
+      item.addEventListener('click', function(e) {
+        if (item.classList.contains('nav-ra')) {
+          item.classList.toggle('expanded');
+        }
+        var anchor = item.getAttribute('data-anchor');
+        if (!anchor) return;
+        var target = document.getElementById(anchor);
+        if (!target) return;
+        var mainPane = document.querySelector('.main-pane');
+        var rect = target.getBoundingClientRect();
+        var containerRect = mainPane.getBoundingClientRect();
+        var stickyH = getStickyStackHeight();
+        var offset = rect.top - containerRect.top + mainPane.scrollTop - stickyH - 8;
+        mainPane.scrollTo({ top: offset, behavior: 'smooth' });
+      });
+    });
+  }
+
+  function setupFocus() {
+    var mainPane = document.querySelector('.main-pane');
+    if (!mainPane) return;
+
+    function gatherAnchors() {
+      var nodes = document.querySelectorAll(
+        'tr.pillar-banner[id], tr.group-banner[id], tr.element-banner[id], ' +
+        'tr.ra-summary-row[id], tr.cq-row[id^="ra-"]'
+      );
+      var anchors = [];
+      nodes.forEach(function(n) { anchors.push(n); });
+      return anchors;
+    }
+
+    var anchors = gatherAnchors();
+
+    function updateFocus() {
+      var stickyH = getStickyStackHeight();
+      var paneRect = mainPane.getBoundingClientRect();
+      var triggerY = paneRect.top + stickyH + 10;
+      var picked = null;
+      for (var i = 0; i < anchors.length; i++) {
+        var rect = anchors[i].getBoundingClientRect();
+        if (rect.top <= triggerY) {
+          picked = anchors[i];
+        } else {
+          break;
+        }
+      }
+      if (!picked) return;
+      var anchor = picked.id;
+
+      document.querySelectorAll('.nav-item.focused').forEach(function(n) { n.classList.remove('focused'); });
+
+      var navItem = document.querySelector('.nav-item[data-anchor="' + anchor + '"]');
+      if (navItem) navItem.classList.add('focused');
+
+      document.querySelectorAll('.nav-ra-list.expanded').forEach(function(n) { n.classList.remove('expanded'); });
+      var focusedRa = (navItem && navItem.classList.contains('nav-ra')) ? navItem : null;
+      document.querySelectorAll('.nav-ra.expanded').forEach(function(n) {
+        if (n !== focusedRa) n.classList.remove('expanded');
+      });
+      if (navItem) {
+        if (navItem.classList.contains('nav-element')) {
+          var raList = navItem.nextElementSibling;
+          if (raList && raList.classList.contains('nav-ra-list')) raList.classList.add('expanded');
+        } else if (navItem.classList.contains('nav-ra')) {
+          var parent = navItem.parentElement;
+          if (parent && parent.classList.contains('nav-ra-list')) parent.classList.add('expanded');
+          navItem.classList.add('expanded');
+          navItem.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        } else if (navItem.classList.contains('nav-cq')) {
+          var cqList = navItem.parentElement;
+          if (cqList && cqList.classList.contains('nav-cq-list')) {
+            var prevRa = cqList.previousElementSibling;
+            if (prevRa && prevRa.classList.contains('nav-ra')) {
+              prevRa.classList.add('expanded');
+              var raListAncestor = prevRa.parentElement;
+              if (raListAncestor && raListAncestor.classList.contains('nav-ra-list')) {
+                raListAncestor.classList.add('expanded');
+              }
+            }
+          }
+          navItem.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        } else {
+          navItem.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        }
+      }
+      if (document.body.classList.contains('element-details')) {
+        applyElementDetails();
+      }
+    }
+
+    var rafQueued = false;
+    function onScroll() {
+      if (rafQueued) return;
+      rafQueued = true;
+      requestAnimationFrame(function() {
+        rafQueued = false;
+        updateFocus();
+      });
+    }
+
+    mainPane.addEventListener('scroll', onScroll, { passive: true });
+    setTimeout(updateFocus, 100);
+  }
+
+  function setupPillToggle() {
+    var btn = document.getElementById('pill-toggle');
+    if (!btn) return;
+    btn.addEventListener('click', function() {
+      document.body.classList.toggle('show-pills');
+      btn.classList.toggle('active');
+    });
+  }
+
+  function init() {
+    setMainHeaderCssVar();
+    setupNavClicks();
+    setupFocus();
+    setupPillToggle();
+    setupV14Toggles();
+    window.addEventListener('resize', setMainHeaderCssVar);
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
+</body></html>

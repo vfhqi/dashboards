@@ -1,4 +1,133 @@
-<!-- Generated 2026-05-01T14:16:56Z by render_memo_to_html.py v0.1 from notion-formatted.md -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[C+AS] EKTA — Earnings Trends</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: 'Aptos', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #fafaf8;
+  color: #1a1a1a;
+  line-height: 1.55;
+}
+.preview-shell { max-width: 1100px; margin: 0 auto; padding: 24px 28px; }
+
+.m-memo { background: #ffffff; border: 1px solid #d8d4c0; border-radius: 6px; padding: 0 0 24px 0; }
+
+.m-meta { background: #f5f4ee; border-bottom: 1px solid #d8d4c0; padding: 16px 24px; }
+.m-title-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 10px; }
+.m-page-title { font-size: 16pt; font-weight: 700; margin: 0; flex: 1; line-height: 1.3; color: #1a1a1a; }
+.m-tag-row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; font-size: 9pt; }
+.m-qc-pill { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 9pt; font-weight: 700; letter-spacing: 0.3px; white-space: nowrap; flex-shrink: 0; }
+.m-qc-pass         { background: #d4edda; color: #155724; }
+.m-qc-below_target { background: #fff3cd; color: #856404; }
+.m-qc-as_lite      { background: #FAEEDA; color: #633806; }
+.m-qc-failed       { background: #FF7C80; color: #660000; }
+.m-source-tag { background: #EEEDFE; color: #3C3489; padding: 2px 8px; border-radius: 4px; font-weight: 700; font-size: 8.5pt; }
+.m-stage { background: #FAEEDA; color: #633806; padding: 2px 8px; border-radius: 4px; font-weight: 700; font-size: 8.5pt; text-transform: uppercase; letter-spacing: 0.4px; }
+.m-date { color: #888; font-size: 9pt; }
+.m-notion-link { margin-left: auto; background: #3C3489; color: #fff; padding: 3px 9px; border-radius: 4px; text-decoration: none; font-size: 8.5pt; font-weight: 600; }
+.m-notion-link:hover { background: #2a2466; }
+.m-notion-link-missing { background: #ddd; color: #777; padding: 3px 9px; border-radius: 4px; font-size: 8.5pt; }
+
+.m-section { margin: 0; }
+.m-h1 { font-size: 14pt; font-weight: 700; margin: 24px 24px 12px 24px; line-height: 1.3; }
+.m-h2 { font-size: 13pt; font-weight: 700; background: #3C3489; color: #ffffff; padding: 10px 24px; margin: 0; letter-spacing: 0.3px; line-height: 1.3; }
+.m-h3 { font-size: 11.5pt; font-weight: 700; background: #085041; color: #ffffff; padding: 7px 24px; margin: 14px 0 0 0; }
+.m-h4 { font-size: 11pt; font-weight: 700; background: #FAEEDA; color: #633806; padding: 6px 24px; margin: 12px 0 0 0; }
+
+.m-p { margin: 8px 24px; font-size: 10pt; line-height: 1.55; }
+.m-bluf, .m-p.m-overall-rating {
+  font-style: italic; font-weight: 600; color: #5a3a08;
+  background: #FAEEDA; border-left: 4px solid #b8862a;
+  margin: 0; padding: 8px 16px 8px 18px; font-size: 10pt; line-height: 1.5;
+}
+
+.m-bullets { list-style: none; margin: 6px 24px 12px 24px; padding: 0; }
+.m-bullets .m-bullets { margin: 4px 0 4px 18px; }
+.m-bullets-num { list-style: decimal; margin: 6px 24px 12px 48px; padding: 0; }
+.m-li { font-size: 10pt; line-height: 1.55; margin-bottom: 5px; position: relative; }
+.m-li.m-anchor { font-weight: 600; padding-left: 16px; position: relative; }
+.m-li.m-anchor::before { content: "▸"; position: absolute; left: 0; top: 0; color: #999; font-weight: 400; }
+.m-li.m-sub { font-weight: 400; font-size: 9.5pt; color: #444; padding-left: 14px; margin-left: 4px; }
+.m-li.m-sub::before { content: "·"; position: absolute; left: 0; top: -2px; color: #999; font-weight: 400; font-size: 14pt; line-height: 1; }
+.m-li.m-iaja-j .m-iaja-pill { background:#EEEDFE; color:#3C3489; }
+.m-li.m-iaja-a .m-iaja-pill { background:#E6F1FB; color:#0C447C; }
+.m-li.m-iaja-i .m-iaja-pill { background:#F1EFE8; color:#666; }
+.m-li.m-iaja-t  .m-iaja-pill,
+.m-li.m-iaja-o  .m-iaja-pill,
+.m-li.m-iaja-kr .m-iaja-pill,
+.m-li.m-iaja-oq .m-iaja-pill { background:#E1F5EE; color:#085041; }
+
+.m-iaja-pill { display: inline-block; font-size: 7.5pt; font-weight: 700; padding: 1px 5px; border-radius: 3px; margin-left: 5px; vertical-align: baseline; letter-spacing: 0.3px; }
+.m-grade { display: inline-block; min-width: 18px; padding: 1px 6px; border-radius: 3px; font-weight: 700; font-size: 8.5pt; text-align: center; margin: 0 2px; vertical-align: baseline; }
+.m-grade-a { background: #9DD49B; color: #1a4d1a; }
+.m-grade-b { background: #BFD9F2; color: #0C447C; }
+.m-grade-c { background: #E7E3AB; color: #5a5526; }
+.m-grade-d { background: #FFCC66; color: #7a4f00; }
+.m-grade-f { background: #FF7C80; color: #660000; }
+.m-grade-mod-plus  { box-shadow: inset 0 0 0 2px #1a4d1a; }
+.m-grade-mod-minus { box-shadow: inset 0 0 0 1px #999; }
+
+.m-table { border-collapse: collapse; width: calc(100% - 48px); margin: 12px 24px; font-size: 9.5pt; table-layout: auto; }
+.m-table thead th { font-size: 10pt; font-weight: 700; background: #FDFCF1; padding: 7px 10px; text-align: left; border-bottom: 2px solid #d4d2bb; }
+.m-table tbody td { padding: 5px 10px; vertical-align: top; border-bottom: 1px solid #ece9d4; }
+.m-table tbody tr:nth-child(even) { background: #FDFCF1; }
+.m-table tbody tr:hover { background: #FAF8D2; }
+
+.m-hr { border: 0; border-top: 1px solid #e0ddca; margin: 14px 24px; }
+
+.m-hl-green  { background: #d4edda; color: #155724; padding: 0 3px; border-radius: 2px; }
+.m-hl-yellow { background: #fff3cd; color: #856404; padding: 0 3px; border-radius: 2px; }
+.m-hl-red    { background: #f8d7da; color: #721c24; padding: 0 3px; border-radius: 2px; }
+
+.m-attr-as { display: inline-block; background: #E6F1FB; color: #0C447C; font-size: 8.5pt; font-weight: 700; padding: 1px 5px; border-radius: 3px; margin: 0 1px; vertical-align: baseline; }
+.m-attr-c  { display: inline-block; background: #EEEDFE; color: #3C3489; font-size: 8.5pt; font-weight: 700; padding: 1px 5px; border-radius: 3px; margin: 0 1px; vertical-align: baseline; }
+.m-attr-company  { background:#FAEEDA; color:#633806; }
+.m-attr-expert   { background:#F1EFE8; color:#5a5526; }
+.m-attr-multiple { background:#E1F5EE; color:#085041; }
+.m-attr-legacy { }
+.m-legacy-highlight { background: #f4eedc; padding: 0 2px; border-radius: 2px; font-style: italic; color: #6b3a08; }
+
+.m-cp-x  { display: inline-block; font-weight: 700; font-size: 9pt; margin-right: 3px; color: #FF7C80; }
+.m-cp-xx { display: inline-block; font-weight: 700; font-size: 9pt; margin-right: 3px; color: #c83336; letter-spacing: -1px; }
+.m-cp-rare { display: inline-block; background: #FAEEDA; color: #633806; font-size: 8.5pt; font-weight: 700; padding: 1px 5px; border-radius: 3px; margin-right: 4px; }
+
+.m-prefix-j      { color: #3C3489; font-weight: 700; }
+.m-prefix-a      { color: #0C447C; font-weight: 700; }
+.m-prefix-action { color: #085041; font-weight: 700; }
+
+strong { font-weight: 700; }
+em     { font-style: italic; }
+u { text-decoration: underline; text-decoration-thickness: 1.2px; text-underline-offset: 2px; text-decoration-color: #1a1a1a; }
+del { text-decoration: line-through; color: #888; }
+
+.m-qc-audit { margin: 28px 24px 0 24px; padding: 14px 0 0 0; border-top: 2px solid #d4d2bb; font-size: 9pt; }
+.m-qc-h { margin: 0 0 8px 0; font-size: 9.5pt; text-transform: uppercase; letter-spacing: 0.5px; color: #555; font-weight: 700; }
+.m-qc-table { width: 100%; border-collapse: collapse; font-size: 9pt; }
+.m-qc-table th { text-align: left; width: 22%; padding: 4px 8px 4px 0; vertical-align: top; color: #555; font-weight: 700; font-size: 8.5pt; text-transform: uppercase; letter-spacing: 0.3px; }
+.m-qc-table td { padding: 4px 0; word-break: break-word; font-size: 9pt; }
+
+.memo-signpost { font-weight: 600; color: #1a1a1a; }
+
+@media (max-width: 760px) {
+  .preview-shell { padding: 12px; }
+  .m-meta { padding: 12px 16px; }
+  .m-bullets { margin: 6px 16px 10px 16px; }
+  .m-h2 { padding: 8px 16px; font-size: 12pt; }
+  .m-h3 { padding: 6px 16px; }
+  .m-h4 { padding: 5px 16px; }
+  .m-table { width: calc(100% - 32px); margin: 10px 16px; }
+  .m-hr { margin: 10px 16px; }
+  .m-qc-audit { margin: 20px 16px 0 16px; }
+}
+</style>
+</head>
+<body>
+<div class="preview-shell">
+<!-- Generated 2026-05-01T15:34:24Z by render_memo_to_html.py v0.3 from notion-formatted.md -->
 <article class="m-memo" data-ticker="EKTA" data-stage="triaging" data-query="4">
 <header class="m-meta">
   <div class="m-title-row">
@@ -39,3 +168,6 @@
   </table>
 </footer>
 </article>
+</div>
+</body>
+</html>
