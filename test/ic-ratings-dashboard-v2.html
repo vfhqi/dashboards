@@ -793,13 +793,14 @@
         body.show-key .dimension-explainer { display: block; }
 
         /* Pillar group headers — hidden by default, shown with KEY */
-        .pillar-group-header {
-            display: none;
+        .pillar-group-header { /* E1V21 — always visible (was tied to show-key) */
+            display: table-row;
         }
-
+        /* E1V21 — body.show-key no longer toggles this; rule kept for back-compat (no-op) */
         body.show-key .pillar-group-header {
             display: table-row;
         }
+        <!-- E1V21_CLEANUPS_20260508 -->
 
         .pillar-group-header th {
             background-color: #fbfaf5;
@@ -4559,7 +4560,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
             </div>
             <!-- PILLAR_TREE_BTN_V1_END -->
 
-            <div style="margin-left:auto;font-size:10px;color:#6b6b6b;letter-spacing:0.3px;align-self:center;padding-right:4px;">Saved 20-Apr-26 (MEMO view shipped)</div>
+            <div style="margin-left:auto;font-size:10px;color:#6b6b6b;letter-spacing:0.3px;align-self:center;padding-right:4px;">E1 V2.1 build 8-May-26 (Stream A framework alignment)</div>
         </div>
         <!-- IC Ratings (always visible, tabs removed) -->
         <!-- PILLAR_TREE_CONTAINER_V1_START -->
@@ -4636,7 +4637,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
                 <table id="master-table">
                     <thead> <!-- E1V2_HEADER_PATCHED_20260508 -->
                         <tr class="pillar-group-header">
-                            <th colspan="9"></th>
+                            <th colspan="8"></th>
                             <th colspan="2" class="group-label">Timeliness</th>
                             <th colspan="2" class="group-label">Case Strength</th>
                             <th colspan="1" class="group-label">Market Recognition</th>
@@ -4647,8 +4648,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
                             <th></th>
                             <th>Ticker</th>
                             <th>Company</th>
-                            <th>Stage</th>
-                            <th class="e1v2-stage-badge-th">Stage<br>(coded)</th>
+                            <th class="e1v2-stage-badge-th">Stage</th>
                             <th class="e1v2-timeliness-th">Timeliness</th>
                             <th class="e1v2-interest-th">Interest</th>
                             <th class="map-column-header">MAP</th>
@@ -75358,7 +75358,6 @@ function e1InterestClass(level) {
                         '<td style="text-align: center; width: 24px;"><span class="expand-chevron">▶</span></td>' + // <!-- E1V2_BODY_PATCHED_20260508 -->
                         '<td class="ticker-cell">' + escapeHtml(stock.ticker) + '</td>' +
                         '<td>' + escapeHtml(stock.company_name) + '</td>' +
-                        '<td><span class="stage-badge ' + getStageClass(stock.stage) + '">' + stock.stage + '</span></td>' +
                         '<td class="e1v2-stage-cell"><span class="e1v2-stage-coded ' + e1StageClass(stock.stage) + '">' + (stock.stage || '—') + '</span></td>' +
                         '<td class="e1v2-timeliness-cell ' + e1TimelinessClass(stock.last_updated) + '">' + e1TimelinessText(stock.last_updated) + '</td>' +
                         '<td class="e1v2-interest-cell"><span class="e1v2-interest-badge ' + e1InterestClass(stock.interest_level) + '">' + (stock.interest_level || 'medium') + '</span></td>' +
