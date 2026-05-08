@@ -4493,6 +4493,48 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
 }
 .lc-audit-pill-pass { background: #16a34a; color: #ffffff; }
 .lc-audit-pill-fail { background: #dc2626; color: #ffffff; }
+/* E1V2_CSS_20260508 START */
+/* E1 V2 — Stage / Timeliness / Interest level columns */
+.e1v2-stage-cell, .e1v2-timeliness-cell, .e1v2-interest-cell {
+  text-align: center;
+  font-size: 11px;
+  padding: 4px 6px;
+}
+.e1v2-stage-badge-th, .e1v2-timeliness-th, .e1v2-interest-th {
+  text-align: center;
+  font-size: 10px;
+}
+.e1v2-stage-coded {
+  display: inline-block;
+  padding: 2px 7px;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 10px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+.e1v2-stage-i      { background: #fef3e8; color: #b06b1e; border: 1px solid #b06b1e; }
+.e1v2-stage-ii     { background: #fff8e1; color: #8d6e00; border: 1px solid #8d6e00; }
+.e1v2-stage-iii    { background: #e3f2fd; color: #1565c0; border: 1px solid #1565c0; }
+.e1v2-stage-iv     { background: #ede7f6; color: #5e35b1; border: 1px solid #5e35b1; }
+.e1v2-stage-v      { background: #fce4ec; color: #c62828; border: 1px solid #c62828; }
+.e1v2-stage-vi     { background: #e8f5e9; color: #1b5e20; border: 1px solid #1b5e20; }
+.e1v2-stage-other  { background: #f5f5f0; color: #6b6b6b; border: 1px solid #c9c3b0; }
+.e1v2-timeliness-fresh { color: #1b5e20; font-weight: 600; }
+.e1v2-timeliness-ok    { color: #8d6e00; font-weight: 500; }
+.e1v2-timeliness-stale { color: #c62828; font-weight: 600; }
+.e1v2-interest-badge {
+  display: inline-block;
+  padding: 1px 6px;
+  border-radius: 2px;
+  font-weight: 600;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+.e1v2-interest-high   { background: #fce4ec; color: #c62828; }
+.e1v2-interest-medium { background: #fff8e1; color: #8d6e00; }
+.e1v2-interest-low    { background: #f5f5f0; color: #6b6b6b; }
+/* E1V2_CSS_20260508 END */
 /* LIFECYCLE_V1_CSS_END */
 
 </style>
@@ -4500,24 +4542,9 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
 <body>
 
     <div class="container">
-        <div class="toolbar">
-            <div class="toolbar-group">
-                <button class="toolbar-btn active" id="btn-expand" onclick="toggleExpandCollapse()">EXPAND</button>
-            </div>
-            <div class="toolbar-separator"></div>
-            <div class="toolbar-group">
-                <button class="toolbar-btn active" id="btn-ratings" onclick="toggleView('ratings')">RATINGS</button>
-                <button class="toolbar-btn" id="btn-judgements" onclick="toggleView('judgements')">JUDGEMENTS</button>
-                <button class="toolbar-btn" id="btn-analysis" onclick="toggleView('analysis')">ANALYSIS</button>
-            </div>
-            <div class="toolbar-separator"></div>
+        <div class="toolbar"> <!-- E1V2_TOOLBAR_PATCHED_20260508 -->
             <div class="toolbar-group">
                 <button class="toolbar-btn" id="btn-key" onclick="toggleView('key')">KEY</button>
-            </div>
-            <div class="toolbar-separator"></div>
-            <div class="toolbar-group">
-                <button class="toolbar-btn" id="btn-fundamental" onclick="toggleFundamental()">FUNDAMENTAL</button>
-                <button class="toolbar-btn" id="btn-colour" onclick="toggleMemoColour()">COLOUR</button>
             </div>
             <!-- COVERAGE_BTN_V1_START -->
             <div class="toolbar-separator"></div>
@@ -4607,9 +4634,9 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
             <!-- Master Table -->
             <div class="table-wrapper">
                 <table id="master-table">
-                    <thead>
+                    <thead> <!-- E1V2_HEADER_PATCHED_20260508 -->
                         <tr class="pillar-group-header">
-                            <th colspan="7"></th>
+                            <th colspan="9"></th>
                             <th colspan="2" class="group-label">Timeliness</th>
                             <th colspan="2" class="group-label">Case Strength</th>
                             <th colspan="1" class="group-label">Market Recognition</th>
@@ -4621,15 +4648,17 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
                             <th>Ticker</th>
                             <th>Company</th>
                             <th>Stage</th>
+                            <th class="e1v2-stage-badge-th">Stage<br>(coded)</th>
+                            <th class="e1v2-timeliness-th">Timeliness</th>
+                            <th class="e1v2-interest-th">Interest</th>
                             <th class="map-column-header">MAP</th>
                             <th class="list-column-header">LIST</th>
-                            <th class="memo-column-header">MEMO</th>
-                            <th class="pillar-column standard-col">P1<br>Technical Momentum</th>
-                            <th class="pillar-column standard-col">P2<br>Market Paradigm</th>
-                            <th class="pillar-column standard-col">P3<br>Fund Change</th>
-                            <th class="pillar-column standard-col">P4<br>Building Blocks</th>
-                            <th class="pillar-column standard-col">P5<br>SS Earnings Momentum</th>
-                            <th class="pillar-column standard-col">P6<br>Valuation<br>in Range</th>
+                            <th class="pillar-column standard-col">MR1<br>Technical Momentum</th>
+                            <th class="pillar-column standard-col">MR2<br>Thematic Fit</th>
+                            <th class="pillar-column standard-col">MR3<br>Pillar I — Case Change</th>
+                            <th class="pillar-column standard-col">MR4<br>Pillar II — Building Blocks</th>
+                            <th class="pillar-column standard-col">MR5<br>Sell-Side Momentum</th>
+                            <th class="pillar-column standard-col">MR6<br>Pillar III — Components</th>
                             <th class="standard-col">Setup</th>
                             <th class="standard-col">Fulcrum Driver</th>
                             <th class="standard-col">Rec</th>
@@ -74146,6 +74175,47 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
             return 'rating-' + rating.toLowerCase();
         }
 
+        
+// E1V2_JS_HELPERS_20260508
+function e1StageClass(stage) {
+  if (!stage) return 'e1v2-stage-other';
+  var s = String(stage).toLowerCase();
+  if (s.indexOf('gen') >= 0 || s === 'i' || s === 'ig') return 'e1v2-stage-i';
+  if (s.indexOf('filter') >= 0 || s === 'ii') return 'e1v2-stage-ii';
+  if (s.indexOf('triag') >= 0 || s === 'iii' || s === 'tri') return 'e1v2-stage-iii';
+  if (s === 'esa' || s === 'iv') return 'e1v2-stage-iv';
+  if (s === 'dd' || s === 'v') return 'e1v2-stage-v';
+  if (s === 'live' || s === 'vi') return 'e1v2-stage-vi';
+  return 'e1v2-stage-other';
+}
+function e1TimelinessClass(lastUpdated) {
+  if (!lastUpdated) return 'e1v2-timeliness-stale';
+  var d = new Date(lastUpdated);
+  if (isNaN(d.getTime())) return 'e1v2-timeliness-stale';
+  var days = Math.floor((Date.now() - d.getTime()) / 86400000);
+  if (days < 14) return 'e1v2-timeliness-fresh';
+  if (days < 30) return 'e1v2-timeliness-ok';
+  return 'e1v2-timeliness-stale';
+}
+function e1TimelinessText(lastUpdated) {
+  if (!lastUpdated) return '—';
+  var d = new Date(lastUpdated);
+  if (isNaN(d.getTime())) return lastUpdated;
+  var days = Math.floor((Date.now() - d.getTime()) / 86400000);
+  if (days === 0) return 'today';
+  if (days === 1) return '1d';
+  if (days < 14) return days + 'd';
+  if (days < 30) return Math.floor(days/7) + 'w';
+  return Math.floor(days/30) + 'mo';
+}
+function e1InterestClass(level) {
+  if (!level) return 'e1v2-interest-medium';
+  var l = String(level).toLowerCase();
+  if (l === 'high') return 'e1v2-interest-high';
+  if (l === 'low')  return 'e1v2-interest-low';
+  return 'e1v2-interest-medium';
+}
+
         function getStageClass(stage) {
             var stageMap = {
                 "IG": "stage-ig",
@@ -75285,19 +75355,21 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
                     };
 
                     row.innerHTML =
-                        '<td style="text-align: center; width: 24px;"><span class="expand-chevron">▶</span></td>' +
+                        '<td style="text-align: center; width: 24px;"><span class="expand-chevron">▶</span></td>' + // <!-- E1V2_BODY_PATCHED_20260508 -->
                         '<td class="ticker-cell">' + escapeHtml(stock.ticker) + '</td>' +
                         '<td>' + escapeHtml(stock.company_name) + '</td>' +
                         '<td><span class="stage-badge ' + getStageClass(stock.stage) + '">' + stock.stage + '</span></td>' +
+                        '<td class="e1v2-stage-cell"><span class="e1v2-stage-coded ' + e1StageClass(stock.stage) + '">' + (stock.stage || '—') + '</span></td>' +
+                        '<td class="e1v2-timeliness-cell ' + e1TimelinessClass(stock.last_updated) + '">' + e1TimelinessText(stock.last_updated) + '</td>' +
+                        '<td class="e1v2-interest-cell"><span class="e1v2-interest-badge ' + e1InterestClass(stock.interest_level) + '">' + (stock.interest_level || 'medium') + '</span></td>' +
                         '<td class="map-column-cell"><button type="button" class="map-button" onclick="openMapView(event,' + index + ')" title="Open summary MAP for ' + escapeHtml(stock.ticker) + '">MAP</button></td>' +
                         '<td class="list-column-cell"><button type="button" class="list-button" onclick="openListView(event,' + index + ')" title="Open LIST checklist for ' + escapeHtml(stock.ticker) + '">LIST</button></td>' +
-                        '<td class="memo-column-cell"><button type="button" class="memo-button" id="memo-btn-' + index + '" onclick="openMemoForStock(event,' + index + ')" title="Open MEMO for ' + escapeHtml(stock.ticker) + '">MEMO</button></td>' +
-                        '<td class="pillar-column standard-col" onclick="onPillarBadgeClick(event,' + index + ',\'p1\')" style="cursor:pointer;"><span class="rating-badge ' + getRatingClass(stock.pillars.p1_technical_momentum) + '">' + stock.pillars.p1_technical_momentum + '</span></td>' +
-                        '<td class="pillar-column standard-col" onclick="onPillarBadgeClick(event,' + index + ',\'p2\')" style="cursor:pointer;"><span class="rating-badge ' + getRatingClass(stock.pillars.p2_market_paradigm_fit) + '">' + stock.pillars.p2_market_paradigm_fit + '</span></td>' +
-                        '<td class="pillar-column standard-col" onclick="onPillarBadgeClick(event,' + index + ',\'p3\')" style="cursor:pointer;"><span class="rating-badge ' + getRatingClass(stock.pillars.p3_fundamental_change) + '">' + stock.pillars.p3_fundamental_change + '</span></td>' +
-                        '<td class="pillar-column standard-col" onclick="onPillarBadgeClick(event,' + index + ',\'p4\')" style="cursor:pointer;"><span class="rating-badge ' + getRatingClass(stock.pillars.p4_building_blocks) + '">' + stock.pillars.p4_building_blocks + '</span></td>' +
-                        '<td class="pillar-column standard-col" onclick="onPillarBadgeClick(event,' + index + ',\'p5\')" style="cursor:pointer;"><span class="rating-badge ' + getRatingClass(stock.pillars.p5_ss_earnings_momentum) + '">' + stock.pillars.p5_ss_earnings_momentum + '</span></td>' +
-                        '<td class="pillar-column standard-col" onclick="onPillarBadgeClick(event,' + index + ',\'p6\')" style="cursor:pointer;"><span class="rating-badge ' + getRatingClass(stock.pillars.p6_valuation) + '">' + stock.pillars.p6_valuation + '</span></td>' +
+                        '<td class="pillar-column standard-col"><span class="rating-badge ' + getRatingClass(stock.pillars.p1_technical_momentum) + '">' + stock.pillars.p1_technical_momentum + '</span></td>' +
+                        '<td class="pillar-column standard-col"><span class="rating-badge ' + getRatingClass(stock.pillars.p2_market_paradigm_fit) + '">' + stock.pillars.p2_market_paradigm_fit + '</span></td>' +
+                        '<td class="pillar-column standard-col"><span class="rating-badge ' + getRatingClass(stock.pillars.p3_fundamental_change) + '">' + stock.pillars.p3_fundamental_change + '</span></td>' +
+                        '<td class="pillar-column standard-col"><span class="rating-badge ' + getRatingClass(stock.pillars.p4_building_blocks) + '">' + stock.pillars.p4_building_blocks + '</span></td>' +
+                        '<td class="pillar-column standard-col"><span class="rating-badge ' + getRatingClass(stock.pillars.p5_ss_earnings_momentum) + '">' + stock.pillars.p5_ss_earnings_momentum + '</span></td>' +
+                        '<td class="pillar-column standard-col"><span class="rating-badge ' + getRatingClass(stock.pillars.p6_valuation) + '">' + stock.pillars.p6_valuation + '</span></td>' +
                         '<td class="standard-col" style="font-size: 11px;">' + escapeHtml(stock.investment_case.primary_setup) + '</td>' +
                         '<td class="standard-col" style="font-size: 11px;">' + escapeHtml(stock.investment_case.fulcrum_drivers.substring(0, 40)) + '...</td>' +
                         '<td class="standard-col"><span class="stage-badge stage-live">' + stock.actions.apm_recommendation + '</span></td>' +
@@ -80174,7 +80246,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -80186,7 +80258,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -80234,7 +80306,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -80258,7 +80330,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -80457,7 +80529,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "partial",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 2978,
           "source": "C+AS",
@@ -80473,7 +80545,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -80525,7 +80597,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -80549,7 +80621,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -80760,7 +80832,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "done",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 4510,
           "source": "C",
@@ -80776,7 +80848,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "done",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 4630,
           "source": "C",
@@ -80832,7 +80904,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -80856,7 +80928,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -81054,7 +81126,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -81066,7 +81138,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -81114,7 +81186,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -81138,7 +81210,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -81332,7 +81404,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -81344,7 +81416,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -81392,7 +81464,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -81416,7 +81488,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -81614,7 +81686,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "done",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 3200,
           "source": "Claude",
@@ -81628,7 +81700,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "done",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 3400,
           "source": "Claude",
@@ -81690,7 +81762,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -81714,7 +81786,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -81923,7 +81995,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -81935,7 +82007,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -81983,7 +82055,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -82007,7 +82079,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -82203,7 +82275,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "done",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 4787,
           "source": "C",
@@ -82219,7 +82291,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "done",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 4823,
           "source": "C",
@@ -82280,7 +82352,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -82304,7 +82376,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -82508,7 +82580,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "done",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 4078,
           "source": "C",
@@ -82524,7 +82596,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "done",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 3135,
           "source": "C",
@@ -82584,7 +82656,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -82613,7 +82685,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "done",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 3843,
           "source": "C",
@@ -82821,7 +82893,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -82833,7 +82905,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -82881,7 +82953,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -82905,7 +82977,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -83109,7 +83181,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "partial",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 2146,
           "source": "merged",
@@ -83125,7 +83197,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "partial",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 2801,
           "source": "merged",
@@ -83185,7 +83257,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -83217,7 +83289,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "done",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 3979,
           "source": "C",
@@ -83427,7 +83499,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "done",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 5126,
           "source": "C+AS",
@@ -83441,7 +83513,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "done",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 4646,
           "source": "C+AS",
@@ -83497,7 +83569,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "done",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 4011,
           "source": "AS",
@@ -83527,7 +83599,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "partial",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 2606,
           "source": "C",
@@ -83763,7 +83835,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -83775,7 +83847,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -83827,7 +83899,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "done",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 3971,
           "source": "unknown",
@@ -83853,7 +83925,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -84052,7 +84124,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "done",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 4778,
           "source": "C+AS",
@@ -84068,7 +84140,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "done",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 3407,
           "source": "C+AS",
@@ -84129,7 +84201,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -84153,7 +84225,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -84351,7 +84423,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -84363,7 +84435,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -84411,7 +84483,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -84435,7 +84507,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -84624,7 +84696,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -84636,7 +84708,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "done",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 8259,
           "source": "C+AS",
@@ -84686,7 +84758,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -84710,7 +84782,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -84936,7 +85008,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -84948,7 +85020,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -84996,7 +85068,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -85020,7 +85092,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -85214,7 +85286,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -85226,7 +85298,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -85274,7 +85346,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -85298,7 +85370,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -85498,7 +85570,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "done",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 6815,
           "source": "C+AS",
@@ -85512,7 +85584,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "done",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 4844,
           "source": "C+AS",
@@ -85569,7 +85641,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -85593,7 +85665,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -85793,7 +85865,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "done",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 4300,
           "source": "C+AS",
@@ -85809,7 +85881,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "done",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 4664,
           "source": "C+AS",
@@ -85868,7 +85940,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -85892,7 +85964,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -86096,7 +86168,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -86108,7 +86180,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "done",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 9057,
           "source": "C",
@@ -86162,7 +86234,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -86186,7 +86258,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -86386,7 +86458,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -86398,7 +86470,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -86446,7 +86518,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -86470,7 +86542,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -86670,7 +86742,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -86682,7 +86754,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "done",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 13875,
           "source": "C+AS",
@@ -86736,7 +86808,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "done",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 6160,
           "source": "C",
@@ -86764,7 +86836,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -86978,7 +87050,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "done",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 4432,
           "source": "C+AS",
@@ -86994,7 +87066,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "done",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 4244,
           "source": "C+AS",
@@ -87055,7 +87127,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -87079,7 +87151,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -87276,7 +87348,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -87288,7 +87360,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -87336,7 +87408,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -87360,7 +87432,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -87554,7 +87626,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "done",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 4614,
           "source": "C+AS",
@@ -87568,7 +87640,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "done",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 4280,
           "source": "C+AS",
@@ -87624,7 +87696,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "done",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 3333,
           "source": "AS",
@@ -87652,7 +87724,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "done",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 13439,
           "source": "C",
@@ -87863,7 +87935,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -87875,7 +87947,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -87923,7 +87995,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -87947,7 +88019,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -88147,7 +88219,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -88159,7 +88231,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -88207,7 +88279,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -88231,7 +88303,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -88435,7 +88507,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "done",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 3414,
           "source": "C+AS",
@@ -88451,7 +88523,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "done",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 4485,
           "source": "C+AS",
@@ -88516,7 +88588,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -88544,7 +88616,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "done",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 3456,
           "source": "C",
@@ -88748,7 +88820,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -88760,7 +88832,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -88808,7 +88880,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -88832,7 +88904,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -89034,7 +89106,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "done",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 8174,
           "source": "C+AS",
@@ -89050,7 +89122,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "done",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 7766,
           "source": "C+AS",
@@ -89110,7 +89182,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -89134,7 +89206,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -89327,7 +89399,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "done",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 6531,
           "source": "Claude [C]",
@@ -89343,7 +89415,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "done",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 5398,
           "source": "Claude [C]",
@@ -89405,7 +89477,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -89429,7 +89501,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -89629,7 +89701,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -89641,7 +89713,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -89689,7 +89761,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -89713,7 +89785,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -89909,7 +89981,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "done",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 3819,
           "source": "AS",
@@ -89925,7 +89997,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "done",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 5800,
           "source": "C",
@@ -89987,7 +90059,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -90011,7 +90083,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -90241,7 +90313,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -90253,7 +90325,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "done",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 11635,
           "source": "AS",
@@ -90305,7 +90377,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "done",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 3378,
           "source": "C+AS",
@@ -90331,7 +90403,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -90535,7 +90607,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -90547,7 +90619,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -90595,7 +90667,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -90619,7 +90691,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -90816,7 +90888,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -90828,7 +90900,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -90876,7 +90948,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -90900,7 +90972,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -91104,7 +91176,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "partial",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 2353,
           "source": "merged",
@@ -91120,7 +91192,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "partial",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 2794,
           "source": "merged",
@@ -91180,7 +91252,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -91212,7 +91284,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "done",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 3416,
           "source": "C",
@@ -91425,7 +91497,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "done",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 4127,
           "source": "C",
@@ -91441,7 +91513,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "done",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 9630,
           "source": "C+AS",
@@ -91501,7 +91573,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -91529,7 +91601,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "done",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 3855,
           "source": "C",
@@ -91739,7 +91811,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -91751,7 +91823,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -91799,7 +91871,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -91823,7 +91895,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -92022,7 +92094,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -92034,7 +92106,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -92082,7 +92154,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -92106,7 +92178,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -92309,7 +92381,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "done",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 4084,
           "source": "C+AS",
@@ -92325,7 +92397,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "done",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 4894,
           "source": "C+AS",
@@ -92383,7 +92455,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "done",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 6918,
           "source": "AS",
@@ -92411,7 +92483,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "done",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 4396,
           "source": "C",
@@ -92666,7 +92738,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -92678,7 +92750,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -92728,7 +92800,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "partial",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 1492,
           "source": "AS",
@@ -92758,7 +92830,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "done",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 6919,
           "source": "C",
@@ -92967,7 +93039,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "done",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 5404,
           "source": "C+AS",
@@ -92981,7 +93053,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "done",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 3887,
           "source": "C+AS",
@@ -93039,7 +93111,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -93067,7 +93139,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -93269,7 +93341,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -93281,7 +93353,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -93329,7 +93401,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -93353,7 +93425,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -93551,7 +93623,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -93563,7 +93635,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "done",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 7689,
           "source": "C+AS",
@@ -93615,7 +93687,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -93639,7 +93711,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -93844,7 +93916,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -93856,7 +93928,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -93904,7 +93976,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -93928,7 +94000,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -94122,7 +94194,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -94134,7 +94206,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -94182,7 +94254,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -94206,7 +94278,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -94400,7 +94472,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -94412,7 +94484,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -94460,7 +94532,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -94484,7 +94556,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -94678,7 +94750,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -94690,7 +94762,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -94738,7 +94810,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -94762,7 +94834,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -94954,7 +95026,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -94966,7 +95038,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -95014,7 +95086,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -95038,7 +95110,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -95235,7 +95307,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -95247,7 +95319,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -95295,7 +95367,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -95319,7 +95391,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -95516,7 +95588,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -95528,7 +95600,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -95576,7 +95648,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -95600,7 +95672,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -95792,7 +95864,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -95804,7 +95876,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -95852,7 +95924,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -95876,7 +95948,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -96070,7 +96142,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -96082,7 +96154,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -96130,7 +96202,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -96154,7 +96226,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -96349,7 +96421,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -96361,7 +96433,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -96409,7 +96481,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -96433,7 +96505,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -96634,7 +96706,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "done",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 4450,
           "source": "AS",
@@ -96650,7 +96722,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "done",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 3983,
           "source": "AS",
@@ -96710,7 +96782,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -96734,7 +96806,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -96936,7 +97008,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "done",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 5068,
           "source": "C+AS",
@@ -96952,7 +97024,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "done",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 4761,
           "source": "C+AS",
@@ -97012,7 +97084,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -97036,7 +97108,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -97238,7 +97310,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "done",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 3200,
           "source": "C",
@@ -97252,7 +97324,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "done",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 10337,
           "source": "[C] Claude",
@@ -97306,7 +97378,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -97330,7 +97402,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -97532,7 +97604,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "done",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 10734,
           "source": "C",
@@ -97546,7 +97618,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "done",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 14394,
           "source": "C",
@@ -97600,7 +97672,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -97624,7 +97696,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -97822,7 +97894,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -97834,7 +97906,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -97882,7 +97954,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -97906,7 +97978,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -98105,7 +98177,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -98117,7 +98189,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -98165,7 +98237,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -98189,7 +98261,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -98384,7 +98456,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "done",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 4177,
           "source": "C+AS",
@@ -98400,7 +98472,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "done",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 3506,
           "source": "C+AS",
@@ -98459,7 +98531,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -98483,7 +98555,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -98679,7 +98751,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -98691,7 +98763,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -98739,7 +98811,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -98763,7 +98835,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -98959,7 +99031,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "done",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 3200,
           "source": "C",
@@ -98973,7 +99045,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "done",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 3100,
           "source": "C",
@@ -99035,7 +99107,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -99059,7 +99131,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -99273,7 +99345,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "done",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 3200,
           "source": "C",
@@ -99287,7 +99359,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "done",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 13003,
           "source": "C",
@@ -99345,7 +99417,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "partial",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 1547,
           "source": "AS",
@@ -99375,7 +99447,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "done",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 9925,
           "source": "C",
@@ -99580,7 +99652,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -99598,7 +99670,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -99654,7 +99726,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -99678,7 +99750,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -99875,7 +99947,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -99887,7 +99959,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -99935,7 +100007,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -99959,7 +100031,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -100164,7 +100236,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "partial",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 2271,
           "source": "merged",
@@ -100180,7 +100252,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "partial",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 2508,
           "source": "merged",
@@ -100240,7 +100312,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -100272,7 +100344,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "done",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 4641,
           "source": "C",
@@ -100485,7 +100557,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -100497,7 +100569,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -100545,7 +100617,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -100569,7 +100641,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -100776,7 +100848,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "done",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 4579,
           "source": "C",
@@ -100792,7 +100864,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "done",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 8535,
           "source": "C",
@@ -100848,7 +100920,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -100872,7 +100944,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -101074,7 +101146,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -101086,7 +101158,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "done",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 4045,
           "source": "AS",
@@ -101146,7 +101218,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -101170,7 +101242,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -101396,7 +101468,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "done",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 6173,
           "source": "Claude [C]",
@@ -101412,7 +101484,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "done",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 3708,
           "source": "Claude [C]",
@@ -101474,7 +101546,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -101498,7 +101570,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -101702,7 +101774,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "done",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 4320,
           "source": "C",
@@ -101716,7 +101788,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "done",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 3598,
           "source": "C",
@@ -101772,7 +101844,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -101796,7 +101868,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -102006,7 +102078,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "done",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 7749,
           "source": "C",
@@ -102022,7 +102094,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "done",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 7960,
           "source": "C",
@@ -102078,7 +102150,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -102102,7 +102174,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -102305,7 +102377,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -102317,7 +102389,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -102365,7 +102437,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -102389,7 +102461,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -102588,7 +102660,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "done",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 3417,
           "source": "C",
@@ -102604,7 +102676,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "done",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 3449,
           "source": "C",
@@ -102660,7 +102732,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -102684,7 +102756,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -102886,7 +102958,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -102898,7 +102970,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -102946,7 +103018,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -102970,7 +103042,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -103177,7 +103249,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "done",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 7355,
           "source": "C",
@@ -103193,7 +103265,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "done",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 8238,
           "source": "C",
@@ -103249,7 +103321,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -103273,7 +103345,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -103478,7 +103550,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "done",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 5400,
           "source": "C",
@@ -103494,7 +103566,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "done",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 5800,
           "source": "C",
@@ -103555,7 +103627,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -103579,7 +103651,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -103783,7 +103855,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "partial",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 86,
           "source": "C",
@@ -103800,7 +103872,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "partial",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 96,
           "source": "C",
@@ -103864,7 +103936,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -103888,7 +103960,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -104090,7 +104162,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "done",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 3221,
           "source": "C",
@@ -104106,7 +104178,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "done",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 3124,
           "source": "C",
@@ -104166,7 +104238,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -104195,7 +104267,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "done",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 4051,
           "source": "C",
@@ -104416,7 +104488,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "4": {
           "status": "missing",
           "query_id": "ET",
-          "query_name": "Earnings Trends",
+          "query_name": "Earnings trends vs. peers (L2Yish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -104428,7 +104500,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "5": {
           "status": "missing",
           "query_id": "ED",
-          "query_name": "Earnings Delivery",
+          "query_name": "Most recent earnings delivery (L6Mish)",
           "stage": "Triaging",
           "word_count": 0,
           "source": null,
@@ -104476,7 +104548,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "9": {
           "status": "missing",
           "query_id": "Earn",
-          "query_name": "Earnings History",
+          "query_name": "Earnings delivery record (L3Yish)",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -104500,7 +104572,7 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
         "11": {
           "status": "missing",
           "query_id": "VCMap",
-          "query_name": "Value Chain Map",
+          "query_name": "Value chain info map",
           "stage": "ESA",
           "word_count": 0,
           "source": null,
@@ -104689,31 +104761,31 @@ td.cov-memo-no { background: rgba(141,110,0,0.04); color: #c9c3b0; }
 
         function getCovQDef() {
             return [
-                {n:1,s:"IG",nm:"Business Description",src:"C+AS"},
-                {n:2,s:"IG",nm:"Change Forces",src:"C+AS"},
-                {n:3,s:"IG",nm:"Technical Momentum",src:"C"},
-                {n:4,s:"Tri",nm:"Earnings Trends",src:"C+AS"},
-                {n:5,s:"Tri",nm:"Earnings Delivery",src:"C+AS"},
-                {n:6,s:"Tri",nm:"SS Commentary",src:"AS"},
-                {n:7,s:"Tri",nm:"Key Drivers",src:"C+AS"},
-                {n:8,s:"ESA",nm:"BM / Sector Primer",src:"C+AS"},
-                {n:9,s:"ESA",nm:"Earnings History",src:"C+AS"},
-                {n:10,s:"ESA",nm:"Short Sellers",src:"C"},
-                {n:11,s:"ESA",nm:"Value Chain Map",src:"C"},
-                {n:12,s:"ESA",nm:"Value Chain Analysis",src:"C+AS"},
-                {n:13,s:"ESA",nm:"Guidance Tracking",src:"C+AS"},
-                {n:14,s:"ESA",nm:"KD Deep-Dive",src:"C+AS"},
-                {n:15,s:"DD",nm:"Insider Activity",src:"C"},
-                {n:16,s:"DD",nm:"Mgmt / Governance",src:"C"},
-                {n:17,s:"DD",nm:"FX Exposure",src:"C"},
-                {n:18,s:"DD",nm:"CEO Research",src:"C"},
-                {n:19,s:"DD",nm:"Pre-Mortem",src:"C"},
-                {n:20,s:"DD",nm:"CEO/CFO Meeting Prep",src:"C+AS"},
-                {n:21,s:"Any",nm:"KQ Research 1",src:"C+AS",kq:true},
-                {n:22,s:"Any",nm:"KQ Research 2",src:"C+AS",kq:true},
-                {n:23,s:"Any",nm:"KQ Research 3",src:"C+AS",kq:true},
-                {n:24,s:"Any",nm:"KQ Research 4",src:"C+AS",kq:true},
-                {n:25,s:"Any",nm:"Thematic Research",src:"C+AS"}
+                {n:1,s:"IG",nm:"Business Description",src:"C+AS",wc:7000},
+                {n:2,s:"IG",nm:"Change Forces",src:"C+AS",wc:4000},
+                {n:3,s:"IG",nm:"Technical Momentum",src:"C",wc:3000},
+                {n:4,s:"Tri",nm:"Earnings trends vs. peers (L2Yish)",src:"C+AS",wc:3000},
+                {n:5,s:"Tri",nm:"Most recent earnings delivery (L6Mish)",src:"C+AS",wc:3000},
+                {n:6,s:"Tri",nm:"SS Commentary",src:"AS",wc:3000},
+                {n:7,s:"Tri",nm:"Key Drivers",src:"C+AS",wc:3000},
+                {n:8,s:"ESA",nm:"BM / Sector Primer",src:"C+AS",wc:3000},
+                {n:9,s:"ESA",nm:"Earnings delivery record (L3Yish)",src:"C+AS",wc:3000},
+                {n:10,s:"ESA",nm:"Short Sellers",src:"C",wc:3000},
+                {n:11,s:"ESA",nm:"Value chain info map",src:"C",wc:3000},
+                {n:12,s:"ESA",nm:"Value Chain Analysis",src:"C+AS",wc:3000},
+                {n:13,s:"ESA",nm:"Guidance Tracking",src:"C+AS",wc:3000},
+                {n:14,s:"ESA",nm:"KD Deep-Dive",src:"C+AS",wc:4000},
+                {n:15,s:"DD",nm:"Insider Activity",src:"C",wc:3000},
+                {n:16,s:"DD",nm:"Mgmt / Governance",src:"C",wc:3000},
+                {n:17,s:"DD",nm:"FX Exposure",src:"C",wc:3000},
+                {n:18,s:"DD",nm:"CEO Research",src:"C",wc:3000},
+                {n:19,s:"DD",nm:"Pre-Mortem",src:"C",wc:4000},
+                {n:20,s:"DD",nm:"CEO/CFO Meeting Prep",src:"C+AS",wc:3000},
+                {n:21,s:"Any",nm:"KQ Research 1",src:"C+AS",kq:true,wc:3000},
+                {n:22,s:"Any",nm:"KQ Research 2",src:"C+AS",kq:true,wc:3000},
+                {n:23,s:"Any",nm:"KQ Research 3",src:"C+AS",kq:true,wc:3000},
+                {n:24,s:"Any",nm:"KQ Research 4",src:"C+AS",kq:true,wc:3000},
+                {n:25,s:"Any",nm:"Thematic Research",src:"C+AS",wc:2500}
             ];
         }
 
@@ -105235,9 +105307,11 @@ document.addEventListener("click", function(ev) {
             var auditAfter={2:1,6:1,13:1,19:1,24:1};
             for(var q=0;q<qD.length;q++){
                 var src=qD[q].src||"";
-                h+="<th data-qnum='"+qD[q].n+"' data-qlabel='"+qD[q].nm.replace(/'/g,'&#39;')+"' class='cov-rcell-hdr cov-sortable' onclick=\"covSortBy('q"+qD[q].n+"')\" title='Q"+qD[q].n+": "+qD[q].nm+" ("+src+")'>"+
+                h+="<th data-qnum='"+qD[q].n+"' data-qlabel='"+qD[q].nm.replace(/'/g,'&#39;')+"' class='cov-rcell-hdr cov-sortable' onclick=\"covSortBy('q"+qD[q].n+"')\" title='Q"+qD[q].n+": "+qD[q].nm+" ("+src+", "+(qD[q].wc?(qD[q].wc/1000)+"k":"")+" target)'>"+
                     "<span class='lc-q-num'>Q"+qD[q].n+"</span>"+
                     "<span class='lc-q-title'>"+qD[q].nm+"</span>"+
+                    "<span style='display:block;font-size:7px;color:#999;line-height:1.1;margin-top:1px;font-weight:normal;'>"+src+"</span>"+
+                    "<span style='display:block;font-size:7px;color:#999;line-height:1.1;font-weight:normal;'>"+(qD[q].wc?(qD[q].wc>=1000?(qD[q].wc/1000)+"k":qD[q].wc+""):"")+" words</span>"+
                     "</th>";
                 if(auditAfter[q]) h+="<th class='cov-audit-cell' style='font-size:7px;' title='Stage completion'>✓</th>";
             }
