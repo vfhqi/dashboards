@@ -38,6 +38,9 @@ body.scrolled-past-header .sticky-header-table-wrap { display: block; }
 .btn:hover { color: var(--fg); border-color: var(--fg3); }
 .btn-primary { background: var(--blue-bg); color: var(--blue); border-color: rgba(9,105,218,0.3); }
 .btn-danger { background: var(--red-bg); color: var(--red); border-color: rgba(207,34,46,0.3); }
+/* D-PMS-126: row-end delete (btn-icon variant) is muted by default, red on hover */
+.pos-table td .btn-icon.btn-danger { background: transparent; color: rgba(120,120,120,0.55); border-color: transparent; padding: 0 4px; font-size: 12px; font-weight: 400; opacity: 0.55; transition: opacity 0.15s, color 0.15s; }
+.pos-table td .btn-icon.btn-danger:hover { color: var(--red); opacity: 1; background: var(--red-bg); border-color: rgba(207,34,46,0.3); }
 .btn-success { background: var(--green-bg); color: var(--green); border-color: rgba(26,127,55,0.3); }
 .btn-icon { padding: 2px 6px; font-size: 14px; line-height: 1; }
 .btn-group-spacer { display: inline-block; width: 12px; }
@@ -139,6 +142,7 @@ body.hide-alerts .warn-line { display: none !important; }
 .pos-table th.group-current, .sticky-header-table th.group-current { background: rgba(9,105,218,0.06); color: var(--blue); }
 .pos-table th.group-pnl, .sticky-header-table th.group-pnl { background: rgba(26,127,55,0.06); color: var(--green); }
 .pos-table th.group-info, .sticky-header-table th.group-info { background: rgba(130,80,223,0.06); color: var(--purple); }
+.pos-table th.group-investment-info, .sticky-header-table th.group-investment-info { background: rgba(71,85,105,0.06); color: var(--fg2); }
 
 /* D-PMS-39 hide-at-entry — when body has class, hide all .col-atentry cells */
 body.hide-at-entry-cols .col-atentry { display: none; }
@@ -230,8 +234,8 @@ body.hide-at-entry-cols .pf-col-entry-aum { display: none; }
 
 /* D-PMS-73 to D-PMS-77 (09-May-26): PORTFOLIO section — one row per live investment, above tranche-detail table */
 .portfolio-section { margin: 16px 0; }
-.portfolio-section h2 { font-size: 14px; font-weight: 600; color: var(--fg); margin-bottom: 8px; }
-.portfolio-section .pf-meta { font-size: 11px; color: var(--fg2); margin-bottom: 8px; }
+.portfolio-section h2 { font-size: 14px; font-weight: 600; color: var(--fg); margin-bottom: 4px; margin-top: 8px; }
+.portfolio-section .pf-meta { font-size: 11px; color: var(--fg2); margin-bottom: 2px; margin-top: -2px; }
 .portfolio-table-wrap { background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; overflow-x: auto; }
 .pf-table { width: 100%; border-collapse: collapse; font-size: 12px; }  /* D-PMS-94d: layout:auto restored; hide-at-entry now omits Entry col entirely from the rendered HTML */
 .pf-table th { background: var(--bg3); color: var(--fg2); font-weight: 600; font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px; padding: 8px; text-align: right; border-bottom: 2px solid var(--border); white-space: normal; line-height: 1.25; vertical-align: bottom; }
@@ -248,11 +252,15 @@ body.hide-at-entry-cols .pf-col-entry-aum { display: none; }
 .pf-name { color: var(--fg2); font-weight: 400; font-size: 11px; }
 .pf-spark-cell { padding: 0px 4px; }
 .pf-table th.pf-spark-header { text-align: center; }
+/* D-PMS-127: placeholder row dimming */
+.pf-row-placeholder td { color: var(--fg3); opacity: 0.55; background: rgba(208,215,222,0.04); }
+.pf-row-placeholder .pf-placeholder-dim { color: var(--fg3); }
 /* D-PMS-91 #1: switch sparkline typography away from mono. 'system-ui' first, fall back to a clean grotesk. Letter-spacing slight neg for readability at small sizes. */
 .pf-spark { display: block; width: 100%; }
 .pf-spark-axis { font-size: 7.5px; fill: var(--fg3); font-family: ui-sans-serif, system-ui, 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 600; letter-spacing: 0.2px; font-feature-settings: 'tnum' 1, 'cv01' 1; opacity: 0.85; }
 .pf-spark-pair-label { font-size: 7.5px; font-family: ui-sans-serif, system-ui, 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 500; letter-spacing: -0.05px; white-space: pre; font-feature-settings: 'tnum' 1; }
 .pf-spark-bp-text { fill: #b91c1c; font-weight: 600; }    /* D-PMS-90: loss-risk red */
+.pf-spark-bp-inverted { fill: #b91c1c; font-weight: 700; }  /* D-PMS-122: stop above current (inverted) */
 .pf-spark-aum-text { fill: #1f2328; font-weight: 700; }   /* D-PMS-90: AUM dark */
 .pf-spark-ma-label { font-size: 7.5px; font-family: ui-sans-serif, system-ui, 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 700; letter-spacing: -0.05px; font-feature-settings: 'tnum' 1; }
 .pf-spark-leader { stroke: var(--fg3); stroke-width: 0.5; opacity: 0.4; }
@@ -262,7 +270,9 @@ body.hide-at-entry-cols .pf-col-entry-aum { display: none; }
 .pf-spark-pill-label { font-size: 8px; font-family: ui-sans-serif, system-ui, 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 700; letter-spacing: 0.1px; pointer-events: none; }
 .pf-spark-pill-count { font-size: 6px; font-family: ui-sans-serif, system-ui, 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 700; pointer-events: none; opacity: 0.85; }
 /* D-PMS-117: key in section title strip */
-.pf-spark-key-strip { display: inline-flex; gap: 12px; align-items: center; margin-left: 12px; font-size: 10px; color: var(--fg2); font-style: italic; vertical-align: middle; }
+.pf-spark-key-strip { display: inline-flex; gap: 12px; align-items: center; margin-left: 12px; font-size: 9px; color: var(--fg2); font-style: italic; vertical-align: middle; font-weight: normal; text-transform: none; letter-spacing: 0; }
+.pf-spark-header-wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.pf-spark-header-title { display: inline-block; }
 .pf-spark-key-strip .pf-key-bps { color: #b91c1c; font-weight: 600; font-style: normal; }
 .pf-spark-key-strip .pf-key-aum { color: var(--fg); font-weight: 700; font-style: normal; }
 .pf-spark-key-strip .pf-key-pill-row { display: inline-flex; gap: 4px; align-items: center; }
@@ -417,7 +427,7 @@ var pendingPromote = null;
 var hideAtEntry = false;
 var hideAlerts = false;  // D-PMS-98: toggle to hide red alert banner + orange warn-line rows
 var sparkCollapsed = false;  // D-PMS-115: toggle to collapse same-MA tranches into single pills with summed totals
-var pfSort = { key: null, dir: 'asc' };  // D-PMS-104: portfolio-overview sort state
+var pfSort = { key: 'atRisk', dir: 'desc' };  // D-PMS-120: default sort = Loss Risk desc
 
 // D-PMS-70 sort-by-stop-MA view state (Core MM only; PB1/PB2 stay fixed)
 var sortByStopMa = false;
@@ -1462,7 +1472,25 @@ function gatherPortfolioRows() {
   var rows = [];
   CONFIG.investments.forEach(function(inv, invIdx) {
     var ticker = inv.ticker;
-    if (inv.is_placeholder || !ticker) return;
+    // D-PMS-127: include placeholder slots as blank rows (matches PMS 16)
+    var ed = EDITS[invIdx] || {};
+    if ((inv.is_placeholder || !ticker) && !ed._ticker_override) {
+      rows.push({
+        invIdx: invIdx,
+        ticker: inv.ticker || ('Slot ' + (invIdx + 1)),
+        name: inv.name || ('Empty slot ' + (invIdx + 1)),
+        currency: inv.currency || '',
+        deployed: 0, trancheCount: 0, valueAum: 0,
+        atRisk: 0, weightedStopDistance: null,
+        paperPnl: 0, avgPriceMove: null,
+        breachCount: 0, tranches: [], _is_placeholder: true
+      });
+      return;
+    }
+    // Universe-loaded placeholder: use override ticker for compute
+    if ((inv.is_placeholder || !ticker) && ed._ticker_override) {
+      ticker = ed._ticker_override;
+    }
     // collect all tranches with computed runTester output
     var trancheData = [];
     var deployed = 0, valueAum = 0, atRisk = 0, paperPnl = 0, breachCount = 0;
@@ -1490,7 +1518,17 @@ function gatherPortfolioRows() {
       }
       trancheData.push({slot: slotType, stop_ma: stopMa, stop_distance_pct: r.stop_distance_pct, loss_risk_aum: r.loss_risk_aum, value_aum_pct: r.value_aum_pct});
     });
-    if (deployed === 0) return;  // skip investments with no live tranches
+    if (deployed === 0) {
+      // D-PMS-127: emit as placeholder-style row instead of skipping
+      rows.push({
+        invIdx: invIdx, ticker: ticker, name: inv.name || ticker, currency: inv.currency || '',
+        deployed: 0, trancheCount: 0, valueAum: 0,
+        atRisk: 0, weightedStopDistance: null,
+        paperPnl: 0, avgPriceMove: null,
+        breachCount: 0, tranches: [], _is_placeholder: true
+      });
+      return;
+    }
     var weightedStopDistance = weightedStopDistanceDen > 0 ? weightedStopDistanceNum / weightedStopDistanceDen : null;
     var avgPriceMove = priceMoveCount > 0 ? priceMoveSum / priceMoveCount : null;
     rows.push({
@@ -1826,8 +1864,14 @@ function renderSparkline(tranches, axisMin, axisMax, isFirstRow) {
   // Composite cluster labels
   clusterPlacements.forEach(function(cp) {
     var labelY = topPad + (maxLabelLanes - 1 - cp.lane) * labelRowH + labelRowH;
+    // D-PMS-122: detect inverted-stop cluster (all bps prefixed with + = stop above current price)
+    var bpClean = cp.bpStr.replace(/bps$/, '');
+    var bpParts = bpClean.split('/');
+    var allInverted = bpParts.length > 0 && bpParts.every(function(p) { return p.startsWith('+'); });
+    var bpClass = allInverted ? 'pf-spark-bp-text pf-spark-bp-inverted' : 'pf-spark-bp-text';
+    var prefix = allInverted ? '⚠ ' : '';
     svg += '<text class="pf-spark-pair-label" x="' + cp.labelX + '" y="' + labelY + '" text-anchor="middle">';
-    svg += '<tspan class="pf-spark-bp-text">' + cp.bpStr + '</tspan>';
+    svg += '<tspan class="' + bpClass + '">' + prefix + cp.bpStr + '</tspan>';
     svg += '<tspan> </tspan>';
     svg += '<tspan class="pf-spark-aum-text">' + cp.aumStr + '</tspan>';
     svg += '</text>';
@@ -1913,7 +1957,7 @@ function renderPortfolioSection() {
     + '<span><span class="pf-key-bps">(X)bps</span> = loss risk per tranche of capital</span>'
     + '<span><span class="pf-key-aum">X.X%</span> = % of AUM per tranche of capital</span>'
     + '</span>';
-  var html = '<h2 style="display:flex;align-items:baseline;flex-wrap:wrap">Portfolio summary' + keyStrip + '</h2>';
+  var html = '<h2>Portfolio summary</h2>';
   function fmtMetaTick(v) { var n = Math.round(v * 100); if (n < 0) return '(' + Math.abs(n) + ')%'; if (n > 0) return '+' + n + '%'; return '0%'; }
   html += '<div class="pf-meta">' + rows.length + ' live investment' + (rows.length === 1 ? '' : 's') + ' · ' + totTranches + ' tranche' + (totTranches === 1 ? '' : 's') + ' · sparkline axis ' + fmtMetaTick(axisMin) + ' to ' + fmtMetaTick(axisMax) + ' (universal across all rows; major gridlines every 5%, minor every 2.5%)</div>';
   html += '<div class="portfolio-table-wrap"><table class="pf-table">';
@@ -1945,9 +1989,26 @@ function renderPortfolioSection() {
     + '<th class="pf-sortable" data-sort-key="paperPnl">P&L AUM' + pfSortLabel('paperPnl') + '</th>'
     + '<th class="pf-sortable" data-sort-key="avgPriceMove">Average price change' + pfSortLabel('avgPriceMove') + '</th>'
     + '<th class="pf-sortable" data-sort-key="breachCount">Breach alerts' + pfSortLabel('breachCount') + '</th>'
-    + '<th class="pf-spark-header">Investment visualisation per tranche</th>'
+    + '<th class="pf-spark-header"><div class="pf-spark-header-wrap"><span class="pf-spark-header-title">Investment visualisation per tranche</span>' + keyStrip + '</div></th>'
     + '</tr></thead><tbody>';
   rows.forEach(function(r, _pfRowIdx) {
+    if (r._is_placeholder) {
+      // D-PMS-127: blank placeholder row
+      html += '<tr class="pf-row-placeholder">'
+        + '<td class="al"><span class="pf-ticker pf-placeholder-dim">' + esc(r.ticker) + '</span></td>'
+        + '<td class="al pf-name pf-placeholder-dim">' + esc(r.name) + '</td>'
+        + (hideAtEntry ? '' : '<td class="pf-placeholder-dim">—</td>')
+        + '<td class="pf-placeholder-dim">—</td>'
+        + '<td class="pf-placeholder-dim">—</td>'
+        + '<td class="pf-loss-risk-col pf-placeholder-dim">—</td>'
+        + '<td class="pf-placeholder-dim">—</td>'
+        + '<td class="pf-placeholder-dim">—</td>'
+        + '<td class="pf-placeholder-dim">—</td>'
+        + '<td class="pf-placeholder-dim">—</td>'
+        + '<td class="al pf-spark-cell pf-placeholder-dim">—</td>'
+        + '</tr>';
+      return;
+    }
     html += '<tr>'
       + '<td class="al"><span class="pf-ticker">' + esc(r.ticker) + '</span> <span class="ccy-tag">' + esc(r.currency) + '</span></td>'
       + '<td class="al pf-name">' + esc(r.name) + '</td>'
@@ -2004,12 +2065,11 @@ function buildHeaderRow() {
   // D-PMS-40 two-row group header. Top row = group label spanning multiple cols. Bottom row = simple column name.
   // Hideable "at entry" cols carry .col-atentry class.
   var groupRow = '<tr>'
-    + '<th class="group-head group-empty" colspan="3"></th>'  // ticker + drag + slot
+    + '<th class="group-head group-investment-info" colspan="3">Investment information</th>'  // D-PMS-124: ticker + drag + slot
     + '<th class="group-head group-atentry" colspan="6">At entry</th>'  // date, %aum, pivot, pivot MA, init stop, init stop dist
-    + '<th class="group-head group-current" colspan="7">Current</th>'  // stop MA, MA→stop buffer, price, MA, stop, stop dist, value AUM (D-PMS-59)
+    + '<th class="group-head group-current" colspan="7">Current</th>'  // stop MA, MA→stop buffer, price, MA, stop, stop dist, value AUM
     + '<th class="group-head group-pnl" colspan="3">P&L</th>'  // paper, AUM, loss risk
-    + '<th class="group-head group-info" colspan="1">Information</th>'  // historical breach
-    + '<th class="group-head group-empty" colspan="1"></th>'  // clear button
+    + '<th class="group-head group-info" colspan="2">Information</th>'  // D-PMS-125: historical breach + clear button
     + '</tr>';
   var colRow = '<tr>'
     + '<th class="al">Ticker</th>'
