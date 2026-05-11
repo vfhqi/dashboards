@@ -298,9 +298,15 @@ body.hide-at-entry-cols .pf-col-entry-aum { display: none; }
 }
 .portfolio-section.pf-fullscreen .pf-table { width: 100%; }
 .portfolio-section.pf-fullscreen .pf-table tbody tr:not(.pf-totals) {
-  /* D-PMS-141: rows auto-distribute available vertical space; no max so they fill viewport when row count is small */
+  /* D-PMS-141 + D-PMS-141.1: rows auto-distribute; max-height set dynamically by JS so all rows fit viewport */
   height: auto;
   min-height: 28px;
+  max-height: var(--pf-row-max-h, 80px);
+}
+.portfolio-section.pf-fullscreen .pf-spark-cell {
+  /* spark cell respects same max so SVG doesn't push the row taller */
+  max-height: var(--pf-row-max-h, 80px);
+  overflow: hidden;
 }
 .portfolio-section.pf-fullscreen .pf-spark { height: 100%; min-height: 26px; }
 .portfolio-section.pf-fullscreen .pf-spark-cell { height: auto; padding: 4px 4px; }
@@ -2728,10 +2734,18 @@ function breachBadge(r) {
     if (!section) return;
     var rect = section.getBoundingClientRect();
     var topOffset = Math.max(rect.top, 0);
-    var bottomBuffer = 12;  // small breathing room
+    var bottomBuffer = 12;
     var available = window.innerHeight - topOffset - bottomBuffer;
-    if (available < 280) available = 280;  // floor matches CSS min-height
+    if (available < 280) available = 280;
     section.style.setProperty('--pf-max-h', available + 'px');
+    // D-PMS-141.1: cap row height so all rows fit visibly without scroll
+    var rows = section.querySelectorAll('.pf-table tbody tr:not(.pf-totals)');
+    var headerH = 48;  // h2 + meta + thead approx
+    var totalsH = 36;
+    var rowSpace = available - headerH - totalsH;
+    var rowCount = rows.length || 1;
+    var rowMaxH = Math.max(28, Math.floor(rowSpace / rowCount));
+    section.style.setProperty('--pf-row-max-h', rowMaxH + 'px');
   }
   // Run on initial load
   if (document.readyState === 'loading') {
