@@ -480,6 +480,15 @@ body.hide-at-entry-cols .pf-col-entry-aum { display: none; }
       <button class="btn pf-overlay-btn active" data-overlay="entries">Entries</button>
       <button class="btn pf-overlay-btn active" data-overlay="risk">Risk zones</button>
       <button class="btn pf-overlay-btn active" data-overlay="promo">Promotions</button>
+      <button class="btn pf-overlay-btn" data-overlay="breach" title="Tier 2: red gradient on recent bars when stop breached">Breach</button>
+      <button class="btn pf-overlay-btn" data-overlay="grace" title="Tier 2: grace clock badge (e.g. Grace 2/3)">Grace</button>
+      <button class="btn pf-overlay-btn" data-overlay="stopMaBold" title="Tier 2: bold the MA(s) used as active tranche stops">Stop MA bold</button>
+      <button class="btn pf-overlay-btn" data-overlay="filterBadges" title="Tier 3: PB / MM99 / UTR badges in top-left">MD filters</button>
+      <button class="btn pf-overlay-btn" data-overlay="thematic" title="Tier 3: composite thematic score badge top-right">Thematic</button>
+      <button class="btn pf-overlay-btn" data-overlay="w52" title="Tier 3: 52W hi/lo dashed lines">52W hi/lo</button>
+      <button class="btn pf-overlay-btn" data-overlay="cohort" title="Tier 4: faint sector cohort average line">Cohort</button>
+      <button class="btn pf-overlay-btn" data-overlay="trancheLossHeatmap" title="Tier 4: thermal heatmap from current price to deepest stop">Heatmap</button>
+      <button class="btn pf-overlay-btn" data-overlay="stageTint" title="Tier 4: faint background tint per MD stage classification">Stage tint</button>
       <span class="btn-group-spacer"></span>
       <button class="btn" id="btnOverlayPreset" title="Apply Tier-1 recommended preset (stops + entries + risk + promotions ON)">Recommended</button>
       <button class="btn" id="btnOverlayAllOn">All on</button>
@@ -3121,13 +3130,11 @@ function drawChartIntoCanvas(ticker, canvas, rowMeta) {
   if (pfChartsState.overlays.entries && rowMeta._all_edits) {
     rowMeta._all_edits.forEach(function(e) {
       if (!e.entry_date) return;
-      // Find bar matching entry_date
       var idx = -1;
       for (var bi = 0; bi < slice.length; bi++) {
         if (slice[bi].d >= e.entry_date) { idx = bi; break; }
       }
       if (idx < 0) return;
-      // Entry price = close at that bar (an approximation; could be e.entry_close if available)
       var entryPrice = slice[idx].c;
       var x = xFor(idx);
       var y = priceY(entryPrice);
@@ -3141,6 +3148,187 @@ function drawChartIntoCanvas(ticker, canvas, rowMeta) {
       ctx.closePath();
       ctx.fill();
     });
+  }
+
+  // === D-PMS-146: Breach-state shading (Tier 2) ===
+  if (pfChartsState.overlays.breach && rowMeta.breachCount > 0) {
+    var nBreachBars = 5;
+    var breachStart = Math.max(0, slice.length - nBreachBars);
+    var gradient = ctx.createLinearGradient(xFor(breachStart), 0, xFor(slice.length - 1), 0);
+    gradient.addColorStop(0, 'rgba(220,38,38,0.0)');
+    gradient.addColorStop(1, 'rgba(220,38,38,0.18)');
+    ctx.fillStyle = gradient;
+    ctx.fillRect(xFor(breachStart), priceTop, xFor(slice.length - 1) - xFor(breachStart), priceH);
+  }
+
+  // === D-PMS-147: Grace clock badge (Tier 2) ===
+  // For now: show badge if rowMeta has grace data via tranches with grace_breach flag
+  if (pfChartsState.overlays.grace && rowMeta._all_edits) {
+    // Approximation: detect "in grace" via grace_breach=true but raw_breach also set
+    // True grace state would come from runTester output — for v6.2 just show a placeholder if breach is active
+    var graceCount = (rowMeta.breachCount || 0);
+    if (graceCount > 0) {
+      ctx.fillStyle = 'rgba(245,158,11,0.95)';
+      ctx.fillRect(padL + plotW - 64, priceTop + 4, 60, 14);
+      ctx.fillStyle = '#fff';
+      ctx.font = 'bold 9px ui-sans-serif, system-ui';
+      ctx.textAlign = 'center';
+      ctx.fillText('Grace ' + graceCount, padL + plotW - 34, priceTop + 14);
+      ctx.textAlign = 'start';
+    }
+  }
+
+  // === D-PMS-148: Stop-MA bold (Tier 2) ===
+  // Re-draw the MA line for each active-tranche stop_ma with thicker stroke
+  if (pfChartsState.overlays.stopMaBold && rowMeta._all_edits) {
+    var stopMas = {};
+    rowMeta._all_edits.forEach(function(e) { if (e.stop_ma) stopMas[e.stop_ma] = true; });
+    Object.keys(stopMas).forEach(function(ma) {
+      var layer = ma.replace('D', '');
+      var layerKey = 'ma' + layer;
+      if (!pfChartsState.layers[layerKey]) return;  // layer must be on
+      ctx.strokeStyle = MA_TINTS[ma] || '#666';
+      ctx.lineWidth = 2.5;
+      ctx.beginPath();
+      var started = false;
+      slice.forEach(function(b, idx) {
+        if (b[layerKey] == null) return;
+        var y = priceY(b[layerKey]);
+        if (y == null) return;
+        var x = xFor(idx);
+        if (!started) { ctx.moveTo(x, y); started = true; }
+        else ctx.lineTo(x, y);
+      });
+      ctx.stroke();
+    });
+  }
+
+  // === D-PMS-149: MD filter badges (Tier 3) ===
+  if (pfChartsState.overlays.filterBadges) {
+    var fr = (typeof PMS_FILTER_RESULTS !== 'undefined') && PMS_FILTER_RESULTS.data && PMS_FILTER_RESULTS.data[ticker];
+    if (fr) {
+      var bx = padL + 4, by = priceTop + 4;
+      var badges = [];
+      if (fr.basing_plateau && fr.basing_plateau.stage === 'Capital') badges.push({text: 'BP', col: '#16a34a'});
+      if (fr.probing_bet && fr.probing_bet.stage === 'Capital') badges.push({text: 'PB', col: '#16a34a'});
+      if (fr.mm99 && fr.mm99.stage) badges.push({text: 'MM99', col: fr.mm99.stage === 'Capital' ? '#16a34a' : '#f59e0b'});
+      if (fr.uptrend_retest && fr.uptrend_retest.stage === 'Capital') badges.push({text: 'UTR', col: '#16a34a'});
+      badges.forEach(function(bd, bi) {
+        ctx.fillStyle = bd.col;
+        var bw = ctx.measureText(bd.text).width + 6;
+        ctx.fillRect(bx, by, bw, 12);
+        ctx.fillStyle = '#fff';
+        ctx.font = 'bold 8.5px ui-sans-serif, system-ui';
+        ctx.fillText(bd.text, bx + 3, by + 9);
+        bx += bw + 3;
+      });
+    }
+  }
+
+  // === D-PMS-150: Thematic alignment marker (Tier 3) ===
+  if (pfChartsState.overlays.thematic) {
+    var fd = (typeof PMS_FACTOR_DATA !== 'undefined') && PMS_FACTOR_DATA.data && PMS_FACTOR_DATA.data[ticker];
+    if (fd && fd.composite_thematic_score != null) {
+      var s = fd.composite_thematic_score;
+      var col = s > 0.5 ? '#16a34a' : s < -0.5 ? '#dc2626' : '#656d76';
+      var sign = s >= 0 ? '+' : '';
+      var label = sign + s.toFixed(1) + ' ' + (s > 0.5 ? 'tailwind' : s < -0.5 ? 'headwind' : 'neutral');
+      ctx.font = '9px ui-sans-serif, system-ui';
+      var tw = ctx.measureText(label).width + 8;
+      ctx.fillStyle = col;
+      ctx.fillRect(padL + plotW - tw - 2, priceTop + 4, tw, 14);
+      ctx.fillStyle = '#fff';
+      ctx.fillText(label, padL + plotW - tw + 2, priceTop + 14);
+    }
+  }
+
+  // === D-PMS-151: 52W high/low lines (Tier 3) ===
+  if (pfChartsState.overlays.w52) {
+    // Compute 52W high/low from full bars (not just slice)
+    var w52Bars = bars.slice(-260);  // ~52 weeks of trading days
+    if (w52Bars.length >= 10) {
+      var hi = -Infinity, lo = Infinity;
+      w52Bars.forEach(function(b) {
+        if (b.h != null && b.h > hi) hi = b.h;
+        if (b.l != null && b.l < lo) lo = b.l;
+      });
+      if (hi > -Infinity && lo < Infinity) {
+        var yHi = priceY(hi), yLo = priceY(lo);
+        if (yHi != null) {
+          ctx.strokeStyle = 'rgba(22,163,74,0.5)';
+          ctx.lineWidth = 1;
+          ctx.setLineDash([6, 4]);
+          ctx.beginPath();
+          ctx.moveTo(padL, yHi);
+          ctx.lineTo(padL + plotW, yHi);
+          ctx.stroke();
+          ctx.fillStyle = 'rgba(22,163,74,0.85)';
+          ctx.font = '8.5px ui-sans-serif, system-ui';
+          ctx.fillText('52W H', padL + 2, yHi - 2);
+        }
+        if (yLo != null) {
+          ctx.strokeStyle = 'rgba(220,38,38,0.5)';
+          ctx.beginPath();
+          ctx.moveTo(padL, yLo);
+          ctx.lineTo(padL + plotW, yLo);
+          ctx.stroke();
+          ctx.fillStyle = 'rgba(220,38,38,0.85)';
+          ctx.fillText('52W L', padL + 2, yLo + 9);
+        }
+        ctx.setLineDash([]);
+      }
+    }
+  }
+
+  // === D-PMS-152: Cohort comparison line (Tier 4) ===
+  // Placeholder for now — needs sector cohort data which factor pipeline does not yet aggregate.
+  // When that data is available, draw normalised mean of cohort tickers' close prices.
+  if (pfChartsState.overlays.cohort) {
+    // Draw a faint annotation indicating "cohort data not yet available"
+    ctx.fillStyle = 'rgba(101,109,118,0.5)';
+    ctx.font = 'italic 8px ui-sans-serif, system-ui';
+    ctx.fillText('(cohort: TBD)', padL + 4, priceBot - 2);
+  }
+
+  // === D-PMS-153: Tranche-loss heatmap (Tier 4) ===
+  if (pfChartsState.overlays.trancheLossHeatmap && currentPrice != null && rowMeta._all_edits && rowMeta._all_edits.length > 0) {
+    // Find deepest stop (most negative stop_distance_pct from any active tranche on this row)
+    var deepestStopPct = 0;
+    rowMeta.tranches.forEach(function(t) {
+      if (t.stop_distance_pct != null && t.stop_distance_pct < deepestStopPct) deepestStopPct = t.stop_distance_pct;
+    });
+    if (deepestStopPct < 0) {
+      var deepStopPrice = currentPrice * (1 + deepestStopPct);
+      var yTop = priceY(currentPrice);
+      var yBot = priceY(deepStopPrice);
+      if (yTop != null && yBot != null && yBot > yTop) {
+        // Gradient from cool blue (top, near current price) to hot red (bottom, near deepest stop)
+        var grad = ctx.createLinearGradient(0, yTop, 0, yBot);
+        grad.addColorStop(0, 'rgba(37,99,235,0.05)');
+        grad.addColorStop(0.5, 'rgba(245,158,11,0.10)');
+        grad.addColorStop(1, 'rgba(220,38,38,0.20)');
+        ctx.fillStyle = grad;
+        ctx.fillRect(padL, yTop, plotW, yBot - yTop);
+      }
+    }
+  }
+
+  // === D-PMS-154: Stage tint (Tier 4) ===
+  if (pfChartsState.overlays.stageTint) {
+    var fr2 = (typeof PMS_FILTER_RESULTS !== 'undefined') && PMS_FILTER_RESULTS.data && PMS_FILTER_RESULTS.data[ticker];
+    var stage = null;
+    if (fr2) {
+      // Infer stage from filters: VCP stage_2 = Stage 2; MM99 Late/Early = uptrend; s3 stage = Stage 3; etc.
+      if (fr2.vcp && fr2.vcp.stage_2_uptrend) stage = 'stage2';
+      // s3/s4 are stubbed in MD; check anyway
+      if (fr2.s3_topping && fr2.s3_topping.stage) stage = 'stage3';
+      if (fr2.s4_declining && fr2.s4_declining.stage) stage = 'stage4';
+    }
+    if (stage) {
+      var stageCols = { stage2: 'rgba(22,163,74,0.04)', stage3: 'rgba(245,158,11,0.06)', stage4: 'rgba(220,38,38,0.07)' };
+      ctx.fillStyle = stageCols[stage];
+      ctx.fillRect(padL, priceTop, plotW, priceH);
+    }
   }
 }
 
