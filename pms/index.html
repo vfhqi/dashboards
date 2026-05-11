@@ -41,6 +41,27 @@ body.scrolled-past-header .sticky-header-table-wrap { display: block; }
 /* D-PMS-141: placeholder toggle button — small, subtle */
 .pf-toggle-placeholders { font-size: 10px; padding: 2px 8px; font-weight: 500; }
 
+/* D-PMS-158: fade tranche rows with no capital deployed */
+.pos-table tr.tr-no-capital td,
+.sticky-header-table tr.tr-no-capital td {
+  color: rgba(101, 109, 118, 0.55) !important;
+  opacity: 0.65;
+}
+.pos-table tr.tr-no-capital input.edit-input,
+.pos-table tr.tr-no-capital select.edit-input {
+  opacity: 0.55;
+  color: rgba(101, 109, 118, 0.55) !important;
+}
+.pos-table tr.tr-no-capital input.edit-input:focus,
+.pos-table tr.tr-no-capital select.edit-input:focus {
+  opacity: 1;
+  color: var(--fg) !important;
+}
+.pos-table tr.tr-no-capital .slot-label,
+.pos-table tr.tr-no-capital .slot-cell {
+  opacity: 0.55;
+}
+
 /* D-PMS-126: row-end delete (btn-icon variant) is muted by default, red on hover */
 .pos-table td .btn-icon.btn-danger { background: transparent; color: rgba(120,120,120,0.55); border-color: transparent; padding: 0 4px; font-size: 12px; font-weight: 400; opacity: 0.55; transition: opacity 0.15s, color 0.15s; }
 .pos-table td .btn-icon.btn-danger:hover { color: var(--red); opacity: 1; background: var(--red-bg); border-color: rgba(207,34,46,0.3); }
@@ -318,6 +339,9 @@ body.hide-at-entry-cols .pf-col-entry-aum { display: none; }
   background: var(--bg3);
 }
 /* Totals row stays at bottom of wrap when scrolled */
+/* D-PMS-156: hide sticky-top header pane on non-pms tabs */
+body.active-tab-overview .sticky-top, body.active-tab-charts .sticky-top { display: none; }
+
 /* D-PMS-131: Tab nav */
 .pms-tabs { display: flex; gap: 2px; padding: 6px 0 0 0; margin: 0 0 12px 0; border-bottom: 2px solid var(--border); }
 .pms-tab { padding: 8px 16px; background: var(--bg2); border: 1px solid var(--border); border-bottom: none; border-radius: 6px 6px 0 0; cursor: pointer; font-size: 13px; font-weight: 600; color: var(--fg2); margin-bottom: -2px; }
@@ -511,7 +535,7 @@ body.hide-at-entry-cols .pf-col-entry-aum { display: none; }
     <!-- Help banner -->
     <div class="help-banner">
       <b>How to use:</b> 16 investment slots × 6 tranche rows (PB1, PB2, Core MM 1–4). Type <b>%AUM</b> as <kbd>3</kbd> for 3%. Pick a date + stop MA. <b>MA→stop buffer</b> defaults to 2% (= stop is MA × 0.98) and is editable per tranche. Derived columns auto-fill. <b>Drag</b> the ⋮⋮ handle to move tranches between slots — drop a PB onto an MM to promote. Cross-investment drag blocked.
-      <br><b>Slot caps:</b> PB1/2 = 2.5%, MM1 = 4%, MM2 = 3%, MM3 = 2%, MM4 = 1%. <b>PB stops</b> restricted to 20D/50D; <b>MM stops</b> any of 5 MAs.
+      <br><b>Slot caps:</b> PB1/2 = 2.5%, MM1 = 4%, MM2 = 3%, MM3 = 2%, MM4 = 1%. <b>PB stops</b>: 5D/10D/20D/50D. <b>MM stops</b>: any of 5 MAs.
       <b>Hybrid grace clock:</b> 150D/200D = immediate; 20D/50D/100D = 3 daily closes OR 1 weekly close.
       <br><b>Row colours by MA for stop-loss:</b> orange=20D, blue=50D, teal=100D, magenta=150D, slate=200D. Breach states override.
       <b>Empty slots</b> can have a ticker typed in. <b>New MM tranches</b> warn if no PB exists for that investment (override permitted for backfill). <b>Connect to disk</b> for auto-save (auto-reconnects on reload).
@@ -1649,7 +1673,7 @@ function applySparkCollapseLabel() {
 // PB1, PB2 always first (fixed). MM1-MM4 either default order, or
 // (when sortByStopMa is on) sorted by their tranche's stop_ma ascending,
 // tiebreaker = newest entry_date first.
-var MA_RANK = {'20D':0, '50D':1, '100D':2, '150D':3, '200D':4};
+var MA_RANK = {'5D':-2, '10D':-1, '20D':0, '50D':1, '100D':2, '150D':3, '200D':4};  // D-PMS-157
 function sortedTradeTypesForInvestment(invIdx) {
   if (!sortByStopMa) return TRADE_TYPES;  // ['PB1','PB2','MM1','MM2','MM3','MM4']
   var pb = ['PB1', 'PB2'];
@@ -1752,7 +1776,7 @@ function gatherPortfolioRows() {
 }
 
 // D-PMS-77: dot colours match MA tints
-var MA_DOT_COLOURS = {'20D': '#d97706', '50D': '#2563eb', '100D': '#0d9488', '150D': '#db2777', '200D': '#475569'};
+var MA_DOT_COLOURS = {'5D': '#8b0000', '10D': '#e88a9a', '20D': '#d97706', '50D': '#2563eb', '100D': '#0d9488', '150D': '#db2777', '200D': '#475569'};  // D-PMS-157
 
 // D-PMS-114 / 115 / 117 (v5k): render sparkline for one investment row using PILLS not dots.
 // Each pill = rounded-rect with the MA number ('20', '50', '100', '150', '200') tinted by MA colour.
@@ -1850,7 +1874,7 @@ function renderSparkline(tranches, axisMin, axisMax, isFirstRow) {
         if (t.loss_risk_aum != null && !isNaN(t.loss_risk_aum)) byMa[ma].sum_bps += t.loss_risk_aum;
         if (t.value_aum_pct != null && !isNaN(t.value_aum_pct)) byMa[ma].sum_aum += t.value_aum_pct;
       });
-      var rk = {'20D':0,'50D':1,'100D':2,'150D':3,'200D':4};
+      var rk = {'5D':-2,'10D':-1,'20D':0,'50D':1,'100D':2,'150D':3,'200D':4};
       mergedClusters[k] = Object.keys(byMa).map(function(ma) {
         var b = byMa[ma];
         return { stop_ma: ma, sd_anchor: b.sd_sum / b.n, n: b.n, sum_bps: b.sum_bps, sum_aum: b.sum_aum, members: b.members };
@@ -1866,7 +1890,7 @@ function renderSparkline(tranches, axisMin, axisMax, isFirstRow) {
           members: [t]
         };
       });
-      var rk2 = {'20D':0,'50D':1,'100D':2,'150D':3,'200D':4};
+      var rk2 = {'5D':-2,'10D':-1,'20D':0,'50D':1,'100D':2,'150D':3,'200D':4};
       mergedClusters[k].sort(function(a, b) { return (rk2[a.stop_ma]||5) - (rk2[b.stop_ma]||5); });
     }
   });
@@ -2405,6 +2429,10 @@ function renderTrancheRow(inv, invIdx, slotType, isFirstSlot, isPlaceholder, tot
   // D-PMS-42: MA-stop colour class (if not placeholder + has known stopMa)
   if (!isPlaceholder && stopMa) rowCls += ' ma-' + stopMa;
   if (isPlaceholder) rowCls += ' row-empty';
+  // D-PMS-158: fade rows with no capital deployed
+  if (!isPlaceholder && (edit == null || edit.target_size_pct == null || edit.target_size_pct === 0)) {
+    rowCls += ' tr-no-capital';
+  }
   if (isFirstSlot) rowCls += ' inv-separator';
   if (r && r.ok) {
     if (r.entry_warn === 'BELOW_STOP' || r.entry_warn === 'BELOW_MA_ABOVE_STOP') rowCls += ' row-warn';
@@ -2492,8 +2520,8 @@ function renderTrancheRow(inv, invIdx, slotType, isFirstSlot, isPlaceholder, tot
     cells += '<td class="col-atentry">—</td><td class="col-atentry">—</td><td class="col-atentry">—</td><td class="col-atentry">—</td>';
   }
   // === Current group: Stop MA dropdown + MA→stop buffer + 4 derived ===
-  // D-PMS-37: PB1/PB2 restricted to 20D/50D; MM1-4 all 5 options
-  var maOptions = PB_TYPES[slotType] ? ['20D','50D'] : ['20D','50D','100D','150D','200D'];
+  // D-PMS-37 + D-PMS-157: PB1/PB2 now include 5D/10D/20D/50D; MM1-4 all 5 options
+  var maOptions = PB_TYPES[slotType] ? ['5D','10D','20D','50D'] : ['20D','50D','100D','150D','200D'];
   cells += '<td class="col-group-start col-key-bold"><select class="edit-input ma" '
     + (isPlaceholder ? 'disabled' : '')
     + ' onchange="setEditField(' + invIdx + ',\'' + slotType + '\',\'stop_ma\',this.value)">';
@@ -3484,6 +3512,8 @@ function wireChartsToolbar() {
       var tab = document.querySelector('.pms-tab[data-pane="' + p + '"]');
       if (pane) pane.classList.toggle('active', p === name);
       if (tab) tab.classList.toggle('active', p === name);
+      // D-PMS-156: body class drives sticky-top visibility (hidden on overview + charts)
+      document.body.classList.toggle('active-tab-' + p, p === name);
     });
     try { localStorage.setItem('pms_active_tab_v6', name); } catch(e) {}
     // Update hash if not already
