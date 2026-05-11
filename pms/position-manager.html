@@ -310,6 +310,49 @@ body.hide-at-entry-cols .pf-col-entry-aum { display: none; }
   background: var(--bg3);
 }
 /* Totals row stays at bottom of wrap when scrolled */
+/* D-PMS-131: Tab nav */
+.pms-tabs { display: flex; gap: 2px; padding: 6px 0 0 0; margin: 0 0 12px 0; border-bottom: 2px solid var(--border); }
+.pms-tab { padding: 8px 16px; background: var(--bg2); border: 1px solid var(--border); border-bottom: none; border-radius: 6px 6px 0 0; cursor: pointer; font-size: 13px; font-weight: 600; color: var(--fg2); margin-bottom: -2px; }
+.pms-tab:hover { background: var(--bg3); color: var(--fg); }
+.pms-tab.active { background: var(--bg); color: var(--fg); border-bottom: 2px solid var(--bg); position: relative; z-index: 2; }
+.tab-pane { display: none; }
+.tab-pane.active { display: block; }
+.pms-tabs-info { margin-left: auto; align-self: center; font-size: 11px; color: var(--fg3); padding: 0 8px; }
+
+/* D-PMS-133: Portfolio Charts page */
+.pf-charts-toolbar { display: flex; align-items: center; gap: 6px; padding: 8px 0; margin-bottom: 8px; flex-wrap: wrap; border-bottom: 1px solid var(--border); }
+.pf-charts-label { font-size: 11px; color: var(--fg2); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; margin: 0 4px 0 8px; }
+.pf-density-btn.active, .pf-sort-btn.active, .pf-period-btn.active { background: var(--accent, #0969da); color: #fff; }
+.pf-charts-info { margin-left: auto; font-size: 11px; color: var(--fg3); }
+.pf-charts-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.pf-charts-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
+.pf-charts-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+.pf-charts-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+.pf-charts-grid.cols-1 { grid-template-columns: 1fr; }
+.pf-chart-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 8px; min-height: 220px; display: flex; flex-direction: column; }
+.pf-chart-header { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; font-size: 12px; }
+.pf-chart-header .pf-chart-ticker { font-weight: 700; font-family: var(--mono); font-size: 12px; }
+.pf-chart-header .pf-chart-name { color: var(--fg2); font-size: 11px; }
+.pf-chart-header .pf-chart-loss-risk { margin-left: auto; font-family: var(--mono); font-weight: 700; font-size: 11px; }
+.pf-chart-canvas-wrap { flex: 1 1 auto; min-height: 180px; position: relative; }
+.pf-chart-canvas-wrap canvas { width: 100% !important; height: 100% !important; display: block; }
+.pf-chart-no-data { color: var(--fg3); font-size: 11px; text-align: center; padding: 60px 8px; font-style: italic; }
+
+/* D-PMS-132 + D-PMS-133: Portfolio Overview + Portfolio Charts placeholders */
+.pf-overview-placeholder, .pf-charts-placeholder, .pf-report-card {
+  padding: 24px;
+  margin: 16px 0;
+  background: var(--bg2);
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  text-align: center;
+  color: var(--fg2);
+  font-size: 13px;
+}
+.pf-report-card { margin-top: 24px; text-align: left; }
+.pf-report-card h2 { font-size: 14px; font-weight: 600; color: var(--fg); margin: 0 0 8px 0; }
+.pf-report-card .pf-report-status { font-style: italic; color: var(--fg3); }
+
 .portfolio-section.pf-fullscreen .pf-table tr.pf-totals td {
   position: sticky;
   bottom: 0;
@@ -352,30 +395,77 @@ body.hide-at-entry-cols .pf-col-entry-aum { display: none; }
     </div>
   </div>
 
+  <!-- D-PMS-131: Tab navigation -->
+  <nav class="pms-tabs" id="pmsTabs">
+    <button class="pms-tab" data-pane="overview" id="tabOverview">Portfolio overview</button>
+    <button class="pms-tab" data-pane="charts" id="tabCharts">Portfolio charts</button>
+    <button class="pms-tab" data-pane="pms" id="tabPms">Position manager</button>
+    <span class="pms-tabs-info" id="pmsTabsInfo"></span>
+  </nav>
+
   <div id="errorBox"></div>
   <div id="successBox"></div>
 
-  <!-- KPI cards (not sticky, scrolls with page) -->
-  <div class="portfolio-summary" id="portfolioSummary"></div>
-
-  <!-- Help banner -->
-  <div class="help-banner">
-    <b>How to use:</b> 16 investment slots × 6 tranche rows (PB1, PB2, Core MM 1–4). Type <b>%AUM</b> as <kbd>3</kbd> for 3%. Pick a date + stop MA. <b>MA→stop buffer</b> defaults to 2% (= stop is MA × 0.98) and is editable per tranche. Derived columns auto-fill. <b>Drag</b> the ⋮⋮ handle to move tranches between slots — drop a PB onto an MM to promote. Cross-investment drag blocked.
-    <br><b>Slot caps:</b> PB1/2 = 2.5%, MM1 = 4%, MM2 = 3%, MM3 = 2%, MM4 = 1%. <b>PB stops</b> restricted to 20D/50D; <b>MM stops</b> any of 5 MAs.
-    <b>Hybrid grace clock:</b> 150D/200D = immediate; 20D/50D/100D = 3 daily closes OR 1 weekly close.
-    <br><b>Row colours by MA for stop-loss:</b> orange=20D, blue=50D, teal=100D, magenta=150D, slate=200D. Breach states override.
-    <b>Empty slots</b> can have a ticker typed in (must be one of the 9 in chart data). <b>New MM tranches</b> warn if no PB exists for that investment (override permitted for backfill). <b>Connect to disk</b> for auto-save (auto-reconnects on reload).
+  <!-- D-PMS-131: tab panes -->
+  <!-- PANE 1: Portfolio Overview (default landing in v6.1) -->
+  <div class="tab-pane" id="pane-overview">
+    <!-- D-PMS-73 to D-PMS-77: PORTFOLIO section (one row per live investment) -->
+    <div class="portfolio-section pf-fullscreen" id="portfolioSection"></div>
+    <!-- D-PMS-136: Portfolio Report placeholder -->
+    <div class="pf-report-card" id="portfolioReport">
+      <h2>Portfolio report</h2>
+      <div class="pf-report-status">Briefing pending. Richard to deliver SOP brief. Report content will populate here once briefed.</div>
+    </div>
   </div>
 
-  <!-- Stop breach alerts -->
-  <div class="alert-banner" id="alertBanner"></div>
+  <!-- PANE 2: Portfolio Charts (D-PMS-133) -->
+  <div class="tab-pane" id="pane-charts">
+    <div class="pf-charts-toolbar" id="pfChartsToolbar">
+      <span class="pf-charts-label">Grid density:</span>
+      <button class="btn pf-density-btn" data-cols="4">4 across</button>
+      <button class="btn pf-density-btn" data-cols="3">3 across</button>
+      <button class="btn pf-density-btn" data-cols="2">2 across</button>
+      <button class="btn pf-density-btn" data-cols="1">1 across</button>
+      <span class="btn-group-spacer"></span>
+      <span class="pf-charts-label">Sort by:</span>
+      <button class="btn pf-sort-btn" data-sort="ticker">Ticker</button>
+      <button class="btn pf-sort-btn" data-sort="lossRisk">Loss risk</button>
+      <button class="btn pf-sort-btn" data-sort="valueAum">Current %AUM</button>
+      <span class="btn-group-spacer"></span>
+      <span class="pf-charts-label">Period:</span>
+      <button class="btn pf-period-btn" data-period="1M">1M</button>
+      <button class="btn pf-period-btn" data-period="3M">3M</button>
+      <button class="btn pf-period-btn active" data-period="6M">6M</button>
+      <button class="btn pf-period-btn" data-period="12M">12M</button>
+      <button class="btn pf-period-btn" data-period="2Y">2Y</button>
+      <button class="btn pf-period-btn" data-period="3Y">3Y</button>
+      <button class="btn pf-period-btn" data-period="5Y">5Y</button>
+      <span class="pf-charts-info" id="pfChartsInfo"></span>
+    </div>
+    <div class="pf-charts-grid" id="pfChartsGrid"></div>
+  </div>
 
-  <!-- D-PMS-73 to D-PMS-77: PORTFOLIO section (one row per live investment) -->
-  <div class="portfolio-section pf-fullscreen" id="portfolioSection"></div>
+  <!-- PANE 3: Position Manager (existing content) -->
+  <div class="tab-pane" id="pane-pms">
+    <!-- KPI cards -->
+    <div class="portfolio-summary" id="portfolioSummary"></div>
 
-  <!-- Main table -->
-  <div class="table-wrap">
-    <table class="pos-table" id="posTable"></table>
+    <!-- Help banner -->
+    <div class="help-banner">
+      <b>How to use:</b> 16 investment slots × 6 tranche rows (PB1, PB2, Core MM 1–4). Type <b>%AUM</b> as <kbd>3</kbd> for 3%. Pick a date + stop MA. <b>MA→stop buffer</b> defaults to 2% (= stop is MA × 0.98) and is editable per tranche. Derived columns auto-fill. <b>Drag</b> the ⋮⋮ handle to move tranches between slots — drop a PB onto an MM to promote. Cross-investment drag blocked.
+      <br><b>Slot caps:</b> PB1/2 = 2.5%, MM1 = 4%, MM2 = 3%, MM3 = 2%, MM4 = 1%. <b>PB stops</b> restricted to 20D/50D; <b>MM stops</b> any of 5 MAs.
+      <b>Hybrid grace clock:</b> 150D/200D = immediate; 20D/50D/100D = 3 daily closes OR 1 weekly close.
+      <br><b>Row colours by MA for stop-loss:</b> orange=20D, blue=50D, teal=100D, magenta=150D, slate=200D. Breach states override.
+      <b>Empty slots</b> can have a ticker typed in. <b>New MM tranches</b> warn if no PB exists for that investment (override permitted for backfill). <b>Connect to disk</b> for auto-save (auto-reconnects on reload).
+    </div>
+
+    <!-- Stop breach alerts -->
+    <div class="alert-banner" id="alertBanner"></div>
+
+    <!-- Main table -->
+    <div class="table-wrap">
+      <table class="pos-table" id="posTable"></table>
+    </div>
   </div>
 
 </div>
@@ -423,6 +513,8 @@ body.hide-at-entry-cols .pf-col-entry-aum { display: none; }
 <script src="pms-chart-data.js"></script>
 <script src="pms-filter-results.js"></script>
 <script src="pms-universe.js"></script>  <!-- D-PMS-71 -->
+<script src="pms-factor-data.js"></script>  <!-- D-PMS-130 -->
+<script src="chart-renderer.js"></script>  <!-- D-PMS-129: shared MD chart-renderer -->
 
 <script>
 /* =========================================================================
@@ -2578,6 +2670,285 @@ function breachBadge(r) {
     }
   });
 })();
+
+// === D-PMS-133: Portfolio Charts grid ===
+var pfChartsState = {
+  cols: 4,
+  sortKey: 'lossRisk',  // default: most-negative first (matches Portfolio Overview default)
+  sortDir: 'asc',
+  period: '6M',
+};
+try {
+  var saved = localStorage.getItem('pms_charts_state_v6');
+  if (saved) Object.assign(pfChartsState, JSON.parse(saved));
+} catch(e) {}
+function _saveChartsState() {
+  try { localStorage.setItem('pms_charts_state_v6', JSON.stringify(pfChartsState)); } catch(e) {}
+}
+
+function gatherChartsRows() {
+  // Reuse gatherPortfolioRows() logic — but only LIVE positions (no placeholders)
+  if (typeof gatherPortfolioRows !== 'function') return [];
+  var rows = gatherPortfolioRows();
+  return rows.filter(function(r) { return !r._is_placeholder; });
+}
+
+function renderChartsGrid() {
+  var el = document.getElementById('pfChartsGrid');
+  if (!el) return;
+  var rows = gatherChartsRows();
+  // Sort
+  var sk = pfChartsState.sortKey;
+  var sd = pfChartsState.sortDir === 'desc' ? -1 : 1;
+  rows.sort(function(a, b) {
+    var av = a[sk], bv = b[sk];
+    if (av == null && bv == null) return 0;
+    if (av == null) return 1;
+    if (bv == null) return -1;
+    if (typeof av === 'string') return av.localeCompare(bv) * sd;
+    return (av - bv) * sd;
+  });
+  // Set grid density
+  el.className = 'pf-charts-grid cols-' + pfChartsState.cols;
+  // Build cards
+  var html = '';
+  if (rows.length === 0) {
+    html = '<div class="pf-charts-placeholder">No live positions to chart.</div>';
+  } else {
+    rows.forEach(function(r, i) {
+      var canvasId = 'pfChart_' + r.ticker.replace(/[^a-zA-Z0-9]/g, '_');
+      html += '<div class="pf-chart-card" data-ticker="' + esc(r.ticker) + '">'
+        + '<div class="pf-chart-header">'
+        +   '<span class="pf-chart-ticker">' + esc(r.ticker) + '</span>'
+        +   '<span class="pf-chart-name">' + esc(r.name || '') + '</span>'
+        +   '<span class="pf-chart-loss-risk ' + lossRiskCls(r.atRisk) + '">' + pctBp(r.atRisk) + '</span>'
+        + '</div>'
+        + '<div class="pf-chart-canvas-wrap">'
+        +   '<canvas id="' + canvasId + '"></canvas>'
+        + '</div>'
+        + '</div>';
+    });
+  }
+  el.innerHTML = html;
+  // Render each chart
+  rows.forEach(function(r) {
+    var canvasId = 'pfChart_' + r.ticker.replace(/[^a-zA-Z0-9]/g, '_');
+    var canvas = document.getElementById(canvasId);
+    if (!canvas) return;
+    drawChartIntoCanvas(r.ticker, canvas);
+  });
+  // Info line
+  var info = document.getElementById('pfChartsInfo');
+  if (info) info.textContent = rows.length + ' live position' + (rows.length === 1 ? '' : 's') + ' · period ' + pfChartsState.period;
+}
+
+function drawChartIntoCanvas(ticker, canvas) {
+  // Use the chart data we already have in PMS_CHART_DATA + pms-charts via the loadTickerChart pipeline.
+  // For now, draw a simple line chart of the close price for the period.
+  // Future: wire to MD_CHART_RENDERER once the canvas-target adapter is complete.
+  if (!canvas) return;
+  var bars = (PMS_CHART_DATA && PMS_CHART_DATA.data && PMS_CHART_DATA.data[ticker]) || null;
+  if (!bars || !bars.length) {
+    var wrap = canvas.parentElement;
+    if (wrap) wrap.innerHTML = '<div class="pf-chart-no-data">No chart data for ' + esc(ticker) + ' (run pipeline to refresh)</div>';
+    return;
+  }
+  // Slice by period
+  var periodDays = { '1M': 22, '3M': 66, '6M': 130, '12M': 260, '2Y': 520, '3Y': 780, '5Y': 1300 }[pfChartsState.period] || 130;
+  var slice = bars.slice(-periodDays);
+  if (!slice.length) {
+    canvas.getContext('2d').fillText('No data for period', 10, 30);
+    return;
+  }
+  // Compute canvas size
+  var dpr = window.devicePixelRatio || 1;
+  var rect = canvas.getBoundingClientRect();
+  var w = rect.width || 300;
+  var h = rect.height || 180;
+  canvas.width = w * dpr;
+  canvas.height = h * dpr;
+  var ctx = canvas.getContext('2d');
+  ctx.scale(dpr, dpr);
+  ctx.clearRect(0, 0, w, h);
+  // Find price range
+  var closes = slice.map(function(b) { return b.c; }).filter(function(c) { return c != null; });
+  var minC = Math.min.apply(null, closes), maxC = Math.max.apply(null, closes);
+  var rangeC = maxC - minC || 1;
+  // Padding
+  var padL = 36, padR = 6, padT = 8, padB = 18;
+  var plotW = w - padL - padR;
+  var plotH = h - padT - padB;
+  // Draw axis
+  ctx.strokeStyle = '#d0d7de'; ctx.lineWidth = 0.5;
+  ctx.beginPath(); ctx.moveTo(padL, padT); ctx.lineTo(padL, padT + plotH); ctx.lineTo(padL + plotW, padT + plotH); ctx.stroke();
+  // Price ticks (3 ticks)
+  ctx.fillStyle = '#656d76'; ctx.font = '9px ui-sans-serif, system-ui';
+  for (var i = 0; i <= 3; i++) {
+    var p = minC + (rangeC * (3 - i) / 3);
+    var y = padT + plotH * i / 3;
+    ctx.fillText(p.toFixed(p < 10 ? 2 : p < 100 ? 1 : 0), 4, y + 3);
+    ctx.beginPath(); ctx.moveTo(padL, y); ctx.lineTo(padL + plotW, y); ctx.strokeStyle = i === 0 || i === 3 ? '#d0d7de' : '#eaeef2'; ctx.stroke();
+  }
+  // Close-price line
+  ctx.strokeStyle = '#0969da'; ctx.lineWidth = 1.5;
+  ctx.beginPath();
+  slice.forEach(function(b, idx) {
+    if (b.c == null) return;
+    var x = padL + (plotW * idx / (slice.length - 1));
+    var y = padT + plotH * (1 - (b.c - minC) / rangeC);
+    if (idx === 0) ctx.moveTo(x, y);
+    else ctx.lineTo(x, y);
+  });
+  ctx.stroke();
+  // MA50 if present
+  if (slice[0].ma50 !== undefined) {
+    ctx.strokeStyle = '#2563eb'; ctx.lineWidth = 1; ctx.beginPath();
+    var started = false;
+    slice.forEach(function(b, idx) {
+      if (b.ma50 == null) return;
+      var x = padL + (plotW * idx / (slice.length - 1));
+      var y = padT + plotH * (1 - (b.ma50 - minC) / rangeC);
+      if (!started) { ctx.moveTo(x, y); started = true; }
+      else ctx.lineTo(x, y);
+    });
+    ctx.stroke();
+  }
+  // MA200 if present
+  if (slice[0].ma200 !== undefined) {
+    ctx.strokeStyle = '#475569'; ctx.lineWidth = 1; ctx.beginPath();
+    var started2 = false;
+    slice.forEach(function(b, idx) {
+      if (b.ma200 == null) return;
+      var x = padL + (plotW * idx / (slice.length - 1));
+      var y = padT + plotH * (1 - (b.ma200 - minC) / rangeC);
+      if (!started2) { ctx.moveTo(x, y); started2 = true; }
+      else ctx.lineTo(x, y);
+    });
+    ctx.stroke();
+  }
+}
+
+// Wire up charts toolbar buttons
+function wireChartsToolbar() {
+  document.querySelectorAll('.pf-density-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      pfChartsState.cols = parseInt(btn.getAttribute('data-cols'), 10);
+      document.querySelectorAll('.pf-density-btn').forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      _saveChartsState();
+      renderChartsGrid();
+    });
+  });
+  document.querySelectorAll('.pf-sort-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var k = btn.getAttribute('data-sort');
+      if (pfChartsState.sortKey === k) {
+        pfChartsState.sortDir = pfChartsState.sortDir === 'asc' ? 'desc' : 'asc';
+      } else {
+        pfChartsState.sortKey = k;
+        pfChartsState.sortDir = (k === 'ticker') ? 'asc' : 'asc';  // lossRisk asc = most-negative first
+      }
+      document.querySelectorAll('.pf-sort-btn').forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      _saveChartsState();
+      renderChartsGrid();
+    });
+  });
+  document.querySelectorAll('.pf-period-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      pfChartsState.period = btn.getAttribute('data-period');
+      document.querySelectorAll('.pf-period-btn').forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      _saveChartsState();
+      renderChartsGrid();
+    });
+  });
+  // Apply saved state to button visuals
+  document.querySelectorAll('.pf-density-btn').forEach(function(b) {
+    if (parseInt(b.getAttribute('data-cols'), 10) === pfChartsState.cols) b.classList.add('active');
+  });
+  document.querySelectorAll('.pf-sort-btn').forEach(function(b) {
+    if (b.getAttribute('data-sort') === pfChartsState.sortKey) b.classList.add('active');
+  });
+  document.querySelectorAll('.pf-period-btn').forEach(function(b) {
+    if (b.getAttribute('data-period') === pfChartsState.period) b.classList.add('active');
+    else b.classList.remove('active');
+  });
+}
+
+// Initial render: hook into the tab-activate flow
+(function() {
+  function chartsInit() {
+    wireChartsToolbar();
+    // Render now if visible, else render on tab switch
+    if (document.getElementById('pane-charts') && document.getElementById('pane-charts').classList.contains('active')) {
+      renderChartsGrid();
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', chartsInit);
+  } else {
+    chartsInit();
+  }
+})();
+
+// === D-PMS-131: Tab nav + hash routing ===
+(function() {
+  var PANES = ['overview', 'charts', 'pms'];
+  function activateTab(name) {
+    if (!name || PANES.indexOf(name) === -1) name = 'overview';
+    PANES.forEach(function(p) {
+      var pane = document.getElementById('pane-' + p);
+      var tab = document.querySelector('.pms-tab[data-pane="' + p + '"]');
+      if (pane) pane.classList.toggle('active', p === name);
+      if (tab) tab.classList.toggle('active', p === name);
+    });
+    try { localStorage.setItem('pms_active_tab_v6', name); } catch(e) {}
+    // Update hash if not already
+    var desiredHash = '#' + name;
+    if (window.location.hash !== desiredHash) {
+      try { history.replaceState(null, '', desiredHash); } catch(e) {}
+    }
+    // After tab switch, re-fit Portfolio summary to viewport (it may have hidden cells)
+    if (name === 'overview' && typeof fitPortfolioToViewport === 'function') {
+      setTimeout(fitPortfolioToViewport, 80);
+    }
+    if (name === 'charts' && typeof renderChartsGrid === 'function') {
+      setTimeout(renderChartsGrid, 80);
+    }
+  }
+  function getInitialTab() {
+    // 1. URL hash
+    var h = window.location.hash.replace('#', '');
+    if (h && PANES.indexOf(h) !== -1) return h;
+    // 2. localStorage
+    try {
+      var saved = localStorage.getItem('pms_active_tab_v6');
+      if (saved && PANES.indexOf(saved) !== -1) return saved;
+    } catch(e) {}
+    // 3. Default
+    return 'overview';
+  }
+  // Wire tab clicks
+  document.querySelectorAll('.pms-tab').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      activateTab(btn.getAttribute('data-pane'));
+    });
+  });
+  // Hashchange (manual URL edit / back-forward)
+  window.addEventListener('hashchange', function() {
+    var h = window.location.hash.replace('#', '');
+    if (PANES.indexOf(h) !== -1) activateTab(h);
+  });
+  // Initial activation
+  function init() { activateTab(getInitialTab()); }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+
 </script>
 
 </body>
