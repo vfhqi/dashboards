@@ -243,7 +243,7 @@ body.hide-at-entry-cols .pf-col-entry-aum { display: none; }
 .pf-table th.pf-sortable:hover { background: var(--bg2); color: var(--fg); }
 .pf-sort-arrow { color: var(--blue); font-size: 9px; margin-left: 2px; }
 .pf-table th.al { text-align: left; }
-.pf-table td { padding: 1px 8px; border-bottom: 1px solid rgba(208,215,222,0.5); text-align: right; font-family: var(--mono); font-size: 11.5px; vertical-align: middle; line-height: 1.15; height: 22px; box-sizing: border-box; }  /* D-PMS-93 #2: half-height portfolio rows */
+.pf-table td { padding: 1px 8px; border-bottom: 1px solid rgba(208,215,222,0.5); text-align: right; font-family: var(--mono); font-size: 11.5px; vertical-align: middle; line-height: 1.15; box-sizing: border-box; }  /* D-PMS-93 #2: half-height portfolio rows */
 .pf-table td.al { text-align: left; font-family: var(--font); }
 .pf-table tr.pf-totals td { font-weight: 700; background: rgba(9,105,218,0.04); border-top: 2px solid var(--border); }
 /* D-PMS-83: bold the Loss risk column (header + body) */
@@ -270,18 +270,22 @@ body.hide-at-entry-cols .pf-col-entry-aum { display: none; }
 .pf-spark-pill-label { font-size: 8px; font-family: ui-sans-serif, system-ui, 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 700; letter-spacing: 0.1px; pointer-events: none; }
 .pf-spark-pill-count { font-size: 6px; font-family: ui-sans-serif, system-ui, 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 700; pointer-events: none; opacity: 0.85; }
 /* D-PMS-117: key in section title strip */
-.pf-spark-key-strip { display: inline-flex; gap: 12px; align-items: center; margin-left: 12px; font-size: 9px; color: var(--fg2); font-style: italic; vertical-align: middle; font-weight: normal; text-transform: none; letter-spacing: 0; }
-.pf-spark-header-wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
-.pf-spark-header-title { display: inline-block; }
+.pf-spark-key-strip { display: flex; flex-wrap: wrap; gap: 10px 12px; align-items: center; justify-content: center; margin-left: 0; margin-top: 4px; font-size: 9px; color: var(--fg2); font-style: italic; font-weight: normal; text-transform: none; letter-spacing: 0; line-height: 1.4; max-width: 100%; }
+.pf-spark-header-wrap { display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: 2px; width: 100%; }
+.pf-spark-header-title { display: block; text-align: center; width: 100%; }
+.pf-spark-key-strip > span { white-space: nowrap; }
 .pf-spark-key-strip .pf-key-bps { color: #b91c1c; font-weight: 600; font-style: normal; }
 .pf-spark-key-strip .pf-key-aum { color: var(--fg); font-weight: 700; font-style: normal; }
 .pf-spark-key-strip .pf-key-pill-row { display: inline-flex; gap: 4px; align-items: center; }
 .pf-spark-key-strip .pf-key-pill { display: inline-block; min-width: 18px; padding: 1px 4px; border-radius: 3px; color: #fff; font-size: 9px; font-weight: 700; font-style: normal; text-align: center; line-height: 1.2; }
 /* D-PMS-116: portfolio section fills viewport */
-.portfolio-section.pf-fullscreen { min-height: calc(100vh - 280px); display: flex; flex-direction: column; }
-.portfolio-section.pf-fullscreen .portfolio-table-wrap { flex: 1 1 auto; overflow-y: auto; }
-.portfolio-section.pf-fullscreen .pf-table { height: 100%; }
-.portfolio-section.pf-fullscreen .pf-table tbody tr { height: 1px; }  /* lets row distribute height */
+.portfolio-section.pf-fullscreen { min-height: calc(100vh - 200px); display: flex; flex-direction: column; }
+.portfolio-section.pf-fullscreen .portfolio-table-wrap { flex: 1 1 auto; overflow-y: auto; min-height: 0; }
+.portfolio-section.pf-fullscreen .pf-table { height: 100%; min-height: 100%; }
+.portfolio-section.pf-fullscreen .pf-table tbody { height: 100%; }
+.portfolio-section.pf-fullscreen .pf-table tbody tr:not(.pf-totals) { height: auto; }  /* D-PMS-139: rows distribute vertical space */
+.portfolio-section.pf-fullscreen .pf-spark { height: 100%; min-height: 32px; max-height: 80px; }  /* sparklines fill cell, capped */
+.portfolio-section.pf-fullscreen .pf-spark-cell { height: auto; padding: 4px 4px; }
 .pf-spark-key { font-size: 7.5px; font-family: ui-sans-serif, system-ui, 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif; font-style: italic; opacity: 0.85; }
 /* D-PMS-88: gridlines */
 .pf-spark-major { stroke: var(--border); stroke-width: 0.6; opacity: 0.85; }
@@ -427,7 +431,7 @@ var pendingPromote = null;
 var hideAtEntry = false;
 var hideAlerts = false;  // D-PMS-98: toggle to hide red alert banner + orange warn-line rows
 var sparkCollapsed = false;  // D-PMS-115: toggle to collapse same-MA tranches into single pills with summed totals
-var pfSort = { key: 'atRisk', dir: 'desc' };  // D-PMS-120: default sort = Loss Risk desc
+var pfSort = { key: 'atRisk', dir: 'asc' };  // D-PMS-138: default sort = Loss Risk ascending (most-negative first; placeholders pinned to bottom separately)
 
 // D-PMS-70 sort-by-stop-MA view state (Core MM only; PB1/PB2 stay fixed)
 var sortByStopMa = false;
@@ -1694,7 +1698,7 @@ function renderSparkline(tranches, axisMin, axisMax, isFirstRow) {
     return n.toFixed(1) + '%';
   }
 
-  var svg = '<svg class="pf-spark" width="100%" height="' + totalHeight + '" viewBox="0 0 ' + vbWidth + ' ' + totalHeight + '" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">';
+  var svg = '<svg class="pf-spark" width="100%" height="100%" viewBox="0 0 ' + vbWidth + ' ' + totalHeight + '" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="min-height:' + totalHeight + 'px;">';
   // Gridlines
   var gridTop = topPad;
   var gridBot = baselineY + pillH / 2 + maPostPillH;
@@ -1913,12 +1917,23 @@ function renderPortfolioSection() {
   if (pfSort && pfSort.key) {
     var sortKey = pfSort.key, sortDir = pfSort.dir === 'desc' ? -1 : 1;
     rows.sort(function(a, b) {
+      // D-PMS-138: placeholders ALWAYS at bottom, regardless of sort
+      if (a._is_placeholder && !b._is_placeholder) return 1;
+      if (!a._is_placeholder && b._is_placeholder) return -1;
+      if (a._is_placeholder && b._is_placeholder) return 0;
       var av = a[sortKey], bv = b[sortKey];
       if (av == null && bv == null) return 0;
       if (av == null) return 1;
       if (bv == null) return -1;
       if (typeof av === 'string') return av.localeCompare(bv) * sortDir;
       return (av - bv) * sortDir;
+    });
+  } else {
+    // D-PMS-138: even with no sort, push placeholders to bottom (stable order otherwise)
+    rows.sort(function(a, b) {
+      if (a._is_placeholder && !b._is_placeholder) return 1;
+      if (!a._is_placeholder && b._is_placeholder) return -1;
+      return 0;
     });
   }
   if (!rows.length) {
