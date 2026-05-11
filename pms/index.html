@@ -279,13 +279,42 @@ body.hide-at-entry-cols .pf-col-entry-aum { display: none; }
 .pf-spark-key-strip .pf-key-pill-row { display: inline-flex; gap: 4px; align-items: center; }
 .pf-spark-key-strip .pf-key-pill { display: inline-block; min-width: 18px; padding: 1px 4px; border-radius: 3px; color: #fff; font-size: 9px; font-weight: 700; font-style: normal; text-align: center; line-height: 1.2; }
 /* D-PMS-116: portfolio section fills viewport */
-.portfolio-section.pf-fullscreen { min-height: calc(100vh - 200px); display: flex; flex-direction: column; }
-.portfolio-section.pf-fullscreen .portfolio-table-wrap { flex: 1 1 auto; overflow-y: auto; min-height: 0; }
-.portfolio-section.pf-fullscreen .pf-table { height: 100%; min-height: 100%; }
-.portfolio-section.pf-fullscreen .pf-table tbody { height: 100%; }
-.portfolio-section.pf-fullscreen .pf-table tbody tr:not(.pf-totals) { height: auto; }  /* D-PMS-139: rows distribute vertical space */
-.portfolio-section.pf-fullscreen .pf-spark { height: 100%; min-height: 32px; max-height: 80px; }  /* sparklines fill cell, capped */
+.portfolio-section.pf-fullscreen {
+  /* D-PMS-139.1: dynamically fit viewport. JS sets --pf-max-h on load + resize. */
+  height: var(--pf-max-h, calc(100vh - 220px));
+  max-height: var(--pf-max-h, calc(100vh - 220px));
+  min-height: 280px;  /* never collapse smaller than this */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;  /* contents must scroll inside */
+}
+.portfolio-section.pf-fullscreen .portfolio-table-wrap {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  min-height: 0;  /* allow shrink */
+}
+.portfolio-section.pf-fullscreen .pf-table { width: 100%; }
+.portfolio-section.pf-fullscreen .pf-table tbody tr:not(.pf-totals) {
+  /* Rows can grow but have a max — when too many rows for viewport, wrap scrolls */
+  height: auto;
+  min-height: 28px;
+  max-height: 80px;
+}
+.portfolio-section.pf-fullscreen .pf-spark { height: 100%; min-height: 26px; max-height: 70px; }
 .portfolio-section.pf-fullscreen .pf-spark-cell { height: auto; padding: 4px 4px; }
+/* The thead row stays put inside the scrollable wrap via sticky positioning */
+.portfolio-section.pf-fullscreen .pf-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: var(--bg3);
+}
+/* Totals row stays at bottom of wrap when scrolled */
+.portfolio-section.pf-fullscreen .pf-table tr.pf-totals td {
+  position: sticky;
+  bottom: 0;
+  z-index: 4;
+}
 .pf-spark-key { font-size: 7.5px; font-family: ui-sans-serif, system-ui, 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif; font-style: italic; opacity: 0.85; }
 /* D-PMS-88: gridlines */
 .pf-spark-major { stroke: var(--border); stroke-width: 0.6; opacity: 0.85; }
@@ -2517,6 +2546,38 @@ function breachBadge(r) {
   if (r.breach.raw_breach) return '<span class="badge b-warn">raw ' + esc(fmtDate(r.breach.raw_breach.breach_date)) + '</span>';
   return '<span class="badge b-active">no</span>';
 }
+
+
+// === D-PMS-139.1: dynamically fit Portfolio summary to viewport ===
+(function() {
+  function fitPortfolioToViewport() {
+    var section = document.querySelector('.portfolio-section.pf-fullscreen');
+    if (!section) return;
+    var rect = section.getBoundingClientRect();
+    var topOffset = Math.max(rect.top, 0);
+    var bottomBuffer = 12;  // small breathing room
+    var available = window.innerHeight - topOffset - bottomBuffer;
+    if (available < 280) available = 280;  // floor matches CSS min-height
+    section.style.setProperty('--pf-max-h', available + 'px');
+  }
+  // Run on initial load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', fitPortfolioToViewport);
+  } else {
+    fitPortfolioToViewport();
+  }
+  // Run after layout settles (renderPortfolioSection may have run after DOMContentLoaded)
+  setTimeout(fitPortfolioToViewport, 100);
+  setTimeout(fitPortfolioToViewport, 500);
+  // Re-run on resize
+  window.addEventListener('resize', fitPortfolioToViewport);
+  // Re-run on hide-toggle / sort-clicks (those re-render and may change section_top)
+  document.addEventListener('click', function(e) {
+    if (e.target.closest('#btnHideAtEntry, #btnHideAlerts, .pf-sortable, #btnSparkCollapse, #btnSortByStopMa')) {
+      setTimeout(fitPortfolioToViewport, 50);
+    }
+  });
+})();
 </script>
 
 </body>
