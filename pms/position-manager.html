@@ -609,7 +609,7 @@ var BUFFER = 0.02;
 var TRADE_TYPES = ['PB1','PB2','MM1','MM2','MM3','MM4'];
 var PB_TYPES = {'PB1': true, 'PB2': true};
 var MM_TYPES = {'MM1': true, 'MM2': true, 'MM3': true, 'MM4': true};
-var TRADE_LABELS = {PB1:'PB1', PB2:'PB2', MM1:'Core MM 1', MM2:'Core MM 2', MM3:'Core MM 3', MM4:'Core MM 4'};
+var TRADE_LABELS = {PB1:'PB/SB 1', PB2:'PB/SB 2', MM1:'Core MM 1', MM2:'Core MM 2', MM3:'Core MM 3', MM4:'Core MM 4'};
 var SLOT_CAP_DECIMAL = {PB1:0.025, PB2:0.025, MM1:0.04, MM2:0.03, MM3:0.02, MM4:0.01};
 var DEFAULT_STOP_MA = {PB1:'50D', PB2:'50D', MM1:'100D', MM2:'100D', MM3:'100D', MM4:'100D'};
 var GRACE_IMMEDIATE = {'150D':true, '200D':true};
@@ -1320,7 +1320,7 @@ function checkPbRequirementForMM(invIdx, slotType) {
   var hasPb = ['PB1', 'PB2'].some(function(pb) { return hasEdit(invIdx, pb); });
   if (hasPb) return true;
   var ticker = (CONFIG.investments[invIdx] || {}).ticker || 'this investment';
-  return confirm('No probing bet (PB1 or PB2) exists for ' + ticker + ' yet. New investments should normally start with a PB before adding Core MM tranches. (For backfilling live positions, this is fine.) Continue anyway?');
+  return confirm('No speculative or probing bet (PB1 or PB2) exists for ' + ticker + ' yet. New investments should normally start with a PB before adding Core MM tranches. (For backfilling live positions, this is fine.) Continue anyway?');
 }
 
 // D-PMS-43: MA-stop buffer input wrapper
@@ -2481,7 +2481,7 @@ function renderTrancheRow(inv, invIdx, slotType, isFirstSlot, isPlaceholder, tot
       var fr = (FILTER_RESULTS.data || {})[ticker];
       if (fr && fr.available) {
         mdBadges += '<div class="md-badges">';
-        mdBadges += '<span class="md-badge b-' + fr.pb_pass + '" title="PB stage: ' + esc(fr.pb_stage || 'None') + '">Probing bet ' + (fr.pb_pass === 'pass' ? '✓' : fr.pb_pass === 'partial' ? '◑' : '✗') + '</span>';
+        mdBadges += '<span class="md-badge b-' + fr.pb_pass + '" title="PB stage: ' + esc(fr.pb_stage || 'None') + '">Speculative or probing bet ' + (fr.pb_pass === 'pass' ? '✓' : fr.pb_pass === 'partial' ? '◑' : '✗') + '</span>';
         mdBadges += '<span class="md-badge b-' + fr.mm99_pass + '" title="MM99 stage: ' + esc(fr.mm99_stage || 'None') + ' · score ' + (fr.mm99_score || 0) + '/11">MM99 ' + (fr.mm99_pass === 'pass' ? '✓' : fr.mm99_pass === 'partial' ? '◑' : '✗') + ' (' + (fr.mm99_score || 0) + ')</span>';
         mdBadges += '<span class="md-badge b-' + fr.utr_pass + '" title="UTR stage: ' + esc(fr.utr_stage || 'null') + '">Uptrend retest ' + (fr.utr_pass === 'pass' ? '✓' : fr.utr_pass === 'partial' ? '◑' : '✗') + '</span>';
         mdBadges += '</div>';
