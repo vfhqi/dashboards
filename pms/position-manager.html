@@ -2357,8 +2357,8 @@ function buildHeaderRow() {
 
 function renderStickyHeaderTable() {
   // D-PMS-58 v3: sticky duplicate restored. Repopulate the duplicate table whenever main table re-renders.
-  // D-PMS-162: ghost tbody anchors column widths to colgroup specs. Without a tbody, table-layout:fixed
-  // distributes surplus table width proportionally across all columns, misaligning with the main table.
+  // D-PMS-162: set explicit pixel width = sum of COL_WIDTHS so table-layout:fixed uses colgroup widths
+  // exactly, without proportionally distributing surplus space to columns. Ghost tbody also retained.
   var t = document.getElementById('stickyHeaderTable');
   if (t) {
     var ghostTbody = '<tbody style="visibility:hidden;height:0">'
@@ -2366,6 +2366,7 @@ function renderStickyHeaderTable() {
       + COL_WIDTHS.map(function() { return '<td style="padding:0;border:0;height:0;line-height:0;font-size:0"></td>'; }).join('')
       + '</tr></tbody>';
     t.innerHTML = buildColgroup() + buildHeaderRow() + ghostTbody;
+    t.style.width = COL_WIDTHS.reduce(function(s, w) { return s + parseInt(w, 10); }, 0) + 'px';
   }
 }
 
