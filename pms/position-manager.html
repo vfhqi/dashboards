@@ -71,6 +71,13 @@ body.scrolled-past-header .sticky-header-table-wrap { display: block; }
 #statusBadge { font-size: 11px; padding: 3px 10px; border-radius: 4px; background: var(--bg3); color: var(--fg2); }
 #statusBadge.ok { background: var(--green-bg); color: var(--green); }
 #diskStatus { font-size: 11px; padding: 3px 10px; border-radius: 4px; background: var(--bg3); color: var(--fg2); }
+/* D-PMS-170: price freshness indicator */
+#priceFreshness { font-size: 11px; color: var(--fg2); display: flex; gap: 16px; flex-wrap: wrap; align-items: center; width: 100%; padding: 4px 0 0 0; border-top: 1px solid var(--border); margin-top: 4px; }
+#priceFreshness .pf-item { display: flex; gap: 4px; }
+#priceFreshness .pf-label { color: var(--fg3); }
+#priceFreshness .pf-value { font-weight: 500; }
+#priceFreshness .pf-stale { color: #cf222e !important; font-weight: 700 !important; background: rgba(207,34,46,0.10); border-radius: 4px; padding: 1px 6px; animation: pf-pulse 1.5s ease-in-out infinite; }
+@keyframes pf-pulse { 0%,100% { opacity:1; } 50% { opacity:0.6; } }
 #diskStatus.ok { background: var(--green-bg); color: var(--green); }
 #diskStatus.warn { background: var(--amber-bg); color: var(--amber); }
 #diskStatus.fail { background: var(--red-bg); color: var(--red); }
@@ -419,7 +426,10 @@ body.active-tab-overview .sticky-top, body.active-tab-charts .sticky-top { displ
   <!-- Sticky top zone: header bar + column header row -->
   <div class="sticky-top">
     <div class="header">
-      <h1>Portfolio overview <span id="lastUpdated">— Viewforth</span></h1>
+      <div style="flex:0 0 100%;">
+        <h1 style="margin:0 0 4px 0;">Portfolio overview <span id="lastUpdated">— Viewforth</span></h1>
+        <div id="priceFreshness"><span class="pf-item"><span class="pf-label">Price data:</span><span class="pf-value" id="pfPriceVal">loading…</span></span><span class="pf-item"><span class="pf-label">Universe:</span><span class="pf-value" id="pfUniverseVal">—</span></span></div>
+      </div>
       <div class="header-controls">
         <span id="statusBadge">loading…</span>
         <span id="diskStatus" title="Disk persistence status">disk: not connected</span>
@@ -1248,10 +1258,21 @@ function setPlaceholderTicker(invIdx, value) {
 // D-PMS-162: remove a universe-loaded stock from a placeholder slot.
 // Clears _ticker_override AND all six trade slot edits for that invIdx, then saves + re-renders.
 function clearTickerSlot(invIdx) {
-  if (!EDITS[invIdx]) return;
-  delete EDITS[invIdx]._ticker_override;
-  ['pb1','pb2','mm1','mm2','mm3','mm4'].forEach(function(slot) { delete EDITS[invIdx][slot]; });
-  if (Object.keys(EDITS[invIdx]).length === 0) delete EDITS[invIdx];
+  // D-PMS-168: support removal of universe stocks (not just override slots)
+  var inv = (CONFIG.investments || [])[invIdx];
+  var isUniverseStock = inv && inv.ticker && !inv.is_placeholder;
+  if (!EDITS[invIdx]) EDITS[invIdx] = {};
+  if (isUniverseStock && !(EDITS[invIdx]._ticker_override)) {
+    // Universe stock: mark hidden — slot becomes an empty placeholder
+    EDITS[invIdx]._universe_hidden = true;
+    ['pb1','pb2','mm1','mm2','mm3','mm4'].forEach(function(slot) { delete EDITS[invIdx][slot]; });
+  } else {
+    // Override slot: clear override — slot reverts to empty placeholder
+    delete EDITS[invIdx]._ticker_override;
+    delete EDITS[invIdx]._universe_hidden;
+    ['pb1','pb2','mm1','mm2','mm3','mm4'].forEach(function(slot) { delete EDITS[invIdx][slot]; });
+    if (Object.keys(EDITS[invIdx]).length === 0) delete EDITS[invIdx];
+  }
   saveEdits();
   render();
 }
@@ -1730,7 +1751,7 @@ function gatherPortfolioRows() {
     var ticker = inv.ticker;
     // D-PMS-127: include placeholder slots as blank rows (matches PMS 16) — unless D-PMS-141 hides them
     var ed = EDITS[invIdx] || {};
-    if (hidePlaceholders && (inv.is_placeholder || !ticker) && !ed._ticker_override) {
+    if (hidePlaceholders && (inv.is_placeholder || !ticker || ed._universe_hidden) && !ed._ticker_override) {
       return;
     }
     if ((inv.is_placeholder || !ticker) && !ed._ticker_override) {
@@ -2330,6 +2351,47 @@ function render() {
   // D-PMS-94 FIX: re-apply hide-at-entry col tweak after portfolio re-render (rebuilds colgroup)
   applyHideAtEntry();
   document.getElementById('lastUpdated').textContent = '— Updated ' + new Date().toLocaleString('en-GB', {day:'numeric', month:'short', hour:'2-digit', minute:'2-digit'});
+  // D-PMS-170: price freshness indicator
+  (function() {
+    var meta = (CHART_DATA && CHART_DATA._meta) || {};
+    var pricesGenStr = meta.prices_generated || '';
+    var pricesSource = meta.prices_source || 'yfinance';
+    var univMeta = (typeof PMS_UNIVERSE !== 'undefined' && PMS_UNIVERSE._meta) ? PMS_UNIVERSE._meta : {};
+    var univGenStr = univMeta.generated_at || '';
+
+    function parseTimestamp(s) {
+      if (!s) return null;
+      // Handle "2026-05-26 18:04" or ISO "2026-05-26T17:42:42.555474"
+      return new Date(s.replace(' ', 'T'));
+    }
+    function fmtTimestamp(s) {
+      var d = parseTimestamp(s);
+      if (!d || isNaN(d)) return s || '—';
+      return d.toLocaleString('en-GB', {day:'numeric', month:'short', hour:'2-digit', minute:'2-digit'});
+    }
+    function hoursAgo(s) {
+      var d = parseTimestamp(s);
+      if (!d || isNaN(d)) return null;
+      return (Date.now() - d.getTime()) / 3600000;
+    }
+
+    var priceEl = document.getElementById('pfPriceVal');
+    var univEl = document.getElementById('pfUniverseVal');
+    if (priceEl) {
+      var ago = hoursAgo(pricesGenStr);
+      var isStale = (ago !== null && ago > 24);
+      var label = pricesSource + ' · ' + fmtTimestamp(pricesGenStr);
+      if (isStale) {
+        var hStr = ago != null ? Math.round(ago) + 'h ago' : '';
+        priceEl.innerHTML = '<span class="pf-stale">⚠ STALE ' + hStr + ' — ' + label + '</span>';
+      } else {
+        priceEl.textContent = label;
+      }
+    }
+    if (univEl) {
+      univEl.textContent = fmtTimestamp(univGenStr) || '—';
+    }
+  })();
 }
 
 function buildColgroup() {
@@ -2392,7 +2454,7 @@ function renderTable() {
   if (!CONFIG || !CONFIG.investments) { tbl.innerHTML = ''; return; }
   var html = buildColgroup() + buildHeaderRow() + '<tbody>';
   CONFIG.investments.forEach(function(inv, invIdx) {
-    var isPlaceholder = inv.is_placeholder || !inv.ticker;
+    var isPlaceholder = inv.is_placeholder || !inv.ticker || !!(EDITS[invIdx] && EDITS[invIdx]._universe_hidden);  // D-PMS-168
     // D-PMS-68: pre-count how many EXTRA rows (warn-lines) this investment will emit,
     // so the first row's ticker cell can use rowspan = 6 + extras to span them all.
     // D-PMS-166: placeholder slots with a live _ticker_override are rendered as live
@@ -2504,7 +2566,7 @@ function renderTrancheRow(inv, invIdx, slotType, isFirstSlot, isPlaceholder, tot
     var displayName = uniMeta ? uniMeta.name : (inv.name || '');
     var displayCurrency = uniMeta ? uniMeta.currency : (inv.currency || '');
     // D-PMS-162 fix: clearBtn must also appear when isPlaceholder was flipped to false by universe-load
-    var clearBtn = savedOverride ? ' <button class="btn-icon btn-danger" onclick="clearTickerSlot(' + invIdx + ')" title="Remove stock from slot" style="padding:0 6px;font-size:15px;font-weight:700;line-height:1;vertical-align:middle;">×</button>' : '';
+    var clearBtn = !isPlaceholder ? ' <button class="btn-icon btn-danger" onclick="clearTickerSlot(' + invIdx + ')" title="Remove stock from slot" style="padding:0 6px;font-size:15px;font-weight:700;line-height:1;vertical-align:middle;">×</button>' : '';  // D-PMS-168: × on all live rows
     var tickerHtml = isPlaceholder
       ? '<input type="text" class="ticker-edit" placeholder="enter ticker" value="' + esc(savedOverride) + '" oninput="setPlaceholderTicker(' + invIdx + ', this.value)" style="width:110px;">' + clearBtn
       : '<span class="tk-primary">' + esc(ticker) + '</span><span class="ccy-tag">' + esc(displayCurrency) + '</span>' + clearBtn;
