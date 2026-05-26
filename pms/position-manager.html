@@ -1245,10 +1245,21 @@ function setPlaceholderTicker(invIdx, value) {
   loadTickerChart(raw, invIdx);
 }
 
+// D-PMS-162: remove a universe-loaded stock from a placeholder slot.
+// Clears _ticker_override AND all six trade slot edits for that invIdx, then saves + re-renders.
+function clearTickerSlot(invIdx) {
+  if (!EDITS[invIdx]) return;
+  delete EDITS[invIdx]._ticker_override;
+  ['pb1','pb2','mm1','mm2','mm3','mm4'].forEach(function(slot) { delete EDITS[invIdx][slot]; });
+  if (Object.keys(EDITS[invIdx]).length === 0) delete EDITS[invIdx];
+  saveEdits();
+  render();
+}
+
 // D-PMS-71: dynamically inject <script> for pms-charts/{TICKER}.js. On load, merge into PMS_CHART_DATA.data and re-render.
 function loadTickerChart(ticker, invIdx) {
   var safe = ticker.replace(/\./g, '_').replace(/-/g, '_');
-  var src = 'pms-charts/' + ticker + '.js';
+  var src = 'pms-charts/' + ticker.replace(/\./g, '_') + '.js';  // D-PMS-162: dots→underscores to match file naming (e.g. SDIP.B-SE → SDIP_B-SE.js)
   var s = document.createElement('script');
   s.src = src;
   s.async = false;
@@ -2346,8 +2357,16 @@ function buildHeaderRow() {
 
 function renderStickyHeaderTable() {
   // D-PMS-58 v3: sticky duplicate restored. Repopulate the duplicate table whenever main table re-renders.
+  // D-PMS-162: ghost tbody anchors column widths to colgroup specs. Without a tbody, table-layout:fixed
+  // distributes surplus table width proportionally across all columns, misaligning with the main table.
   var t = document.getElementById('stickyHeaderTable');
-  if (t) t.innerHTML = buildColgroup() + buildHeaderRow();
+  if (t) {
+    var ghostTbody = '<tbody style="visibility:hidden;height:0">'
+      + '<tr style="height:0;line-height:0">'
+      + COL_WIDTHS.map(function() { return '<td style="padding:0;border:0;height:0;line-height:0;font-size:0"></td>'; }).join('')
+      + '</tr></tbody>';
+    t.innerHTML = buildColgroup() + buildHeaderRow() + ghostTbody;
+  }
 }
 
 function renderTable() {
@@ -2458,6 +2477,7 @@ function renderTrancheRow(inv, invIdx, slotType, isFirstSlot, isPlaceholder, tot
     var displayCurrency = uniMeta ? uniMeta.currency : (inv.currency || '');
     var tickerHtml = isPlaceholder
       ? '<input type="text" class="ticker-edit" placeholder="enter ticker" value="' + esc(savedOverride) + '" oninput="setPlaceholderTicker(' + invIdx + ', this.value)" style="width:110px;">'
+        + (savedOverride ? ' <button class="btn-icon btn-danger" onclick="clearTickerSlot(' + invIdx + ')" title="Remove stock from slot" style="padding:0 6px;font-size:15px;font-weight:700;line-height:1;vertical-align:middle;">×</button>' : '')
       : '<span class="tk-primary">' + esc(ticker) + '</span><span class="ccy-tag">' + esc(displayCurrency) + '</span>';
     var nameHtml = isPlaceholder ? '<span class="name">(empty slot)</span>' : '<span class="name">' + esc(displayName) + '</span>';
     var meta = '';
