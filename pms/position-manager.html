@@ -1431,7 +1431,24 @@ function runTester(ticker, pctAum, entryDateStr, stopMa, bufferOverride) {
   var series = (CHART_DATA.data || {})[ticker];
   if (!series) return { error: 'No chart data for ' + ticker };
   var idx = findIndexByDate(ticker, entryDateStr);
-  if (idx < 0) return { error: 'No data on or after ' + entryDateStr };
+  if (idx < 0) {
+    // D-PMS-167: entry date is after the last chart data point (stale chart data).
+    // Fall back to the last available close for current-state columns; at-entry
+    // and P&L columns render as "—" since we have no price for the entry date.
+    var lastPt = series[series.length - 1];
+    var maKeyFb = 'ma' + stopMa.replace('D', '');
+    var curMaFb = lastPt[maKeyFb];
+    var curStopFb = calcStop(curMaFb, bufferOverride);
+    return { ok: true, stale_data: true,
+      entry_close: null, entry_date_actual: null, entry_ma: null, entry_stop: null,
+      initial_stop_distance_pct: null,
+      current_price: lastPt.c, current_ma: curMaFb, current_stop: curStopFb,
+      stop_distance_pct: curStopFb != null ? (curStopFb / lastPt.c - 1) : null,
+      value_aum_pct: null,
+      paper_pnl_per_share: null, paper_pnl_aum: null,
+      loss_risk_aum: (curStopFb && pctAum) ? pctAum * (curStopFb / lastPt.c - 1) : null,
+      entry_warn: null, breach: null };
+  }
   var entry = series[idx];
   var entryMa = getMaOnDate(ticker, entryDateStr, stopMa);
   var entryStop = calcStop(entryMa, bufferOverride);
@@ -2378,7 +2395,17 @@ function renderTable() {
     var isPlaceholder = inv.is_placeholder || !inv.ticker;
     // D-PMS-68: pre-count how many EXTRA rows (warn-lines) this investment will emit,
     // so the first row's ticker cell can use rowspan = 6 + extras to span them all.
-    var extraRows = countExtraRowsForInvestment(inv, invIdx, isPlaceholder);
+    // D-PMS-166: placeholder slots with a live _ticker_override are rendered as live
+    // investments and can emit warn-line rows — apply the same override-promotion
+    // logic here so countExtraRowsForInvestment uses the effective ticker/state.
+    var effectiveInvForRowspan = inv;
+    var effectivePlaceholderForRowspan = isPlaceholder;
+    if (isPlaceholder && EDITS[invIdx] && EDITS[invIdx]._ticker_override &&
+        CHART_DATA.data && CHART_DATA.data[EDITS[invIdx]._ticker_override]) {
+      effectiveInvForRowspan = { ticker: EDITS[invIdx]._ticker_override };
+      effectivePlaceholderForRowspan = false;
+    }
+    var extraRows = countExtraRowsForInvestment(effectiveInvForRowspan, invIdx, effectivePlaceholderForRowspan);
     var totalRowspan = 6 + extraRows;
     // D-PMS-70: per-investment trade-type render order (sorted vs default)
     var typesForInv = sortedTradeTypesForInvestment(invIdx);
