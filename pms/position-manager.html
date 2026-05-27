@@ -1855,7 +1855,7 @@ function gatherPortfolioRows() {
       // D-PMS-127: emit as placeholder-style row instead of skipping — unless D-PMS-141 hides them
       if (hidePlaceholders) return;
       rows.push({
-        invIdx: invIdx, ticker: ticker, name: inv.name || getUniverseName(ticker) || ticker, currency: inv.currency || (getUniverseName(ticker) && PMS_UNIVERSE.data[ticker] ? PMS_UNIVERSE.data[ticker].currency : '') || '',
+        invIdx: invIdx, ticker: ticker, name: getUniverseName(ticker) || inv.name || ticker, currency: inv.currency || (getUniverseName(ticker) && PMS_UNIVERSE.data[ticker] ? PMS_UNIVERSE.data[ticker].currency : '') || '',  // D-PMS-176b
         deployed: 0, trancheCount: 0, valueAum: 0,
         atRisk: 0, weightedStopDistance: null,
         paperPnl: 0, avgPriceMove: null,
@@ -1866,7 +1866,7 @@ function gatherPortfolioRows() {
     var weightedStopDistance = weightedStopDistanceDen > 0 ? weightedStopDistanceNum / weightedStopDistanceDen : null;
     var avgPriceMove = priceMoveCount > 0 ? priceMoveSum / priceMoveCount : null;
     rows.push({
-      invIdx: invIdx, ticker: ticker, name: inv.name || getUniverseName(ticker) || '', currency: inv.currency || (PMS_UNIVERSE && PMS_UNIVERSE.data && PMS_UNIVERSE.data[ticker] ? PMS_UNIVERSE.data[ticker].currency : '') || '',
+      invIdx: invIdx, ticker: ticker, name: getUniverseName(ticker) || inv.name || '', currency: inv.currency || (PMS_UNIVERSE && PMS_UNIVERSE.data && PMS_UNIVERSE.data[ticker] ? PMS_UNIVERSE.data[ticker].currency : '') || '',  // D-PMS-176b
       deployed: deployed, trancheCount: trancheData.length, valueAum: valueAum,
       atRisk: atRisk, weightedStopDistance: weightedStopDistance, paperPnl: paperPnl,
       avgPriceMove: avgPriceMove, breachCount: breachCount, tranches: trancheData
