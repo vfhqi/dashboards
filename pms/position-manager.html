@@ -602,7 +602,8 @@ body.active-tab-overview .sticky-top, body.active-tab-charts .sticky-top { displ
 <!-- Data feeds -->
 <script src="positions.js"></script>
 <script src="position-data.js"></script>
-<script src="pms-chart-data.js"></script>
+<!-- D-PMS-174: pms-chart-data.js removed — chart data loaded on-demand from master dashboard charts -->
+<script>window.PMS_CHART_DATA = {data:{}, _meta:{source:'master-charts', prices_source:'master dashboard', prices_generated:null}};</script>
 <script src="pms-filter-results.js"></script>
 <script src="pms-universe.js"></script>  <!-- D-PMS-71 -->
 <script src="pms-factor-data.js"></script>  <!-- D-PMS-130 -->
@@ -662,7 +663,7 @@ window.addEventListener('DOMContentLoaded', function() {
   var errBox = document.getElementById('errorBox');
   if (typeof POSITIONS === 'undefined') { errBox.textContent = 'positions.js failed to load.'; errBox.classList.add('visible'); statusEl.textContent='data error'; return; }
   if (typeof POSITION_DATA === 'undefined') { errBox.textContent = 'position-data.js failed to load.'; errBox.classList.add('visible'); return; }
-  if (typeof PMS_CHART_DATA === 'undefined') { errBox.textContent = 'pms-chart-data.js failed to load.'; errBox.classList.add('visible'); return; }
+  // D-PMS-174: pms-chart-data.js removed — PMS_CHART_DATA initialised inline above
   CONFIG = POSITIONS;
   CURRENT_DATA = POSITION_DATA;
   CHART_DATA = PMS_CHART_DATA;
@@ -672,7 +673,18 @@ window.addEventListener('DOMContentLoaded', function() {
   loadEditsFromLocalStorage();
   cleanupCorruptPromoteMetadata();  // D-PMS-67: clean up any already-corrupt state on load
 
-  statusEl.textContent = (CONFIG.investments || []).length + ' slots · ' + Object.keys(CHART_DATA.data || {}).length + ' tickers';
+  statusEl.textContent = (CONFIG.investments || []).length + ' slots · loading charts…';  // D-PMS-174
+  // Update status once first chart loads (triggered by first render() from loadTickerChart)
+  (function() {
+    var orig = statusEl.textContent;
+    if (orig.indexOf('loading charts') >= 0) {
+      var checkInterval = setInterval(function() {
+        var n = Object.keys(CHART_DATA.data || {}).length;
+        if (n > 0) { statusEl.textContent = (CONFIG.investments || []).length + ' slots · ' + n + ' charts loaded'; clearInterval(checkInterval); }
+      }, 500);
+      setTimeout(function() { clearInterval(checkInterval); }, 15000);  // give up after 15s
+    }
+  })();
   statusEl.classList.add('ok');
 
   updateDiskStatus();
@@ -748,9 +760,8 @@ window.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('scroll', updateStickyHeaderVisibility, { passive: true });
   window.addEventListener('resize', updateStickyHeaderVisibility, { passive: true });
 
-  // D-PMS-113: rehydrate any universe-loaded ticker charts saved in EDITS
-  // (placeholder slots with _ticker_override) so the row renders with name/px after reload.
-  rehydrateOverrideCharts();
+  // D-PMS-173: load chart data from master dashboard charts for all active positions
+  initializeChartData();
 
   render();
   // Initial check after render (in case starting position is already scrolled)
@@ -1198,22 +1209,32 @@ function togglePromoBadge(el) {
   }
 }
 
-// D-PMS-113 (09-May-26): on init, walk EDITS for any _ticker_override that's in PMS_UNIVERSE
-// but not yet in CHART_DATA, and async-load its chart. This makes the override survive reload
-// and the row picks up the name + meta on the chart-load callback.
-function rehydrateOverrideCharts() {
-  if (!window.PMS_UNIVERSE || !PMS_UNIVERSE.data) return;
-  if (!window.PMS_CHART_DATA) window.PMS_CHART_DATA = { data: {} };
+// D-PMS-173 (27-May-26): replaces rehydrateOverrideCharts(). Loads chart data from master
+// dashboard charts for ALL active tickers: universe stocks + override slots. Called at page
+// init so every position row has current chart data from the first render.
+function initializeChartData() {
+  if (!window._pmsTickerLoadInflight) window._pmsTickerLoadInflight = {};
+  if (!window.PMS_CHART_DATA) window.PMS_CHART_DATA = {data: {}, _meta: {}};
   if (!PMS_CHART_DATA.data) PMS_CHART_DATA.data = {};
+  var tickers = {};
+  // 1. Universe stocks in CONFIG.investments (not placeholder, not hidden)
+  (CONFIG.investments || []).forEach(function(inv, idx) {
+    if (!inv || inv.is_placeholder || !inv.ticker) return;
+    var ed = EDITS[idx] || {};
+    if (ed._universe_hidden) return;  // user removed this stock
+    tickers[inv.ticker] = true;
+  });
+  // 2. Override tickers in EDITS
   Object.keys(EDITS || {}).forEach(function(idx) {
     var ov = EDITS[idx] && EDITS[idx]._ticker_override;
-    if (!ov) return;
-    if (PMS_CHART_DATA.data[ov]) return;  // already loaded (e.g. one of the 9 hardcoded)
-    if (!(ov in PMS_UNIVERSE.data)) return;  // not in universe — leave for warning UX
-    if (window._pmsTickerLoadInflight && window._pmsTickerLoadInflight[ov]) return;
-    if (!window._pmsTickerLoadInflight) window._pmsTickerLoadInflight = {};
-    window._pmsTickerLoadInflight[ov] = true;
-    loadTickerChart(ov, parseInt(idx, 10));
+    if (ov) tickers[ov] = true;
+  });
+  // Load each ticker — invIdx null means no warning element (batch load, not user-typed)
+  Object.keys(tickers).forEach(function(t) {
+    if (PMS_CHART_DATA.data[t]) return;  // already loaded
+    if (window._pmsTickerLoadInflight[t]) return;  // already in flight
+    window._pmsTickerLoadInflight[t] = true;
+    loadTickerChart(t, null);
   });
 }
 
@@ -1277,10 +1298,13 @@ function clearTickerSlot(invIdx) {
   render();
 }
 
-// D-PMS-71: dynamically inject <script> for pms-charts/{TICKER}.js. On load, merge into PMS_CHART_DATA.data and re-render.
+// D-PMS-173: load chart data from master dashboard charts (vfhqi.github.io/master/charts/).
+// Master charts are auto-deployed daily — always current. Replaces pms-charts/ (manual deploy, went stale).
+// Format: CHART_REGISTRY["TICKER"] = [[date,o,h,l,c,v,ma5,ma10,ma20,ma50,ma100,ma150,ma200],...]
+// invIdx may be null when called from initializeChartData() (no warning element available).
 function loadTickerChart(ticker, invIdx) {
-  var safe = ticker.replace(/\./g, '_').replace(/-/g, '_');
-  var src = 'pms-charts/' + ticker.replace(/\./g, '_') + '.js';  // D-PMS-162: dots→underscores to match file naming (e.g. SDIP.B-SE → SDIP_B-SE.js)
+  // D-PMS-173: master dashboard charts — dots→underscores in filename, dashes kept
+  var src = 'https://vfhqi.github.io/master/charts/' + ticker.replace(/\./g, '_') + '.js';
   var s = document.createElement('script');
   s.src = src;
   s.async = false;
@@ -1293,34 +1317,58 @@ function loadTickerChart(ticker, invIdx) {
     delete window._pmsTickerLoadInflight[ticker];
   }
   s.onload = function() {
-    var varName = 'PMS_CHART_DATA_' + safe;
-    var payload = window[varName];
-    if (payload && payload.data && Array.isArray(payload.data)) {
-      if (!window.PMS_CHART_DATA) window.PMS_CHART_DATA = {data: {}};
+    // Master chart format: CHART_REGISTRY["TICKER"][[date,o,h,l,c,v,ma5..ma200],...]
+    // Key uses original ticker name including dots (e.g. "SDIP.B-SE")
+    var payload = window.CHART_REGISTRY && window.CHART_REGISTRY[ticker];
+    if (payload && Array.isArray(payload)) {
+      var bars = payload.map(function(row) {
+        var bar = {d: row[0], o: row[1], h: row[2], l: row[3], c: row[4], v: row[5]};
+        // MAs: cols 6-12 = ma5,ma10,ma20,ma50,ma100,ma150,ma200 (null if not yet calculated)
+        if (row[6]  != null) bar.ma5   = row[6];
+        if (row[7]  != null) bar.ma10  = row[7];
+        if (row[8]  != null) bar.ma20  = row[8];
+        if (row[9]  != null) bar.ma50  = row[9];
+        if (row[10] != null) bar.ma100 = row[10];
+        if (row[11] != null) bar.ma150 = row[11];
+        if (row[12] != null) bar.ma200 = row[12];
+        return bar;
+      });
+      if (!window.PMS_CHART_DATA) window.PMS_CHART_DATA = {data: {}, _meta: {}};
       if (!PMS_CHART_DATA.data) PMS_CHART_DATA.data = {};
-      PMS_CHART_DATA.data[ticker] = payload.data;
-      // Reuse the same alias mechanism used by main pipeline (e.g., CARL.B-DK / CARLB-DK).
+      PMS_CHART_DATA.data[ticker] = bars;
+      // Dot-less alias for legacy lookups (e.g. CARL.B-DK → CARLB-DK)
       var alias = ticker.replace(/\./g, '');
       if (alias !== ticker && !PMS_CHART_DATA.data[alias]) {
-        PMS_CHART_DATA.data[alias] = payload.data;
+        PMS_CHART_DATA.data[alias] = bars;
       }
+      // Update freshness indicator with latest bar date from this ticker
+      if (!PMS_CHART_DATA._meta) PMS_CHART_DATA._meta = {};
+      if (bars.length > 0) {
+        var lastDate = bars[bars.length - 1].d;
+        if (!PMS_CHART_DATA._meta.prices_generated || lastDate > PMS_CHART_DATA._meta.prices_generated) {
+          PMS_CHART_DATA._meta.prices_generated = lastDate + ' (loaded ' + new Date().toLocaleTimeString('en-GB', {hour:'2-digit',minute:'2-digit'}) + ')';
+          PMS_CHART_DATA._meta.prices_source = 'master dashboard';
+        }
+      }
+      // Also update CHART_DATA reference (CHART_DATA = PMS_CHART_DATA at init)
+      if (window.CHART_DATA && CHART_DATA !== PMS_CHART_DATA) { CHART_DATA.data[ticker] = bars; }
       complete();
       render();
     } else {
       complete();
-      showTickerWarning(invIdx, 'Loaded ' + src + ' but no chart payload found.');
+      if (invIdx != null) showTickerWarning(invIdx, 'Loaded ' + src + ' but no chart data found for ' + ticker + ' in CHART_REGISTRY.');
     }
   };
   s.onerror = function() {
     complete();
-    showTickerWarning(invIdx, 'No chart data file at ' + src + ' (404). Ticker is in the universe but chart not built.');
+    if (invIdx != null) showTickerWarning(invIdx, 'No master chart at ' + src + ' (404). Ticker may not be in the master dashboard universe.');
   };
-  // 5s timeout fallback
+  // 8s timeout (master charts are external CDN — slightly longer)
   timeoutId = setTimeout(function() {
     if (done) return;
-    showTickerWarning(invIdx, 'Timeout loading ' + src + ' (>5s).');
+    if (invIdx != null) showTickerWarning(invIdx, 'Timeout loading chart for ' + ticker + ' (>8s).');
     complete();
-  }, 5000);
+  }, 8000);
   document.head.appendChild(s);
 }
 
@@ -1745,6 +1793,11 @@ function sortedTradeTypesForInvestment(invIdx) {
 
 // === D-PMS-73 to D-PMS-77: PORTFOLIO section (above tranche detail table) ===
 // Returns aggregate data per live investment.
+// D-PMS-176: look up company name from universe data (for override tickers whose inv.name is empty)
+function getUniverseName(ticker) {
+  return (ticker && window.PMS_UNIVERSE && PMS_UNIVERSE.data && PMS_UNIVERSE.data[ticker] && PMS_UNIVERSE.data[ticker].name) || '';
+}
+
 function gatherPortfolioRows() {
   var rows = [];
   CONFIG.investments.forEach(function(inv, invIdx) {
@@ -1802,7 +1855,7 @@ function gatherPortfolioRows() {
       // D-PMS-127: emit as placeholder-style row instead of skipping — unless D-PMS-141 hides them
       if (hidePlaceholders) return;
       rows.push({
-        invIdx: invIdx, ticker: ticker, name: inv.name || ticker, currency: inv.currency || '',
+        invIdx: invIdx, ticker: ticker, name: inv.name || getUniverseName(ticker) || ticker, currency: inv.currency || (getUniverseName(ticker) && PMS_UNIVERSE.data[ticker] ? PMS_UNIVERSE.data[ticker].currency : '') || '',
         deployed: 0, trancheCount: 0, valueAum: 0,
         atRisk: 0, weightedStopDistance: null,
         paperPnl: 0, avgPriceMove: null,
@@ -1813,7 +1866,7 @@ function gatherPortfolioRows() {
     var weightedStopDistance = weightedStopDistanceDen > 0 ? weightedStopDistanceNum / weightedStopDistanceDen : null;
     var avgPriceMove = priceMoveCount > 0 ? priceMoveSum / priceMoveCount : null;
     rows.push({
-      invIdx: invIdx, ticker: ticker, name: inv.name || '', currency: inv.currency || '',
+      invIdx: invIdx, ticker: ticker, name: inv.name || getUniverseName(ticker) || '', currency: inv.currency || (PMS_UNIVERSE && PMS_UNIVERSE.data && PMS_UNIVERSE.data[ticker] ? PMS_UNIVERSE.data[ticker].currency : '') || '',
       deployed: deployed, trancheCount: trancheData.length, valueAum: valueAum,
       atRisk: atRisk, weightedStopDistance: weightedStopDistance, paperPnl: paperPnl,
       avgPriceMove: avgPriceMove, breachCount: breachCount, tranches: trancheData
@@ -2361,8 +2414,10 @@ function render() {
 
     function parseTimestamp(s) {
       if (!s) return null;
-      // Handle "2026-05-26 18:04" or ISO "2026-05-26T17:42:42.555474"
-      return new Date(s.replace(' ', 'T'));
+      // Handle "2026-05-26 18:04", ISO "2026-05-26T17:42:42", or "2026-05-26 (loaded HH:MM)"
+      var clean = s.replace(/\s*\(loaded.*\)/, '').trim();  // strip "(loaded HH:MM)" suffix
+      if (/^\d{4}-\d{2}-\d{2}$/.test(clean)) return new Date(clean + 'T00:00:00');  // date-only: treat as same-day
+      return new Date(clean.replace(' ', 'T'));
     }
     function fmtTimestamp(s) {
       var d = parseTimestamp(s);
