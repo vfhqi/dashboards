@@ -263,6 +263,9 @@ const RI_OPTS = ['1. Live','2. Very short-list (90th+)','3. Short-list (75th+)',
 const RK_OPTS = ['5. Deep dive','4. ESA','3. Triaged','2. Generated','1. Pre-IG'];
 
 function esc(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+// Pre-built options HTML (constant across all rows — generated once, not per row)
+const RI_OPTS_HTML='<option value="">—</option>'+RI_OPTS.map(o=>`<option value="${esc(o)}">${esc(o)}</option>`).join('');
+const RK_OPTS_HTML='<option value="">—</option>'+RK_OPTS.map(o=>`<option value="${esc(o)}">${esc(o)}</option>`).join('');
 
 function gradeCls(v){
   if(!v || v==='—' || v==='—') return 'gN';
@@ -321,12 +324,8 @@ function mkRow(s){
   const rk = rkNum(s.knowledge_level);
   const hasStage = !!s.stage;
 
-  // RB interest select
-  let riOpts = `<option value="" ${!s.interest_level?'selected':''}>—</option>`;
-  for(const o of RI_OPTS) riOpts += `<option value="${esc(o)}"${s.interest_level===o?' selected':''}>${esc(o)}</option>`;
-  // RB knowledge select
-  let rkOpts = `<option value="" ${!s.knowledge_level?'selected':''}>—</option>`;
-  for(const o of RK_OPTS) rkOpts += `<option value="${esc(o)}"${s.knowledge_level===o?' selected':''}>${esc(o)}</option>`;
+  const riOpts = RI_OPTS_HTML;
+  const rkOpts = RK_OPTS_HTML;
 
   const mapBtn  = `<a class="ibtn dis" title="Map — Phase 2">&#x1f5fa;</a>`;
   const listBtn = `<a class="ibtn dis" title="List — Phase 2">&#x1f4cb;</a>`;
@@ -356,6 +355,8 @@ function mkRow(s){
     <td>${badge(s.p5_ssem)}</td>
     <td class="g3e">${badge(s.p6_valuation)}</td>
   `;
+  tr.querySelector('[data-field=interest]').value = s.interest_level||'';
+  tr.querySelector('[data-field=knowledge]').value = s.knowledge_level||'';
   return tr;
 }
 
@@ -581,22 +582,35 @@ async function init(){
   }
 
   const stocks = data.stocks||[];
+  const CHUNK = 100;
+  const tbody = document.getElementById('tbody');
 
-  const frag=document.createDocumentFragment();
-  for(const s of stocks){
-    const tr=mkRow(s);
-    frag.appendChild(tr);
-    allRows.push(tr);
-  }
-  document.getElementById('tbody').appendChild(frag);
-
+  // Show shell immediately; rows render in chunks to keep page responsive
   document.getElementById('loading').style.display='none';
   document.getElementById('rt').style.display='';
+  document.getElementById('countLabel').textContent=`Loading\u2026 0 of ${stocks.length.toLocaleString()}`;
 
-  collectValues(allRows);
-  initFState();
-  buildBar();
-  applyFilters();
+  function renderChunk(offset){
+    const end=Math.min(offset+CHUNK, stocks.length);
+    const frag=document.createDocumentFragment();
+    for(let i=offset;i<end;i++){
+      const tr=mkRow(stocks[i]);
+      frag.appendChild(tr);
+      allRows.push(tr);
+    }
+    tbody.appendChild(frag);
+    if(end<stocks.length){
+      document.getElementById('countLabel').textContent=`Loading\u2026 ${end.toLocaleString()} of ${stocks.length.toLocaleString()}`;
+      setTimeout(()=>renderChunk(end),0);
+    } else {
+      collectValues(allRows);
+      initFState();
+      buildBar();
+      applyFilters();
+    }
+  }
+
+  renderChunk(0);
 }
 
 init();
