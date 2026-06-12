@@ -235,6 +235,9 @@ body.hide-at-entry-cols .pf-col-entry-aum { display: none; }
 .ticker-cell .meta { display: block; font-size: 10px; color: var(--fg3); margin-top: 4px; }
 .ticker-cell .md-badges { display: flex; gap: 4px; margin-top: 6px; flex-wrap: wrap; }
 .md-badge { font-size: 9px; padding: 1px 5px; border-radius: 3px; font-weight: 700; letter-spacing: 0.3px; font-family: var(--font); }
+.remove-inv-row { margin-top: 9px; }
+.btn-remove-inv { font-size: 11px; padding: 2px 9px; background: transparent; color: rgba(207,34,46,0.7); border: 1px solid rgba(207,34,46,0.4); border-radius: 3px; cursor: pointer; line-height: 1.5; font-family: var(--font); font-weight: 600; transition: all 0.15s; }
+.btn-remove-inv:hover { color: #fff; background: rgba(207,34,46,0.9); border-color: rgba(207,34,46,0.9); }
 
 .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.45); z-index: 999; align-items: center; justify-content: center; }
 .modal-overlay.open { display: flex; }
@@ -2621,10 +2624,18 @@ function renderTrancheRow(inv, invIdx, slotType, isFirstSlot, isPlaceholder, tot
     var displayName = uniMeta ? uniMeta.name : (inv.name || '');
     var displayCurrency = uniMeta ? uniMeta.currency : (inv.currency || '');
     // D-PMS-162 fix: clearBtn must also appear when isPlaceholder was flipped to false by universe-load
-    var clearBtn = !isPlaceholder ? ' <button class="btn-icon btn-danger" onclick="clearTickerSlot(' + invIdx + ')" title="Remove stock from slot" style="padding:0 6px;font-size:15px;font-weight:700;line-height:1;vertical-align:middle;">×</button>' : '';  // D-PMS-168: × on all live rows
+    // D-PMS-UX-12Jun26: split remove affordance — prominent removeInvBtn for universe stocks
+    // (shown below filter badges, always visible, clearly labelled);
+    // clearOverrideBtn = small inline × to clear a typed-ticker override input.
+    var removeInvBtn = !isPlaceholder
+      ? '<div class="remove-inv-row"><button class="btn-remove-inv" onclick="clearTickerSlot(' + invIdx + ')" title="Remove ' + esc(ticker) + ' from portfolio">× Remove</button></div>'
+      : '';
+    var clearOverrideBtn = (isPlaceholder && savedOverride)
+      ? ' <button class="btn-icon btn-danger" onclick="clearTickerSlot(' + invIdx + ')" title="Clear ticker" style="padding:0 5px;font-size:13px;font-weight:700;line-height:1;vertical-align:middle;">×</button>'
+      : '';
     var tickerHtml = isPlaceholder
-      ? '<input type="text" class="ticker-edit" placeholder="enter ticker" value="' + esc(savedOverride) + '" oninput="setPlaceholderTicker(' + invIdx + ', this.value)" style="width:110px;">' + clearBtn
-      : '<span class="tk-primary">' + esc(ticker) + '</span><span class="ccy-tag">' + esc(displayCurrency) + '</span>' + clearBtn;
+      ? '<input type="text" class="ticker-edit" placeholder="enter ticker" value="' + esc(savedOverride) + '" oninput="setPlaceholderTicker(' + invIdx + ', this.value)" style="width:110px;">' + clearOverrideBtn
+      : '<span class="tk-primary">' + esc(ticker) + '</span><span class="ccy-tag">' + esc(displayCurrency) + '</span>';
     var nameHtml = isPlaceholder ? '<span class="name">(empty slot)</span>' : '<span class="name">' + esc(displayName) + '</span>';
     var meta = '';
     if (!isPlaceholder && wasPlaceholderUniverse) {
@@ -2655,7 +2666,7 @@ function renderTrancheRow(inv, invIdx, slotType, isFirstSlot, isPlaceholder, tot
         mdBadges += '<div class="md-badges"><span class="md-badge b-fail" title="No MD filter data">no MD data</span></div>';
       }
     }
-    cells += '<td class="al ticker-cell" rowspan="' + (totalRowspan || 6) + '">' + nameHtml + tickerHtml + meta + mdBadges + '</td>';
+    cells += '<td class="al ticker-cell" rowspan="' + (totalRowspan || 6) + '">' + nameHtml + tickerHtml + meta + mdBadges + removeInvBtn + '</td>';  // D-PMS-UX-12Jun26
   }
   cells += '<td class="al">' + (hasE && !isPlaceholder ? '<span class="drag-handle" title="Drag to reslot">⋮⋮</span>' : '') + '</td>';
   cells += '<td class="al"><span class="' + typeCls + '">' + esc(label) + '</span> <span style="color:var(--fg3);font-size:10px;">cap ' + slotCapPct.toFixed(1) + '%</span></td>';
