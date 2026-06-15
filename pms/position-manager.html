@@ -2800,7 +2800,7 @@ function renderKpis() {
   el.innerHTML = kpiCard('Deployed', pct(deployed), deployed > 0.8 ? 'val-warn' : deployed > 0 ? 'val-pos' : 'val-muted')
     + kpiCard('At-Risk Loss', pctBp(risk), risk < -0.005 ? 'val-neg' : 'val-warn')
     + kpiCard('Paper P&L', pctBp(pnl), pnl > 0 ? 'val-pos' : pnl < 0 ? 'val-neg' : '')
-    + kpiCard('Active Investments', activeInvs + ' / 16', '')
+    + kpiCard('Active Investments', activeInvs + ' / ' + CONFIG.investments.length, '')
     + kpiCard('Active Tranches', activeTrades, '')
     + kpiCard('Breach Alerts', alertCount, alertCount > 0 ? 'val-neg' : 'val-pos');
 }
