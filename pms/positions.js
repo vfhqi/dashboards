@@ -1247,6 +1247,314 @@ var POSITIONS = {
           "target_size_pct": null
         }
       ]
+    },
+    {
+      "ticker": "",
+      "yfinance_ticker": "",
+      "name": "Empty slot 17",
+      "currency": "",
+      "choppiness": "standard",
+      "notes": "",
+      "is_placeholder": true,
+      "trades": [
+        {
+          "id": "SLOT17-PB1",
+          "type": "PB1",
+          "status": "planned",
+          "pivot_price": null,
+          "entry_date": null,
+          "stop_ma": "50D",
+          "initial_stop_ma": "50D",
+          "initial_stop_level": null,
+          "target_size_pct": null
+        },
+        {
+          "id": "SLOT17-PB2",
+          "type": "PB2",
+          "status": "planned",
+          "pivot_price": null,
+          "entry_date": null,
+          "stop_ma": "50D",
+          "initial_stop_ma": "50D",
+          "initial_stop_level": null,
+          "target_size_pct": null
+        },
+        {
+          "id": "SLOT17-MM1",
+          "type": "MM1",
+          "status": "planned",
+          "pivot_price": null,
+          "entry_date": null,
+          "stop_ma": "100D",
+          "initial_stop_ma": "100D",
+          "initial_stop_level": null,
+          "target_size_pct": null
+        },
+        {
+          "id": "SLOT17-MM2",
+          "type": "MM2",
+          "status": "planned",
+          "pivot_price": null,
+          "entry_date": null,
+          "stop_ma": "100D",
+          "initial_stop_ma": "100D",
+          "initial_stop_level": null,
+          "target_size_pct": null
+        },
+        {
+          "id": "SLOT17-MM3",
+          "type": "MM3",
+          "status": "planned",
+          "pivot_price": null,
+          "entry_date": null,
+          "stop_ma": "100D",
+          "initial_stop_ma": "100D",
+          "initial_stop_level": null,
+          "target_size_pct": null
+        },
+        {
+          "id": "SLOT17-MM4",
+          "type": "MM4",
+          "status": "planned",
+          "pivot_price": null,
+          "entry_date": null,
+          "stop_ma": "100D",
+          "initial_stop_ma": "100D",
+          "initial_stop_level": null,
+          "target_size_pct": null
+        }
+      ]
+    },
+    {
+      "ticker": "",
+      "yfinance_ticker": "",
+      "name": "Empty slot 18",
+      "currency": "",
+      "choppiness": "standard",
+      "notes": "",
+      "is_placeholder": true,
+      "trades": [
+        {
+          "id": "SLOT18-PB1",
+          "type": "PB1",
+          "status": "planned",
+          "pivot_price": null,
+          "entry_date": null,
+          "stop_ma": "50D",
+          "initial_stop_ma": "50D",
+          "initial_stop_level": null,
+          "target_size_pct": null
+        },
+        {
+          "id": "SLOT18-PB2",
+          "type": "PB2",
+          "status": "planned",
+          "pivot_price": null,
+          "entry_date": null,
+          "stop_ma": "50D",
+          "initial_stop_ma": "50D",
+          "initial_stop_level": null,
+          "target_size_pct": null
+        },
+        {
+          "id": "SLOT18-MM1",
+          "type": "MM1",
+          "status": "planned",
+          "pivot_price": null,
+          "entry_date": null,
+          "stop_ma": "100D",
+          "initial_stop_ma": "100D",
+          "initial_stop_level": null,
+          "target_size_pct": null
+        },
+        {
+          "id": "SLOT18-MM2",
+          "type": "MM2",
+          "status": "planned",
+          "pivot_price": null,
+          "entry_date": null,
+          "stop_ma": "100D",
+          "initial_stop_ma": "100D",
+          "initial_stop_level": null,
+          "target_size_pct": null
+        },
+        {
+          "id": "SLOT18-MM3",
+          "type": "MM3",
+          "status": "planned",
+          "pivot_price": null,
+          "entry_date": null,
+          "stop_ma": "100D",
+          "initial_stop_ma": "100D",
+          "initial_stop_level": null,
+          "target_size_pct": null
+        },
+        {
+          "id": "SLOT18-MM4",
+          "type": "MM4",
+          "status": "planned",
+          "pivot_price": null,
+          "entry_date": null,
+          "stop_ma": "100D",
+          "initial_stop_ma": "100D",
+          "initial_stop_level": null,
+          "target_size_pct": null
+        }
+      ]
+    },
+    {
+      "ticker": "",
+      "yfinance_ticker": "",
+      "name": "Empty slot 19",
+      "currency": "",
+      "choppiness": "standard",
+      "notes": "",
+      "is_placeholder": true,
+      "trades": [
+        {
+          "id": "SLOT19-PB1",
+          "type": "PB1",
+          "status": "planned",
+          "pivot_price": null,
+          "entry_date": null,
+          "stop_ma": "50D",
+          "initial_stop_ma": "50D",
+          "initial_stop_level": null,
+          "target_size_pct": null
+        },
+        {
+          "id": "SLOT19-PB2",
+          "type": "PB2",
+          "status": "planned",
+          "pivot_price": null,
+          "entry_date": null,
+          "stop_ma": "50D",
+          "initial_stop_ma": "50D",
+          "initial_stop_level": null,
+          "target_size_pct": null
+        },
+        {
+          "id": "SLOT19-MM1",
+          "type": "MM1",
+          "status": "planned",
+          "pivot_price": null,
+          "entry_date": null,
+          "stop_ma": "100D",
+          "initial_stop_ma": "100D",
+          "initial_stop_level": null,
+          "target_size_pct": null
+        },
+        {
+          "id": "SLOT19-MM2",
+          "type": "MM2",
+          "status": "planned",
+          "pivot_price": null,
+          "entry_date": null,
+          "stop_ma": "100D",
+          "initial_stop_ma": "100D",
+          "initial_stop_level": null,
+          "target_size_pct": null
+        },
+        {
+          "id": "SLOT19-MM3",
+          "type": "MM3",
+          "status": "planned",
+          "pivot_price": null,
+          "entry_date": null,
+          "stop_ma": "100D",
+          "initial_stop_ma": "100D",
+          "initial_stop_level": null,
+          "target_size_pct": null
+        },
+        {
+          "id": "SLOT19-MM4",
+          "type": "MM4",
+          "status": "planned",
+          "pivot_price": null,
+          "entry_date": null,
+          "stop_ma": "100D",
+          "initial_stop_ma": "100D",
+          "initial_stop_level": null,
+          "target_size_pct": null
+        }
+      ]
+    },
+    {
+      "ticker": "",
+      "yfinance_ticker": "",
+      "name": "Empty slot 20",
+      "currency": "",
+      "choppiness": "standard",
+      "notes": "",
+      "is_placeholder": true,
+      "trades": [
+        {
+          "id": "SLOT20-PB1",
+          "type": "PB1",
+          "status": "planned",
+          "pivot_price": null,
+          "entry_date": null,
+          "stop_ma": "50D",
+          "initial_stop_ma": "50D",
+          "initial_stop_level": null,
+          "target_size_pct": null
+        },
+        {
+          "id": "SLOT20-PB2",
+          "type": "PB2",
+          "status": "planned",
+          "pivot_price": null,
+          "entry_date": null,
+          "stop_ma": "50D",
+          "initial_stop_ma": "50D",
+          "initial_stop_level": null,
+          "target_size_pct": null
+        },
+        {
+          "id": "SLOT20-MM1",
+          "type": "MM1",
+          "status": "planned",
+          "pivot_price": null,
+          "entry_date": null,
+          "stop_ma": "100D",
+          "initial_stop_ma": "100D",
+          "initial_stop_level": null,
+          "target_size_pct": null
+        },
+        {
+          "id": "SLOT20-MM2",
+          "type": "MM2",
+          "status": "planned",
+          "pivot_price": null,
+          "entry_date": null,
+          "stop_ma": "100D",
+          "initial_stop_ma": "100D",
+          "initial_stop_level": null,
+          "target_size_pct": null
+        },
+        {
+          "id": "SLOT20-MM3",
+          "type": "MM3",
+          "status": "planned",
+          "pivot_price": null,
+          "entry_date": null,
+          "stop_ma": "100D",
+          "initial_stop_ma": "100D",
+          "initial_stop_level": null,
+          "target_size_pct": null
+        },
+        {
+          "id": "SLOT20-MM4",
+          "type": "MM4",
+          "status": "planned",
+          "pivot_price": null,
+          "entry_date": null,
+          "stop_ma": "100D",
+          "initial_stop_ma": "100D",
+          "initial_stop_level": null,
+          "target_size_pct": null
+        }
+      ]
     }
   ],
   "stop_breach_alerts": [],

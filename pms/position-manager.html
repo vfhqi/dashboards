@@ -547,7 +547,7 @@ body.active-tab-overview .sticky-top, body.active-tab-charts .sticky-top { displ
 
     <!-- Help banner -->
     <div class="help-banner">
-      <b>How to use:</b> 16 investment slots × 6 tranche rows (PB1, PB2, Core MM 1–4). Type <b>%AUM</b> as <kbd>3</kbd> for 3%. Pick a date + stop MA. <b>MA→stop buffer</b> defaults to 2% (= stop is MA × 0.98) and is editable per tranche. Derived columns auto-fill. <b>Drag</b> the ⋮⋮ handle to move tranches between slots — drop a PB onto an MM to promote. Cross-investment drag blocked.
+      <b>How to use:</b> 20 investment slots × 6 tranche rows (PB1, PB2, Core MM 1–4). Type <b>%AUM</b> as <kbd>3</kbd> for 3%. Pick a date + stop MA. <b>MA→stop buffer</b> defaults to 2% (= stop is MA × 0.98) and is editable per tranche. Derived columns auto-fill. <b>Drag</b> the ⋮⋮ handle to move tranches between slots — drop a PB onto an MM to promote. Cross-investment drag blocked.
       <br><b>Slot caps:</b> PB1/2 = 2.5%, MM1 = 4%, MM2 = 3%, MM3 = 2%, MM4 = 1%. <b>PB stops</b>: 5D/10D/20D/50D. <b>MM stops</b>: any of 5 MAs.
       <b>Hybrid grace clock:</b> 150D/200D = immediate; 20D/50D/100D = 3 daily closes OR 1 weekly close.
       <br><b>Row colours by MA for stop-loss:</b> orange=20D, blue=50D, teal=100D, magenta=150D, slate=200D. Breach states override.
@@ -1187,7 +1187,7 @@ function importFromFile(ev) {
 }
 
 function clearAllEdits() {
-  if (!confirm('Clear ALL tranche edits across all 16 slots? Tickers stay.')) return;
+  if (!confirm('Clear ALL tranche edits across all 20 slots? Tickers stay.')) return;
   EDITS = {}; saveEdits(); render();
 }
 
