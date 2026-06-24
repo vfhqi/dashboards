@@ -86,10 +86,11 @@ body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font
   border-collapse:separate;border-spacing:0;
   font-size:12px;min-width:1480px;
   background:#fff;border:1px solid rgba(0,0,0,.10);
-  border-radius:8px;overflow:hidden;
+  border-radius:8px;
 }
 .rd thead th{
   background:#faf9f5;
+  position:sticky;top:80px;z-index:100;
   border-bottom:1px solid rgba(0,0,0,.09);
   padding:5px 7px;
   font-weight:500;text-align:center;
@@ -97,6 +98,8 @@ body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font
   vertical-align:bottom;font-size:11.5px;color:#3a3a38;
 }
 .rd thead th.co{text-align:left}
+.ntlnk{font-size:9px;color:#9090c0;text-decoration:none;margin-right:1px;vertical-align:super}
+.ntlnk:hover{color:#534AB7}
 .rd tbody tr:nth-child(even){background:#faf9f5}
 .rd tbody tr:hover{background:#f0ede4 !important}
 .rd tbody tr.fhide{display:none}
@@ -347,20 +350,22 @@ body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font
   <table class="rd" id="rt" style="display:none">
     <thead>
       <tr class="sg-row">
-        <th colspan="7" class="sg1">Information</th>
+        <th colspan="9" class="sg1">Information</th>
         <th colspan="4" class="sg2">Highest-level ratings</th>
         <th colspan="6" class="sg3">Six pillar ratings</th>
       </tr>
       <tr>
         <th class="co g1s" style="text-align:left">Company</th>
         <th>Stage of<br>IA A&amp;J</th>
+        <th>LLQ</th>
         <th style="text-align:left">Industry</th>
         <th style="text-align:left">Sector</th>
         <th>Map of<br>ratings</th>
         <th>List of<br>ratings</th>
+        <th>Target<br>sector wt</th>
         <th class="g1e">Latest<br>memo</th>
         <th class="g2s">Timeliness</th>
-        <th>Master<br>rating</th>
+        <th title="Master rating — coming soon">Master<br>rating</th>
         <th>RB interest<br>level</th>
         <th class="g2e">RB knowledge<br>level</th>
         <th class="g3s">Technical<br>momentum</th>
@@ -426,6 +431,17 @@ function taxDisplay(code, full){
 // ─────────────────────────────────────────────────────────
 // Row renderer
 // ─────────────────────────────────────────────────────────
+function llqPill(v){
+  if(!v) return '<span class="bdg gN">—</span>';
+  const m=v.match(/^(\d+)/);const tier=m?m[1]:'';
+  const cls={'1':'gA','2':'gB','3':'gC','4':'gD','5':'gN'}[tier]||'gN';
+  const labels={'1':'APM Live','2':'APM Bench','3':'Long-list qualified','4':'Not qualified','5':'Other'};
+  return `<span class="bdg ${cls}" title="${esc(labels[tier]||v)}">${tier||'—'}</span>`;
+}
+function fmtPct(v){
+  if(v==null||v===''||v===undefined)return '—';
+  return (parseFloat(v)*100).toFixed(1)+'%';
+}
 function mkRow(s){
   const tr = document.createElement('tr');
   // Dataset for filtering
@@ -440,6 +456,7 @@ function mkRow(s){
   tr.dataset.p4    = (s.p4_fundamental_foundations&&s.p4_fundamental_foundations!=='—') ? s.p4_fundamental_foundations : '';
   tr.dataset.p5    = s.p5_ssem||'';
   tr.dataset.p6    = s.p6_valuation||'';
+  tr.dataset.llq   = s.llq||'';
   tr.dataset.ticker = s.ticker||'';
 
   const ri = riNum(s.interest_level);
@@ -451,24 +468,28 @@ function mkRow(s){
 
   const mapBtn  = `<a class="ibtn dis" title="Map — Phase 2">&#x1f5fa;</a>`;
   const listBtn = `<a class="ibtn dis" title="List — Phase 2">&#x1f4cb;</a>`;
-  const memoBtn = hasStage
-    ? `<a class="ibtn" href="#" onclick="openMemo(event,'${esc(s.ticker)}')" title="Latest memo for ${esc(s.company_name||s.ticker)}">&#x1f4c4;</a>`
+  const memoBtn = s.memo_url
+    ? `<a class="ibtn" href="${s.memo_url}" target="_blank" title="Latest memo for ${esc(s.company_name||s.ticker)}">&#x1f4c4;</a>`
     : `<a class="ibtn dis" title="No memo">&#x1f4c4;</a>`;
 
   const mrVal = s.master_rating;
-  const mrBadge = (!mrVal||mrVal==='Unclear') ? '<span class="bdg gN">'+(mrVal||'—')+'</span>' : badge(mrVal);
+  const mrBadge = (!mrVal||mrVal==='Unclear') ? '<span class="bdg gN" title="Master rating — coming soon">'+(mrVal||'—')+'</span>' : badge(mrVal);
+  const notionUrl = s.notion_page_id ? 'https://www.notion.so/'+s.notion_page_id.replace(/-/g,'') : null;
+  const notionLnk = notionUrl ? `<a class="ntlnk" href="${notionUrl}" target="_blank" title="Open in Notion">↗</a>` : '';
 
   tr.innerHTML = `
     <td class="co g1s" title="${esc(s.ticker)} — ${esc(s.company_name||'')}">${esc(s.company_name||s.ticker)}</td>
     <td>${stagePill(s.stage)}</td>
+    <td>${llqPill(s.llq)}</td>
     <td class="tax" title="${esc(s.industry||'')}">${taxDisplay(s.industry_code,s.industry)}</td>
     <td class="tax" title="${esc(s.sector||'')}">${taxDisplay(s.sector_code,s.sector)}</td>
+    <td>${fmtPct(s.target_sector_weight)}</td>
     <td>${mapBtn}</td>
     <td>${listBtn}</td>
     <td class="g1e">${memoBtn}</td>
     <td class="g2s">${tlBadge(s.timeliness)}</td>
     <td>${mrBadge}</td>
-    <td><select class="rbs ri${ri}" data-ticker="${esc(s.ticker)}" data-field="interest" onchange="rbChange(this)">${riOpts}</select></td>
+    <td>${notionLnk}<select class="rbs ri${ri}" data-ticker="${esc(s.ticker)}" data-field="interest" onchange="rbChange(this)">${riOpts}</select></td>
     <td class="g2e"><select class="rbs rk${rk}" data-ticker="${esc(s.ticker)}" data-field="knowledge" onchange="rbChange(this)">${rkOpts}</select></td>
     <td class="g3s">${badge(s.p1_technical_momentum)}</td>
     <td>${badge(s.p2_market_paradigm_fit)}</td>
@@ -504,6 +525,7 @@ function openMemo(e, ticker){
 // ─────────────────────────────────────────────────────────
 const DIMS = [
   {id:'stage', label:'Stage'},
+  {id:'llq',   label:'LLQ'},
   {id:'tl',    label:'Timeliness'},
   {id:'mr',    label:'Master rating'},
   {id:'ri',    label:'RB interest'},
