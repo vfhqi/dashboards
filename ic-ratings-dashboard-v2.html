@@ -438,9 +438,13 @@ function llqPill(v){
   const labels={'1':'APM Live','2':'APM Bench','3':'Long-list qualified','4':'Not qualified','5':'Other'};
   return `<span class="bdg ${cls}" title="${esc(labels[tier]||v)}">${tier||'—'}</span>`;
 }
-function fmtPct(v){
-  if(v==null||v===''||v===undefined)return '—';
-  return (parseFloat(v)*100).toFixed(1)+'%';
+function sectorWtBadge(v){
+  // "RB target sector weight" values: "A - Strong overweight", "B - Overweight",
+  // "C- Normal weight", "D - Underweight", "F - Strong underweight", "M - Mixed"
+  if(!v) return '<span class="bdg gN">—</span>';
+  const letter = v.match(/^([A-FM])/)?.[1] || '?';
+  const cls = {'A':'gA','B':'gB','C':'gC','D':'gD','F':'gF','M':'gN'}[letter] || 'gN';
+  return `<span class="bdg ${cls}" title="${esc(v)}">${letter}</span>`;
 }
 function mkRow(s){
   const tr = document.createElement('tr');
@@ -483,7 +487,7 @@ function mkRow(s){
     <td>${llqPill(s.llq)}</td>
     <td class="tax" title="${esc(s.industry||'')}">${taxDisplay(s.industry_code,s.industry)}</td>
     <td class="tax" title="${esc(s.sector||'')}">${taxDisplay(s.sector_code,s.sector)}</td>
-    <td>${fmtPct(s.target_sector_weight)}</td>
+    <td>${sectorWtBadge(s.target_sector_weight)}</td>
     <td>${mapBtn}</td>
     <td>${listBtn}</td>
     <td class="g1e">${memoBtn}</td>
