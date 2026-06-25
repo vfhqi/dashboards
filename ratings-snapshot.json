@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "description": "Ratings snapshot — all Watson universe stocks, one row each",
-  "generated_at": "2026-06-25T11:31:11.266658Z",
+  "generated_at": "2026-06-25T14:53:47.469993Z",
   "count": 987,
   "valuation_method": {
     "method": "bell_curve_percentile_rank",
