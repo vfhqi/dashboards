@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "description": "Ratings snapshot — all Watson universe stocks, one row each",
-  "generated_at": "2026-06-25T10:31:27.483846Z",
+  "generated_at": "2026-06-25T11:31:11.266658Z",
   "count": 987,
   "valuation_method": {
     "method": "bell_curve_percentile_rank",
@@ -11901,7 +11901,7 @@
       "interest_level": "6. Uncategorised ATM",
       "knowledge_level": "1. Pre-IG",
       "stage": null,
-      "llq": null,
+      "llq": "4. Not qualified",
       "target_sector_weight": "B - Overweight",
       "p1_technical_momentum": "—",
       "p2_market_paradigm_fit": "—",
@@ -12276,7 +12276,7 @@
       "interest_level": "3. Desired (B / 75th+)",
       "knowledge_level": null,
       "stage": null,
-      "llq": null,
+      "llq": "4. Not qualified",
       "target_sector_weight": "B - Overweight",
       "p1_technical_momentum": "—",
       "p2_market_paradigm_fit": "—",
