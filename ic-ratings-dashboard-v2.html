@@ -20,6 +20,7 @@ body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font
 }
 .pg-hdr h1{font-size:16px;font-weight:600;color:#1d1d1b;flex-shrink:0}
 .pg-meta{font-size:11.5px;color:#6b6b6b}
+.pg-ts{font-size:11px;color:#9b9b8a;margin-left:4px}
 .pg-reset{
   margin-left:auto;padding:4px 11px;
   border:1px solid #c9c3b0;border-radius:16px;
@@ -79,7 +80,7 @@ body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font
 .fpop-div{height:1px;background:#ede9e0;margin:4px 0}
 
 /* ── Table wrap ─────────────────────────────────────────── */
-.twrap{overflow-x:auto;padding:14px 18px 40px}
+.twrap{overflow-x:auto;overflow-y:auto;height:calc(100vh - 115px);padding:0 18px 40px}
 
 /* ── Main ratings table ─────────────────────────────────── */
 .rd{
@@ -88,9 +89,16 @@ body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font
   background:#fff;border:1px solid rgba(0,0,0,.10);
   border-radius:8px;
 }
+.rd thead .sg-row th{position:sticky;top:0;z-index:101;background:#faf9f5}
+
+/* ── Sort indicators ─────────────────────────── */
+.rd thead th[data-sort]{cursor:pointer;user-select:none}
+.rd thead th[data-sort]:hover{background:#f0ede4}
+.rd thead th.sort-asc::after{content:" ▲";font-size:9px;opacity:.7}
+.rd thead th.sort-desc::after{content:" ▼";font-size:9px;opacity:.7}
 .rd thead th{
   background:#faf9f5;
-  position:sticky;top:80px;z-index:100;
+  position:sticky;top:33px;z-index:100;
   border-bottom:1px solid rgba(0,0,0,.09);
   padding:5px 7px;
   font-weight:500;text-align:center;
@@ -173,6 +181,7 @@ body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font
 .sp-tri{background:#8C909A;color:#fff}
 
 /* ── RB select pills ─────────────────────────────────────── */
+.rbd{display:inline-block;padding:2px 6px;border-radius:4px;font-size:12px;min-width:28px;text-align:center}
 .rbs{
   appearance:none;-webkit-appearance:none;
   border:none;border-radius:6px;
@@ -338,7 +347,7 @@ body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font
 <div class="pg-hdr">
   <h1>IC Ratings Dashboard</h1>
   <span class="pg-meta" id="countLabel">Loading…</span>
-  <button class="pg-reset" id="resetBtn">↺ Reset filters</button>
+  <span class="pg-ts" id="tsLabel"></span><button class="pg-reset" id="resetBtn">↺ Reset filters</button>
 </div>
 
 <!-- ── Filter bar ───────────────────────────────────────── -->
@@ -355,25 +364,25 @@ body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font
         <th colspan="6" class="sg3">Six pillar ratings</th>
       </tr>
       <tr>
-        <th class="co g1s" style="text-align:left">Company</th>
-        <th>Stage of<br>IA A&amp;J</th>
-        <th>LLQ</th>
-        <th style="text-align:left">Industry</th>
-        <th style="text-align:left">Sector</th>
-        <th>Target<br>sector wt</th>
+        <th class="co g1s" style="text-align:left" data-sort="company" onclick="sortRows('company')">Company</th>
+        <th data-sort="stage" onclick="sortRows('stage')">Stage of<br>IA A&amp;J</th>
+        <th data-sort="llq" onclick="sortRows('llq')">LLQ</th>
+        <th style="text-align:left" data-sort="industry" onclick="sortRows('industry')">Industry</th>
+        <th style="text-align:left" data-sort="sector" onclick="sortRows('sector')">Sector</th>
+        <th data-sort="tsw" onclick="sortRows('tsw')">Target<br>sector wt</th>
         <th>Map of<br>ratings</th>
         <th>List of<br>ratings</th>
         <th class="g1e">Latest<br>memo</th>
-        <th class="g2s">Timeliness</th>
-        <th title="Master rating — coming soon">Master<br>rating</th>
-        <th>RB interest<br>level</th>
-        <th class="g2e">RB knowledge<br>level</th>
-        <th class="g3s">Technical<br>momentum</th>
-        <th>Market<br>paradigm fit</th>
-        <th>Fundamental<br>change thesis</th>
-        <th>Fundamental case<br>foundations</th>
-        <th>Sell-side earnings<br>momentum</th>
-        <th class="g3e">Valuation<br>in range</th>
+        <th class="g2s" data-sort="tl" onclick="sortRows('tl')">Timeliness</th>
+        <th title="Master rating" data-sort="mr" onclick="sortRows('mr')">Master<br>rating</th>
+        <th data-sort="ri" onclick="sortRows('ri')">RB interest<br>level</th>
+        <th class="g2e" data-sort="rk" onclick="sortRows('rk')">RB knowledge<br>level</th>
+        <th class="g3s" data-sort="p1" onclick="sortRows('p1')">Technical<br>momentum</th>
+        <th data-sort="p2" onclick="sortRows('p2')">Market<br>paradigm fit</th>
+        <th data-sort="p3" onclick="sortRows('p3')">Fundamental<br>change thesis</th>
+        <th data-sort="p4" onclick="sortRows('p4')">Fundamental case<br>foundations</th>
+        <th data-sort="p5" onclick="sortRows('p5')">Sell-side earnings<br>momentum</th>
+        <th class="g3e" data-sort="p6" onclick="sortRows('p6')">Valuation<br>in range</th>
       </tr>
     </thead>
     <tbody id="tbody"></tbody>
@@ -435,7 +444,7 @@ function llqPill(v){
   if(!v) return '<span class="bdg gN">—</span>';
   const m=v.match(/^(\d+)/);const tier=m?m[1]:'';
   const cls={'1':'gA','2':'gB','3':'gC','4':'gD','5':'gN'}[tier]||'gN';
-  const labels={'1':'APM Live','2':'APM Bench','3':'Long-list qualified','4':'Not qualified','5':'Other'};
+  const labels={'1':'SL','2':'SB','3':'LLQ','4':'NQ','5':'Other'};
   return `<span class="bdg ${cls}" title="${esc(labels[tier]||v)}">${tier||'—'}</span>`;
 }
 function sectorWtBadge(v){
@@ -446,10 +455,41 @@ function sectorWtBadge(v){
   const cls = {'A':'gA','B':'gB','C':'gC','D':'gD','F':'gF','M':'gN'}[letter] || 'gN';
   return `<span class="bdg ${cls}" title="${esc(v)}">${letter}</span>`;
 }
+
+// ── Column sort state ─────────────────────────────────────
+let sortKey = null, sortDir = 1;
+function sortRows(key){
+  if(sortKey===key){ sortDir*=-1; } else { sortKey=key; sortDir=1; }
+  const tbody=document.getElementById('tbody');
+  const rows=[...tbody.querySelectorAll('tr')];
+  rows.sort((a,b)=>{
+    let av=a.dataset[key]||'', bv=b.dataset[key]||'';
+    // Grade sort: A<B<C<D<F, blank last
+    const gradeOrder={'A':1,'B':2,'C':3,'D':4,'F':5,'':99};
+    if(gradeOrder[av]!==undefined && gradeOrder[bv]!==undefined){
+      return (gradeOrder[av]-gradeOrder[bv])*sortDir;
+    }
+    // Numeric sort
+    const an=parseFloat(av), bn=parseFloat(bv);
+    if(!isNaN(an)&&!isNaN(bn)) return (an-bn)*sortDir;
+    // String sort
+    return av.localeCompare(bv)*sortDir;
+  });
+  rows.forEach(r=>tbody.appendChild(r));
+  // Update header indicators
+  document.querySelectorAll('.rd thead th[data-sort]').forEach(th=>{
+    th.classList.remove('sort-asc','sort-desc');
+    if(th.dataset.sort===key) th.classList.add(sortDir===1?'sort-asc':'sort-desc');
+  });
+}
 function mkRow(s){
   const tr = document.createElement('tr');
   // Dataset for filtering
-  tr.dataset.stage = s.stage||'';
+  tr.dataset.stage    = s.stage||'';
+  tr.dataset.company  = s.company_name||'';
+  tr.dataset.industry = s.industry||'';
+  tr.dataset.sector   = s.sector||'';
+  tr.dataset.tsw      = s.target_sector_weight||'';
   tr.dataset.tl    = s.timeliness||'';
   tr.dataset.mr    = s.master_rating||'';
   tr.dataset.ri    = s.interest_level||'';
@@ -493,17 +533,16 @@ function mkRow(s){
     <td class="g1e">${memoBtn}</td>
     <td class="g2s">${tlBadge(s.timeliness)}</td>
     <td>${mrBadge}</td>
-    <td>${notionLnk}<select class="rbs ri${ri}" data-ticker="${esc(s.ticker)}" data-field="interest" onchange="rbChange(this)">${riOpts}</select></td>
-    <td class="g2e"><select class="rbs rk${rk}" data-ticker="${esc(s.ticker)}" data-field="knowledge" onchange="rbChange(this)">${rkOpts}</select></td>
+    <td>${notionLnk}<span class="rbd ri${ri}">${esc(s.interest_level||'—')}</span></td>
+    <td class="g2e"><span class="rbd rk${rk}">${esc(s.knowledge_level||'—')}</span></td>
     <td class="g3s">${badge(s.p1_technical_momentum)}</td>
-    <td>${badge(s.p2_market_paradigm_fit)}</td>
-    <td>${badge(s.p3_fundamental_change)}</td>
-    <td>${badge(s.p4_fundamental_foundations)}</td>
+    <td>${hasStage?badge(s.p2_market_paradigm_fit):'<span class="bdg gN">—</span>'}</td>
+    <td>${hasStage?badge(s.p3_fundamental_change):'<span class="bdg gN">—</span>'}</td>
+    <td>${hasStage?badge(s.p4_fundamental_foundations):'<span class="bdg gN">—</span>'}</td>
     <td>${badge(s.p5_ssem)}</td>
     <td class="g3e">${badge(s.p6_valuation)}</td>
   `;
-  tr.querySelector('[data-field=interest]').value = s.interest_level||'';
-  tr.querySelector('[data-field=knowledge]').value = s.knowledge_level||'';
+
   return tr;
 }
 
@@ -730,6 +769,13 @@ async function init(){
   }
 
   const stocks = data.stocks||[];
+  // Show data timestamp
+  if(data.generated_at){
+    const dt=new Date(data.generated_at);
+    const fmt=dt.toLocaleString('en-GB',{day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit',timeZoneName:'short'});
+    const el=document.getElementById('tsLabel');
+    if(el) el.textContent='Data: '+fmt;
+  }
   const CHUNK = 100;
   const tbody = document.getElementById('tbody');
 
@@ -912,190 +958,4 @@ init();
                 else{va=a.ticker;vb=b.ticker;}
                 if(va<vb)return covSortAsc?-1:1;if(va>vb)return covSortAsc?1:-1;return 0;
             });
-            var tot=tickers.length,hp=0,iD=0,ap=0,tQ=0;
-            for(var i=0;i<tickers.length;i++){
-                if(tickers[i].data.next_action.priority==="high")hp++;
-                if(tickers[i].data.in_dashboard)iD++;
-                if(tickers[i].data.audit.status==="pass")ap++;
-                tQ+=tickers[i].data.summary.queries_done;
-            }
-            var h="";
-            h+="<div class='cov-summary'>";
-            h+=covStat("Tickers",tot,"");
-            h+=covStat("In Dashboard",iD,"");
-            h+=covStat("Reports Produced",tQ,"");
-            h+=covStat("High Priority",hp,"color:#b71c1c;");
-            h+=covStat("Audit Pass",ap+"/"+tot,"");
-            h+="</div>";
-            h+=covControls();
-            h+="<div class='cov-table-wrap'><table class='cov-table'><thead>";
-            h+=covMasterRow();
-            h+=covStageRow();
-            h+=covQueryRow(qD);
-            h+="</thead><tbody>";
-            for(var r=0;r<tickers.length;r++) h+=covDataRow(tickers[r],qD);
-            h+="</tbody></table></div>";
-            h+="<div style='text-align:right;font-size:8px;color:#9a9380;margin-top:4px;'>Generated: "+(coverageData.generated||"?")+"</div>";
-            c.innerHTML=h;
-        }
-
-        function covStat(label,val,style){
-            return "<div class='cov-stat'><div class='cov-stat-label'>"+label+"</div><div class='cov-stat-value'"+(style?" style='"+style+"'":"")+">"+val+"</div></div>";
-        }
-
-        function covControls(){
-            var h="<div class='cov-controls'>";
-            h+="<input class='cov-filter-input' placeholder='Filter...' oninput='covFilter(this.value)'>";
-            h+="<button class='cov-toggle-btn' onclick='covToggleCompany()'>"+(covShowCompany?"Show Ticker":"Show Company")+"</button>";
-            h+="<span style='color:#6b6b6b;font-size:9px;margin-left:8px;'>FILTER FAILED:</span>";
-            var stages=["IG","Tri","ESA","DD","Any"];
-            for(var i=0;i<stages.length;i++){
-                var s=stages[i],active=covStageFilter===s;
-                h+="<button class='cov-filter-btn"+(active?" active":"")+"' onclick=\"covToggleStageFilter('"+s+"')\">"+s+"</button>";
-            }
-            return h+"</div>";
-        }
-
-        // Row 1: Master groups
-        // Cols: Ticker(1) + Ind/Sec(1) + Stage(1) + Priority(1) = 4 frozen
-        // Research: (3+1)+(4+1)+(7+1)+(5+1)+(4+1) = 28
-        // A&J: Memo(3) + Audit(1) = 4
-        // Ratings: 6
-        // Status: Action(1) = 1
-        function covMasterRow(){
-            var h="<tr>";
-            h+="<th rowspan='3' class='cov-ticker-hdr cov-sortable' onclick=\"covSortBy(covShowCompany?'company':'ticker')\">"+
-                (covShowCompany?"Company":"Ticker")+"</th>";
-            h+="<th rowspan='3' class='cov-indsec-hdr cov-sortable' onclick=\"covSortBy('industry')\">Industry / Sector</th>";
-            h+="<th rowspan='3' class='cov-sortable' onclick=\"covSortBy('stage')\">Stage</th>";
-            h+="<th rowspan='3' class='cov-sortable' onclick=\"covSortBy('priority')\">Priority</th>";
-            h+="<th class='cov-master-hdr' colspan='28'>INFORMATION RESEARCH</th>";
-            h+="<th class='cov-master-hdr' colspan='4'>ANALYSIS / JUDGEMENT</th>";
-            h+="<th class='cov-master-hdr' colspan='6'>FCS RATINGS</th>";
-            h+="<th class='cov-master-hdr' colspan='1'>STATUS</th>";
-            return h+"</tr>";
-        }
-
-        // Row 2: Stage groups
-        function covStageRow(){
-            var h="<tr>";
-            h+="<th class='cov-stage-hdr cov-stage-ig' colspan='4'>IDEAS GENERATION</th>";
-            h+="<th class='cov-stage-hdr cov-stage-tri' colspan='5'>TRIAGING</th>";
-            h+="<th class='cov-stage-hdr cov-stage-esa' colspan='8'>ESA</th>";
-            h+="<th class='cov-stage-hdr cov-stage-dd' colspan='6'>DEEP DIVE</th>";
-            h+="<th class='cov-stage-hdr cov-stage-any' colspan='5'>ANY STAGE</th>";
-            h+="<th class='cov-stage-hdr cov-stage-meta' colspan='3'>APM MEMOS</th>";
-            h+="<th class='cov-stage-hdr cov-stage-meta'>AUDIT</th>";
-            h+="<th class='cov-stage-hdr cov-stage-ratings' colspan='6'>PILLAR RATINGS</th>";
-            h+="<th class='cov-stage-hdr cov-stage-meta'>NEXT ACTION</th>";
-            return h+"</tr>";
-        }
-
-        // Row 3: Query names + source tags + audit headers + rating headers
-        function covQueryRow(qD){
-            var h="<tr>";
-            var auditAfter={2:1,6:1,13:1,18:1,22:1};
-            for(var q=0;q<qD.length;q++){
-                var src=qD[q].src||"";
-                h+="<th class='cov-rcell-hdr cov-sortable' onclick=\"covSortBy('q"+qD[q].n+"')\" title='Q"+qD[q].n+": "+qD[q].nm+"'>"+qD[q].nm+"<span class='cov-cell-src'>"+src+"</span></th>";
-                if(auditAfter[q]) h+="<th class='cov-audit-cell' style='font-size:7px;' title='Stage completion'>\u2713</th>";
-            }
-            h+="<th>Tri</th><th>ESA</th><th>DD</th>";
-            h+="<th title='SOP compliance'>SOP</th>";
-            var pillars=["P1 Tech Mom","P2 Mkt Fit","P3 Chg","P4 BB","P5 SS Mom","P6 Val"];
-            for(var p=0;p<pillars.length;p++) h+="<th style='font-size:7px;white-space:normal;max-width:38px;line-height:1.1;'>"+pillars[p]+"</th>";
-            h+="<th style='min-width:140px;'>Action</th>";
-            return h+"</tr>";
-        }
-
-        // Data row
-        function covDataRow(item,qD){
-            var tk=item.ticker,d=item.data;
-            var pri=d.next_action.priority;
-            var rc=pri==="high"?" class='cov-priority-high'":(pri==="medium"?" class='cov-priority-medium'":"");
-            var h="<tr"+rc+">";
-            // Ticker/Company
-            var label=covShowCompany?(d.company_name||tk):tk;
-            if(label.length>16) label=label.substring(0,14)+"..";
-            var tip=tk+" — "+(d.company_name||"")+"\n"+d.summary.queries_done+"q, "+d.summary.total_words+"w";
-            h+="<td class='cov-ticker cov-tooltip' data-tip='"+tip+"' onclick=\"coverageGoToStock('"+tk+"')\">"+label+"</td>";
-            // Ind/Sec
-            var ind=d.industry||"",sec=d.sector||"";
-            var indS=ind.replace(/^[A-Z]\. /,""),secS=sec.replace(/^[A-Z]\.[0-9]+\. /,"");
-            if(indS.length>18)indS=indS.substring(0,16)+"..";
-            if(secS.length>22)secS=secS.substring(0,20)+"..";
-            h+="<td class='cov-indsec' title='"+ind+"\n"+sec+"'><b>"+indS+"</b><br>"+secS+"</td>";
-            // Stage badge
-            var stg=d.summary.deepest_stage||"None";
-            h+="<td>"+covStageBadge(stg)+"</td>";
-            // Priority
-            var priCls=pri==="high"?"color:#b71c1c;font-weight:700":pri==="medium"?"color:#8d6e00;font-weight:600":pri==="low"?"color:#6b6b6b":"color:#c9c3b0";
-            h+="<td style='"+priCls+"'>"+(pri||"none").toUpperCase()+"</td>";
-            // Query cells + audit
-            var auditAfter={2:0,6:1,13:2,18:3,22:4};
-            for(var q=0;q<qD.length;q++){
-                var qK=String(qD[q].n),qd=d.queries[qK];
-                if(!qd||qd.status==="missing"){
-                    h+="<td class='cov-cell-missing cov-rcell'>-</td>";
-                }else if(qd.is_adhoc){
-                    var ds=qd.description||qd.query_name||"ah";
-                    if(ds.length>20)ds=ds.substring(0,18)+"..";
-                    var nd=covDot(qd.notion_posted);
-                    var tp=(qd.word_count||0)+"w|"+(qd.source||"?");
-                    var dt=qd.date?"<span class='cov-cell-date'>"+qd.date+"</span>":"";
-                    var nu=qd.notion_url;
-                    var inner=nu?"<a href='"+nu+"' target='_blank' style='color:inherit;text-decoration:none;' title='Open in Notion'>"+ds+nd+"</a>"+dt:ds+nd+dt;
-                    h+="<td class='cov-cell-adhoc cov-rcell cov-tooltip' data-tip='"+tp+"'>"+inner+"</td>";
-                }else{
-                    var cc=qd.status==="done"?"cov-cell-done":"cov-cell-partial";
-                    var nd=covDot(qd.notion_posted),wc=qd.word_count;
-                    var wL=wc?(wc>=1000?Math.round(wc/1000)+"k":wc):"?";
-                    var tp=wc+"w|"+(qd.source||"?")+(qd.notion_posted?"|N":"|unp");
-                    var dt=qd.date?"<span class='cov-cell-date'>"+qd.date+"</span>":"";
-                    var nu=qd.notion_url;
-                    var inner=nu?"<a href='"+nu+"' target='_blank' style='color:inherit;text-decoration:none;' title='Open in Notion'>"+wL+nd+"</a>"+dt:wL+nd+dt;
-                    h+="<td class='"+cc+" cov-rcell cov-tooltip' data-tip='"+tp+"'>"+inner+"</td>";
-                }
-                if(auditAfter[q]!==undefined){
-                    var si=auditAfter[q],stgDef=covStages[si];
-                    var aud=covStageAudit(d,qD,stgDef);
-                    var acls=aud.done===aud.total?"cov-stage-audit-full":aud.done>0?"cov-stage-audit-partial":"cov-stage-audit-empty";
-                    h+="<td class='cov-audit-cell "+acls+" cov-tooltip' data-tip='"+stgDef.label+": "+aud.done+"/"+aud.total+"'>"+aud.done+"/"+aud.total+"</td>";
-                }
-            }
-            // Memos
-            h+=covMemo(d.memos.triaging)+covMemo(d.memos.esa)+covMemo(d.memos.dd);
-            // Overall audit
-            var ai=d.audit.issues?d.audit.issues.join("; "):"All pass";
-            var ac=d.audit.status==="pass"?"cov-audit-pass":"cov-audit-fail";
-            h+="<td class='"+ac+" cov-tooltip' data-tip='"+ai+"'>"+(d.audit.status==="pass"?"PASS":"FAIL")+"</td>";
-            // Pillar ratings
-            var rats=d.ratings||{};
-            h+="<td>"+covRatingBadge(rats.p1)+"</td>";
-            h+="<td>"+covRatingBadge(rats.p2)+"</td>";
-            h+="<td>"+covRatingBadge(rats.p3)+"</td>";
-            h+="<td>"+covRatingBadge(rats.p4)+"</td>";
-            h+="<td>"+covRatingBadge(rats.p5)+"</td>";
-            h+="<td>"+covRatingBadge(rats.p6)+"</td>";
-            // Action + SOP (copies next_action.detail for this ticker)
-            var nac="cov-action cov-action-"+(pri||"none");
-            var actionTxt=d.next_action["short"]||"-";
-            var sopBtn="<span class='cov-sop-btn' id='sop-"+tk+"' onclick=\"covCopySOP('"+tk+"')\" title='Copy next action'>SOP</span>";
-            h+="<td class='"+nac+"'>"+actionTxt+sopBtn+"</td>";
-            return h+"</tr>";
-        }
-
-        function covDot(p){return "<span class='cov-notion-dot "+(p?"cov-notion-yes":"cov-notion-no")+"'></span>";}
-        function covMemo(has){return "<td class='"+(has?"cov-memo-yes":"cov-memo-no")+"'>"+(has?"\u2713":"-")+"</td>";}
-
-        function coverageGoToStock(ticker){
-            var btn=document.getElementById("btn-coverage");
-            if(btn&&btn.classList.contains("active")){btn.classList.remove("active");document.body.classList.remove("show-coverage");}
-            var els=document.querySelectorAll(".stock-btn,[data-ticker]");
-            for(var i=0;i<els.length;i++){var el=els[i];
-                if(el.textContent.indexOf(ticker)>-1||el.getAttribute("data-ticker")===ticker){el.click();return;}}
-        }
-        // COVERAGE_JS_V1_END
-</script>
-</body>
-</html>
+            var tot=tickers.length,
