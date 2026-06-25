@@ -444,7 +444,7 @@ function llqPill(v){
   const m=v.match(/^(\d+)/);const tier=m?m[1]:'';
   const cls={'1':'gA','2':'gB','3':'gC','4':'gD','5':'gN'}[tier]||'gN';
   const labels={'1':'SL','2':'SB','3':'LLQ','4':'NQ','5':'Other'};
-  return `<span class="bdg ${cls}" title="${esc(labels[tier]||v)}">${tier||'—'}</span>`;
+  return `<span class="bdg ${cls}" title="${esc(v)}">${labels[tier]||tier||'—'}</span>`;
 }
 function sectorWtBadge(v){
   // "RB target sector weight" values: "A - Strong overweight", "B - Overweight",
