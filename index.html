@@ -1172,69 +1172,55 @@ init();
         }
 
 // COPY_TICKERS_V2_START
-var TICKER_FORMAT_MAP = {
-    "NVTK":  null,
-    "DCC":   { fs: "DCC.GB",      as: "DCC.GB"      },
-    "DIE":   { fs: "DIE.BE",      as: "DIE.BE"      },
-    "EKTA":  { fs: "EKTA.B.SE",   as: "EKTA B.SE"   },
-    "ENAV":  { fs: "ENAV.IT",     as: "ENAV.IT"     },
-    "GET":   { fs: "GETI.B.SE",   as: "GETI B.SE"   },
-    "HTRO":  { fs: "HTRO.SE",     as: "HTRO.SE"     },
-    "PRY":   { fs: "PRY.IT",      as: "PRY.IT"      },
-    "IGG":   { fs: "IGG.GB",      as: "IGG.GB"      },
-    "FEVR":  { fs: "FEVR.GB",     as: "FEVR.GB"     },
-    "CARLB": { fs: "CARL.B.DK",   as: "CARL B.DK"   },
-    "CRBN":  { fs: "CRBN.NL",     as: "CRBN.NL"     },
-    "FLTR":  { fs: "FLTR.GB",     as: "FLTR.GB"     },
-    "DKSH":  { fs: "DKSH.CH",     as: "DKSH.CH"     },
-    "MTU":   { fs: "MTX.DE",      as: "MTX.DE"      },
-    "XVIVO": { fs: "XVIVO.SE",    as: "XVIVO.SE"    },
-    "HFG":   { fs: "HFG.DE",      as: "HFG.DE"      },
-    "INSTAL":{ fs: "INSTAL.SE",   as: "INSTAL.SE"   },
-    "ASML":  { fs: "ASML.NL",     as: "ASML.NL"     },
-    "ASMI":  { fs: "ASM.NL",      as: "ASM.NL"      },
-    "BESI":  { fs: "BESI.NL",     as: "BESI.NL"     },
-    "VACN":  { fs: "VACN.CH",     as: "VACN.CH"     },
-    "IFX":   { fs: "IFX.DE",      as: "IFX.DE"      },
-    "STM":   { fs: "STMPA.FR",    as: "STMPA.FR"    },
-    "SAP":   { fs: "SAP.DE",      as: "SAP.DE"      },
-    "MELE":  { fs: "MELE.BE",     as: "MELE.BE"     },
-    "TPRO":  { fs: "TPRO.IT",     as: "TPRO.IT"     },
-    "TEMN":  { fs: "TEMN.CH",     as: "TEMN.CH"     },
-    "DSY":   { fs: "DSY.FR",      as: "DSY.FR"      },
-    "HEXA":  { fs: "HEXA.B.SE",   as: "HEXA B.SE"   },
-    "CAP":   { fs: "CAP.FR",      as: "CAP.FR"      },
-    "SOP":   { fs: "SOP.FR",      as: "SOP.FR"      },
-    "ATO":   { fs: "ATO.FR",      as: "ATO.FR"      },
-    "1INN":  { fs: "1INN.DE",     as: "1INN.DE"     },
-    "NEM":   { fs: "NEM.DE",      as: "NEM.DE"      },
-    "ADYEN": { fs: "ADYEN.NL",    as: "ADYEN.NL"    },
-    "TIETO": { fs: "TIETO.FI",    as: "TIETO.FI"    }
+// Tickers in this dashboard use TICKER-EXCHANGE format (e.g. DCC-GB, EKTA.B-SE).
+// Conversion rules:
+//   FactSet:    replace last hyphen with dot  -> DCC.GB, EKTA.B.SE, CARLB.DK
+//   AlphaSense: same, but .B share class becomes space -> DCC.GB, EKTA B.SE, CARLB.DK
+// Override map handles the one true exception: CARLB-DK canonical FS = CARL.B.DK
+var TICKER_OVERRIDES = {
+    "CARLB-DK": { fs: "CARL.B.DK", as: "CARL B.DK" }
 };
+
+function dashTickerToFormat(dashTicker, format) {
+    // Override takes priority
+    if (TICKER_OVERRIDES[dashTicker]) {
+        return TICKER_OVERRIDES[dashTicker][format];
+    }
+    // Split on last hyphen: "EKTA.B-SE" -> base="EKTA.B", exch="SE"
+    var lastDash = dashTicker.lastIndexOf('-');
+    if (lastDash === -1) return dashTicker; // no exchange suffix, return as-is
+    var base = dashTicker.slice(0, lastDash);
+    var exch = dashTicker.slice(lastDash + 1);
+    if (format === 'fs') {
+        // FactSet: base.EXCH (dot join, no transformation of base)
+        return base + '.' + exch;
+    } else {
+        // AlphaSense: if base ends in .B (B-share class), convert to "ROOT B.EXCH"
+        if (base.slice(-2) === '.B') {
+            return base.slice(0, -2) + ' B.' + exch;
+        }
+        return base + '.' + exch;
+    }
+}
 
 function copyTickers(format) {
     var visibleTickers = [];
-    var skipped = [];
-    // allRows is the live array of <tr> elements; fhide class = hidden by filter
+    // allRows: live array of <tr> elements; fhide class = hidden by active filter
     if (typeof allRows !== 'undefined') {
         allRows.forEach(function(tr) {
             if (tr.classList.contains('fhide')) return;
             var ticker = tr.dataset.ticker || '';
             if (!ticker) return;
-            var map = TICKER_FORMAT_MAP[ticker];
-            if (map === null) { skipped.push(ticker); return; }
-            if (!map) { visibleTickers.push(ticker + '.[?]'); return; }
-            visibleTickers.push(format === 'fs' ? map.fs : map.as);
+            visibleTickers.push(dashTickerToFormat(ticker, format));
         });
     }
-    if (!visibleTickers.length && !skipped.length) {
+    if (!visibleTickers.length) {
         showCopyToastV2('No tickers displayed.');
         return;
     }
     var text = visibleTickers.join('\n');
     var label = format === 'fs' ? 'FactSet' : 'AlphaSense';
     var msg = '\u2713 ' + visibleTickers.length + ' ticker' + (visibleTickers.length !== 1 ? 's' : '') + ' copied for ' + label;
-    if (skipped.length) msg += ' (' + skipped.join(', ') + ' skipped)';
     if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(text).then(function() {
             showCopyToastV2(msg);
