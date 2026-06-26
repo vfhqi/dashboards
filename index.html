@@ -1174,11 +1174,10 @@ init();
 // COPY_TICKERS_V2_START
 // Tickers in this dashboard use TICKER-EXCHANGE format (e.g. DCC-GB, EKTA.B-SE).
 // Conversion rules:
-//   FactSet:    replace last hyphen with dot  -> DCC.GB, EKTA.B.SE, CARLB.DK
-//   AlphaSense: same, but .B share class becomes space -> DCC.GB, EKTA B.SE, CARLB.DK
-// Override map handles the one true exception: CARLB-DK canonical FS = CARL.B.DK
+//   FactSet:    keep as-is (TELIA-SE, EKTA.B-SE) — one override: CARLB-DK -> CARL.B-DK
+//   AlphaSense: replace last hyphen with dot; .B-EXCH becomes " B.EXCH" (space)
 var TICKER_OVERRIDES = {
-    "CARLB-DK": { fs: "CARL.B.DK", as: "CARL B.DK" }
+    "CARLB-DK": { fs: "CARL.B-DK", as: "CARL B.DK" }
 };
 
 function dashTickerToFormat(dashTicker, format) {
@@ -1186,21 +1185,19 @@ function dashTickerToFormat(dashTicker, format) {
     if (TICKER_OVERRIDES[dashTicker]) {
         return TICKER_OVERRIDES[dashTicker][format];
     }
-    // Split on last hyphen: "EKTA.B-SE" -> base="EKTA.B", exch="SE"
+    if (format === 'fs') {
+        // FactSet: native dashboard format is already correct
+        return dashTicker;
+    }
+    // AlphaSense: replace last hyphen with dot; .B-EXCH -> " B.EXCH"
     var lastDash = dashTicker.lastIndexOf('-');
-    if (lastDash === -1) return dashTicker; // no exchange suffix, return as-is
+    if (lastDash === -1) return dashTicker;
     var base = dashTicker.slice(0, lastDash);
     var exch = dashTicker.slice(lastDash + 1);
-    if (format === 'fs') {
-        // FactSet: base.EXCH (dot join, no transformation of base)
-        return base + '.' + exch;
-    } else {
-        // AlphaSense: if base ends in .B (B-share class), convert to "ROOT B.EXCH"
-        if (base.slice(-2) === '.B') {
-            return base.slice(0, -2) + ' B.' + exch;
-        }
-        return base + '.' + exch;
+    if (base.slice(-2) === '.B') {
+        return base.slice(0, -2) + ' B.' + exch;
     }
+    return base + '.' + exch;
 }
 
 function copyTickers(format) {
