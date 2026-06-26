@@ -25,7 +25,7 @@
       "last_updated": "2026-06-26",
       "last_updated_by": "quant_refresh",
       "pillars": {
-        "p1_technical_momentum": "B",
+        "p1_technical_momentum": "—",
         "p2_market_paradigm_fit": "B",
         "p3_fundamental_change": "C",
         "p4_building_blocks": "C",
@@ -64,11 +64,11 @@
       "last_updated": "2026-06-26",
       "last_updated_by": "quant_refresh",
       "pillars": {
-        "p1_technical_momentum": "F",
+        "p1_technical_momentum": "—",
         "p2_market_paradigm_fit": "—",
         "p3_fundamental_change": "C",
         "p4_building_blocks": "C",
-        "p5_ss_earnings_momentum": "B",
+        "p5_ss_earnings_momentum": "C",
         "p6_valuation": "A"
       },
       "investment_case": {
@@ -102,7 +102,7 @@
       "last_updated": "2026-06-26",
       "last_updated_by": "quant_refresh",
       "pillars": {
-        "p1_technical_momentum": "B",
+        "p1_technical_momentum": "—",
         "p2_market_paradigm_fit": "—",
         "p3_fundamental_change": "—",
         "p4_building_blocks": "—",
@@ -176,7 +176,7 @@
       "last_updated": "2026-06-26",
       "last_updated_by": "quant_refresh",
       "pillars": {
-        "p1_technical_momentum": "C",
+        "p1_technical_momentum": "—",
         "p2_market_paradigm_fit": "—",
         "p3_fundamental_change": "—",
         "p4_building_blocks": "—",
@@ -214,7 +214,7 @@
       "last_updated": "2026-06-26",
       "last_updated_by": "quant_refresh",
       "pillars": {
-        "p1_technical_momentum": "C",
+        "p1_technical_momentum": "—",
         "p2_market_paradigm_fit": "—",
         "p3_fundamental_change": "—",
         "p4_building_blocks": "—",
@@ -252,7 +252,7 @@
       "last_updated": "2026-06-26",
       "last_updated_by": "quant_refresh",
       "pillars": {
-        "p1_technical_momentum": "B",
+        "p1_technical_momentum": "—",
         "p2_market_paradigm_fit": "—",
         "p3_fundamental_change": "—",
         "p4_building_blocks": "—",
@@ -326,7 +326,7 @@
       "last_updated": "2026-06-26",
       "last_updated_by": "quant_refresh",
       "pillars": {
-        "p1_technical_momentum": "B",
+        "p1_technical_momentum": "—",
         "p2_market_paradigm_fit": "—",
         "p3_fundamental_change": "—",
         "p4_building_blocks": "—",
@@ -364,7 +364,7 @@
       "last_updated": "2026-06-26",
       "last_updated_by": "quant_refresh",
       "pillars": {
-        "p1_technical_momentum": "D",
+        "p1_technical_momentum": "—",
         "p2_market_paradigm_fit": "—",
         "p3_fundamental_change": "—",
         "p4_building_blocks": "—",
@@ -474,12 +474,12 @@
       "last_updated": "2026-06-26",
       "last_updated_by": "quant_refresh",
       "pillars": {
-        "p1_technical_momentum": "B",
+        "p1_technical_momentum": "—",
         "p2_market_paradigm_fit": "A",
         "p3_fundamental_change": "B",
         "p4_building_blocks": "A",
-        "p5_ss_earnings_momentum": "B",
-        "p6_valuation": "C+"
+        "p5_ss_earnings_momentum": "A",
+        "p6_valuation": "F"
       },
       "investment_case": {
         "primary_setup": "Demand-Driven EPSU/EPT (AI Capex Supercycle)",
@@ -550,12 +550,12 @@
       "last_updated": "2026-06-26",
       "last_updated_by": "quant_refresh",
       "pillars": {
-        "p1_technical_momentum": "B",
+        "p1_technical_momentum": "—",
         "p2_market_paradigm_fit": "B",
         "p3_fundamental_change": "B",
         "p4_building_blocks": "B",
-        "p5_ss_earnings_momentum": "B-",
-        "p6_valuation": "D"
+        "p5_ss_earnings_momentum": "A",
+        "p6_valuation": "F"
       },
       "investment_case": {
         "primary_setup": "Demand-Driven EPSU/EPT (AI packaging intensity — HBM4/CoWoS-L)",
@@ -590,12 +590,12 @@
       "last_updated": "2026-06-26",
       "last_updated_by": "quant_refresh",
       "pillars": {
-        "p1_technical_momentum": "D",
+        "p1_technical_momentum": "—",
         "p2_market_paradigm_fit": "A",
         "p3_fundamental_change": "B",
         "p4_building_blocks": "A",
         "p5_ss_earnings_momentum": "A",
-        "p6_valuation": "C"
+        "p6_valuation": "F"
       },
       "investment_case": {
         "primary_setup": "Demand-Driven EPSU/EPT (AI fab capex picks-and-shovels)",
@@ -629,7 +629,7 @@
       "last_updated": "2026-06-26",
       "last_updated_by": "quant_refresh",
       "pillars": {
-        "p1_technical_momentum": "B",
+        "p1_technical_momentum": "—",
         "p2_market_paradigm_fit": "C",
         "p3_fundamental_change": "C",
         "p4_building_blocks": "B",
@@ -706,12 +706,12 @@
       "last_updated": "2026-06-26",
       "last_updated_by": "quant_refresh",
       "pillars": {
-        "p1_technical_momentum": "C",
+        "p1_technical_momentum": "—",
         "p2_market_paradigm_fit": "A",
         "p3_fundamental_change": "B",
         "p4_building_blocks": "A",
-        "p5_ss_earnings_momentum": "B+",
-        "p6_valuation": "C"
+        "p5_ss_earnings_momentum": "D",
+        "p6_valuation": "A"
       },
       "investment_case": {
         "primary_setup": "Platform Monetisation (TAM Expansion via AI — Joule embedded in ERP workflows)",
@@ -745,7 +745,7 @@
       "last_updated": "2026-06-26",
       "last_updated_by": "quant_refresh",
       "pillars": {
-        "p1_technical_momentum": "B",
+        "p1_technical_momentum": "—",
         "p2_market_paradigm_fit": "D",
         "p3_fundamental_change": "D",
         "p4_building_blocks": "B",
@@ -784,12 +784,12 @@
       "last_updated": "2026-06-26",
       "last_updated_by": "quant_refresh",
       "pillars": {
-        "p1_technical_momentum": "D",
+        "p1_technical_momentum": "—",
         "p2_market_paradigm_fit": "A",
         "p3_fundamental_change": "B",
         "p4_building_blocks": "B",
-        "p5_ss_earnings_momentum": "B+",
-        "p6_valuation": "B"
+        "p5_ss_earnings_momentum": "B",
+        "p6_valuation": "F"
       },
       "investment_case": {
         "primary_setup": "Demand-Driven EPSU/EPT (AI chip testing intensity — HBM4 + TSMC 2nm)",
@@ -823,7 +823,7 @@
       "last_updated": "2026-06-26",
       "last_updated_by": "quant_refresh",
       "pillars": {
-        "p1_technical_momentum": "D",
+        "p1_technical_momentum": "—",
         "p2_market_paradigm_fit": "B",
         "p3_fundamental_change": "B",
         "p4_building_blocks": "C",
@@ -863,12 +863,12 @@
       "last_updated": "2026-06-26",
       "last_updated_by": "quant_refresh",
       "pillars": {
-        "p1_technical_momentum": "C",
+        "p1_technical_momentum": "—",
         "p2_market_paradigm_fit": "A",
         "p3_fundamental_change": "B",
         "p4_building_blocks": "A",
-        "p5_ss_earnings_momentum": "B",
-        "p6_valuation": "B+"
+        "p5_ss_earnings_momentum": "D",
+        "p6_valuation": "A"
       },
       "investment_case": {
         "primary_setup": "Platform Monetisation (physics-informed AI simulation moat)",
@@ -939,7 +939,7 @@
       "last_updated": "2026-06-26",
       "last_updated_by": "quant_refresh",
       "pillars": {
-        "p1_technical_momentum": "C",
+        "p1_technical_momentum": "—",
         "p2_market_paradigm_fit": "D",
         "p3_fundamental_change": "D",
         "p4_building_blocks": "C",
@@ -978,7 +978,7 @@
       "last_updated": "2026-06-26",
       "last_updated_by": "quant_refresh",
       "pillars": {
-        "p1_technical_momentum": "C",
+        "p1_technical_momentum": "—",
         "p2_market_paradigm_fit": "F",
         "p3_fundamental_change": "F",
         "p4_building_blocks": "C",
@@ -1017,7 +1017,7 @@
       "last_updated": "2026-06-26",
       "last_updated_by": "quant_refresh",
       "pillars": {
-        "p1_technical_momentum": "C",
+        "p1_technical_momentum": "—",
         "p2_market_paradigm_fit": "F",
         "p3_fundamental_change": "F",
         "p4_building_blocks": "F",
@@ -1056,7 +1056,7 @@
       "last_updated": "2026-06-26",
       "last_updated_by": "quant_refresh",
       "pillars": {
-        "p1_technical_momentum": "D",
+        "p1_technical_momentum": "—",
         "p2_market_paradigm_fit": "C",
         "p3_fundamental_change": "C",
         "p4_building_blocks": "C",
@@ -1095,7 +1095,7 @@
       "last_updated": "2026-06-26",
       "last_updated_by": "quant_refresh",
       "pillars": {
-        "p1_technical_momentum": "C",
+        "p1_technical_momentum": "—",
         "p2_market_paradigm_fit": "B",
         "p3_fundamental_change": "B",
         "p4_building_blocks": "B",
@@ -1134,12 +1134,12 @@
       "last_updated": "2026-06-26",
       "last_updated_by": "quant_refresh",
       "pillars": {
-        "p1_technical_momentum": "C",
+        "p1_technical_momentum": "—",
         "p2_market_paradigm_fit": "B",
         "p3_fundamental_change": "B",
         "p4_building_blocks": "B",
-        "p5_ss_earnings_momentum": "B",
-        "p6_valuation": "D+"
+        "p5_ss_earnings_momentum": "D",
+        "p6_valuation": "A"
       },
       "investment_case": {
         "primary_setup": "Platform Monetisation (Uplift AI suite margin accretion + Embedded Finance TAM expansion)",
@@ -1173,7 +1173,7 @@
       "last_updated": "2026-06-26",
       "last_updated_by": "quant_refresh",
       "pillars": {
-        "p1_technical_momentum": "D",
+        "p1_technical_momentum": "—",
         "p2_market_paradigm_fit": "C",
         "p3_fundamental_change": "C",
         "p4_building_blocks": "C",
@@ -1243,7 +1243,7 @@
     },
     {
       "ticker": "OBEL-BE",
-      "company_name": "OBEL-BE",
+      "company_name": "Orange Belgium",
       "sector": null,
       "market_cap_eur_bn": null,
       "stage": "Triaging",
@@ -1251,7 +1251,7 @@
       "last_updated": "2026-06-26",
       "last_updated_by": "quant_refresh",
       "pillars": {
-        "p1_technical_momentum": "B",
+        "p1_technical_momentum": "C",
         "p2_market_paradigm_fit": "—",
         "p3_fundamental_change": "—",
         "p4_building_blocks": "—",
