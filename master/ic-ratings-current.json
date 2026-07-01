@@ -1248,10 +1248,10 @@
       "market_cap_eur_bn": null,
       "stage": "Triaging",
       "status": "Active",
-      "last_updated": "2026-06-30",
+      "last_updated": "2026-07-01",
       "last_updated_by": "quant_refresh",
       "pillars": {
-        "p1_technical_momentum": "B",
+        "p1_technical_momentum": "C",
         "p2_market_paradigm_fit": "—",
         "p3_fundamental_change": "—",
         "p4_building_blocks": "—",
@@ -1277,7 +1277,7 @@
       },
       "interest_level": "medium",
       "_pipeline_source": "memo-pipeline/Station-6",
-      "_quant_refresh_at": "2026-06-30",
+      "_quant_refresh_at": "2026-07-01",
       "_quant_source_ticker": "OBEL-BE"
     }
   ]
