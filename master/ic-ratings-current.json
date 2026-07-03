@@ -61,11 +61,11 @@
       "market_cap_eur_bn": 1.5,
       "stage": "ESA",
       "status": "Active",
-      "last_updated": "2026-06-26",
-      "last_updated_by": "quant_refresh",
+      "last_updated": "2026-07-03",
+      "last_updated_by": "pipeline",
       "pillars": {
         "p1_technical_momentum": "—",
-        "p2_market_paradigm_fit": "—",
+        "p2_market_paradigm_fit": "C",
         "p3_fundamental_change": "C",
         "p4_building_blocks": "C",
         "p5_ss_earnings_momentum": "C",
@@ -90,7 +90,8 @@
       },
       "interest_level": "medium",
       "_quant_refresh_at": "2026-06-26",
-      "_quant_source_ticker": "FEVR-GB"
+      "_quant_source_ticker": "FEVR-GB",
+      "_pipeline_source": "memo-pipeline/Station-6"
     },
     {
       "ticker": "DCC",
@@ -135,15 +136,15 @@
       "company_name": "Carlsberg",
       "sector": "Beverages / Brewing",
       "market_cap_eur_bn": 14.2,
-      "stage": "DD",
+      "stage": "Triaging",
       "status": "Active",
-      "last_updated": "2026-04-15",
-      "last_updated_by": "APM",
+      "last_updated": "2026-07-03",
+      "last_updated_by": "pipeline",
       "pillars": {
         "p1_technical_momentum": "—",
-        "p2_market_paradigm_fit": "—",
-        "p3_fundamental_change": "—",
-        "p4_building_blocks": "—",
+        "p2_market_paradigm_fit": "C",
+        "p3_fundamental_change": "B",
+        "p4_building_blocks": "C",
         "p5_ss_earnings_momentum": "—",
         "p6_valuation": "—"
       },
@@ -158,13 +159,19 @@
         "complexity_flag": false
       },
       "actions": {
-        "apm_recommendation": null,
+        "apm_recommendation": {
+          "decision": "Progress to Early-Stage Assessment",
+          "conviction": "Medium-high",
+          "primary_condition": "Change forces are large, sequenced, and tracking ahead of plan in Year 1 of Britvic integration",
+          "primary_risk": "FALSE FRIEND hypothesis — pre-DRS stocking / marketing under-investment trap"
+        },
         "next_action": "ESA done, in DD.",
         "key_question": null,
         "parking_reason": null,
         "reassessment_trigger": null
       },
-      "interest_level": "medium"
+      "interest_level": "medium",
+      "_pipeline_source": "memo-pipeline/Station-6"
     },
     {
       "ticker": "CRBN",
@@ -361,13 +368,13 @@
       "market_cap_eur_bn": 1.1,
       "stage": "Triaging",
       "status": "Active",
-      "last_updated": "2026-06-26",
-      "last_updated_by": "quant_refresh",
+      "last_updated": "2026-07-03",
+      "last_updated_by": "pipeline",
       "pillars": {
         "p1_technical_momentum": "—",
-        "p2_market_paradigm_fit": "—",
-        "p3_fundamental_change": "—",
-        "p4_building_blocks": "—",
+        "p2_market_paradigm_fit": "B",
+        "p3_fundamental_change": "C",
+        "p4_building_blocks": "C",
         "p5_ss_earnings_momentum": "D",
         "p6_valuation": "A"
       },
@@ -390,7 +397,8 @@
       },
       "interest_level": "medium",
       "_quant_refresh_at": "2026-06-26",
-      "_quant_source_ticker": "HFG-GB"
+      "_quant_source_ticker": "HFG-GB",
+      "_pipeline_source": "memo-pipeline/Station-6"
     },
     {
       "ticker": "INSTAL",
@@ -1209,8 +1217,8 @@
       "market_cap_eur_bn": null,
       "stage": "DD",
       "status": "Active",
-      "last_updated": "2026-07-02",
-      "last_updated_by": "quant_refresh",
+      "last_updated": "2026-07-03",
+      "last_updated_by": "pipeline",
       "pillars": {
         "p1_technical_momentum": "C",
         "p2_market_paradigm_fit": "B",
@@ -1248,13 +1256,13 @@
       "market_cap_eur_bn": null,
       "stage": "Triaging",
       "status": "Active",
-      "last_updated": "2026-07-02",
+      "last_updated": "2026-07-03",
       "last_updated_by": "quant_refresh",
       "pillars": {
-        "p1_technical_momentum": "—",
-        "p2_market_paradigm_fit": "—",
-        "p3_fundamental_change": "—",
-        "p4_building_blocks": "—",
+        "p1_technical_momentum": "C",
+        "p2_market_paradigm_fit": "C",
+        "p3_fundamental_change": "C",
+        "p4_building_blocks": "C",
         "p5_ss_earnings_momentum": "C",
         "p6_valuation": "F"
       },
@@ -1277,8 +1285,620 @@
       },
       "interest_level": "medium",
       "_pipeline_source": "memo-pipeline/Station-6",
-      "_quant_refresh_at": "2026-07-02",
+      "_quant_refresh_at": "2026-07-03",
       "_quant_source_ticker": "OBEL-BE"
+    },
+    {
+      "ticker": "ABI-BE",
+      "company_name": "Anheuser-Busch InBev",
+      "sector": null,
+      "market_cap_eur_bn": null,
+      "stage": "Triaging",
+      "status": "Active",
+      "last_updated": "2026-07-03",
+      "last_updated_by": "quant_refresh",
+      "pillars": {
+        "p1_technical_momentum": "C",
+        "p2_market_paradigm_fit": "B",
+        "p3_fundamental_change": "A",
+        "p4_building_blocks": "C",
+        "p5_ss_earnings_momentum": "C",
+        "p6_valuation": "D"
+      },
+      "investment_case": {
+        "primary_setup": null,
+        "supporting_setup": null,
+        "setup_maturity": null,
+        "false_friend_risk": null,
+        "fulcrum_drivers": null,
+        "key_drivers": null,
+        "transmission_clarity": null,
+        "complexity_flag": false
+      },
+      "actions": {
+        "apm_recommendation": null,
+        "next_action": null,
+        "key_question": null,
+        "parking_reason": null,
+        "reassessment_trigger": null
+      },
+      "interest_level": "medium",
+      "_pipeline_source": "memo-pipeline/Station-6",
+      "_quant_refresh_at": "2026-07-03"
+    },
+    {
+      "ticker": "ALFEN-NL",
+      "company_name": "ALFEN-NL",
+      "sector": null,
+      "market_cap_eur_bn": null,
+      "stage": "Triaging",
+      "status": "Active",
+      "last_updated": "2026-07-03",
+      "last_updated_by": "quant_refresh",
+      "pillars": {
+        "p1_technical_momentum": "B",
+        "p2_market_paradigm_fit": "B",
+        "p3_fundamental_change": "C",
+        "p4_building_blocks": "C",
+        "p5_ss_earnings_momentum": "D",
+        "p6_valuation": "F"
+      },
+      "investment_case": {
+        "primary_setup": null,
+        "supporting_setup": null,
+        "setup_maturity": null,
+        "false_friend_risk": null,
+        "fulcrum_drivers": null,
+        "key_drivers": null,
+        "transmission_clarity": null,
+        "complexity_flag": false
+      },
+      "actions": {
+        "apm_recommendation": null,
+        "next_action": null,
+        "key_question": null,
+        "parking_reason": null,
+        "reassessment_trigger": null
+      },
+      "interest_level": "medium",
+      "_pipeline_source": "memo-pipeline/Station-6",
+      "_quant_refresh_at": "2026-07-03"
+    },
+    {
+      "ticker": "BAG-GB",
+      "company_name": "BAG-GB",
+      "sector": null,
+      "market_cap_eur_bn": null,
+      "stage": "Triaging",
+      "status": "Active",
+      "last_updated": "2026-07-03",
+      "last_updated_by": "quant_refresh",
+      "pillars": {
+        "p1_technical_momentum": "B",
+        "p2_market_paradigm_fit": "B",
+        "p3_fundamental_change": "C",
+        "p4_building_blocks": "B",
+        "p5_ss_earnings_momentum": "B",
+        "p6_valuation": "A"
+      },
+      "investment_case": {
+        "primary_setup": null,
+        "supporting_setup": null,
+        "setup_maturity": null,
+        "false_friend_risk": null,
+        "fulcrum_drivers": null,
+        "key_drivers": null,
+        "transmission_clarity": null,
+        "complexity_flag": false
+      },
+      "actions": {
+        "apm_recommendation": null,
+        "next_action": null,
+        "key_question": null,
+        "parking_reason": null,
+        "reassessment_trigger": null
+      },
+      "interest_level": "medium",
+      "_pipeline_source": "memo-pipeline/Station-6",
+      "_quant_refresh_at": "2026-07-03"
+    },
+    {
+      "ticker": "BATS-GB",
+      "company_name": "British American Tobacco",
+      "sector": null,
+      "market_cap_eur_bn": null,
+      "stage": "Triaging",
+      "status": "Active",
+      "last_updated": "2026-07-03",
+      "last_updated_by": "quant_refresh",
+      "pillars": {
+        "p1_technical_momentum": "B",
+        "p2_market_paradigm_fit": "C",
+        "p3_fundamental_change": "B",
+        "p4_building_blocks": "C",
+        "p5_ss_earnings_momentum": "B",
+        "p6_valuation": "D"
+      },
+      "investment_case": {
+        "primary_setup": "RA5 (Huge change-from-current clearing in solid quality) -- partial",
+        "supporting_setup": "RA3 (Corporate change-driven)",
+        "setup_maturity": null,
+        "false_friend_risk": null,
+        "fulcrum_drivers": null,
+        "key_drivers": null,
+        "transmission_clarity": null,
+        "complexity_flag": false
+      },
+      "actions": {
+        "apm_recommendation": "Progress to ESA at low/medium conviction; Velo trajectory and valuation discount create sufficient case to warrant deeper work",
+        "next_action": null,
+        "key_question": null,
+        "parking_reason": null,
+        "reassessment_trigger": null
+      },
+      "interest_level": "medium",
+      "_pipeline_source": "memo-pipeline/Station-6",
+      "_quant_refresh_at": "2026-07-03"
+    },
+    {
+      "ticker": "BGN-IT",
+      "company_name": "Banca Generali S.p.A.",
+      "sector": null,
+      "market_cap_eur_bn": null,
+      "stage": "Triaging",
+      "status": "Active",
+      "last_updated": "2026-07-03",
+      "last_updated_by": "quant_refresh",
+      "pillars": {
+        "p1_technical_momentum": "B",
+        "p2_market_paradigm_fit": "B",
+        "p3_fundamental_change": "B",
+        "p4_building_blocks": "B",
+        "p5_ss_earnings_momentum": "B",
+        "p6_valuation": "F"
+      },
+      "investment_case": {
+        "primary_setup": "Setup Type 3 — self-help operator with underappreciated drivers (Alleanza + Intermonte)",
+        "supporting_setup": "Setup Type 5b — CMD H2 2026 re-rating catalyst post-M&A premium removal",
+        "setup_maturity": null,
+        "false_friend_risk": null,
+        "fulcrum_drivers": null,
+        "key_drivers": null,
+        "transmission_clarity": null,
+        "complexity_flag": false
+      },
+      "actions": {
+        "apm_recommendation": "Progress to ESA",
+        "next_action": null,
+        "key_question": null,
+        "parking_reason": null,
+        "reassessment_trigger": null
+      },
+      "interest_level": "medium",
+      "_pipeline_source": "memo-pipeline/Station-6",
+      "_quant_refresh_at": "2026-07-03"
+    },
+    {
+      "ticker": "BYLOT-GR",
+      "company_name": "Bally's Intralot S.A.",
+      "sector": null,
+      "market_cap_eur_bn": null,
+      "stage": "Triaging",
+      "status": "Active",
+      "last_updated": "2026-07-03",
+      "last_updated_by": "quant_refresh",
+      "pillars": {
+        "p1_technical_momentum": "—",
+        "p2_market_paradigm_fit": "C",
+        "p3_fundamental_change": "C",
+        "p4_building_blocks": "D",
+        "p5_ss_earnings_momentum": "B",
+        "p6_valuation": "—"
+      },
+      "investment_case": {
+        "primary_setup": "RA3 — Strong corporate change driven EPSU/EPT (Standard General governance takeover + BII acquisition + Robeson Reeves installation)",
+        "supporting_setup": "RA5 — Event-driven situation (Evoke acquisition close + iLottery contract wins)",
+        "setup_maturity": null,
+        "false_friend_risk": null,
+        "fulcrum_drivers": null,
+        "key_drivers": null,
+        "transmission_clarity": null,
+        "complexity_flag": false
+      },
+      "actions": {
+        "apm_recommendation": {
+          "decision": "Park — do not progress to Early-Stage Assessment",
+          "conviction": "Medium-high conviction to Park",
+          "primary_condition": "FALSE FRIEND is the undisputed ACH winner with zero disconfirming evidence items; Risks report §14 recommends Park; three compounding risk vectors (UK RGD EUR 95-120m, contract attrition, leverage 4.5x) reinforce not offset",
+          "reassessment_criteria": "Re-examine for ESA if: (a) BII UK NGR ≥10% growth for two consecutive quarters with stable/declining player churn; (b) net leverage trajectory confirmed sub-3.5x by FY27 post-Evoke; (c) Illinois contract renewed without underbidding below 5%; any two of three required"
+        },
+        "next_action": null,
+        "key_question": null,
+        "parking_reason": null,
+        "reassessment_trigger": null
+      },
+      "interest_level": "medium",
+      "_pipeline_source": "memo-pipeline/Station-6",
+      "_quant_refresh_at": "2026-07-03"
+    },
+    {
+      "ticker": "CCH-GB",
+      "company_name": "CCH-GB",
+      "sector": null,
+      "market_cap_eur_bn": null,
+      "stage": "Triaging",
+      "status": "Active",
+      "last_updated": "2026-07-03",
+      "last_updated_by": "quant_refresh",
+      "pillars": {
+        "p1_technical_momentum": "B",
+        "p2_market_paradigm_fit": "B",
+        "p3_fundamental_change": "B",
+        "p4_building_blocks": "B",
+        "p5_ss_earnings_momentum": "B",
+        "p6_valuation": "C"
+      },
+      "investment_case": {
+        "primary_setup": null,
+        "supporting_setup": null,
+        "setup_maturity": null,
+        "false_friend_risk": null,
+        "fulcrum_drivers": null,
+        "key_drivers": null,
+        "transmission_clarity": null,
+        "complexity_flag": false
+      },
+      "actions": {
+        "apm_recommendation": null,
+        "next_action": null,
+        "key_question": null,
+        "parking_reason": null,
+        "reassessment_trigger": null
+      },
+      "interest_level": "medium",
+      "_pipeline_source": "memo-pipeline/Station-6",
+      "_quant_refresh_at": "2026-07-03"
+    },
+    {
+      "ticker": "CRL-IT",
+      "company_name": "CRL-IT",
+      "sector": null,
+      "market_cap_eur_bn": null,
+      "stage": "Triaging",
+      "status": "Active",
+      "last_updated": "2026-07-03",
+      "last_updated_by": "quant_refresh",
+      "pillars": {
+        "p1_technical_momentum": "B",
+        "p2_market_paradigm_fit": "B",
+        "p3_fundamental_change": "B",
+        "p4_building_blocks": "B",
+        "p5_ss_earnings_momentum": "A",
+        "p6_valuation": "F"
+      },
+      "investment_case": {
+        "primary_setup": null,
+        "supporting_setup": null,
+        "setup_maturity": null,
+        "false_friend_risk": null,
+        "fulcrum_drivers": null,
+        "key_drivers": null,
+        "transmission_clarity": null,
+        "complexity_flag": false
+      },
+      "actions": {
+        "apm_recommendation": null,
+        "next_action": null,
+        "key_question": null,
+        "parking_reason": null,
+        "reassessment_trigger": null
+      },
+      "interest_level": "medium",
+      "_pipeline_source": "memo-pipeline/Station-6",
+      "_quant_refresh_at": "2026-07-03"
+    },
+    {
+      "ticker": "CVSG-GB",
+      "company_name": "CVS Group plc",
+      "sector": null,
+      "market_cap_eur_bn": null,
+      "stage": "Triaging",
+      "status": "Active",
+      "last_updated": "2026-07-03",
+      "last_updated_by": "quant_refresh",
+      "pillars": {
+        "p1_technical_momentum": "B",
+        "p2_market_paradigm_fit": "C",
+        "p3_fundamental_change": "B",
+        "p4_building_blocks": "C",
+        "p5_ss_earnings_momentum": "D",
+        "p6_valuation": "A"
+      },
+      "investment_case": {
+        "primary_setup": null,
+        "supporting_setup": null,
+        "setup_maturity": null,
+        "false_friend_risk": null,
+        "fulcrum_drivers": null,
+        "key_drivers": null,
+        "transmission_clarity": null,
+        "complexity_flag": false
+      },
+      "actions": {
+        "apm_recommendation": "Progress to ESA",
+        "next_action": null,
+        "key_question": null,
+        "parking_reason": null,
+        "reassessment_trigger": null
+      },
+      "interest_level": "medium",
+      "_pipeline_source": "memo-pipeline/Station-6",
+      "_quant_refresh_at": "2026-07-03"
+    },
+    {
+      "ticker": "EPI.A-SE",
+      "company_name": "EPI.A-SE",
+      "sector": null,
+      "market_cap_eur_bn": null,
+      "stage": "Triaging",
+      "status": "Active",
+      "last_updated": "2026-07-03",
+      "last_updated_by": "quant_refresh",
+      "pillars": {
+        "p1_technical_momentum": "C",
+        "p2_market_paradigm_fit": "B",
+        "p3_fundamental_change": "B",
+        "p4_building_blocks": "B",
+        "p5_ss_earnings_momentum": "B",
+        "p6_valuation": "F"
+      },
+      "investment_case": {
+        "primary_setup": null,
+        "supporting_setup": null,
+        "setup_maturity": null,
+        "false_friend_risk": null,
+        "fulcrum_drivers": null,
+        "key_drivers": null,
+        "transmission_clarity": null,
+        "complexity_flag": false
+      },
+      "actions": {
+        "apm_recommendation": null,
+        "next_action": null,
+        "key_question": null,
+        "parking_reason": null,
+        "reassessment_trigger": null
+      },
+      "interest_level": "medium",
+      "_pipeline_source": "memo-pipeline/Station-6",
+      "_quant_refresh_at": "2026-07-03"
+    },
+    {
+      "ticker": "KARE-GR",
+      "company_name": "Karelia Tobacco Company",
+      "sector": null,
+      "market_cap_eur_bn": null,
+      "stage": "Triaging",
+      "status": "Active",
+      "last_updated": "2026-07-03",
+      "last_updated_by": "quant_refresh",
+      "pillars": {
+        "p1_technical_momentum": "B",
+        "p2_market_paradigm_fit": "D",
+        "p3_fundamental_change": "B",
+        "p4_building_blocks": "D",
+        "p5_ss_earnings_momentum": "C",
+        "p6_valuation": "—"
+      },
+      "investment_case": {
+        "primary_setup": null,
+        "supporting_setup": null,
+        "setup_maturity": null,
+        "false_friend_risk": null,
+        "fulcrum_drivers": null,
+        "key_drivers": null,
+        "transmission_clarity": null,
+        "complexity_flag": false
+      },
+      "actions": {
+        "apm_recommendation": null,
+        "next_action": null,
+        "key_question": null,
+        "parking_reason": null,
+        "reassessment_trigger": null
+      },
+      "interest_level": "medium",
+      "_pipeline_source": "memo-pipeline/Station-6",
+      "_quant_refresh_at": "2026-07-03"
+    },
+    {
+      "ticker": "NEX-FR",
+      "company_name": "Nexans S.A.",
+      "sector": null,
+      "market_cap_eur_bn": null,
+      "stage": "Triaging",
+      "status": "Active",
+      "last_updated": "2026-07-03",
+      "last_updated_by": "quant_refresh",
+      "pillars": {
+        "p1_technical_momentum": "B",
+        "p2_market_paradigm_fit": "B",
+        "p3_fundamental_change": "B",
+        "p4_building_blocks": "C",
+        "p5_ss_earnings_momentum": "C",
+        "p6_valuation": "F"
+      },
+      "investment_case": {
+        "primary_setup": null,
+        "supporting_setup": null,
+        "setup_maturity": null,
+        "false_friend_risk": null,
+        "fulcrum_drivers": null,
+        "key_drivers": null,
+        "transmission_clarity": null,
+        "complexity_flag": false
+      },
+      "actions": {
+        "apm_recommendation": "progress_to_esa",
+        "next_action": null,
+        "key_question": null,
+        "parking_reason": null,
+        "reassessment_trigger": null
+      },
+      "interest_level": "medium",
+      "_pipeline_source": "memo-pipeline/Station-6",
+      "_quant_refresh_at": "2026-07-03"
+    },
+    {
+      "ticker": "NKT-DK",
+      "company_name": "NKT A/S",
+      "sector": null,
+      "market_cap_eur_bn": null,
+      "stage": "Triaging",
+      "status": "Active",
+      "last_updated": "2026-07-03",
+      "last_updated_by": "quant_refresh",
+      "pillars": {
+        "p1_technical_momentum": "C",
+        "p2_market_paradigm_fit": "B",
+        "p3_fundamental_change": "A",
+        "p4_building_blocks": "B",
+        "p5_ss_earnings_momentum": "D",
+        "p6_valuation": "D"
+      },
+      "investment_case": {
+        "primary_setup": null,
+        "supporting_setup": null,
+        "setup_maturity": null,
+        "false_friend_risk": null,
+        "fulcrum_drivers": null,
+        "key_drivers": null,
+        "transmission_clarity": null,
+        "complexity_flag": false
+      },
+      "actions": {
+        "apm_recommendation": "progress_to_esa",
+        "next_action": null,
+        "key_question": null,
+        "parking_reason": null,
+        "reassessment_trigger": null
+      },
+      "interest_level": "medium",
+      "_pipeline_source": "memo-pipeline/Station-6",
+      "_quant_refresh_at": "2026-07-03"
+    },
+    {
+      "ticker": "PRY-IT",
+      "company_name": "Prysmian S.p.A.",
+      "sector": null,
+      "market_cap_eur_bn": null,
+      "stage": "Triaging",
+      "status": "Active",
+      "last_updated": "2026-07-03",
+      "last_updated_by": "quant_refresh",
+      "pillars": {
+        "p1_technical_momentum": "B",
+        "p2_market_paradigm_fit": "B",
+        "p3_fundamental_change": "A",
+        "p4_building_blocks": "B",
+        "p5_ss_earnings_momentum": "B",
+        "p6_valuation": "F"
+      },
+      "investment_case": {
+        "primary_setup": null,
+        "supporting_setup": null,
+        "setup_maturity": null,
+        "false_friend_risk": null,
+        "fulcrum_drivers": null,
+        "key_drivers": null,
+        "transmission_clarity": null,
+        "complexity_flag": false
+      },
+      "actions": {
+        "apm_recommendation": null,
+        "next_action": null,
+        "key_question": null,
+        "parking_reason": null,
+        "reassessment_trigger": null
+      },
+      "interest_level": "medium",
+      "_pipeline_source": "memo-pipeline/Station-6",
+      "_quant_refresh_at": "2026-07-03"
+    },
+    {
+      "ticker": "SDIP.B-SE",
+      "company_name": "SDIP.B-SE",
+      "sector": null,
+      "market_cap_eur_bn": null,
+      "stage": "Triaging",
+      "status": "Active",
+      "last_updated": "2026-07-03",
+      "last_updated_by": "quant_refresh",
+      "pillars": {
+        "p1_technical_momentum": "C",
+        "p2_market_paradigm_fit": "C",
+        "p3_fundamental_change": "B",
+        "p4_building_blocks": "D",
+        "p5_ss_earnings_momentum": "D",
+        "p6_valuation": "D"
+      },
+      "investment_case": {
+        "primary_setup": null,
+        "supporting_setup": null,
+        "setup_maturity": null,
+        "false_friend_risk": null,
+        "fulcrum_drivers": null,
+        "key_drivers": null,
+        "transmission_clarity": null,
+        "complexity_flag": false
+      },
+      "actions": {
+        "apm_recommendation": null,
+        "next_action": null,
+        "key_question": null,
+        "parking_reason": null,
+        "reassessment_trigger": null
+      },
+      "interest_level": "medium",
+      "_pipeline_source": "memo-pipeline/Station-6",
+      "_quant_refresh_at": "2026-07-03"
+    },
+    {
+      "ticker": "VLX-GB",
+      "company_name": "Volex",
+      "sector": null,
+      "market_cap_eur_bn": null,
+      "stage": "Triaging",
+      "status": "Active",
+      "last_updated": "2026-07-03",
+      "last_updated_by": "pipeline",
+      "pillars": {
+        "p1_technical_momentum": "—",
+        "p2_market_paradigm_fit": "B",
+        "p3_fundamental_change": "B",
+        "p4_building_blocks": "B",
+        "p5_ss_earnings_momentum": "—",
+        "p6_valuation": "—"
+      },
+      "investment_case": {
+        "primary_setup": null,
+        "supporting_setup": null,
+        "setup_maturity": null,
+        "false_friend_risk": null,
+        "fulcrum_drivers": null,
+        "key_drivers": null,
+        "transmission_clarity": null,
+        "complexity_flag": false
+      },
+      "actions": {
+        "apm_recommendation": null,
+        "next_action": null,
+        "key_question": null,
+        "parking_reason": null,
+        "reassessment_trigger": null
+      },
+      "interest_level": "medium",
+      "_pipeline_source": "memo-pipeline/Station-6"
     }
   ]
 }
