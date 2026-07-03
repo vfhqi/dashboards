@@ -1249,6 +1249,28 @@ function initializeChartData() {
 //   - If in universe AND already loaded → just save + re-render the row.
 window._pmsTickerLoadInflight = window._pmsTickerLoadInflight || {};
 
+// D-PMS-181 (03-Jul-26): defensive suffix-alias fallback, added alongside the
+// VLX-GB / JDG-GB / SOLI-GB root-cause rename (those three tickers had been
+// onboarded with the exchange code "-LON" instead of the canonical country
+// code "-GB" used by every other UK ticker, so typing the correct canonical
+// ticker failed this exact-match check). This is belt-and-braces: the source
+// data is now fixed, but if a future ticker is ever onboarded with a
+// non-canonical suffix again, the correct canonical form still resolves here
+// instead of surfacing a confusing "not in MD universe" error.
+var TICKER_SUFFIX_ALIASES = { 'GB': ['LON'] };
+function resolveTickerAlias(raw, universe) {
+  if (raw in universe) return raw;
+  var dash = raw.lastIndexOf('-');
+  if (dash < 0) return raw;
+  var base = raw.slice(0, dash), suffix = raw.slice(dash + 1);
+  var aliasSuffixes = TICKER_SUFFIX_ALIASES[suffix] || [];
+  for (var i = 0; i < aliasSuffixes.length; i++) {
+    var candidate = base + '-' + aliasSuffixes[i];
+    if (candidate in universe) return candidate;
+  }
+  return raw;
+}
+
 function setPlaceholderTicker(invIdx, value) {
   var raw = (value || '').trim().toUpperCase();
   if (!EDITS[invIdx]) EDITS[invIdx] = {};
@@ -1259,24 +1281,25 @@ function setPlaceholderTicker(invIdx, value) {
     clearTickerWarning(invIdx);
     return;
   }
-  // Universe check
+  // Universe check (with suffix-alias fallback — see D-PMS-181 above)
   var universe = (window.PMS_UNIVERSE && PMS_UNIVERSE.data) ? PMS_UNIVERSE.data : {};
-  if (!(raw in universe)) {
+  var resolved = resolveTickerAlias(raw, universe);
+  if (!(resolved in universe)) {
     showTickerWarning(invIdx, 'Ticker "' + raw + '" not in MD universe (' + Object.keys(universe).length + ' tickers). Try a known ticker like RHM-DE.');
     return;
   }
   clearTickerWarning(invIdx);
-  EDITS[invIdx]._ticker_override = raw;
+  EDITS[invIdx]._ticker_override = resolved;
   saveEdits();
   // Already loaded? — just trigger render so the row activates.
-  if (window.PMS_CHART_DATA && PMS_CHART_DATA.data && PMS_CHART_DATA.data[raw]) {
+  if (window.PMS_CHART_DATA && PMS_CHART_DATA.data && PMS_CHART_DATA.data[resolved]) {
     setTimeout(render, 0);
     return;
   }
   // Already in flight?
-  if (window._pmsTickerLoadInflight[raw]) return;
-  window._pmsTickerLoadInflight[raw] = true;
-  loadTickerChart(raw, invIdx);
+  if (window._pmsTickerLoadInflight[resolved]) return;
+  window._pmsTickerLoadInflight[resolved] = true;
+  loadTickerChart(resolved, invIdx);
 }
 
 // D-PMS-162: remove a universe-loaded stock from a placeholder slot.
@@ -3699,46 +3722,4 @@ function wireChartsToolbar() {
       try { history.replaceState(null, '', desiredHash); } catch(e) {}
     }
     // After tab switch, re-fit Portfolio summary to viewport (it may have hidden cells)
-    if (name === 'overview' && typeof fitPortfolioToViewport === 'function') {
-      setTimeout(fitPortfolioToViewport, 80);
-    }
-    if (name === 'charts' && typeof renderChartsGrid === 'function') {
-      setTimeout(renderChartsGrid, 80);
-    }
-  }
-  function getInitialTab() {
-    // 1. URL hash
-    var h = window.location.hash.replace('#', '');
-    if (h && PANES.indexOf(h) !== -1) return h;
-    // 2. localStorage
-    try {
-      var saved = localStorage.getItem('pms_active_tab_v6');
-      if (saved && PANES.indexOf(saved) !== -1) return saved;
-    } catch(e) {}
-    // 3. Default
-    return 'overview';
-  }
-  // Wire tab clicks
-  document.querySelectorAll('.pms-tab').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      activateTab(btn.getAttribute('data-pane'));
-    });
-  });
-  // Hashchange (manual URL edit / back-forward)
-  window.addEventListener('hashchange', function() {
-    var h = window.location.hash.replace('#', '');
-    if (PANES.indexOf(h) !== -1) activateTab(h);
-  });
-  // Initial activation
-  function init() { activateTab(getInitialTab()); }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
-  }
-})();
-
-</script>
-
-</body>
-</html>
+    if (name === 'overview' && typeof fit
