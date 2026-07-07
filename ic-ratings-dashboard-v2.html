@@ -140,12 +140,18 @@ body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font
   border-right:2.5px solid #185FA5 !important;
 }
 .sg2{
+  background:#FBF3DF !important;color:#7A5A0B !important;
+  border-top:2.5px solid #B0820A !important;
+  border-left:2.5px solid #B0820A !important;
+  border-right:2.5px solid #B0820A !important;
+}
+.sg3{
   background:#EEEDFE !important;color:#3C3489 !important;
   border-top:2.5px solid #534AB7 !important;
   border-left:2.5px solid #534AB7 !important;
   border-right:2.5px solid #534AB7 !important;
 }
-.sg3{
+.sg4{
   background:#E1F5EE !important;color:#085041 !important;
   border-top:2.5px solid #0F6E56 !important;
   border-left:2.5px solid #0F6E56 !important;
@@ -154,10 +160,12 @@ body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font
 /* Side border markers for body/header cells */
 .g1s{border-left:2.5px solid #185FA5 !important}
 .g1e{border-right:2.5px solid #185FA5 !important}
-.g2s{border-left:2.5px solid #534AB7 !important}
-.g2e{border-right:2.5px solid #534AB7 !important}
-.g3s{border-left:2.5px solid #0F6E56 !important}
-.g3e{border-right:2.5px solid #0F6E56 !important}
+.g2s{border-left:2.5px solid #B0820A !important}
+.g2e{border-right:2.5px solid #B0820A !important}
+.g3s{border-left:2.5px solid #534AB7 !important}
+.g3e{border-right:2.5px solid #534AB7 !important}
+.g4s{border-left:2.5px solid #0F6E56 !important}
+.g4e{border-right:2.5px solid #0F6E56 !important}
 
 /* ── Grade badges ───────────────────────────────────────── */
 .bdg{
@@ -373,6 +381,103 @@ body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font
         .cov-legend-swatch { display:inline-block; width:8px; height:8px; border-radius:2px; border:1px solid #c9c3b0; }
         /* COVERAGE_CSS_V1_END */
 
+
+/* ==== Phase-2 Map/List injected CSS ==== */
+/* ===================================================================
+   Map + List views for IC Ratings Dashboard (Phase 2)
+   Namespaced under .mv- and modal ids to avoid collision with the
+   existing dashboard CSS. Grade chip colours match the approved
+   DEMO-map-and-list-views-DCC.html baseline.
+   =================================================================== */
+
+/* ---- grade chips (shared Map + List) ---- */
+.mvchip{display:inline-block;min-width:16px;padding:0 6px;font-size:10px;font-weight:800;text-align:center;border-radius:3px;line-height:1.7;margin-left:6px;cursor:pointer;border:none;font-family:inherit}
+.mvchip.nolink{cursor:default}
+.mv-r-a{background:#1a6e3a;color:#e6fff0}
+.mv-r-b{background:#2d8f4e;color:#e6fff0}
+.mv-r-c{background:#a88420;color:#fff8e6}
+.mv-r-d{background:#b06b1e;color:#ffe8d0}
+.mv-r-f{background:#8a2a2a;color:#ffd6d6}
+.mv-r-blank{background:#ece8d6;color:#6b6b6b}
+.mvchip:focus{outline:2px solid #3b73c9;outline-offset:1px}
+
+/* ---- modal shell (shared) ---- */
+.mv-overlay{display:none;position:fixed;inset:0;z-index:9000;background:rgba(20,28,38,.45);overflow:auto;padding:24px}
+.mv-overlay.active{display:block}
+.mv-frame{background:#f7f5ef;max-width:1200px;margin:0 auto;border-radius:8px;box-shadow:0 24px 64px rgba(0,0,0,.35);border:1px solid #dcd5c2;overflow:hidden}
+.mv-list .mv-frame{max-width:1320px}
+.mv-head{display:flex;align-items:center;gap:12px;padding:12px 18px;background:#1b3d5c;color:#eef4fa;position:sticky;top:0;z-index:5}
+.mv-head .mv-tk{font-weight:800;color:#e8c877;font-size:15px;letter-spacing:.3px}
+.mv-head .mv-co{font-size:13px;color:#cfe0ef;flex:0 1 auto;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mv-head .mv-sub{font-size:11px;color:#9fbdd6;margin-left:2px}
+.mv-head .mv-spacer{flex:1 1 auto}
+.mv-toggle{display:flex;align-items:center;gap:5px;font-size:11px;color:#cfe0ef;cursor:pointer;user-select:none}
+.mv-toggle input{cursor:pointer}
+.mv-close{background:transparent;border:1px solid #3f6483;color:#cfe0ef;font-size:16px;line-height:1;width:28px;height:28px;border-radius:5px;cursor:pointer}
+.mv-close:hover{background:#26537a;color:#fff}
+.mv-body{padding:14px 18px 20px}
+
+/* ---- MAP ---- */
+.mv-tierlabel{font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#6b6b6b;margin:2px 0 6px;padding-left:2px}
+.mv-tier-ic{background:rgba(184,134,11,.10);border:1.5px solid rgba(184,134,11,.5);border-radius:8px;padding:10px;margin-bottom:14px}
+.mv-tier-ic .mv-tierlabel{color:#7a5c12;margin-top:0}
+.mv-pillar{margin-bottom:12px}
+.mv-ptitle{font-size:12px;font-weight:800;letter-spacing:.4px;text-transform:uppercase;color:#1b3d5c;border-bottom:2px solid #dcd5c2;padding-bottom:4px;margin-bottom:8px;display:flex;align-items:center;justify-content:space-between}
+.mv-ptitle .mv-ptxt{flex:1}
+.mv-pbody{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:10px;align-items:start}
+.mv-node{border:1px solid #e6e0cf;border-radius:6px;overflow:hidden;background:#fff}
+.mv-mhdr{background:#1b3d5c;color:#cfe0ef;font-size:11px;font-weight:700;padding:6px 10px;display:flex;align-items:center;justify-content:space-between;gap:6px}
+.mv-mhdr .mv-htxt{flex:1;line-height:1.25}
+.mv-tier-ic .mv-mhdr{background:#7a5c12;color:#fff5df}
+.mv-children{padding:3px 8px 6px;margin-left:8px;border-left:1.5px solid #cfc8b4}
+.mv-child{display:flex;justify-content:space-between;align-items:center;font-size:11px;padding:2px 4px;border-bottom:1px dotted #eee5cf;gap:6px}
+.mv-child:last-child{border-bottom:none}
+.mv-label{flex:1;padding-right:6px;color:#444;line-height:1.3}
+.mv-empty{padding:10px;color:#999;font-size:11px;font-style:italic}
+.mv-note{font-size:11px;color:#8a7f63;background:#faf7ee;border:1px dashed #d8cfb4;border-radius:6px;padding:8px 10px;margin-bottom:10px}
+/* CQ/RA collapse — hide the detail leaves AND their now-empty indent rails */
+.mv-body.hide-cqra .mv-lvl-question,
+.mv-body.hide-cqra .mv-lvl-attribute{display:none}
+.mv-body.hide-cqra .mv-lvl-tc + .mv-children,
+.mv-body.hide-cqra .mv-lvl-attribute + .mv-children,
+.mv-body.hide-cqra .mv-lvl-question + .mv-children{display:none}
+
+/* ---- LIST comparison matrix ---- */
+.mv-matrix{width:100%;border-collapse:collapse;table-layout:fixed}
+.mv-matrix th,.mv-matrix td{padding:4px 6px;font-size:11px;border-bottom:1px solid #efe9d8;vertical-align:middle}
+.mv-matrix th.mv-lblcol,.mv-matrix td.mv-lblcol{width:26%;text-align:left;color:#333}
+.mv-matrix th.mv-stockcol,.mv-matrix td.mv-stockcol{text-align:center;width:calc(74%/7);position:relative}
+.mv-matrix td.mv-stockcol{cursor:default}
+.mv-thead-tk{cursor:pointer;padding:6px 4px;border-radius:4px}
+.mv-thead-tk.mv-primary{cursor:default}
+.mv-thead-tk .mv-tkname{font-size:12px;font-weight:800;color:#3b73c9;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mv-thead-tk.mv-primary .mv-tkname{color:#b8860b}
+.mv-thead-tk.mv-empty .mv-tkname{color:#9a9380;font-style:italic;font-weight:600}
+.mv-thead-tk .mv-tkco{font-size:9px;color:#6b6b6b;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mv-thead-tk:not(.mv-primary):hover{background:rgba(59,115,201,.10)}
+.mv-th-drag{cursor:grab}
+.mv-th-dragover{outline:2px dashed #3b73c9;outline-offset:-2px}
+.mv-slotctl{position:absolute;top:2px;right:3px;font-size:10px;color:#b06b1e;cursor:pointer;display:none;background:#fff;border-radius:3px;padding:0 3px;border:1px solid #e6ddc4}
+.mv-stockcol:hover .mv-slotctl{display:inline-block}
+.mv-secrow td{padding:7px 6px 4px;font-weight:800;font-size:11px;letter-spacing:.3px;border-bottom:1px solid #cdc6b2;background:#faf7ee;color:#1b3d5c}
+.mv-secrow td.mv-lblcol{padding-left:4px}
+.mv-itemrow td.mv-lblcol{padding-left:22px;color:#444}
+.mv-itemrow.mv-lvl-tc td.mv-lblcol{padding-left:34px;font-size:10.5px;color:#555}
+.mv-lid{font-family:ui-monospace,monospace;font-size:9px;color:#a99;margin-right:5px}
+.mv-body.hide-cqra .mv-lvl-question,
+.mv-body.hide-cqra .mv-lvl-attribute{display:none}
+/* search dropdown */
+.mv-search{position:absolute;top:100%;left:0;right:0;min-width:230px;z-index:20;background:#fff;border:1px solid #c9c3b0;border-radius:5px;box-shadow:0 10px 28px rgba(0,0,0,.22);display:none;max-height:340px;overflow:hidden;text-align:left}
+.mv-search.active{display:flex;flex-direction:column}
+.mv-search input{width:100%;padding:8px 10px;border:none;border-bottom:1px solid #c9c3b0;font-size:12px;font-family:inherit;outline:none;box-sizing:border-box;background:#f7f5ef}
+.mv-search-res{max-height:280px;overflow-y:auto}
+.mv-opt{padding:7px 10px;font-size:11px;color:#333;cursor:pointer;display:flex;justify-content:space-between;gap:8px;border-bottom:1px solid rgba(201,195,176,.4)}
+.mv-opt:hover{background:rgba(59,115,201,.12)}
+.mv-opt .mv-opt-sec{font-size:9px;color:#6b6b6b;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:48%}
+.mv-legend{font-size:10px;color:#8a7f63;margin-top:10px;display:flex;gap:10px;
+.ppill{cursor:pointer;text-decoration:none;display:inline-block}
+.ppill:hover{filter:brightness(1.12)}
+.prior-toggle{font-size:11px;padding:3px 9px;border:1px solid #b48a3a;background:#fbf4e6;color:#7a5c12;border-radius:5px;cursor:pointer;margin-left:4px}.prior-toggle.on{background:#7a5c12;color:#fff5df;border-color:#7a5c12}.ppair{display:inline-flex;align-items:center;gap:1px;margin-right:2px;vertical-align:middle}.ppair .bdg{opacity:.45;transform:scale(.82)}.ppair .parr{color:#b06b1e;font-size:9px;margin:0 1px}
 </style>
 </head>
 <body>
@@ -386,6 +491,7 @@ body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font
   <button class="copy-btn-fs" onclick="copyTickers('fs')" title="Copy displayed tickers in FactSet format (e.g. DCC.GB, EKTA.B.SE)">&#x1f4cb; COPY&#160;&#8212;&#160;FACTSET</button>
   <button class="copy-btn-as" onclick="copyTickers('as')" title="Copy displayed tickers in AlphaSense format (e.g. DCC.GB, EKTA B.SE)">&#x1f4cb; COPY&#160;&#8212;&#160;ALPHASENSE</button>
   <!-- COPY_BTNS_V2_END -->
+  <button class="prior-toggle" id="priorToggle" onclick="togglePrior()" title="Show prior&#8594;live changes on the six pillar columns (since rating history became available)">&#916; Prior rating: off</button>
 </div>
 <div class="copy-toast" id="copyToast"></div>
 
@@ -398,30 +504,31 @@ body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font
   <table class="rd" id="rt" style="display:none">
     <thead>
       <tr class="sg-row">
-        <th colspan="9" class="sg1">Information</th>
-        <th colspan="4" class="sg2">Highest-level ratings</th>
-        <th colspan="6" class="sg3">Six pillar ratings</th>
+        <th colspan="5" class="sg1">Information</th>
+        <th colspan="3" class="sg2" title="Industry / sector fit-for-fightingness overlay">Industry / sector fit</th>
+        <th colspan="5" class="sg3">Highest-level ratings</th>
+        <th colspan="6" class="sg4">Six pillar ratings</th>
       </tr>
       <tr>
         <th class="co g1s" style="text-align:left" data-sort="company" onclick="sortRows('company')">Company</th>
-        <th data-sort="stage" onclick="sortRows('stage')">Stage of<br>IA A&amp;J</th>
-        <th data-sort="llq" onclick="sortRows('llq')">LLQ</th>
-        <th style="text-align:left" data-sort="industry" onclick="sortRows('industry')">Industry</th>
-        <th style="text-align:left" data-sort="sector" onclick="sortRows('sector')">Sector</th>
-        <th data-sort="tsw" onclick="sortRows('tsw')">Target<br>sector wt</th>
         <th>Map of<br>ratings</th>
         <th>List of<br>ratings</th>
-        <th class="g1e">Latest<br>memo</th>
-        <th class="g2s" data-sort="tl" onclick="sortRows('tl')">Timeliness</th>
+        <th>Latest<br>memo</th>
+        <th class="g1e" data-sort="stage" onclick="sortRows('stage')">Stage of<br>IA A&amp;J</th>
+        <th class="g2s" style="text-align:left" data-sort="industry" onclick="sortRows('industry')">Industry</th>
+        <th style="text-align:left" data-sort="sector" onclick="sortRows('sector')">Sector</th>
+        <th class="g2e" data-sort="tsw" onclick="sortRows('tsw')">Sector<br>weight</th>
+        <th class="g3s" data-sort="llq" onclick="sortRows('llq')">LLQ</th>
+        <th data-sort="tl" onclick="sortRows('tl')">Timeliness</th>
         <th data-sort="mr" onclick="sortRows('mr')">Master<br>rating</th>
         <th data-sort="ri" onclick="sortRows('ri')">RB interest<br>level</th>
-        <th class="g2e" data-sort="rk" onclick="sortRows('rk')">RB knowledge<br>level</th>
-        <th class="g3s" data-sort="p1" onclick="sortRows('p1')">Technical<br>momentum</th>
+        <th class="g3e" data-sort="rk" onclick="sortRows('rk')">RB knowledge<br>level</th>
+        <th class="g4s" data-sort="p1" onclick="sortRows('p1')">Technical<br>momentum</th>
         <th data-sort="p2" onclick="sortRows('p2')">Market<br>paradigm fit</th>
         <th data-sort="p3" onclick="sortRows('p3')">Fundamental<br>change thesis</th>
         <th data-sort="p4" onclick="sortRows('p4')">Fundamental case<br>foundations</th>
         <th data-sort="p5" onclick="sortRows('p5')">Sell-side earnings<br>momentum</th>
-        <th class="g3e" data-sort="p6" onclick="sortRows('p6')">Valuation<br>in range</th>
+        <th class="g4e" data-sort="p6" onclick="sortRows('p6')">Valuation<br>in range</th>
       </tr>
     </thead>
     <tbody id="tbody"></tbody>
@@ -483,7 +590,7 @@ function llqPill(v){
   if(!v) return '<span class="bdg gN">—</span>';
   const m=v.match(/^(\d+)/);const tier=m?m[1]:'';
   const cls={'1':'gA','2':'gB','3':'gC','4':'gD','5':'gN'}[tier]||'gN';
-  const labels={'1':'SL','2':'SB','3':'LLQ','4':'NQ','5':'Other'};
+  const labels={'1':'Bench','2':'Short-list','3':'Long-list','4':'NQ','5':'—'};
   return `<span class="bdg ${cls}" title="${esc(v)}">${labels[tier]||tier||'—'}</span>`;
 }
 function sectorWtBadge(v){
@@ -494,6 +601,26 @@ function sectorWtBadge(v){
   const cls = {'A':'gA','B':'gB','C':'gC','D':'gD','F':'gF','M':'gN'}[letter] || 'gN';
   return `<span class="bdg ${cls}" title="${esc(v)}">${letter}</span>`;
 }
+function riLetterCls(v){
+  if(!v) return 'gN';
+  const L=(String(v).match(/^([A-F])/)||[])[1];
+  return {'A':'gA','B':'gB','C':'gC','D':'gD','F':'gF'}[L] || 'gN';
+}
+function cleanRB(v){ return String(v||'—').replace(/\s*\([^)]*\)\s*$/,'').trim(); }
+function rbRank(v){ if(!v) return 99; var c=String(v).trim()[0]; if(c>='A'&&c<='F') return ({A:1,B:2,C:3,D:4,F:5})[c]||89; if(c>='0'&&c<='9') return parseInt(v,10)||89; if(c==='?') return 90; return 89; }
+function tkFS(t){ return String(t||'').replace(/-([A-Za-z0-9]+)$/,'.$1'); }
+function tkAS(t){ t=String(t||''); var m=t.match(/^(.+)\.([AB])-([A-Za-z0-9]+)$/); if(m) return m[1]+' '+m[2]+'.'+m[3]; return t.replace(/-([A-Za-z0-9]+)$/,'.$1'); }
+function showToast(msg){ var el=document.getElementById('copyToast'); if(!el) return; el.textContent=msg; el.classList.add('show'); setTimeout(function(){el.classList.remove('show');},2500); }
+function copyTickers(format){
+  var rows=[].slice.call(document.querySelectorAll('#tbody tr')).filter(function(r){return !r.classList.contains('fhide');});
+  var tickers=rows.map(function(r){return r.dataset.ticker;}).filter(Boolean).map(function(t){return format==='fs'?tkFS(t):tkAS(t);});
+  if(!tickers.length){ showToast('No tickers displayed — adjust filters.'); return; }
+  var text=tickers.join('\n');
+  function fb(txt){ var ta=document.createElement('textarea'); ta.value=txt; ta.style.position='fixed'; ta.style.opacity='0'; document.body.appendChild(ta); ta.select(); try{document.execCommand('copy');}catch(e){} document.body.removeChild(ta); }
+  function done(){ showToast('✓ '+tickers.length+' tickers copied for '+(format==='fs'?'FactSet':'AlphaSense')); }
+  if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(text).then(done).catch(function(){fb(text);done();}); }
+  else { fb(text); done(); }
+}
 let sortKey=null,sortDir=1;
 function sortRows(key){
   if(sortKey===key){sortDir*=-1;}else{sortKey=key;sortDir=1;}
@@ -501,6 +628,7 @@ function sortRows(key){
   const rows=[...tbody.querySelectorAll('tr')];
   rows.sort(function(a,b){
     var av=a.dataset[key]||'', bv=b.dataset[key]||'';
+    if(key==='ri'||key==='rk'){ return (rbRank(av)-rbRank(bv))*sortDir; }
     var go={'A':1,'B':2,'C':3,'D':4,'F':5,'':99};
     if(go[av]!==undefined&&go[bv]!==undefined)return (go[av]-go[bv])*sortDir;
     var an=parseFloat(av),bn=parseFloat(bv);
@@ -541,8 +669,8 @@ function mkRow(s){
   const riOpts = RI_OPTS_HTML;
   const rkOpts = RK_OPTS_HTML;
 
-  const mapBtn  = `<a class="ibtn dis" title="Map — Phase 2">&#x1f5fa;</a>`;
-  const listBtn = `<a class="ibtn dis" title="List — Phase 2">&#x1f4cb;</a>`;
+  const mapBtn  = `<a class="ibtn" href="#" onclick="openMapView(event,'${esc(s.ticker)}');return false" title="Map of ratings — ${esc(s.company_name||s.ticker)}">&#x1f5fa;</a>`;
+  const listBtn = `<a class="ibtn" href="#" onclick="openListView(event,'${esc(s.ticker)}');return false" title="List comparison — ${esc(s.company_name||s.ticker)}">&#x1f4cb;</a>`;
   const memoBtn = s.memo_url
     ? `<a class="ibtn" href="${s.memo_url}" target="_blank" title="Latest memo for ${esc(s.company_name||s.ticker)}">&#x1f4c4;</a>`
     : `<a class="ibtn dis" title="No memo">&#x1f4c4;</a>`;
@@ -554,24 +682,24 @@ function mkRow(s){
 
   tr.innerHTML = `
     <td class="co g1s" title="${esc(s.ticker)} — ${esc(s.company_name||'')}">${esc(s.company_name||s.ticker)}</td>
-    <td>${stagePill(s.stage)}</td>
-    <td>${llqPill(s.llq)}</td>
-    <td class="tax" title="${esc(s.industry||'')}">${taxDisplay(s.industry_code,s.industry)}</td>
-    <td class="tax" title="${esc(s.sector||'')}">${taxDisplay(s.sector_code,s.sector)}</td>
-    <td>${sectorWtBadge(s.target_sector_weight)}</td>
     <td>${mapBtn}</td>
     <td>${listBtn}</td>
-    <td class="g1e">${memoBtn}</td>
-    <td class="g2s">${tlBadge(s.timeliness)}</td>
+    <td>${memoBtn}</td>
+    <td class="g1e">${stagePill(s.stage)}</td>
+    <td class="tax g2s" title="${esc(s.industry||'')}">${taxDisplay(s.industry_code,s.industry)}</td>
+    <td class="tax" title="${esc(s.sector||'')}">${taxDisplay(s.sector_code,s.sector)}</td>
+    <td class="g2e">${sectorWtBadge(s.target_sector_weight)}</td>
+    <td class="g3s">${llqPill(s.llq)}</td>
+    <td>${tlBadge(s.timeliness)}</td>
     <td>${mrBadge}</td>
-    <td>${notionLnk}<span class="rbd ri${ri}">${esc(s.interest_level||'—')}</span></td>
-    <td class="g2e"><span class="rbd rk${rk}">${esc(s.knowledge_level||'—')}</span></td>
-    <td class="g3s">${badge(s.p1_technical_momentum)}</td>
-    <td>${hasStage?badge(s.p2_market_paradigm_fit):'<span class="bdg gN">—</span>'}</td>
-    <td>${hasStage?badge(s.p3_fundamental_change):'<span class="bdg gN">—</span>'}</td>
-    <td>${hasStage?badge(s.p4_fundamental_foundations):'<span class="bdg gN">—</span>'}</td>
-    <td>${badge(s.p5_ssem)}</td>
-    <td class="g3e">${badge(s.p6_valuation)}</td>
+    <td>${notionLnk}<span class="rbd ${riLetterCls(s.interest_level)}" title="${esc(s.interest_level||'')}">${esc(cleanRB(s.interest_level))}</span></td>
+    <td class="g3e"><span class="rbd rk${rk}" title="${esc(s.knowledge_level||'')}">${esc(cleanRB(s.knowledge_level))}</span></td>
+    <td class="g4s"><a class="ppill" href="https://vfhqi.github.io/master/index.html#tech/${esc(s.ticker)}" target="_blank" title="Technical momentum · open master dashboard Technical tab centred on ${esc(s.ticker)}">${badge(s.p1_technical_momentum)}</a></td>
+    <td><span class="ppill" onclick="openMapView(event,'${esc(s.ticker)}')" title="Market-paradigm fit · open Map of ratings">${hasStage?badge(s.p2_market_paradigm_fit):'<span class="bdg gN">—</span>'}</span></td>
+    <td><span class="ppill" onclick="openMapView(event,'${esc(s.ticker)}')" title="Fundamental change · open Map of ratings">${hasStage?badge(s.p3_fundamental_change):'<span class="bdg gN">—</span>'}</span></td>
+    <td><span class="ppill" onclick="openMapView(event,'${esc(s.ticker)}')" title="Fundamental foundations · open Map of ratings">${hasStage?badge(s.p4_fundamental_foundations):'<span class="bdg gN">—</span>'}</span></td>
+    <td><a class="ppill" href="https://vfhqi.github.io/master/index.html#ssem/${esc(s.ticker)}" target="_blank" title="Sell-side earnings momentum · open master dashboard SSEM tab centred on ${esc(s.ticker)}">${badge(s.p5_ssem)}</a></td>
+    <td class="g4e"><a class="ppill" href="https://vfhqi.github.io/master/index.html#val/${esc(s.ticker)}" target="_blank" title="Valuation · open master dashboard Valuation tab centred on ${esc(s.ticker)}">${badge(s.p6_valuation)}</a></td>
   `;
 
   return tr;
@@ -751,7 +879,8 @@ function buildBar(){
       const stageDisp = {
         'Deep dive':'3. Deep dive','ESA':'2. ESA','Triaging':'1. Triaged'
       };
-      const dispLabel = id==='stage'&&v ? (stageDisp[v]||v) : dispV;
+      const llqDisp = {'1':'Bench','2':'Short-list','3':'Long-list','4':'NQ'};
+      const dispLabel = id==='stage'&&v ? (stageDisp[v]||v) : (id==='llq'&&v ? (llqDisp[v[0]]||v) : dispV);
       lbl.appendChild(Object.assign(document.createElement('span'),{textContent:' '+dispLabel}));
       pop.appendChild(lbl);
     }
@@ -792,7 +921,10 @@ async function init(){
   try{
     const r=await fetch('ratings-snapshot.json');
     if(!r.ok) throw new Error('HTTP '+r.status);
-    data=await r.json();
+    let _txt=await r.text();
+    _txt=_txt.replace(/\0+$/,'').trim();  // tolerate trailing NUL padding (FUSE-truncation artifact)
+    try{ data=JSON.parse(_txt); }
+    catch(_pe){ const _end=_txt.lastIndexOf('}'); if(_end<0) throw _pe; data=JSON.parse(_txt.slice(0,_end+1)); }
   } catch(e){
     document.getElementById('loading').innerHTML=
       `<b style="color:#b54248">Failed to load ratings data.</b><br>${esc(e.message)}<br><small>ratings-snapshot.json must be deployed alongside this file.</small>`;
@@ -800,6 +932,10 @@ async function init(){
   }
 
   const stocks = data.stocks||[];
+  window.UNIV=stocks; window.UBK={}; stocks.forEach(function(s){window.UBK[s.ticker]=s;});
+  fetch('granular-ratings.json').then(function(r){return r.text();}).then(function(t){try{window.GRAN=JSON.parse(t.replace(/\0+$/,'').trim()).stocks||{};}catch(e){window.GRAN={};}}).catch(function(){window.GRAN={};});
+  fetch('cohorts-lookup.json').then(function(r){return r.text();}).then(function(t){try{window.COH=JSON.parse(t.replace(/\0+$/,'').trim());}catch(e){window.COH={};}}).catch(function(){window.COH={};});
+  fetch('ratings-history.json').then(function(r){return r.text();}).then(function(t){try{window.RHIST=JSON.parse(t.replace(/\0+$/,'').trim());}catch(e){window.RHIST=null;}}).catch(function(){window.RHIST=null;});
   if(data.generated_at){
     var _dt=new Date(data.generated_at);
     var _fmt=_dt.toLocaleString('en-GB',{day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit',timeZoneName:'short'});
@@ -1172,6 +1308,424 @@ init();
                 if(el.textContent.indexOf(ticker)>-1||el.getAttribute("data-ticker")===ticker){el.click();return;}}
         }
         // COVERAGE_JS_V1_END
+
+/* ==== Phase-2 Map/List injected engine ==== */
+/* ===================================================================
+   Map + List engine for IC Ratings Dashboard (Phase 2)
+   Reads runtime globals set by init():
+     window.UNIV      : array of snapshot stock rows
+     window.UBK       : {ticker: row}
+     window.GRAN      : {ticker: {nodes:[{id,level,label,rating,summary}], stage, stage_date, company_name}}
+     window.COH       : {tickers:{ticker:{cid,zone}}}
+   Exposes: openMapView(evt,ticker), openListView(evt,ticker)
+   =================================================================== */
+(function(){
+'use strict';
+function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function G(){return window.GRAN||{};}
+function U(){return window.UNIV||[];}
+function ubk(t){return (window.UBK||{})[t]||null;}
+function coh(t){var c=window.COH&&window.COH.tickers;return c&&c[t]?c[t].cid:null;}
+
+/* ---- pillar helpers ---- */
+var PFIELD={p1:'p1_technical_momentum',p2:'p2_market_paradigm_fit',p3:'p3_fundamental_change',p4:'p4_fundamental_foundations',p5:'p5_ssem',p6:'p6_valuation'};
+var PLABEL={p1:'P1 · Technical strength',p2:'P2 · Market-paradigm fit',p3:'P3 · Fundamental change',p4:'P4 · Fundamental foundations',p5:'P5 · Sell-side earnings momentum',p6:'P6 · Valuation'};
+var FOUNDATIONS=['p1','p2','p4','p5','p6'];      // P3 families are the top tier
+var IC_ORDER=['p3.ic3','p3.ic2','p3.ic1'];       // Investment case: Setups, Inputs, Outputs
+
+/* ---- grade chip ---- */
+function chipInfo(r){
+  if(r==null||r==='') return {cls:'mv-r-blank',txt:'—'};
+  var s=String(r).trim().toUpperCase();
+  if(s==='PASS') return {cls:'mv-r-a',txt:'✓'};
+  if(s==='FAIL') return {cls:'mv-r-f',txt:'✗'};
+  if(s==='UNCERTAIN') return {cls:'mv-r-c',txt:'~'};
+  var L=s[0];
+  var m={A:'mv-r-a',B:'mv-r-b',C:'mv-r-c',D:'mv-r-d',E:'mv-r-f',F:'mv-r-f'};
+  if(m[L]) return {cls:m[L],txt:L};
+  return {cls:'mv-r-blank',txt:'—'};
+}
+function chip(rating,tk,nid,titleTxt){
+  var ci=chipInfo(rating);
+  var t=titleTxt?(' title="'+esc(titleTxt)+'"'):'';
+  if(tk&&nid) return '<button type="button" class="mvchip '+ci.cls+'" data-tk="'+esc(tk)+'" data-nid="'+esc(nid)+'" onclick="MV.pill(event,this)"'+t+'>'+ci.txt+'</button>';
+  return '<span class="mvchip nolink '+ci.cls+'"'+t+'>'+ci.txt+'</span>';
+}
+
+/* ---- tree index for one stock ---- */
+function treeIndex(gran){
+  var nodes=gran.nodes||[];
+  var byId={}, order={}, kids={};
+  nodes.forEach(function(n,i){byId[n.id]=n;order[n.id]=i;});
+  nodes.forEach(function(n){
+    var id=n.id, p=id.lastIndexOf('.');
+    if(p<0) return;
+    var par=id.slice(0,p);
+    if(byId[par]){ (kids[par]=kids[par]||[]).push(n); }
+  });
+  Object.keys(kids).forEach(function(k){kids[k].sort(function(a,b){return order[a.id]-order[b.id];});});
+  return {byId:byId, kids:kids, childrenOf:function(id){return kids[id]||[];}};
+}
+
+/* ---- Map render ---- */
+function mapLeaf(idx,node,tk){
+  var kids=idx.childrenOf(node.id);
+  var h='<div class="mv-child mv-lvl-'+esc(node.level||'')+'">'+
+        '<span class="mv-label">'+esc(node.label)+'</span>'+
+        chip(node.rating,tk,node.id,node.summary)+'</div>';
+  if(kids.length){
+    h+='<div class="mv-children">'+kids.map(function(k){return mapLeaf(idx,k,tk);}).join('')+'</div>';
+  }
+  return h;
+}
+function mapCard(idx,node,tk){
+  var kids=idx.childrenOf(node.id);
+  var h='<div class="mv-node"><div class="mv-mhdr"><span class="mv-htxt">'+esc(node.label)+'</span>'+chip(node.rating,tk,node.id,node.summary)+'</div>';
+  if(kids.length){
+    h+='<div class="mv-children">'+kids.map(function(k){return mapLeaf(idx,k,tk);}).join('')+'</div>';
+  }
+  h+='</div>';
+  return h;
+}
+function pillarChipFromRow(row,pid){ return row?row[PFIELD[pid]]:null; }
+
+function renderMap(tk){
+  var row=ubk(tk), gran=G()[tk];
+  if(!gran){
+    // pillar-only fallback from snapshot
+    var h='<div class="mv-note">Granular rating tree not yet available for this stock (no graded memo). Showing the six pillar grades only.</div>';
+    h+='<div class="mv-pbody">';
+    ['p1','p2','p3','p4','p5','p6'].forEach(function(pid){
+      h+='<div class="mv-node"><div class="mv-mhdr"><span class="mv-htxt">'+esc(PLABEL[pid])+'</span>'+chip(pillarChipFromRow(row,pid),null,null,'')+'</div></div>';
+    });
+    h+='</div>';
+    return h;
+  }
+  var idx=treeIndex(gran);
+  var out='';
+  // TOP tier — Investment case (IC3, IC2, IC1)
+  var icCards=IC_ORDER.map(function(id){return idx.byId[id];}).filter(Boolean);
+  if(icCards.length){
+    out+='<div class="mv-tier-ic"><div class="mv-tierlabel">Investment case (required change)</div><div class="mv-pbody">'+
+         icCards.map(function(n){return mapCard(idx,n,tk);}).join('')+'</div></div>';
+  }
+  // Foundations — P1, P2, P4, P5, P6
+  out+='<div class="mv-tierlabel">Foundations</div>';
+  FOUNDATIONS.forEach(function(pid){
+    var pnode=idx.byId[pid];
+    var prating=pnode?pnode.rating:pillarChipFromRow(row,pid);
+    var directKids=idx.childrenOf(pid);
+    out+='<div class="mv-pillar"><div class="mv-ptitle"><span class="mv-ptxt">'+esc(PLABEL[pid])+'</span>'+chip(prating,pnode?tk:null,pnode?pid:null,pnode?pnode.summary:'')+'</div>';
+    if(directKids.length){
+      out+='<div class="mv-pbody">'+directKids.map(function(n){return mapCard(idx,n,tk);}).join('')+'</div>';
+    }else{
+      out+='<div class="mv-empty">No graded sub-items.</div>';
+    }
+    out+='</div>';
+  });
+  return out;
+}
+
+/* ---- List comparison matrix ---- */
+var listPeers={};   // primaryTicker -> [up to 7 tickers/null]
+
+function defaultPeers(tk){
+  var row=ubk(tk); if(!row) return [];
+  var cid=coh(tk), sc=row.sector_code, ic=row.industry_code;
+  var chosen=[], seen={}; seen[tk]=1;
+  function pass(pred){
+    for(var i=0;i<U().length && chosen.length<7;i++){
+      var s=U()[i]; if(seen[s.ticker]) continue;
+      if(pred(s)){ chosen.push(s.ticker); seen[s.ticker]=1; }
+    }
+  }
+  if(cid) pass(function(s){return coh(s.ticker)===cid;});
+  if(sc)  pass(function(s){return s.sector_code===sc;});
+  if(ic)  pass(function(s){return s.industry_code===ic;});
+  return chosen;
+}
+function getListStocks(tk){
+  if(!listPeers[tk]) listPeers[tk]=defaultPeers(tk);
+  var peers=listPeers[tk].slice();
+  while(peers.length<7) peers.push(null);
+  peers=peers.slice(0,7);
+  var arr=[ubk(tk)];
+  peers.forEach(function(p){arr.push(p?ubk(p):null);});
+  return arr;  // length 8
+}
+
+// checklist rows: pillar + family + tc. Prefer the PRIMARY stock's own tree
+// (so labels/order match its memo); fall back to the richest available tree.
+function buildChecklist(primaryTk){
+  var g=G(), best=null, bestN=-1;
+  if(primaryTk && g[primaryTk] && (g[primaryTk].nodes||[]).length){
+    best=g[primaryTk];
+  } else {
+    Object.keys(g).forEach(function(t){var n=(g[t].nodes||[]).length; if(n>bestN){bestN=n;best=g[t];}});
+  }
+  var rows=[];
+  var pillars={p1:1,p2:1,p3:1,p4:1,p5:1,p6:1};
+  if(best){
+    (best.nodes||[]).forEach(function(n){
+      if(n.level==='pillar'||n.level==='family'||n.level==='tc') rows.push({id:n.id,level:n.level,label:n.label});
+    });
+  }
+  // ensure all 6 pillar section rows exist even if template lacks one
+  var have={}; rows.forEach(function(r){if(r.level==='pillar')have[r.id]=1;});
+  ['p1','p2','p3','p4','p5','p6'].forEach(function(pid){
+    if(!have[pid]) rows.push({id:pid,level:'pillar',label:PLABEL[pid]});
+  });
+  // order: group by pillar in p1..p6, preserving template order within
+  var pri={p1:1,p2:2,p3:3,p4:4,p5:5,p6:6};
+  rows.forEach(function(r,i){r._i=i;});
+  rows.sort(function(a,b){
+    var pa=pri[a.id.split('.')[0]]||9, pb=pri[b.id.split('.')[0]]||9;
+    if(pa!==pb) return pa-pb;
+    return a._i-b._i;
+  });
+  return rows;
+}
+function cellGrade(stock,rowdef){
+  if(!stock) return chip(null,null,null,'');
+  if(rowdef.level==='pillar'){
+    return chip(stock[PFIELD[rowdef.id]],null,null,PLABEL[rowdef.id]);
+  }
+  var gran=G()[stock.ticker];
+  if(gran){
+    var node=(gran.__idx||(gran.__idx=treeIndex(gran))).byId[rowdef.id];
+    if(node) return chip(node.rating,stock.ticker,node.id,node.summary);
+  }
+  return chip(null,null,null,'');   // dash: peer has no graded memo
+}
+function renderMatrix(tk){
+  var stocks=getListStocks(tk);
+  var rows=buildChecklist(tk);
+  var h='<table class="mv-matrix"><thead><tr><th class="mv-lblcol">Rating checklist</th>';
+  for(var c=0;c<8;c++){
+    var s=stocks[c], isP=(c===0);
+    var cls='mv-thead-tk'+(isP?' mv-primary':(s?' mv-th-drag':' mv-empty'));
+    h+='<th class="mv-stockcol" data-col="'+c+'"'+((!isP&&s)?' draggable="true"':'')+'>';
+    if(!isP) h+='<span class="mv-slotctl" title="Clear this column" onclick="MV.clearPeer(event,'+c+')">✕</span>';
+    h+='<div class="'+cls+'"'+(isP?'':(' onclick="MV.search(event,'+c+')"'))+'>';
+    if(s){ h+='<span class="mv-tkname">'+esc(s.ticker)+'</span><span class="mv-tkco">'+esc(s.company_name||'')+'</span>'; }
+    else { h+='<span class="mv-tkname">+ Add</span><span class="mv-tkco">click to choose</span>'; }
+    h+='</div></th>';
+  }
+  h+='</tr></thead><tbody>';
+  rows.forEach(function(rd){
+    var isSec=(rd.level==='pillar');
+    var rowcls=isSec?'mv-secrow':('mv-itemrow mv-lvl-'+rd.level);
+    h+='<tr class="'+rowcls+'">';
+    h+='<td class="mv-lblcol">'+(isSec?'':('<span class="mv-lid">'+esc(rd.id)+'</span>'))+esc(rd.label)+'</td>';
+    stocks.forEach(function(s){ h+='<td class="mv-stockcol">'+cellGrade(s,rd)+'</td>'; });
+    h+='</tr>';
+  });
+  h+='</tbody></table>';
+  h+='<div class="mv-legend"><b>Grades:</b>'+
+     chip('A')+' A '+chip('B')+' B '+chip('C')+' C '+chip('D')+' D '+chip('F')+' F '+chip(null)+' none/no memo'+
+     ' &nbsp;·&nbsp; Section rows compare the six pillar grades across all stocks; item rows fill in where a stock has a graded memo tree.</div>';
+  return h;
+}
+
+/* ---- List peer editing ---- */
+var activeSearchCol=-1;
+function closeSearch(){var e=document.querySelectorAll('.mv-search.active');for(var i=0;i<e.length;i++)e[i].classList.remove('active');activeSearchCol=-1;}
+function doSearch(evt,col){
+  if(evt)evt.stopPropagation();
+  closeSearch();
+  var th=document.querySelector('.mv-matrix thead th[data-col="'+col+'"]');
+  if(!th) return;
+  var box=th.querySelector('.mv-search');
+  if(!box){
+    box=document.createElement('div');box.className='mv-search';
+    box.innerHTML='<input type="text" placeholder="Type ticker or name…"><div class="mv-search-res"></div>';
+    th.appendChild(box);
+    var inp=box.querySelector('input');
+    inp.addEventListener('input',function(){filterSearch(this.value,box,col);});
+    inp.addEventListener('click',function(e){e.stopPropagation();});
+    box.addEventListener('click',function(e){e.stopPropagation();});
+  }
+  box.classList.add('active');activeSearchCol=col;
+  var inp2=box.querySelector('input');inp2.value='';filterSearch('',box,col);
+  setTimeout(function(){inp2.focus();},40);
+}
+function filterSearch(q,box,col){
+  var res=box.querySelector('.mv-search-res');
+  var ql=q.toLowerCase();
+  var html='<div class="mv-opt" onclick="MV.pick('+col+',null)"><span style="color:#8a7f63;font-style:italic">Clear slot</span></div>';
+  var n=0;
+  var uni=U();
+  for(var i=0;i<uni.length && n<60;i++){
+    var s=uni[i];
+    if(ql && (s.ticker.toLowerCase().indexOf(ql)===-1 && String(s.company_name||'').toLowerCase().indexOf(ql)===-1)) continue;
+    html+='<div class="mv-opt" onclick="MV.pick('+col+',\''+esc(s.ticker).replace(/'/g,"\\'")+'\')"><span><b>'+esc(s.ticker)+'</b> '+esc(s.company_name||'')+'</span><span class="mv-opt-sec">'+esc(s.sector||'')+'</span></div>';
+    n++;
+  }
+  res.innerHTML=html;
+}
+function pickPeer(col,ticker){
+  var tk=currentList; if(!tk) return;
+  if(!listPeers[tk]) listPeers[tk]=defaultPeers(tk);
+  while(listPeers[tk].length<7) listPeers[tk].push(null);
+  listPeers[tk][col-1]=ticker;
+  closeSearch();
+  document.getElementById('mv-list-body').innerHTML=renderMatrix(tk);
+  wireDrag();
+}
+function clearPeer(evt,col){ if(evt)evt.stopPropagation(); pickPeer(col,null); }
+
+/* ---- drag reorder of peer columns ---- */
+var dragCol=-1;
+function wireDrag(){
+  var ths=document.querySelectorAll('.mv-matrix thead th.mv-stockcol[draggable="true"]');
+  ths.forEach(function(th){
+    th.addEventListener('dragstart',function(e){dragCol=+th.dataset.col;e.dataTransfer.effectAllowed='move';});
+    th.addEventListener('dragover',function(e){e.preventDefault();th.classList.add('mv-th-dragover');});
+    th.addEventListener('dragleave',function(){th.classList.remove('mv-th-dragover');});
+    th.addEventListener('drop',function(e){e.preventDefault();th.classList.remove('mv-th-dragover');
+      var to=+th.dataset.col; moveCol(dragCol,to);});
+    th.addEventListener('dragend',function(){document.querySelectorAll('.mv-th-dragover').forEach(function(x){x.classList.remove('mv-th-dragover');});});
+  });
+}
+function moveCol(from,to){
+  var tk=currentList; if(!tk||from<1||to<1||from===to) return;
+  var arr=listPeers[tk]; if(!arr) return;
+  var item=arr.splice(from-1,1)[0];
+  arr.splice(to-1,0,item);
+  document.getElementById('mv-list-body').innerHTML=renderMatrix(tk);
+  wireDrag();
+}
+
+/* ---- modal shells ---- */
+var currentMap=null,currentList=null;
+function ensureOverlay(kind){
+  var id='mv-'+kind+'-overlay';
+  var ov=document.getElementById(id);
+  if(ov) return ov;
+  ov=document.createElement('div');
+  ov.id=id;ov.className='mv-overlay'+(kind==='list'?' mv-list':'');
+  ov.innerHTML=
+    '<div class="mv-frame"><div class="mv-head">'+
+      '<span class="mv-tk" id="mv-'+kind+'-tk"></span>'+
+      '<span class="mv-co" id="mv-'+kind+'-co"></span>'+
+      '<span class="mv-sub" id="mv-'+kind+'-sub"></span>'+
+      '<span class="mv-spacer"></span>'+
+      '<label class="mv-toggle"><input type="checkbox" id="mv-'+kind+'-cqra"> Show CQ/RA detail</label>'+
+      '<button class="mv-close" onclick="MV.close(\''+kind+'\')" title="Close">✕</button>'+
+    '</div><div class="mv-body hide-cqra" id="mv-'+kind+'-body"></div></div>';
+  document.body.appendChild(ov);
+  ov.addEventListener('click',function(e){if(e.target===ov)closeModal(kind);});
+  ov.querySelector('#mv-'+kind+'-cqra').addEventListener('change',function(){
+    var b=document.getElementById('mv-'+kind+'-body');
+    b.classList.toggle('hide-cqra',!this.checked);
+  });
+  return ov;
+}
+function openMap(evt,tk){
+  if(evt&&evt.preventDefault)evt.preventDefault();
+  var row=ubk(tk), gran=G()[tk]; currentMap=tk;
+  var ov=ensureOverlay('map');
+  document.getElementById('mv-map-tk').textContent=tk;
+  document.getElementById('mv-map-co').textContent=row?(row.company_name||''):'';
+  document.getElementById('mv-map-sub').textContent=gran?('Map of ratings · '+gran.stage+(gran.stage_date?(' '+gran.stage_date):'')):'Map of ratings';
+  var body=document.getElementById('mv-map-body');
+  body.classList.add('hide-cqra');
+  var cb=document.getElementById('mv-map-cqra'); if(cb)cb.checked=false;
+  body.innerHTML=renderMap(tk);
+  ov.classList.add('active');document.body.style.overflow='hidden';
+}
+function openList(evt,tk){
+  if(evt&&evt.preventDefault)evt.preventDefault();
+  var row=ubk(tk); currentList=tk;
+  var ov=ensureOverlay('list');
+  document.getElementById('mv-list-tk').textContent=tk;
+  document.getElementById('mv-list-co').textContent=row?(row.company_name||''):'';
+  document.getElementById('mv-list-sub').textContent='Peer comparison · '+(row?(row.sector||''):'');
+  var body=document.getElementById('mv-list-body');
+  body.classList.add('hide-cqra');
+  var cb=document.getElementById('mv-list-cqra'); if(cb)cb.checked=false;
+  body.innerHTML=renderMatrix(tk);
+  ov.classList.add('active');document.body.style.overflow='hidden';
+  wireDrag();
+}
+function closeModal(kind){
+  var ov=document.getElementById('mv-'+kind+'-overlay');
+  if(ov)ov.classList.remove('active');
+  document.body.style.overflow='';
+  if(kind==='list')closeSearch();
+}
+
+/* ---- pill click: open memo (section-level now; leaf-level wired later) ---- */
+function pillClick(evt,el){
+  if(evt)evt.stopPropagation();
+  var tk=el.getAttribute('data-tk'), nid=el.getAttribute('data-nid');
+  var url=MV.linkFor(tk,nid);
+  if(url) window.open(url,'_blank','noopener');
+}
+// Overridable hook — task 4/6 refine anchor logic. Default: memo top.
+function linkFor(tk,nid){
+  var row=ubk(tk);
+  if(!row||!row.memo_url) return null;
+  var anchor=MV.nodeAnchor(nid);
+  return row.memo_url+(anchor?('#'+anchor):'');
+}
+function nodeAnchor(nid){ return nid?String(nid):''; }  // leaf-level: memo_url#<node-id> (resolves once memo build emits matching id anchors)
+
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeModal('map');closeModal('list');}});
+document.addEventListener('click',function(){closeSearch();});
+
+window.MV={
+  openMap:openMap, openList:openList, close:closeModal,
+  search:doSearch, pick:pickPeer, clearPeer:clearPeer,
+  pill:pillClick, linkFor:linkFor, nodeAnchor:nodeAnchor
+};
+// convenience globals used by row buttons
+window.openMapView=function(evt,tk){return openMap(evt,tk);};
+window.openListView=function(evt,tk){return openList(evt,tk);};
+})();
+
+
+/* ==== Prior-rating toggle ==== */
+window.__priorOn=false;
+function priorGradeFor(tk,pk,live){
+  var H=window.RHIST; if(!H||!H.dates||H.dates.length<1) return null;
+  for(var i=H.dates.length-1;i>=0;i--){
+    var snap=H.snapshots[H.dates[i]]; if(!snap) continue;
+    var rec=snap[tk]; if(!rec) continue;
+    var g=rec[pk]; if(!g) continue;
+    if(i===H.dates.length-1) continue;     // newest = live, skip
+    return (g!==live)? g : null;           // first older grade: changed -> show, same -> none
+  }
+  return null;
+}
+function priorChip(grade){
+  var cls=(typeof gradeCls==='function')?gradeCls(grade):'gN';
+  return '<span class="ppair"><span class="bdg '+cls+'">'+esc(grade)+'</span><span class="parr">→</span></span>';
+}
+function applyPrior(){
+  var on=window.__priorOn;
+  var pk=['p1','p2','p3','p4','p5','p6'];
+  var rows=document.querySelectorAll('#tbody tr');
+  for(var r=0;r<rows.length;r++){
+    var tr=rows[r]; var tk=tr.dataset.ticker; if(!tk) continue;
+    var tds=tr.children; var n=tds.length; // last 6 tds are pillars p1..p6
+    for(var c=0;c<6;c++){
+      var td=tds[n-6+c]; if(!td) continue;
+      var old=td.querySelector('.ppair'); if(old) old.remove();
+      if(on){
+        var live=tr.dataset[pk[c]]||'';
+        if(live){ var pg=priorGradeFor(tk,pk[c],live); if(pg){ td.insertAdjacentHTML('afterbegin',priorChip(pg)); } }
+      }
+    }
+  }
+}
+function togglePrior(){
+  window.__priorOn=!window.__priorOn;
+  var b=document.getElementById('priorToggle');
+  if(b){ b.classList.toggle('on',window.__priorOn); b.textContent='Δ Prior rating: '+(window.__priorOn?'on':'off'); }
+  applyPrior();
+}
+
 </script>
 </body>
 </html>
