@@ -1,0 +1,3906 @@
+{
+ "generated": "2026-07-07T14:43:23.778483Z",
+ "n": 975,
+ "tickers": {
+  "BNP-FR": {
+   "cid": "FIN01",
+   "zone": "Financial Services"
+  },
+  "GLE-FR": {
+   "cid": "FIN01",
+   "zone": "Financial Services"
+  },
+  "ACA-FR": {
+   "cid": "FIN01",
+   "zone": "Financial Services"
+  },
+  "BARC-GB": {
+   "cid": "FIN01",
+   "zone": "Financial Services"
+  },
+  "HSBA-GB": {
+   "cid": "FIN02",
+   "zone": "Financial Services"
+  },
+  "STAN-GB": {
+   "cid": "FIN02",
+   "zone": "Financial Services"
+  },
+  "CBK-DE": {
+   "cid": "FIN03",
+   "zone": "Financial Services"
+  },
+  "DANSKE-DK": {
+   "cid": "FIN03",
+   "zone": "Financial Services"
+  },
+  "DNB-NO": {
+   "cid": "FIN03",
+   "zone": "Financial Services"
+  },
+  "ING-PL": {
+   "cid": "FIN03",
+   "zone": "Financial Services"
+  },
+  "BG-AT": {
+   "cid": "FIN04",
+   "zone": "Financial Services"
+  },
+  "EBS-AT": {
+   "cid": "FIN04",
+   "zone": "Financial Services"
+  },
+  "EUROB-GR": {
+   "cid": "FIN04",
+   "zone": "Financial Services"
+  },
+  "CE-IT": {
+   "cid": "FIN05",
+   "zone": "Financial Services"
+  },
+  "GRKP-CH": {
+   "cid": "FIN05",
+   "zone": "Financial Services"
+  },
+  "UBSG-CH": {
+   "cid": "FIN06",
+   "zone": "Financial Services"
+  },
+  "BGN-IT": {
+   "cid": "FIN06",
+   "zone": "Financial Services"
+  },
+  "INGA-NL": {
+   "cid": "FIN07",
+   "zone": "Financial Services"
+  },
+  "LLOY-GB": {
+   "cid": "FIN07",
+   "zone": "Financial Services"
+  },
+  "DB1-DE": {
+   "cid": "FIN08",
+   "zone": "Financial Services"
+  },
+  "ENX-FR": {
+   "cid": "FIN08",
+   "zone": "Financial Services"
+  },
+  "LSEG-GB": {
+   "cid": "FIN08",
+   "zone": "Financial Services"
+  },
+  "ALLFG-NL": {
+   "cid": "FIN09",
+   "zone": "Financial Services"
+  },
+  "CFT-CH": {
+   "cid": "FIN09",
+   "zone": "Financial Services"
+  },
+  "FLOW-NL": {
+   "cid": "FIN09",
+   "zone": "Financial Services"
+  },
+  "T2G-DE": {
+   "cid": "FIN09",
+   "zone": "Financial Services"
+  },
+  "TCAP-GB": {
+   "cid": "FIN09",
+   "zone": "Financial Services"
+  },
+  "CVC-NL": {
+   "cid": "FIN10",
+   "zone": "Financial Services"
+  },
+  "EQT-SE": {
+   "cid": "FIN10",
+   "zone": "Financial Services"
+  },
+  "PGHN-CH": {
+   "cid": "FIN10",
+   "zone": "Financial Services"
+  },
+  "RF-FR": {
+   "cid": "FIN10",
+   "zone": "Financial Services"
+  },
+  "BPT-GB": {
+   "cid": "FIN10",
+   "zone": "Financial Services"
+  },
+  "ANTIN-FR": {
+   "cid": "FIN11",
+   "zone": "Financial Services"
+  },
+  "POLN-GB": {
+   "cid": "FIN11",
+   "zone": "Financial Services"
+  },
+  "TIP-IT": {
+   "cid": "FIN11",
+   "zone": "Financial Services"
+  },
+  "III-GB": {
+   "cid": "FIN12",
+   "zone": "Financial Services"
+  },
+  "ICGT-GB": {
+   "cid": "FIN12",
+   "zone": "Financial Services"
+  },
+  "MF-FR": {
+   "cid": "FIN12",
+   "zone": "Financial Services"
+  },
+  "TFG-NL": {
+   "cid": "FIN12",
+   "zone": "Financial Services"
+  },
+  "IPO-GB": {
+   "cid": "FIN12",
+   "zone": "Financial Services"
+  },
+  "AYV-FR": {
+   "cid": "FIN14",
+   "zone": "Financial Services"
+  },
+  "BFF-IT": {
+   "cid": "FIN14",
+   "zone": "Financial Services"
+  },
+  "BUR-GB": {
+   "cid": "FIN14",
+   "zone": "Financial Services"
+  },
+  "MNG-GB": {
+   "cid": "FIN15",
+   "zone": "Financial Services"
+  },
+  "HNR1-DE": {
+   "cid": "INS01",
+   "zone": "Financial Services"
+  },
+  "MUV2-DE": {
+   "cid": "INS01",
+   "zone": "Financial Services"
+  },
+  "SCR-FR": {
+   "cid": "INS01",
+   "zone": "Financial Services"
+  },
+  "SREN-CH": {
+   "cid": "INS01",
+   "zone": "Financial Services"
+  },
+  "ALV-DE": {
+   "cid": "INS02",
+   "zone": "Financial Services"
+  },
+  "CS-FR": {
+   "cid": "INS02",
+   "zone": "Financial Services"
+  },
+  "G-IT": {
+   "cid": "INS02",
+   "zone": "Financial Services"
+  },
+  "PRU-GB": {
+   "cid": "INS02",
+   "zone": "Financial Services"
+  },
+  "ZURN-CH": {
+   "cid": "INS02",
+   "zone": "Financial Services"
+  },
+  "AV-GB": {
+   "cid": "INS03",
+   "zone": "Financial Services"
+  },
+  "JUST-GB": {
+   "cid": "INS03",
+   "zone": "Financial Services"
+  },
+  "LGEN-GB": {
+   "cid": "INS03",
+   "zone": "Financial Services"
+  },
+  "PHNX-GB": {
+   "cid": "INS03",
+   "zone": "Financial Services"
+  },
+  "AGN-NL": {
+   "cid": "INS04",
+   "zone": "Financial Services"
+  },
+  "ASRNL-NL": {
+   "cid": "INS04",
+   "zone": "Financial Services"
+  },
+  "NN-NL": {
+   "cid": "INS04",
+   "zone": "Financial Services"
+  },
+  "BEZ-GB": {
+   "cid": "INS05",
+   "zone": "Financial Services"
+  },
+  "HSX-GB": {
+   "cid": "INS05",
+   "zone": "Financial Services"
+  },
+  "LRE-GB": {
+   "cid": "INS05",
+   "zone": "Financial Services"
+  },
+  "ALMB-DK": {
+   "cid": "INS06",
+   "zone": "Financial Services"
+  },
+  "GJF-NO": {
+   "cid": "INS06",
+   "zone": "Financial Services"
+  },
+  "PROT-NO": {
+   "cid": "INS06",
+   "zone": "Financial Services"
+  },
+  "SAMPO-FI": {
+   "cid": "INS06",
+   "zone": "Financial Services"
+  },
+  "TRYG-DK": {
+   "cid": "INS06",
+   "zone": "Financial Services"
+  },
+  "PZU-PL": {
+   "cid": "INS07",
+   "zone": "Financial Services"
+  },
+  "UNI-IT": {
+   "cid": "INS07",
+   "zone": "Financial Services"
+  },
+  "UQA-AT": {
+   "cid": "INS07",
+   "zone": "Financial Services"
+  },
+  "VIG-AT": {
+   "cid": "INS07",
+   "zone": "Financial Services"
+  },
+  "HELN-CH": {
+   "cid": "INS08",
+   "zone": "Financial Services"
+  },
+  "SLHN-CH": {
+   "cid": "INS08",
+   "zone": "Financial Services"
+  },
+  "STB-NO": {
+   "cid": "INS08",
+   "zone": "Financial Services"
+  },
+  "TLX-DE": {
+   "cid": "INS08",
+   "zone": "Financial Services"
+  },
+  "ADM-GB": {
+   "cid": "INS09",
+   "zone": "Financial Services"
+  },
+  "LDA-ES": {
+   "cid": "INS09",
+   "zone": "Financial Services"
+  },
+  "NBG6-DE": {
+   "cid": "INS09",
+   "zone": "Financial Services"
+  },
+  "VAHN-CH": {
+   "cid": "INS09",
+   "zone": "Financial Services"
+  },
+  "WUW-DE": {
+   "cid": "INS09",
+   "zone": "Financial Services"
+  },
+  "COFA-FR": {
+   "cid": "INS10",
+   "zone": "Financial Services"
+  },
+  "GCO-ES": {
+   "cid": "INS10",
+   "zone": "Financial Services"
+  },
+  "MAP-ES": {
+   "cid": "INS10",
+   "zone": "Financial Services"
+  },
+  "BP-GB": {
+   "cid": "ENG01",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "ENI-IT": {
+   "cid": "ENG01",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "EQNR-NO": {
+   "cid": "ENG01",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "SHEL-GB": {
+   "cid": "ENG01",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "TTE-FR": {
+   "cid": "ENG01",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "AKRBP-NO": {
+   "cid": "ENG02",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "BNOR-NO": {
+   "cid": "ENG02",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "VAR-NO": {
+   "cid": "ENG02",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "HBR-GB": {
+   "cid": "ENG03",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "ITH-GB": {
+   "cid": "ENG03",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "DNO-NO": {
+   "cid": "ENG03",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "ENOG-GB": {
+   "cid": "ENG04",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "GALP-PT": {
+   "cid": "ENG04",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "MAU-FR": {
+   "cid": "ENG04",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "REP-ES": {
+   "cid": "ENG04",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "SEPL-GB": {
+   "cid": "ENG04",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "ELPE-GR": {
+   "cid": "ENG05",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "MOH-GR": {
+   "cid": "ENG05",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "MOL-HU": {
+   "cid": "ENG05",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "PKN-PL": {
+   "cid": "ENG05",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "ES-FR": {
+   "cid": "ENG06",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "ODET-FR": {
+   "cid": "ENG06",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "OMV-AT": {
+   "cid": "ENG06",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "RUI-FR": {
+   "cid": "ENG06",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "SUBC-NO": {
+   "cid": "ENG07",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "SPM-IT": {
+   "cid": "ENG07",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "AKSO-NO": {
+   "cid": "ENG07",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "YRM-IT": {
+   "cid": "ENG07",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "ODL-NO": {
+   "cid": "ENG07",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "SBMO-NL": {
+   "cid": "ENG08",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "TEN-IT": {
+   "cid": "ENG09",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "SBO-AT": {
+   "cid": "ENG09",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "HTG-GB": {
+   "cid": "ENG09",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "TGS-NO": {
+   "cid": "ENG10",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "ANE-ES": {
+   "cid": "ENG12",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "EDPR-PT": {
+   "cid": "ENG12",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "ORSTED-DK": {
+   "cid": "ENG12",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "ERG-IT": {
+   "cid": "ENG13",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "ARN-IT": {
+   "cid": "ENG13",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "SCATC-NO": {
+   "cid": "ENG13",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "DNR-IT": {
+   "cid": "ENG14",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "NCH2-DE": {
+   "cid": "ENG14",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "VH2-DE": {
+   "cid": "ENG14",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "NESTE-FI": {
+   "cid": "ENG15",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "ELI-BE": {
+   "cid": "ENG17",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "NG-GB": {
+   "cid": "ENG17",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "RED-ES": {
+   "cid": "ENG17",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "RENE-PT": {
+   "cid": "ENG17",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "TRN-IT": {
+   "cid": "ENG17",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "FLUX-BE": {
+   "cid": "ENG18",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "NTGY-ES": {
+   "cid": "ENG18",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "SRG-IT": {
+   "cid": "ENG18",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "IG-IT": {
+   "cid": "ENG18",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "ALFEN-NL": {
+   "cid": "ENG19",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "LAND-CH": {
+   "cid": "ENG19",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "CENER-GR": {
+   "cid": "ENG19",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "ART-ES": {
+   "cid": "ENG19",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "KEMPOWR-FI": {
+   "cid": "ENG20",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "FAST-NL": {
+   "cid": "ENG20",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "VWS-DK": {
+   "cid": "ENG21",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "IBE-ES": {
+   "cid": "ENG22",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "RWE-DE": {
+   "cid": "ENG22",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "EDP-PT": {
+   "cid": "ENG22",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "ENEL-IT": {
+   "cid": "ENG23",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "ENGI-FR": {
+   "cid": "ENG23",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "EOAN-DE": {
+   "cid": "ENG23",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "PNN-GB": {
+   "cid": "ENG24",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "SVT-GB": {
+   "cid": "ENG24",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "FORTUM-FI": {
+   "cid": "ENG25",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "VER-AT": {
+   "cid": "ENG25",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "SSE-GB": {
+   "cid": "ENG25",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "CNA-GB": {
+   "cid": "ENG26",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "UN0-DE": {
+   "cid": "ENG26",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "A2A-IT": {
+   "cid": "ENG27",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "ACE-IT": {
+   "cid": "ENG27",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "HER-IT": {
+   "cid": "ENG27",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "IRE-IT": {
+   "cid": "ENG27",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "EDNR-IT": {
+   "cid": "ENG28",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "ELE-ES": {
+   "cid": "ENG28",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "MNV6-DE": {
+   "cid": "ENG29",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "MVV1-DE": {
+   "cid": "ENG29",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "STW5-DE": {
+   "cid": "ENG29",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "WWG-DE": {
+   "cid": "ENG29",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "BKW-CH": {
+   "cid": "ENG30",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "NEAG-CH": {
+   "cid": "ENG30",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "REHN-CH": {
+   "cid": "ENG30",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "EBK-DE": {
+   "cid": "ENG31",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "ELEC-FR": {
+   "cid": "ENG32",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "LEC-DE": {
+   "cid": "ENG32",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "ENA-PL": {
+   "cid": "ENG33",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "ENG-PL": {
+   "cid": "ENG33",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "EVN-AT": {
+   "cid": "ENG33",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "PGE-PL": {
+   "cid": "ENG33",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "TPE-PL": {
+   "cid": "ENG33",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "DRX-GB": {
+   "cid": "ENG34",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "PEP-PL": {
+   "cid": "ENG34",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "SLR-ES": {
+   "cid": "ENG34",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "VLTSA-FR": {
+   "cid": "ENG34",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "PPC-GR": {
+   "cid": "ENG35",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "GEKTERNA-GR": {
+   "cid": "ENG35",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "VIE-FR": {
+   "cid": "ENG36",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "MTLN-GB": {
+   "cid": "ENG37",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "KRN-DE": {
+   "cid": "IND01",
+   "zone": "Industrials"
+  },
+  "G1A-DE": {
+   "cid": "IND01",
+   "zone": "Industrials"
+  },
+  "RAA-DE": {
+   "cid": "IND02",
+   "zone": "Industrials"
+  },
+  "VALMT-FI": {
+   "cid": "IND03",
+   "zone": "Industrials"
+  },
+  "DUE-DE": {
+   "cid": "IND03",
+   "zone": "Industrials"
+  },
+  "SRT3-DE": {
+   "cid": "IND04",
+   "zone": "Industrials"
+  },
+  "SUN-CH": {
+   "cid": "IND06",
+   "zone": "Industrials"
+  },
+  "IP-IT": {
+   "cid": "IND06",
+   "zone": "Industrials"
+  },
+  "SPX-GB": {
+   "cid": "IND06",
+   "zone": "Industrials"
+  },
+  "ALFA-SE": {
+   "cid": "IND06",
+   "zone": "Industrials"
+  },
+  "BCHN-CH": {
+   "cid": "IND07",
+   "zone": "Industrials"
+  },
+  "ATCO.A-SE": {
+   "cid": "IND07",
+   "zone": "Industrials"
+  },
+  "ROR-GB": {
+   "cid": "IND08",
+   "zone": "Industrials"
+  },
+  "IMI-GB": {
+   "cid": "IND08",
+   "zone": "Industrials"
+  },
+  "ARIS-IT": {
+   "cid": "IND09",
+   "zone": "Industrials"
+  },
+  "NIBE.B-SE": {
+   "cid": "IND09",
+   "zone": "Industrials"
+  },
+  "SYSR-SE": {
+   "cid": "IND10",
+   "zone": "Industrials"
+  },
+  "ZEHN-CH": {
+   "cid": "IND10",
+   "zone": "Industrials"
+  },
+  "BEAN-CH": {
+   "cid": "IND10",
+   "zone": "Industrials"
+  },
+  "CRL-IT": {
+   "cid": "IND10",
+   "zone": "Industrials"
+  },
+  "MTRS-SE": {
+   "cid": "IND11",
+   "zone": "Industrials"
+  },
+  "LUVE-IT": {
+   "cid": "IND11",
+   "zone": "Industrials"
+  },
+  "LR-FR": {
+   "cid": "IND12",
+   "zone": "Industrials"
+  },
+  "NXT-GB": {
+   "cid": "IND12",
+   "zone": "Industrials"
+  },
+  "PRY-IT": {
+   "cid": "CHM19",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "DSY-FR": {
+   "cid": "IND13",
+   "zone": "Industrials"
+  },
+  "ROVI-ES": {
+   "cid": "IND14",
+   "zone": "Industrials"
+  },
+  "GBF-DE": {
+   "cid": "IND18",
+   "zone": "Industrials"
+  },
+  "SPIE-FR": {
+   "cid": "IND18",
+   "zone": "Industrials"
+  },
+  "BOY-GB": {
+   "cid": "IND19",
+   "zone": "Industrials"
+  },
+  "HIAB-FI": {
+   "cid": "IND20",
+   "zone": "Industrials"
+  },
+  "JUN3-DE": {
+   "cid": "IND20",
+   "zone": "Industrials"
+  },
+  "KCR-FI": {
+   "cid": "IND20",
+   "zone": "Industrials"
+  },
+  "VOLV.B-SE": {
+   "cid": "IND21",
+   "zone": "Industrials"
+  },
+  "ENGCON.B-SE": {
+   "cid": "IND21",
+   "zone": "Industrials"
+  },
+  "WAC-DE": {
+   "cid": "IND21",
+   "zone": "Industrials"
+  },
+  "AIR-FR": {
+   "cid": "IND22",
+   "zone": "Industrials"
+  },
+  "GIVN-CH": {
+   "cid": "IND23",
+   "zone": "Industrials"
+  },
+  "DSFIR-NL": {
+   "cid": "IND23",
+   "zone": "Industrials"
+  },
+  "STERV-FI": {
+   "cid": "IND24",
+   "zone": "Industrials"
+  },
+  "SSAB.B-SE": {
+   "cid": "IND25",
+   "zone": "Industrials"
+  },
+  "EPI.A-SE": {
+   "cid": "IND28",
+   "zone": "Industrials"
+  },
+  "SAND-SE": {
+   "cid": "IND28",
+   "zone": "Industrials"
+  },
+  "BA-GB": {
+   "cid": "DEF01",
+   "zone": "Defence & Aerospace"
+  },
+  "HO-FR": {
+   "cid": "DEF01",
+   "zone": "Defence & Aerospace"
+  },
+  "LDO-IT": {
+   "cid": "DEF01",
+   "zone": "Defence & Aerospace"
+  },
+  "RHM-DE": {
+   "cid": "DEF01",
+   "zone": "Defence & Aerospace"
+  },
+  "SAAB.B-SE": {
+   "cid": "DEF01",
+   "zone": "Defence & Aerospace"
+  },
+  "AM-FR": {
+   "cid": "DEF03",
+   "zone": "Defence & Aerospace"
+  },
+  "RR-GB": {
+   "cid": "DEF03",
+   "zone": "Defence & Aerospace"
+  },
+  "MTX-DE": {
+   "cid": "DEF03",
+   "zone": "Defence & Aerospace"
+  },
+  "SAF-FR": {
+   "cid": "DEF03",
+   "zone": "Defence & Aerospace"
+  },
+  "AERO-CH": {
+   "cid": "DEF05",
+   "zone": "Defence & Aerospace"
+  },
+  "MRO-GB": {
+   "cid": "DEF05",
+   "zone": "Defence & Aerospace"
+  },
+  "SNR-GB": {
+   "cid": "DEF05",
+   "zone": "Defence & Aerospace"
+  },
+  "FII-FR": {
+   "cid": "DEF05",
+   "zone": "Defence & Aerospace"
+  },
+  "IPN-FR": {
+   "cid": "DEF05",
+   "zone": "Defence & Aerospace"
+  },
+  "CHG-GB": {
+   "cid": "DEF06",
+   "zone": "Defence & Aerospace"
+  },
+  "MLHK-FR": {
+   "cid": "DEF06",
+   "zone": "Defence & Aerospace"
+  },
+  "OHB-DE": {
+   "cid": "DEF07",
+   "zone": "Defence & Aerospace"
+  },
+  "AVIO-IT": {
+   "cid": "DEF07",
+   "zone": "Defence & Aerospace"
+  },
+  "RACE-IT": {
+   "cid": "AUT01",
+   "zone": "Automotive"
+  },
+  "BMW-DE": {
+   "cid": "AUT02",
+   "zone": "Automotive"
+  },
+  "MBG-DE": {
+   "cid": "AUT02",
+   "zone": "Automotive"
+  },
+  "P911-DE": {
+   "cid": "AUT03",
+   "zone": "Automotive"
+  },
+  "VOLCAR.B-SE": {
+   "cid": "AUT03",
+   "zone": "Automotive"
+  },
+  "VOW3-DE": {
+   "cid": "AUT04",
+   "zone": "Automotive"
+  },
+  "STLAM-IT": {
+   "cid": "AUT04",
+   "zone": "Automotive"
+  },
+  "RNO-FR": {
+   "cid": "AUT04",
+   "zone": "Automotive"
+  },
+  "8TRA-DE": {
+   "cid": "AUT05",
+   "zone": "Automotive"
+  },
+  "DTG-DE": {
+   "cid": "AUT05",
+   "zone": "Automotive"
+  },
+  "IVG-IT": {
+   "cid": "AUT05",
+   "zone": "Automotive"
+  },
+  "ALIV-SE": {
+   "cid": "AUT08",
+   "zone": "Automotive"
+  },
+  "GEST-ES": {
+   "cid": "AUT09",
+   "zone": "Automotive"
+  },
+  "AUTN-CH": {
+   "cid": "AUT09",
+   "zone": "Automotive"
+  },
+  "OPM-FR": {
+   "cid": "AUT09",
+   "zone": "Automotive"
+  },
+  "CIE-ES": {
+   "cid": "AUT09",
+   "zone": "Automotive"
+  },
+  "FR-FR": {
+   "cid": "AUT10",
+   "zone": "Automotive"
+  },
+  "FRVIA-FR": {
+   "cid": "AUT10",
+   "zone": "Automotive"
+  },
+  "AMV0-DE": {
+   "cid": "AUT10",
+   "zone": "Automotive"
+  },
+  "CON-DE": {
+   "cid": "AUT11",
+   "zone": "Automotive"
+  },
+  "ML-FR": {
+   "cid": "AUT11",
+   "zone": "Automotive"
+  },
+  "PIRC-IT": {
+   "cid": "AUT11",
+   "zone": "Automotive"
+  },
+  "TYRES-FI": {
+   "cid": "AUT11",
+   "zone": "Automotive"
+  },
+  "SGO-FR": {
+   "cid": "AUT12",
+   "zone": "Automotive"
+  },
+  "SKF.B-SE": {
+   "cid": "AUT13",
+   "zone": "Automotive"
+  },
+  "SHA0-DE": {
+   "cid": "AUT13",
+   "zone": "Automotive"
+  },
+  "AG1-DE": {
+   "cid": "AUT14",
+   "zone": "Automotive"
+  },
+  "BILI.A-SE": {
+   "cid": "AUT14",
+   "zone": "Automotive"
+  },
+  "INCH-GB": {
+   "cid": "AUT14",
+   "zone": "Automotive"
+  },
+  "ZIG-GB": {
+   "cid": "AUT14",
+   "zone": "Automotive"
+  },
+  "SIX2-DE": {
+   "cid": "AUT15",
+   "zone": "Automotive"
+  },
+  "ADP-FR": {
+   "cid": "TRN01",
+   "zone": "Transport & Logistics"
+  },
+  "AENA-ES": {
+   "cid": "TRN01",
+   "zone": "Transport & Logistics"
+  },
+  "FHZN-CH": {
+   "cid": "TRN01",
+   "zone": "Transport & Logistics"
+  },
+  "FRA-DE": {
+   "cid": "TRN01",
+   "zone": "Transport & Logistics"
+  },
+  "AIA-GR": {
+   "cid": "TRN02",
+   "zone": "Transport & Logistics"
+  },
+  "ENAV-IT": {
+   "cid": "TRN02",
+   "zone": "Transport & Logistics"
+  },
+  "FLU-AT": {
+   "cid": "TRN02",
+   "zone": "Transport & Logistics"
+  },
+  "KBHL-DK": {
+   "cid": "TRN02",
+   "zone": "Transport & Logistics"
+  },
+  "AF-FR": {
+   "cid": "TRN03",
+   "zone": "Transport & Logistics"
+  },
+  "IAG-GB": {
+   "cid": "TRN03",
+   "zone": "Transport & Logistics"
+  },
+  "LHA-DE": {
+   "cid": "TRN03",
+   "zone": "Transport & Logistics"
+  },
+  "EZJ-GB": {
+   "cid": "TRN04",
+   "zone": "Transport & Logistics"
+  },
+  "NAS-NO": {
+   "cid": "TRN04",
+   "zone": "Transport & Logistics"
+  },
+  "RYA-IE": {
+   "cid": "TRN04",
+   "zone": "Transport & Logistics"
+  },
+  "WIZZ-GB": {
+   "cid": "TRN04",
+   "zone": "Transport & Logistics"
+  },
+  "AEGN-GR": {
+   "cid": "TRN05",
+   "zone": "Transport & Logistics"
+  },
+  "JET2-GB": {
+   "cid": "TRN05",
+   "zone": "Transport & Logistics"
+  },
+  "TUI1-DE": {
+   "cid": "TRN05",
+   "zone": "Transport & Logistics"
+  },
+  "FGP-GB": {
+   "cid": "TRN06",
+   "zone": "Transport & Logistics"
+  },
+  "GET-FR": {
+   "cid": "TRN06",
+   "zone": "Transport & Logistics"
+  },
+  "JFN-CH": {
+   "cid": "TRN06",
+   "zone": "Transport & Logistics"
+  },
+  "DHL-DE": {
+   "cid": "TRN07",
+   "zone": "Transport & Logistics"
+  },
+  "DSV-DK": {
+   "cid": "TRN07",
+   "zone": "Transport & Logistics"
+  },
+  "KNIN-CH": {
+   "cid": "TRN07",
+   "zone": "Transport & Logistics"
+  },
+  "CTT-PT": {
+   "cid": "TRN08",
+   "zone": "Transport & Logistics"
+  },
+  "POST-AT": {
+   "cid": "TRN08",
+   "zone": "Transport & Logistics"
+  },
+  "POSTI-FI": {
+   "cid": "TRN08",
+   "zone": "Transport & Logistics"
+  },
+  "INPST-NL": {
+   "cid": "TRN09",
+   "zone": "Transport & Logistics"
+  },
+  "IDL-FR": {
+   "cid": "TRN10",
+   "zone": "Transport & Logistics"
+  },
+  "LOG-ES": {
+   "cid": "TRN10",
+   "zone": "Transport & Logistics"
+  },
+  "STF-FR": {
+   "cid": "TRN10",
+   "zone": "Transport & Logistics"
+  },
+  "EUK3-DE": {
+   "cid": "TRN11",
+   "zone": "Transport & Logistics"
+  },
+  "HHFA-DE": {
+   "cid": "TRN11",
+   "zone": "Transport & Logistics"
+  },
+  "PPA-GR": {
+   "cid": "TRN11",
+   "zone": "Transport & Logistics"
+  },
+  "VPK-NL": {
+   "cid": "TRN12",
+   "zone": "Transport & Logistics"
+  },
+  "HAUTO-NO": {
+   "cid": "TRN13",
+   "zone": "Transport & Logistics"
+  },
+  "IR5B-IE": {
+   "cid": "TRN13",
+   "zone": "Transport & Logistics"
+  },
+  "WAWI-NO": {
+   "cid": "TRN13",
+   "zone": "Transport & Logistics"
+  },
+  "WWI-NO": {
+   "cid": "TRN13",
+   "zone": "Transport & Logistics"
+  },
+  "CMBT-BE": {
+   "cid": "TRN14",
+   "zone": "Transport & Logistics"
+  },
+  "DNORD-DK": {
+   "cid": "TRN14",
+   "zone": "Transport & Logistics"
+  },
+  "HAFNI-NO": {
+   "cid": "TRN14",
+   "zone": "Transport & Logistics"
+  },
+  "BWLPG-NO": {
+   "cid": "TRN14",
+   "zone": "Transport & Logistics"
+  },
+  "HLAG-DE": {
+   "cid": "TRN15",
+   "zone": "Transport & Logistics"
+  },
+  "MAERSK.B-DK": {
+   "cid": "TRN15",
+   "zone": "Transport & Logistics"
+  },
+  "DOFG-NO": {
+   "cid": "TRN16",
+   "zone": "Transport & Logistics"
+  },
+  "CKN-GB": {
+   "cid": "TRN17",
+   "zone": "Transport & Logistics"
+  },
+  "DG-FR": {
+   "cid": "CON01",
+   "zone": "Construction & Materials"
+  },
+  "FGR-FR": {
+   "cid": "CON01",
+   "zone": "Construction & Materials"
+  },
+  "ACS-ES": {
+   "cid": "CON01",
+   "zone": "Construction & Materials"
+  },
+  "FER-ES": {
+   "cid": "CON01",
+   "zone": "Construction & Materials"
+  },
+  "EN-FR": {
+   "cid": "CON02",
+   "zone": "Construction & Materials"
+  },
+  "SCYR-ES": {
+   "cid": "CON02",
+   "zone": "Construction & Materials"
+  },
+  "WBD-IT": {
+   "cid": "CON02",
+   "zone": "Construction & Materials"
+  },
+  "AFG-NO": {
+   "cid": "CON03",
+   "zone": "Construction & Materials"
+  },
+  "VEI-NO": {
+   "cid": "CON03",
+   "zone": "Construction & Materials"
+  },
+  "NCC.B-SE": {
+   "cid": "CON03",
+   "zone": "Construction & Materials"
+  },
+  "PEAB.B-SE": {
+   "cid": "CON04",
+   "zone": "Construction & Materials"
+  },
+  "SKA.B-SE": {
+   "cid": "CON04",
+   "zone": "Construction & Materials"
+  },
+  "STR-AT": {
+   "cid": "CON05",
+   "zone": "Construction & Materials"
+  },
+  "POS-AT": {
+   "cid": "CON05",
+   "zone": "Construction & Materials"
+  },
+  "IMPN-CH": {
+   "cid": "CON05",
+   "zone": "Construction & Materials"
+  },
+  "BDX-PL": {
+   "cid": "CON05",
+   "zone": "Construction & Materials"
+  },
+  "BAMNB-NL": {
+   "cid": "CON05",
+   "zone": "Construction & Materials"
+  },
+  "HEIJM-NL": {
+   "cid": "CON05",
+   "zone": "Construction & Materials"
+  },
+  "HOT-DE": {
+   "cid": "CON06",
+   "zone": "Construction & Materials"
+  },
+  "BBY-GB": {
+   "cid": "CON07",
+   "zone": "Construction & Materials"
+  },
+  "KIE-GB": {
+   "cid": "CON07",
+   "zone": "Construction & Materials"
+  },
+  "MGNS-GB": {
+   "cid": "CON07",
+   "zone": "Construction & Materials"
+  },
+  "RNWH-GB": {
+   "cid": "CON07",
+   "zone": "Construction & Materials"
+  },
+  "DEME-BE": {
+   "cid": "CON08",
+   "zone": "Construction & Materials"
+  },
+  "PAAL.B-DK": {
+   "cid": "CON08",
+   "zone": "Construction & Materials"
+  },
+  "TE-FR": {
+   "cid": "CON09",
+   "zone": "Construction & Materials"
+  },
+  "MAIRE-IT": {
+   "cid": "CON09",
+   "zone": "Construction & Materials"
+  },
+  "TRE-ES": {
+   "cid": "CON09",
+   "zone": "Construction & Materials"
+  },
+  "ENO-ES": {
+   "cid": "CON09",
+   "zone": "Construction & Materials"
+  },
+  "ARCAD-NL": {
+   "cid": "CON09",
+   "zone": "Construction & Materials"
+  },
+  "ANA-ES": {
+   "cid": "CON10",
+   "zone": "Construction & Materials"
+  },
+  "EGL-PT": {
+   "cid": "CON10",
+   "zone": "Construction & Materials"
+  },
+  "AKTR-GR": {
+   "cid": "CON12",
+   "zone": "Construction & Materials"
+  },
+  "HOLN-CH": {
+   "cid": "CON13",
+   "zone": "Construction & Materials"
+  },
+  "HEI-DE": {
+   "cid": "CON13",
+   "zone": "Construction & Materials"
+  },
+  "BZU-IT": {
+   "cid": "CON14",
+   "zone": "Construction & Materials"
+  },
+  "VCT-FR": {
+   "cid": "CON14",
+   "zone": "Construction & Materials"
+  },
+  "CEM-IT": {
+   "cid": "CON14",
+   "zone": "Construction & Materials"
+  },
+  "CMO-ES": {
+   "cid": "CON14",
+   "zone": "Construction & Materials"
+  },
+  "TITC-BE": {
+   "cid": "CON14",
+   "zone": "Construction & Materials"
+  },
+  "BREE-GB": {
+   "cid": "CON15",
+   "zone": "Construction & Materials"
+  },
+  "SIKA-CH": {
+   "cid": "CON16",
+   "zone": "Construction & Materials"
+  },
+  "WIE-AT": {
+   "cid": "CON16",
+   "zone": "Construction & Materials"
+  },
+  "FORN-CH": {
+   "cid": "CON16",
+   "zone": "Construction & Materials"
+  },
+  "MT-NL": {
+   "cid": "CON17",
+   "zone": "Construction & Materials"
+  },
+  "SZG-DE": {
+   "cid": "CON17",
+   "zone": "Construction & Materials"
+  },
+  "VOE-AT": {
+   "cid": "CON17",
+   "zone": "Construction & Materials"
+  },
+  "ACX-ES": {
+   "cid": "CON17B",
+   "zone": "Construction & Materials"
+  },
+  "OUT1V-FI": {
+   "cid": "CON17B",
+   "zone": "Construction & Materials"
+  },
+  "NHY-NO": {
+   "cid": "CON18",
+   "zone": "Construction & Materials"
+  },
+  "GRNG-SE": {
+   "cid": "CON18",
+   "zone": "Construction & Materials"
+  },
+  "KTY-PL": {
+   "cid": "CON18",
+   "zone": "Construction & Materials"
+  },
+  "ELHA-GR": {
+   "cid": "CON18",
+   "zone": "Construction & Materials"
+  },
+  "KGH-PL": {
+   "cid": "CON19",
+   "zone": "Construction & Materials"
+  },
+  "VIO-BE": {
+   "cid": "CON19",
+   "zone": "Construction & Materials"
+  },
+  "FRES-GB": {
+   "cid": "CON20",
+   "zone": "Construction & Materials"
+  },
+  "HOC-GB": {
+   "cid": "CON20",
+   "zone": "Construction & Materials"
+  },
+  "PAF-GB": {
+   "cid": "CON20",
+   "zone": "Construction & Materials"
+  },
+  "GGP-GB": {
+   "cid": "CON20",
+   "zone": "Construction & Materials"
+  },
+  "YCA-GB": {
+   "cid": "CON20",
+   "zone": "Construction & Materials"
+  },
+  "DBG-FR": {
+   "cid": "CON21",
+   "zone": "Construction & Materials"
+  },
+  "NDA-DE": {
+   "cid": "CON21",
+   "zone": "Construction & Materials"
+  },
+  "RHIM-GB": {
+   "cid": "CON22",
+   "zone": "Construction & Materials"
+  },
+  "VSVS-GB": {
+   "cid": "CON22",
+   "zone": "Construction & Materials"
+  },
+  "NK-FR": {
+   "cid": "CON22",
+   "zone": "Construction & Materials"
+  },
+  "GDWN-GB": {
+   "cid": "CON22",
+   "zone": "Construction & Materials"
+  },
+  "AMG-NL": {
+   "cid": "CON23",
+   "zone": "Construction & Materials"
+  },
+  "UMI-BE": {
+   "cid": "CON23",
+   "zone": "Construction & Materials"
+  },
+  "AAL-GB": {
+   "cid": "CON24",
+   "zone": "Construction & Materials"
+  },
+  "BOL-SE": {
+   "cid": "CON24",
+   "zone": "Construction & Materials"
+  },
+  "RIO-GB": {
+   "cid": "CON24",
+   "zone": "Construction & Materials"
+  },
+  "ERA-FR": {
+   "cid": "CON24",
+   "zone": "Construction & Materials"
+  },
+  "GLEN-GB": {
+   "cid": "CON24",
+   "zone": "Construction & Materials"
+  },
+  "ALLEI-SE": {
+   "cid": "CON25",
+   "zone": "Construction & Materials"
+  },
+  "APAM-NL": {
+   "cid": "CON25",
+   "zone": "Construction & Materials"
+  },
+  "VK-FR": {
+   "cid": "CON25",
+   "zone": "Construction & Materials"
+  },
+  "ANTO-GB": {
+   "cid": "CON26",
+   "zone": "Construction & Materials"
+  },
+  "ATYM-GB": {
+   "cid": "CON26",
+   "zone": "Construction & Materials"
+  },
+  "LUMI-SE": {
+   "cid": "CON26",
+   "zone": "Construction & Materials"
+  },
+  "AAK-SE": {
+   "cid": "CHM01",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "CRBN-NL": {
+   "cid": "CHM01",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "TATE-GB": {
+   "cid": "CHM01",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "CRDA-GB": {
+   "cid": "CHM02",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "ICOS-IT": {
+   "cid": "CHM02",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "NSIS.B-DK": {
+   "cid": "CHM03",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "SY1-DE": {
+   "cid": "CHM04",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "RBT-FR": {
+   "cid": "CHM04",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "KRZ-IE": {
+   "cid": "CHM05",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "ITP-FR": {
+   "cid": "CHM05",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "1COV-DE": {
+   "cid": "CHM06",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "AKE-FR": {
+   "cid": "CHM06",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "EMSN-CH": {
+   "cid": "CHM06",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "HPOL.B-SE": {
+   "cid": "CHM06",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "TREL.B-SE": {
+   "cid": "CHM06",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "FPE3-DE": {
+   "cid": "CHM07",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "JMAT-GB": {
+   "cid": "CHM07",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "EVK-DE": {
+   "cid": "CHM07",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "ELM-GB": {
+   "cid": "CHM07",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "AI-FR": {
+   "cid": "CHM08",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "SOL-IT": {
+   "cid": "CHM08",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "BRG-NO": {
+   "cid": "CHM09",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "CLN-CH": {
+   "cid": "CHM09",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "KEMIRA-FI": {
+   "cid": "CHM09",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "BAS-DE": {
+   "cid": "CHM10",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "LXS-DE": {
+   "cid": "CHM10",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "SDF-DE": {
+   "cid": "CHM10",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "YAR-NO": {
+   "cid": "CHM10",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "AKZA-NL": {
+   "cid": "CHM11",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "AZE-BE": {
+   "cid": "SCD01",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "IMCD-NL": {
+   "cid": "SCD01",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "DKSH-CH": {
+   "cid": "SCD01",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "BNR-DE": {
+   "cid": "SCD01",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "WCH-DE": {
+   "cid": "CHM12",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "ELK-NO": {
+   "cid": "CHM12",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "SOLV-BE": {
+   "cid": "CHM12",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "SOLB-BE": {
+   "cid": "CHM13",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "SYENS-BE": {
+   "cid": "CHM13",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "DAE-CH": {
+   "cid": "CHM14",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "TESB-BE": {
+   "cid": "CHM15",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "VBK-DE": {
+   "cid": "CHM16",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "ACT-DE": {
+   "cid": "CHM17",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "NOLA.B-SE": {
+   "cid": "CHM18",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "NEX-FR": {
+   "cid": "CHM19",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "NKT-DK": {
+   "cid": "CHM19",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "INWI-SE": {
+   "cid": "CHM20",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "LIAB-SE": {
+   "cid": "CHM20",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "FAN-GB": {
+   "cid": "CHM20",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "BILL-SE": {
+   "cid": "CHM21",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "ELO-NO": {
+   "cid": "CHM21",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "HUH1V-FI": {
+   "cid": "CHM21",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "METSB-FI": {
+   "cid": "CHM21",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "MMK-AT": {
+   "cid": "CHM21",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "MNDI-GB": {
+   "cid": "CHM22",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "UPM-FI": {
+   "cid": "CHM22",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "SCA.B-SE": {
+   "cid": "CHM22",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "NVG-PT": {
+   "cid": "CHM23",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "HOLM.B-SE": {
+   "cid": "CHM23",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "ALTR-PT": {
+   "cid": "CHM23",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "COR-PT": {
+   "cid": "CHM24",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "LNZ-AT": {
+   "cid": "CHM24",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "GF-CH": {
+   "cid": "CHM25",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "HILS-GB": {
+   "cid": "CHM25",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "SFSN-CH": {
+   "cid": "CHM25",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "TPK-GB": {
+   "cid": "CHM26",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "MOWI-NO": {
+   "cid": "CHM27",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "SALM-NO": {
+   "cid": "CHM27",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "BAKKA-NO": {
+   "cid": "CHM27",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "LSG-NO": {
+   "cid": "CHM27",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "AUSS-NO": {
+   "cid": "CHM27",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "GNS-GB": {
+   "cid": "CHM28",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "KWS-DE": {
+   "cid": "CHM28",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "BYW6-DE": {
+   "cid": "CHM28",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "SCHO-DK": {
+   "cid": "CHM28",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "UIE-DK": {
+   "cid": "CHM28",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "LOUP-FR": {
+   "cid": "CHM29",
+   "zone": "Chemicals & Specialty Materials"
+  },
+  "BN-FR": {
+   "cid": "CSM01",
+   "zone": "Consumer"
+  },
+  "NESN-CH": {
+   "cid": "CSM01",
+   "zone": "Consumer"
+  },
+  "CPR-IT": {
+   "cid": "CSM02",
+   "zone": "Consumer"
+  },
+  "DGE-GB": {
+   "cid": "CSM02",
+   "zone": "Consumer"
+  },
+  "RCO-FR": {
+   "cid": "CSM02",
+   "zone": "Consumer"
+  },
+  "RI-FR": {
+   "cid": "CSM02",
+   "zone": "Consumer"
+  },
+  "ABI-BE": {
+   "cid": "CSM03",
+   "zone": "Consumer"
+  },
+  "CARL.B-DK": {
+   "cid": "CSM03",
+   "zone": "Consumer"
+  },
+  "HEIA-NL": {
+   "cid": "CSM03",
+   "zone": "Consumer"
+  },
+  "RBREW-DK": {
+   "cid": "CSM03",
+   "zone": "Consumer"
+  },
+  "BAG-GB": {
+   "cid": "CSM04",
+   "zone": "Consumer"
+  },
+  "FEVR-GB": {
+   "cid": "CSM04",
+   "zone": "Consumer"
+  },
+  "CCH-GB": {
+   "cid": "CSM04",
+   "zone": "Consumer"
+  },
+  "CLA.B-SE": {
+   "cid": "CSM05",
+   "zone": "Consumer"
+  },
+  "CWK-GB": {
+   "cid": "CSM05",
+   "zone": "Consumer"
+  },
+  "GNC-GB": {
+   "cid": "CSM05",
+   "zone": "Consumer"
+  },
+  "HFG-GB": {
+   "cid": "CSM05",
+   "zone": "Consumer"
+  },
+  "BEI-DE": {
+   "cid": "CSM06",
+   "zone": "Consumer"
+  },
+  "HEN3-DE": {
+   "cid": "CSM06",
+   "zone": "Consumer"
+  },
+  "OR-FR": {
+   "cid": "CSM06",
+   "zone": "Consumer"
+  },
+  "RKT-GB": {
+   "cid": "CSM06",
+   "zone": "Consumer"
+  },
+  "ULVR-GB": {
+   "cid": "CSM06",
+   "zone": "Consumer"
+  },
+  "ORK-NO": {
+   "cid": "CSM07",
+   "zone": "Consumer"
+  },
+  "BATS-GB": {
+   "cid": "CSM08",
+   "zone": "Consumer"
+  },
+  "HAYPP-SE": {
+   "cid": "CSM08",
+   "zone": "Consumer"
+  },
+  "IMB-GB": {
+   "cid": "CSM08",
+   "zone": "Consumer"
+  },
+  "KARE-GR": {
+   "cid": "CSM08",
+   "zone": "Consumer"
+  },
+  "MC-FR": {
+   "cid": "CSM09",
+   "zone": "Consumer"
+  },
+  "KER-FR": {
+   "cid": "CSM09",
+   "zone": "Consumer"
+  },
+  "PUIG-ES": {
+   "cid": "CSM09",
+   "zone": "Consumer"
+  },
+  "BC-IT": {
+   "cid": "CSM10",
+   "zone": "Consumer"
+  },
+  "BRBY-GB": {
+   "cid": "CSM10",
+   "zone": "Consumer"
+  },
+  "MONC-IT": {
+   "cid": "CSM10",
+   "zone": "Consumer"
+  },
+  "SFER-IT": {
+   "cid": "CSM10",
+   "zone": "Consumer"
+  },
+  "SMCP-FR": {
+   "cid": "CSM10",
+   "zone": "Consumer"
+  },
+  "WOSG-GB": {
+   "cid": "CSM11",
+   "zone": "Consumer"
+  },
+  "ADS-DE": {
+   "cid": "CSM12",
+   "zone": "Consumer"
+  },
+  "JD-GB": {
+   "cid": "CSM12",
+   "zone": "Consumer"
+  },
+  "FRAS-GB": {
+   "cid": "CSM12",
+   "zone": "Consumer"
+  },
+  "OVS-IT": {
+   "cid": "CSM13",
+   "zone": "Consumer"
+  },
+  "KGF-GB": {
+   "cid": "CSM14",
+   "zone": "Consumer"
+  },
+  "CLAS.B-SE": {
+   "cid": "CSM14",
+   "zone": "Consumer"
+  },
+  "PUUILO-FI": {
+   "cid": "CSM14",
+   "zone": "Consumer"
+  },
+  "EIN-DE": {
+   "cid": "CSM14",
+   "zone": "Consumer"
+  },
+  "CEC-DE": {
+   "cid": "CSM15",
+   "zone": "Consumer"
+  },
+  "PETS-GB": {
+   "cid": "CSM15",
+   "zone": "Consumer"
+  },
+  "SMWH-GB": {
+   "cid": "CSM16",
+   "zone": "Consumer"
+  },
+  "MMB-FR": {
+   "cid": "CSM16",
+   "zone": "Consumer"
+  },
+  "ASC-GB": {
+   "cid": "CSM17",
+   "zone": "Consumer"
+  },
+  "ZAL-DE": {
+   "cid": "CSM17",
+   "zone": "Consumer"
+  },
+  "THG-GB": {
+   "cid": "CSM17",
+   "zone": "Consumer"
+  },
+  "ZO1-DE": {
+   "cid": "CSM18",
+   "zone": "Consumer"
+  },
+  "GAW-GB": {
+   "cid": "CSM19",
+   "zone": "Consumer"
+  },
+  "ASMDEE.B-SE": {
+   "cid": "CSM19",
+   "zone": "Consumer"
+  },
+  "THULE-SE": {
+   "cid": "CSM20",
+   "zone": "Consumer"
+  },
+  "MIPS-SE": {
+   "cid": "CSM20",
+   "zone": "Consumer"
+  },
+  "HWDN-GB": {
+   "cid": "CSM21",
+   "zone": "Consumer"
+  },
+  "TBTG-GB": {
+   "cid": "CSM22",
+   "zone": "Consumer"
+  },
+  "DHER-DE": {
+   "cid": "CSM23",
+   "zone": "Consumer"
+  },
+  "HFG-DE": {
+   "cid": "CSM23",
+   "zone": "Consumer"
+  },
+  "CHEF-SE": {
+   "cid": "CSM23",
+   "zone": "Consumer"
+  },
+  "AXFO-SE": {
+   "cid": "CSM24",
+   "zone": "Consumer"
+  },
+  "COLR-BE": {
+   "cid": "CSM24",
+   "zone": "Consumer"
+  },
+  "SBRY-GB": {
+   "cid": "CSM24",
+   "zone": "Consumer"
+  },
+  "TSCO-GB": {
+   "cid": "CSM24",
+   "zone": "Consumer"
+  },
+  "GRG-GB": {
+   "cid": "CSM25",
+   "zone": "Consumer"
+  },
+  "MAB-GB": {
+   "cid": "CSM25",
+   "zone": "Consumer"
+  },
+  "JDW-GB": {
+   "cid": "CSM26",
+   "zone": "Consumer"
+  },
+  "TNIE-DE": {
+   "cid": "CSM27",
+   "zone": "Consumer"
+  },
+  "BB-FR": {
+   "cid": "CSM28",
+   "zone": "Consumer"
+  },
+  "ELUX.B-SE": {
+   "cid": "CSM29",
+   "zone": "Consumer"
+  },
+  "DLG-IT": {
+   "cid": "CSM29",
+   "zone": "Consumer"
+  },
+  "TGYM-IT": {
+   "cid": "CSM30",
+   "zone": "Consumer"
+  },
+  "SL-IT": {
+   "cid": "CSM31",
+   "zone": "Consumer"
+  },
+  "YACHT-IT": {
+   "cid": "CSM31",
+   "zone": "Consumer"
+  },
+  "FDR-ES": {
+   "cid": "CSM32",
+   "zone": "Consumer"
+  },
+  "CDA-FR": {
+   "cid": "CSM33",
+   "zone": "Consumer"
+  },
+  "SKIS.B-SE": {
+   "cid": "CSM33",
+   "zone": "Consumer"
+  },
+  "EVD-DE": {
+   "cid": "CSM34",
+   "zone": "Consumer"
+  },
+  "BFIT-NL": {
+   "cid": "CSM35",
+   "zone": "Consumer"
+  },
+  "GYM-GB": {
+   "cid": "CSM35",
+   "zone": "Consumer"
+  },
+  "SATS-NO": {
+   "cid": "CSM35",
+   "zone": "Consumer"
+  },
+  "CCL-GB": {
+   "cid": "CSM36",
+   "zone": "Consumer"
+  },
+  "DTE-DE": {
+   "cid": "TCM01",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "ORA-FR": {
+   "cid": "TCM01",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "TEF-ES": {
+   "cid": "TCM01",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "TIT-IT": {
+   "cid": "TCM01",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "VOD-GB": {
+   "cid": "TCM01",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "BT.A-GB": {
+   "cid": "TCM02",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "GAMA-GB": {
+   "cid": "TCM02",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "TEP-GB": {
+   "cid": "TCM02",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "ZEG-GB": {
+   "cid": "TCM02",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "ELISA-FI": {
+   "cid": "TCM03",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "TEL2.B-SE": {
+   "cid": "TCM03",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "TELIA-SE": {
+   "cid": "TCM03",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "KPN-NL": {
+   "cid": "TCM04",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "OBEL-BE": {
+   "cid": "TCM04",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "PROX-BE": {
+   "cid": "TCM04",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "SCMN-CH": {
+   "cid": "TCM04",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "SUNN-CH": {
+   "cid": "TCM04",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "HTO-GR": {
+   "cid": "TCM05",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "NOS-PT": {
+   "cid": "TCM05",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "TKA-AT": {
+   "cid": "TCM05",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "1U1-DE": {
+   "cid": "TCM06",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "FNTN-DE": {
+   "cid": "TCM06",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "O2D-DE": {
+   "cid": "TCM06",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "UTDI-DE": {
+   "cid": "TCM06",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "ETL-FR": {
+   "cid": "TCM07",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "SESG-FR": {
+   "cid": "TCM07",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "4IG-HU": {
+   "cid": "TCM08",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "AAF-GB": {
+   "cid": "TCM08",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "CPS-PL": {
+   "cid": "TCM08",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "OPL-PL": {
+   "cid": "TCM08",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "CLNX-ES": {
+   "cid": "TCM10",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "HTWS-GB": {
+   "cid": "TCM10",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "INW-IT": {
+   "cid": "TCM10",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "RWAY-IT": {
+   "cid": "TCM10",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "VTWR-DE": {
+   "cid": "TCM10",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "ITV-GB": {
+   "cid": "TCM11",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "MFEB-IT": {
+   "cid": "TCM11",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "PSM-DE": {
+   "cid": "TCM11",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "RRTL-DE": {
+   "cid": "TCM11",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "TFI-FR": {
+   "cid": "TCM11",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "UMG-NL": {
+   "cid": "TCM12",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "VIV-FR": {
+   "cid": "TCM12",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "DEC-FR": {
+   "cid": "TCM13",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "IPS-FR": {
+   "cid": "TCM14",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "PUB-FR": {
+   "cid": "TCM14",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "WPP-GB": {
+   "cid": "TCM14",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "ALMA-FI": {
+   "cid": "TCM15",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "FUTR-GB": {
+   "cid": "TCM15",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "SANOMA-FI": {
+   "cid": "TCM15",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "SNC-PT": {
+   "cid": "TCM15",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "AT1-DE": {
+   "cid": "REA01",
+   "zone": "Real Estate & Hospitality"
+  },
+  "DWNI-DE": {
+   "cid": "REA01",
+   "zone": "Real Estate & Hospitality"
+  },
+  "LEG-DE": {
+   "cid": "REA01",
+   "zone": "Real Estate & Hospitality"
+  },
+  "VNA-DE": {
+   "cid": "REA01",
+   "zone": "Real Estate & Hospitality"
+  },
+  "ATRLJ.B-SE": {
+   "cid": "REA02",
+   "zone": "Real Estate & Hospitality"
+  },
+  "CAST-SE": {
+   "cid": "REA02",
+   "zone": "Real Estate & Hospitality"
+  },
+  "DIOS-SE": {
+   "cid": "REA02",
+   "zone": "Real Estate & Hospitality"
+  },
+  "CATE-SE": {
+   "cid": "REA03",
+   "zone": "Real Estate & Hospitality"
+  },
+  "SAGA.B-SE": {
+   "cid": "REA03",
+   "zone": "Real Estate & Hospitality"
+  },
+  "SGRO-GB": {
+   "cid": "REA04",
+   "zone": "Real Estate & Hospitality"
+  },
+  "ARG-FR": {
+   "cid": "REA04",
+   "zone": "Real Estate & Hospitality"
+  },
+  "BLND-GB": {
+   "cid": "REA06",
+   "zone": "Real Estate & Hospitality"
+  },
+  "LAND-GB": {
+   "cid": "REA06",
+   "zone": "Real Estate & Hospitality"
+  },
+  "URW-FR": {
+   "cid": "REA07",
+   "zone": "Real Estate & Hospitality"
+  },
+  "HMSO-GB": {
+   "cid": "REA07",
+   "zone": "Real Estate & Hospitality"
+  },
+  "CARM-FR": {
+   "cid": "REA08",
+   "zone": "Real Estate & Hospitality"
+  },
+  "MERY-FR": {
+   "cid": "REA08",
+   "zone": "Real Estate & Hospitality"
+  },
+  "LI-FR": {
+   "cid": "REA08",
+   "zone": "Real Estate & Hospitality"
+  },
+  "BYG-GB": {
+   "cid": "REA09",
+   "zone": "Real Estate & Hospitality"
+  },
+  "ALTA-FR": {
+   "cid": "REA10",
+   "zone": "Real Estate & Hospitality"
+  },
+  "AREIT-FR": {
+   "cid": "REA10",
+   "zone": "Real Estate & Hospitality"
+  },
+  "AEDAS-ES": {
+   "cid": "REA11",
+   "zone": "Real Estate & Hospitality"
+  },
+  "MVC-ES": {
+   "cid": "REA11",
+   "zone": "Real Estate & Hospitality"
+  },
+  "MRL-ES": {
+   "cid": "REA12",
+   "zone": "Real Estate & Hospitality"
+  },
+  "YCPS-ES": {
+   "cid": "REA12",
+   "zone": "Real Estate & Hospitality"
+  },
+  "CAI-AT": {
+   "cid": "REA13",
+   "zone": "Real Estate & Hospitality"
+  },
+  "ENTRA-NO": {
+   "cid": "REA13",
+   "zone": "Real Estate & Hospitality"
+  },
+  "ALLN-CH": {
+   "cid": "REA14",
+   "zone": "Real Estate & Hospitality"
+  },
+  "CHAM-CH": {
+   "cid": "REA14",
+   "zone": "Real Estate & Hospitality"
+  },
+  "BTRW-GB": {
+   "cid": "REA15",
+   "zone": "Real Estate & Hospitality"
+  },
+  "BWY-GB": {
+   "cid": "REA15",
+   "zone": "Real Estate & Hospitality"
+  },
+  "PSN-GB": {
+   "cid": "REA15",
+   "zone": "Real Estate & Hospitality"
+  },
+  "TW-GB": {
+   "cid": "REA15",
+   "zone": "Real Estate & Hospitality"
+  },
+  "BKG-GB": {
+   "cid": "REA16",
+   "zone": "Real Estate & Hospitality"
+  },
+  "C5H-IE": {
+   "cid": "REA16",
+   "zone": "Real Estate & Hospitality"
+  },
+  "VTY-GB": {
+   "cid": "REA17",
+   "zone": "Real Estate & Hospitality"
+  },
+  "AC-FR": {
+   "cid": "REA18",
+   "zone": "Real Estate & Hospitality"
+  },
+  "IHG-GB": {
+   "cid": "REA18",
+   "zone": "Real Estate & Hospitality"
+  },
+  "MEL-ES": {
+   "cid": "REA18",
+   "zone": "Real Estate & Hospitality"
+  },
+  "SHOT-SE": {
+   "cid": "REA19",
+   "zone": "Real Estate & Hospitality"
+  },
+  "WTB-GB": {
+   "cid": "REA19",
+   "zone": "Real Estate & Hospitality"
+  },
+  "BAIN-FR": {
+   "cid": "REA20",
+   "zone": "Real Estate & Hospitality"
+  },
+  "CIRSA-ES": {
+   "cid": "REA20",
+   "zone": "Real Estate & Hospitality"
+  },
+  "EDR-ES": {
+   "cid": "REA21",
+   "zone": "Real Estate & Hospitality"
+  },
+  "HBX-ES": {
+   "cid": "REA21",
+   "zone": "Real Estate & Hospitality"
+  },
+  "EXO-NL": {
+   "cid": "HLD01",
+   "zone": "Holding Companies & Conglomerates"
+  },
+  "GBLB-BE": {
+   "cid": "HLD01",
+   "zone": "Holding Companies & Conglomerates"
+  },
+  "CRED.A-SE": {
+   "cid": "HLD01",
+   "zone": "Holding Companies & Conglomerates"
+  },
+  "CLDN-GB": {
+   "cid": "HLD01",
+   "zone": "Holding Companies & Conglomerates"
+  },
+  "PAH3-DE": {
+   "cid": "HLD01",
+   "zone": "Holding Companies & Conglomerates"
+  },
+  "AKER-NO": {
+   "cid": "HLD02",
+   "zone": "Holding Companies & Conglomerates"
+  },
+  "BURE-SE": {
+   "cid": "HLD02",
+   "zone": "Holding Companies & Conglomerates"
+  },
+  "GIMB-BE": {
+   "cid": "HLD03",
+   "zone": "Holding Companies & Conglomerates"
+  },
+  "CALT-IT": {
+   "cid": "HLD04",
+   "zone": "Holding Companies & Conglomerates"
+  },
+  "SEM-PT": {
+   "cid": "HLD04",
+   "zone": "Holding Companies & Conglomerates"
+  },
+  "CGEO-GB": {
+   "cid": "HLD05",
+   "zone": "Holding Companies & Conglomerates"
+  },
+  "9HF-DE": {
+   "cid": "HLD06",
+   "zone": "Holding Companies & Conglomerates"
+  },
+  "FMONC-FR": {
+   "cid": "HLD06",
+   "zone": "Holding Companies & Conglomerates"
+  },
+  "MBB-DE": {
+   "cid": "HLD07",
+   "zone": "Holding Companies & Conglomerates"
+  },
+  "ROSE-GB": {
+   "cid": "HLD07",
+   "zone": "Holding Companies & Conglomerates"
+  },
+  "DCC-GB": {
+   "cid": "HLD08",
+   "zone": "Holding Companies & Conglomerates"
+  },
+  "ASSA.B-SE": {
+   "cid": "HLD09",
+   "zone": "Holding Companies & Conglomerates"
+  },
+  "VSURE-SE": {
+   "cid": "HLD09",
+   "zone": "Holding Companies & Conglomerates"
+  },
+  "AZN-GB": {
+   "cid": "PHA01",
+   "zone": "Healthcare & Pharma"
+  },
+  "GSK-GB": {
+   "cid": "PHA01",
+   "zone": "Healthcare & Pharma"
+  },
+  "NOVN-CH": {
+   "cid": "PHA01",
+   "zone": "Healthcare & Pharma"
+  },
+  "SAN-FR": {
+   "cid": "PHA01",
+   "zone": "Healthcare & Pharma"
+  },
+  "ROG-CH": {
+   "cid": "PHA01",
+   "zone": "Healthcare & Pharma"
+  },
+  "NOVO.B-DK": {
+   "cid": "PHA02",
+   "zone": "Healthcare & Pharma"
+  },
+  "BAYN-DE": {
+   "cid": "PHA03",
+   "zone": "Healthcare & Pharma"
+  },
+  "MRK-DE": {
+   "cid": "PHA03",
+   "zone": "Healthcare & Pharma"
+  },
+  "SOBI-SE": {
+   "cid": "PHA04",
+   "zone": "Healthcare & Pharma"
+  },
+  "UCB-BE": {
+   "cid": "PHA04",
+   "zone": "Healthcare & Pharma"
+  },
+  "TUB-BE": {
+   "cid": "PHA04",
+   "zone": "Healthcare & Pharma"
+  },
+  "HLUN.B-DK": {
+   "cid": "PHA05",
+   "zone": "Healthcare & Pharma"
+  },
+  "ORNBV-FI": {
+   "cid": "PHA05",
+   "zone": "Healthcare & Pharma"
+  },
+  "RICHT-HU": {
+   "cid": "PHA06",
+   "zone": "Healthcare & Pharma"
+  },
+  "REC-IT": {
+   "cid": "PHA06",
+   "zone": "Healthcare & Pharma"
+  },
+  "HIK-GB": {
+   "cid": "PHA06",
+   "zone": "Healthcare & Pharma"
+  },
+  "SDZ-CH": {
+   "cid": "PHA07",
+   "zone": "Healthcare & Pharma"
+  },
+  "COPN-CH": {
+   "cid": "PHA07",
+   "zone": "Healthcare & Pharma"
+  },
+  "FAE-ES": {
+   "cid": "PHA07",
+   "zone": "Healthcare & Pharma"
+  },
+  "BIO3-DE": {
+   "cid": "PHA07",
+   "zone": "Healthcare & Pharma"
+  },
+  "PHM-ES": {
+   "cid": "PHA07",
+   "zone": "Healthcare & Pharma"
+  },
+  "ARGX-BE": {
+   "cid": "PHA08",
+   "zone": "Healthcare & Pharma"
+  },
+  "CAMX-SE": {
+   "cid": "PHA08",
+   "zone": "Healthcare & Pharma"
+  },
+  "GMAB-DK": {
+   "cid": "PHA08",
+   "zone": "Healthcare & Pharma"
+  },
+  "ZEAL-DK": {
+   "cid": "PHA08",
+   "zone": "Healthcare & Pharma"
+  },
+  "ABVX-FR": {
+   "cid": "PHA09",
+   "zone": "Healthcare & Pharma"
+  },
+  "BIOA.B-SE": {
+   "cid": "PHA09",
+   "zone": "Healthcare & Pharma"
+  },
+  "IDIA-CH": {
+   "cid": "PHA09",
+   "zone": "Healthcare & Pharma"
+  },
+  "MEDCL-FR": {
+   "cid": "PHA09",
+   "zone": "Healthcare & Pharma"
+  },
+  "NANO-FR": {
+   "cid": "PHA09",
+   "zone": "Healthcare & Pharma"
+  },
+  "ALK.B-DK": {
+   "cid": "PHA10",
+   "zone": "Healthcare & Pharma"
+  },
+  "BIM-FR": {
+   "cid": "PHA10",
+   "zone": "Healthcare & Pharma"
+  },
+  "DIA-IT": {
+   "cid": "PHA10",
+   "zone": "Healthcare & Pharma"
+  },
+  "ALM-ES": {
+   "cid": "PHA11",
+   "zone": "Healthcare & Pharma"
+  },
+  "DMP-DE": {
+   "cid": "PHA11",
+   "zone": "Healthcare & Pharma"
+  },
+  "GALD-CH": {
+   "cid": "PHA11",
+   "zone": "Healthcare & Pharma"
+  },
+  "HLN-GB": {
+   "cid": "PHA11",
+   "zone": "Healthcare & Pharma"
+  },
+  "VETO-FR": {
+   "cid": "PHA12",
+   "zone": "Healthcare & Pharma"
+  },
+  "VIRP-FR": {
+   "cid": "PHA12",
+   "zone": "Healthcare & Pharma"
+  },
+  "BAVA-DK": {
+   "cid": "PHA13",
+   "zone": "Healthcare & Pharma"
+  },
+  "ALC-CH": {
+   "cid": "MED01",
+   "zone": "Healthcare & Pharma"
+  },
+  "AFX-DE": {
+   "cid": "MED01",
+   "zone": "Healthcare & Pharma"
+  },
+  "EKTA.B-SE": {
+   "cid": "MED02",
+   "zone": "Healthcare & Pharma"
+  },
+  "SHL-DE": {
+   "cid": "MED02",
+   "zone": "Healthcare & Pharma"
+  },
+  "PHIA-NL": {
+   "cid": "MED02",
+   "zone": "Healthcare & Pharma"
+  },
+  "1SXP-DE": {
+   "cid": "MED03",
+   "zone": "Healthcare & Pharma"
+  },
+  "GXI-DE": {
+   "cid": "MED03",
+   "zone": "Healthcare & Pharma"
+  },
+  "GVS-IT": {
+   "cid": "MED03",
+   "zone": "Healthcare & Pharma"
+  },
+  "EUZ-DE": {
+   "cid": "MED04",
+   "zone": "Healthcare & Pharma"
+  },
+  "OXIG-GB": {
+   "cid": "MED04",
+   "zone": "Healthcare & Pharma"
+  },
+  "SKAN-CH": {
+   "cid": "MED05",
+   "zone": "Healthcare & Pharma"
+  },
+  "GETI.B-SE": {
+   "cid": "MED05",
+   "zone": "Healthcare & Pharma"
+  },
+  "BIOG.B-SE": {
+   "cid": "MED06",
+   "zone": "Healthcare & Pharma"
+  },
+  "BONEX-SE": {
+   "cid": "MED06",
+   "zone": "Healthcare & Pharma"
+  },
+  "SUS-SE": {
+   "cid": "MED06",
+   "zone": "Healthcare & Pharma"
+  },
+  "VITR-SE": {
+   "cid": "MED06",
+   "zone": "Healthcare & Pharma"
+  },
+  "KURN-CH": {
+   "cid": "MED06",
+   "zone": "Healthcare & Pharma"
+  },
+  "STMN-CH": {
+   "cid": "MED07",
+   "zone": "Healthcare & Pharma"
+  },
+  "MOVE-CH": {
+   "cid": "MED07",
+   "zone": "Healthcare & Pharma"
+  },
+  "MED-CH": {
+   "cid": "MED07",
+   "zone": "Healthcare & Pharma"
+  },
+  "COLO.B-DK": {
+   "cid": "MED08",
+   "zone": "Healthcare & Pharma"
+  },
+  "CTEC-GB": {
+   "cid": "MED08",
+   "zone": "Healthcare & Pharma"
+  },
+  "SN-GB": {
+   "cid": "MED08",
+   "zone": "Healthcare & Pharma"
+  },
+  "DRW3-DE": {
+   "cid": "MED09",
+   "zone": "Healthcare & Pharma"
+  },
+  "AMBU.B-DK": {
+   "cid": "MED09",
+   "zone": "Healthcare & Pharma"
+  },
+  "SOON-CH": {
+   "cid": "MED10",
+   "zone": "Healthcare & Pharma"
+  },
+  "DEMANT-DK": {
+   "cid": "MED10",
+   "zone": "Healthcare & Pharma"
+  },
+  "GN-DK": {
+   "cid": "MED10",
+   "zone": "Healthcare & Pharma"
+  },
+  "AMP-IT": {
+   "cid": "MED10",
+   "zone": "Healthcare & Pharma"
+  },
+  "OBCK-DE": {
+   "cid": "MED11",
+   "zone": "Healthcare & Pharma"
+  },
+  "EMBLA-DK": {
+   "cid": "MED11",
+   "zone": "Healthcare & Pharma"
+  },
+  "DYVOX-SE": {
+   "cid": "MED11",
+   "zone": "Healthcare & Pharma"
+  },
+  "GALE-CH": {
+   "cid": "MED12",
+   "zone": "Healthcare & Pharma"
+  },
+  "UPR-IE": {
+   "cid": "MED12",
+   "zone": "Healthcare & Pharma"
+  },
+  "ATT-SE": {
+   "cid": "MED13",
+   "zone": "Healthcare & Pharma"
+  },
+  "HUM-SE": {
+   "cid": "MED13",
+   "zone": "Healthcare & Pharma"
+  },
+  "FRE-DE": {
+   "cid": "MED13",
+   "zone": "Healthcare & Pharma"
+  },
+  "FME-DE": {
+   "cid": "MED13",
+   "zone": "Healthcare & Pharma"
+  },
+  "ONT-GB": {
+   "cid": "MED14",
+   "zone": "Healthcare & Pharma"
+  },
+  "CEVI-SE": {
+   "cid": "MED15",
+   "zone": "Healthcare & Pharma"
+  },
+  "CHEMM-DK": {
+   "cid": "MED15",
+   "zone": "Healthcare & Pharma"
+  },
+  "TECN-CH": {
+   "cid": "MED15",
+   "zone": "Healthcare & Pharma"
+  },
+  "XVIVO-SE": {
+   "cid": "MED15",
+   "zone": "Healthcare & Pharma"
+  },
+  "SAP-DE": {
+   "cid": "TCH01",
+   "zone": "Technology"
+  },
+  "SGE-GB": {
+   "cid": "TCH01",
+   "zone": "Technology"
+  },
+  "TEMN-CH": {
+   "cid": "TCH01",
+   "zone": "Technology"
+  },
+  "NEM-DE": {
+   "cid": "TCH02",
+   "zone": "Technology"
+  },
+  "HEXA.B-SE": {
+   "cid": "TCH02",
+   "zone": "Technology"
+  },
+  "CRW-GB": {
+   "cid": "TCH03",
+   "zone": "Technology"
+  },
+  "IDOX-GB": {
+   "cid": "TCH03",
+   "zone": "Technology"
+  },
+  "SECT.B-SE": {
+   "cid": "TCH03",
+   "zone": "Technology"
+  },
+  "REL-GB": {
+   "cid": "TCH04",
+   "zone": "Technology"
+  },
+  "WKL-NL": {
+   "cid": "TCH04",
+   "zone": "Technology"
+  },
+  "KAR-SE": {
+   "cid": "TCH04",
+   "zone": "Technology"
+  },
+  "DATA-GB": {
+   "cid": "TCH04",
+   "zone": "Technology"
+  },
+  "GBG-GB": {
+   "cid": "TCH05",
+   "zone": "Technology"
+  },
+  "EXPN-GB": {
+   "cid": "TCH05",
+   "zone": "Technology"
+  },
+  "YUBICO-SE": {
+   "cid": "TCH05",
+   "zone": "Technology"
+  },
+  "YOU-GB": {
+   "cid": "TCH06",
+   "zone": "Technology"
+  },
+  "CINT-SE": {
+   "cid": "TCH06",
+   "zone": "Technology"
+  },
+  "GPP-PL": {
+   "cid": "TCH06",
+   "zone": "Technology"
+  },
+  "SINCH-SE": {
+   "cid": "TCH07",
+   "zone": "Technology"
+  },
+  "TMV-DE": {
+   "cid": "TCH07",
+   "zone": "Technology"
+  },
+  "TRUE.B-SE": {
+   "cid": "TCH07",
+   "zone": "Technology"
+  },
+  "IOS-DE": {
+   "cid": "TCH08",
+   "zone": "Technology"
+  },
+  "OVH-FR": {
+   "cid": "TCH08",
+   "zone": "Technology"
+  },
+  "AMS-ES": {
+   "cid": "TCH09",
+   "zone": "Technology"
+  },
+  "TRN-GB": {
+   "cid": "TCH09",
+   "zone": "Technology"
+  },
+  "IFX-DE": {
+   "cid": "TCH10",
+   "zone": "Technology"
+  },
+  "MELE-BE": {
+   "cid": "TCH10",
+   "zone": "Technology"
+  },
+  "BESI-NL": {
+   "cid": "TCH10",
+   "zone": "Technology"
+  },
+  "TPRO-IT": {
+   "cid": "TCH10",
+   "zone": "Technology"
+  },
+  "VACN-CH": {
+   "cid": "TCH10",
+   "zone": "Technology"
+  },
+  "ASML-NL": {
+   "cid": "TCH11",
+   "zone": "Technology"
+  },
+  "HMS-SE": {
+   "cid": "TCH12",
+   "zone": "Technology"
+  },
+  "PLEJD-SE": {
+   "cid": "TCH12",
+   "zone": "Technology"
+  },
+  "SEE-GB": {
+   "cid": "TCH12",
+   "zone": "Technology"
+  },
+  "TOBII-SE": {
+   "cid": "TCH12",
+   "zone": "Technology"
+  },
+  "VU-FR": {
+   "cid": "TCH12",
+   "zone": "Technology"
+  },
+  "CDR-PL": {
+   "cid": "TCH13",
+   "zone": "Technology"
+  },
+  "PDX-SE": {
+   "cid": "TCH13",
+   "zone": "Technology"
+  },
+  "UBI-FR": {
+   "cid": "TCH13",
+   "zone": "Technology"
+  },
+  "MTG.B-SE": {
+   "cid": "TCH13",
+   "zone": "Technology"
+  },
+  "RMV-GB": {
+   "cid": "TCH14",
+   "zone": "Technology"
+  },
+  "HEM-SE": {
+   "cid": "TCH14",
+   "zone": "Technology"
+  },
+  "G24-DE": {
+   "cid": "TCH14",
+   "zone": "Technology"
+  },
+  "SMG-CH": {
+   "cid": "TCH14",
+   "zone": "Technology"
+  },
+  "AUTO-GB": {
+   "cid": "TCH15",
+   "zone": "Technology"
+  },
+  "BCG-GB": {
+   "cid": "TCH15",
+   "zone": "Technology"
+  },
+  "VEND-NO": {
+   "cid": "TCH15",
+   "zone": "Technology"
+  },
+  "TRST-GB": {
+   "cid": "TCH16",
+   "zone": "Technology"
+  },
+  "ADYEN-NL": {
+   "cid": "TCH17",
+   "zone": "Technology"
+  },
+  "NEXI-IT": {
+   "cid": "TCH17",
+   "zone": "Technology"
+  },
+  "WLN-FR": {
+   "cid": "TCH17",
+   "zone": "Technology"
+  },
+  "BOKU-GB": {
+   "cid": "TCH17",
+   "zone": "Technology"
+  },
+  "WISE-GB": {
+   "cid": "TCH17",
+   "zone": "Technology"
+  },
+  "AZA-SE": {
+   "cid": "TCH18",
+   "zone": "Technology"
+  },
+  "SAVE-SE": {
+   "cid": "TCH18",
+   "zone": "Technology"
+  },
+  "FTK-DE": {
+   "cid": "TCH18",
+   "zone": "Technology"
+  },
+  "FBK-IT": {
+   "cid": "TCH18",
+   "zone": "Technology"
+  },
+  "MONY-GB": {
+   "cid": "TCH19",
+   "zone": "Technology"
+  },
+  "QLT-GB": {
+   "cid": "TCH19",
+   "zone": "Technology"
+  },
+  "MOL-IT": {
+   "cid": "TCH19",
+   "zone": "Technology"
+  },
+  "CAP-FR": {
+   "cid": "TCH20",
+   "zone": "Technology"
+  },
+  "ATO-FR": {
+   "cid": "TCH20",
+   "zone": "Technology"
+  },
+  "SOP-FR": {
+   "cid": "TCH20",
+   "zone": "Technology"
+  },
+  "NRO-FR": {
+   "cid": "TCH20",
+   "zone": "Technology"
+  },
+  "WAVE-FR": {
+   "cid": "TCH20",
+   "zone": "Technology"
+  },
+  "TIETO-FI": {
+   "cid": "TCH21",
+   "zone": "Technology"
+  },
+  "ATEA-NO": {
+   "cid": "TCH21",
+   "zone": "Technology"
+  },
+  "NETC-DK": {
+   "cid": "TCH21",
+   "zone": "Technology"
+  },
+  "KNOS-GB": {
+   "cid": "TCH22",
+   "zone": "Technology"
+  },
+  "REY-IT": {
+   "cid": "TCH22",
+   "zone": "Technology"
+  },
+  "IDR-ES": {
+   "cid": "TCH22",
+   "zone": "Technology"
+  },
+  "ACP-PL": {
+   "cid": "TCH23",
+   "zone": "Technology"
+  },
+  "NA9-DE": {
+   "cid": "TCH23",
+   "zone": "Technology"
+  },
+  "ADN1-DE": {
+   "cid": "TCH23",
+   "zone": "Technology"
+  },
+  "AOF-DE": {
+   "cid": "TCH23",
+   "zone": "Technology"
+  },
+  "CCC-GB": {
+   "cid": "TCH24",
+   "zone": "Technology"
+  },
+  "SCT-GB": {
+   "cid": "TCH24",
+   "zone": "Technology"
+  },
+  "BYIT-GB": {
+   "cid": "TCH24",
+   "zone": "Technology"
+  },
+  "ALSN-CH": {
+   "cid": "TCH25",
+   "zone": "Technology"
+  },
+  "BC8-DE": {
+   "cid": "TCH25",
+   "zone": "Technology"
+  },
+  "DUST-SE": {
+   "cid": "TCH25",
+   "zone": "Technology"
+  },
+  "SES-IT": {
+   "cid": "TCH25",
+   "zone": "Technology"
+  },
+  "SWON-CH": {
+   "cid": "TCH26",
+   "zone": "Technology"
+  },
+  "IHP-GB": {
+   "cid": "TCH26",
+   "zone": "Technology"
+  },
+  "RS1-GB": {
+   "cid": "TCH27",
+   "zone": "Technology"
+  },
+  "1INN-DE": {
+   "cid": "TCH28",
+   "zone": "Technology"
+  },
+  "74SW-FR": {
+   "cid": "TCH28",
+   "zone": "Technology"
+  },
+  "PLNW-FR": {
+   "cid": "TCH28",
+   "zone": "Technology"
+  },
+  "VIT.B-SE": {
+   "cid": "TCH29",
+   "zone": "Technology"
+  },
+  "CHG-DE": {
+   "cid": "TCH29",
+   "zone": "Technology"
+  },
+  "ERF-FR": {
+   "cid": "TCH30",
+   "zone": "Technology"
+  },
+  "SGSN-CH": {
+   "cid": "TCH30",
+   "zone": "Technology"
+  },
+  "FUR-NL": {
+   "cid": "TCH30",
+   "zone": "Technology"
+  },
+  "FLTR-GB": {
+   "cid": "TCH32",
+   "zone": "Technology"
+  },
+  "ENT-GB": {
+   "cid": "TCH32",
+   "zone": "Technology"
+  },
+  "BETS.B-SE": {
+   "cid": "TCH32",
+   "zone": "Technology"
+  },
+  "EVOK-GB": {
+   "cid": "TCH32",
+   "zone": "Technology"
+  },
+  "PTEC-GB": {
+   "cid": "TCH32",
+   "zone": "Technology"
+  },
+  "FDJU-FR": {
+   "cid": "TCH33",
+   "zone": "Technology"
+  },
+  "LTMC-IT": {
+   "cid": "TCH33",
+   "zone": "Technology"
+  },
+  "BYLOT-GR": {
+   "cid": "TCH33",
+   "zone": "Technology"
+  },
+  "TIMA-DE": {
+   "cid": "TCH33",
+   "zone": "Technology"
+  },
+  "EVO-SE": {
+   "cid": "TCH34",
+   "zone": "Technology"
+  },
+  "KAMBI-SE": {
+   "cid": "TCH34",
+   "zone": "Technology"
+  },
+  "HACK-SE": {
+   "cid": "TCH34",
+   "zone": "Technology"
+  },
+  "IGG-GB": {
+   "cid": "TCH35",
+   "zone": "Technology"
+  },
+  "RDC-DE": {
+   "cid": "TCH36",
+   "zone": "Technology"
+  },
+  "QTCOM-FI": {
+   "cid": "TCH37",
+   "zone": "Technology"
+  },
+  "ELN-IT": {
+   "cid": "TCH38",
+   "zone": "Technology"
+  },
+  "COTN-CH": {
+   "cid": "TCH38",
+   "zone": "Technology"
+  },
+  "HTRO-SE": {
+   "cid": "TCH39",
+   "zone": "Technology"
+  },
+  "ADDT.B-SE": {
+   "cid": "SA01",
+   "zone": "Serial Acquirers"
+  },
+  "INDT-SE": {
+   "cid": "SA01",
+   "zone": "Serial Acquirers"
+  },
+  "LAGR.B-SE": {
+   "cid": "SA01",
+   "zone": "Serial Acquirers"
+  },
+  "LIFCO.B-SE": {
+   "cid": "SA01",
+   "zone": "Serial Acquirers"
+  },
+  "DPLM-GB": {
+   "cid": "SA02",
+   "zone": "Serial Acquirers"
+  },
+  "HLMA-GB": {
+   "cid": "SA02",
+   "zone": "Serial Acquirers"
+  },
+  "ALIF.B-SE": {
+   "cid": "SA03",
+   "zone": "Serial Acquirers"
+  },
+  "CVSG-GB": {
+   "cid": "SA03",
+   "zone": "Serial Acquirers"
+  },
+  "VIMIAN-SE": {
+   "cid": "SA03",
+   "zone": "Serial Acquirers"
+  },
+  "BEIJ.B-SE": {
+   "cid": "SA04",
+   "zone": "Serial Acquirers"
+  },
+  "BUFAB-SE": {
+   "cid": "SA04",
+   "zone": "Serial Acquirers"
+  },
+  "OEM.B-SE": {
+   "cid": "SA04",
+   "zone": "Serial Acquirers"
+  },
+  "TEQ-SE": {
+   "cid": "SA04",
+   "zone": "Serial Acquirers"
+  },
+  "BRAV-SE": {
+   "cid": "SA05",
+   "zone": "Serial Acquirers"
+  },
+  "BRKN-CH": {
+   "cid": "SA05",
+   "zone": "Serial Acquirers"
+  },
+  "VLX-LON": {
+   "cid": "SA06",
+   "zone": "Serial Acquirers"
+  },
+  "ROKO.B-SE": {
+   "cid": "SA07",
+   "zone": "Serial Acquirers"
+  },
+  "JDG-LON": {
+   "cid": "SA08",
+   "zone": "Serial Acquirers"
+  },
+  "JEN-DE": {
+   "cid": "SA08",
+   "zone": "Serial Acquirers"
+  },
+  "RSW-GB": {
+   "cid": "SA08",
+   "zone": "Serial Acquirers"
+  },
+  "VAIAS-FI": {
+   "cid": "SA08",
+   "zone": "Serial Acquirers"
+  },
+  "ANOD.B-SE": {
+   "cid": "SA10",
+   "zone": "Serial Acquirers"
+  },
+  "FG-SE": {
+   "cid": "SA10",
+   "zone": "Serial Acquirers"
+  },
+  "GREEN-SE": {
+   "cid": "SA10",
+   "zone": "Serial Acquirers"
+  },
+  "SDIP.B-SE": {
+   "cid": "SA10",
+   "zone": "Serial Acquirers"
+  },
+  "BEIA.B-SE": {
+   "cid": "SA11",
+   "zone": "Serial Acquirers"
+  },
+  "SOLI-LON": {
+   "cid": "SA06",
+   "zone": "Serial Acquirers"
+  },
+  "TWEKA-NL": {
+   "cid": "SA11",
+   "zone": "Serial Acquirers"
+  },
+  "ASKER-SE": {
+   "cid": "SA12",
+   "zone": "Serial Acquirers"
+  },
+  "CARE-SE": {
+   "cid": "SA12",
+   "zone": "Serial Acquirers"
+  },
+  "VOLO-SE": {
+   "cid": "SA12",
+   "zone": "Serial Acquirers"
+  },
+  "DIE-BE": {
+   "cid": "AUT18",
+   "zone": "Automotive"
+  },
+  "BRE-IT": {
+   "cid": "AUT16",
+   "zone": "Automotive"
+  },
+  "KBX-DE": {
+   "cid": "AUT16",
+   "zone": "Automotive"
+  },
+  "CAF-ES": {
+   "cid": "AUT17",
+   "zone": "Automotive"
+  },
+  "SRAIL-CH": {
+   "cid": "AUT17",
+   "zone": "Automotive"
+  },
+  "VOS-DE": {
+   "cid": "AUT17",
+   "zone": "Automotive"
+  },
+  "CAR-PL": {
+   "cid": "AUT19",
+   "zone": "Automotive"
+  },
+  "TRI-FR": {
+   "cid": "AUT20",
+   "zone": "Automotive"
+  },
+  "DOM-SE": {
+   "cid": "AUT20",
+   "zone": "Automotive"
+  },
+  "FQT-AT": {
+   "cid": "DEF08",
+   "zone": "Defence & Aerospace"
+  },
+  "IVSO-SE": {
+   "cid": "DEF08",
+   "zone": "Defence & Aerospace"
+  },
+  "NORBT-NO": {
+   "cid": "DEF08",
+   "zone": "Defence & Aerospace"
+  },
+  "EXA-FR": {
+   "cid": "DEF08",
+   "zone": "Defence & Aerospace"
+  },
+  "TKMS-DE": {
+   "cid": "DEF09",
+   "zone": "Defence & Aerospace"
+  },
+  "FCT-IT": {
+   "cid": "DEF09",
+   "zone": "Defence & Aerospace"
+  },
+  "GTT-FR": {
+   "cid": "ENG38",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "WRT1V-FI": {
+   "cid": "ENG38",
+   "zone": "Energy, Grid & Utilities"
+  },
+  "HLE-DE": {
+   "cid": "AUT21",
+   "zone": "Automotive"
+  },
+  "OSR-DE": {
+   "cid": "AUT21",
+   "zone": "Automotive"
+  },
+  "KOG-NO": {
+   "cid": "DEF10",
+   "zone": "Defence & Aerospace"
+  },
+  "BAB-GB": {
+   "cid": "DEF11",
+   "zone": "Defence & Aerospace"
+  },
+  "QQ-GB": {
+   "cid": "DEF11",
+   "zone": "Defence & Aerospace"
+  },
+  "HAG-DE": {
+   "cid": "DEF12",
+   "zone": "Defence & Aerospace"
+  },
+  "EXENS-FR": {
+   "cid": "DEF12",
+   "zone": "Defence & Aerospace"
+  },
+  "THEON-NL": {
+   "cid": "DEF12",
+   "zone": "Defence & Aerospace"
+  },
+  "MILDEF-SE": {
+   "cid": "DEF12",
+   "zone": "Defence & Aerospace"
+  },
+  "OVZON-SE": {
+   "cid": "DEF12",
+   "zone": "Defence & Aerospace"
+  },
+  "R3NK-DE": {
+   "cid": "DEF13",
+   "zone": "Defence & Aerospace"
+  },
+  "ABBN-CH": {
+   "cid": "IND29",
+   "zone": "Industrials"
+  },
+  "SIE-DE": {
+   "cid": "IND29",
+   "zone": "Industrials"
+  },
+  "SU-FR": {
+   "cid": "IND29",
+   "zone": "Industrials"
+  },
+  "AHT-GB": {
+   "cid": "IND30",
+   "zone": "Industrials"
+  },
+  "AUTO-NO": {
+   "cid": "IND31",
+   "zone": "Industrials"
+  },
+  "INRN-CH": {
+   "cid": "IND31",
+   "zone": "Industrials"
+  },
+  "KARN-CH": {
+   "cid": "IND31",
+   "zone": "Industrials"
+  },
+  "KGX-DE": {
+   "cid": "IND31",
+   "zone": "Industrials"
+  },
+  "OCDO-GB": {
+   "cid": "IND31",
+   "zone": "Industrials"
+  },
+  "BEKB-BE": {
+   "cid": "CON27",
+   "zone": "Construction & Materials"
+  },
+  "BUCN-CH": {
+   "cid": "IND32",
+   "zone": "Industrials"
+  },
+  "DEZ-DE": {
+   "cid": "IND32",
+   "zone": "Industrials"
+  },
+  "COM-IT": {
+   "cid": "IND32",
+   "zone": "Industrials"
+  },
+  "CMB-IT": {
+   "cid": "IND33",
+   "zone": "Industrials"
+  },
+  "PFSE-DE": {
+   "cid": "IND33",
+   "zone": "Industrials"
+  },
+  "DAN-IT": {
+   "cid": "IND34",
+   "zone": "Industrials"
+  },
+  "DOC-AT": {
+   "cid": "CSM39",
+   "zone": "Consumer"
+  },
+  "EDEN-FR": {
+   "cid": "TCH42",
+   "zone": "Technology"
+  },
+  "FLS-DK": {
+   "cid": "IND35",
+   "zone": "Industrials"
+  },
+  "METSO-FI": {
+   "cid": "IND35",
+   "zone": "Industrials"
+  },
+  "WEIR-GB": {
+   "cid": "IND35",
+   "zone": "Industrials"
+  },
+  "GIL-DE": {
+   "cid": "IND36",
+   "zone": "Industrials"
+  },
+  "KLR-GB": {
+   "cid": "IND37",
+   "zone": "Industrials"
+  },
+  "SWEC.B-SE": {
+   "cid": "IND38",
+   "zone": "Industrials"
+  },
+  "NORCO-NO": {
+   "cid": "IND38",
+   "zone": "Industrials"
+  },
+  "TOM-NO": {
+   "cid": "IND39",
+   "zone": "Industrials"
+  },
+  "SNI-NO": {
+   "cid": "TRN18",
+   "zone": "Transport & Logistics"
+  },
+  "IWG-GB": {
+   "cid": "REA22",
+   "zone": "Real Estate & Hospitality"
+  },
+  "PRX-NL": {
+   "cid": "HLD11",
+   "zone": "Holding Companies & Conglomerates"
+  },
+  "HAL-NL": {
+   "cid": "HLD11",
+   "zone": "Holding Companies & Conglomerates"
+  },
+  "BELA-GR": {
+   "cid": "CSM42",
+   "zone": "Consumer"
+  },
+  "AALB-NL": {
+   "cid": "SA07",
+   "zone": "Serial Acquirers"
+  },
+  "BALD.B-SE": {
+   "cid": "REA05",
+   "zone": "Real Estate & Hospitality"
+  },
+  "ERIC.B-SE": {
+   "cid": "TCM09",
+   "zone": "Telecoms, Media & Towers"
+  },
+  "HUSQ.B-SE": {
+   "cid": "CSM40",
+   "zone": "Consumer"
+  },
+  "KINV.B-SE": {
+   "cid": "FIN13",
+   "zone": "Financial Services"
+  },
+  "LATO.B-SE": {
+   "cid": "FIN13",
+   "zone": "Financial Services"
+  },
+  "SBB.B-SE": {
+   "cid": "REA05",
+   "zone": "Real Estate & Hospitality"
+  },
+  "SECU.B-SE": {
+   "cid": "HLD09",
+   "zone": "Holding Companies & Conglomerates"
+  },
+  "SWED.A-SE": {
+   "cid": "FIN03",
+   "zone": "Financial Services"
+  },
+  "LKFT-NL": {
+   "cid": "PHA08",
+   "zone": "Healthcare & Pharma"
+  },
+  "ALWN-GR": {
+   "cid": "TCH33",
+   "zone": "Technology"
+  },
+  "GLV-IE": {
+   "cid": "REA16",
+   "zone": "Real Estate & Hospitality"
+  },
+  "DSCV-GB": {
+   "cid": "SA06",
+   "zone": "Serial Acquirers"
+  },
+  "TTG-GB": {
+   "cid": "SA06",
+   "zone": "Serial Acquirers"
+  },
+  "APH-US": {
+   "cid": "SA06",
+   "zone": "Serial Acquirers"
+  }
+ }
+}

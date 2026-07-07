@@ -1402,7 +1402,7 @@ function renderMap(tk){
     return h;
   }
   var idx=treeIndex(gran);
-  var out='';
+  var out='<div class="mv-note">Granular grades below come from this stock&#39;s '+esc(gran.stage||'')+' memo dated '+esc(gran.stage_date||'n/a')+'; they may differ from the current pillar grades shown in the main table.</div>';
   // TOP tier — Investment case (IC3, IC2, IC1)
   var icCards=IC_ORDER.map(function(id){return idx.byId[id];}).filter(Boolean);
   if(icCards.length){
@@ -1523,7 +1523,7 @@ function renderMatrix(tk){
   h+='</tbody></table>';
   h+='<div class="mv-legend"><b>Grades:</b>'+
      chip('A')+' A '+chip('B')+' B '+chip('C')+' C '+chip('D')+' D '+chip('F')+' F '+chip(null)+' none/no memo'+
-     ' &nbsp;·&nbsp; Section rows compare the six pillar grades across all stocks; item rows fill in where a stock has a graded memo tree.</div>';
+     ' &nbsp;·&nbsp; Section rows compare the six pillar grades across all stocks; item rows come from each stock&#39;s latest memo (as of that memo&#39;s date), so they may differ from the current section-row grades.</div>';
   return h;
 }
 
