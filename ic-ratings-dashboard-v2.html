@@ -185,7 +185,7 @@ body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font
 .sp{display:inline-block;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:500;white-space:nowrap}
 .sp-dd {background:#28A745;color:#fff}
 .sp-esa{background:#E9881A;color:#fff}
-.sp-tri{background:#8C909A;color:#fff}
+.sp-tri{background:#2F6FB0;color:#fff}
 
 /* ── RB select pills ─────────────────────────────────────── */
 .rbd{display:inline-block;padding:2px 6px;border-radius:4px;font-size:12px;min-width:28px;text-align:center}
@@ -221,6 +221,17 @@ body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font
 }
 .ibtn:hover{background:#f0ede4;border-color:#9b9380}
 .ibtn.dis{opacity:.3;cursor:default;pointer-events:none}
+.ibtn.mapb{background:#eaf1f8;border-color:#bcd4ea;color:#2F6FB0}
+.ibtn.mapb:hover{background:#d9e8f5;border-color:#8fbbe0}
+.ibtn.listb{background:#f3eefa;border-color:#d8c9ee;color:#6b4ea8}
+.ibtn.listb:hover{background:#e9ddf7;border-color:#c0a9e4}
+.mcell{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.05;text-decoration:none;border:1px solid #cfe0c9;border-radius:5px;padding:2px 6px;background:#eef4ec;min-width:34px}
+.mcell:hover{background:#e0efdb;border-color:#9cc794}
+.mcell .memo-mmm{font-size:11px;font-weight:800;color:#1f7a34;letter-spacing:.3px}
+.mcell .memo-yyyy{font-size:7px;font-weight:600;color:#7a8a76;margin-top:1px}
+.mcell.dis{background:transparent;border:1px dashed #ddd;color:#c4c4c4;cursor:default}
+.rbdlnk{text-decoration:none;cursor:pointer}
+.rbdlnk:hover .rbd{outline:2px solid #534AB7;outline-offset:1px}
 
 /* ── Loading / error ─────────────────────────────────────── */
 #loading{padding:40px;text-align:center;color:#6b6b6b;font-size:14px}
@@ -352,10 +363,68 @@ body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font
 .mv-opt{padding:7px 10px;font-size:11px;color:#333;cursor:pointer;display:flex;justify-content:space-between;gap:8px;border-bottom:1px solid rgba(201,195,176,.4)}
 .mv-opt:hover{background:rgba(59,115,201,.12)}
 .mv-opt .mv-opt-sec{font-size:9px;color:#6b6b6b;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:48%}
-.mv-legend{font-size:10px;color:#8a7f63;margin-top:10px;display:flex;gap:10px;
+.mv-legend{font-size:10px;color:#8a7f63;margin-top:10px;display:flex;gap:10px;flex-wrap:wrap}
 .ppill{cursor:pointer;text-decoration:none;display:inline-block}
 .ppill:hover{filter:brightness(1.12)}
 .prior-toggle{font-size:11px;padding:3px 9px;border:1px solid #b48a3a;background:#fbf4e6;color:#7a5c12;border-radius:5px;cursor:pointer;margin-left:4px}.prior-toggle.on{background:#7a5c12;color:#fff5df;border-color:#7a5c12}.ppair{display:inline-flex;align-items:center;gap:1px;margin-right:2px;vertical-align:middle}.ppair .bdg{opacity:.45;transform:scale(.82)}.ppair .parr{color:#b06b1e;font-size:9px;margin:0 1px}
+
+        
+/* ==== ROUND2 TEMPLE Map CSS (.tv-*) — added 2026-07-07 ==== */
+.tv-chip{display:inline-block;min-width:17px;padding:0 6px;font-size:10px;font-weight:800;text-align:center;border-radius:3px;line-height:1.75;margin-left:6px;vertical-align:middle}
+.tv-drillable{cursor:pointer}
+.tv-mrcard.tv-drillable:hover,.tv-blockhdr.tv-drillable:hover,.tv-grouphdr.tv-drillable:hover,.tv-elhdr.tv-drillable:hover,.tv-rahdr.tv-drillable:hover{outline:2px solid rgba(184,168,106,.75);outline-offset:-2px}
+.tv-ctrlbar{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin:2px 0 14px}
+.tv-cgrp{display:flex;align-items:center;gap:7px;font-size:11px;font-weight:700}
+.tv-clab{text-transform:uppercase;letter-spacing:.4px;font-size:10px}
+.tv-caseC .tv-clab{color:#1b3d5c}.tv-foundC .tv-clab{color:#4a6b52}
+.tv-tg{border:1px solid #cfc8b4;background:#fff;border-radius:14px;padding:3px 12px;font-size:11px;font-weight:700;cursor:pointer;color:#555}
+.tv-caseC .tv-tg.on{background:#1b3d5c;color:#fff;border-color:#1b3d5c}
+.tv-foundC .tv-tg.on{background:#4a6b52;color:#fff;border-color:#4a6b52}
+.tv-bandttl{font-size:11px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:#7a7256;margin:2px 0 8px}
+.tv-mrband{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px;margin-bottom:18px;align-items:start}
+.tv-mrcard{border:1px solid #e6e0cf;border-left:3px solid #b8a86a;border-radius:5px;background:#fff;padding:7px 10px;display:flex;justify-content:space-between;align-items:center}
+.tv-mrcard .tv-l{font-size:11px;color:#333;font-weight:600;flex:1;padding-right:8px;line-height:1.3}
+.tv-composite{display:flex;gap:14px;align-items:stretch}
+.tv-mainCol{flex:1;min-width:0}
+.tv-p3col{width:212px;flex:none;display:flex}
+.tv-block{margin-bottom:14px;border-radius:8px;overflow:hidden}
+.tv-blockhdr{padding:8px 14px;color:#fff;font-size:13px;font-weight:800;letter-spacing:.3px;display:flex;align-items:center}
+.tv-blockhdr .tv-bnum{background:rgba(255,255,255,.22);border-radius:3px;padding:1px 8px;margin-right:10px;font-size:10px;letter-spacing:.5px}
+.tv-blockhdr .tv-bname{flex:1}
+.tv-caseB .tv-blockhdr{background:#1b3d5c}
+.tv-foundB .tv-blockhdr{background:#4a6b52}
+.tv-p3B .tv-blockhdr{background:#7a6f52}
+.tv-blockbody{padding:12px 14px;background:#fbfaf5;border:1px solid #e6e0cf;border-top:none}
+.tv-caseGrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:11px;align-items:start}
+.tv-foundCols{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;align-items:start}
+.tv-pillarCol{border:1px solid #e0dccc;border-radius:6px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.tv-grouphdr{background:#eef2ea;border-bottom:2px solid #4a6b52;padding:6px 9px;font-size:10.5px;font-weight:800;color:#3c4f40;text-transform:uppercase;letter-spacing:.3px;display:flex;align-items:flex-start;gap:5px;min-height:42px}
+.tv-grouphdr .tv-gname{flex:1;line-height:1.25}
+.tv-pillarBody{display:flex;flex-direction:column;gap:7px;padding:8px}
+.tv-el{border:1px solid #e6e0cf;border-radius:5px;overflow:hidden;background:#fff}
+.tv-elhdr{font-size:10.5px;font-weight:700;padding:6px 9px;display:flex;align-items:flex-start;color:#fff;gap:5px}
+.tv-caseEl .tv-elhdr{background:#1b3d5c}.tv-foundEl .tv-elhdr{background:#4a6b52}
+.tv-elhdr .tv-enum{opacity:.65;font-weight:600;font-size:9.5px;padding-top:1px}
+.tv-elhdr .tv-ename{flex:1;line-height:1.25}
+.tv-rawrap{padding:3px 7px 5px;margin-left:7px;border-left:1.5px solid #cfc8b4}
+.tv-ra{padding:2px 0}
+.tv-rahdr{display:flex;justify-content:space-between;align-items:flex-start;font-size:10px;font-weight:700;color:#3a3a3a;padding:2px 2px;gap:5px}
+.tv-rahdr .tv-ral{flex:1;line-height:1.25}
+.tv-cqwrap{margin-left:10px;border-left:1px dotted #d8cfb0;padding-left:7px}
+.tv-cq{display:flex;justify-content:space-between;align-items:flex-start;gap:5px;font-size:9.5px;color:#6b6459;padding:2px 2px 2px 0;line-height:1.3}
+.tv-cq .tv-cql{flex:1}
+.tv-leafnote{padding:6px 8px;font-size:9.5px;color:#9a927c;font-style:italic;line-height:1.3}
+.tv-vintage{margin-top:14px;font-size:10px;color:#8a8266;font-style:italic;line-height:1.4;border-top:1px dashed #dcd5c2;padding-top:8px}
+.tv-note{background:#fff7e6;border:1px solid #e6d9b0;border-radius:6px;padding:8px 12px;font-size:11px;color:#7a6a3a;margin-bottom:12px}
+/* detail toggles for the map */
+.tv-mapbody:not(.tv-showCaseRA) .tv-caseEl .tv-rawrap{display:none}
+.tv-mapbody:not(.tv-showCaseCQ) .tv-caseEl .tv-cqwrap{display:none}
+.tv-mapbody:not(.tv-showFoundRA) .tv-foundEl .tv-rawrap{display:none}
+.tv-mapbody:not(.tv-showFoundCQ) .tv-foundEl .tv-cqwrap{display:none}
+/* List: master row + detail-row hide */
+.mv-secrow.mv-masterrow td{background:#eef2f7}
+.mv-body.mv-hide-detail .mv-lvl-ra,.mv-body.mv-hide-detail .mv-lvl-cq{display:none}
+@media(max-width:900px){.tv-foundCols{grid-template-columns:repeat(2,1fr)}.tv-composite{flex-direction:column}.tv-p3col{width:100%}}
 
         /* COVERAGE_CSS_V1_START */
         .coverage-container { display:none; padding:8px 0 0 0; width:100%; box-sizing:border-box; overflow-x:hidden; }
@@ -572,6 +641,13 @@ function stagePill(v){
   return `<span class="sp ${cls}">${esc(lbl)}</span>`;
 }
 
+function memoDateHtml(url){
+  var m=String(url).match(/(\d{4})-(\d{2})-\d{2}\.html/);
+  if(!m) return '<span class="memo-mmm">MEMO</span>';
+  var mon=['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'][parseInt(m[2],10)-1]||'--';
+  return '<span class="memo-mmm">'+mon+'</span><span class="memo-yyyy">'+m[1]+'</span>';
+}
+
 function riNum(v){ const m=(v||'').match(/^(\d)/); return m?m[1]:'N'; }
 function rkNum(v){ const m=(v||'').match(/^(\d)/); return m?m[1]:'N'; }
 
@@ -668,11 +744,11 @@ function mkRow(s){
   const riOpts = RI_OPTS_HTML;
   const rkOpts = RK_OPTS_HTML;
 
-  const mapBtn  = `<a class="ibtn" href="#" onclick="openMapView(event,'${esc(s.ticker)}');return false" title="Map of ratings — ${esc(s.company_name||s.ticker)}">&#x1f5fa;</a>`;
-  const listBtn = `<a class="ibtn" href="#" onclick="openListView(event,'${esc(s.ticker)}');return false" title="List comparison — ${esc(s.company_name||s.ticker)}">&#x1f4cb;</a>`;
+  const mapBtn  = `<a class="ibtn mapb" href="#" onclick="openMapView(event,'${esc(s.ticker)}');return false" title="Map of ratings — ${esc(s.company_name||s.ticker)}">&#x1f5fa;</a>`;
+  const listBtn = `<a class="ibtn listb" href="#" onclick="openListView(event,'${esc(s.ticker)}');return false" title="List comparison — ${esc(s.company_name||s.ticker)}">&#x1f4cb;</a>`;
   const memoBtn = s.memo_url
-    ? `<a class="ibtn" href="${s.memo_url}" target="_blank" title="Latest memo for ${esc(s.company_name||s.ticker)}">&#x1f4c4;</a>`
-    : `<a class="ibtn dis" title="No memo">&#x1f4c4;</a>`;
+    ? `<a class="mcell" href="${s.memo_url}" target="_blank" title="Latest memo for ${esc(s.company_name||s.ticker)}">${memoDateHtml(s.memo_url)}</a>`
+    : `<span class="mcell dis" title="No memo yet">—</span>`;
 
   const mrVal = s.master_rating;
   const mrBadge = (!mrVal||mrVal==='Unclear') ? '<span class="bdg gN" title="Master rating — coming soon">'+(mrVal||'—')+'</span>' : badge(mrVal);
@@ -691,8 +767,8 @@ function mkRow(s){
     <td class="g3s">${llqPill(s.llq)}</td>
     <td>${tlBadge(s.timeliness)}</td>
     <td>${mrBadge}</td>
-    <td>${notionLnk}<span class="rbd ${riLetterCls(s.interest_level)}" title="${esc(s.interest_level||'')}">${esc(cleanRB(s.interest_level))}</span></td>
-    <td class="g3e"><span class="rbd rk${rk}" title="${esc(s.knowledge_level||'')}">${esc(cleanRB(s.knowledge_level))}</span></td>
+    <td>${notionUrl?`<a class="rbdlnk" href="${notionUrl}" target="_blank" title="Open in Notion — ${esc(s.interest_level||'')}"><span class="rbd ${riLetterCls(s.interest_level)}">${esc(cleanRB(s.interest_level))}</span></a>`:`<span class="rbd ${riLetterCls(s.interest_level)}" title="${esc(s.interest_level||'')}">${esc(cleanRB(s.interest_level))}</span>`}</td>
+    <td class="g3e">${notionUrl?`<a class="rbdlnk" href="${notionUrl}" target="_blank" title="Open in Notion — ${esc(s.knowledge_level||'')}"><span class="rbd rk${rk}">${esc(cleanRB(s.knowledge_level))}</span></a>`:`<span class="rbd rk${rk}" title="${esc(s.knowledge_level||'')}">${esc(cleanRB(s.knowledge_level))}</span>`}</td>
     <td class="g4s"><a class="ppill" href="https://vfhqi.github.io/master/index.html#tech/${esc(s.ticker)}" target="_blank" title="Technical momentum · open master dashboard Technical tab centred on ${esc(s.ticker)}">${badge(s.p1_technical_momentum)}</a></td>
     <td><span class="ppill" onclick="openMapView(event,'${esc(s.ticker)}')" title="Market-paradigm fit · open Map of ratings">${hasStage?badge(s.p2_market_paradigm_fit):'<span class="bdg gN">—</span>'}</span></td>
     <td><span class="ppill" onclick="openMapView(event,'${esc(s.ticker)}')" title="Fundamental change · open Map of ratings">${hasStage?badge(s.p3_fundamental_change):'<span class="bdg gN">—</span>'}</span></td>
@@ -1723,6 +1799,373 @@ function togglePrior(){
                 if(el.textContent.indexOf(ticker)>-1||el.getAttribute("data-ticker")===ticker){el.click();return;}}
         }
         // COVERAGE_JS_V1_END
+
+/* ==== Phase-2 Map/List injected engine — ROUND2 TEMPLE REBUILD (2026-07-07) ==== */
+/* ===================================================================
+   Map + List engine v2. Reads runtime globals set by init():
+     window.UNIV : array of snapshot stock rows
+     window.UBK  : {ticker: row}
+     window.GRAN : {ticker: {stage,date,source_memo,master:[{code,label,grade}],
+                    pillars:[{roman,label,grade,elements:[{code,label,grade,
+                    ras:[{code,label,grade,cqs:[{code,label,grade}]}]}],
+                    groups:[{code,label,grade,elements:[...]}]}]}}
+     window.COH  : {tickers:{ticker:{cid,zone}}}
+   Map = signed-off "temple": master band + case beam (Pillar I) on 5 foundation
+   group-pillars (Pillar II) + Pillar III RHS. grade may be null (NR).
+   Exposes: openMapView(evt,ticker), openListView(evt,ticker)
+   =================================================================== */
+(function(){
+'use strict';
+function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function G(){return window.GRAN||{};}
+function U(){return window.UNIV||[];}
+function ubk(t){return (window.UBK||{})[t]||null;}
+function coh(t){var c=window.COH&&window.COH.tickers;return c&&c[t]?c[t].cid:null;}
+
+var PFIELD={p1:'p1_technical_momentum',p2:'p2_market_paradigm_fit',p3:'p3_fundamental_change',p4:'p4_fundamental_foundations',p5:'p5_ssem',p6:'p6_valuation'};
+var PLABEL={p1:'Technical momentum',p2:'Market-paradigm fit',p3:'Fundamental change',p4:'Fundamental foundations',p5:'Sell-side earnings momentum',p6:'Valuation'};
+
+/* ---- grade chip ---- */
+function chipInfo(r){
+  if(r==null||r==='') return {cls:'mv-r-blank',txt:'—'};
+  var s=String(r).trim().toUpperCase();
+  if(s==='PASS') return {cls:'mv-r-a',txt:'✓'};
+  if(s==='FAIL') return {cls:'mv-r-f',txt:'✗'};
+  if(s==='NR')   return {cls:'mv-r-blank',txt:'—'};
+  var L=s[0], m={A:'mv-r-a',B:'mv-r-b',C:'mv-r-c',D:'mv-r-d',E:'mv-r-f',F:'mv-r-f'};
+  return m[L]?{cls:m[L],txt:L}:{cls:'mv-r-blank',txt:'—'};
+}
+function tchip(g){var ci=chipInfo(g);return '<span class="tv-chip '+ci.cls+'">'+ci.txt+'</span>';}
+var _tvMemoUrl='';
+function tvDrillAttr(a){if(!_tvMemoUrl)return '';var href=_tvMemoUrl+(a?('#'+a):'');return ' data-memo="'+esc(href)+'" onclick="return window.__tvDrill(event,this)" title="Open the memo at this section"';}
+if(!window.__tvDrill){window.__tvDrill=function(evt,el){try{evt.stopPropagation();evt.preventDefault();}catch(_e){}var u=el&&el.getAttribute('data-memo');if(u)window.open(u,'_blank','noopener');return false;};}
+function mchip(g,tt){var ci=chipInfo(g);return '<span class="mvchip nolink '+ci.cls+'"'+(tt?(' title="'+esc(tt)+'"'):'')+'>'+ci.txt+'</span>';}
+
+function findPillar(pillars,roman){for(var i=0;i<(pillars||[]).length;i++){if(String(pillars[i].roman||'').toUpperCase()===roman)return pillars[i];}return null;}
+function allElems(p){var out=(p&&p.elements)?p.elements.slice():[];if(p&&p.groups)p.groups.forEach(function(gr){out=out.concat(gr.elements||[]);});return out;}
+
+/* ---- Map (temple) render ---- */
+function raHtml(e){
+  if(!e.ras||!e.ras.length) return (e.grade==null?'<div class="tv-leafnote">Not rated at this stage</div>':'');
+  return '<div class="tv-rawrap">'+e.ras.map(function(r){
+    var cqs=(r.cqs&&r.cqs.length)?'<div class="tv-cqwrap">'+r.cqs.map(function(c){
+      return '<div class="tv-cq"><span class="tv-cql">'+esc((c.code?c.code+' — ':'')+(c.label||''))+'</span>'+tchip(c.grade)+'</div>';}).join('')+'</div>':'';
+    return '<div class="tv-ra"><div class="tv-rahdr tv-drillable"'+tvDrillAttr(r.anchor)+'><span class="tv-ral">'+esc((r.code?r.code+' — ':'')+(r.label||''))+'</span>'+tchip(r.grade)+'</div>'+cqs+'</div>';
+  }).join('')+'</div>';
+}
+function elHtml(e,kind){
+  return '<div class="tv-el tv-'+kind+'El"><div class="tv-elhdr tv-drillable"'+tvDrillAttr(e.anchor)+'><span class="tv-enum">'+esc(e.code||'')+'</span><span class="tv-ename">'+esc(e.label||'')+'</span>'+tchip(e.grade)+'</div>'+raHtml(e)+'</div>';
+}
+function fallbackMap(tk){
+  var row=ubk(tk);
+  var h='<div class="tv-note">No graded A&amp;J memo for this stock yet. Showing the six pillar grades from the ratings table.</div><div class="tv-mrband">';
+  ['p1','p2','p3','p4','p5','p6'].forEach(function(pid){
+    h+='<div class="tv-mrcard"><span class="tv-l">'+esc(PLABEL[pid])+'</span>'+tchip(row?row[PFIELD[pid]]:null)+'</div>';
+  });
+  return h+'</div>';
+}
+function renderMap(tk){
+  var gran=G()[tk];
+  var _rw=ubk(tk);_tvMemoUrl=(_rw&&_rw.memo_url)?_rw.memo_url:'';
+  if(!gran||(!gran.master&&!gran.pillars)) return fallbackMap(tk);
+  var master=gran.master||[], pillars=gran.pillars||[];
+  var pI=findPillar(pillars,'I'), pII=findPillar(pillars,'II'), pIII=findPillar(pillars,'III');
+  var h='';
+  h+='<div class="tv-ctrlbar">'+
+       '<div class="tv-cgrp tv-caseC"><span class="tv-clab">The case — detail</span>'+
+         '<button type="button" class="tv-tg on" data-cls="tv-showCaseRA" onclick="MV.tvtoggle(event,this)">Research angles</button>'+
+         '<button type="button" class="tv-tg" data-cls="tv-showCaseCQ" onclick="MV.tvtoggle(event,this)">Critical questions</button></div>'+
+       '<div class="tv-cgrp tv-foundC"><span class="tv-clab">Foundations — detail</span>'+
+         '<button type="button" class="tv-tg" data-cls="tv-showFoundRA" onclick="MV.tvtoggle(event,this)">Research angles</button>'+
+         '<button type="button" class="tv-tg" data-cls="tv-showFoundCQ" onclick="MV.tvtoggle(event,this)">Critical questions</button></div>'+
+     '</div>';
+  h+='<div class="tv-bandttl">Master ratings — headline</div><div class="tv-mrband">'+
+     master.map(function(m){return '<div class="tv-mrcard tv-drillable"'+tvDrillAttr(m.anchor)+'><span class="tv-l">'+esc(m.label||'')+'</span>'+tchip(m.grade)+'</div>';}).join('')+'</div>';
+  h+='<div class="tv-composite"><div class="tv-mainCol">';
+  if(pI){
+    h+='<div class="tv-block tv-caseB"><div class="tv-blockhdr tv-drillable"'+tvDrillAttr(pI.anchor)+'><span class="tv-bnum">THE CASE</span><span class="tv-bname">'+esc(pI.label||'Change elements')+' &middot; Pillar I</span>'+tchip(pI.grade)+'</div>'+
+       '<div class="tv-blockbody"><div class="tv-caseGrid">'+(allElems(pI).length?allElems(pI).map(function(e){return elHtml(e,'case');}).join(''):'<div class="tv-leafnote">No case elements in this memo.</div>')+'</div></div></div>';
+  }
+  if(pII){
+    var cols=(pII.groups&&pII.groups.length)
+      ? pII.groups.map(function(gr){return '<div class="tv-pillarCol"><div class="tv-grouphdr tv-drillable"'+tvDrillAttr(gr.anchor)+'><span class="tv-gname">'+esc(gr.label||gr.code||'')+'</span>'+tchip(gr.grade)+'</div><div class="tv-pillarBody">'+(gr.elements||[]).map(function(e){return elHtml(e,'found');}).join('')+'</div></div>';}).join('')
+      : '<div class="tv-pillarCol"><div class="tv-pillarBody">'+(pII.elements||[]).map(function(e){return elHtml(e,'found');}).join('')+'</div></div>';
+    h+='<div class="tv-block tv-foundB"><div class="tv-blockhdr tv-drillable"'+tvDrillAttr(pII.anchor)+'><span class="tv-bnum">FOUNDATIONS</span><span class="tv-bname">'+esc(pII.label||'Case building blocks')+' &middot; Pillar II</span>'+tchip(pII.grade)+'</div>'+
+       '<div class="tv-blockbody"><div class="tv-foundCols">'+cols+'</div></div></div>';
+  }
+  h+='</div>';
+  var p3els=pIII?allElems(pIII):[];
+  h+='<div class="tv-p3col"><div class="tv-block tv-p3B"><div class="tv-blockhdr tv-drillable"'+tvDrillAttr(pIII?pIII.anchor:'')+'><span class="tv-bnum">PILLAR III</span><span class="tv-bname">'+esc(pIII?(pIII.label||'Investment case components'):'Investment case components')+'</span>'+tchip(pIII?pIII.grade:null)+'</div>'+
+     '<div class="tv-blockbody">'+(p3els.length?p3els.map(function(e){return elHtml(e,'found');}).join(''):'<div class="tv-leafnote">Assessed at deep-dive stage. Not rated in this memo.</div>')+'</div></div></div>';
+  h+='</div>';
+  h+='<div class="tv-vintage">Granular grades are from this stock\'s '+esc(gran.stage||'')+' memo'+(gran.date?(' dated '+esc(gran.date)):'')+'; they may differ from the current pillar grades in the main table.</div>';
+  return h;
+}
+
+/* ---- List comparison matrix ---- */
+var listPeers={};
+function defaultPeers(tk){
+  var row=ubk(tk); if(!row) return [];
+  var cid=coh(tk), sc=row.sector_code, ic=row.industry_code;
+  var chosen=[], seen={}; seen[tk]=1;
+  function pass(pred){for(var i=0;i<U().length && chosen.length<7;i++){var s=U()[i]; if(seen[s.ticker])continue; if(pred(s)){chosen.push(s.ticker);seen[s.ticker]=1;}}}
+  if(cid) pass(function(s){return coh(s.ticker)===cid;});
+  if(sc)  pass(function(s){return s.sector_code===sc;});
+  if(ic)  pass(function(s){return s.industry_code===ic;});
+  return chosen;
+}
+function getListStocks(tk){
+  if(!listPeers[tk]) listPeers[tk]=defaultPeers(tk);
+  var peers=listPeers[tk].slice();
+  while(peers.length<7) peers.push(null);
+  peers=peers.slice(0,7);
+  var arr=[ubk(tk)]; peers.forEach(function(p){arr.push(p?ubk(p):null);});
+  return arr;
+}
+/* flat grade index for a stock's granular tree, keyed by a stable row-id */
+function granIndex(tk){
+  var g=G()[tk]; if(!g) return null;
+  var idx={};
+  (g.master||[]).forEach(function(m){idx['MR:'+m.code]=m.grade;});
+  (g.pillars||[]).forEach(function(p){
+    idx['P:'+p.roman]=p.grade;
+    (p.elements||[]).forEach(function(e){idx['E:'+e.code]=e.grade;(e.ras||[]).forEach(function(r){idx['RA:'+e.code+'.'+r.code]=r.grade;(r.cqs||[]).forEach(function(c){idx['CQ:'+e.code+'.'+r.code+'.'+c.code]=c.grade;});});});
+    (p.groups||[]).forEach(function(gr){idx['G:'+p.roman+'.'+gr.code]=gr.grade;
+      (gr.elements||[]).forEach(function(e){idx['E:'+e.code]=e.grade;(e.ras||[]).forEach(function(r){idx['RA:'+e.code+'.'+r.code]=r.grade;(r.cqs||[]).forEach(function(c){idx['CQ:'+e.code+'.'+r.code+'.'+c.code]=c.grade;});});});
+    });
+  });
+  return idx;
+}
+/* build the checklist rows from the PRIMARY stock's tree (fallback: richest) */
+function buildChecklist(primaryTk){
+  var g=G(), best=null, bestN=-1, bestTk=null;
+  if(primaryTk && g[primaryTk]) { best=g[primaryTk]; bestTk=primaryTk; }
+  else { Object.keys(g).forEach(function(t){var n=((g[t].master||[]).length)+((g[t].pillars||[]).length); if(n>bestN){bestN=n;best=g[t];bestTk=t;}}); }
+  var rows=[];
+  if(!best) return rows;
+  (best.master||[]).forEach(function(m){rows.push({rid:'MR:'+m.code,level:'master',code:m.code,label:m.label});});
+  (best.pillars||[]).forEach(function(p){
+    rows.push({rid:'P:'+p.roman,level:'pillar',code:'Pillar '+p.roman,label:p.label});
+    (p.elements||[]).forEach(function(e){pushEl(rows,p,null,e);});
+    (p.groups||[]).forEach(function(gr){
+      rows.push({rid:'G:'+p.roman+'.'+gr.code,level:'group',code:gr.code,label:gr.label});
+      (gr.elements||[]).forEach(function(e){pushEl(rows,p,gr,e);});
+    });
+  });
+  return rows;
+}
+function pushEl(rows,p,gr,e){
+  rows.push({rid:'E:'+e.code,level:'element',code:e.code,label:e.label});
+  (e.ras||[]).forEach(function(r){
+    rows.push({rid:'RA:'+e.code+'.'+r.code,level:'ra',code:r.code,label:r.label});
+    (r.cqs||[]).forEach(function(c){rows.push({rid:'CQ:'+e.code+'.'+r.code+'.'+c.code,level:'cq',code:c.code,label:c.label});});
+  });
+}
+function cellGrade(stock,rd){
+  if(!stock) return mchip(null,'');
+  if(rd.level==='pillar'){
+    // prefer granular pillar grade; fall back to snapshot pillar field by roman->p#
+    var idx=granIndex(stock.ticker);
+    if(idx && idx[rd.rid]!=null) return mchip(idx[rd.rid],rd.label);
+    return mchip(null,rd.label);
+  }
+  var gi=granIndex(stock.ticker);
+  if(gi && (rd.rid in gi)) return mchip(gi[rd.rid],rd.label);
+  return mchip(null,'');
+}
+function renderMatrix(tk){
+  var stocks=getListStocks(tk), rows=buildChecklist(tk);
+  var h='<table class="mv-matrix"><thead><tr><th class="mv-lblcol">Rating checklist</th>';
+  for(var c=0;c<8;c++){
+    var s=stocks[c], isP=(c===0);
+    var cls='mv-thead-tk'+(isP?' mv-primary':(s?' mv-th-drag':' mv-empty'));
+    h+='<th class="mv-stockcol" data-col="'+c+'"'+((!isP&&s)?' draggable="true"':'')+'>';
+    if(!isP) h+='<span class="mv-slotctl" title="Clear this column" onclick="MV.clearPeer(event,'+c+')">✕</span>';
+    h+='<div class="'+cls+'"'+(isP?'':(' onclick="MV.search(event,'+c+')"'))+'>';
+    if(s){h+='<span class="mv-tkname">'+esc(s.ticker)+'</span><span class="mv-tkco">'+esc(s.company_name||'')+'</span>';}
+    else {h+='<span class="mv-tkname">+ Add</span><span class="mv-tkco">click to choose</span>';}
+    h+='</div></th>';
+  }
+  h+='</tr></thead><tbody>';
+  rows.forEach(function(rd){
+    var isSec=(rd.level==='pillar'||rd.level==='master');
+    var rowcls=(rd.level==='pillar')?'mv-secrow':(rd.level==='master'?'mv-secrow mv-masterrow':('mv-itemrow mv-lvl-'+rd.level));
+    h+='<tr class="'+rowcls+'">';
+    h+='<td class="mv-lblcol">'+(isSec?'':('<span class="mv-lid">'+esc(rd.code||'')+'</span>'))+esc(rd.label||'')+'</td>';
+    stocks.forEach(function(s){h+='<td class="mv-stockcol">'+cellGrade(s,rd)+'</td>';});
+    h+='</tr>';
+  });
+  h+='</tbody></table>';
+  h+='<div class="mv-legend"><b>Grades:</b> '+tchip('A')+' A '+tchip('B')+' B '+tchip('C')+' C '+tchip('D')+' D '+tchip('F')+' F '+tchip(null)+' none/NR/no memo'+
+     ' &nbsp;·&nbsp; Master + pillar rows compare across all stocks; element/angle/question rows fill in where a stock has a graded memo. Toggle "Show CQ/RA detail" for the deeper rows.</div>';
+  return h;
+}
+
+/* ---- List peer editing (search / pick / drag) ---- */
+var activeSearchCol=-1, currentList=null, currentMap=null;
+function closeSearch(){var e=document.querySelectorAll('.mv-search.active');for(var i=0;i<e.length;i++)e[i].classList.remove('active');activeSearchCol=-1;}
+function doSearch(evt,col){
+  if(evt)evt.stopPropagation(); closeSearch();
+  var th=document.querySelector('#mv-list-overlay .mv-matrix thead th[data-col="'+col+'"]'); if(!th) return;
+  var box=th.querySelector('.mv-search');
+  if(!box){box=document.createElement('div');box.className='mv-search';
+    box.innerHTML='<input type="text" placeholder="Type ticker or name…"><div class="mv-search-res"></div>';
+    th.appendChild(box);
+    var inp=box.querySelector('input');
+    inp.addEventListener('input',function(){filterSearch(this.value,box,col);});
+    inp.addEventListener('click',function(e){e.stopPropagation();});
+    box.addEventListener('click',function(e){e.stopPropagation();});
+  }
+  box.classList.add('active');activeSearchCol=col;
+  var inp2=box.querySelector('input');inp2.value='';filterSearch('',box,col);
+  setTimeout(function(){inp2.focus();},40);
+}
+function filterSearch(q,box,col){
+  var res=box.querySelector('.mv-search-res'), ql=q.toLowerCase();
+  var html='<div class="mv-opt" onclick="MV.pick('+col+',null)"><span style="color:#8a7f63;font-style:italic">Clear slot</span></div>', n=0, uni=U();
+  for(var i=0;i<uni.length && n<60;i++){var s=uni[i];
+    if(ql && s.ticker.toLowerCase().indexOf(ql)===-1 && String(s.company_name||'').toLowerCase().indexOf(ql)===-1) continue;
+    html+='<div class="mv-opt" onclick="MV.pick('+col+',\''+esc(s.ticker).replace(/\x27/g,"\\x27")+'\')"><span><b>'+esc(s.ticker)+'</b> '+esc(s.company_name||'')+'</span><span class="mv-opt-sec">'+esc(s.sector||'')+'</span></div>'; n++;
+  }
+  res.innerHTML=html;
+}
+function pickPeer(col,ticker){
+  var tk=currentList; if(!tk) return;
+  if(!listPeers[tk]) listPeers[tk]=defaultPeers(tk);
+  while(listPeers[tk].length<7) listPeers[tk].push(null);
+  listPeers[tk][col-1]=ticker; closeSearch();
+  document.getElementById('mv-list-body').innerHTML=renderMatrix(tk); wireDrag();
+}
+function clearPeer(evt,col){if(evt)evt.stopPropagation();pickPeer(col,null);}
+var dragCol=-1;
+function wireDrag(){
+  var ths=document.querySelectorAll('#mv-list-overlay .mv-matrix thead th.mv-stockcol[draggable="true"]');
+  ths.forEach(function(th){
+    th.addEventListener('dragstart',function(e){dragCol=+th.dataset.col;e.dataTransfer.effectAllowed='move';});
+    th.addEventListener('dragover',function(e){e.preventDefault();th.classList.add('mv-th-dragover');});
+    th.addEventListener('dragleave',function(){th.classList.remove('mv-th-dragover');});
+    th.addEventListener('drop',function(e){e.preventDefault();th.classList.remove('mv-th-dragover');moveCol(dragCol,+th.dataset.col);});
+    th.addEventListener('dragend',function(){document.querySelectorAll('.mv-th-dragover').forEach(function(x){x.classList.remove('mv-th-dragover');});});
+  });
+}
+function moveCol(from,to){
+  var tk=currentList; if(!tk||from<1||to<1||from===to) return;
+  var arr=listPeers[tk]; if(!arr) return;
+  var item=arr.splice(from-1,1)[0]; arr.splice(to-1,0,item);
+  document.getElementById('mv-list-body').innerHTML=renderMatrix(tk); wireDrag();
+}
+
+/* ---- modal shells ---- */
+function ensureOverlay(kind){
+  var id='mv-'+kind+'-overlay', ov=document.getElementById(id);
+  if(ov) return ov;
+  ov=document.createElement('div'); ov.id=id; ov.className='mv-overlay'+(kind==='list'?' mv-list':'');
+  var toggleHtml = (kind==='list')
+    ? '<label class="mv-toggle"><input type="checkbox" id="mv-list-cqra"> Show CQ/RA detail</label>'
+    : '';
+  ov.innerHTML='<div class="mv-frame"><div class="mv-head">'+
+      '<span class="mv-tk" id="mv-'+kind+'-tk"></span>'+
+      '<span class="mv-co" id="mv-'+kind+'-co"></span>'+
+      '<span class="mv-sub" id="mv-'+kind+'-sub"></span>'+
+      '<span class="mv-spacer"></span>'+ toggleHtml +
+      '<button class="mv-close" onclick="MV.close(\''+kind+'\')" title="Close">✕</button>'+
+    '</div><div class="mv-body" id="mv-'+kind+'-body"></div></div>';
+  document.body.appendChild(ov);
+  ov.addEventListener('click',function(e){if(e.target===ov)closeModal(kind);});
+  if(kind==='list'){
+    ov.querySelector('#mv-list-cqra').addEventListener('change',function(){
+      document.getElementById('mv-list-body').classList.toggle('mv-hide-detail',!this.checked);
+    });
+  }
+  return ov;
+}
+function openMap(evt,tk){
+  if(evt&&evt.preventDefault)evt.preventDefault();
+  var row=ubk(tk), gran=G()[tk]; currentMap=tk;
+  var ov=ensureOverlay('map');
+  document.getElementById('mv-map-tk').textContent=tk;
+  document.getElementById('mv-map-co').textContent=row?(row.company_name||''):'';
+  document.getElementById('mv-map-sub').textContent=gran?('Map of ratings · '+(gran.stage||'')+(gran.date?(' '+gran.date):'')):'Map of ratings';
+  var body=document.getElementById('mv-map-body');
+  body.className='mv-body tv-mapbody tv-showCaseRA';   // default: case research angles on
+  body.innerHTML=renderMap(tk);
+  ov.classList.add('active'); document.body.style.overflow='hidden';
+}
+function openList(evt,tk){
+  if(evt&&evt.preventDefault)evt.preventDefault();
+  var row=ubk(tk); currentList=tk;
+  var ov=ensureOverlay('list');
+  document.getElementById('mv-list-tk').textContent=tk;
+  document.getElementById('mv-list-co').textContent=row?(row.company_name||''):'';
+  document.getElementById('mv-list-sub').textContent='Peer comparison · '+(row?(row.sector||''):'');
+  var body=document.getElementById('mv-list-body'); body.className='mv-body mv-hide-detail';
+  var cb=document.getElementById('mv-list-cqra'); if(cb)cb.checked=false;
+  body.innerHTML=renderMatrix(tk);
+  ov.classList.add('active'); document.body.style.overflow='hidden'; wireDrag();
+}
+function closeModal(kind){
+  var ov=document.getElementById('mv-'+kind+'-overlay');
+  if(ov)ov.classList.remove('active');
+  document.body.style.overflow=''; if(kind==='list')closeSearch();
+}
+function tvtoggle(evt,btn){
+  if(evt)evt.stopPropagation();
+  btn.classList.toggle('on');
+  var body=document.getElementById('mv-map-body');
+  if(body) body.classList.toggle(btn.getAttribute('data-cls'), btn.classList.contains('on'));
+}
+
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeModal('map');closeModal('list');}});
+document.addEventListener('click',function(){closeSearch();});
+
+window.MV={openMap:openMap,openList:openList,close:closeModal,search:doSearch,pick:pickPeer,clearPeer:clearPeer,tvtoggle:tvtoggle,_renderMap:renderMap,_renderList:renderMatrix,_checklist:buildChecklist};
+window.openMapView=function(evt,tk){return openMap(evt,tk);};
+window.openListView=function(evt,tk){return openList(evt,tk);};
+})();
+
+
+
+/* ==== Prior-rating toggle ==== */
+window.__priorOn=false;
+function priorGradeFor(tk,pk,live){
+  var H=window.RHIST; if(!H||!H.dates||H.dates.length<1) return null;
+  for(var i=H.dates.length-1;i>=0;i--){
+    var snap=H.snapshots[H.dates[i]]; if(!snap) continue;
+    var rec=snap[tk]; if(!rec) continue;
+    var g=rec[pk]; if(!g) continue;
+    if(i===H.dates.length-1) continue;     // newest = live, skip
+    return (g!==live)? g : null;           // first older grade: changed -> show, same -> none
+  }
+  return null;
+}
+function priorChip(grade){
+  var cls=(typeof gradeCls==='function')?gradeCls(grade):'gN';
+  return '<span class="ppair"><span class="bdg '+cls+'">'+esc(grade)+'</span><span class="parr">→</span></span>';
+}
+function applyPrior(){
+  var on=window.__priorOn;
+  var pk=['p1','p2','p3','p4','p5','p6'];
+  var rows=document.querySelectorAll('#tbody tr');
+  for(var r=0;r<rows.length;r++){
+    var tr=rows[r]; var tk=tr.dataset.ticker; if(!tk) continue;
+    var tds=tr.children; var n=tds.length; // last 6 tds are pillars p1..p6
+    for(var c=0;c<6;c++){
+      var td=tds[n-6+c]; if(!td) continue;
+      var old=td.querySelector('.ppair'); if(old) old.remove();
+      if(on){
+        var live=tr.dataset[pk[c]]||'';
+        if(live){ var pg=priorGradeFor(tk,pk[c],live); if(pg){ td.insertAdjacentHTML('afterbegin',priorChip(pg)); } }
+      }
+    }
+  }
+}
+function togglePrior(){
+  window.__priorOn=!window.__priorOn;
+  var b=document.getElementById('priorToggle');
+  if(b){ b.classList.toggle('on',window.__priorOn); b.textContent='Δ Prior rating: '+(window.__priorOn?'on':'off'); }
+  applyPrior();
+}
+
 </script>
 </body>
 </html>
