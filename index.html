@@ -2167,5 +2167,8 @@ function togglePrior(){
 }
 
 </script>
+
+<script>/* QC watchdog banner (2026-07-08): shows only if qc-status.json=fail */
+(function(){try{fetch("qc-status.json?cb="+Date.now()).then(function(r){return r.ok?r.json():null;}).then(function(s){if(!s||s.status!=="fail")return;var d=document.createElement("div");d.id="qc-audit-banner";d.style.cssText="position:sticky;top:0;z-index:99999;background:#b91c1c;color:#fff;padding:8px 16px;font:600 13px system-ui,-apple-system,sans-serif;text-align:center;box-shadow:0 2px 6px rgba(0,0,0,.25)";var n=(s.critical_failures||[]).length;d.textContent="\u26A0 Automated QC flagged a problem with this dashboard ("+n+" critical check"+(n===1?"":"s")+" failing, at "+(s.checked_at||"")+"). Data may be stale; Watson has been alerted and the last known-good copy is being restored.";document.body.insertBefore(d,document.body.firstChild);}).catch(function(){});}catch(e){}})();</script>
 </body>
 </html>
