@@ -1,0 +1,3402 @@
+{
+  "schema_version": "1.0",
+  "ticker": "GET",
+  "company_name": "Getlink SE",
+  "stage": "Triaging",
+  "stage_date": "2026-04-24",
+  "authored_by": "Watson (APM)",
+  "driver_terminology": "PRIMARY/SECONDARY/TERTIARY",
+  "header": {
+    "primary_setup": "Demand-Driven EPSU/EPT — Channel Tunnel natural monopoly + HSR passenger inflection (Virgin Trains 2029-30, Trenitalia 2029) driving volume growth through fixed-cost infrastructure",
+    "primary_setup_verdict": "C",
+    "secondary_setup": "Event-Driven — ElecLink regulatory resolution (€516m profit-sharing provision) + EES border implementation (Apr-Sep 2026)",
+    "conviction": "C — conditional on freight volume recovery and ElecLink spread stabilisation; fulcrum = H1 2026 traffic data + EES implementation outcome",
+    "time_horizon": "N1-3Y, fulcrum events inside 18m (Virgin Trains fleet order confirmation, EES rollout Apr-Sep 2026, ElecLink regulatory settlement)"
+  },
+  "sections": {
+    "A": {
+      "letter": "A",
+      "title": "FINANCIALS",
+      "applicable": true,
+      "inline_verdict": "[Left blank — Richard's instruction]",
+      "default_open": false,
+      "applicable_note": null,
+      "word_count": 0,
+      "page_count": 0,
+      "target_words": 0,
+      "subsections": [
+        {
+          "id": "A.I",
+          "title": "Financial summary",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "kv_grid",
+              "title": "Last reported period -- headline",
+              "rows": [],
+              "ratings": []
+            },
+            {
+              "type": "prose",
+              "iaja": "I",
+              "text": "",
+              "ratings": []
+            },
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "A.II.1",
+          "title": "Guidance -- Watson analysis/judgement",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "text": "",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "A.II.2",
+          "title": "Financial estimates -- sell-side -- Watson analysis/judgement",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "text": "",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "A.II.3",
+          "title": "Financial forecasts -- VF modal case -- Watson analysis/judgement",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "text": "",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "A.II.4",
+          "title": "TSR Dupont -- Watson analysis/judgement",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "text": "",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        }
+      ],
+      "financials": {
+        "guidance": [],
+        "ss_estimates": [],
+        "model": {
+          "currency": "EUR m",
+          "hist_years": [
+            "FY20",
+            "FY21",
+            "FY22",
+            "FY23",
+            "FY24",
+            "FY25"
+          ],
+          "fwd_years": [
+            "FY26E",
+            "FY27E",
+            "FY28E",
+            "FY29E",
+            "FY30E"
+          ],
+          "guidance_years": [
+            "FY26E",
+            "FY27E",
+            "FY28E"
+          ],
+          "ss_years": [
+            "FY26E",
+            "FY27E",
+            "FY28E"
+          ],
+          "rb_years": [
+            "FY26E",
+            "FY27E",
+            "FY28E",
+            "FY29E",
+            "FY30E"
+          ],
+          "sections": [
+            {
+              "id": "pnl",
+              "label": "P&L",
+              "rows": []
+            },
+            {
+              "id": "fcf",
+              "label": "Free Cash Flow",
+              "rows": []
+            },
+            {
+              "id": "bs",
+              "label": "Balance Sheet",
+              "rows": []
+            }
+          ]
+        },
+        "tsr_dupont": {
+          "stock_name": "GET — Getlink SE",
+          "period_headers": [],
+          "columns": [],
+          "rows": []
+        }
+      }
+    },
+    "B": {
+      "letter": "B",
+      "title": "EXECUTIVE SUMMARY",
+      "applicable": true,
+      "inline_verdict": "Plausibly compelling natural monopoly + HSR volume inflection trade; progress to ESA with freight recovery and ElecLink stabilisation as fulcrum gates",
+      "default_open": true,
+      "subsections": [
+        {
+          "id": "B.I.1",
+          "title": "Executive summary",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "callout",
+              "iaja": "J",
+              "text": "Progress to ESA. Getlink is a natural monopoly with a 60-year concession runway (to 2086) — the Channel Tunnel is an irreplaceable fixed-link asset protected by bilateral Treaty of Canterbury. HSR passenger inflection is the genuine volume catalyst: Virgin Trains (2029-30) and Trenitalia (2029) entering as new operators will structurally increase Eurotunnel rail path utilisation at >90% incremental EBITDA margins via fixed-cost infrastructure. But ElecLink revenue normalisation (€558m peak 2023 to €225m 2025), persistent truck shuttle weakness (-5.3% Jan 2026), and stretched valuation (~33x P/E) create tension. Two gates: (i) can freight volumes stabilise and HSR new entrant timelines hold? (ii) will ElecLink spreads stabilise at €200-250m run-rate or compress further?",
+              "kind": "verdict"
+            },
+            {
+              "type": "prose",
+              "iaja": "A",
+              "text": "The investment case rests on three legs: (1) HSR passenger volume growth converting to EBITDA at >90% incremental margins — Virgin Trains fleet order for 2029-30 and Trenitalia entry in 2029 would structurally increase tunnel utilisation from current levels, (2) ElecLink regulatory resolution — the €516m profit-sharing provision overhang creates binary FCF clarity once settled, and resolution could unlock €200-300m of trapped capital, (3) ESG-driven modal shift from ferries and airlines to rail — carbon taxes and EU Green Deal structurally raise competitor costs, benefiting the tunnel's inherent carbon advantage (6x lower CO2 per passenger-km vs ferry). The fulcrum question is whether the HSR entrant timeline holds given rolling stock procurement complexity and whether freight volume weakness is cyclical (EU IP stagnation) or structural (supply chain restructuring away from UK-EU corridors post-Brexit)."
+            },
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "PRIMARY driver: HSR passenger volume growth — Virgin Trains (2029-30) and Trenitalia (2029) entering as new operators on cross-Channel rail paths, converting to EBITDA at >90% incremental margins via fixed-cost tunnel infrastructure. Record 11.8m Eurostar passengers in 2025 demonstrates base demand strength.",
+                  "sub": [
+                    {
+                      "iaja": "I",
+                      "text": "Eurotunnel constitutes ~75% of revenue. 56.1% car market share. Record Eurostar passengers 11.8m in 2025. Virgin Trains fleet order expected 2026-27 for 2029-30 service launch."
+                    },
+                    {
+                      "iaja": "A",
+                      "text": "HSR inflection is the key catalyst but timing is uncertain — rolling stock procurement and regulatory approvals could delay Virgin Trains beyond 2030. Track incremental path utilisation and fleet order confirmation as leading indicators."
+                    }
+                  ]
+                },
+                {
+                  "iaja": "J",
+                  "text": "SECONDARY driver: ElecLink regulatory resolution — €516m profit-sharing provision overhang from excess returns; resolution unlocks FCF clarity and potentially releases €200-300m trapped capital. Revenue collapsed from €558m (2023) to €225m (2025) — structural normalisation, not temporary.",
+                  "sub": [
+                    {
+                      "iaja": "I",
+                      "text": "ElecLink is a 1GW electricity interconnector (~14% of revenue). Revenue driven by GB-France power price spreads. €516m provision relates to profit-sharing mechanism with governments."
+                    },
+                    {
+                      "iaja": "A",
+                      "text": "ElecLink revenue is inherently volatile and spread-dependent. Need to assess whether €200-250m is sustainable run-rate or whether further compression likely as EU-UK energy markets equilibrate."
+                    }
+                  ]
+                },
+                {
+                  "iaja": "J",
+                  "text": "TERTIARY driver: ESG-driven modal shift — carbon taxes and EU Green Deal structurally raise ferry and airline costs, benefiting tunnel's 6x carbon advantage per passenger-km. New dividend policy (€0.80 rising to €1.00 by 2030) signals management confidence.",
+                  "sub": [
+                    {
+                      "iaja": "I",
+                      "text": "Channel Tunnel produces ~6x less CO2 per passenger-km than ferries. EU ETS and UK ETS expanding to maritime. New dividend policy: €0.80 (2026) rising to €1.00 (2030)."
+                    },
+                    {
+                      "iaja": "A",
+                      "text": "Modal shift is a slow-burn structural tailwind, not an immediate catalyst. Carbon tax implementation timelines and ferry operator responses (LNG conversion) are variables."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "prose",
+              "iaja": "A",
+              "text": "Key risk: Valuation is stretched at ~33x P/E — premium to infrastructure peers (Vinci 16.7x, Eiffage 15x, Aena 16.9x). The premium is partially justified by natural monopoly + 60-year concession but leaves minimal margin of safety. EES border system rollout (Apr-Sep 2026) creates near-term binary disruption risk to passenger volumes — implementation friction could deter casual travellers. Truck shuttle volumes declining (-5.3% Jan 2026) with persistent weakness suggesting structural post-Brexit trade pattern changes, not just cyclical softness. Pre-mortem RED risks: traffic recession cascade (volume decline + fixed cost leverage = sharp EBITDA impact) and ElecLink operational drag (interconnector underperformance becoming permanent)."
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        }
+      ],
+      "applicable_note": null,
+      "word_count": 0,
+      "page_count": 0,
+      "target_words": 0
+    },
+    "C": {
+      "letter": "C",
+      "title": "REQUIRED ATTRIBUTES",
+      "applicable": true,
+      "inline_verdict": "C overall — natural monopoly credentials strong, HSR inflection credible but distant, valuation stretched, ElecLink normalisation and freight weakness are gating",
+      "default_open": true,
+      "applicable_note": null,
+      "word_count": 0,
+      "page_count": 0,
+      "target_words": 0,
+      "subsections": [
+        {
+          "id": "C.I",
+          "title": "Ratings (graphical form)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "ratings_table",
+              "id": "ratings-overview",
+              "title": "Ratings — all six pillars, Required Attribute Families, TCs, Required Attributes and Core Questions (GET, Triaging)",
+              "word_target": 0,
+              "has_toggle": true,
+              "toggle_labels": [
+                "RATINGS ONLY",
+                "SUMMARIES"
+              ],
+              "default_mode": "SUMMARIES",
+              "default_expansion": "full",
+              "rows": [
+                {
+                  "level": "pillar",
+                  "id": "p1",
+                  "label": "P1: Technical Strength",
+                  "rating": "C",
+                  "summary": "SP ~€11.50, above 200D MA post-CMD rally. Stage 2 forming but RS rank weak relative to broader market. 33x P/E limits technical upside."
+                },
+                {
+                  "level": "family",
+                  "id": "p1.mn",
+                  "label": "Minervini dimensions (8 point + extension)",
+                  "rating": "C",
+                  "summary": "Estimated 5-6 / 9 PASS — post-CMD rally constructive but relative strength lagging infrastructure peers."
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d1",
+                  "label": "D1: Price > 200D MA",
+                  "rating": "PASS",
+                  "summary": "SP ~€11.50 above 200D MA. Post-CMD rally (Feb 2026) provided uplift."
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d2",
+                  "label": "D2: 200D MA trending up (≥1M)",
+                  "rating": "PASS",
+                  "summary": "200D MA trending upward since CMD in Feb 2026 provided new targets and dividend policy."
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d3",
+                  "label": "D3: Price > 150D MA",
+                  "rating": "PASS",
+                  "summary": "SP above 150D MA. CMD catalyst drove re-rating from ~€10 range."
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d4",
+                  "label": "D4: 150D > 200D MA",
+                  "rating": "PASS",
+                  "summary": "150D MA above 200D MA — constructive alignment post-CMD."
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d5",
+                  "label": "D5: 50D > 150D MA",
+                  "rating": "PASS",
+                  "summary": "50D MA above 150D MA. Short-term momentum positive from CMD and FY25 results."
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d6",
+                  "label": "D6: Price > 50D MA",
+                  "rating": "FAIL",
+                  "summary": "SP may be near or slightly below 50D MA given recent pullback from post-CMD highs. Need FactSet confirmation."
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d7",
+                  "label": "D7: Price > 30% above 52W low",
+                  "rating": "FAIL",
+                  "summary": "52W low ~€9.50, current ~€11.50 = ~21% above low. Does not meet 30% threshold."
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d8",
+                  "label": "D8: Price within 25% of 52W high",
+                  "rating": "PASS",
+                  "summary": "52W high ~€12.50, current ~€11.50 = ~8% below. Within 25% threshold."
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d9",
+                  "label": "D9: RS Rank ≥70 (provisional)",
+                  "rating": "FAIL",
+                  "summary": "RS Rank not confirmed — infrastructure sector has underperformed broader market. Need FactSet data."
+                },
+                {
+                  "level": "pillar",
+                  "id": "p2",
+                  "label": "P2: Fit for Market Paradigm",
+                  "rating": "C",
+                  "summary": "Infrastructure monopoly is defensive in risk-off. Recurring toll-like revenues. But ElecLink exposure to energy spreads creates volatility. Not AI-aligned."
+                },
+                {
+                  "level": "paradigm",
+                  "id": "p2.1",
+                  "label": "Paradigm 1: Late bull / early bear market",
+                  "rating": "C",
+                  "summary": "Infrastructure concession with recurring revenues is relatively defensive. 2086 concession provides visibility. But 33x P/E means limited valuation support in downturn."
+                },
+                {
+                  "level": "paradigm",
+                  "id": "p2.2",
+                  "label": "Paradigm 2: AI demand / disruption",
+                  "rating": "D",
+                  "summary": "No AI alignment. Physical tunnel infrastructure is not AI-adjacent. No data centre or connectivity angle relevant."
+                },
+                {
+                  "level": "paradigm",
+                  "id": "p2.3",
+                  "label": "Paradigm 3: Oil, stagflation, recession, rising rates",
+                  "rating": "C",
+                  "summary": "Mixed. Tunnel benefits from higher fuel costs making ferries less competitive. But recession reduces cross-Channel traffic volumes. ElecLink benefits from energy price volatility via spread widening. Rising rates negative for 33x P/E duration asset."
+                },
+                {
+                  "level": "pillar",
+                  "id": "p3",
+                  "label": "P3: Fundamental Case (Outputs)",
+                  "rating": "C",
+                  "summary": "€1bn EBITDA 2030 target credible but slightly aggressive (~3.2% CAGR). HSR inflection is genuine but distant (2029-30). ElecLink normalisation drag on near-term earnings."
+                },
+                {
+                  "level": "family",
+                  "id": "p3.ic1",
+                  "label": "IC#1: Required Case OUTPUTS",
+                  "rating": "C",
+                  "summary": "EPS growth path via HSR volume uplift + operating leverage on fixed-cost infrastructure. ElecLink normalisation creates near-term earnings drag. €1bn EBITDA by 2030 is the target."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic1.tc1",
+                  "label": "TC: Strong financial profile?",
+                  "rating": "C",
+                  "summary": "Revenue €1,595m (-1%), EBITDA €859m (+4%), 50.4% EBITDA margin. Strong margins but top-line growth constrained. ElecLink drag partially offset by Eurotunnel growth."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc1.a1",
+                  "label": "A1: Sufficient longevity of case (baton)?",
+                  "rating": "B",
+                  "summary": "Exceptional longevity. Concession to 2086 — 60 years remaining. Natural monopoly protected by Treaty of Canterbury. No comparable asset globally. Baton is as long as it gets."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc1.q1",
+                  "label": "Q1: Three-year, mid-term, triple ratchet step-up?",
+                  "rating": "C",
+                  "summary": "Partial. Volume (HSR new entrants 2029-30), margin (operating leverage on fixed costs), multiple (potential re-rating if €1bn EBITDA target approached). Volume leg is the weakest near-term — HSR inflection is 3-4 years out."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc1.a2",
+                  "label": "A2: Sufficient growth rate?",
+                  "rating": "C",
+                  "summary": "€1bn EBITDA by 2030 implies ~3.2% CAGR from €859m. Below Richard's 12-20% EPS growth target. Growth is steady not explosive — infrastructure compounder profile."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc1.q2",
+                  "label": "Q2: 12-20% EPS growth p.a.?",
+                  "rating": "C",
+                  "summary": "Unlikely on organic basis. ~3-5% EBITDA CAGR to 2030. EPS growth potentially 5-8% including leverage reduction and dividend policy. Below 12-20% threshold without multiple re-rating."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc1.a3",
+                  "label": "A3: Sufficient improvement in financials?",
+                  "rating": "C",
+                  "summary": "EBITDA margin already strong at 50.4%. Improvement comes from volume growth on fixed costs (incremental margins >90%). ElecLink normalisation is a headwind — €558m to €225m revenue decline already absorbed."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc1.q3",
+                  "label": "Q3: Margin/growth step-up?",
+                  "rating": "C",
+                  "summary": "Margin step-up limited — already at 50.4% EBITDA. Growth step-up conditional on HSR new entrants materialising. Near-term growth constrained by ElecLink normalisation and freight weakness."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic1.tc2",
+                  "label": "TC: Acceptable case setup?",
+                  "rating": "C",
+                  "summary": "Demand-Driven EPSU via HSR inflection. Event-Driven secondary via ElecLink resolution and EES. Setup is credible but catalysts are distant (2029-30 for HSR)."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc2.a4",
+                  "label": "A4: Sufficient setup fit?",
+                  "rating": "C",
+                  "summary": "Demand-Driven: HSR new entrants provide structural volume uplift on monopoly infrastructure. Event-Driven: ElecLink resolution is binary catalyst. Dual setup credible but primary catalyst is 3-4 years out."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc2.q4",
+                  "label": "Q4: Fit with required setups?",
+                  "rating": "C",
+                  "summary": "Moderate fit. Demand-Driven EPSU requires visible demand catalyst — HSR entrants are visible but distant. Event-Driven requires identifiable resolution — ElecLink provision settlement is identifiable but timing uncertain."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc2.a5",
+                  "label": "A5: Goldilocks timeliness?",
+                  "rating": "C",
+                  "summary": "Early. HSR inflection 3-4 years out. EES rollout Apr-Sep 2026 creates near-term uncertainty not opportunity. ElecLink provision settlement timing unknown. May be too early for optimal entry."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc2.q5",
+                  "label": "Q5: Post CfC clearing / SP turn?",
+                  "rating": "C",
+                  "summary": "CfC is ElecLink revenue collapse (€558m to €225m). Partially cleared — market has absorbed normalisation. SP turn from ~€9.50 lows to ~€11.50 post-CMD. Partial clearing."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc2.q6",
+                  "label": "Q6: Less than 6M after turn?",
+                  "rating": "C",
+                  "summary": "CMD was Feb 2026 (~2M ago). SP turn from lows is recent. But HSR catalyst is 3-4 years out — timeliness tension between recent SP turn and distant fundamental catalyst."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic1.tc3",
+                  "label": "TC: Sufficient case navigatability?",
+                  "rating": "C",
+                  "summary": "Monthly traffic statistics published. ElecLink revenue reported quarterly. HSR new entrant milestones (fleet orders, regulatory approvals) are trackable public events."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc3.a6",
+                  "label": "A6: Sufficiently trackable, updatable, and invalidatable early?",
+                  "rating": "C",
+                  "summary": "Monthly traffic data (cars, trucks, Eurostar passengers). Quarterly financials. HSR milestones (fleet orders, approvals) are discrete events. ElecLink spreads observable in real-time."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc3.q7",
+                  "label": "Q7: Helpful IR re. operating momentum?",
+                  "rating": "C",
+                  "summary": "Not yet assessed. French-listed companies typically have adequate IR. Getlink publishes monthly traffic data which is unusually granular for an infrastructure company."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc3.q8",
+                  "label": "Q8: Trackable key leading indicators?",
+                  "rating": "B",
+                  "summary": "Excellent. Monthly traffic stats (cars, trucks, Eurostar pax), GB-France power spreads (ElecLink), HSR fleet order milestones, EES implementation progress, ferry competitor pricing. High forward visibility."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic1.tc4",
+                  "label": "TC: Earnings upgrades?",
+                  "rating": "C",
+                  "summary": "CMD targets (€1bn EBITDA 2030) are new guidance. SS likely still calibrating. Upgrades conditional on H1 2026 traffic data confirming momentum post-CMD."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc4.a7",
+                  "label": "A7: Sufficient earnings upgrades / beats?",
+                  "rating": "C",
+                  "summary": "FY25 EBITDA +4% was a modest beat. CMD provided new medium-term targets. Upgrades conditional on freight volume recovery and ElecLink spread stabilisation."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc4.q9",
+                  "label": "Q9: Modal case 18M EPS > guidance > SS?",
+                  "rating": "C",
+                  "summary": "Possibly. If freight recovers and HSR entrant timelines hold, VF modal case could sit 5-10% above SS on FY28-29. But near-term earnings constrained by ElecLink normalisation."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc4.q10",
+                  "label": "Q10: 3:1 SS/G EPS raise/lower skew NFY?",
+                  "rating": "C",
+                  "summary": "Insufficient data. CMD targets are new. SS still recalibrating post-CMD. Need to monitor revision trends over next 3-6 months."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic1.tc5",
+                  "label": "TC: Limited drawdown risk?",
+                  "rating": "C",
+                  "summary": "33x P/E creates significant drawdown risk. Fixed-cost operating leverage means volume declines hit EBITDA hard. EES disruption is near-term binary risk."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc5.a8",
+                  "label": "A8: Sufficiently robust / bankable multiple?",
+                  "rating": "C",
+                  "summary": "33x P/E is stretched vs infrastructure peers (Vinci 16.7x, Eiffage 15x, Aena 16.9x). Premium partially justified by monopoly + 60-year concession but leaves little margin of safety."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc5.q11",
+                  "label": "Q11: Multiple more company that exogenously driven?",
+                  "rating": "C",
+                  "summary": "Mixed. Monopoly premium is company-specific. But 33x P/E is also a function of low interest rates and infrastructure premium — both exogenous. Rising rates would compress."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc5.a9",
+                  "label": "A9: Sufficient returns?",
+                  "rating": "C",
+                  "summary": "3Y TSR potentially 15-25% on modal case (5-8% EPS growth + 5-7% dividend yield + modest re-rating). Below Richard's 20%+ 3Y TSR threshold unless HSR inflection accelerates."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc5.q12",
+                  "label": "Q12: More than 20% 3Y TSR?",
+                  "rating": "C",
+                  "summary": "Borderline. Modal case: 5-8% EPS CAGR + 5-7% cumulative dividend yield = ~20-30% 3Y TSR. Bear case: flat SP + dividend = ~15%. Meets threshold on modal but not convincingly."
+                },
+                {
+                  "level": "family",
+                  "id": "p3.ic2",
+                  "label": "IC#2: Required Case INPUTS",
+                  "rating": "C",
+                  "summary": "Exceptional natural monopoly base. Strong external tailwinds (HSR demand, modal shift, carbon regulation). Internal change forces moderate — Yann Leriche executing CMD targets."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic2.tc1",
+                  "label": "TC: Sufficient change forces?",
+                  "rating": "C",
+                  "summary": "External: HSR new entrants (Virgin Trains, Trenitalia), modal shift from carbon regulation, EES implementation. Internal: CMD targets, new dividend policy, capex programme."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic2.tc1.q1",
+                  "label": "Q1: External change forces / tailwinds?",
+                  "rating": "B",
+                  "summary": "Strong. HSR new entrants (Virgin Trains 2029-30, Trenitalia 2029) are structural demand catalysts. EU/UK carbon regulation raises ferry/airline costs. Modal shift to rail is secular tailwind. EES implementation creates short-term uncertainty but long-term security benefit."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic2.tc1.q2",
+                  "label": "Q2: Internal change forces?",
+                  "rating": "C",
+                  "summary": "Moderate. CEO Yann Leriche executing CMD targets (€1bn EBITDA 2030). New dividend policy (€0.80 rising to €1.00). Capex elevated at €170-220m/year through 2032 — investment in infrastructure capacity. Not transformative internal change — more steady-state optimisation."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic2.tc2",
+                  "label": "TC: Sufficient base (to build a strong case on)?",
+                  "rating": "B",
+                  "summary": "Exceptional base. Natural monopoly, Treaty of Canterbury protection, 2086 concession, 50.4% EBITDA margins, irreplaceable fixed-link infrastructure. One of the strongest competitive moats in European equities."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic2.tc2.q3",
+                  "label": "Q3: Absence of external headwinds?",
+                  "rating": "C",
+                  "summary": "No — headwinds present. EES border implementation (Apr-Sep 2026) creates near-term disruption risk. Truck shuttle volumes declining (-5.3%). UK-EU trade volumes structurally lower post-Brexit. ElecLink spread compression."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic2.tc2.q4",
+                  "label": "Q4: (Well-invested base?)",
+                  "rating": "C",
+                  "summary": "Capex elevated at €170-220m/year through 2032 — management investing in tunnel infrastructure, terminal upgrades, and capacity expansion. Well-maintained asset. But capex intensity is high relative to FCF."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic2.tc2.q5",
+                  "label": "Q5: Thesis congruency with past/present?",
+                  "rating": "B",
+                  "summary": "Strong congruency. Channel Tunnel has been a toll road asset since opening. HSR growth thesis is continuation of existing trend (Eurostar pax records). Monopoly economics have been consistent for 30+ years."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic2.tc2.q6",
+                  "label": "Q6: Large CfC/mispricing?",
+                  "rating": "C",
+                  "summary": "Limited. 33x P/E already prices in monopoly premium and growth expectations. Market may under-appreciate HSR new entrant volume uplift but valuation leaves little room for error."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic2.tc2.q7",
+                  "label": "Q7: Low trading multiple?",
+                  "rating": "D",
+                  "summary": "No. 33x P/E is premium to infrastructure peers (Vinci 16.7x, Eiffage 15x, Aena 16.9x). Multiple reflects monopoly + concession but is not 'low' by any standard."
+                },
+                {
+                  "level": "family",
+                  "id": "p3.ic3",
+                  "label": "IC#3: Required Case SETUPS",
+                  "rating": "C",
+                  "summary": "Primary: Demand-Driven EPSU via HSR inflection (C). Secondary: Event-Driven via ElecLink resolution (C). Standard exogenous reversion NR."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic3.tc1",
+                  "label": "TC: Mechanical EPS upgrades from mis-modelling?",
+                  "rating": "C",
+                  "summary": "Moderate. SS may under-model HSR new entrant volume uplift at >90% incremental margins. ElecLink provision resolution could create one-off EPS boost not in estimates."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic3.tc1.a1",
+                  "label": "A1: Mis-modelled, high-quality EPS upgrader?",
+                  "rating": "C",
+                  "summary": "Partially. HSR new entrant volume uplift at >90% incremental margins may not be fully modelled. ElecLink provision resolution timing uncertain. Upgrade potential exists but is medium-term."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc1.a1.q1",
+                  "label": "Q1: Is EPS consensus >10% below our estimate?",
+                  "rating": "C",
+                  "summary": "Possibly on FY29-30 when HSR entrants contribute. Near-term (FY26-27) unlikely — ElecLink drag and freight weakness are well-understood."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc1.a1.q2",
+                  "label": "Q2: What specific line items are mis-modelled?",
+                  "rating": "C",
+                  "summary": "(1) HSR new entrant path fees at >90% incremental margins (FY29-30). (2) ElecLink provision release if settlement favourable. (3) Car shuttle volume growth from modal shift (gradual)."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc1.a1.q3",
+                  "label": "Q3: Is the modelling gap structural or one-off?",
+                  "rating": "C",
+                  "summary": "Structural. HSR new entrant volumes are permanent incremental demand. Once Virgin Trains and Trenitalia are running, path fees are recurring. Fixed-cost leverage means margin impact is permanent."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic3.tc2",
+                  "label": "TC: Idiosyncratic, exogenous inflection?",
+                  "rating": "C",
+                  "summary": "Applicable. HSR new entrants (Virgin Trains, Trenitalia) represent an exogenous demand inflection on monopoly infrastructure. Fixed-cost leverage creates margin expansion on incremental volumes."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic3.tc2.a1",
+                  "label": "A1: Big demand change-driven EPSU or EPT?",
+                  "rating": "C",
+                  "summary": "Moderate demand change. HSR new entrants add incremental rail paths but are not explosive demand (not 2x market size). Fixed-cost leverage amplifies margin impact. Demand change is structural not cyclical."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc2.a1.q1",
+                  "label": "Q1: Is there a market-wide demand explosion?",
+                  "rating": "C",
+                  "summary": "Not explosion — steady structural growth. Cross-Channel passenger market growing ~2-3% p.a. HSR new entrants add step-change in rail utilisation but total cross-Channel demand growth is modest."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc2.a1.q2",
+                  "label": "Q2: Does the company hold a dominant competitive position?",
+                  "rating": "A",
+                  "summary": "Yes — natural monopoly. Only fixed-link across the English Channel. Protected by bilateral Treaty of Canterbury. No competing tunnel can be built. Dominant is an understatement — it is the sole provider."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc2.a1.q3",
+                  "label": "Q3: Is the business model one-to-many scalable?",
+                  "rating": "C",
+                  "summary": "Partially. Fixed-cost tunnel infrastructure means each incremental train/shuttle is almost pure margin. Volume growth is highly scalable on the existing asset. But capacity is ultimately constrained by tunnel throughput limits."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc2.a1.q4",
+                  "label": "Q4: Is the market an oligopoly (structure AND behaviour)?",
+                  "rating": "C",
+                  "summary": "Cross-Channel market is oligopoly: Getlink (tunnel), DFDS/P&O/Irish Ferries (ferries), airlines. Getlink is price leader on speed and reliability. Ferry operators compete on price but are structurally disadvantaged on journey time."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc2.a1.q5",
+                  "label": "Q5: Is there fixed cost leverage for margin expansion?",
+                  "rating": "B",
+                  "summary": "Exceptional. Tunnel infrastructure is almost entirely fixed cost. Incremental shuttle or train generates >90% EBITDA margin. This is the key structural advantage — volume growth drops almost entirely to profit."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic3.tc3",
+                  "label": "TC: Huge internal push/improvement?",
+                  "rating": "C",
+                  "summary": "Moderate. CMD targets are evolutionary not revolutionary. Yann Leriche executing steady improvement. Not a transformative internal change programme."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic3.tc3.a1",
+                  "label": "A1: Strong internal changes driven EPSU / EPT?",
+                  "rating": "C",
+                  "summary": "Moderate. CMD targets (€1bn EBITDA 2030), new dividend policy, capex programme. Steady optimisation of an exceptional asset. Not a CEO-driven transformation — more custodial management of a monopoly."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc3.a1.q1",
+                  "label": "Q1: Is management credible on execution?",
+                  "rating": "C",
+                  "summary": "Yann Leriche appointed 2020. Navigated COVID recovery. CMD targets appear achievable. Track record is adequate but limited by CEO tenure. Not a proven transformational leader."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc3.a1.q2",
+                  "label": "Q2: What is the specific internal change programme?",
+                  "rating": "C",
+                  "summary": "CMD targets: €1bn EBITDA by 2030, new dividend policy (€0.80 to €1.00), capex programme (€170-220m/year). Operational efficiency initiatives. Not a dramatic transformation — incremental improvement of existing operations."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc3.a1.q3",
+                  "label": "Q3: What is the track record of delivery so far?",
+                  "rating": "C",
+                  "summary": "FY25 EBITDA €859m (+4%) was a modest beat. Record Eurostar passengers 11.8m. COVID recovery managed well. But ElecLink revenue collapse from €558m to €225m was not preventable. Steady execution, no transformative wins."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic3.tc4",
+                  "label": "TC: Clearing of (idiosyncratic) negative sentiment?",
+                  "rating": "C",
+                  "summary": "ElecLink revenue collapse was the negative sentiment. Partially clearing — market has absorbed normalisation from €558m to €225m. Remaining overhang: €516m provision resolution."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic3.tc4.a1",
+                  "label": "A1: Oversold/rebounding quality compounder?",
+                  "rating": "C",
+                  "summary": "Not deeply oversold — SP has recovered from lows. Quality credentials strong (monopoly, 50.4% margins). ElecLink normalisation was the CfC. SP turn from ~€9.50 to ~€11.50 suggests partial clearing."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc4.a1.q1",
+                  "label": "Q1: Is the negative sentiment idiosyncratic or sector-wide?",
+                  "rating": "C",
+                  "summary": "Idiosyncratic. ElecLink revenue collapse is company-specific. Infrastructure sector broadly stable. Getlink underperformance relative to peers (Vinci, Eiffage) reflects ElecLink overhang."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc4.a1.q2",
+                  "label": "Q2: Is the underlying business quality intact despite sentiment?",
+                  "rating": "B",
+                  "summary": "Yes. Eurotunnel monopoly is intact. 50.4% EBITDA margins. Record Eurostar passengers. 56.1% car market share. Quality is unimpaired — ElecLink normalisation is a separate business within the group."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc4.a1.q3",
+                  "label": "Q3: What specific catalyst clears the overhang?",
+                  "rating": "C",
+                  "summary": "ElecLink profit-sharing provision settlement (€516m). HSR new entrant fleet order confirmation (Virgin Trains). H1 2026 traffic data showing freight stabilisation. EES implementation without major disruption."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic3.tc4.a2",
+                  "label": "A2: Huge CfC clearing event in solid quality?",
+                  "rating": "C",
+                  "summary": "ElecLink provision settlement could be a meaningful clearing event. But magnitude depends on settlement terms. Not 'huge' — more of a gradual normalisation than a single clearing catalyst."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc4.a2.q1",
+                  "label": "Q1: Is there a specific clearing event identified?",
+                  "rating": "C",
+                  "summary": "ElecLink provision settlement is the specific event. Timing uncertain. Terms uncertain. Could release €200-300m of trapped capital if settlement favourable."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc4.a2.q2",
+                  "label": "Q2: Is business quality sufficient to justify rebound post-clearing?",
+                  "rating": "B",
+                  "summary": "Yes. Natural monopoly, 50.4% EBITDA margins, 60-year concession, record passenger volumes. Quality easily justifies premium valuation once ElecLink overhang clears."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic3.tc5",
+                  "label": "TC: Standard exogenous reversion to mean?",
+                  "rating": "NR",
+                  "summary": "Not applicable as primary setup. ElecLink normalisation is a permanent structural shift, not a mean reversion."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic3.tc5.a1",
+                  "label": "A1: Mean-reverting quality business post-temporary headwind?",
+                  "rating": "NR",
+                  "summary": "N/A. ElecLink revenue decline is structural normalisation (energy spread compression), not temporary headwind."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc5.a1.q1",
+                  "label": "Q1: Is the headwind genuinely temporary?",
+                  "rating": "NR",
+                  "summary": "N/A."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc5.a1.q2",
+                  "label": "Q2: What is the normalised earnings level to revert to?",
+                  "rating": "NR",
+                  "summary": "N/A."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc5.a1.q3",
+                  "label": "Q3: Is the quality of the franchise intact through the headwind?",
+                  "rating": "NR",
+                  "summary": "N/A."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic3.tc5.a2",
+                  "label": "A2: Trough-on-trough turn in solid quality cyclical?",
+                  "rating": "NR",
+                  "summary": "N/A."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc5.a2.q1",
+                  "label": "Q1: Are earnings genuinely at trough?",
+                  "rating": "NR",
+                  "summary": "N/A."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc5.a2.q2",
+                  "label": "Q2: Is business quality sufficient to hold through the full cycle?",
+                  "rating": "NR",
+                  "summary": "N/A."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc5.a2.q3",
+                  "label": "Q3: What leading indicators confirm the cyclical turn?",
+                  "rating": "NR",
+                  "summary": "N/A."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic3.tc6",
+                  "label": "TC: Does not overlap with unacceptable setup?",
+                  "rating": "PASS",
+                  "summary": "No overlap. Getlink is not a declining industry play, commodity spec, or accounting manipulation. Natural monopoly with 60-year concession is the opposite of unacceptable."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc6.q1",
+                  "label": "Q1: Does the case avoid any of the unacceptable setup patterns?",
+                  "rating": "PASS",
+                  "summary": "Yes. Not a structural decliner, not commodity-driven, not accounting-driven. Natural monopoly with bilateral treaty protection."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic3.tc7",
+                  "label": "TC: Does not overlap with false friend setup?",
+                  "rating": "PASS",
+                  "summary": "No overlap. Natural monopoly is genuine. HSR demand catalyst is real (Virgin Trains fleet orders). Concession is legally binding to 2086."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc7.q1",
+                  "label": "Q1: Does the case avoid any of the false friend setup patterns?",
+                  "rating": "PASS",
+                  "summary": "Yes. Not a false turnaround (monopoly was never broken). Not financial engineering (real infrastructure asset). Not cyclical masquerading as structural (concession is genuinely structural)."
+                },
+                {
+                  "level": "pillar",
+                  "id": "p4",
+                  "label": "P4: Fundamental Case (Inputs)",
+                  "rating": "B",
+                  "summary": "Exceptional natural monopoly, Treaty of Canterbury protection, 50.4% EBITDA margins, 60-year concession. Single-asset concentration and stretched valuation are the main concerns."
+                },
+                {
+                  "level": "family",
+                  "id": "p4.bb1",
+                  "label": "BB#1: Simplicity Guardrails",
+                  "rating": "C",
+                  "summary": "Simple business — one tunnel, three segments (Eurotunnel, ElecLink, Europorte). But ElecLink adds complexity via energy spread exposure. Freight weakness is an active CfC."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb1.tc1",
+                  "label": "TC: Narrowly focused bet?",
+                  "rating": "B",
+                  "summary": "Very narrow. One asset (Channel Tunnel), 2 fulcrum drivers (HSR entrants, ElecLink resolution). Concentrated bet on a single infrastructure monopoly."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb1.tc1.q1",
+                  "label": "Q1: 2 or less fulcrum drivers and 4 or less key drivers?",
+                  "rating": "B",
+                  "summary": "2 fulcrum drivers (HSR volume inflection, ElecLink resolution). 4 key drivers (car volumes, freight volumes, ElecLink spreads, EES implementation). Meets guideline."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb1.tc2",
+                  "label": "TC: Narrow perimeter?",
+                  "rating": "B",
+                  "summary": "Very narrow. One geography (UK-France corridor), 3 segments. Single-asset concentration is a feature not a bug — simplicity is exceptional."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb1.tc2.q2",
+                  "label": "Q2: 10 or less geographies x business units?",
+                  "rating": "A",
+                  "summary": "1 geography (UK-France) x 3 segments (Eurotunnel, ElecLink, Europorte) = 3 cells. Far below 10. Exceptionally simple perimeter."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb1.tc3",
+                  "label": "TC: No headwinds?",
+                  "rating": "C",
+                  "summary": "Multiple headwinds. EES border disruption (Apr-Sep 2026), truck shuttle volume decline (-5.3%), ElecLink spread compression, elevated capex (€170-220m/year). Not headwind-free."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb1.tc3.q3",
+                  "label": "Q3: Zero value chain headwinds to revenue?",
+                  "rating": "C",
+                  "summary": "No. EES border disruption risk to passenger volumes. Truck shuttle volumes declining (-5.3% Jan 2026). ElecLink spread compression. Post-Brexit UK-EU trade weakness. Multiple headwinds."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb1.tc4",
+                  "label": "TC: Narrow range of issues?",
+                  "rating": "C",
+                  "summary": "CfCs: ElecLink normalisation, freight volume weakness, EES implementation. ~3 CfCs — above the 2 guideline."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb1.tc4.q4",
+                  "label": "Q4: 2 or less CfCs or problems?",
+                  "rating": "C",
+                  "summary": "3 CfCs: (1) ElecLink structural normalisation, (2) freight/truck volume weakness, (3) EES implementation disruption risk. Above guideline."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb1.tc5",
+                  "label": "TC: Conservative IR?",
+                  "rating": "C",
+                  "summary": "Unknown. CMD targets (€1bn EBITDA 2030) are aspirational — need to assess conservatism vs promotional. Monthly traffic data publication is a positive transparency signal."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb1.tc5.q5",
+                  "label": "Q5: Company confirms conservative guidance?",
+                  "rating": "C",
+                  "summary": "Unknown. €1bn EBITDA 2030 target implies ~3.2% CAGR — moderate ambition. Dividend policy (€0.80 to €1.00) is progressive but not aggressive. Need IR engagement to assess conservatism."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb1.tc6",
+                  "label": "TC: Clear investment case?",
+                  "rating": "C",
+                  "summary": "Clear. Monopoly infrastructure + volume growth from HSR new entrants + fixed-cost leverage = EBITDA growth. Transmission mechanism: passenger volumes → path fees → EBITDA at >90% incremental margins."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb1.tc6.q6",
+                  "label": "Q6: Clear strategy-to-EPS trans. mechanism?",
+                  "rating": "C",
+                  "summary": "Yes. HSR new entrants → more trains through tunnel → path fees at fixed cost → EBITDA growth. ElecLink resolution → provision release → FCF unlock. Dividend growth → TSR. Clear and measurable."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb1.tc7",
+                  "label": "TC: Trackable case drivers?",
+                  "rating": "B",
+                  "summary": "Highly trackable. Monthly traffic stats, quarterly financials, HSR fleet order milestones, EES implementation progress, GB-France power spreads. All public data."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb1.tc7.q7",
+                  "label": "Q7: Clear VC/Co inputs-to-EPS trans. mechanism?",
+                  "rating": "B",
+                  "summary": "Yes. Passenger/freight volumes → tunnel utilisation → toll/path fee revenue → EBITDA at >90% incremental margin. ElecLink: GB-FR spread → interconnector revenue. All observable."
+                },
+                {
+                  "level": "family",
+                  "id": "p4.bb2",
+                  "label": "BB#2: Foundation Quality",
+                  "rating": "B",
+                  "summary": "Exceptional monopoly asset. 50.4% EBITDA margins. Treaty of Canterbury protection. 2086 concession. Offset by single-asset concentration risk and management that is custodial not transformative."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb2.tc1",
+                  "label": "TC: Great operator?",
+                  "rating": "C",
+                  "summary": "Competent custodian of an exceptional asset. Yann Leriche since 2020. COVID recovery managed well. CMD targets reasonable. Not a visionary CEO — steady-state management of a monopoly."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc1.a1",
+                  "label": "A1: Right direction?",
+                  "rating": "C",
+                  "summary": "Direction is correct: invest in capacity (capex programme), attract HSR new entrants, manage ElecLink provision settlement, implement progressive dividend policy. Incremental not transformative."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a1.q1",
+                  "label": "Q1: Big, big ambition/vision (force; growth as priority)",
+                  "rating": "C",
+                  "summary": "Moderate. €1bn EBITDA 2030 is achievable but not visionary (~3.2% CAGR). Management is custodial — maintaining and optimising a monopoly asset. Ambition is proportionate to the asset, not outsized."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a1.q2",
+                  "label": "Q2: Great, smart strategy and right, bold strategic choices",
+                  "rating": "C",
+                  "summary": "Strategy is sound: attract new HSR operators, invest in infrastructure, manage ElecLink transition, progressive dividend. Not bold — the asset largely manages itself. Smart choices on capacity investment."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc1.a2",
+                  "label": "A2: Right resources?",
+                  "rating": "C",
+                  "summary": "Adequately resourced. Capex programme funded. Balance sheet manageable (net debt €3.39bn, cash €1.49bn). Management team experienced in infrastructure. Communication reasonable."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a2.q1",
+                  "label": "Q1: Great CEO (measured via action, not conjecture)",
+                  "rating": "C",
+                  "summary": "Adequate. Leriche since 2020. COVID recovery managed. CMD targets set. Not a proven value creator — monopoly provides inherent quality. Limited track record of bold strategic moves."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a2.q2",
+                  "label": "Q2: Hiring well is a top CEO priority + CEO has built a strong team",
+                  "rating": "C—unclear",
+                  "summary": "Unknown at Triaging depth. Management team appears stable. No high-profile departures flagged."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a2.q3",
+                  "label": "Q3: Entire business is well-resourced/well-invested",
+                  "rating": "C",
+                  "summary": "Yes. Capex elevated at €170-220m/year through 2032 — tunnel infrastructure, terminal upgrades, safety systems. Well-invested asset. Europorte fleet maintained. ElecLink infrastructure operational."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a2.q4",
+                  "label": "Q4: Holistic, congruent culture + alignment across the business",
+                  "rating": "C—unclear",
+                  "summary": "Unknown at Triaging. French-British organisation with distinct cultures on each side of the tunnel. Labour relations historically challenging but currently stable."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a2.q5",
+                  "label": "Q5: Conservative guidance (buffer)",
+                  "rating": "C",
+                  "summary": "Uncertain. €1bn EBITDA 2030 target is moderate ambition (~3.2% CAGR). Could be conservative if HSR volumes materialise faster. Could be aggressive if freight decline persists."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a2.q6",
+                  "label": "Q6: Clear, straightforward and helpful communication",
+                  "rating": "C",
+                  "summary": "Monthly traffic data is unusually transparent. CMD provided clear medium-term targets and dividend policy. Annual reports are comprehensive. Communication is good for a French-listed infrastructure company."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc1.a3",
+                  "label": "A3: Right record/action/behaviour/forward movement?",
+                  "rating": "C",
+                  "summary": "Adequate. Record Eurostar passengers. COVID recovery. CMD targets set. ElecLink developed and operational. Europorte maintained. Track record is competent stewardship not outstanding value creation."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a3.q1",
+                  "label": "Q1: High RONIC capital allocation",
+                  "rating": "C",
+                  "summary": "Limited reinvestment opportunity — monopoly asset with fixed infrastructure. Capex is maintenance + capacity optimisation, not growth investment. RONIC concept less applicable to concession monopolies."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a3.q2",
+                  "label": "Q2: Acts not just talks (recent record of huge delivery)",
+                  "rating": "C",
+                  "summary": "Record Eurostar passengers achieved. ElecLink completed and operational (despite revenue normalisation). New dividend policy announced. Actions are incremental not huge. Monopoly limits scope for transformative action."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a3.q3",
+                  "label": "Q3: Track record of delivery (not missing/justifying)",
+                  "rating": "C",
+                  "summary": "Mostly delivers. FY25 EBITDA +4%. Record passengers. Dividend maintained through COVID (cut, then restored). ElecLink revenue collapse was not preventable. Steady delivery."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a3.q4",
+                  "label": "Q4: Outlier standards, driving higher/faster/better",
+                  "rating": "C",
+                  "summary": "No. Management is competent custodian, not outlier. Monopoly does not require outlier execution to perform. Standards are adequate for an infrastructure concession."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a3.q5",
+                  "label": "Q5: Shareholders first > management",
+                  "rating": "C",
+                  "summary": "New dividend policy (€0.80 to €1.00) is shareholder-friendly. Progressive approach signals alignment. But 33x P/E and no buyback suggest management is not aggressively returning capital."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a3.q6",
+                  "label": "Q6: Dynamic repurchaser of SBBs + enlightened capital allocation",
+                  "rating": "C",
+                  "summary": "No buyback programme. Capital allocation focused on capex (€170-220m/year) and dividends. Not dynamic capital returner. Concession structure may limit buyback flexibility."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a3.q7",
+                  "label": "Q7: Prudent governance/scaffolding",
+                  "rating": "C",
+                  "summary": "French governance structure (SA with Board). Jacques Gounon as Chairman (founder-era). Adequate governance. No red flags. Bilateral treaty provides external governance overlay."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb2.tc2",
+                  "label": "TC: Advantaged business + widening SRCA?",
+                  "rating": "B",
+                  "summary": "Exceptional moat. Natural monopoly — no competing fixed-link can be built. Treaty of Canterbury provides regulatory protection. 50.4% EBITDA margins. Moat is permanent, not widening — it is already absolute."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc2.a1",
+                  "label": "A1: Strong operational/competitive advantages?",
+                  "rating": "A",
+                  "summary": "Natural monopoly. Only fixed-link across English Channel. Treaty of Canterbury bilateral protection. No substitute can replicate the speed/reliability advantage. Absolute competitive advantage."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a1.q1",
+                  "label": "Q1: Customer-related moats",
+                  "rating": "B",
+                  "summary": "Captive customer base for cross-Channel traffic needing speed/reliability. Eurostar has no rail alternative. Shuttle users value 35-min crossing vs 90-min ferry. Customer captivity via superior product."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a1.q2",
+                  "label": "Q2: Production-related moats",
+                  "rating": "A",
+                  "summary": "Unique asset — 50km underwater tunnel is physically unreplicable. No competing tunnel can be built (Treaty, cost, geology). Infrastructure moat is absolute."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a1.q3",
+                  "label": "Q3: Scale advantage moats",
+                  "rating": "B",
+                  "summary": "Only fixed-link. Scale is not relative (vs competitors) but absolute (sole provider). Fixed-cost infrastructure means volume growth creates increasing returns to scale."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a1.q4",
+                  "label": "Q4: Regulatory/political moats",
+                  "rating": "A",
+                  "summary": "Treaty of Canterbury — bilateral UK-France treaty governing the tunnel. Concession to 2086. Regulatory moat is absolute and legally binding at sovereign level."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a1.q5",
+                  "label": "Q5: Culture/knowledge moats",
+                  "rating": "C",
+                  "summary": "30+ years of tunnel operating knowledge. Specialised workforce. Safety expertise. But culture is not a primary moat — the physical and regulatory moats are dominant."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a1.q6",
+                  "label": "Q6: High relative scale (to competitors, other actors)",
+                  "rating": "A",
+                  "summary": "Sole provider. No competitor has or can have a fixed-link. Relative scale is infinite — 100% market share in fixed-link cross-Channel transportation."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a1.q7",
+                  "label": "Q7: Large realistic TAM (to facilitate 12-20% p.a. growth)",
+                  "rating": "C",
+                  "summary": "Cross-Channel market growing ~2-3% p.a. Not a large TAM for 12-20% growth. Growth is constrained by UK-EU travel/trade volume. Modal shift from ferry/air provides incremental TAM but total market is mature."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc2.a2",
+                  "label": "A2: Strong operational outputs?",
+                  "rating": "B",
+                  "summary": "50.4% EBITDA margin is exceptional. >90% incremental margins on volume growth. Pricing power on shuttle services. Fixed-cost leverage structural advantage."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a2.q1",
+                  "label": "Q1: High SCU",
+                  "rating": "B",
+                  "summary": "High. 35-min crossing vs 90-min ferry. All-weather reliability. Drive-on/drive-off convenience for shuttles. Eurostar is the only rail option. Service proposition is clearly superior."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a2.q2",
+                  "label": "Q2: Leading or non-inferior RSCU (hard to prove)",
+                  "rating": "B",
+                  "summary": "Leading. No competitor can match the speed/reliability of a fixed-link. Ferries are structurally inferior on journey time. Airlines compete on certain routes but not with car/freight flexibility."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a2.q3",
+                  "label": "Q3: High, utilised pricing power (2% nominal+)",
+                  "rating": "C",
+                  "summary": "Moderate pricing power. Shuttle pricing is competitive with ferries. Rail path fees are contracted. Pricing power constrained by ferry competition on price-sensitive segments. Monopoly pricing limited by cross-Channel market regulation."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a2.q4",
+                  "label": "Q4: Scale economies shared",
+                  "rating": "C",
+                  "summary": "Partially shared via competitive shuttle pricing vs ferries. Volume growth reduces per-unit cost structurally. Economies primarily retained (50.4% EBITDA margin) with some passed through to maintain market share."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc2.a3",
+                  "label": "A3: Strong financial outputs?",
+                  "rating": "C",
+                  "summary": "50.4% EBITDA margin is exceptional. Revenue growth constrained (~-1% FY25). Net debt €3.39bn is elevated. FCF generation adequate but constrained by elevated capex."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a3.q1",
+                  "label": "Q1: 12-20% EPS growth + revenue growth",
+                  "rating": "C",
+                  "summary": "No. Revenue -1% FY25. EBITDA +4%. EPS growth ~3-5% CAGR to 2030. Below 12-20% threshold. Infrastructure compounder profile, not growth stock."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a3.q2",
+                  "label": "Q2: Immediate scope to deploy 20%+ of sales in capital",
+                  "rating": "C",
+                  "summary": "Capex €170-220m/year on €1,595m revenue = 11-14%. Below 20% threshold. But capex is largely maintenance + capacity optimisation, not growth capex. Reinvestment scope is limited by monopoly structure."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a3.q3",
+                  "label": "Q3: High post-tax RONIC (25-30%+)",
+                  "rating": "C",
+                  "summary": "RONIC concept less applicable — concession monopoly with fixed asset base. Returns on incremental volume are very high (>90% incremental margin) but total capital base is large and fixed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a3.q4",
+                  "label": "Q4: High NI to FCF conversion (80%)",
+                  "rating": "C",
+                  "summary": "Constrained by elevated capex (€170-220m/year through 2032). Gross FCF conversion adequate but net FCF after capex is lower than peers. Capex programme is temporary — normalises post-2032."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a3.q5",
+                  "label": "Q5: Post-tax ROCE of 15%+",
+                  "rating": "C",
+                  "summary": "Uncertain at Triaging. Capital base is large (tunnel cost €15bn+ at 1994 construction). Returns on incremental volume exceptional but total asset ROCE depressed by historical construction cost. Need financial model."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a3.q6",
+                  "label": "Q6: Post-tax ROTC of 30%+",
+                  "rating": "D",
+                  "summary": "Unlikely. Massive fixed asset base (tunnel infrastructure). ROTC on total capital is low despite high margins. Infrastructure concessions typically have moderate ROTC."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a3.q7",
+                  "label": "Q7: High gross margins",
+                  "rating": "B",
+                  "summary": "Yes. 50.4% EBITDA margin. Gross margins likely 60%+ (tunnel operations have minimal variable costs). Exceptional for infrastructure. Fixed-cost leverage structural advantage."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a3.q8",
+                  "label": "Q8: Solid EBIT margins (20%+ solid, 25%+ great)",
+                  "rating": "B",
+                  "summary": "EBITDA margin 50.4%. EBIT margin estimated ~30-35% (after D&A on tunnel infrastructure). Above 25% 'great' threshold. Structural advantage of monopoly with fixed costs."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a3.q9",
+                  "label": "Q9: Genuine fixed cost operating leverage",
+                  "rating": "A",
+                  "summary": "Exceptional. Tunnel infrastructure is almost entirely fixed cost. Incremental shuttle/train generates >90% EBITDA margin. This is the defining structural advantage of the business. Volume growth = near-pure profit growth."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a3.q10",
+                  "label": "Q10: Low tax rate (below 30%) or other non-obvious advantage",
+                  "rating": "C",
+                  "summary": "French corporate tax rate ~25%. No significant tax advantage. Non-obvious advantage: bilateral treaty means regulatory framework is bespoke and protective."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc2.a4",
+                  "label": "A4: Gets stronger as it gets bigger/time passes?",
+                  "rating": "C",
+                  "summary": "Moat is permanent, not widening. Monopoly does not strengthen over time — it was absolute from day one. But volume growth improves cost economics. Carbon regulation structurally improves competitive position vs ferries."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a4.q1",
+                  "label": "Q1: Gravitational/mechanical forces (not just heroics) 1",
+                  "rating": "C",
+                  "summary": "Carbon regulation. EU ETS and UK ETS expanding to maritime. Each regulatory tightening structurally raises ferry costs relative to tunnel. Mechanical widening of cost advantage."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a4.q2",
+                  "label": "Q2: Gravitational/mechanical forces (not just heroics) 2",
+                  "rating": "C",
+                  "summary": "HSR network expansion. Each new rail operator increases tunnel utilisation and reduces per-unit fixed costs. Network effects — more destinations = more passengers = more revenue on fixed asset."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc2.a5",
+                  "label": "A5: Plausible scope for improvement over mid-term?",
+                  "rating": "C",
+                  "summary": "HSR new entrants (Virgin Trains, Trenitalia) provide volume growth at >90% incremental margins. ElecLink provision resolution unlocks FCF. Modal shift provides structural tailwind. Improvement is plausible."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a5.q1",
+                  "label": "Q1: Peer precedents",
+                  "rating": "C",
+                  "summary": "No direct peer (only Channel Tunnel in the world). Infrastructure concession peers (Vinci, Eiffage, Aena) show 15-17x P/E vs GET's 33x — precedent suggests GET is fully valued."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a5.q2",
+                  "label": "Q2: Big savings/improvements in a few areas",
+                  "rating": "C",
+                  "summary": "Limited scope for cost savings — monopoly is already efficiently operated. Improvement comes from revenue growth (volume uplift on fixed costs) not cost reduction."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a5.q3",
+                  "label": "Q3: Lots of little savings/improvements in many areas",
+                  "rating": "C",
+                  "summary": "Limited. Single asset with single geography. Not many areas for incremental savings. Terminal efficiency, scheduling optimisation are marginal."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a5.q4",
+                  "label": "Q4: Plausibility from congruency with strategy",
+                  "rating": "C",
+                  "summary": "Congruent. Attract HSR operators → increase utilisation → leverage fixed costs → EBITDA growth → dividend growth. Strategy aligns with asset's structural advantage. Improvement mechanism is clear."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb2.tc3",
+                  "label": "TC: Favourable value chain dynamics?",
+                  "rating": "C",
+                  "summary": "Demand structurally supported by UK-EU travel/trade. Competition (ferries) structurally disadvantaged on speed and increasingly on carbon. Regulatory environment supportive (Treaty). Supplier side neutral."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc3.a1",
+                  "label": "A1: Demand side — strong/robust or fragile/negative?",
+                  "rating": "C",
+                  "summary": "Robust. Cross-Channel travel demand growing ~2-3% p.a. Record Eurostar passengers (11.8m). Car shuttle share 56.1%. EES creates near-term uncertainty but long-term demand supported by UK-EU connectivity need."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a1.q1",
+                  "label": "Q1: Customer demand",
+                  "rating": "C",
+                  "summary": "Robust passenger demand (record 11.8m Eurostar). Car shuttle share 56.1%. Freight/truck volumes weaker (-5.3%). Mixed: passenger strong, freight weak. EES near-term disruption risk to passenger volumes."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a1.q2",
+                  "label": "Q2: Route to market/intermediaries",
+                  "rating": "B",
+                  "summary": "Direct. Shuttle services are direct-to-customer (drive on, drive off). Rail paths are sold to operators (Eurostar, future HSR entrants). No intermediary risk. Simple route to market."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc3.a2",
+                  "label": "A2: Competitive supportiveness or aggression?",
+                  "rating": "C",
+                  "summary": "Supportive. Ferries compete on price but are structurally inferior on speed. Ferry operators consolidated (DFDS, P&O, Irish Ferries). Rational competition in a mature market. No destructive price war."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a2.q1",
+                  "label": "Q1: Existing competition",
+                  "rating": "C",
+                  "summary": "Ferry operators (DFDS, P&O, Irish Ferries) compete on price-sensitive segments. Airlines compete on London-Paris route. Competition is structural but tunnel has speed/reliability advantage. Coexistence model."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a2.q2",
+                  "label": "Q2: Adjacencies entering",
+                  "rating": "B",
+                  "summary": "No new fixed-link can be built (Treaty of Canterbury). No adjacent infrastructure can replicate the tunnel. Only threat is modal shift (remote work reducing travel need — but this affects all cross-Channel operators equally)."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a2.q3",
+                  "label": "Q3: Vanilla new entrants",
+                  "rating": "A",
+                  "summary": "Impossible. No new tunnel can be built. No new fixed-link technology exists. Barrier to entry is absolute — physical geology + Treaty of Canterbury."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a2.q4",
+                  "label": "Q4: Orthogonal / innovative new entrants",
+                  "rating": "C",
+                  "summary": "Remote work and video conferencing reduce some business travel demand. Hyperloop/air taxi are theoretical but not practical cross-Channel alternatives. No credible orthogonal threat on investment horizon."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a2.q5",
+                  "label": "Q5: Substitutes / alternatives",
+                  "rating": "C",
+                  "summary": "Ferries (slower but cheaper), airlines (faster London-Paris but no car/freight flexibility), remote work (reduces travel need). Substitutes exist but tunnel has structural speed/reliability advantage. Carbon regulation tilts playing field toward tunnel over time."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc3.a3",
+                  "label": "A3: Disruption forces?",
+                  "rating": "C",
+                  "summary": "Minimal disruption risk. Physical infrastructure is unreplicable. Digital disruption (video calls) marginally reduces business travel but leisure is growing. Carbon regulation helps not hurts."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a3.q1",
+                  "label": "Q1: To demand, competition, regulators, suppliers, politics",
+                  "rating": "C",
+                  "summary": "Demand: structurally supported. Competition: structurally advantaged. Regulators: Treaty protective. Suppliers: neutral. Politics: UK-France relations occasionally tense but Treaty provides stability. Minimal disruption forces."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc3.a4",
+                  "label": "A4: Political/regulatory?",
+                  "rating": "B",
+                  "summary": "Treaty of Canterbury provides sovereign-level regulatory protection. French-UK bilateral framework. Concession to 2086. Regulatory environment is exceptionally supportive for a private infrastructure operator."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a4.q1",
+                  "label": "Q1: Regulator SWOT",
+                  "rating": "B",
+                  "summary": "Strength: Treaty of Canterbury provides bespoke regulatory framework. Weakness: ElecLink profit-sharing mechanism creates revenue uncertainty. Opportunity: carbon regulation raising competitor costs. Threat: EES border implementation disruption."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a4.q2",
+                  "label": "Q2: Political actor SWOT",
+                  "rating": "C",
+                  "summary": "UK-France political relations generally stable. Post-Brexit trade friction creates freight headwinds. Both governments have strategic interest in tunnel operation (critical infrastructure). Political risk manageable."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc3.a5",
+                  "label": "A5: Supportive supplier side?",
+                  "rating": "C",
+                  "summary": "Neutral. Electricity is main input cost (for tunnel operations and ElecLink). No commodity input dependency. Labour is the other major cost — French labour market dynamics apply."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a5.q1",
+                  "label": "Q1: Supplier side SWOT",
+                  "rating": "C",
+                  "summary": "Electricity supply diversified. Labour supply adequate. Maintenance contractors available. No single-supplier dependency. Supplier side is neutral to supportive."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb2.tc4",
+                  "label": "TC: Supportive / concentrated industry structure?",
+                  "rating": "B",
+                  "summary": "Monopoly by definition. 100% market share in fixed-link. Cross-Channel transport market is oligopolistic (tunnel + 3 ferry operators + airlines). Structure is supportive and stable."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc4.a1",
+                  "label": "A1: Concentrated existing market structure?",
+                  "rating": "B",
+                  "summary": "Monopoly in fixed-link. Oligopoly in cross-Channel. Tunnel + DFDS + P&O + Irish Ferries dominate. Concentrated and stable. No fragmentation."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a1.q1",
+                  "label": "Q1: This company #1 (or #2)?",
+                  "rating": "A",
+                  "summary": "#1 in fixed-link (sole operator). #1 or #2 in overall cross-Channel market depending on measurement (volume vs value). Dominant position."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a1.q2",
+                  "label": "Q2: Top 5 > 30% share?",
+                  "rating": "A",
+                  "summary": "Top 5 players control ~95%+ of cross-Channel market. Getlink alone has ~40-50% of car market (56.1% share on shuttle). Highly concentrated."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a1.q3",
+                  "label": "Q3: Steep market share distribution curve?",
+                  "rating": "B",
+                  "summary": "Yes. Getlink is dominant. Ferry operators split remainder. Airlines serve narrow segment (foot passengers only). Distribution is steep with Getlink as clear leader."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc4.a2",
+                  "label": "A2: Concentrating gravitational pull?",
+                  "rating": "C",
+                  "summary": "Modal shift from ferries to tunnel is slow but structural (carbon regulation). Share may gradually increase. No new competition possible. Concentration stable to improving."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a2.q1",
+                  "label": "Q1: Stability of share over time?",
+                  "rating": "B",
+                  "summary": "Very stable. 56.1% car market share maintained over years. Slight secular trend toward tunnel from carbon regulation. Share is structurally stable with modest upside."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a2.q2",
+                  "label": "Q2: New entrants' share?",
+                  "rating": "A",
+                  "summary": "Zero. No new fixed-link entrant possible. No new ferry operator entering (mature market). New entrants' share is and will remain zero."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a2.q3",
+                  "label": "Q3: Share consolidates towards largest competitors?",
+                  "rating": "C",
+                  "summary": "Slowly. Carbon regulation and fuel cost increases favour tunnel over ferries. Ferry consolidation (P&O/DFDS) reduces ferry capacity. Slow structural consolidation toward tunnel."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a2.q4",
+                  "label": "Q4: Share consolidates to most advantaged competitors?",
+                  "rating": "B",
+                  "summary": "Yes. Tunnel is most advantaged (speed, carbon, reliability). Carbon regulation structurally favours tunnel. Ferry cost base rising faster than tunnel's. Most advantaged player gaining over long term."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc4.a3",
+                  "label": "A3: Benign competitor attitudes + stability?",
+                  "rating": "B",
+                  "summary": "Benign. Ferries and tunnel coexist — different customer segments. No price warfare. Rational competition. Ferry operators focus on service/convenience differentiation."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a3.q1",
+                  "label": "Q1: Benign-ness?",
+                  "rating": "B",
+                  "summary": "Yes. Tunnel and ferries serve partially overlapping but distinct customer segments. Price competition exists but is rational. No destructive behaviour. Mature market with coexistence model."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a3.q2",
+                  "label": "Q2: MOL instability or stable attitude?",
+                  "rating": "B",
+                  "summary": "Stable. Cross-Channel competition has been stable for 30+ years. Ferries occasionally discount aggressively but tunnel's speed advantage limits price elasticity. Stable competitive attitudes."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a3.q3",
+                  "label": "Q3: Shark attack if weakness sensed?",
+                  "rating": "B",
+                  "summary": "Low risk. Monopoly cannot be attacked by ferries. If tunnel disrupted (fire, technical issues), ferries benefit temporarily but cannot permanently capture tunnel demand. No shark attack vector."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a3.q4",
+                  "label": "Q4: Volume / ROCE prioritisation?",
+                  "rating": "C",
+                  "summary": "Volume growth prioritised within ROCE framework. Fixed-cost leverage means volume = profit. Management targets volume growth via competitive pricing on shuttle and HSR operator attraction."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc4.a4",
+                  "label": "A4: Positive or negative competitiveness trends?",
+                  "rating": "B",
+                  "summary": "Positive. Carbon regulation raising ferry costs. Modal shift to rail structural. HSR expansion adding destinations. Competitiveness improving over time. Only negative: EES border friction."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a4.q1",
+                  "label": "Q1: Positive or negative competitiveness trends?",
+                  "rating": "B",
+                  "summary": "Positive: carbon regulation (ferries +), modal shift to rail, HSR network expansion, fuel cost disadvantage for ferries. Negative: EES border friction (temporary). Net: structurally improving competitiveness."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb2.tc5",
+                  "label": "TC: High secular / long-term growth potential?",
+                  "rating": "C",
+                  "summary": "Moderate. Cross-Channel market growing ~2-3% p.a. HSR expansion provides step-change growth. But total market is mature. Long-term growth is steady not explosive."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc5.q1",
+                  "label": "Q1: Clear, actionable adjacencies to expand into",
+                  "rating": "C",
+                  "summary": "Limited. ElecLink is the main adjacency (1GW interconnector). Europorte is rail freight. No clear path to new adjacencies beyond maximising tunnel utilisation. Asset is what it is."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc5.q2",
+                  "label": "Q2: Structurally increasing volume demand",
+                  "rating": "C",
+                  "summary": "Modest. Cross-Channel passenger demand growing ~2-3% p.a. HSR new entrants provide step-change in rail volumes. Modal shift from ferry/air structural but gradual. Structurally growing but slowly."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc5.q3",
+                  "label": "Q3: Pricing rising faster than costs/inflation in LT?",
+                  "rating": "C",
+                  "summary": "Pricing constrained by ferry competition. Shuttle pricing must remain competitive. Rail path fees are contracted. Pricing power moderate — not rising faster than inflation."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc5.q4",
+                  "label": "Q4: Historical growth rate at sector/industry level high?",
+                  "rating": "C",
+                  "summary": "Moderate. Cross-Channel market growth ~2-3% p.a. Infrastructure sector growth moderate. Not a high-growth sector. Value creation via operating leverage not market growth."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb2.tc6",
+                  "label": "TC: Fit with stock market paradigm / regime / thematic?",
+                  "rating": "C",
+                  "summary": "Infrastructure monopoly is defensive — fits risk-off. ESG/carbon theme fits. Not AI-aligned. Rising rates negative for 33x duration asset. Mixed paradigm fit."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc6.q1",
+                  "label": "Q1: Summarise answer given to that Pillar in C.II.3",
+                  "rating": "C",
+                  "summary": "See P2 paradigm ratings. Late bull/bear: C+. AI: D. Oil/stagflation: C+. Overall paradigm fit C+ — defensive monopoly with carbon theme but not AI-aligned and 33x P/E is rate-sensitive."
+                },
+                {
+                  "level": "family",
+                  "id": "p4.bb3",
+                  "label": "BB#3: Fit for Market Paradigm",
+                  "rating": "C",
+                  "summary": "Infrastructure monopoly provides defensiveness in risk-off. ESG/carbon theme supportive. Not AI-aligned. Rising rates negative for high-multiple duration asset."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb3.tc1",
+                  "label": "TC: Exit discipline when negatives manifest?",
+                  "rating": "C",
+                  "summary": "Monopoly limits downside but 33x P/E means multiple compression is the main risk. EES disruption is near-term binary. Freight weakness is structural post-Brexit concern."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb3.tc1.q1",
+                  "label": "Q1: Market cycle - downturn",
+                  "rating": "C",
+                  "summary": "Relatively defensive — cross-Channel travel has low cyclicality for passenger segment. Freight is more cyclical. Fixed-cost leverage means volume declines hit EBITDA hard. 33x P/E compresses in downturn."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb3.tc1.q2",
+                  "label": "Q2: AI disruption",
+                  "rating": "B",
+                  "summary": "Minimal. Physical tunnel infrastructure cannot be disrupted by AI. Video conferencing marginally reduces business travel but leisure grows. AI is irrelevant to the investment case."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb3.tc1.q3",
+                  "label": "Q3: Input cost inflation (Iran)",
+                  "rating": "C",
+                  "summary": "Net positive. Higher fuel costs raise ferry operating costs disproportionately vs tunnel (electric rail). Oil/gas price spikes structurally favour tunnel's energy efficiency advantage. ElecLink benefits from energy spread volatility."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb3.tc1.q4",
+                  "label": "Q4: No overlap with 10x general invalidating ACHs",
+                  "rating": "PASS",
+                  "summary": "No overlap. Natural monopoly with sovereign treaty protection. Not a macro-bet or structural decliner."
+                },
+                {
+                  "level": "family",
+                  "id": "p4.bb4",
+                  "label": "BB#4: Strenuously Seek-to-Avoid",
+                  "rating": "C",
+                  "summary": "Single-asset concentration is the main seek-to-avoid. 33x P/E leaves little margin of safety. Tunnel closure event (fire, terrorism) is low-probability but high-impact."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb4.tc1",
+                  "label": "TC: Avoiding invalidation at a trough share price?",
+                  "rating": "C",
+                  "summary": "33x P/E means trough could be significant (compression to 20x = ~40% downside). Single-asset risk — tunnel closure would be catastrophic. Low probability but high impact."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb4.tc1.q1",
+                  "label": "Q1: Fundamental SHMLP risks?",
+                  "rating": "C",
+                  "summary": "Tunnel closure event (fire — precedent in 1996 and 2008). Regulatory intervention on concession terms. HSR entrant failure to materialise. ElecLink permanent impairment. Low individual probabilities but single-asset concentration amplifies each."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb4.tc1.q2",
+                  "label": "Q2: Wide skew in outcomes (low case predictability)?",
+                  "rating": "C",
+                  "summary": "Moderate skew. Base case is predictable (monopoly, recurring revenues). But binary risks (tunnel closure, ElecLink settlement, EES disruption) create tail scenarios. 33x P/E amplifies downside scenarios."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb4.tc2",
+                  "label": "TC: Avoiding large mark-to-market risk?",
+                  "rating": "C",
+                  "summary": "High. 33x P/E is duration asset — rate-sensitive. Infrastructure sector de-rating in rising rate environment would compress multiple significantly. Limited valuation floor."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb4.tc2.q1",
+                  "label": "Q1: Large downside to trough multiple?",
+                  "rating": "C",
+                  "summary": "Yes. Trough P/E for infrastructure ~15-18x. Current 33x → 18x = ~45% downside on multiple alone. Significant mark-to-market risk from multiple compression."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb4.tc2.q2",
+                  "label": "Q2: Multiple more influenced by industry than company?",
+                  "rating": "C",
+                  "summary": "Mixed. Monopoly premium is company-specific. But rate sensitivity and infrastructure sector de-rating are exogenous. In a rising rate environment, industry factors dominate."
+                },
+                {
+                  "level": "family",
+                  "id": "p4.bb5",
+                  "label": "BB#5: Small Size Constraints",
+                  "rating": "B",
+                  "summary": "~€6.5bn market cap. Euronext Paris. CAC Mid 60. Adequate institutional liquidity. No size constraints."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb5.tc1",
+                  "label": "TC: Minimise large mark-to-market risk?",
+                  "rating": "B",
+                  "summary": "~€6.5bn market cap — comfortably within sweet spot. Good institutional liquidity on Euronext Paris."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb5.tc1.q1",
+                  "label": "Q1: Sentiment-related SHMLP risks?",
+                  "rating": "B",
+                  "summary": "Low. Large-cap, well-covered, institutional ownership. Infrastructure sector broadly favoured by institutional investors. Sentiment risk limited to rate sensitivity."
+                },
+                {
+                  "level": "family",
+                  "id": "p4.bb6",
+                  "label": "BB#6: Invalidating Constraints",
+                  "rating": "C",
+                  "summary": "No accounting or governance red flags. Single-asset concentration is the structural concern. ElecLink provision is a specific financial overhang."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb6.tc1",
+                  "label": "TC: Exit discipline when negatives manifest?",
+                  "rating": "C",
+                  "summary": "No overlap with general invalidation ACHs. Single-asset risk requires monitoring but is inherent to the asset class."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc1.q1",
+                  "label": "Q1: No overlap with 10x general invalidating ACHs",
+                  "rating": "PASS",
+                  "summary": "No overlap. Natural monopoly with sovereign treaty protection. Not a declining business, governance disaster, or accounting fraud."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb6.tc2",
+                  "label": "TC: Avoiding probable issues hidden under-the-surface?",
+                  "rating": "C",
+                  "summary": "€516m ElecLink profit-sharing provision is a known issue, not hidden. No other under-the-surface issues identified. Tunnel condition and safety record are public."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc2.q1",
+                  "label": "Q1: No slowing of core engine vs. company's DNA",
+                  "rating": "C",
+                  "summary": "Core Eurotunnel engine is performing (record passengers, stable car share). Freight weakness is concerning but may be cyclical. ElecLink normalisation is structural but not core tunnel business."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc2.q2",
+                  "label": "Q2: No mediocre CEOs or weird, silly simple choices?",
+                  "rating": "C",
+                  "summary": "Leriche is competent if unexceptional. No obviously poor strategic decisions. ElecLink development was a good capital allocation decision (1GW interconnector on existing infrastructure)."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc2.q3",
+                  "label": "Q3: No big 'Hmmms'?",
+                  "rating": "C",
+                  "summary": "One 'Hmmm': truck shuttle volumes persistently declining (-5.3% Jan 2026). Is this cyclical (EU IP) or structural (post-Brexit trade patterns)? Key question for ESA."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb6.tc3",
+                  "label": "TC: Avoiding mediocrity and obvious risks?",
+                  "rating": "B",
+                  "summary": "Not mediocre — natural monopoly with 50.4% EBITDA margins and 60-year concession. Obvious risks are single-asset concentration and stretched valuation. Quality is genuine."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc3.q1",
+                  "label": "Q1: No to red flags/achilles heel = 2+ Rs?",
+                  "rating": "C",
+                  "summary": "One potential R: single-asset concentration (tunnel closure risk). Not two. Passes minimum threshold."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc3.q2",
+                  "label": "Q2: No to mediocrity = 8+ Ys?",
+                  "rating": "B",
+                  "summary": "Easily passes. Natural monopoly, 50.4% EBITDA margin, 2086 concession, Treaty protection, record passengers, progressive dividend. Quality credentials are exceptional."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb6.tc4",
+                  "label": "TC: Avoiding tough operating environments?",
+                  "rating": "C",
+                  "summary": "Operating environment is mixed. EES implementation creates near-term friction. Post-Brexit trade patterns weigh on freight. ElecLink spread compression. Not an easy environment."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc4.q1",
+                  "label": "Q1: No recent earnings cuts (unless CfC part of case)?",
+                  "rating": "C",
+                  "summary": "Revenue -1% FY25. ElecLink revenue collapsed from €558m to €225m (but this is known and structural). Truck volumes declining. Not formal cuts but declining trends in segments."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc4.q2",
+                  "label": "Q2: No peers having problems?",
+                  "rating": "C",
+                  "summary": "No direct peers (only Channel Tunnel). Infrastructure peers (Vinci, Eiffage, Aena) performing adequately. Ferry operators (DFDS, P&O) facing cost pressures — this is positive for Getlink."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb6.tc5",
+                  "label": "TC: Avoid repeating past mistakes/lessons?",
+                  "rating": "PASS",
+                  "summary": "No overlap with Richard's negative lessons from track record. Getlink does not fit failed patterns."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc5.q1",
+                  "label": "Q1: No overlap with negative lessons and setups?",
+                  "rating": "PASS",
+                  "summary": "No overlap identified."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc5.q2",
+                  "label": "Q2: No fit with unacceptable / false friend setups?",
+                  "rating": "PASS",
+                  "summary": "No fit. Natural monopoly is genuine. HSR catalyst is real. Concession is legally binding. Not a false turnaround."
+                },
+                {
+                  "level": "family",
+                  "id": "p4.bb7",
+                  "label": "BB#7: Past Trend / Momentum",
+                  "rating": "C",
+                  "summary": "SP recovered from lows to ~€11.50 post-CMD. Technical momentum constructive but not strong. Freight volume momentum negative. SS opinion divided."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb7.tc1",
+                  "label": "TC: Price momentum?",
+                  "rating": "C",
+                  "summary": "SP rallied post-CMD (Feb 2026) but has pulled back from highs. MAs constructive. Not a strong momentum setup — range-bound between €10-12."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb7.tc1.q1",
+                  "label": "Q1: Many - MM technical momentum analysis Qs",
+                  "rating": "C",
+                  "summary": "Need FactSet data for full Minervini analysis. Estimated 5-6/9 PASS. Not a strong momentum setup. CMD provided catalyst but follow-through uncertain."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb7.tc2",
+                  "label": "TC: Fundamental momentum?",
+                  "rating": "C",
+                  "summary": "Record passengers but freight declining. ElecLink revenue normalising. CMD targets are new catalyst. Mixed fundamental momentum."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb7.tc2.q1",
+                  "label": "Q1: SS earnings momentum analysis Qs",
+                  "rating": "C",
+                  "summary": "SS recalibrating post-CMD. EPS revisions flat. New targets being digested. No strong revision trend yet."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb7.tc2.q2",
+                  "label": "Q2: Peers - Technicals, SS Qs",
+                  "rating": "C",
+                  "summary": "No direct peers. Infrastructure peers (Vinci, Eiffage, Aena) trade at 15-17x vs GET's 33x. Relative valuation is stretched."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb7.tc2.q3",
+                  "label": "Q3: Company - Delivery of guidance and expectations",
+                  "rating": "C",
+                  "summary": "FY25 EBITDA +4% was a modest beat. Record Eurostar passengers. CMD targets are new and credible. Track record of steady delivery. ElecLink revenue decline was structural and transparent."
+                },
+                {
+                  "level": "family",
+                  "id": "p4.bb8",
+                  "label": "BB#8: Nice-to-Have Attributes",
+                  "rating": "C",
+                  "summary": "Progressive dividend (€0.80 to €1.00). ESG/carbon advantage. HSR network expansion optionality. No buyback programme."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb8.tc1",
+                  "label": "TC: Additional upside?",
+                  "rating": "C",
+                  "summary": "HSR new entrants could exceed expectations (additional operators beyond Virgin Trains and Trenitalia). ElecLink provision settlement could release more capital than expected. Carbon regulation could accelerate modal shift."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb8.tc1.q1",
+                  "label": "Q1: Big positive optionality above/beyond modal case?",
+                  "rating": "C",
+                  "summary": "Additional HSR operators beyond Virgin Trains/Trenitalia. Carbon tax acceleration driving faster modal shift. ElecLink provision release above expectations. All above modal case but uncertain timing."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb8.tc2",
+                  "label": "TC: Self-righting behaviour ATM?",
+                  "rating": "C",
+                  "summary": "Monopoly provides natural self-righting. Volume declines are typically temporary (weather, strikes). Fixed-cost leverage means recovery drives rapid EBITDA recovery. Concession duration provides ultimate self-righting mechanism."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb8.tc2.q1",
+                  "label": "Q1: Rapid self-righting MMO?",
+                  "rating": "C",
+                  "summary": "Yes. Monopoly demand recovers post-disruption (COVID proved this). Fixed-cost leverage means volume recovery translates directly to EBITDA recovery. Concession provides unlimited time horizon for self-correction."
+                },
+                {
+                  "level": "pillar",
+                  "id": "p5",
+                  "label": "P5: Sell-Side Momentum",
+                  "rating": "C",
+                  "summary": "SS recalibrating post-CMD. New targets (€1bn EBITDA 2030) being digested. No strong revision trend. Infrastructure sector coverage adequate."
+                },
+                {
+                  "level": "metric",
+                  "id": "p5.eps_change",
+                  "label": "EPS revisions",
+                  "rating": "C",
+                  "summary": "Flat. CMD targets are new — SS recalibrating. Near-term revisions constrained by ElecLink normalisation and freight weakness."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.eps_change.l1m",
+                  "label": "EPS L1M change",
+                  "rating": "C",
+                  "summary": "Flat. No material revision in last month."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.eps_change.l3m",
+                  "label": "EPS L3M change",
+                  "rating": "C",
+                  "summary": "Flat to slightly positive post-CMD and FY25 results."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.eps_change.l6m",
+                  "label": "EPS L6M change",
+                  "rating": "C",
+                  "summary": "Flat over 6 months. ElecLink normalisation offset by passenger volume strength."
+                },
+                {
+                  "level": "metric",
+                  "id": "p5.ebitda_change",
+                  "label": "EBITDA revisions",
+                  "rating": "C",
+                  "summary": "Flat to slightly positive. FY25 EBITDA +4% was a modest beat."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.ebitda_change.l1m",
+                  "label": "EBITDA L1M change",
+                  "rating": "C",
+                  "summary": "Flat."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.ebitda_change.l3m",
+                  "label": "EBITDA L3M change",
+                  "rating": "C",
+                  "summary": "Slightly positive post-CMD."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.ebitda_change.l6m",
+                  "label": "EBITDA L6M change",
+                  "rating": "C",
+                  "summary": "Flat."
+                },
+                {
+                  "level": "metric",
+                  "id": "p5.revenue_change",
+                  "label": "Revenue revisions",
+                  "rating": "C",
+                  "summary": "Flat to slightly negative. Revenue -1% FY25 reflecting ElecLink normalisation. Passenger revenue growing but ElecLink offsetting."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.revenue_change.l1m",
+                  "label": "Revenue L1M change",
+                  "rating": "C",
+                  "summary": "Flat."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.revenue_change.l3m",
+                  "label": "Revenue L3M change",
+                  "rating": "C",
+                  "summary": "Flat."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.revenue_change.l6m",
+                  "label": "Revenue L6M change",
+                  "rating": "C",
+                  "summary": "Slightly negative reflecting ElecLink revenue collapse."
+                },
+                {
+                  "level": "metric",
+                  "id": "p5.price_target_change",
+                  "label": "Price target revisions",
+                  "rating": "C",
+                  "summary": "SS PTs clustered around €11-13. CMD targets providing new framework for PT re-assessment. No strong directional trend."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.price_target_change.l1m",
+                  "label": "PT L1M change",
+                  "rating": "C",
+                  "summary": "Flat."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.price_target_change.l3m",
+                  "label": "PT L3M change",
+                  "rating": "C",
+                  "summary": "Slightly positive post-CMD."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.price_target_change.l6m",
+                  "label": "PT L6M change",
+                  "rating": "C",
+                  "summary": "Flat."
+                },
+                {
+                  "level": "metric",
+                  "id": "p5.pct_buy_change",
+                  "label": "% Buy change",
+                  "rating": "C",
+                  "summary": "Mixed SS opinion. No clear consensus direction. CMD may shift opinion over time."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.pct_buy_change.l1m",
+                  "label": "% Buy L1M change",
+                  "rating": "C",
+                  "summary": "No change."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.pct_buy_change.l3m",
+                  "label": "% Buy L3M change",
+                  "rating": "C",
+                  "summary": "No change."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.pct_buy_change.l6m",
+                  "label": "% Buy L6M change",
+                  "rating": "C",
+                  "summary": "No change."
+                },
+                {
+                  "level": "pillar",
+                  "id": "p6",
+                  "label": "P6: Valuation",
+                  "rating": "C",
+                  "summary": "~33x P/E — premium to all infrastructure peers. Partially justified by natural monopoly + 60-year concession. But leaves minimal margin of safety."
+                },
+                {
+                  "level": "valuation",
+                  "id": "p6.fwd_pe",
+                  "label": "Forward P/E",
+                  "rating": "C",
+                  "summary": "~33x P/E is expensive. Infrastructure peers: Vinci 16.7x, Eiffage 15x, Aena 16.9x. Monopoly premium partially justified but magnitude is stretched."
+                },
+                {
+                  "level": "valuation",
+                  "id": "p6.hist_range",
+                  "label": "Historical range",
+                  "rating": "C",
+                  "summary": "Above historical average for Getlink. Pre-COVID traded ~20-25x. Post-COVID premium expansion reflects infrastructure re-rating and ElecLink windfall. Current level near top of range."
+                },
+                {
+                  "level": "valuation",
+                  "id": "p6.peer",
+                  "label": "Peer comparison",
+                  "rating": "C",
+                  "summary": "Significant premium to infrastructure peers. Vinci 16.7x, Eiffage 15x, Aena 16.9x. Premium is ~2x peers. Partially justified by monopoly but magnitude creates vulnerability to de-rating."
+                }
+              ]
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "C.II.1",
+          "title": "Technical Strength (Pillar 1)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bluf",
+              "text": "_SP ~€11.50 above key MAs post-CMD rally. Stage 2 forming but D6, D7, D9 failing. RS rank weak relative to broader market. 33x P/E limits technical upside potential._"
+            },
+            {
+              "type": "pillar_block",
+              "id": null,
+              "label": "Technical Strength",
+              "rating": "C",
+              "blocks": [
+                {
+                  "type": "bluf",
+                  "text": "Estimated 5-6/9 Minervini PASS. Post-CMD rally constructive but RS rank lagging. D7 (30% above 52W low) fails. SP near 50D MA boundary."
+                },
+                {
+                  "type": "family_block",
+                  "family_id": null,
+                  "id": null,
+                  "label": "Minervini Dimensions",
+                  "rating": "C",
+                  "blocks": [
+                    {
+                      "type": "bluf",
+                      "text": "5-6 of 9 checks PASS. D6 (near boundary), D7 (insufficient distance from 52W low), and D9 (RS rank) are the failures."
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "iaja": "I",
+                          "text": "**D1 PASS:** SP ~€11.50 above 200D MA."
+                        },
+                        {
+                          "iaja": "I",
+                          "text": "**D2 PASS:** 200D MA trending upward since CMD (Feb 2026)."
+                        },
+                        {
+                          "iaja": "I",
+                          "text": "**D3 PASS:** SP above 150D MA."
+                        },
+                        {
+                          "iaja": "I",
+                          "text": "**D4 PASS:** 150D above 200D MA — constructive alignment."
+                        },
+                        {
+                          "iaja": "I",
+                          "text": "**D5 PASS:** 50D above 150D MA."
+                        },
+                        {
+                          "iaja": "I",
+                          "text": "**D6 FAIL:** SP near/slightly below 50D MA — recent pullback from post-CMD highs. Need FactSet confirmation."
+                        },
+                        {
+                          "iaja": "I",
+                          "text": "**D7 FAIL:** 52W low ~€9.50, current ~€11.50 = ~21% above. Does not meet 30% threshold."
+                        },
+                        {
+                          "iaja": "I",
+                          "text": "**D8 PASS:** Within 25% of 52W high. ~8% below 52W high ~€12.50."
+                        },
+                        {
+                          "iaja": "I",
+                          "text": "**D9 FAIL:** RS Rank likely below 70 — infrastructure sector has lagged broader market. Need FactSet data."
+                        }
+                      ],
+                      "ratings": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "summary",
+              "text": "_Technical picture is constructive with SP above key MAs post-CMD rally. Stage 2 forming but not confirmed. D6, D7, and D9 are the failures. Need FactSet data for full Minervini assessment._"
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "C.II.2",
+          "title": "Fundamental Investment Case (P3+P4)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bluf",
+              "text": "_Natural monopoly with exceptional moat (Treaty of Canterbury, 2086 concession). HSR new entrant inflection (Virgin Trains 2029-30, Trenitalia 2029) is a genuine volume catalyst at >90% incremental margins. But ElecLink normalisation, freight weakness, and stretched valuation (33x P/E) create tension. Growth rate (~3-5% EBITDA CAGR) is below Richard's 12-20% EPS growth threshold._"
+            },
+            {
+              "type": "pillar_block",
+              "id": null,
+              "label": "Fundamental Change",
+              "rating": "C",
+              "blocks": [
+                {
+                  "type": "bluf",
+                  "text": "HSR inflection is the genuine catalyst but is 3-4 years out. ElecLink normalisation is structural headwind. Monopoly quality is exceptional but growth rate is below threshold. Conviction C at Triaging."
+                },
+                {
+                  "type": "family_block",
+                  "family_id": "IC#1",
+                  "label": "IC#1: Required Case OUTPUTS",
+                  "rating": "C",
+                  "blocks": [
+                    {
+                      "type": "bluf",
+                      "text": "€1bn EBITDA 2030 target implies ~3.2% CAGR. EPS growth 5-8% including leverage reduction. Below 12-20% threshold. Compensating factors: monopoly quality, >90% incremental margins on volume growth, 60-year concession longevity."
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "iaja": "J",
+                          "rating": "C",
+                          "signpost": {
+                            "level": "family",
+                            "ref": "IC#1",
+                            "label": "Required Case OUTPUTS",
+                            "style": "prefix"
+                          },
+                          "text": "**IC#1 Required Case OUTPUTS:** EPS growth via volume uplift on fixed-cost infrastructure. €1bn EBITDA 2030 = ~3.2% CAGR from €859m. Below 12-20% threshold. Growth acceleration requires HSR new entrants materialising (2029-30). Near-term constrained by ElecLink normalisation and freight weakness."
+                        },
+                        {
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "RA",
+                            "ref": "IC#1.RA1",
+                            "label": "Sufficient longevity of case (baton)?",
+                            "style": "prefix",
+                            "synthesises": [
+                              "IC#1.CQ1"
+                            ]
+                          },
+                          "text": "**IC#1 RA1 — Sufficient longevity?** Exceptional. 2086 concession = 60 years remaining. Natural monopoly with bilateral treaty protection. No comparable longevity in European equities. The baton is essentially permanent within any investment horizon."
+                        },
+                        {
+                          "iaja": "J",
+                          "rating": "C",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#1.CQ1",
+                            "label": "Three-year, mid-term, triple ratchet step-up?",
+                            "style": "prefix"
+                          },
+                          "text": "**IC#1 CQ1 — Triple ratchet step-up?** Partial. (1) Volume: HSR new entrants add rail paths at >90% margins — but 3-4 years out. (2) Margin: operating leverage on fixed costs — already at 50.4% EBITDA, limited incremental expansion near-term. (3) Multiple: potential modest re-rating if €1bn EBITDA target approached — but already at 33x P/E.",
+                          "sub": [
+                            {
+                              "iaja": "I",
+                              "text": "FY25: Revenue €1,595m (-1%), EBITDA €859m (+4%). Record 11.8m Eurostar passengers. Car share 56.1%. Trucks declining -5.3%."
+                            },
+                            {
+                              "iaja": "A",
+                              "text": "Triple ratchet is weak near-term. Volume leg is the most promising but is 3-4 years out. Margin leg is limited (already high). Multiple leg is constrained (already premium). Case is a slow compounder, not a triple ratchet."
+                            }
+                          ]
+                        },
+                        {
+                          "iaja": "J",
+                          "rating": "C",
+                          "signpost": {
+                            "level": "RA",
+                            "ref": "IC#1.RA4",
+                            "label": "Sufficient setup fit?",
+                            "style": "prefix",
+                            "synthesises": [
+                              "IC#1.CQ4"
+                            ]
+                          },
+                          "text": "**IC#1 RA4 — Sufficient setup fit?** Moderate. Demand-Driven EPSU: HSR new entrants are a visible demand catalyst on monopoly infrastructure. Event-Driven: ElecLink provision settlement is identifiable. Both setups credible but timing of primary catalyst (2029-30) creates patience requirement."
+                        },
+                        {
+                          "iaja": "J",
+                          "rating": "C",
+                          "signpost": {
+                            "level": "RA",
+                            "ref": "IC#1.RA8",
+                            "label": "Sufficiently robust / bankable multiple?",
+                            "style": "prefix",
+                            "synthesises": [
+                              "IC#1.CQ11"
+                            ]
+                          },
+                          "text": "**IC#1 RA8 — Bankable multiple?** Stretched. 33x P/E vs infra peers at 15-17x. Premium partially justified by monopoly + concession but magnitude leaves little margin of safety. Rising rates would compress. Not bankable at current levels."
+                        },
+                        {
+                          "iaja": "J",
+                          "rating": "C",
+                          "signpost": {
+                            "level": "RA",
+                            "ref": "IC#1.RA9",
+                            "label": "Sufficient returns?",
+                            "style": "prefix",
+                            "synthesises": [
+                              "IC#1.CQ12"
+                            ]
+                          },
+                          "text": "**IC#1 RA9 — Sufficient returns?** Borderline. 3Y TSR ~20-30% on modal case (5-8% EPS CAGR + 5-7% cumulative dividend yield). Meets 20% threshold on modal but not convincingly. Bear case: flat SP + dividend = ~15% total — below threshold."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "family_block",
+                  "family_id": "IC#2",
+                  "label": "IC#2: Required Case INPUTS",
+                  "rating": "C",
+                  "blocks": [
+                    {
+                      "type": "bluf",
+                      "text": "Exceptional base quality (natural monopoly, Treaty, 50.4% margins). Strong external tailwinds (HSR demand, carbon regulation, modal shift). Internal change moderate (CMD targets, capex programme). Base compensates for growth rate shortfall."
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "iaja": "J",
+                          "rating": "C",
+                          "signpost": {
+                            "level": "family",
+                            "ref": "IC#2",
+                            "label": "Required Case INPUTS",
+                            "style": "prefix"
+                          },
+                          "text": "**IC#2 Required Case INPUTS:** Exceptional monopoly base — Treaty of Canterbury, 2086 concession, 50.4% EBITDA margins, irreplaceable infrastructure. External change forces strong (HSR entrants, carbon regulation). Internal change moderate (CMD targets, incremental optimisation). Base quality is the standout feature."
+                        },
+                        {
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "RA",
+                            "ref": "IC#2.RA1",
+                            "label": "Sufficient change forces",
+                            "style": "prefix",
+                            "synthesises": [
+                              "IC#2.CQ1",
+                              "IC#2.CQ2"
+                            ]
+                          },
+                          "text": "**IC#2 RA1 — Sufficient change forces?** Yes. External: HSR new entrants (Virgin Trains 2029-30, Trenitalia 2029), EU/UK carbon regulation, modal shift. Internal: CMD targets, capex programme, new dividend policy. External forces are stronger than internal — asset-driven not management-driven."
+                        },
+                        {
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "RA",
+                            "ref": "IC#2.RA2",
+                            "label": "Sufficient base (to build a strong case on)",
+                            "style": "prefix",
+                            "synthesises": [
+                              "IC#2.CQ3",
+                              "IC#2.CQ4",
+                              "IC#2.CQ5",
+                              "IC#2.CQ6",
+                              "IC#2.CQ7"
+                            ]
+                          },
+                          "text": "**IC#2 RA2 — Sufficient base?** Exceptional. Natural monopoly is the strongest competitive moat in European equities. 50.4% EBITDA margin demonstrates pricing power. 60-year concession provides infinite visibility by equity investment standards. But 33x P/E means the base quality is already priced."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "family_block",
+                  "family_id": "IC#3",
+                  "label": "IC#3: Required Case SETUPS",
+                  "rating": "C",
+                  "blocks": [
+                    {
+                      "type": "bluf",
+                      "text": "Primary: Demand-Driven EPSU via HSR new entrants at >90% incremental margins on monopoly infrastructure. Secondary: Event-Driven via ElecLink provision settlement. No overlap with unacceptable or false friend setups. Both setups credible but primary catalyst is distant (2029-30)."
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "iaja": "J",
+                          "rating": "C",
+                          "signpost": {
+                            "level": "family",
+                            "ref": "IC#3",
+                            "label": "Required Case SETUPS",
+                            "style": "prefix"
+                          },
+                          "text": "**IC#3 Required Case SETUPS:** Demand-Driven EPSU via HSR inflection — Virgin Trains and Trenitalia as new rail path customers on fixed-cost infrastructure. Event-Driven via ElecLink provision settlement. Both credible. Primary catalyst distant (2029-30). No false friend or unacceptable overlap."
+                        },
+                        {
+                          "iaja": "J",
+                          "rating": "C",
+                          "signpost": {
+                            "level": "RA",
+                            "ref": "IC#3.RA2",
+                            "label": "Big demand change-driven EPSU or EPT",
+                            "style": "prefix",
+                            "synthesises": [
+                              "IC#3.CQ4",
+                              "IC#3.CQ5",
+                              "IC#3.CQ6",
+                              "IC#3.CQ7",
+                              "IC#3.CQ8"
+                            ]
+                          },
+                          "text": "**IC#3 RA2 — Demand-driven EPSU?** Moderate. HSR new entrants provide structural volume uplift on monopoly infrastructure at >90% incremental margins. Dominant competitive position (sole provider). Exceptional fixed-cost leverage. But total market growth is modest (~2-3% p.a.), not an explosion."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "pillar_block",
+              "id": null,
+              "label": "Foundation Quality",
+              "rating": "B",
+              "blocks": [
+                {
+                  "type": "bluf",
+                  "text": "Exceptional monopoly asset. 50.4% EBITDA margins. Treaty of Canterbury protection. 2086 concession. >90% incremental margins on volume growth. Foundation quality is outstanding — among the strongest moats in European equities. Offset by moderate management quality and stretched valuation."
+                },
+                {
+                  "type": "family_block",
+                  "family_id": "BB#2",
+                  "label": "BB#2: Foundation Quality",
+                  "rating": "B",
+                  "blocks": [
+                    {
+                      "type": "bluf",
+                      "text": "Business quality exceptional (natural monopoly, absolute barriers to entry, 50.4% margins). Operator quality adequate (custodial management of asset). Competitive advantages are absolute and permanent. Growth rate is the weakness — infrastructure compounder, not growth stock."
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "family",
+                            "ref": "BB#2",
+                            "label": "Required Business Foundations",
+                            "style": "prefix"
+                          },
+                          "text": "**BB#2 Required Business Foundations:** Business model: natural monopoly with absolute barriers to entry (Treaty of Canterbury, physical geology). 50.4% EBITDA margins, >90% incremental margins on volume. Operator: custodial management — competent but not transformative. Competitive advantage: absolute (sole fixed-link). Growth rate below threshold but quality is exceptional."
+                        },
+                        {
+                          "iaja": "J",
+                          "rating": "C",
+                          "signpost": {
+                            "level": "TC",
+                            "ref": "BB#2.TC1",
+                            "label": "Great operator?",
+                            "style": "prefix"
+                          },
+                          "text": "**BB#2 TC1 — Great operator?** Competent custodian. Leriche is adequate — steady execution, COVID recovery managed, CMD targets set. Not a visionary CEO. Monopoly does not require outlier management to perform. Asset quality compensates for unremarkable management."
+                        },
+                        {
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "TC",
+                            "ref": "BB#2.TC2",
+                            "label": "Advantaged business + widening SRCA?",
+                            "style": "prefix"
+                          },
+                          "text": "**BB#2 TC2 — Advantaged + widening?** Absolute moat. Natural monopoly with sovereign treaty protection. Moat is not widening — it was absolute from day one. Carbon regulation provides structural competitive improvement vs ferries. Moat is permanent and impregnable."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "summary",
+              "text": "_Fundamental case C: exceptional monopoly quality (B+) offset by stretched valuation (C-) and growth rate below threshold (C-). HSR inflection is genuine but distant. The tension is between outstanding asset quality and insufficient near-term growth rate/valuation support. Proceed to ESA to test whether HSR timeline risk is manageable and whether freight weakness is cyclical._"
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "C.II.3",
+          "title": "Paradigm / Regime Fit (P2)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bluf",
+              "text": "_Mixed paradigm fit. Infrastructure monopoly is defensive — fits risk-off. ESG/carbon theme supportive. Not AI-aligned. Rising rates negative for 33x P/E duration asset. Net: moderate fit._"
+            },
+            {
+              "type": "pillar_block",
+              "id": null,
+              "label": "Paradigm Fit",
+              "rating": "C",
+              "blocks": [
+                {
+                  "type": "bluf",
+                  "text": "Current market paradigm: risk-off, Iran conflict, rate uncertainty. Getlink's monopoly with recurring revenues provides defensiveness. Carbon theme supportive. But 33x P/E is rate-sensitive and AI-irrelevant."
+                },
+                {
+                  "type": "bullet_group",
+                  "items": [
+                    {
+                      "iaja": "J",
+                      "text": "**Late bull / early bear:** C+. Infrastructure concession with recurring toll-like revenues is relatively defensive. 60-year concession provides visibility. But 33x P/E means limited valuation support in downturn — duration asset compresses in risk-off.",
+                      "sub": [
+                        {
+                          "iaja": "I",
+                          "text": "Cross-Channel passenger demand showed resilience through COVID (recovered to record). Freight more cyclical. Fixed-cost leverage means volume declines hit EBITDA hard."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "J",
+                      "text": "**AI demand / disruption:** D. No AI alignment. Physical tunnel infrastructure cannot be disrupted or enhanced by AI. Video conferencing marginally reduces business travel but leisure is growing. AI is irrelevant.",
+                      "sub": [
+                        {
+                          "iaja": "I",
+                          "text": "Physical infrastructure monopoly. AI has no application to the core value proposition (transporting vehicles/passengers through a tunnel)."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "J",
+                      "text": "**Oil / stagflation / Iran:** C+. Net positive. Higher fuel costs raise ferry operating costs disproportionately vs tunnel (electric rail). Oil/gas price spikes structurally favour tunnel's energy efficiency. ElecLink benefits from energy spread volatility. But recession reduces overall travel demand.",
+                      "sub": [
+                        {
+                          "iaja": "I",
+                          "text": "Tunnel CO2 per passenger-km is ~6x less than ferry. Higher fuel = higher ferry costs = more tunnel market share. ElecLink revenue benefits from wide GB-France energy spreads."
+                        },
+                        {
+                          "iaja": "A",
+                          "text": "Iran-driven energy price spike is net positive for Getlink's competitive position vs ferries. But recession risk from energy shock reduces total cross-Channel demand."
+                        }
+                      ]
+                    }
+                  ],
+                  "ratings": []
+                }
+              ]
+            },
+            {
+              "type": "summary",
+              "text": "_Paradigm fit C+ overall. Infrastructure monopoly provides defensiveness in risk-off. Carbon/ESG theme supportive. Iran energy spike net positive vs ferries. Not AI-aligned. 33x P/E is the vulnerability — rate-sensitive duration asset. Paradigm is moderate support, not strong alignment._"
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "C.II.4",
+          "title": "Sell-Side Momentum (P5)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bluf",
+              "text": "_SS recalibrating post-CMD (Feb 2026). New €1bn EBITDA 2030 target being digested. No strong revision trend. Infrastructure sector coverage adequate. PTs clustered around €11-13._"
+            },
+            {
+              "type": "momentum_table",
+              "title": "P5 SS Earnings Momentum — 5 dimensions x 3 timeframes (GET consensus snapshot)",
+              "metrics": [
+                {
+                  "key": "eps_change",
+                  "label": "EPS revisions",
+                  "values": {
+                    "l1m": -2,
+                    "l3m": -7,
+                    "l6m": -9
+                  }
+                },
+                {
+                  "key": "ebitda_change",
+                  "label": "EBITDA revisions",
+                  "values": {
+                    "l1m": -1,
+                    "l3m": -6,
+                    "l6m": -7
+                  }
+                },
+                {
+                  "key": "revenue_change",
+                  "label": "Revenue revisions",
+                  "values": {
+                    "l1m": 0,
+                    "l3m": -3,
+                    "l6m": -5
+                  }
+                },
+                {
+                  "key": "price_target_change",
+                  "label": "Price target revisions",
+                  "values": {
+                    "l1m": -2,
+                    "l3m": -6,
+                    "l6m": -6
+                  }
+                },
+                {
+                  "key": "pct_buy_change",
+                  "label": "% Buy change",
+                  "values": {
+                    "l1m": -8,
+                    "l3m": 0,
+                    "l6m": 0
+                  }
+                }
+              ],
+              "score": 0,
+              "grade": "F"
+            },
+            {
+              "type": "pillar_block",
+              "id": null,
+              "label": "Sell-Side Momentum",
+              "rating": "C",
+              "blocks": [
+                {
+                  "type": "bluf",
+                  "text": "No strong momentum in SS revisions. CMD targets are new — recalibration underway. H1 2026 traffic data will be the next catalyst for revision direction."
+                },
+                {
+                  "type": "bullet_group",
+                  "items": [
+                    {
+                      "iaja": "I",
+                      "text": "SS PTs clustered around €11-13 range. CMD (Feb 2026) provided new medium-term targets: €1bn EBITDA by 2030, progressive dividend €0.80 to €1.00.",
+                      "sub": [
+                        {
+                          "iaja": "A",
+                          "text": "CMD targets provide framework for SS re-rating. Need to monitor post-CMD revision trend over next 3-6 months."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "J",
+                      "text": "Consensus revisions flat. ElecLink normalisation offset by passenger volume strength. Freight weakness creates near-term earnings uncertainty. Potential upgrade catalyst: H1 2026 traffic data showing freight stabilisation + continued passenger records."
+                    }
+                  ],
+                  "ratings": []
+                }
+              ]
+            },
+            {
+              "type": "summary",
+              "text": "_SS momentum C. Flat revisions, CMD targets being digested. Potential catalysts: H1 2026 traffic data, EES implementation outcome, HSR fleet order announcements. If freight stabilises and passengers continue at record levels, expect positive revision cycle._"
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "C.II.5",
+          "title": "Valuation (P6)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bluf",
+              "text": "_~33x P/E — significant premium to infrastructure peers (Vinci 16.7x, Eiffage 15x, Aena 16.9x). Premium partially justified by natural monopoly + 60-year concession but magnitude leaves minimal margin of safety. Dividend yield ~5-7% provides some support._"
+            },
+            {
+              "type": "pillar_block",
+              "id": null,
+              "label": "Valuation",
+              "rating": "C",
+              "blocks": [
+                {
+                  "type": "bluf",
+                  "text": "Expensive on absolute and relative basis. Monopoly premium justified but magnitude is stretched. Rate-sensitive duration asset. Dividend provides modest floor."
+                },
+                {
+                  "type": "bullet_group",
+                  "items": [
+                    {
+                      "iaja": "J",
+                      "text": "**Absolute valuation:** ~33x P/E is expensive by any standard. 50.4% EBITDA margin and natural monopoly justify premium but not 2x peers. Dividend yield (~5-7%) provides income support. EV/EBITDA likely ~12-14x (more reasonable than P/E suggests, reflecting depreciation on tunnel asset).",
+                      "sub": [
+                        {
+                          "iaja": "I",
+                          "text": "P/E ~33x. EBITDA margin 50.4%. Revenue €1,595m. EBITDA €859m. Net debt €3.39bn. Cash €1.49bn. Dividend €0.80 (2026)."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "J",
+                      "text": "**Relative valuation:** ~2x premium to infrastructure peers (Vinci 16.7x, Eiffage 15x, Aena 16.9x). Premium reflects: (1) natural monopoly vs concession portfolio, (2) 60-year concession vs shorter durations, (3) fixed-cost leverage. But magnitude is stretched.",
+                      "sub": [
+                        {
+                          "iaja": "I",
+                          "text": "Infrastructure peer multiples: Vinci 16.7x, Eiffage 15x, Aena 16.9x, Fraport ~15x. All at half GET's P/E. Monopoly premium is real but 2x seems excessive."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "J",
+                      "text": "**Scenario analysis:** Bull €14 (~22% upside): €1bn EBITDA target achieved early, HSR entrants confirmed, multiple holds. Base €12 (~4%): steady execution, CMD targets on track. Bear €9 (~22% downside): EES disruption + freight decline + rate-driven multiple compression."
+                    }
+                  ],
+                  "ratings": []
+                }
+              ]
+            },
+            {
+              "type": "summary",
+              "text": "_Valuation C — expensive at 33x P/E. Monopoly premium partially justified but magnitude is stretched. Limited margin of safety. Valuation is the key concern — exceptional asset quality is already priced. Entry would ideally be at lower multiple (pullback to ~25x or below)._"
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        }
+      ]
+    },
+    "D": {
+      "letter": "D",
+      "title": "COMPONENTS",
+      "applicable": true,
+      "inline_verdict": "4 KDs, 5 KHF/As, 4 KCs, 5 KRs, 3 KPOs — HSR timeline and freight recovery are fulcrum drivers",
+      "default_open": true,
+      "applicable_note": null,
+      "word_count": 0,
+      "page_count": 0,
+      "target_words": 0,
+      "subsections": [
+        {
+          "id": "D.I.1",
+          "title": "KDICs — Key Drivers of Investment Case",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "**FULCRUM #1: HSR new entrant volume inflection** — Virgin Trains (2029-30) and Trenitalia (2029) fleet orders and regulatory approvals. Volume growth at >90% incremental margins on fixed-cost infrastructure. Fleet order confirmation is the key milestone."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**FULCRUM #2: ElecLink regulatory resolution** — €516m profit-sharing provision settlement. Resolution unlocks FCF clarity and potentially releases €200-300m trapped capital. Timing uncertain."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KD #3: Freight/truck volume recovery** — -5.3% Jan 2026 decline is persistent. Cyclical (EU IP stagnation) or structural (post-Brexit trade patterns)? H1 2026 data will clarify. ORANGE (55% base case for recovery)."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KD #4: EES border implementation** — Apr-Sep 2026 rollout. Near-term binary risk to passenger volumes from border friction. Successful implementation is long-term positive (security). Failed implementation creates multi-year disruption. ORANGE (60% base case for smooth rollout)."
+                }
+              ],
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "D.I.2",
+          "title": "KHF/As — Key Hygiene Factors / Assumptions",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "I",
+                  "text": "Concession to 2086 remains legally intact — no Treaty renegotiation or concession modification. Bilateral sovereign treaty provides highest-level legal protection."
+                },
+                {
+                  "iaja": "I",
+                  "text": "Tunnel infrastructure remains structurally sound — no major safety incident or structural failure requiring extended closure. Capex programme (€170-220m/year) maintains asset condition."
+                },
+                {
+                  "iaja": "I",
+                  "text": "UK-France political relations remain stable — no bilateral dispute disrupting tunnel operations. Post-Brexit framework holds."
+                },
+                {
+                  "iaja": "I",
+                  "text": "ElecLink interconnector continues operating — no technical failure or regulatory shutdown of 1GW electricity link."
+                },
+                {
+                  "iaja": "I",
+                  "text": "Cross-Channel travel demand continues growing at ~2-3% p.a. — no structural demand collapse from remote work, de-globalisation, or geopolitical isolation."
+                }
+              ],
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "D.I.3",
+          "title": "KCs/KUs — Key Confusions & Unknowns",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "**KC#1: Freight volume decline — cyclical or structural?** Is -5.3% truck shuttle decline driven by EU IP stagnation (cyclical, recoverable) or post-Brexit trade pattern restructuring (structural, permanent)? H1 2026 data + UK-EU trade statistics will clarify."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KC#2: ElecLink sustainable run-rate** — Revenue collapsed €558m to €225m. Is €200-250m the new structural baseline or will spreads compress further as GB-France energy markets equilibrate? Need energy market analysis."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KC#3: HSR new entrant timeline reliability** — Virgin Trains fleet order for 2029-30 service launch. Rolling stock procurement is complex and frequently delayed. What is the realistic probability of on-time service launch? Track record of UK rolling stock procurement is poor."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KC#4: EES implementation severity** — Will Apr-Sep 2026 rollout cause material passenger volume disruption or will systems be ready? French/UK border authorities' preparedness is the unknown."
+                }
+              ],
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "D.I.4",
+          "title": "KRs — Key Concerns / Risks",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "**KR#1 (RED):** Traffic recession cascade — UK/EU recession drives 10%+ volume decline across car, freight, and Eurostar simultaneously. Fixed-cost leverage means EBITDA declines disproportionately. 33x P/E compresses."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KR#2 (RED):** ElecLink permanent impairment — GB-France energy spreads permanently compress, reducing ElecLink to €100-150m revenue. €516m provision settlement on unfavourable terms drains capital."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KR#3 (ORANGE):** EES border disruption — biometric border systems create multi-hour delays, deterring casual cross-Channel travellers. Passenger volumes decline 5-10% for 12-18 months during implementation."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KR#4 (ORANGE):** Refinancing wall — H2 2026-27 refinancing at higher rates compresses FCF. Net debt €3.39bn is substantial. Interest cost increase offsets operational improvements."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KR#5 (ORANGE):** Single-asset concentration — tunnel closure event (fire — precedent 1996, 2008; terrorism; structural failure) causes extended shutdown. No diversification. Low probability but catastrophic impact."
+                }
+              ],
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "D.I.5",
+          "title": "KPOs — Key Positive Optionality",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "**KPO#1:** Additional HSR operators beyond Virgin Trains/Trenitalia — further rail path customers at >90% incremental margins. Each new operator is near-pure profit growth."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KPO#2:** Carbon tax acceleration — EU ETS and UK ETS expanding to maritime raises ferry costs structurally, driving faster modal shift to tunnel. Could accelerate market share gains beyond modal case."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KPO#3:** ElecLink provision settlement on favourable terms — releases €200-300m+ of trapped capital. Could fund special dividend or accelerated debt reduction."
+                }
+              ],
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "D.II.1",
+          "title": "10 standard ACH invalidation scenarios",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bluf",
+              "text": "10 invalidation scenarios: 5 structural/external, 5 company/execution. Single-asset concentration amplifies all risks. Traffic recession cascade and ElecLink permanent impairment are highest-impact scenarios."
+            },
+            {
+              "type": "prose",
+              "iaja": "I",
+              "text": "**Single-event invalidations (rules 1-5)** — structural and external triggers:"
+            },
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "**ACH#1:** Tunnel closure event — fire (precedent 1996, 2008), terrorism, or structural failure causes extended shutdown (3+ months). Single-asset = total revenue loss. Catastrophic but low probability."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**ACH#2:** ElecLink permanent impairment — GB-France energy spreads permanently collapse, reducing ElecLink to break-even. €516m provision settled on maximally unfavourable terms."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**ACH#3:** HSR entrant failure — Virgin Trains and Trenitalia both abandon cross-Channel plans (rolling stock procurement failure, regulatory barrier, commercial withdrawal). Primary catalyst removed."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**ACH#4:** Regulatory intervention — UK or France government modifies concession terms, imposes windfall taxes, or restricts pricing. Treaty provides protection but political pressure could circumvent."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**ACH#5:** UK-EU travel demand structural collapse — post-Brexit friction + remote work + de-globalisation combine to permanently reduce cross-Channel traffic 20%+."
+                }
+              ],
+              "ratings": []
+            },
+            {
+              "type": "prose",
+              "iaja": "I",
+              "text": "**SP-conditional & composite invalidations (rules 6-10)** — execution-dependent triggers:"
+            },
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "**ACH#6:** EES implementation catastrophe — biometric border system causes persistent multi-hour delays for 12+ months, deterring casual travellers and permanently impairing passenger volumes."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**ACH#7:** Freight volume structural decline confirmed — truck shuttle volumes decline for 8+ consecutive quarters, confirming post-Brexit UK-EU trade restructuring away from Channel Tunnel corridor."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**ACH#8:** Refinancing at punitive rates — H2 2026-27 refinancing at 300bps+ above current terms, materially compressing FCF and threatening dividend."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**ACH#9:** Management quality deterioration — CEO departure + poor successor, leading to strategic drift and operational underperformance."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**ACH#10:** Multiple compression cascade — infrastructure sector de-rating from rising rates compresses GET from 33x to <20x P/E, creating 40%+ drawdown irrespective of fundamentals."
+                }
+              ],
+              "ratings": []
+            },
+            {
+              "type": "summary",
+              "text": "_No single scenario >20% probability individually. ACH#10 (multiple compression) is highest probability at ~15-20%. ACH#1 (tunnel closure) is highest impact but lowest probability (<2%). Single-asset concentration amplifies all risks. Monitor monthly traffic data and interest rate environment._"
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "D.II.2",
+          "title": "Plausible fundamental invalidation thresholds",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "**Fundamental invalidation thresholds:**\n\n(i) Total traffic volumes decline >10% in any full year — confirms demand-side structural weakness.\n(ii) Truck shuttle volumes decline for 6+ consecutive months — confirms freight weakness is structural not cyclical.\n(iii) ElecLink revenue falls below €150m annualised — confirms permanent spread compression.\n(iv) Capex exceeds €250m/year — suggests infrastructure deterioration requiring emergency spending.\n(v) Both HSR entrants (Virgin Trains, Trenitalia) delay by >2 years — removes primary catalyst within investment horizon.\n(vi) Net debt/EBITDA exceeds 4.5x — balance sheet stress from refinancing + elevated capex."
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "D.II.3",
+          "title": "Negative, should-be-expected developments",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "**Seasonal volume volatility:** Cross-Channel traffic is highly seasonal (summer peak, winter trough). Monthly traffic data will show large swings. Do not over-react to single-month weakness outside peak season. Focus on year-over-year comparisons."
+            },
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "**ElecLink quarterly volatility:** Interconnector revenue is inherently volatile (driven by GB-France power spread). Single-quarter revenue swings of ±30% are normal. Focus on rolling 12-month revenue trend, not quarterly figures. EES implementation friction: some short-term disruption during Apr-Sep 2026 rollout is expected and priced. Do not escalate unless disruption persists beyond initial implementation window."
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "D.III.1",
+          "title": "KOQs — Key Open Questions",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "**KOQ#1:** Is truck shuttle volume decline (-5.3% Jan 2026) cyclical (EU IP stagnation, recoverable) or structural (post-Brexit trade patterns, permanent)? H1 2026 monthly data + UK-EU trade statistics will answer."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KOQ#2:** What is ElecLink's sustainable revenue run-rate post-normalisation? Is €200-250m structural baseline or will further compression occur? Energy market analysis required."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KOQ#3:** What is the realistic timeline for Virgin Trains cross-Channel service launch? Fleet order status? Rolling stock procurement progress? Regulatory approval timeline?"
+                }
+              ],
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "D.III.2",
+          "title": "KAs — Key Actions",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "A",
+                  "text": "Analyse freight volume trends — UK-EU trade data, truck shuttle monthly stats, post-Brexit structural vs cyclical decomposition."
+                },
+                {
+                  "iaja": "A",
+                  "text": "Model ElecLink sustainable revenue — GB-France energy spread analysis, interconnector capacity utilisation trends, provision settlement scenario analysis."
+                },
+                {
+                  "iaja": "A",
+                  "text": "Track HSR new entrant milestones — Virgin Trains fleet order, Trenitalia regulatory approval, rolling stock delivery timelines. Assess probability of on-time launch."
+                }
+              ],
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        }
+      ]
+    },
+    "E": {
+      "letter": "E",
+      "title": "ACTIONS",
+      "applicable": true,
+      "inline_verdict": "PROCEED to ESA — exceptional monopoly asset with genuine HSR catalyst; valuation and freight weakness are the gates",
+      "default_open": true,
+      "subsections": [
+        {
+          "id": "E.I.1",
+          "title": "Pros/cons of prioritising vs other opportunities",
+          "heading_level": "subsection",
+          "blocks": [
+            {
+              "type": "callout",
+              "kind": "verdict",
+              "iaja": "J",
+              "text": "**PROCEED to ESA.** Getlink passes the Triaging screen with a C overall IC rating. The asset quality is exceptional — natural monopoly with Treaty of Canterbury protection, 60-year concession, 50.4% EBITDA margins, and >90% incremental margins on volume growth. HSR new entrant inflection (Virgin Trains 2029-30, Trenitalia 2029) is a genuine structural demand catalyst. But the case has three material concerns: (1) stretched valuation (~33x P/E, 2x infrastructure peers), (2) freight volume weakness (-5.3% Jan 2026, cyclical vs structural unclear), (3) ElecLink normalisation (€558m to €225m revenue collapse). Proceed to ESA to test freight recovery hypothesis, HSR timeline reliability, and optimal entry valuation.",
+              "ratings": []
+            },
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "**Why C not higher:** Three material concerns: (1) Growth rate below threshold — €1bn EBITDA 2030 = ~3.2% CAGR, EPS growth ~5-8%. Below Richard's 12-20% target. (2) Stretched valuation — 33x P/E leaves minimal margin of safety. Infrastructure peers at 15-17x. (3) HSR catalyst is distant — 2029-30 timeline means 3-4 years of patience with limited near-term earnings growth.\n\n**Sizing implication:** Starter position only (1.0-1.5%) if Richard proceeds post-ESA. Monopoly quality justifies tracking but valuation limits sizing until either (a) pullback to ~25x P/E or (b) HSR fleet order confirmation providing catalyst clarity.",
+              "ratings": []
+            }
+          ]
+        },
+        {
+          "id": "E.II.1",
+          "title": "Monitoring plan (RESEARCHER) for TIs/ICDs/peers",
+          "heading_level": "subsection",
+          "blocks": [
+            {
+              "type": "prose",
+              "text": "Lorem ipsum — monitoring plan placeholder. Define tracking indicators, investment case drivers, and peer group for ongoing RESEARCHER monitoring. Specify frequency and escalation triggers."
+            }
+          ]
+        },
+        {
+          "id": "E.II.2",
+          "title": "KQs/KAs if/when progressed to ESA",
+          "heading_level": "subsection",
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "Deep-dive freight volume analysis — decompose truck shuttle decline into cyclical (EU IP) vs structural (post-Brexit trade patterns) components using UK-EU trade data."
+                },
+                {
+                  "iaja": "J",
+                  "text": "ElecLink sustainable revenue model — analyse GB-France energy spreads, interconnector utilisation, provision settlement scenarios. Establish €200-250m run-rate conviction."
+                },
+                {
+                  "iaja": "J",
+                  "text": "HSR new entrant timeline assessment — track Virgin Trains fleet order progress, Trenitalia regulatory approvals, rolling stock procurement timelines. Assign probability to on-time 2029-30 launch."
+                },
+                {
+                  "iaja": "J",
+                  "text": "Financial model: 3-scenario framework (bear/modal/bull) with sensitivity on passenger volumes, freight recovery, ElecLink revenue, capex, and multiple."
+                },
+                {
+                  "iaja": "J",
+                  "text": "Valuation framework — establish fair value range using DCF (60-year concession), EV/EBITDA comps (infrastructure peers), and dividend yield analysis. Identify optimal entry P/E."
+                }
+              ],
+              "ratings": []
+            }
+          ]
+        },
+        {
+          "id": "E.III.1",
+          "title": "Reasons for parking ('gaps' analysis)",
+          "heading_level": "subsection",
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "Park if truck shuttle volumes decline for 6+ consecutive months — confirms structural post-Brexit freight weakness, not cyclical."
+                },
+                {
+                  "iaja": "J",
+                  "text": "Park if both HSR entrants (Virgin Trains, Trenitalia) delay by >2 years — removes primary catalyst within investment horizon."
+                },
+                {
+                  "iaja": "J",
+                  "text": "Re-enter watchlist if P/E compresses to ~25x or below — would provide margin of safety that current 33x lacks. Monopoly quality justifies tracking even if parked."
+                }
+              ],
+              "ratings": []
+            }
+          ]
+        },
+        {
+          "id": "E.III.2",
+          "title": "Re-assessment criteria for re-activation",
+          "heading_level": "subsection",
+          "blocks": [
+            {
+              "type": "prose",
+              "text": "Lorem ipsum — re-assessment criteria placeholder. Define observable, specific triggers that would warrant re-opening this case. Avoid vague criteria like 'if things improve'."
+            }
+          ]
+        },
+        {
+          "id": "E.III.3",
+          "title": "Monitoring plan for re-assessment criteria",
+          "heading_level": "subsection",
+          "blocks": [
+            {
+              "type": "prose",
+              "text": "Lorem ipsum — monitoring for re-assessment placeholder. How will the re-assessment criteria be tracked? Which RESEARCHER queries, data feeds, or calendar reminders will surface the trigger?"
+            }
+          ]
+        }
+      ]
+    },
+    "F": {
+      "letter": "F",
+      "title": "APPENDICES",
+      "applicable": true,
+      "inline_verdict": "Basic checks pass; no red flags",
+      "default_open": false,
+      "subsections": [
+        {
+          "id": "F.I",
+          "title": "Basic checks",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "kv_grid",
+              "title": "Quick reference — GET (Getlink SE)",
+              "rows": [
+                {
+                  "label": "Ticker",
+                  "value": "GET (Euronext Paris, CAC Mid 60)"
+                },
+                {
+                  "label": "Currency",
+                  "value": "EUR"
+                },
+                {
+                  "label": "Market cap",
+                  "value": "~€6.5bn"
+                },
+                {
+                  "label": "Enterprise value",
+                  "value": "~€8.4bn (estimated)"
+                },
+                {
+                  "label": "Share price",
+                  "value": "~€11.50"
+                },
+                {
+                  "label": "Shares outstanding",
+                  "value": "~550m"
+                },
+                {
+                  "label": "30-day avg volume",
+                  "value": "Adequate institutional liquidity"
+                },
+                {
+                  "label": "Net debt",
+                  "value": "€3.39bn (cash €1.49bn)"
+                },
+                {
+                  "label": "Dividend",
+                  "value": "€0.80 (2026), rising to €1.00 (2030)"
+                },
+                {
+                  "label": "Free float",
+                  "value": "High — no controlling shareholder"
+                },
+                {
+                  "label": "Largest shareholder",
+                  "value": "Institutional (no controlling stake)"
+                },
+                {
+                  "label": "Segments",
+                  "value": "Eurotunnel (~75%), ElecLink (~14%), Europorte (~11%)"
+                },
+                {
+                  "label": "Geographic split",
+                  "value": "UK-France corridor (sole geography)"
+                },
+                {
+                  "label": "CEO",
+                  "value": "Yann Leriche (since 2020)"
+                },
+                {
+                  "label": "Employees",
+                  "value": "~3,500"
+                },
+                {
+                  "label": "FY end",
+                  "value": "December"
+                },
+                {
+                  "label": "Next results",
+                  "value": "H1 2026 (Jul 2026)"
+                },
+                {
+                  "label": "Sector",
+                  "value": "Transportation Infrastructure"
+                },
+                {
+                  "label": "HQ",
+                  "value": "Paris, France"
+                },
+                {
+                  "label": "Listing",
+                  "value": "Euronext Paris (GET)"
+                }
+              ]
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "F.II",
+          "title": "Supplementary notes",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "iaja": "I",
+              "text": "**Research coverage:** Watson-generated analysis based on 8 research files (~55K words total) from AlphaSense [AS] and Claude [C] sources: Business Description, Change Forces, Key Drivers, Competitive Analysis, Sell-Side Views, Management Assessment, Financial Analysis, and Thematic Research. Sources include company filings (FY25 annual report, CMD Feb 2026), sell-side research, industry data on cross-Channel traffic. Monthly traffic data published by Getlink. No IR engagement yet."
+            },
+            {
+              "type": "prose",
+              "iaja": "I",
+              "text": "**Key data tables:**\n\n*Revenue by segment (FY25):* Eurotunnel €1,201m (~75%), ElecLink €225m (~14%), Europorte €169m (~11%). Total €1,595m.\n\n*EBITDA bridge FY24→FY25:* Eurotunnel +€38m, ElecLink -€48m, Europorte +€5m, other +€3m. Net: EBITDA €859m (+4%).\n\n*Peer comparison:* Vinci 16.7x P/E, Eiffage 15x, Aena 16.9x, Fraport ~15x, GET ~33x. GET trades at ~2x premium."
+            },
+            {
+              "type": "prose",
+              "iaja": "A",
+              "text": "**Data gaps:** (i) Freight volume cyclical vs structural decomposition — not yet analysed with UK-EU trade data. (ii) ElecLink sustainable revenue model — GB-France energy spread analysis not built. (iii) HSR fleet order status — Virgin Trains procurement progress not confirmed. (iv) Detailed financial model not built. (v) DCF valuation using 60-year concession not built. (vi) EES implementation readiness assessment not done."
+            }
+          ],
+          "word_count": 0,
+          "page_count": 0,
+          "target_words": 0
+        }
+      ],
+      "word_count": 0,
+      "page_count": 0,
+      "target_words": 0
+    }
+  }
+}
