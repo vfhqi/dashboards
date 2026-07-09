@@ -85,7 +85,7 @@ body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font
 /* ── Main ratings table ─────────────────────────────────── */
 .rd{
   border-collapse:separate;border-spacing:0;
-  font-size:12px;min-width:1480px;
+  font-size:12px;min-width:1560px;
   background:#fff;border:1px solid rgba(0,0,0,.10);
   border-radius:8px;
 }
@@ -555,6 +555,9 @@ body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font
         .cov-legend-swatch { display:inline-block; width:8px; height:8px; border-radius:2px; border:1px solid #c9c3b0; }
         /* COVERAGE_CSS_V1_END */
 
+.rs-pri{display:none}
+table.rd.rs-prior .rs-cur{display:none}
+table.rd.rs-prior .rs-pri{display:inline}
 </style>
 </head>
 <body>
@@ -569,6 +572,8 @@ body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font
   <button class="copy-btn-as" onclick="copyTickers('as')" title="Copy displayed tickers in AlphaSense format (e.g. DCC.GB, EKTA B.SE)">&#x1f4cb; COPY&#160;&#8212;&#160;ALPHASENSE</button>
   <!-- COPY_BTNS_V2_END -->
   <button class="prior-toggle" id="priorToggle" onclick="togglePrior()" title="Show prior&#8594;live changes on the six pillar columns (since rating history became available)">&#916; Prior rating: off</button>
+  <button class="prior-toggle" id="rsPriorToggle" onclick="toggleRsPrior()" title="Switch the Industry RS and Sector RS columns between the current reading and the reading from 2 months prior">&#916; Sector/Industry RS: current</button>
+  <button class="prior-toggle" id="errToggle" onclick="toggleErrOnly()" title="Show only rows whose technical momentum reads ERROR (no timeliness grade found in the pipeline)">&#9888; ERROR rows only: off</button>
 </div>
 <div class="copy-toast" id="copyToast"></div>
 
@@ -582,8 +587,8 @@ body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font
     <thead>
       <tr class="sg-row">
         <th colspan="5" class="sg1">Information</th>
-        <th colspan="3" class="sg2" title="Industry / sector fit-for-fightingness overlay">Industry / sector fit</th>
-        <th colspan="5" class="sg3">Highest-level ratings</th>
+        <th colspan="5" class="sg2" title="Industry / sector fit-for-fightingness overlay">Industry / sector fit</th>
+        <th colspan="4" class="sg3">Highest-level ratings</th>
         <th colspan="6" class="sg4">Six pillar ratings</th>
       </tr>
       <tr>
@@ -593,10 +598,11 @@ body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font
         <th>Latest<br>memo</th>
         <th class="g1e" data-sort="stage" onclick="sortRows('stage')">Stage of<br>IA A&amp;J</th>
         <th class="g2s" style="text-align:left" data-sort="industry" onclick="sortRows('industry')">Industry</th>
+        <th data-sort="irs" onclick="sortRows('irs')" title="Industry relative strength (A to F). Current shown by default; use the Sector/Industry RS button to see the reading from 2 months prior.">Industry<br>RS</th>
         <th style="text-align:left" data-sort="sector" onclick="sortRows('sector')">Sector</th>
-        <th class="g2e" data-sort="tsw" onclick="sortRows('tsw')">Sector<br>weight</th>
+        <th data-sort="tsw" onclick="sortRows('tsw')">RB sector<br>view</th>
+        <th class="g2e" data-sort="srs" onclick="sortRows('srs')" title="Sector relative strength (A to F). Current shown by default; use the Sector/Industry RS button to see the reading from 2 months prior.">Sector<br>RS</th>
         <th class="g3s" data-sort="llq" onclick="sortRows('llq')">LLQ</th>
-        <th data-sort="tl" onclick="sortRows('tl')">Timeliness</th>
         <th data-sort="mr" onclick="sortRows('mr')">Master<br>rating</th>
         <th data-sort="ri" onclick="sortRows('ri')">RB interest<br>level</th>
         <th class="g3e" data-sort="rk" onclick="sortRows('rk')">RB knowledge<br>level</th>
@@ -642,6 +648,8 @@ function tlBadge(v){
   const cls = gradeCls(v);
   return `<span class="bdg ${cls}" style="font-size:11px">${TL_LABEL[v]||v}</span>`;
 }
+function rsLookup(kind,name){ const m=(window.SIRS&&window.SIRS[kind])||{}; return m[name]||null; }
+function rsPair(o){ return '<span class="rs-cur">'+badge(o&&o.current)+'</span><span class="rs-pri">'+badge(o&&o.prior)+'</span>'; }
 
 function stagePill(v){
   if(!v) return '<span style="color:#bbb;font-size:11px">—</span>';
@@ -733,7 +741,10 @@ function mkRow(s){
   tr.dataset.industry = s.industry||'';
   tr.dataset.sector   = s.sector||'';
   tr.dataset.tsw      = s.target_sector_weight||'';
-  tr.dataset.tl    = s.timeliness||'';
+  const irs = rsLookup('industry', s.industry);
+  const srs = rsLookup('sector', s.sector);
+  tr.dataset.irs   = (irs&&irs.current)?irs.current:'';
+  tr.dataset.srs   = (srs&&srs.current)?srs.current:'';
   tr.dataset.mr    = s.master_rating||'';
   tr.dataset.ri    = s.interest_level||'';
   tr.dataset.rk    = s.knowledge_level||'';
@@ -771,14 +782,15 @@ function mkRow(s){
     <td>${memoBtn}</td>
     <td class="g1e">${stagePill(s.stage)}</td>
     <td class="tax g2s" title="${esc(s.industry||'')}">${taxDisplay(s.industry_code,s.industry)}</td>
+    <td>${rsPair(irs)}</td>
     <td class="tax" title="${esc(s.sector||'')}">${taxDisplay(s.sector_code,s.sector)}</td>
-    <td class="g2e">${sectorWtBadge(s.target_sector_weight)}</td>
+    <td>${sectorWtBadge(s.target_sector_weight)}</td>
+    <td class="g2e">${rsPair(srs)}</td>
     <td class="g3s">${llqPill(s.llq)}</td>
-    <td>${tlBadge(s.timeliness)}</td>
     <td>${mrBadge}</td>
     <td>${notionUrl?`<a class="rbdlnk" href="${notionUrl}" target="_blank" title="Open in Notion — ${esc(s.interest_level||'')}"><span class="rbd ${riLetterCls(s.interest_level)}">${esc(cleanRB(s.interest_level))}</span></a>`:`<span class="rbd ${riLetterCls(s.interest_level)}" title="${esc(s.interest_level||'')}">${esc(cleanRB(s.interest_level))}</span>`}</td>
     <td class="g3e">${notionUrl?`<a class="rbdlnk" href="${notionUrl}" target="_blank" title="Open in Notion — ${esc(s.knowledge_level||'')}"><span class="rbd rk${rk}">${esc(cleanRB(s.knowledge_level))}</span></a>`:`<span class="rbd rk${rk}" title="${esc(s.knowledge_level||'')}">${esc(cleanRB(s.knowledge_level))}</span>`}</td>
-    <td class="g4s"><a class="ppill" href="https://vfhqi.github.io/master/index.html#tech/${esc(s.ticker)}" target="_blank" title="Technical momentum · open master dashboard Technical tab centred on ${esc(s.ticker)}">${badge(s.p1_technical_momentum)}</a></td>
+    <td class="g4s"><a class="ppill" href="https://vfhqi.github.io/master/index.html#tech/${esc(s.ticker)}" target="_blank" title="Technical momentum · open master dashboard Technical tab centred on ${esc(s.ticker)}">${tlBadge(s.p1_technical_momentum)}</a></td>
     <td><span class="ppill" onclick="openMapView(event,'${esc(s.ticker)}')" title="Market-paradigm fit · open Map of ratings">${badge(s.p2_market_paradigm_fit)}</span></td>
     <td><span class="ppill" onclick="openMapView(event,'${esc(s.ticker)}')" title="Fundamental change · open Map of ratings">${badge(s.p3_fundamental_change)}</span></td>
     <td><span class="ppill" onclick="openMapView(event,'${esc(s.ticker)}')" title="Fundamental foundations · open Map of ratings">${badge(s.p4_fundamental_foundations)}</span></td>
@@ -810,9 +822,11 @@ function openMemo(e, ticker){
 // Filter engine
 // ─────────────────────────────────────────────────────────
 const DIMS = [
-  {id:'stage', label:'Stage'},
+  {id:'stage',    label:'Stage'},
+  {id:'industry', label:'Industry'},
+  {id:'sector',   label:'Sector'},
+  {id:'tsw',      label:'RB sector view'},
   {id:'llq',   label:'LLQ'},
-  {id:'tl',    label:'Timeliness'},
   {id:'mr',    label:'Master rating'},
   {id:'ri',    label:'RB interest'},
   {id:'rk',    label:'RB knowledge'},
@@ -900,6 +914,7 @@ function refreshBtnStates(){
     }
   }
   document.getElementById('resetBtn').style.display=anyFiltered?'':'none';
+  if(typeof syncErrBtn==='function') syncErrBtn();
 }
 
 // ─────────────────────────────────────────────────────────
@@ -991,6 +1006,23 @@ function buildBar(){
   });
 }
 
+function toggleRsPrior(){
+  const t=document.getElementById('rt');
+  const on=t.classList.toggle('rs-prior');
+  const b=document.getElementById('rsPriorToggle');
+  if(b){ b.classList.toggle('on',on); b.textContent='Δ Sector/Industry RS: '+(on?'2-months-prior':'current'); }
+}
+function syncErrBtn(){
+  const b=document.getElementById('errToggle'); if(!b) return;
+  const on = fState.p1 && fState.p1.size===1 && fState.p1.has('ERROR');
+  b.classList.toggle('on',on); b.textContent='⚠ ERROR rows only: '+(on?'on':'off');
+}
+function toggleErrOnly(){
+  const isErr = fState.p1 && fState.p1.size===1 && fState.p1.has('ERROR');
+  if(isErr){ fState.p1=new Set(valMap.p1||[]); }
+  else { fState.p1=new Set(['ERROR']); }
+  buildBar(); applyFilters(); syncErrBtn();
+}
 function closeAllPopovers(){
   document.querySelectorAll('.fpop.open').forEach(p=>p.classList.remove('open'));
 }
@@ -1015,6 +1047,11 @@ async function init(){
     return;
   }
 
+  window.SIRS={industry:{},sector:{}};
+  try{
+    const _rs=await fetch('sector-industry-rs.json');
+    if(_rs.ok){ let _rt=await _rs.text(); _rt=_rt.replace(/\0+$/,'').trim(); window.SIRS=JSON.parse(_rt); }
+  }catch(_e){ window.SIRS={industry:{},sector:{}}; }
   const stocks = data.stocks||[];
   window.UNIV=stocks; window.UBK={}; stocks.forEach(function(s){window.UBK[s.ticker]=s;});
   fetch('granular-ratings.json').then(function(r){return r.text();}).then(function(t){try{window.GRAN=JSON.parse(t.replace(/\0+$/,'').trim()).stocks||{};}catch(e){window.GRAN={};}}).catch(function(){window.GRAN={};});
