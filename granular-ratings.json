@@ -16,7 +16,7 @@
     {
      "code": "MR2",
      "label": "Sell-side earnings momentum",
-     "grade": "C",
+     "grade": "B",
      "anchor": "mr2-sell-side-earnings-momentum-c"
     },
     {
@@ -202,7 +202,7 @@
     {
      "code": "MR2",
      "label": "Sell-side earnings momentum",
-     "grade": "C",
+     "grade": "F",
      "anchor": "mr2-sell-side-earnings-momentum-c"
     },
     {
@@ -418,7 +418,7 @@
     {
      "code": "MR2",
      "label": "Business quality",
-     "grade": "A",
+     "grade": "C",
      "anchor": "mr2-business-quality-a"
     },
     {
@@ -689,7 +689,7 @@
     {
      "code": "MR2",
      "label": "Sell-side earnings momentum",
-     "grade": "C",
+     "grade": "D",
      "anchor": "mr2-sell-side-earnings-momentum-c"
     },
     {
@@ -919,7 +919,7 @@
     {
      "code": "MR2",
      "label": "Sell-side earnings momentum",
-     "grade": "NR",
+     "grade": "C",
      "anchor": "mr2-sell-side-earnings-momentum-nr"
     },
     {
@@ -1301,7 +1301,7 @@
     {
      "code": "MR2",
      "label": "Sell-side earnings momentum",
-     "grade": "B",
+     "grade": "D",
      "anchor": "mr2-sell-side-earnings-momentum-b"
     },
     {
@@ -1560,7 +1560,7 @@
     {
      "code": "MR2",
      "label": "Sell-side earnings momentum",
-     "grade": "D",
+     "grade": "F",
      "anchor": "mr2-sell-side-earnings-momentum-d"
     },
     {
@@ -2067,7 +2067,7 @@
     {
      "code": "MR2",
      "label": "Sell-side __earnings momentum__",
-     "grade": "B",
+     "grade": "C",
      "anchor": "mr2-sell-side-earnings-momentum-b"
     },
     {
@@ -2442,7 +2442,7 @@
     {
      "code": "MR2",
      "label": "Sell-side earnings momentum",
-     "grade": "C",
+     "grade": "B",
      "anchor": "mr2-sell-side-earnings-momentum-c"
     },
     {
@@ -2686,7 +2686,7 @@
     {
      "code": "MR2",
      "label": "Sell-side earnings momentum",
-     "grade": "B",
+     "grade": "A",
      "anchor": "mr2-sell-side-earnings-momentum-b"
     },
     {
@@ -3663,7 +3663,7 @@
     {
      "code": "MR2",
      "label": "Sell-side earnings momentum",
-     "grade": "C",
+     "grade": "D",
      "anchor": "mr2-sell-side-earnings-momentum-c"
     },
     {
@@ -4540,7 +4540,7 @@
     {
      "code": "MR2",
      "label": "Sell-side earnings momentum",
-     "grade": "B",
+     "grade": "C",
      "anchor": "mr2-sell-side-earnings-momentum-b"
     },
     {
@@ -5662,7 +5662,7 @@
     {
      "code": "MR2",
      "label": "Sell-side earnings momentum",
-     "grade": "B",
+     "grade": "A",
      "anchor": "mr2-sell-side-earnings-momentum-b"
     },
     {
@@ -6309,7 +6309,7 @@
     {
      "code": "MR2",
      "label": "Sell-side earnings momentum",
-     "grade": "B",
+     "grade": "C",
      "anchor": "mr2-sell-side-earnings-momentum-b"
     },
     {
@@ -6518,7 +6518,7 @@
     {
      "code": "MR2",
      "label": "Sell-side earnings momentum",
-     "grade": "B",
+     "grade": "F",
      "anchor": "mr2-sell-side-earnings-momentum-b"
     },
     {
@@ -6907,7 +6907,7 @@
     {
      "code": "MR2",
      "label": "Sell-side earnings momentum",
-     "grade": "B",
+     "grade": "D",
      "anchor": "mr2-sell-side-earnings-momentum-b"
     },
     {
@@ -7296,7 +7296,7 @@
     {
      "code": "MR2",
      "label": "Sell-side earnings momentum",
-     "grade": "C",
+     "grade": "F",
      "anchor": "mr2-sell-side-earnings-momentum-c"
     },
     {
@@ -7715,7 +7715,7 @@
     {
      "code": "MR2",
      "label": "Sell-side earnings momentum",
-     "grade": "D",
+     "grade": "F",
      "anchor": "mr2-sell-side-earnings-momentum-d"
     },
     {
@@ -8082,7 +8082,7 @@
     {
      "code": "MR2",
      "label": "Sell-side earnings momentum",
-     "grade": "D",
+     "grade": "C",
      "anchor": "mr2-sell-side-earnings-momentum-d"
     },
     {
@@ -8313,7 +8313,7 @@
     {
      "code": "MR2",
      "label": "Sell-side earnings momentum",
-     "grade": "C",
+     "grade": "B",
      "anchor": "mr2-sell-side-earnings-momentum-c"
     },
     {
@@ -8990,7 +8990,7 @@
     {
      "code": "MR2",
      "label": "Sell-side earnings momentum",
-     "grade": "C",
+     "grade": "D",
      "anchor": "mr2-sell-side-earnings-momentum-c"
     },
     {
@@ -9886,7 +9886,7 @@
     {
      "code": "MR2",
      "label": "Sell-side earnings momentum",
-     "grade": "D",
+     "grade": "F",
      "anchor": "mr2-sell-side-earnings-momentum-d"
     },
     {
@@ -10245,7 +10245,7 @@
     {
      "code": "MR2",
      "label": "Sell-side earnings momentum",
-     "grade": "C",
+     "grade": "A",
      "anchor": "mr2-sell-side-earnings-momentum-c"
     },
     {
@@ -10431,7 +10431,7 @@
     {
      "code": "MR2",
      "label": "Sell-side earnings momentum",
-     "grade": "D",
+     "grade": "F",
      "anchor": "mr2-sell-side-earnings-momentum-d"
     },
     {
@@ -12667,7 +12667,7 @@
     {
      "code": "MR2",
      "label": "Sell-side earnings momentum",
-     "grade": "C",
+     "grade": "D",
      "anchor": "mr2-sell-side-earnings-momentum-c"
     },
     {
@@ -13308,7 +13308,7 @@
     {
      "code": "MR2",
      "label": "Sell-side earnings momentum",
-     "grade": "B",
+     "grade": "D",
      "anchor": "mr2-sell-side-earnings-momentum-b"
     },
     {
@@ -13538,7 +13538,7 @@
     {
      "code": "MR2",
      "label": "Sell-side earnings momentum",
-     "grade": "A",
+     "grade": "C",
      "anchor": "mr2-sell-side-earnings-momentum-a"
     },
     {
@@ -13955,7 +13955,7 @@
     {
      "code": "MR2",
      "label": "Sell-side earnings momentum",
-     "grade": "C",
+     "grade": "D",
      "anchor": "mr2-sell-side-earnings-momentum-c"
     },
     {
@@ -14312,7 +14312,7 @@
     {
      "code": "MR2",
      "label": "Sell-side earnings momentum",
-     "grade": "B",
+     "grade": "C",
      "anchor": "mr2-sell-side-earnings-momentum-b"
     },
     {
@@ -14566,7 +14566,7 @@
     {
      "code": "MR2",
      "label": "Sell-side earnings momentum",
-     "grade": "B",
+     "grade": "D",
      "anchor": "mr2-sell-side-earnings-momentum-b"
     },
     {
@@ -16341,7 +16341,7 @@
     {
      "code": "MR2",
      "label": "Sell-side earnings momentum",
-     "grade": "B",
+     "grade": "A",
      "anchor": "mr2-sell-side-earnings-momentum-b"
     },
     {
@@ -18590,7 +18590,7 @@
     {
      "code": "MR2",
      "label": "Sell-side earnings momentum",
-     "grade": null,
+     "grade": "B",
      "anchor": "mr2-sell-side-earnings-momentum-nr"
     },
     {
@@ -19424,7 +19424,7 @@
     {
      "code": "MR2",
      "label": "Sell-side earnings momentum",
-     "grade": "B",
+     "grade": "A",
      "anchor": "mr2-sell-side-earnings-momentum-b"
     },
     {
@@ -19633,7 +19633,7 @@
     {
      "code": "MR2",
      "label": "Sell-side earnings momentum",
-     "grade": "C",
+     "grade": "A",
      "anchor": "mr2-sell-side-earnings-momentum-c"
     },
     {
@@ -20008,7 +20008,7 @@
     {
      "code": "MR2",
      "label": "Sell-side earnings momentum",
-     "grade": "B",
+     "grade": "C",
      "anchor": "mr2-sell-side-earnings-momentum-b"
     },
     {
@@ -20231,7 +20231,7 @@
     {
      "code": "MR2",
      "label": "Sell-side earnings momentum",
-     "grade": "B",
+     "grade": "C",
      "anchor": "mr2-sell-side-earnings-momentum-b"
     },
     {
