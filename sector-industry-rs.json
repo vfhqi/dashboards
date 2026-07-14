@@ -1,6 +1,6 @@
 {
  "source": "rs-dashboard.html",
- "current_week": "2026-07-09",
+ "current_week": "2026-07-10",
  "prior_week": "2026-05-08",
  "industry": {
   "A. Consumer staples": {
@@ -52,11 +52,11 @@
    "prior": "F"
   },
   "M. Materials": {
-   "current": "D",
+   "current": "C",
    "prior": "D"
   },
   "N. Real assets": {
-   "current": "C",
+   "current": "D",
    "prior": "D"
   },
   "O. Industrials and capital goods": {
@@ -258,7 +258,7 @@
    "prior": "D"
   },
   "H.4. Retail - online": {
-   "current": "C",
+   "current": "D",
    "prior": "C"
   },
   "H.6. Gambling - B2C OSB, Casino-led": {
@@ -274,7 +274,7 @@
    "prior": "C"
   },
   "I.1. Logistics": {
-   "current": "B",
+   "current": "C",
    "prior": "C"
   },
   "J.1. IT services - consulting": {
@@ -322,7 +322,7 @@
    "prior": "F"
   },
   "K.3. Testing and inspection services": {
-   "current": "C",
+   "current": "B",
    "prior": "C"
   },
   "K.5. Advertising and consulting services": {
@@ -330,7 +330,7 @@
    "prior": "F"
   },
   "K.8. Outsourcing, admin and other services": {
-   "current": "D",
+   "current": "F",
    "prior": "F"
   },
   "K.9. Recruitment services": {
@@ -338,7 +338,7 @@
    "prior": "D"
   },
   "L.1. Content, TV and other media": {
-   "current": "F",
+   "current": "D",
    "prior": "D"
   },
   "M.1. Chemicals - Fragrances/ingredients": {
@@ -390,7 +390,7 @@
    "prior": "D"
   },
   "O.2. Products - various [SPLIT]": {
-   "current": "D",
+   "current": "C",
    "prior": "C"
   },
   "O.4. Capital goods - grid": {
