@@ -1,7 +1,7 @@
 {
  "source": "rs-dashboard.html",
- "current_week": "2026-07-10",
- "prior_week": "2026-05-08",
+ "current_week": "2026-07-13",
+ "prior_week": "2026-05-15",
  "industry": {
   "A. Consumer staples": {
    "current": "F",
@@ -25,11 +25,11 @@
   },
   "F. Defence": {
    "current": "D",
-   "prior": "B"
+   "prior": "D"
   },
   "G. Financials": {
    "current": "B",
-   "prior": "C"
+   "prior": "B"
   },
   "H. Consumer discretionary": {
    "current": "D",
@@ -53,7 +53,7 @@
   },
   "M. Materials": {
    "current": "C",
-   "prior": "D"
+   "prior": "C"
   },
   "N. Real assets": {
    "current": "D",
@@ -74,7 +74,7 @@
    "prior": "D"
   },
   "A.2. Tobacco": {
-   "current": "C",
+   "current": "D",
    "prior": "B"
   },
   "A.3. Automotive repair": {
@@ -127,10 +127,10 @@
   },
   "B.7. Pharma/biotech": {
    "current": "B",
-   "prior": "C"
+   "prior": "B"
   },
   "B.8. Medtech - distributors / retail": {
-   "current": "F",
+   "current": "D",
    "prior": "D"
   },
   "B.9. Medtech - consumables - growth": {
@@ -139,15 +139,15 @@
   },
   "C.1. Telecoms - MNOs": {
    "current": "C",
-   "prior": "B"
+   "prior": "C"
   },
   "C.2. Telecoms - towers": {
    "current": "F",
-   "prior": "F"
+   "prior": "D"
   },
   "D.1. Infrastructure - airports/trains": {
    "current": "C",
-   "prior": "C"
+   "prior": "D"
   },
   "D.2. Infrastructure - ports": {
    "current": "A",
@@ -170,7 +170,7 @@
    "prior": "C"
   },
   "F.2. Defence - Non-primes": {
-   "current": "D",
+   "current": "F",
    "prior": "C"
   },
   "G.1. Insurance": {
@@ -179,7 +179,7 @@
   },
   "G.11. Traditional asset managers (B2C)": {
    "current": "B",
-   "prior": "B"
+   "prior": "A"
   },
   "G.12. Specialty finance and other": {
    "current": "F",
@@ -187,7 +187,7 @@
   },
   "G.13. Banks": {
    "current": "A",
-   "prior": "A"
+   "prior": "B"
   },
   "G.2. Exchanges and brokers": {
    "current": "D",
@@ -195,7 +195,7 @@
   },
   "G.3. Alternative investment managers": {
    "current": "F",
-   "prior": "D"
+   "prior": "C"
   },
   "G.4. Holding companies": {
    "current": "C",
@@ -207,22 +207,22 @@
   },
   "G.6. Asset management software (B2B)": {
    "current": "D",
-   "prior": "D"
+   "prior": "F"
   },
   "G.8. Retail trading platforms (D2C)": {
    "current": "A",
-   "prior": "A"
+   "prior": "B"
   },
   "H.1. Luxury goods": {
-   "current": "D",
-   "prior": "C"
+   "current": "C",
+   "prior": "D"
   },
   "H.10. Hotels": {
    "current": "C",
    "prior": "B"
   },
   "H.11. Airlines and travel": {
-   "current": "C",
+   "current": "D",
    "prior": "D"
   },
   "H.12. Online classifieds/platforms": {
@@ -230,8 +230,8 @@
    "prior": "F"
   },
   "H.13. Food delivery": {
-   "current": "C",
-   "prior": "F"
+   "current": "B",
+   "prior": "C"
   },
   "H.14. Automotive - sales/rentals": {
    "current": "D",
@@ -258,7 +258,7 @@
    "prior": "D"
   },
   "H.4. Retail - online": {
-   "current": "D",
+   "current": "C",
    "prior": "C"
   },
   "H.6. Gambling - B2C OSB, Casino-led": {
@@ -271,7 +271,7 @@
   },
   "H.9. Leisure": {
    "current": "C",
-   "prior": "C"
+   "prior": "B"
   },
   "I.1. Logistics": {
    "current": "C",
@@ -330,7 +330,7 @@
    "prior": "F"
   },
   "K.8. Outsourcing, admin and other services": {
-   "current": "F",
+   "current": "D",
    "prior": "F"
   },
   "K.9. Recruitment services": {
@@ -358,12 +358,12 @@
    "prior": "D"
   },
   "M.6. Basic materials and construction": {
-   "current": "B",
-   "prior": "B"
+   "current": "C",
+   "prior": "C"
   },
   "M.7. Forestry and paper products": {
-   "current": "D",
-   "prior": "D"
+   "current": "F",
+   "prior": "F"
   },
   "M.8. Chemicals - Gases": {
    "current": "D",
@@ -379,7 +379,7 @@
   },
   "O.10. Capital goods - EV": {
    "current": "B",
-   "prior": "C"
+   "prior": "B"
   },
   "O.13. Renewables": {
    "current": "A",
@@ -407,11 +407,11 @@
   },
   "O.8. Capital goods - misc.": {
    "current": "B",
-   "prior": "B"
+   "prior": "C"
   },
   "O.9. Capital goods - HVAC": {
    "current": "B",
-   "prior": "B"
+   "prior": "A"
   },
   "P.1. Energy - downstream distribution": {
    "current": "A",
