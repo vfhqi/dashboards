@@ -570,7 +570,7 @@ table.rd.rs-prior .rs-pri{display:inline}
   <span class="pg-meta" id="countLabel">Loading…</span>
   <span class="pg-ts" id="tsLabel"></span><button class="pg-reset" id="resetBtn">↺ Reset filters</button>
   <!-- COPY_BTNS_V2_START -->
-  <button class="copy-btn-fs" onclick="copyTickers('fs')" title="Copy displayed tickers in FactSet format (e.g. DCC.GB, EKTA.B.SE)">&#x1f4cb; COPY&#160;&#8212;&#160;FACTSET</button>
+  <button class="copy-btn-fs" onclick="copyTickers('fs')" title="Copy displayed tickers in FactSet format (e.g. DCC-GB, EKTA.B-SE)">&#x1f4cb; COPY&#160;&#8212;&#160;FACTSET</button>
   <button class="copy-btn-as" onclick="copyTickers('as')" title="Copy displayed tickers in AlphaSense format (e.g. DCC.GB, EKTA B.SE)">&#x1f4cb; COPY&#160;&#8212;&#160;ALPHASENSE</button>
   <!-- COPY_BTNS_V2_END -->
   <button class="prior-toggle" id="priorToggle" onclick="togglePrior()" title="Show prior&#8594;live changes on the six pillar columns (since rating history became available)">&#916; Prior rating: off</button>
@@ -704,7 +704,7 @@ function riLetterCls(v){
 }
 function cleanRB(v){ return String(v||'—').replace(/\s*\([^)]*\)\s*$/,'').trim(); }
 function rbRank(v){ if(!v) return 99; var c=String(v).trim()[0]; if(c>='A'&&c<='F') return ({A:1,B:2,C:3,D:4,F:5})[c]||89; if(c>='0'&&c<='9') return parseInt(v,10)||89; if(c==='?') return 90; return 89; }
-function tkFS(t){ return String(t||'').replace(/-([A-Za-z0-9]+)$/,'.$1'); }
+function tkFS(t){ return String(t||''); }
 function tkAS(t){ t=String(t||''); var m=t.match(/^(.+)\.([AB])-([A-Za-z0-9]+)$/); if(m) return m[1]+' '+m[2]+'.'+m[3]; return t.replace(/-([A-Za-z0-9]+)$/,'.$1'); }
 function showToast(msg){ var el=document.getElementById('copyToast'); if(!el) return; el.textContent=msg; el.classList.add('show'); setTimeout(function(){el.classList.remove('show');},2500); }
 function copyTickers(format){
@@ -2243,3 +2243,4 @@ function togglePrior(){
 </script>
 </body>
 </html>
+                                  
