@@ -3550,10 +3550,6 @@
    "cid": "SA07",
    "zone": "Serial Acquirers"
   },
-  "JDG-LON": {
-   "cid": "SA08",
-   "zone": "Serial Acquirers"
-  },
   "JEN-DE": {
    "cid": "SA08",
    "zone": "Serial Acquirers"
@@ -3584,10 +3580,6 @@
   },
   "BEIA.B-SE": {
    "cid": "SA11",
-   "zone": "Serial Acquirers"
-  },
-  "SOLI-LON": {
-   "cid": "SA06",
    "zone": "Serial Acquirers"
   },
   "TWEKA-NL": {
@@ -3899,6 +3891,14 @@
    "zone": "Serial Acquirers"
   },
   "APH-US": {
+   "cid": "SA06",
+   "zone": "Serial Acquirers"
+  },
+  "JDG-GB": {
+   "cid": "SA08",
+   "zone": "Serial Acquirers"
+  },
+  "SOLI-GB": {
    "cid": "SA06",
    "zone": "Serial Acquirers"
   }
