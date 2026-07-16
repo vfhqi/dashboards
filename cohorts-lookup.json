@@ -3542,10 +3542,6 @@
    "cid": "SA05",
    "zone": "Serial Acquirers"
   },
-  "VLX-LON": {
-   "cid": "SA06",
-   "zone": "Serial Acquirers"
-  },
   "ROKO.B-SE": {
    "cid": "SA07",
    "zone": "Serial Acquirers"
@@ -3899,6 +3895,10 @@
    "zone": "Serial Acquirers"
   },
   "SOLI-GB": {
+   "cid": "SA06",
+   "zone": "Serial Acquirers"
+  },
+  "VLX-GB": {
    "cid": "SA06",
    "zone": "Serial Acquirers"
   }
