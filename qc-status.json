@@ -1,13 +1,8 @@
 {
  "status": "ok",
- "checked_at": "2026-07-17T06:15:45Z",
+ "checked_at": "2026-07-17T20:16:17Z",
  "wipe_suspected": false,
  "critical_failures": [],
- "warnings": [
-  {
-   "check": "snapshot_vs_universe",
-   "detail": "991 rows vs universe 985"
-  }
- ],
+ "warnings": [],
  "checks_run": 22
 }
