@@ -1202,6 +1202,20 @@ function setEditField(invIdx, slotType, field, value) {
   EDITS[invIdx][slotType][field] = value;
   saveEdits(); render();
 }
+// D-PMS-190 (2026-07-15): single source of truth for "which ticker is live in this slot".
+// Mirrors gatherPortfolioRows(): a placeholder slot with a _ticker_override is live under
+// that override; a _universe_hidden slot is inactive; otherwise the slot's own ticker.
+// renderKpis() and renderAlerts() previously read inv.ticker directly, so every override
+// position (most of the live book) was silently excluded from the headline Deployed/At-Risk/
+// P&L/Active KPIs AND from breach-alert detection. Routing all aggregation paths through this
+// helper keeps the KPI cards, the portfolio-summary table totals and the alert engine aligned.
+function effectiveTicker(inv, invIdx) {
+  var ed = EDITS[invIdx] || {};
+  if (ed._ticker_override) return ed._ticker_override;
+  if (ed._universe_hidden) return null;
+  if (!inv || inv.is_placeholder || !inv.ticker) return null;
+  return inv.ticker;
+}
 // D-PMS-64: toggle promotion badge to show/hide the date editor
 function togglePromoBadge(el) {
   el.classList.toggle('editing');
@@ -1257,7 +1271,7 @@ window._pmsTickerLoadInflight = window._pmsTickerLoadInflight || {};
 // data is now fixed, but if a future ticker is ever onboarded with a
 // non-canonical suffix again, the correct canonical form still resolves here
 // instead of surfacing a confusing "not in MD universe" error.
-var TICKER_SUFFIX_ALIASES = { 'GB': ['LON'] };
+var TICKER_SUFFIX_ALIASES = { 'GB': ['LON'], 'LON': ['GB'] };  // D-PMS-190: bidirectional so either suffix resolves
 function resolveTickerAlias(raw, universe) {
   if (raw in universe) return raw;
   var dash = raw.lastIndexOf('-');
@@ -1860,9 +1874,12 @@ function gatherPortfolioRows() {
       if (!edit || !edit.entry_date || edit.target_size_pct == null || edit.target_size_pct <= 0) return;
       var bufVal = edit.buffer_pct != null ? edit.buffer_pct : 0.02;
       var stopMa = edit.stop_ma || DEFAULT_STOP_MA[slotType];
+      // D-PMS-190: committed size is an entry input — count it whether or not current
+      // price data is present, so a momentarily-missing chart cannot drop a position from
+      // the deployed total. Price-derived metrics below still require a valid runTester.
+      deployed += edit.target_size_pct;
       var r = runTester(ticker, edit.target_size_pct, edit.entry_date, stopMa, bufVal);
       if (!r || !r.ok) return;
-      deployed += edit.target_size_pct;
       valueAum += (r.value_aum_pct || 0);
       atRisk += (r.loss_risk_aum || 0);
       paperPnl += (r.paper_pnl_aum || 0);
@@ -2778,13 +2795,17 @@ function renderTrancheRow(inv, invIdx, slotType, isFirstSlot, isPlaceholder, tot
 
 function renderInvTotalsRow(inv, invIdx) {
   var sumDeployed = 0, sumPnl = 0, sumRisk = 0, sumValueAum = 0;
+  var ticker = effectiveTicker(inv, invIdx);  // D-PMS-190: consistent ticker resolution
   TRADE_TYPES.forEach(function(slotType) {
     var edit = getEdit(invIdx, slotType);
     if (!edit || !edit.entry_date || edit.target_size_pct == null) return;
+    // D-PMS-190: committed size counts regardless of price-data availability, so this
+    // per-investment total agrees with the portfolio-summary totals when a chart is missing.
+    sumDeployed += edit.target_size_pct;
+    if (!ticker) return;
     var bufVal = edit.buffer_pct != null ? edit.buffer_pct : 0.02;
-    var r = runTester(inv.ticker, edit.target_size_pct, edit.entry_date, edit.stop_ma || DEFAULT_STOP_MA[slotType], bufVal);
+    var r = runTester(ticker, edit.target_size_pct, edit.entry_date, edit.stop_ma || DEFAULT_STOP_MA[slotType], bufVal);
     if (r && r.ok) {
-      sumDeployed += edit.target_size_pct;
       sumPnl += r.paper_pnl_aum || 0;
       sumRisk += r.loss_risk_aum || 0;
       sumValueAum += r.value_aum_pct || 0;
@@ -2804,17 +2825,20 @@ function renderInvTotalsRow(inv, invIdx) {
 function renderKpis() {
   var deployed = 0, pnl = 0, risk = 0, activeInvs = 0, activeTrades = 0, alertCount = 0;
   CONFIG.investments.forEach(function(inv, invIdx) {
+    var ticker = effectiveTicker(inv, invIdx);  // D-PMS-190: include override slots, skip hidden
+    if (!ticker) return;
     var hasAny = false;
     TRADE_TYPES.forEach(function(slotType) {
       var edit = getEdit(invIdx, slotType);
       if (!edit || !edit.entry_date || edit.target_size_pct == null || edit.target_size_pct <= 0) return;
-      var bufVal = edit.buffer_pct != null ? edit.buffer_pct : 0.02;
-    var r = runTester(inv.ticker, edit.target_size_pct, edit.entry_date, edit.stop_ma || DEFAULT_STOP_MA[slotType], bufVal);
-      if (!r || !r.ok) return;
+      // D-PMS-190: deployed = committed entry size, independent of current price data.
       deployed += edit.target_size_pct;
+      activeTrades += 1; hasAny = true;
+      var bufVal = edit.buffer_pct != null ? edit.buffer_pct : 0.02;
+      var r = runTester(ticker, edit.target_size_pct, edit.entry_date, edit.stop_ma || DEFAULT_STOP_MA[slotType], bufVal);
+      if (!r || !r.ok) return;
       pnl += (r.paper_pnl_aum || 0);
       risk += (r.loss_risk_aum || 0);
-      activeTrades += 1; hasAny = true;
       if (r.breach && r.breach.grace_breach) alertCount += 1;
     });
     if (hasAny) activeInvs += 1;
@@ -2835,13 +2859,15 @@ function kpiCard(label, value, cls) {
 function renderAlerts() {
   var alerts = [];
   CONFIG.investments.forEach(function(inv, invIdx) {
+    var ticker = effectiveTicker(inv, invIdx);  // D-PMS-190: alert on override slots too
+    if (!ticker) return;
     TRADE_TYPES.forEach(function(slotType) {
       var edit = getEdit(invIdx, slotType);
       if (!edit || !edit.entry_date || edit.target_size_pct == null || edit.target_size_pct <= 0) return;
       var bufVal = edit.buffer_pct != null ? edit.buffer_pct : 0.02;
-    var r = runTester(inv.ticker, edit.target_size_pct, edit.entry_date, edit.stop_ma || DEFAULT_STOP_MA[slotType], bufVal);
+      var r = runTester(ticker, edit.target_size_pct, edit.entry_date, edit.stop_ma || DEFAULT_STOP_MA[slotType], bufVal);
       if (!r || !r.ok) return;
-      if (r.breach && r.breach.grace_breach) alerts.push({ ticker: inv.ticker, slot: slotType, breach: r.breach.grace_breach, tier: r.breach.tier });
+      if (r.breach && r.breach.grace_breach) alerts.push({ ticker: ticker, slot: slotType, breach: r.breach.grace_breach, tier: r.breach.tier });
     });
   });
   var el = document.getElementById('alertBanner');
@@ -3722,4 +3748,46 @@ function wireChartsToolbar() {
       try { history.replaceState(null, '', desiredHash); } catch(e) {}
     }
     // After tab switch, re-fit Portfolio summary to viewport (it may have hidden cells)
-    if (name === 'overview' && typeof fit
+    if (name === 'overview' && typeof fitPortfolioToViewport === 'function') {
+      setTimeout(fitPortfolioToViewport, 80);
+    }
+    if (name === 'charts' && typeof renderChartsGrid === 'function') {
+      setTimeout(renderChartsGrid, 80);
+    }
+  }
+  function getInitialTab() {
+    // 1. URL hash
+    var h = window.location.hash.replace('#', '');
+    if (h && PANES.indexOf(h) !== -1) return h;
+    // 2. localStorage
+    try {
+      var saved = localStorage.getItem('pms_active_tab_v6');
+      if (saved && PANES.indexOf(saved) !== -1) return saved;
+    } catch(e) {}
+    // 3. Default
+    return 'overview';
+  }
+  // Wire tab clicks
+  document.querySelectorAll('.pms-tab').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      activateTab(btn.getAttribute('data-pane'));
+    });
+  });
+  // Hashchange (manual URL edit / back-forward)
+  window.addEventListener('hashchange', function() {
+    var h = window.location.hash.replace('#', '');
+    if (PANES.indexOf(h) !== -1) activateTab(h);
+  });
+  // Initial activation
+  function init() { activateTab(getInitialTab()); }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+
+</script>
+
+</body>
+</html>
