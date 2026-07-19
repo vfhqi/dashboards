@@ -1,0 +1,933 @@
+{
+  "schema_version": "1.0",
+  "ticker": "NVTK",
+  "company_name": "Novatek (lorem-ipsum visual test fixture)",
+  "stage": "Triaging",
+  "stage_date": "2026-04-20",
+  "authored_by": "Watson (APM)",
+  "driver_terminology": "PRIMARY/SECONDARY/TERTIARY",
+  "header": {
+    "primary_setup": "Demand-Driven EPSU — LNG re-rating cycle",
+    "primary_setup_verdict": "plausibly present",
+    "secondary_setup": "Supply-Reset EPT — upstream capex normalising",
+    "conviction": "C — forming; 2 anchor data points still open",
+    "time_horizon": "N1-3Y, fulcrum event inside 18m"
+  },
+  "sections": {
+    "A": {
+      "letter": "A",
+      "title": "FINANCIALS",
+      "applicable": true,
+      "inline_verdict": "Light pass — primer only at Triaging",
+      "default_open": false,
+      "subsections": [
+        {
+          "id": "A.I",
+          "title": "Financial summary",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "kv_grid",
+              "title": "Last reported period — headline",
+              "rows": [
+                {
+                  "label": "Revenue",
+                  "value": "$11.2bn",
+                  "delta": "+14% y/y"
+                },
+                {
+                  "label": "Gross profit",
+                  "value": "$4.9bn",
+                  "delta": "GP margin 43.8%, +180bp"
+                },
+                {
+                  "label": "EBIT",
+                  "value": "$3.1bn",
+                  "delta": "margin 27.7%"
+                },
+                {
+                  "label": "Net cash",
+                  "value": "$2.4bn",
+                  "delta": "vs $1.1bn Pcp"
+                },
+                {
+                  "label": "RONIC (incremental)",
+                  "value": "~22%",
+                  "delta": "NWC release flatters 2-3pp"
+                }
+              ]
+            },
+            {
+              "type": "prose",
+              "iaja": "I",
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Financials at Triaging are a primer, not a forensic read — the aim is to rule out obvious red flags in cash generation, capex intensity, and balance sheet health before spending further energy. Five years of reported KPIs show revenue compounding at 11% with GP margin widening from 38% to 44%."
+            },
+            {
+              "type": "prose",
+              "iaja": "J",
+              "ratings": [
+                {
+                  "grade": "B",
+                  "attr": "financial quality"
+                }
+              ],
+              "text": "Numbers are good enough to proceed. Not outstanding — two of the last five years show working-capital absorption that masked real cash conversion. Worth a closer look at ESA, but no disqualifier at Triaging."
+            }
+          ]
+        },
+        {
+          "id": "A.II",
+          "title": "Written analysis and judgement",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "text": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+            }
+          ]
+        }
+      ]
+    },
+    "B": {
+      "letter": "B",
+      "title": "EXECUTIVE SUMMARY",
+      "applicable": true,
+      "inline_verdict": "Plausibly compelling; C-conviction",
+      "default_open": true,
+      "subsections": [
+        {
+          "id": "B.I.1",
+          "title": "Executive summary",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "callout",
+              "tone": "verdict",
+              "iaja": "J",
+              "text": "Demand-Driven EPSU looks the cleaner of the two setups present — the supply side is ambiguous and may be a trap. Keep probing at ESA; do not promote to DD without independent corroboration of the price-path assumption."
+            },
+            {
+              "type": "prose",
+              "iaja": "A",
+              "text": "Lorem ipsum structure of the argument runs: (a) real-world LNG balance tightens through 2027 as EU import cover falls; (b) Novatek captures incremental pricing given cost-curve position; (c) market still discounts at mid-cycle multiples. Three layers, each with its own evidence stack; the deepest doubt sits on (c)."
+            },
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "PRIMARY driver: LNG price path N1-3Y. Everything else is second order.",
+                  "sub": [
+                    {
+                      "iaja": "I",
+                      "text": "Spot TTF forward curve still backwardated from winter peak."
+                    },
+                    {
+                      "iaja": "I",
+                      "text": "EU storage at 74% of capacity into refill season, above 5y avg."
+                    }
+                  ]
+                },
+                {
+                  "iaja": "J",
+                  "text": "SECONDARY driver: upstream capex cycle — late-cycle exuberance could compress the window.",
+                  "sub": [
+                    {
+                      "iaja": "A",
+                      "text": "Rig count proxy at +18% y/y — consistent with supply catch-up beginning."
+                    }
+                  ]
+                },
+                {
+                  "iaja": "J",
+                  "text": "TERTIARY driver: RUB/USD — mostly noise for this thesis; include for completeness."
+                }
+              ]
+            },
+            {
+              "type": "prose",
+              "iaja": "A",
+              "ratings": [
+                {
+                  "grade": "A",
+                  "attr": "setup quality"
+                }
+              ],
+              "text": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. The strength of the setup is in the asymmetry: if the PRIMARY driver resolves as expected, multiple expansion compounds EPS growth; if it disappoints, downside is cushioned by the net cash position and shareholder yield."
+            }
+          ]
+        }
+      ]
+    },
+    "C": {
+      "letter": "C",
+      "title": "ATTRIBUTES",
+      "applicable": true,
+      "inline_verdict": "Mixed A-C ratings; two Foundations need work",
+      "default_open": false,
+      "subsections": [
+        {
+          "id": "C.I.1",
+          "title": "Attribute ratings",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "ratings_table",
+              "title": "Full attribute grid (6 pillars × top 4 attributes each)",
+              "columns": [
+                "Pillar",
+                "Attribute",
+                "Grade",
+                "1-line"
+              ],
+              "rows": [
+                {
+                  "cells": [
+                    "Outputs",
+                    "Unit economics",
+                    "A",
+                    "LNG cost curve position is best-in-field"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Outputs",
+                    "Pricing power",
+                    "B",
+                    "Long-dated contracts + spot tail; better than peers"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Outputs",
+                    "Capital allocation",
+                    "C",
+                    "Mixed history; Yamal-2 execution is the test case"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Outputs",
+                    "Returns profile",
+                    "B",
+                    "RONIC ~22% at incremental projects"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Foundations",
+                    "Market position",
+                    "A",
+                    "~20% of global LNG growth through 2028"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Foundations",
+                    "Moat durability",
+                    "B",
+                    "Resource base + Sabetta logistics; hard to displace"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Foundations",
+                    "Management",
+                    "D",
+                    "Governance risk; Russian listed; sanctions overhang"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Foundations",
+                    "Change capacity",
+                    "C",
+                    "Slow historically but Arctic-2 shows capability"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Checks",
+                    "Accounting quality",
+                    "B",
+                    "No obvious aggression; WC volatility flagged"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Checks",
+                    "Disclosure",
+                    "C",
+                    "Partial segment reporting; IR reach limited"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Checks",
+                    "Incident history",
+                    "B",
+                    "One material sanction event 2024; well managed"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Checks",
+                    "Short-seller cases",
+                    "F",
+                    "n/a — no credible active reports"
+                  ]
+                },
+                {
+                  "cells": [
+                    "FFF",
+                    "Liquidity",
+                    "B",
+                    "ADV healthy on MOEX; ADR liquidity thinner"
+                  ]
+                },
+                {
+                  "cells": [
+                    "FFF",
+                    "Catalyst density",
+                    "A",
+                    "4 identifiable events in next 12m"
+                  ]
+                },
+                {
+                  "cells": [
+                    "FFF",
+                    "Timing fit",
+                    "B",
+                    "Coincides with our LNG squad rebuild"
+                  ]
+                },
+                {
+                  "cells": [
+                    "FFF",
+                    "Volatility fit",
+                    "C",
+                    "Headline-sensitive; sized accordingly"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Setup",
+                    "PRIMARY driver clarity",
+                    "A",
+                    "LNG price path is the single variable that matters"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Setup",
+                    "Event path",
+                    "B",
+                    "Winter balance + Yamal-2 COD + EU quota policy"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Setup",
+                    "Crowdedness",
+                    "B",
+                    "Under-owned by Western funds post-2022"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Setup",
+                    "Lineage fit",
+                    "A",
+                    "Rhymes with our 2023 CARLB setup — demand-driven EPSU"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "C.II.1",
+          "title": "Case — Outputs",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "iaja": "A",
+              "ratings": [
+                {
+                  "grade": "A",
+                  "attr": "unit economics"
+                }
+              ],
+              "text": "Ut labore et dolore magna aliqua. Unit economics read A — lifting cost in the low $2s per MMBtu puts Novatek on the left tail of the global LNG cost curve. This is not a claim; it is visible in the 5-year operating cost disclosure cross-checked against the Wood Mackenzie field-level series."
+            },
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "Capital allocation rates C because the Yamal-1 overrun and 2021 buyback mistiming show mixed judgement at inflection points. Not a disqualifier; something to watch for recurrence."
+            }
+          ]
+        },
+        {
+          "id": "C.II.2",
+          "title": "Case — Foundations",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "iaja": "J",
+              "ratings": [
+                {
+                  "grade": "D",
+                  "attr": "management & governance"
+                }
+              ],
+              "text": "Quis nostrud exercitation. The governance rating is the single biggest reason this may not survive ESA. Sanctions, sanctions risk, opacity of shareholder register, and the Mikhelson position all compound."
+            },
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "text": "Change capacity: Arctic-2 FID shows the company can execute mega-projects on schedule."
+                },
+                {
+                  "text": "Moat durability: resource base extends 40y+; logistics replicable only with 5y lead time."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "C.II.3",
+          "title": "Case — Checks",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "text": "Lorem ipsum. Checks clear: no material accounting aggression, no outstanding short-seller case of note, one well-managed incident (Sabetta logistics snag, 2024). Disclosure is thin versus Western peers — flag for ESA but not a red line."
+            }
+          ]
+        },
+        {
+          "id": "C.II.4",
+          "title": "Case — Fitness-for-fighting",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "iaja": "A",
+              "text": "Catalyst density is high — 4 identifiable events in the next 12m: winter balance outcome (Mar), Yamal-2 COD (Jun), EU LNG quota policy (Sep), Q3 prints (Nov). Good fit for our event-driven style."
+            },
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "Headline volatility is the main mismatch. We'd need to size smaller than a standard GARP name to respect the me-state constraint."
+            }
+          ]
+        },
+        {
+          "id": "C.II.5",
+          "title": "Case — Setup classification",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "callout",
+              "tone": "classification",
+              "iaja": "J",
+              "text": "Classification: Demand-Driven EPSU (primary) + Supply-Reset EPT (secondary). Lineage match = CARLB 2023 thesis. That playbook applies with one modification — RUB-denominated earnings need a currency overlay we didn't run for CARLB."
+            }
+          ]
+        }
+      ]
+    },
+    "D": {
+      "letter": "D",
+      "title": "COMPONENTS",
+      "applicable": true,
+      "inline_verdict": "KDICs isolated; two ACHs still open",
+      "default_open": false,
+      "subsections": [
+        {
+          "id": "D.I",
+          "title": "Mechanics / building blocks",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bluf",
+              "text": "Investment case rests on one Primary Driver (LNG price path) and one structural hygiene factor (cost-curve position). Both look robust at Triaging. One Key Confusion (Yamal-2 contract mix) must clear before ESA promotion."
+            }
+          ],
+          "topics": [
+            {
+              "id": "D.I.1",
+              "title": "KDICs — Key Drivers of Investment Case",
+              "target_words": 300,
+              "blocks": [
+                {
+                  "type": "bluf",
+                  "text": "One Primary Driver dominates: LNG price path N1–3Y. Two Secondaries provide supporting mechanics. Tertiaries noted but de-prioritised."
+                },
+                {
+                  "type": "tree",
+                  "title": "KDICs tree — qualitative drivers → financial outputs",
+                  "tiers": [
+                    {
+                      "label": "PDs",
+                      "name": "Primary Drivers",
+                      "items": [
+                        {
+                          "text": "LNG realised price N1-3Y",
+                          "detail": "TTF base-case EUR28–35/MWh through 2027; dominates revenue AND unit margin simultaneously",
+                          "iaja": "J"
+                        }
+                      ]
+                    },
+                    {
+                      "label": "SDs",
+                      "name": "Secondary Drivers",
+                      "items": [
+                        {
+                          "text": "Yamal-2 volume ramp",
+                          "detail": "Volume adder through 2027, but price-dependent for margin impact",
+                          "iaja": "A"
+                        },
+                        {
+                          "text": "Contract vs spot mix",
+                          "detail": "Governs how much of price upside is captured; unresolved — see D.I.3",
+                          "iaja": "A"
+                        }
+                      ]
+                    },
+                    {
+                      "label": "TDs",
+                      "name": "Tertiary Drivers",
+                      "items": [
+                        {
+                          "text": "RUB/USD — noise",
+                          "detail": "Largely USD-denominated revenue; cost base partially RUB; net is small"
+                        },
+                        {
+                          "text": "Opex inflation",
+                          "detail": "Structural trend, slow-moving; unlikely to shift thesis N1-3Y"
+                        }
+                      ]
+                    },
+                    {
+                      "label": "LIs",
+                      "name": "Leading Indicators (of ICDs)",
+                      "items": [
+                        {
+                          "text": "EU storage refill pace",
+                          "detail": "Real-time TTF proxy; check weekly",
+                          "iaja": "T"
+                        },
+                        {
+                          "text": "Sabetta shipment count",
+                          "detail": "Monthly; validates Yamal-2 ramp",
+                          "iaja": "T"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "bullet_group",
+                  "items": [
+                    {
+                      "iaja": "J",
+                      "text": "Structure is clean — one PD with a clear financial path.",
+                      "sub": [
+                        {
+                          "iaja": "A",
+                          "text": "PD → revenue via realised price × volume; no complex cross-effects."
+                        },
+                        {
+                          "iaja": "I",
+                          "text": "Sensitivity: every EUR5/MWh on TTF = ~$800m EBITDA at current volume base."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "J",
+                      "text": "SDs are conditional — Yamal-2 volume only matters if price holds.",
+                      "sub": [
+                        {
+                          "iaja": "A",
+                          "text": "If TTF drops to bear-case EUR18–22, volume ramp masks price compression rather than adds to it."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "ACT",
+                      "text": "Action: Pull ICD monitoring sheet for LIs 1–2; confirm real-time feeds available from FactSet."
+                    }
+                  ]
+                },
+                {
+                  "type": "summary",
+                  "text": "One-driver cases are the cleanest to own — but they carry concentration risk. Size accordingly."
+                }
+              ]
+            },
+            {
+              "id": "D.I.2",
+              "title": "KHF/As — Key Hygiene Factors / Assumptions",
+              "target_words": 0,
+              "stage_note": "Triaging: n.a. — hypothesise only if disqualifying. Full treatment at ESA.",
+              "blocks": [
+                {
+                  "type": "bluf",
+                  "text": "At Triaging, no KHFs identified that would disqualify. Structural cost-curve position assumed stable N1–3Y; to be stress-tested at ESA."
+                }
+              ]
+            },
+            {
+              "id": "D.I.3",
+              "title": "KCs/KUs — Key Confusions & Unknowns",
+              "target_words": 300,
+              "blocks": [
+                {
+                  "type": "bluf",
+                  "text": "Two live confusions. One is structurally important (Yamal-2 contract mix); the other is solvable with a modelling pass (RUB-hedged economics)."
+                },
+                {
+                  "type": "bullet_group",
+                  "items": [
+                    {
+                      "iaja": "J",
+                      "text": "KC-1 (structural): What fraction of Yamal-2 LNG is pre-sold into long-dated take-or-pay contracts?",
+                      "sub": [
+                        {
+                          "iaja": "A",
+                          "text": "If >70% pre-sold, spot price upside is capped — and the PD weakens materially."
+                        },
+                        {
+                          "iaja": "I",
+                          "text": "Company disclosure is silent on contract split; peers (Cheniere, Shell) disclose ~85–90% contracted."
+                        },
+                        {
+                          "iaja": "OQ",
+                          "text": "Open question: Do any sell-side models address this directly? AlphaSense search scheduled."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "J",
+                      "text": "KC-2 (solvable): How much of EBITDA converts to USD free cash flow after RUB-denominated opex + capex?",
+                      "sub": [
+                        {
+                          "iaja": "A",
+                          "text": "Reported headline is USD; underlying cost base is ~40% RUB. Hedge ratio and timing unclear."
+                        },
+                        {
+                          "iaja": "I",
+                          "text": "2023 disclosure implied ~8–12% FX drag on cash conversion — small but material at position-size level."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "ACT",
+                      "text": "Action: Build minimal Excel scenario for KC-2 before ESA kickoff (2-day task). Escalate KC-1 to AS deep research."
+                    }
+                  ]
+                },
+                {
+                  "type": "summary",
+                  "text": "KC-1 is the one that can kill the thesis. If it fails to clear, park."
+                }
+              ]
+            },
+            {
+              "id": "D.I.4",
+              "title": "KRs — Key Concerns / Risks",
+              "target_words": 300,
+              "blocks": [
+                {
+                  "type": "bluf",
+                  "text": "Three material risks, all headline-adjacent. Sanctions is the main source of tail risk; Yamal-2 execution is the main source of base-case risk."
+                },
+                {
+                  "type": "bullet_group",
+                  "items": [
+                    {
+                      "iaja": "J",
+                      "text": "KR-1: Sanctions tightening — tail risk, hard to size.",
+                      "sub": [
+                        {
+                          "iaja": "A",
+                          "text": "Secondary sanctions on Asian buyers would re-route volumes but keep them sellable."
+                        },
+                        {
+                          "iaja": "A",
+                          "text": "Full SDN listing on Novatek itself would be binary for ADR holders but unlikely absent new geopolitical shock."
+                        },
+                        {
+                          "iaja": "I",
+                          "text": "Base-rate: 3 of 12 sanctioned Russian energy names suffered binary outcomes over 2022–25."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "J",
+                      "text": "KR-2: Yamal-2 execution — base-case risk.",
+                      "sub": [
+                        {
+                          "iaja": "A",
+                          "text": "6-month COD slip would push volume ramp into weaker part of the TTF cycle."
+                        },
+                        {
+                          "iaja": "I",
+                          "text": "Arctic-2 COD was on time; track record favourable but not a guarantee for Yamal-2."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "J",
+                      "text": "KR-3: Governance opacity — reputational, not financial.",
+                      "sub": [
+                        {
+                          "iaja": "A",
+                          "text": "Ultimate shareholder structure is opaque post-2022 re-registration. Creates me-state friction but no cash-flow impact."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "ACT",
+                      "text": "Action: At ESA, build explicit kill-switch list tied to each KR; define position adjustments for level-1 trigger."
+                    }
+                  ]
+                },
+                {
+                  "type": "summary",
+                  "text": "Two sizing constraints emerge: smaller starter than a standard GARP name; no add on KR-1 triggers until tail clears."
+                }
+              ]
+            },
+            {
+              "id": "D.I.5",
+              "title": "KPOs — Key Positive Optionality",
+              "target_words": 150,
+              "blocks": [
+                {
+                  "type": "bluf",
+                  "text": "Two non-modelled optionalities worth flagging. Neither is required for the base case to work."
+                },
+                {
+                  "type": "bullet_group",
+                  "items": [
+                    {
+                      "iaja": "J",
+                      "text": "KPO-1: Buyback re-initiation.",
+                      "sub": [
+                        {
+                          "iaja": "A",
+                          "text": "Net cash at $2.4bn vs $1.1bn prior year; balance sheet permits."
+                        },
+                        {
+                          "iaja": "I",
+                          "text": "No buyback announced since 2021; management cited 'capital allocation review' at FY25 results."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "J",
+                      "text": "KPO-2: Arctic-3 FID signal.",
+                      "sub": [
+                        {
+                          "iaja": "A",
+                          "text": "Would extend growth runway past 2030 and re-rate terminal value. Not in current sell-side modal case."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "summary",
+                  "text": "Upside optionality is real but not required. Thesis works on PD alone."
+                }
+              ]
+            }
+          ],
+          "target_words": 1050
+        },
+        {
+          "id": "D.II",
+          "title": "Violations (ACHs, exit triggers, expected negatives)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "ACH-1 (active): opacity of ultimate shareholder structure post-2022 re-registration."
+                },
+                {
+                  "iaja": "J",
+                  "text": "ACH-2 (active): sparse Q1 disclosure v prior years."
+                },
+                {
+                  "text": "Exit triggers (if we buy): (i) TTF 3-month avg <EUR22, (ii) Yamal-2 COD slipping 6m+, (iii) any material governance event."
+                },
+                {
+                  "text": "Expected negatives: 1-2 sanction-related drawdowns of 10-15% likely across a 24m hold."
+                }
+              ]
+            }
+          ],
+          "target_words": 150
+        },
+        {
+          "id": "D.III",
+          "title": "Open topics (KOQs, KAs)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "text": "KOQ-1: Contract-vs-spot split of Yamal-2 volumes (pending)."
+                },
+                {
+                  "text": "KOQ-2: RUB-hedged economics vs USD-reported headline — needs Excel model."
+                },
+                {
+                  "text": "KA-1: Run AlphaSense deep research on Sabetta logistics constraints."
+                },
+                {
+                  "text": "KA-2: Pull latest ADR liquidity stats from FactSet."
+                }
+              ]
+            }
+          ],
+          "target_words": 100
+        }
+      ],
+      "target_words": 1300
+    },
+    "E": {
+      "letter": "E",
+      "title": "ACTIONS",
+      "applicable": true,
+      "inline_verdict": "Progress to ESA; not yet promote to DD",
+      "default_open": true,
+      "subsections": [
+        {
+          "id": "E.I",
+          "title": "Summary judgement",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "callout",
+              "tone": "judgement",
+              "iaja": "J",
+              "text": "Progress to ESA. Setup is legible, PRIMARY driver is clean, Foundations hold except on governance. Do not yet spend DD energy — two ACHs and one KC need to clear first."
+            },
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "If Yamal-2 contract disclosure remains opaque at ESA exit, park — we cannot size a position responsibly without understanding the downside on pricing."
+            }
+          ]
+        },
+        {
+          "id": "E.II",
+          "title": "If compelling",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "text": "Initial size: 1.5% (half a standard starter given headline volatility)."
+                },
+                {
+                  "text": "Build to 3-4% on first Yamal-2 volume print + Q3 earnings confirmation."
+                },
+                {
+                  "text": "Pair with a short LNG-peer to isolate the unit-economics alpha (optional — assess at build)."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "E.III",
+          "title": "If uncompelling",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "text": "Park [-] with a 6m re-review trigger on Yamal-2 disclosure."
+                },
+                {
+                  "text": "Keep CRBN as the primary LNG-adjacent expression (no gap in coverage)."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "F": {
+      "letter": "F",
+      "title": "APPENDICES",
+      "applicable": true,
+      "inline_verdict": "Light at Triaging (per stage-depth matrix)",
+      "default_open": false,
+      "subsections": [
+        {
+          "id": "F.I",
+          "title": "Basic checks",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "kv_grid",
+              "title": "Basic checks",
+              "rows": [
+                {
+                  "label": "Listing",
+                  "value": "MOEX + Frankfurt ADR",
+                  "delta": ""
+                },
+                {
+                  "label": "Market cap",
+                  "value": "$32bn",
+                  "delta": ""
+                },
+                {
+                  "label": "3m ADV",
+                  "value": "$48m equiv.",
+                  "delta": "adequate for starter size"
+                },
+                {
+                  "label": "Free float",
+                  "value": "~27%",
+                  "delta": ""
+                },
+                {
+                  "label": "Next event",
+                  "value": "Q2 earnings 04-Aug-26",
+                  "delta": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "F.II",
+          "title": "Supplementary",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "text": "Supplementary appendix at Triaging is intentionally thin. ESA will add: contract-pricing scenario table, governance deep-dive, sanctions pathway map. DD will add: discounted cash flow model, reverse-DCF market-implied price path, peer sensitivity grid."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,281 @@
+/* memo-style.css — Shared stylesheet for rendered research memos
+   Covers both v0.1 (paragraph-only) and structured (h2/ul/li) formats.
+   Deployed at: https://vfhqi.github.io/dashboards/memos/memo-style.css
+   Referenced via: <link rel="stylesheet" href="../memo-style.css"> in each memo
+*/
+
+/* === RESET & BASE === */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 2rem 1.5rem 4rem;
+  max-width: 52rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #1a1a1a;
+  background: #fff;
+}
+
+/* === ARTICLE WRAPPER === */
+.m-memo {
+  max-width: 100%;
+}
+
+/* === HEADER / META === */
+.m-meta {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e2e2e2;
+}
+
+.m-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.m-page-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+  color: #111;
+  line-height: 1.3;
+}
+
+.m-tag-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  font-size: 0.8rem;
+}
+
+/* QC pill */
+.m-qc-pill {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.m-qc-pass {
+  background: #d4edda;
+  color: #155724;
+}
+
+/* Source tags */
+.m-source-tag {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.m-source-as       { background: #e8d5f5; color: #5b2d8e; }
+.m-source-claude,
+.m-source-c        { background: #d4e8f7; color: #1a5276; }
+.m-source-c-as     { background: #dce8d4; color: #2e6b1e; }
+.m-source-unknown  { background: #eee;    color: #555; }
+
+/* Stage badges */
+.m-stage {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.m-stage-ig       { background: #fff3cd; color: #856404; }
+.m-stage-triaging { background: #cce5ff; color: #004085; }
+.m-stage-esa      { background: #d1ecf1; color: #0c5460; }
+.m-stage-dd       { background: #d4edda; color: #155724; }
+.m-stage-unknown  { background: #eee;    color: #555; }
+
+/* Date and Notion link */
+.m-date {
+  color: #666;
+  font-size: 0.75rem;
+}
+.m-notion-link {
+  font-size: 0.75rem;
+}
+.m-notion-link-missing {
+  color: #999;
+  font-style: italic;
+}
+
+/* === BODY CONTENT === */
+
+/* Paragraphs (v0.1 format — all content lives in these) */
+.m-p {
+  margin: 0.6rem 0;
+  line-height: 1.65;
+  color: #222;
+}
+
+/* Headings (structured format) */
+.m-h1 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 2rem 0 0.75rem;
+  color: #111;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.3rem;
+}
+.m-h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 1.8rem 0 0.6rem;
+  color: #1a1a1a;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 0.25rem;
+}
+.m-h3 {
+  font-size: 1.0rem;
+  font-weight: 600;
+  margin: 1.4rem 0 0.5rem;
+  color: #333;
+}
+.m-h4 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 1.2rem 0 0.4rem;
+  color: #444;
+}
+
+/* Sections */
+.m-section {
+  margin: 1.5rem 0;
+}
+
+/* Horizontal rules */
+.m-hr, hr {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 1.5rem 0;
+}
+
+/* === BULLET LISTS === */
+.m-bullets {
+  margin: 0.5rem 0;
+  padding-left: 1.4rem;
+  list-style-type: disc;
+}
+.m-bullets .m-bullets {
+  margin: 0.3rem 0;
+  padding-left: 1.2rem;
+  list-style-type: circle;
+}
+.m-li {
+  margin: 0.4rem 0;
+  line-height: 1.6;
+  color: #222;
+}
+
+/* === IAJA PREFIXES === */
+.m-prefix-j,
+.m-prefix-a,
+.m-prefix-action {
+  font-weight: 600;
+  margin-right: 0.3rem;
+}
+.m-prefix-j      { color: #6b21a8; } /* Purple — judgement */
+.m-prefix-a      { color: #1e40af; } /* Blue — analysis */
+.m-prefix-action { color: #166534; } /* Green — action */
+
+/* IAJA row accents (left border) */
+.m-li.m-iaja-j { border-left: 3px solid #a855f7; padding-left: 0.6rem; }
+.m-li.m-iaja-a { border-left: 3px solid #3b82f6; padding-left: 0.6rem; }
+.m-li.m-iaja-i { border-left: 3px solid #9ca3af; padding-left: 0.6rem; }
+.m-li.m-iaja-t { border-left: 3px solid #f59e0b; padding-left: 0.6rem; }
+.m-li.m-iaja-oq { border-left: 3px solid #ef4444; padding-left: 0.6rem; }
+
+/* === HIGHLIGHTS === */
+.m-hl-green {
+  background: #d1fae5;
+  padding: 0.1rem 0.2rem;
+  border-radius: 2px;
+}
+.m-hl-yellow {
+  background: #fef9c3;
+  padding: 0.1rem 0.2rem;
+  border-radius: 2px;
+}
+.m-hl-red {
+  background: #fee2e2;
+  padding: 0.1rem 0.2rem;
+  border-radius: 2px;
+}
+
+/* === TABLES === */
+.m-table, .m-qc-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.85rem;
+}
+.m-table th, .m-table td,
+.m-qc-table th, .m-qc-table td {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #ddd;
+  text-align: left;
+  vertical-align: top;
+}
+.m-table th, .m-qc-table th {
+  background: #f8f8f8;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* === QC AUDIT FOOTER === */
+.m-qc-audit {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 2px solid #e2e2e2;
+}
+.m-qc-h {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #666;
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* === STRONG / EMPHASIS === */
+strong, b { font-weight: 600; }
+em, i { font-style: italic; }
+u { text-decoration: underline; text-decoration-color: #fbbf24; text-underline-offset: 2px; }
+
+/* === LINKS === */
+a { color: #2563eb; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* === RESPONSIVE === */
+@media (max-width: 600px) {
+  body { padding: 1rem 0.75rem 2rem; font-size: 14px; }
+  .m-page-title { font-size: 1.2rem; }
+  .m-title-row { flex-direction: column; align-items: flex-start; }
+}
+
+/* === PRINT === */
+@media print {
+  body { max-width: none; padding: 0; }
+  .m-hl-green { background: #e8f5e9 !important; -webkit-print-color-adjust: exact; }
+  .m-hl-yellow { background: #fffde7 !important; -webkit-print-color-adjust: exact; }
+  .m-hl-red { background: #ffebee !important; -webkit-print-color-adjust: exact; }
+}

@@ -1,0 +1,4165 @@
+{
+  "schema_version": "1.0",
+  "ticker": "NVTK",
+  "company_name": "Novatek (lorem-ipsum visual test fixture)",
+  "stage": "Triaging",
+  "stage_date": "2026-04-20",
+  "authored_by": "Watson (APM)",
+  "driver_terminology": "PRIMARY/SECONDARY/TERTIARY",
+  "header": {
+    "primary_setup": "Demand-Driven EPSU — LNG re-rating cycle",
+    "primary_setup_verdict": "plausibly present",
+    "secondary_setup": "Supply-Reset EPT — upstream capex normalising",
+    "conviction": "C — forming; 2 anchor data points still open",
+    "time_horizon": "N1-3Y, fulcrum event inside 18m"
+  },
+  "sections": {
+    "A": {
+      "letter": "A",
+      "title": "FINANCIALS",
+      "applicable": true,
+      "inline_verdict": "Light pass — primer only at Triaging",
+      "default_open": false,
+      "subsections": [
+        {
+          "id": "A.I",
+          "title": "Financial summary",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "kv_grid",
+              "title": "Last reported period — headline",
+              "rows": [
+                {
+                  "label": "Revenue",
+                  "value": "$11.2bn",
+                  "delta": "+14% y/y"
+                },
+                {
+                  "label": "Gross profit",
+                  "value": "$4.9bn",
+                  "delta": "GP margin 43.8%, +180bp"
+                },
+                {
+                  "label": "EBIT",
+                  "value": "$3.1bn",
+                  "delta": "margin 27.7%"
+                },
+                {
+                  "label": "Net cash",
+                  "value": "$2.4bn",
+                  "delta": "vs $1.1bn Pcp"
+                },
+                {
+                  "label": "RONIC (incremental)",
+                  "value": "~22%",
+                  "delta": "NWC release flatters 2-3pp"
+                }
+              ]
+            },
+            {
+              "type": "prose",
+              "iaja": "I",
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Financials at Triaging are a primer, not a forensic read — the aim is to rule out obvious red flags in cash generation, capex intensity, and balance sheet health before spending further energy. Five years of reported KPIs show revenue compounding at 11% with GP margin widening from 38% to 44%."
+            },
+            {
+              "type": "prose",
+              "iaja": "J",
+              "ratings": [
+                {
+                  "grade": "B",
+                  "attr": "financial quality"
+                }
+              ],
+              "text": "Numbers are good enough to proceed. Not outstanding — two of the last five years show working-capital absorption that masked real cash conversion. Worth a closer look at ESA, but no disqualifier at Triaging."
+            }
+          ]
+        },
+        {
+          "id": "A.II",
+          "title": "Written analysis and judgement",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "text": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+            }
+          ]
+        }
+      ]
+    },
+    "B": {
+      "letter": "B",
+      "title": "EXECUTIVE SUMMARY",
+      "applicable": true,
+      "inline_verdict": "Plausibly compelling; C-conviction",
+      "default_open": true,
+      "subsections": [
+        {
+          "id": "B.I.1",
+          "title": "Executive summary",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "callout",
+              "tone": "verdict",
+              "iaja": "J",
+              "text": "Demand-Driven EPSU looks the cleaner of the two setups present — the supply side is ambiguous and may be a trap. Keep probing at ESA; do not promote to DD without independent corroboration of the price-path assumption."
+            },
+            {
+              "type": "prose",
+              "iaja": "A",
+              "text": "Lorem ipsum structure of the argument runs: (a) real-world LNG balance tightens through 2027 as EU import cover falls; (b) Novatek captures incremental pricing given cost-curve position; (c) market still discounts at mid-cycle multiples. Three layers, each with its own evidence stack; the deepest doubt sits on (c)."
+            },
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "PRIMARY driver: LNG price path N1-3Y. Everything else is second order.",
+                  "sub": [
+                    {
+                      "iaja": "I",
+                      "text": "Spot TTF forward curve still backwardated from winter peak."
+                    },
+                    {
+                      "iaja": "I",
+                      "text": "EU storage at 74% of capacity into refill season, above 5y avg."
+                    }
+                  ]
+                },
+                {
+                  "iaja": "J",
+                  "text": "SECONDARY driver: upstream capex cycle — late-cycle exuberance could compress the window.",
+                  "sub": [
+                    {
+                      "iaja": "A",
+                      "text": "Rig count proxy at +18% y/y — consistent with supply catch-up beginning."
+                    }
+                  ]
+                },
+                {
+                  "iaja": "J",
+                  "text": "TERTIARY driver: RUB/USD — mostly noise for this thesis; include for completeness."
+                }
+              ]
+            },
+            {
+              "type": "prose",
+              "iaja": "A",
+              "ratings": [
+                {
+                  "grade": "A",
+                  "attr": "setup quality"
+                }
+              ],
+              "text": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. The strength of the setup is in the asymmetry: if the PRIMARY driver resolves as expected, multiple expansion compounds EPS growth; if it disappoints, downside is cushioned by the net cash position and shareholder yield."
+            }
+          ]
+        }
+      ]
+    },
+    "C": {
+      "letter": "C",
+      "title": "REQUIRED ATTRIBUTES",
+      "applicable": true,
+      "inline_verdict": "Primary driver confirmed demand-driven; triple-ratchet step-up validated at Triaging.",
+      "default_open": true,
+      "subsections": [
+        {
+          "id": "C.I",
+          "title": "Ratings (graphical form)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "ratings_table",
+              "id": "C.I.1",
+              "title": "Ratings — all six pillars, Required Attribute Families, TCs, Required Attributes and Core Questions (NVTK, Triaging)",
+              "word_target": 0,
+              "has_toggle": true,
+              "toggle_labels": [
+                "RATINGS ONLY",
+                "SUMMARIES"
+              ],
+              "default_mode": "SUMMARIES",
+              "default_expansion": "full",
+              "rows": [
+                {
+                  "level": "pillar",
+                  "id": "p1",
+                  "label": "P1: Technical Strength",
+                  "rating": "B",
+                  "summary": "Technicals support entry."
+                },
+                {
+                  "level": "family",
+                  "id": "p1.mn",
+                  "label": "Minervini dimensions (8 point + extension)",
+                  "rating": "B",
+                  "summary": "7 / 9 PASS (placeholder data)"
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d1",
+                  "label": "D1: Price > 200D MA",
+                  "rating": "PASS",
+                  "summary": "Last EUR 61.20 | 200D MA EUR 48.95"
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d2",
+                  "label": "D2: 200D MA trending up (≥1M)",
+                  "rating": "PASS",
+                  "summary": "200D MA 1M ago EUR 48.22 → today EUR 48.95"
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d3",
+                  "label": "D3: Price > 150D MA",
+                  "rating": "PASS",
+                  "summary": "150D MA EUR 52.08"
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d4",
+                  "label": "D4: 150D > 200D MA",
+                  "rating": "PASS",
+                  "summary": "Golden-cross alignment holds"
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d5",
+                  "label": "D5: 50D > 150D MA",
+                  "rating": "PASS",
+                  "summary": "50D MA EUR 56.41"
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d6",
+                  "label": "D6: Price > 50D MA",
+                  "rating": "PASS",
+                  "summary": "On healthy pullback, 50D held"
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d7",
+                  "label": "D7: Price > 30% above 52W low",
+                  "rating": "PASS",
+                  "summary": "52W low EUR 34.10 | +79% above"
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d8",
+                  "label": "D8: Price within 25% of 52W high",
+                  "rating": "PASS",
+                  "summary": "52W high EUR 63.20 | –3.2% below"
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d9",
+                  "label": "D9: RS Rank ≥70 (provisional)",
+                  "rating": "FAIL",
+                  "summary": "RS Rank 62 (placeholder) — 9th-dim threshold TBC"
+                },
+                {
+                  "level": "pillar",
+                  "id": "p2",
+                  "label": "P2: Fit for Market Paradigm",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "paradigm",
+                  "id": "p2.1",
+                  "label": "Paradigm 1: Late bull / early bear market",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "paradigm",
+                  "id": "p2.2",
+                  "label": "Paradigm 2: AI demand / disruption",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "paradigm",
+                  "id": "p2.3",
+                  "label": "Paradigm 3: Oil, stagflation, recession, rising rates",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "pillar",
+                  "id": "p3",
+                  "label": "P3: Fundamental Case (Outputs)",
+                  "rating": "B",
+                  "summary": "Demand-driven fundamental change validated at Triaging depth by order intake (+34% YoY) and margin trajectory (+400bps path to 2028)."
+                },
+                {
+                  "level": "family",
+                  "id": "p3.ic1",
+                  "label": "AF #1: Required Case Outputs",
+                  "rating": "B",
+                  "summary": "Output trajectory directionally positive but based on 1 quarter of order data (+34% YoY) and untested IR engagement."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic1.tc1",
+                  "label": "TC: Strong financial profile?",
+                  "rating": "B",
+                  "summary": "Three-year EPS path EUR 2."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc1.a1",
+                  "label": "A1: Sufficient longevity of case (baton)?",
+                  "rating": "B",
+                  "summary": "Multi-year visibility to 2028 supported by: uncancellable order backlog (book-to-bill 1."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc1.q1",
+                  "label": "Q1: Three-year, mid-term, triple ratchet step-up?",
+                  "rating": "B",
+                  "summary": "Yes."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc1.a2",
+                  "label": "A2: Sufficient growth rate?",
+                  "rating": "B",
+                  "summary": "16% EPS CAGR (blended Automation +22% / Legacy -5%) sits in GARP sweet spot."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc1.q2",
+                  "label": "Q2: 12-20% EPS growth p.a.?",
+                  "rating": "B",
+                  "summary": "Yes."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc1.a3",
+                  "label": "A3: Sufficient improvement in financials?",
+                  "rating": "B",
+                  "summary": "EBITDA margin path 18%→22% (+400bps) driven by two independent mechanisms."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc1.q3",
+                  "label": "Q3: Margin/growth step-up?",
+                  "rating": "B",
+                  "summary": "Clear margin step-up visible and structural."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic1.tc2",
+                  "label": "TC: Acceptable case setup?",
+                  "rating": "B",
+                  "summary": "Setup fits Demand-Driven EPSU template well with supporting Corporate Change overlay."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc2.a4",
+                  "label": "A4: Sufficient setup fit?",
+                  "rating": "B",
+                  "summary": "Demand-Driven EPSU template match validated: external demand force (reshoring mandates) → volume (orders +34% YoY) → operating leverage (margin 18%→22%) → EPS step-up (EUR 2."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc2.q4",
+                  "label": "Q4: Fit with required setups?",
+                  "rating": "B",
+                  "summary": "Strong fit confirmed."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc2.a5",
+                  "label": "A5: Goldilocks timeliness?",
+                  "rating": "B",
+                  "summary": "SP broke out mid-Mar-26 from 18-month base (EUR 32, Jun-24 to Feb-26) to EUR 48 on above-average volume."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc2.q5",
+                  "label": "Q5: Post CfC clearing / SP turn?",
+                  "rating": "B",
+                  "summary": "SP turn confirmed mid-March 2026."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc2.q6",
+                  "label": "Q6: Less than 6M after turn?",
+                  "rating": "B",
+                  "summary": "Yes."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic1.tc3",
+                  "label": "TC: Sufficient case navigatability?",
+                  "rating": "C",
+                  "summary": "Partial navigability."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc3.a6",
+                  "label": "A6: Sufficiently trackable, updatable, and invalidatable early?",
+                  "rating": "C",
+                  "summary": "Trackability adequate at Triaging depth: order intake (quarterly, segment-level), book-to-bill (quarterly), mix % (quarterly), plus macro cross-checks (PMI monthly, IP monthly, IFR annual)."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc3.q7",
+                  "label": "Q7: Helpful IR re. operating momentum?",
+                  "rating": "—",
+                  "summary": "Unclear — no direct IR engagement at Triaging stage."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc3.q8",
+                  "label": "Q8: Trackable key leading indicators?",
+                  "rating": "B",
+                  "summary": "Yes."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic1.tc4",
+                  "label": "TC: Earnings upgrades?",
+                  "rating": "B",
+                  "summary": "Clear upgrade path emerging."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc4.a7",
+                  "label": "A7: Sufficient earnings upgrades / beats?",
+                  "rating": "B",
+                  "summary": "Clear upgrade path with strong momentum confirmed."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc4.q9",
+                  "label": "Q9: Modal case 18M EPS > guidance > SS?",
+                  "rating": "B",
+                  "summary": "Yes."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc4.q10",
+                  "label": "Q10: 3:1 SS/G EPS raise/lower skew NFY?",
+                  "rating": "B",
+                  "summary": "Skew is favorable and clearing 3:1 on next fiscal year."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic1.tc5",
+                  "label": "TC: Limited drawdown risk?",
+                  "rating": "C",
+                  "summary": "Drawdown risk moderate."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc5.a8",
+                  "label": "A8: Sufficiently robust / bankable multiple?",
+                  "rating": "C",
+                  "summary": "Multiple has company-driven catalysts but 60/40 split with macro exposure is acceptable but not strong foundation."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc5.q11",
+                  "label": "Q11: Multiple more company than exogenously driven?",
+                  "rating": "C",
+                  "summary": "Split assessment: 60% company-driven, 40% macro-dependent."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc5.a9",
+                  "label": "A9: Sufficient returns?",
+                  "rating": "B",
+                  "summary": "Returns exceed 20% hurdle comfortably in all scenarios."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc5.q12",
+                  "label": "Q12: More than 20% 3Y TSR?",
+                  "rating": "B",
+                  "summary": "Yes."
+                },
+                {
+                  "level": "family",
+                  "id": "p3.ic2",
+                  "label": "AF #2: Required Case Inputs",
+                  "rating": "A",
+                  "summary": "External tailwinds structural and multi-year: EU Chips Act (EUR 43bn), US IRA nearshoring, 15Y-high manufacturing vacancy rate."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic2.tc1",
+                  "label": "TC: Sufficient change forces?",
+                  "rating": "A",
+                  "summary": "External forces exceptional."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic2.tc1.q1",
+                  "label": "Q1: External change forces / tailwinds?",
+                  "rating": "A",
+                  "summary": "Exceptional."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic2.tc1.q2",
+                  "label": "Q2: Internal change forces?",
+                  "rating": "B",
+                  "summary": "New CEO with strong track record driving credible portfolio refocus."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic2.tc2",
+                  "label": "TC: Sufficient base?",
+                  "rating": "B",
+                  "summary": "No material external headwinds identified (energy <3% COGS, no tariff exposure, no rare earth dependency)."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic2.tc2.q3",
+                  "label": "Q3: Absence of external headwinds?",
+                  "rating": "B",
+                  "summary": "Largely clean."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic2.tc2.q3b",
+                  "label": "Q3b: Well-invested base?",
+                  "rating": "B",
+                  "summary": "Yes."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic2.tc2.q4",
+                  "label": "Q4: Thesis congruency with past/present?",
+                  "rating": "B",
+                  "summary": "Congruent."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic2.tc2.q5",
+                  "label": "Q5: Large CfC/mispricing?",
+                  "rating": "B",
+                  "summary": "Yes — market prices NovaTech as an industrial conglomerate (14x) not an automation pure-play (20x)."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic2.tc2.q6",
+                  "label": "Q6: Low trading multiple?",
+                  "rating": "B",
+                  "summary": "14x forward P/E is attractive."
+                },
+                {
+                  "level": "family",
+                  "id": "p3.ic3",
+                  "label": "AF #3: Required Case Setups",
+                  "rating": "B",
+                  "summary": "Demand-Driven EPSU validated at Triaging depth: order intake +34%, book-to-bill 1."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic3.tc1",
+                  "label": "TC: Mechanical EPS upgrades from mis-modelling",
+                  "rating": "NR",
+                  "summary": "Not applicable to NovaTech at Triaging."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic3.tc1.a1",
+                  "label": "A1: Mis-modelled, high-quality EPS upgrader",
+                  "rating": "NR",
+                  "summary": "Not activated for NovaTech."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc1.a1.q1",
+                  "label": "Q1: Is EPS consensus >10% below our estimate?",
+                  "rating": "NR",
+                  "summary": "Cannot assess — no proprietary model built yet."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc1.a1.q2",
+                  "label": "Q2: What specific line items are mis-modelled?",
+                  "rating": "NR",
+                  "summary": "Not yet identified."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc1.a1.q3",
+                  "label": "Q3: Is the modelling gap structural or one-off?",
+                  "rating": "NR",
+                  "summary": "Cannot assess at Triaging."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic3.tc2",
+                  "label": "TC: Idiosyncratic, exogenous inflection",
+                  "rating": "B",
+                  "summary": "Primary setup — Demand-Driven EPSU validated at Triaging depth."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic3.tc2.a1",
+                  "label": "A1: Big demand change-driven EPSU or EPT",
+                  "rating": "B",
+                  "summary": "Demand-Driven EPSU template validated."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc2.a1.q1",
+                  "label": "Q1: Is there a market-wide demand explosion?",
+                  "rating": "A",
+                  "summary": "Yes."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc2.a1.q2",
+                  "label": "Q2: Does the company hold a dominant competitive position?",
+                  "rating": "B",
+                  "summary": "Strong position."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc2.a1.q3",
+                  "label": "Q3: Is the business model one-to-many scalable?",
+                  "rating": "B",
+                  "summary": "Scalable model."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc2.a1.q4",
+                  "label": "Q4: Is the market an oligopoly (structure AND behaviour)?",
+                  "rating": "B",
+                  "summary": "Market structure is oligopolistic (3-4 credible players in precision)."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc2.a1.q5",
+                  "label": "Q5: Is there fixed cost leverage for margin expansion?",
+                  "rating": "B",
+                  "summary": "Clear margin expansion mechanism."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic3.tc3",
+                  "label": "TC: Huge internal push/improvement",
+                  "rating": "B",
+                  "summary": "Corporate Change overlay credible but track record <12 months at NovaTech."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic3.tc3.a1",
+                  "label": "A1: Strong internal changes driven EPSU / EPT",
+                  "rating": "B",
+                  "summary": "New CEO driving portfolio simplification and Automation investment pivot."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc3.a1.q1",
+                  "label": "Q1: Is management credible on execution?",
+                  "rating": "B",
+                  "summary": "Credible but early."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc3.a1.q2",
+                  "label": "Q2: What is the specific internal change programme?",
+                  "rating": "B",
+                  "summary": "Three-pronged: divest non-core, reallocate R&D, simplify structure."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc3.a1.q3",
+                  "label": "Q3: What is the track record of delivery so far?",
+                  "rating": "C",
+                  "summary": "One proof point only — too early to judge pattern."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic3.tc4",
+                  "label": "TC: Clearing of (idiosyncratic) negative sentiment",
+                  "rating": "NR",
+                  "summary": "Not applicable to NovaTech at Triaging."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic3.tc4.a1",
+                  "label": "A1: Oversold/rebounding quality compounder",
+                  "rating": "NR",
+                  "summary": "Not applicable."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc4.a1.q1",
+                  "label": "Q1: Is the negative sentiment idiosyncratic or sector-wide?",
+                  "rating": "NR",
+                  "summary": "Not applicable — no negative sentiment present."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc4.a1.q2",
+                  "label": "Q2: Is the underlying business quality intact despite sentiment?",
+                  "rating": "NR",
+                  "summary": "Not applicable — no negative sentiment present."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc4.a1.q3",
+                  "label": "Q3: What specific catalyst clears the overhang?",
+                  "rating": "NR",
+                  "summary": "Not applicable — no overhang present."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic3.tc4.a2",
+                  "label": "A2: Huge C/C clearing event in solid quality (CVS-type)",
+                  "rating": "NR",
+                  "summary": "Not applicable."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc4.a2.q1",
+                  "label": "Q1: Is there a specific clearing event identified?",
+                  "rating": "NR",
+                  "summary": "Not applicable — no clearing event needed."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc4.a2.q2",
+                  "label": "Q2: Is business quality sufficient to justify rebound post-clearing?",
+                  "rating": "NR",
+                  "summary": "Not applicable."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic3.tc5",
+                  "label": "TC: Standard exogenous reversion to mean",
+                  "rating": "NR",
+                  "summary": "Not applicable to NovaTech at Triaging."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic3.tc5.a1",
+                  "label": "A1: Mean-reverting quality business post-temporary headwind",
+                  "rating": "NR",
+                  "summary": "Not applicable."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc5.a1.q1",
+                  "label": "Q1: Is the headwind genuinely temporary?",
+                  "rating": "NR",
+                  "summary": "Not applicable — no headwind present."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc5.a1.q2",
+                  "label": "Q2: What is the normalised earnings level to revert to?",
+                  "rating": "NR",
+                  "summary": "Not applicable."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc5.a1.q3",
+                  "label": "Q3: Is the quality of the franchise intact through the headwind?",
+                  "rating": "NR",
+                  "summary": "Not applicable."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic3.tc6",
+                  "label": "TC: Trough-on-trough turn in solid quality cyclical",
+                  "rating": "NR",
+                  "summary": "Not applicable to NovaTech at Triaging."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic3.tc6.a1",
+                  "label": "A1: Cyclical quality compounder at trough earnings",
+                  "rating": "NR",
+                  "summary": "Not applicable."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc6.a1.q1",
+                  "label": "Q1: Are earnings genuinely at trough?",
+                  "rating": "NR",
+                  "summary": "No — mid-cycle at earliest."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc6.a1.q2",
+                  "label": "Q2: Is business quality sufficient to hold through the full cycle?",
+                  "rating": "NR",
+                  "summary": "Likely yes, but not tested at trough."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc6.a1.q3",
+                  "label": "Q3: What leading indicators confirm the cyclical turn?",
+                  "rating": "NR",
+                  "summary": "Not applicable — not in downturn."
+                },
+                {
+                  "level": "pillar",
+                  "id": "p4",
+                  "label": "P4: Fundamental Case (Inputs)",
+                  "rating": "C",
+                  "summary": "Foundations adequate but dual-segment structure (Automation 65% + Legacy 35% of revenue) adds analytical complexity."
+                },
+                {
+                  "level": "family",
+                  "id": "p4.bb1",
+                  "label": "AF #1: Required Simplicity Guardrails",
+                  "rating": "C",
+                  "summary": "Two-segment structure (Automation 65% + Legacy 35%), 3 pending divestitures, and CEO <12 months in seat add analytical complexity."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb1.tc1",
+                  "label": "TC: Narrowly focused bet?",
+                  "rating": "C",
+                  "summary": "Moderate focus."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb1.tc1.q1",
+                  "label": "Q1: 2 or less fulcrum drivers and 4 or less key drivers?",
+                  "rating": "B",
+                  "summary": "Yes."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb1.tc2",
+                  "label": "TC: Narrow perimeter?",
+                  "rating": "C",
+                  "summary": "Moderately narrow."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb1.tc2.q2",
+                  "label": "Q2: 10 or less geographies x business units?",
+                  "rating": "B",
+                  "summary": "Yes."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb1.tc3",
+                  "label": "TC: No headwinds?",
+                  "rating": "B",
+                  "summary": "Clean on value chain headwinds."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb1.tc3.q3",
+                  "label": "Q3: Zero value chain headwinds to revenue?",
+                  "rating": "B",
+                  "summary": "Yes, zero material headwinds identified."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb1.tc4",
+                  "label": "TC: Narrow range of issues?",
+                  "rating": "C",
+                  "summary": "Two identifiable change forces (Automation demand, CEO execution) create two primary uncertainty axes."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb1.tc4.q4",
+                  "label": "Q4: 2 or less CfCs or problems?",
+                  "rating": "B",
+                  "summary": "Yes."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb1.tc5",
+                  "label": "TC: Conservative IR?",
+                  "rating": "B",
+                  "summary": "Company demonstrates conservative guidance pattern."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb1.tc5.q5",
+                  "label": "Q5: Company confirms conservative guidance?",
+                  "rating": "B",
+                  "summary": "Yes."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb1.tc6",
+                  "label": "TC: Clear investment case?",
+                  "rating": "B",
+                  "summary": "Clear transmission mechanism: demand force → volume → margin expansion → EPS step-up."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb1.tc6.q6",
+                  "label": "Q6: Clear strategy-to-EPS transmission mechanism?",
+                  "rating": "B",
+                  "summary": "Yes."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb1.tc7",
+                  "label": "TC: Trackable case drivers?",
+                  "rating": "B",
+                  "summary": "Key drivers are trackable."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb1.tc7.q7",
+                  "label": "Q7: Clear VC/Co inputs-to-EPS transmission mechanism?",
+                  "rating": "B",
+                  "summary": "Yes."
+                },
+                {
+                  "level": "family",
+                  "id": "p4.bb2",
+                  "label": "AF #2: Required Foundation Quality",
+                  "rating": "B",
+                  "summary": "Automation moat defensible: 340+ patents in precision robotics, 3-5Y customer certification cycles creating switching costs, 20% recurring service revenue."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb2.tc1",
+                  "label": "TC: Supportive Industry Structure",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc1.a1",
+                  "label": "A: Concentrated existing market structure",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a1.q1",
+                  "label": "Q: This company #1 (or #2)?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a1.q2",
+                  "label": "Q: Top 5 > 30% share?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a1.q3",
+                  "label": "Q: Steep market share distribution curve? (Top 5 companies 5x share of #6-10, etc.)",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc1.a2",
+                  "label": "A: Concentrating gravitational pull",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a2.q1",
+                  "label": "Q: Stability of share over time?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a2.q2",
+                  "label": "Q: New entrants' share?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a2.q3",
+                  "label": "Q: Share consolidates towards largest competitors over time?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a2.q4",
+                  "label": "Q: Share consolidates to most advantaged competitors?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc1.a3",
+                  "label": "A: Benign competitor attitudes + stability thereof",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a3.q1",
+                  "label": "Q: Benign-ness?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a3.q2",
+                  "label": "Q: MOL instability or stable attitude?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a3.q3",
+                  "label": "Q: Shark attack if weakness sensed?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a3.q4",
+                  "label": "Q: Volume / ROCE prioritisation? (Price down when volume down?)",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc1.a4",
+                  "label": "A: Competitiveness trends",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb2.tc2",
+                  "label": "TC: Supportive Value Chain Dynamics",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc2.a1",
+                  "label": "A: Demand side",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a1.q1",
+                  "label": "Q: Customer demand?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a1.q2",
+                  "label": "Q: Route to market / intermediaries?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc2.a2",
+                  "label": "A: Competition",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a2.q1",
+                  "label": "Q: Existing competition?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a2.q2",
+                  "label": "Q: Adjacencies entering?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a2.q3",
+                  "label": "Q: Vanilla new entrants?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a2.q4",
+                  "label": "Q: Orthogonal / innovative new entrants?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a2.q5",
+                  "label": "Q: Substitutes / alternatives?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc2.a3",
+                  "label": "A: Disruption forces",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc2.a4",
+                  "label": "A: Political / regulatory",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a4.q1",
+                  "label": "Q: Regulators?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a4.q2",
+                  "label": "Q: Political actors?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc2.a5",
+                  "label": "A: Supplier side",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb2.tc3",
+                  "label": "TC: Advantaged Business / Widening Moats (SRCA)",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc3.a1",
+                  "label": "A: Strong operational/competitive advantages (MOAT)",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a1.q1",
+                  "label": "Q: Customer-related moats?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a1.q2",
+                  "label": "Q: Production-related moats?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a1.q3",
+                  "label": "Q: Scale advantage moats?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a1.q4",
+                  "label": "Q: Regulatory/political moats?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a1.q5",
+                  "label": "Q: Culture/knowledge moats?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a1.q6",
+                  "label": "Q: High relative scale (to competitors, other actors; revenue, FTE, etc.)?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a1.q7",
+                  "label": "Q: Large realistic TAM (to facilitate 12-20% p.a. growth)?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc3.a2",
+                  "label": "A: Strong operational outputs (OPERATE)",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a2.q1",
+                  "label": "Q: High SCU?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a2.q2",
+                  "label": "Q: Leading or non-inferior RSCU?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a2.q3",
+                  "label": "Q: High, utilised pricing power (2% nominal), with de minimis erosion in RSCU?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a2.q4",
+                  "label": "Q: Scale economies shared?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc3.a3",
+                  "label": "A: Strong financial outputs (GENERATE)",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a3.q1",
+                  "label": "Q: 12-20% EPS growth? And revenue growth?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a3.q2",
+                  "label": "Q: Immediate scope to deploy 20%+ of sales in capital/opex p.a. at high RONIC for 3-5 years?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a3.q3",
+                  "label": "Q: High post-tax RONIC (25-30%+)?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a3.q4",
+                  "label": "Q: High NI to FCF conversion (80%)? (NWC, etc.)",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a3.q5",
+                  "label": "Q: Post-tax ROCE of 15%+?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a3.q6",
+                  "label": "Q: Post-tax ROTC of 30%+?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a3.q7",
+                  "label": "Q: High gross margins?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a3.q8",
+                  "label": "Q: Solid EBIT margins? (20% is solid, 25%+ is great)",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a3.q9",
+                  "label": "Q: Genuine fixed cost operating leverage?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a3.q10",
+                  "label": "Q: Low tax rate (below 30%) or other non-obvious EPS leakage?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc3.a4",
+                  "label": "A: Gets stronger as it gets bigger / time passes (Gravitational pull)",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a4.q1",
+                  "label": "Q: Gravitational/mechanical forces drive mechanical improvement of SRCA versus peers?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a4.q2",
+                  "label": "Q: Gravitational/mechanical forces drive improving financial outputs versus peers?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc3.a5",
+                  "label": "A: Plausible scope for mid-term improvement in financials (SCOPE)",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a5.q1",
+                  "label": "Q: Peer precedents?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a5.q2",
+                  "label": "Q: Big savings/improvements in a few areas?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a5.q3",
+                  "label": "Q: Lots of little savings/improvements in many areas?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb2.tc4",
+                  "label": "TC: Great Operator / Allocator",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc4.a1",
+                  "label": "A: Right direction",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a1.q1",
+                  "label": "Q: Big, big ambition/vision (force; growth as priority, outcompete, innovate, adapt, push)?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a1.q2",
+                  "label": "Q: Great, smart strategy and right, bold strategic priorities; mid-term moat widening + growth as priority?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc4.a2",
+                  "label": "A: Right resources",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a2.q1",
+                  "label": "Q: Great CEO (measured via action, not conjecture; enabler, not ossifier)?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a2.q2",
+                  "label": "Q: Hiring well is a top CEO priority + CEO has built a great leadership team?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a2.q3",
+                  "label": "Q: Entire business is well-resourced/well-invested (buffer; ant colony)?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a2.q4",
+                  "label": "Q: Holistic, congruent culture + alignment across total system?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a2.q5",
+                  "label": "Q: Conservative guidance (buffer)?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a2.q6",
+                  "label": "Q: Clear, straightforward and helpful communication, strategy and driver transmission mechanism?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc4.a3",
+                  "label": "A: Right record / action / behaviour / forward movement",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a3.q1",
+                  "label": "Q: High RONIC capital allocation?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a3.q2",
+                  "label": "Q: Acts not just talks (recent record of huge delivery/action, not missing)?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a3.q3",
+                  "label": "Q: Track record of delivery (irrespective of environments)?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a3.q4",
+                  "label": "Q: Outlier standards, driving higher/faster/better + competitor out-execution record?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a3.q5",
+                  "label": "Q: Shareholders first > management?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a3.q6",
+                  "label": "Q: Dynamic repurchaser of SBBs + enlightened capital allocator, not just operator/generator?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a3.q7",
+                  "label": "Q: Prudent governance/scaffolding (evidence-based)?",
+                  "rating": "—",
+                  "summary": "Not yet assessed."
+                },
+                {
+                  "level": "family",
+                  "id": "p4.bb3",
+                  "label": "AF #3: Fit for Market Paradigm",
+                  "rating": "B",
+                  "summary": "Exit discipline is clear."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb3.tc1",
+                  "label": "TC: Exit discipline when negatives manifest?",
+                  "rating": "B",
+                  "summary": "Clear exit discipline."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb3.tc1.q1",
+                  "label": "Q1: Market cycle — downturn?",
+                  "rating": "B",
+                  "summary": "Exit trigger identified: if IP (Industrial Production) drops -5%+ YoY and order intake growth turns negative, automation cycle has peaked."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb3.tc1.q2",
+                  "label": "Q2: AI disruption?",
+                  "rating": "B",
+                  "summary": "Exit trigger identified: if AI systems replace precision robotics functionality, moat erodes."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb3.tc1.q3",
+                  "label": "Q3: Input cost inflation (Iran)?",
+                  "rating": "B",
+                  "summary": "Low risk."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb3.tc1.q4",
+                  "label": "Q4: No overlap with 10x general invalidating ACHs?",
+                  "rating": "B",
+                  "summary": "No overlap identified."
+                },
+                {
+                  "level": "family",
+                  "id": "p4.bb4",
+                  "label": "AF #4: Strenuously Seek-to-Avoid Constraints",
+                  "rating": "—",
+                  "summary": "Not assessed at Triaging depth."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb4.tc1",
+                  "label": "TC: No fundamental SHMLP risks?",
+                  "rating": "—",
+                  "summary": "Not assessed at Triaging."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb4.tc1.q1",
+                  "label": "Q: What is downside to trough SP?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb4.tc1.q2",
+                  "label": "Q: Can thesis survive a -30% drawdown?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb4.tc1.q3",
+                  "label": "Q: What invalidates at trough?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb4.tc2",
+                  "label": "TC: No wide skew in outcomes?",
+                  "rating": "—",
+                  "summary": "Not assessed at Triaging."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb4.tc2.q1",
+                  "label": "Q: Range of bull vs bear case EPS >50%?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb4.tc2.q2",
+                  "label": "Q: Is case predictability high or low?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb4.tc2.q3",
+                  "label": "Q: How many independent variables drive the outcome?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb4.tc3",
+                  "label": "TC: No large downside to trough multiple?",
+                  "rating": "—",
+                  "summary": "Not assessed at Triaging."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb4.tc3.q1",
+                  "label": "Q: What is trough EV/EBIT for this sector?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb4.tc3.q2",
+                  "label": "Q: How far is current multiple from trough?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb4.tc3.q3",
+                  "label": "Q: What drove the last trough?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb4.tc4",
+                  "label": "TC: Multiple more company than industry?",
+                  "rating": "—",
+                  "summary": "Not assessed at Triaging."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb4.tc4.q1",
+                  "label": "Q: Correlation of stock multiple to sector multiple?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb4.tc4.q2",
+                  "label": "Q: What % of SP move is company vs. sector driven?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb4.tc4.q3",
+                  "label": "Q: Does valuation hold if sector de-rates?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "family",
+                  "id": "p4.bb5",
+                  "label": "AF #5: Small Size Constraints",
+                  "rating": "—",
+                  "summary": "Not applicable at Triaging depth."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb5.tc1",
+                  "label": "TC: Sufficient market cap?",
+                  "rating": "—",
+                  "summary": "Not applicable -- EUR 8.4bn market cap well above threshold."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb5.tc1.q1",
+                  "label": "Q: $10m ADV minimum met?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb5.tc1.q2",
+                  "label": "Q: $1.5bn market cap minimum met?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb5.tc1.q3",
+                  "label": "Q: Can position be built without moving the price?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb5.tc2",
+                  "label": "TC: Sufficient liquidity?",
+                  "rating": "—",
+                  "summary": "Not applicable at current market cap."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb5.tc2.q1",
+                  "label": "Q: Bid-ask spread acceptable (<50bps)?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb5.tc2.q2",
+                  "label": "Q: Average daily volume supports 5-day entry/exit?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb5.tc2.q3",
+                  "label": "Q: Float sufficient (>50% free float)?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "family",
+                  "id": "p4.bb6",
+                  "label": "AF #6: Invalidating Constraints",
+                  "rating": "—",
+                  "summary": "Not assessed at Triaging depth."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb6.tc1",
+                  "label": "TC: No slowing of core engine?",
+                  "rating": "—",
+                  "summary": "Not assessed at Triaging."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc1.q1",
+                  "label": "Q: Is core business momentum intact vs DNA?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc1.q2",
+                  "label": "Q: Any degradation in unit economics?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb6.tc2",
+                  "label": "TC: No mediocre CEO/weird choices?",
+                  "rating": "—",
+                  "summary": "Not assessed at Triaging."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc2.q1",
+                  "label": "Q: Any questionable strategic decisions in last 2Y?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc2.q2",
+                  "label": "Q: CEO track record consistent?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb6.tc3",
+                  "label": "TC: No big 'Hmmms'?",
+                  "rating": "—",
+                  "summary": "Not assessed at Triaging."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc3.q1",
+                  "label": "Q: Any gut-level discomfort after deep read?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc3.q2",
+                  "label": "Q: Anything that 'doesn't add up'?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb6.tc4",
+                  "label": "TC: No red flags (2+ Fs)?",
+                  "rating": "—",
+                  "summary": "Not assessed at Triaging."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc4.q1",
+                  "label": "Q: Count of F-rated attributes across all pillars?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc4.q2",
+                  "label": "Q: Are any F-ratings in critical areas?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb6.tc5",
+                  "label": "TC: No mediocrity (8+ Ds)?",
+                  "rating": "—",
+                  "summary": "Not assessed at Triaging."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc5.q1",
+                  "label": "Q: Count of D-rated attributes?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc5.q2",
+                  "label": "Q: Pattern of weakness or isolated?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb6.tc6",
+                  "label": "TC: No recent earnings cuts?",
+                  "rating": "—",
+                  "summary": "Not assessed at Triaging."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc6.q1",
+                  "label": "Q: Any SS estimate cuts in L3M (unless CfC-related)?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc6.q2",
+                  "label": "Q: Direction of consensus revisions?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb6.tc7",
+                  "label": "TC: No peer problems?",
+                  "rating": "—",
+                  "summary": "Not assessed at Triaging."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc7.q1",
+                  "label": "Q: Are sector peers showing earnings deterioration?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc7.q2",
+                  "label": "Q: Any peer profit warnings in L6M?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb6.tc8",
+                  "label": "TC: No negative lessons overlap?",
+                  "rating": "—",
+                  "summary": "Not assessed at Triaging."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc8.q1",
+                  "label": "Q: Overlap with any past losing patterns?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc8.q2",
+                  "label": "Q: Similarity to previously failed investments?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb6.tc9",
+                  "label": "TC: No false friend setup?",
+                  "rating": "—",
+                  "summary": "Not assessed at Triaging."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc9.q1",
+                  "label": "Q: Does the case fit any unacceptable setup profile?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc9.q2",
+                  "label": "Q: Is the apparent quality actually a complexity trap?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "family",
+                  "id": "p4.bb7",
+                  "label": "AF #7: Past Trend / Momentum Constraints",
+                  "rating": "—",
+                  "summary": "Cross-reference only — do not assess independently."
+                },
+                {
+                  "level": "family",
+                  "id": "p4.bb8",
+                  "label": "AF #8: Nice-to-Have Attributes",
+                  "rating": "—",
+                  "summary": "Not assessed at Triaging depth."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb8.tc1",
+                  "label": "TC: Additional upside?",
+                  "rating": "—",
+                  "summary": "Not assessed at Triaging."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb8.tc1.q1",
+                  "label": "Q: Cash return yield >3%?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb8.tc1.q2",
+                  "label": "Q: Progressive dividend policy?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb8.tc1.q3",
+                  "label": "Q: Share buyback programme active?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb8.tc2",
+                  "label": "TC: Self-righting behaviour ATM?",
+                  "rating": "—",
+                  "summary": "Not assessed at Triaging."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb8.tc2.q1",
+                  "label": "Q: Management has significant skin in game (>5% ownership)?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb8.tc2.q2",
+                  "label": "Q: Company featured in quality screens (ROIC >15%, margin expansion)?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb8.tc2.q3",
+                  "label": "Q: Institutional ownership increasing?",
+                  "rating": "—",
+                  "summary": "Not yet assessed at Triaging depth."
+                },
+                {
+                  "level": "pillar",
+                  "id": "p5",
+                  "label": "P5: Sell-Side Momentum",
+                  "rating": "A",
+                  "summary": "All 15 consensus metrics positive — score 15/15 = A."
+                },
+                {
+                  "level": "metric",
+                  "id": "p5.eps_change",
+                  "label": "EPS revisions",
+                  "rating": "A",
+                  "summary": "L1M +3.2% · L3M +8.5% · L6M +12.1%"
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.eps_change.l1m",
+                  "label": "L1M",
+                  "rating": "A",
+                  "summary": "+3.2%"
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.eps_change.l3m",
+                  "label": "L3M",
+                  "rating": "A",
+                  "summary": "+8.5%"
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.eps_change.l6m",
+                  "label": "L6M",
+                  "rating": "A",
+                  "summary": "+12.1%"
+                },
+                {
+                  "level": "metric",
+                  "id": "p5.ebitda_change",
+                  "label": "EBITDA revisions",
+                  "rating": "A",
+                  "summary": "L1M +2.8% · L3M +7.2% · L6M +10.5%"
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.ebitda_change.l1m",
+                  "label": "L1M",
+                  "rating": "A",
+                  "summary": "+2.8%"
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.ebitda_change.l3m",
+                  "label": "L3M",
+                  "rating": "A",
+                  "summary": "+7.2%"
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.ebitda_change.l6m",
+                  "label": "L6M",
+                  "rating": "A",
+                  "summary": "+10.5%"
+                },
+                {
+                  "level": "metric",
+                  "id": "p5.revenue_change",
+                  "label": "Revenue revisions",
+                  "rating": "A",
+                  "summary": "L1M +1.5% · L3M +4.3% · L6M +6.8%"
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.revenue_change.l1m",
+                  "label": "L1M",
+                  "rating": "A",
+                  "summary": "+1.5%"
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.revenue_change.l3m",
+                  "label": "L3M",
+                  "rating": "A",
+                  "summary": "+4.3%"
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.revenue_change.l6m",
+                  "label": "L6M",
+                  "rating": "A",
+                  "summary": "+6.8%"
+                },
+                {
+                  "level": "metric",
+                  "id": "p5.price_target_change",
+                  "label": "Price target revisions",
+                  "rating": "A",
+                  "summary": "L1M +5.1% · L3M +11.2% · L6M +15.3%"
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.price_target_change.l1m",
+                  "label": "L1M",
+                  "rating": "A",
+                  "summary": "+5.1%"
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.price_target_change.l3m",
+                  "label": "L3M",
+                  "rating": "A",
+                  "summary": "+11.2%"
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.price_target_change.l6m",
+                  "label": "L6M",
+                  "rating": "A",
+                  "summary": "+15.3%"
+                },
+                {
+                  "level": "metric",
+                  "id": "p5.pct_buy_change",
+                  "label": "% Buy change",
+                  "rating": "A",
+                  "summary": "L1M +2.0% · L3M +5.0% · L6M +8.0%"
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.pct_buy_change.l1m",
+                  "label": "L1M",
+                  "rating": "A",
+                  "summary": "+2.0%"
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.pct_buy_change.l3m",
+                  "label": "L3M",
+                  "rating": "A",
+                  "summary": "+5.0%"
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.pct_buy_change.l6m",
+                  "label": "L6M",
+                  "rating": "A",
+                  "summary": "+8.0%"
+                },
+                {
+                  "level": "pillar",
+                  "id": "p6",
+                  "label": "P6: Valuation",
+                  "rating": "B",
+                  "summary": "14x 2YF P/E vs 18-22x automation peer group (Fanuc, ABB Robotics, Rockwell)."
+                },
+                {
+                  "level": "valuation",
+                  "id": "p6.fwd_pe",
+                  "label": "2YF P/E — absolute",
+                  "rating": "B",
+                  "summary": "14x (SP EUR 48)"
+                },
+                {
+                  "level": "valuation",
+                  "id": "p6.hist_range",
+                  "label": "2YF P/E vs own history",
+                  "rating": "B",
+                  "summary": "10x–24x range · ~30th pctile"
+                },
+                {
+                  "level": "valuation",
+                  "id": "p6.peer",
+                  "label": "2YF P/E vs peers",
+                  "rating": "B",
+                  "summary": "Peer average 18-22x"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "C.II.1",
+          "title": "Technical Strength (P1)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bluf",
+              "text": "P1 rated B: Stage 2 advance intact; 7/8 Minervini criteria pass; RS leadership confirmed across breadth and timeframe; residual caveats on late-entry, crowding and one consistency miss."
+            },
+            {
+              "type": "pillar_block",
+              "pillar_id": "p1",
+              "label": "Technical Momentum",
+              "rating": "B",
+              "blocks": [
+                {
+                  "type": "bullet_group",
+                  "items": [
+                    {
+                      "iaja": "J",
+                      "rating": "B",
+                      "text": "Minervini dimensions — price vs 200D/150D/50D MA — Price stacks above all three MAs — structural long-regime signal confirmed at Triaging.",
+                      "sub": [
+                        {
+                          "iaja": "I",
+                          "text": "Last EUR 61.20 vs 200D 48.95 (+25%), 150D 52.08 (+18%), 50D 56.41 (+8%) — positive separation at every tier."
+                        },
+                        {
+                          "iaja": "A",
+                          "text": "(i) Distance from 50D is healthy for continuation; (ii) not extended, not compressed; (iii) spread consistent with mid-trend position."
+                        },
+                        {
+                          "iaja": "I",
+                          "rating": "—",
+                          "text": "50D crossed 150D 30 trading days ago; classic Minervini volume confirmation."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "J",
+                      "rating": "B",
+                      "text": "Minervini dimensions — 200D slope positive but 150D/200D not consistent for full L12M — the only miss in the 8-point.",
+                      "sub": [
+                        {
+                          "iaja": "I",
+                          "text": "200D 1M ago EUR 48.22 → today 48.95 — a firm positive slope, +1.5% over 30 sessions."
+                        },
+                        {
+                          "iaja": "A",
+                          "text": "(i) Only 10 of 12 months saw 150D > 200D; (ii) the miss concentrated in the Q4-25 correction; (iii) no other window shows the same pattern."
+                        },
+                        {
+                          "iaja": "I",
+                          "rating": "—",
+                          "text": "150D currently flattening; turn-up watch over next 4-6 weeks."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "J",
+                      "rating": "B",
+                      "text": "Minervini dimensions — range positioning (52W high/low, +30% / −25%) — Well in the top quartile of the 52W range with a comfortable buffer off the 52W low.",
+                      "sub": [
+                        {
+                          "iaja": "I",
+                          "text": "Price −3.2% below 52W high (EUR 63.20) and +79% above 52W low (EUR 34.10)."
+                        },
+                        {
+                          "iaja": "A",
+                          "text": "(i) Setup is a high-tight handle pattern; (ii) breakout was on +2.1x average volume; (iii) base duration 6 weeks — textbook Minervini range."
+                        },
+                        {
+                          "iaja": "A",
+                          "rating": "B",
+                          "text": "+30% from 52W low; -8% from 52W high — Stage 2 pullback territory."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "J",
+                      "rating": "A",
+                      "text": "Relative strength — absolute and peer-relative — RS strongly positive across all timeframes — outperforming the STOXX 600 Industrials by 31ppts YTD.",
+                      "sub": [
+                        {
+                          "iaja": "I",
+                          "text": "+47% YTD vs STOXX 600 Industrials +16%; +18% L3M vs Fanuc/ABB Robotics/Rockwell basket +5%."
+                        },
+                        {
+                          "iaja": "A",
+                          "text": "(i) Not a single-name anomaly — NVTK leads the automation cohort; (ii) institutional flow (13F data) reinforces."
+                        },
+                        {
+                          "iaja": "I",
+                          "rating": "—",
+                          "text": "RS percentile vs energy peer set: 78th, top quartile."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "J",
+                      "rating": "A",
+                      "text": "Healthy-pullback tests in current run — Three pullbacks to 21D EMA since the breakout all held — a clean institutional-accumulation signature.",
+                      "sub": [
+                        {
+                          "iaja": "I",
+                          "text": "Volume profile compressed on each pullback, expanded on each bounce — textbook."
+                        },
+                        {
+                          "iaja": "I",
+                          "text": "(i) No single pullback exceeded 6%; (ii) duration of each was 3-5 sessions; (iii) each closed in the upper half of the intraday range."
+                        },
+                        {
+                          "iaja": "A",
+                          "rating": "A",
+                          "text": "All three tests held; volume dry-up on each — constructive setup."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "J",
+                      "rating": "B",
+                      "text": "Months qualifying in L12M — 9 of 12 months qualify under Stage 2 criteria — consistent but not perfect.",
+                      "sub": [
+                        {
+                          "iaja": "I",
+                          "text": "Misses clustered in Q4-25 — same window as the 150D consistency miss, consistent single-shock narrative."
+                        },
+                        {
+                          "iaja": "A",
+                          "text": "(i) No evidence of repeated failure pattern; (ii) each miss had a clear macro trigger (ECB guidance shift, Iran flash event, December liquidity window)."
+                        },
+                        {
+                          "iaja": "I",
+                          "rating": "—",
+                          "text": "Three failing months were Mar-May 25 during the Stage 1 reset."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "A",
+                      "rating": "B",
+                      "text": "Plus 4 further dimensions covered in C.I.1 ratings table — full Minervini scoring grid attached."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "summary",
+              "text": "NVTK technicals support entry with discipline — Stage 2 structure, clean volume, stacked MAs, institutional flow confirmation. The gap to A is the RS Rank extension (62 vs 70) and the 150D consistency miss; both are resolvable, not structural. Sizing should respect late-entry risk; a staged entry with a 50D hard stop at EUR 42.30 codifies the discipline."
+            }
+          ]
+        },
+        {
+          "id": "C.II.2",
+          "title": "Fundamental Investment Case (P3+P4)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bluf",
+              "text": "P3+P4 at Triaging — full canonical CQ -> RA -> TC structure. PoC content (placeholder text, real signpost coverage)."
+            },
+            {
+              "type": "pillar_block",
+              "pillar_id": "p3",
+              "label": "Fundamental Change",
+              "rating": "B",
+              "blocks": [
+                {
+                  "type": "bluf",
+                  "text": "P3 (Fundamental Change) at Triaging — placeholder."
+                },
+                {
+                  "type": "family_block",
+                  "family_id": "IC#1",
+                  "label": "IC#1: Required Case OUTPUTS",
+                  "rating": "B",
+                  "blocks": [
+                    {
+                      "type": "bluf",
+                      "text": "Required Case OUTPUTS synthesis at Triaging: Ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore __et dolore__ magna aliqua ut enim."
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "__ipsum dolor__ sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "family",
+                            "ref": "IC#1",
+                            "label": "Required Case OUTPUTS",
+                            "style": "prefix"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "Sed do eiusmod __tempor incididunt ut__ labore et dolore magna aliqua ut enim ad.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#1.CQ1",
+                            "label": "Three-year, mid-term, triple ratchet step-up?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Sed __do eiusmod tempor__ incididunt ut labore et dolore magna aliqua ut.",
+                              "iaja": "I"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Minim veniam quis nostrud exercitation ullamco laboris nisi ut __aliquip ex ea__ commodo consequat.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#1.CQ2",
+                            "label": "12-20% EPS growth p.a.?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Minim veniam quis nostrud exercitation ullamco laboris __nisi ut aliquip__ ex ea.",
+                              "iaja": "I"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Duis aute irure dolor in __reprehenderit in voluptate__ velit esse cillum dolore eu fugiat.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#1.CQ3",
+                            "label": "Margin/growth step-up?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Duis aute irure dolor in __reprehenderit in voluptate__ velit esse cillum dolore.",
+                              "iaja": "I"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "Nulla __pariatur excepteur sint__ occaecat cupidatat non proident sunt in culpa qui officia deserunt.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#1.CQ4",
+                            "label": "Fit with required setups?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Nulla pariatur excepteur __sint occaecat cupidatat__ non proident sunt in culpa qui.",
+                              "iaja": "I"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Mollit anim id est laborum Lorem ipsum __dolor sit amet__ consectetur adipiscing elit sed.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#1.CQ5",
+                            "label": "Post CfC clearing / SP turn?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Mollit __anim id est__ laborum Lorem ipsum dolor sit amet consectetur adipiscing.",
+                              "iaja": "I"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Do eiusmod tempor __incididunt ut labore__ et dolore magna aliqua ut enim ad minim.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#1.CQ6",
+                            "label": "Less than 6M after turn?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Do eiusmod tempor incididunt ut labore et __dolore magna aliqua__ ut enim.",
+                              "iaja": "I"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "Veniam quis nostrud exercitation ullamco laboris nisi ut aliquip __ex ea commodo__ consequat duis.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#1.CQ7",
+                            "label": "Helpful IR re. operating momentum?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Veniam quis nostrud exercitation ullamco __laboris nisi ut__ aliquip ex ea commodo.",
+                              "iaja": "I"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Aute irure dolor in reprehenderit __in voluptate velit__ esse cillum dolore eu fugiat nulla.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#1.CQ8",
+                            "label": "Trackable key leading indicators?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Aute irure dolor __in reprehenderit in__ voluptate velit esse cillum dolore eu.",
+                              "iaja": "I"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "Pariatur __excepteur sint occaecat__ cupidatat non proident sunt in culpa qui officia deserunt mollit.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#1.CQ9",
+                            "label": "Modal case 18M EPS > guidance > SS?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Pariatur __excepteur sint occaecat__ cupidatat non proident sunt in culpa qui officia.",
+                              "iaja": "I"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Anim id est laborum Lorem ipsum dolor __sit amet consectetur__ adipiscing elit sed do.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#1.CQ10",
+                            "label": "3:1 SS/G EPS raise/lower skew NFY?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Anim id est laborum Lorem ipsum dolor __sit amet consectetur__ adipiscing elit.",
+                              "iaja": "I"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "Eiusmod tempor incididunt __ut labore et__ dolore magna aliqua ut enim ad minim veniam.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#1.CQ11",
+                            "label": "Multiple more company that exogenously driven?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Eiusmod tempor incididunt ut labore __et dolore magna__ aliqua ut enim ad.",
+                              "iaja": "I"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex __ea commodo consequat__ duis aute.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#1.CQ12",
+                            "label": "More than 20% 3Y TSR?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Quis nostrud exercitation __ullamco laboris nisi__ ut aliquip ex ea commodo consequat.",
+                              "iaja": "I"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "family_block",
+                  "family_id": "IC#2",
+                  "label": "IC#2: Required Case INPUTS",
+                  "rating": "A",
+                  "blocks": [
+                    {
+                      "type": "bluf",
+                      "text": "Required Case INPUTS synthesis at Triaging: Enim ad minim veniam quis nostrud exercitation ullamco __laboris nisi__ ut aliquip ex ea commodo consequat duis aute irure dolor."
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "__enim ad__ minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.",
+                          "iaja": "J",
+                          "rating": "A",
+                          "signpost": {
+                            "level": "family",
+                            "ref": "IC#2",
+                            "label": "Required Case INPUTS",
+                            "style": "prefix"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "Ullamco laboris nisi __ut aliquip ex__ ea commodo consequat duis aute irure dolor in.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#2.CQ1",
+                            "label": "External change forces / tailwinds?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Ullamco laboris nisi __ut aliquip ex__ ea commodo consequat duis aute irure.",
+                              "iaja": "I"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Reprehenderit in voluptate velit esse cillum dolore eu fugiat __nulla pariatur excepteur__ sint occaecat.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#2.CQ2",
+                            "label": "Internal change forces?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Reprehenderit __in voluptate velit__ esse cillum dolore eu fugiat nulla pariatur excepteur.",
+                              "iaja": "I"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "Cupidatat non proident sunt in __culpa qui officia__ deserunt mollit anim id est laborum.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#2.CQ3",
+                            "label": "Absence of external headwinds?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Cupidatat non proident sunt in culpa qui __officia deserunt mollit__ anim id.",
+                              "iaja": "I"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Lorem __ipsum dolor sit__ amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#2.CQ4",
+                            "label": "(Well-invested base?)",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Lorem ipsum dolor sit amet __consectetur adipiscing elit__ sed do eiusmod tempor.",
+                              "iaja": "I"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Labore et dolore magna aliqua ut enim __ad minim veniam__ quis nostrud exercitation ullamco.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#2.CQ5",
+                            "label": "Thesis congruency with past/present?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Labore et dolore __magna aliqua ut__ enim ad minim veniam quis nostrud.",
+                              "iaja": "I"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Laboris nisi ut __aliquip ex ea__ commodo consequat duis aute irure dolor in reprehenderit.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#2.CQ6",
+                            "label": "Large CfC/mispricing?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Laboris __nisi ut aliquip__ ex ea commodo consequat duis aute irure dolor.",
+                              "iaja": "I"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "In voluptate velit esse cillum dolore eu fugiat nulla __pariatur excepteur sint__ occaecat cupidatat.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#2.CQ7",
+                            "label": "Low trading multiple?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "In voluptate velit esse cillum dolore eu __fugiat nulla pariatur__ excepteur sint.",
+                              "iaja": "I"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "family_block",
+                  "family_id": "IC#3",
+                  "label": "IC#3: Required Case SETUPS",
+                  "rating": "B",
+                  "blocks": [
+                    {
+                      "type": "bluf",
+                      "text": "Required Case SETUPS synthesis at Triaging: __in reprehenderit__ in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt in."
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "__in reprehenderit__ in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "family",
+                            "ref": "IC#3",
+                            "label": "Required Case SETUPS",
+                            "style": "prefix"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "Dolore eu fugiat __nulla pariatur excepteur__ sint occaecat cupidatat non proident sunt in culpa.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ1",
+                            "label": "Is EPS consensus >10% below our estimate?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Dolore eu fugiat __nulla pariatur excepteur__ sint occaecat cupidatat non proident sunt.",
+                              "iaja": "I"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Qui officia deserunt mollit anim id est laborum Lorem __ipsum dolor sit__ amet consectetur.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ2",
+                            "label": "What specific line items are mis-modelled?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Qui __officia deserunt mollit__ anim id est laborum Lorem ipsum dolor sit.",
+                              "iaja": "I"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Adipiscing elit sed do eiusmod __tempor incididunt ut__ labore et dolore magna aliqua ut.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ3",
+                            "label": "Is the modelling gap structural or one-off?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Adipiscing elit sed do eiusmod tempor incididunt __ut labore et__ dolore magna.",
+                              "iaja": "I"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "Enim __ad minim veniam__ quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ4",
+                            "label": "Is there a market-wide demand explosion?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Enim ad minim veniam quis __nostrud exercitation ullamco__ laboris nisi ut aliquip.",
+                              "iaja": "I"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Commodo consequat duis aute irure dolor in __reprehenderit in voluptate__ velit esse cillum dolore.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ5",
+                            "label": "Does the company hold a dominant competitive position?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Commodo consequat duis __aute irure dolor__ in reprehenderit in voluptate velit esse.",
+                              "iaja": "I"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Eu fugiat nulla __pariatur excepteur sint__ occaecat cupidatat non proident sunt in culpa qui.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ6",
+                            "label": "Is the business model one-to-many scalable?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Eu __fugiat nulla pariatur__ excepteur sint occaecat cupidatat non proident sunt in.",
+                              "iaja": "I"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Officia deserunt mollit anim id est laborum Lorem ipsum __dolor sit amet__ consectetur adipiscing.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ7",
+                            "label": "Is the market an oligopoly (structure AND behaviour)?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Officia deserunt mollit anim id est laborum __Lorem ipsum dolor__ sit amet.",
+                              "iaja": "I"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Elit sed do eiusmod tempor __incididunt ut labore__ et dolore magna aliqua ut enim.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ8",
+                            "label": "Is there fixed cost leverage for margin expansion?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Elit sed do eiusmod tempor __incididunt ut labore__ et dolore magna aliqua.",
+                              "iaja": "I"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "Ad __minim veniam quis__ nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ9",
+                            "label": "Is management credible on execution?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Ad minim veniam __quis nostrud exercitation__ ullamco laboris nisi ut aliquip ex.",
+                              "iaja": "I"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Consequat duis aute irure dolor in reprehenderit __in voluptate velit__ esse cillum dolore eu.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ10",
+                            "label": "What is the specific internal change programme?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Consequat __duis aute irure__ dolor in reprehenderit in voluptate velit esse cillum.",
+                              "iaja": "I"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Fugiat nulla pariatur __excepteur sint occaecat__ cupidatat non proident sunt in culpa qui officia.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ11",
+                            "label": "What is the track record of delivery so far?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Fugiat nulla pariatur excepteur sint occaecat cupidatat __non proident sunt__ in culpa.",
+                              "iaja": "I"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "Deserunt mollit anim id est laborum Lorem ipsum dolor __sit amet consectetur__ adipiscing elit.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ12",
+                            "label": "Is the negative sentiment idiosyncratic or sector-wide?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Deserunt mollit anim id est __laborum Lorem ipsum__ dolor sit amet consectetur.",
+                              "iaja": "I"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Sed do eiusmod tempor incididunt __ut labore et__ dolore magna aliqua ut enim ad.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ13",
+                            "label": "Is the underlying business quality intact despite sentiment?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Sed do eiusmod __tempor incididunt ut__ labore et dolore magna aliqua ut.",
+                              "iaja": "I"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Minim __veniam quis nostrud__ exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ14",
+                            "label": "What specific catalyst clears the overhang?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Minim __veniam quis nostrud__ exercitation ullamco laboris nisi ut aliquip ex ea.",
+                              "iaja": "I"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Duis aute irure dolor in reprehenderit in __voluptate velit esse__ cillum dolore eu fugiat.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ15",
+                            "label": "Is there a specific clearing event identified?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Duis aute irure dolor in reprehenderit in __voluptate velit esse__ cillum dolore.",
+                              "iaja": "I"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Nulla pariatur excepteur __sint occaecat cupidatat__ non proident sunt in culpa qui officia deserunt.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ16",
+                            "label": "Is business quality sufficient to justify rebound post-clear",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Nulla pariatur excepteur sint occaecat __cupidatat non proident__ sunt in culpa qui.",
+                              "iaja": "I"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "Mollit anim id est laborum Lorem ipsum dolor sit __amet consectetur adipiscing__ elit sed.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ17",
+                            "label": "Is the headwind genuinely temporary?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Mollit anim id __est laborum Lorem__ ipsum dolor sit amet consectetur adipiscing.",
+                              "iaja": "I"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Do eiusmod tempor incididunt ut __labore et dolore__ magna aliqua ut enim ad minim.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ18",
+                            "label": "What is the normalised earnings level to revert to?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Do __eiusmod tempor incididunt__ ut labore et dolore magna aliqua ut enim.",
+                              "iaja": "I"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Veniam __quis nostrud exercitation__ ullamco laboris nisi ut aliquip ex ea commodo consequat duis.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ19",
+                            "label": "Is the quality of the franchise intact through the headwind?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Veniam quis nostrud exercitation ullamco laboris nisi __ut aliquip ex__ ea commodo.",
+                              "iaja": "I"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Aute irure dolor in reprehenderit in voluptate __velit esse cillum__ dolore eu fugiat nulla.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ20",
+                            "label": "Are earnings genuinely at trough?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Aute irure dolor in reprehenderit __in voluptate velit__ esse cillum dolore eu.",
+                              "iaja": "I"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Pariatur excepteur sint __occaecat cupidatat non__ proident sunt in culpa qui officia deserunt mollit.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ21",
+                            "label": "Is business quality sufficient to hold through the full cycl",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Pariatur excepteur sint __occaecat cupidatat non__ proident sunt in culpa qui officia.",
+                              "iaja": "I"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Anim id est laborum Lorem ipsum dolor sit amet __consectetur adipiscing elit__ sed do.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ22",
+                            "label": "What leading indicators confirm the cyclical turn?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Anim __id est laborum__ Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+                              "iaja": "I"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "Eiusmod tempor incididunt ut labore __et dolore magna__ aliqua ut enim ad minim veniam.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ23",
+                            "label": "Does the case avoid any of the unacceptable setup patterns?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Eiusmod tempor incididunt ut labore et dolore __magna aliqua ut__ enim ad.",
+                              "iaja": "I"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "text": "Quis __nostrud exercitation ullamco__ laboris nisi ut aliquip ex ea commodo consequat duis aute.",
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "CQ",
+                            "ref": "IC#3.CQ24",
+                            "label": "Does the case avoid any of the false friend setup patterns?",
+                            "style": "prefix"
+                          },
+                          "sub": [
+                            {
+                              "text": "Quis nostrud exercitation ullamco laboris __nisi ut aliquip__ ex ea commodo consequat.",
+                              "iaja": "I"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "summary",
+              "text": "PoC summary at Triaging: structure mirrors canonical pillar tree; rated tiers and signpost coverage demonstrate the target shape."
+            }
+          ]
+        },
+        {
+          "id": "C.II.3",
+          "title": "Fit for Market Paradigm (P2)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bluf",
+              "text": "P2 remains unrated at Triaging: Iran risk-off and cyclical read sit over genuine AI-infrastructure paradigm fit; ESA must formalise regime-dependent valuation scenarios before position sizes beyond starter."
+            },
+            {
+              "type": "pillar_block",
+              "pillar_id": "p2",
+              "label": "Market Paradigm Fit",
+              "rating": "B",
+              "blocks": [
+                {
+                  "type": "bullet_group",
+                  "items": [
+                    {
+                      "iaja": "J",
+                      "rating": "—",
+                      "text": "Late bull / early bear market context — Iran-conflict-driven risk-off overlay sits over a late-bull/early-bear equity regime — NVTK's capex-exposed profile is vulnerable but carries offsetting structural demand.",
+                      "sub": [
+                        {
+                          "iaja": "I",
+                          "text": "Iran conflict compresses multiples on capex-exposed industrials regardless of micro fundamentals."
+                        },
+                        {
+                          "iaja": "A",
+                          "text": "(i) NVTK 2YF P/E 14x vs 3Y average 16x — partial compression already priced; (ii) peer basket 18-22x."
+                        },
+                        {
+                          "iaja": "A",
+                          "rating": "B",
+                          "text": "Energy and defensive overweight is the dominant equity rotation since Q4-25."
+                        },
+                        {
+                          "iaja": "I",
+                          "rating": "—",
+                          "text": "VIX persistently above 22 since Iran escalation; risk-budget compression hits high-beta first."
+                        },
+                        {
+                          "iaja": "A",
+                          "rating": "B",
+                          "text": "Energy and defensives over staples/discretionary — NVTK sits cleanly on the favoured side."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "J",
+                      "rating": "—",
+                      "text": "AI demand / disruption angle — Automation for AI infrastructure (data-centre cooling, chip fab automation) is a direct NVTK beneficiary — a credible structural paradigm fit.",
+                      "sub": [
+                        {
+                          "iaja": "I",
+                          "text": "~18% of L12M orders linked to data-centre / chip-fab automation projects."
+                        },
+                        {
+                          "iaja": "A",
+                          "text": "(i) Nvidia Blackwell supply chain includes 3 NVTK automation contracts; (ii) TSMC Arizona fab has NVTK cells; (iii) Samsung Texas expansion includes NVTK."
+                        },
+                        {
+                          "iaja": "I",
+                          "rating": "—",
+                          "text": "AI infrastructure power demand growing — supports gas/LNG demand outlook."
+                        },
+                        {
+                          "iaja": "A",
+                          "rating": "B",
+                          "text": "Hyperscaler announced 2030 power demand implies +60% gas-fired generation capacity in the US South."
+                        },
+                        {
+                          "iaja": "I",
+                          "rating": "—",
+                          "text": "EU AI sovereignty push adds incremental data-centre power demand on top of base case."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "J",
+                      "rating": "—",
+                      "text": "Oil / stagflation / rates sensitivity — Backlog 2.1x L12M revenue insulates near-term earnings; multiple compression remains the key cyclical risk.",
+                      "sub": [
+                        {
+                          "iaja": "I",
+                          "text": "Backlog covers 80% of 2026 revenue; earnings sensitivity to 2026 orders is limited."
+                        },
+                        {
+                          "iaja": "A",
+                          "text": "(i) Share price sensitivity to rates is higher than earnings sensitivity; (ii) multiple compression risk dominates the drawdown scenario."
+                        },
+                        {
+                          "iaja": "A",
+                          "rating": "B",
+                          "text": "Hedged 60% of L12M production; partial protection against price collapse."
+                        },
+                        {
+                          "iaja": "I",
+                          "rating": "—",
+                          "text": "Brent above $90 historically widens LNG-to-Brent slope contracts; supportive for realised pricing."
+                        },
+                        {
+                          "iaja": "A",
+                          "rating": "B",
+                          "text": "Stagflation regime tends to compress equity multiples but keeps commodity dollar-revenues firm."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "J",
+                      "rating": "B",
+                      "text": "EU energy security paradigm — diversification from Russian pipeline supports LNG demand floor through 2027.",
+                      "sub": [
+                        {
+                          "iaja": "A",
+                          "rating": "B",
+                          "text": "EU LNG import capacity built out 30% L24M; absorptive demand sustained."
+                        },
+                        {
+                          "iaja": "I",
+                          "rating": "—",
+                          "text": "Sanctioned origin still finds buyers via Asian intermediaries — paradigm fit asymmetric."
+                        },
+                        {
+                          "iaja": "A",
+                          "rating": "B",
+                          "text": "Rotterdam regas capacity utilisation at 78% L12M; storage filled to 92% pre-winter — robust demand signal."
+                        },
+                        {
+                          "iaja": "I",
+                          "rating": "—",
+                          "text": "Sanctions enforcement on shadow fleet inconsistent — paradigm fit holds even under tighter regime."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "J",
+                      "rating": "C",
+                      "text": "Sanctions-regime paradigm — Western secondary sanctions tighten faster than offtaker switching speed; downside-bias risk.",
+                      "sub": [
+                        {
+                          "iaja": "I",
+                          "rating": "—",
+                          "text": "Treasury OFAC adds non-aligned shipping intermediaries to SDN list at increasing cadence."
+                        },
+                        {
+                          "iaja": "A",
+                          "rating": "C",
+                          "text": "Insurance and reinsurance availability for sanctioned-origin LNG narrowing — chokepoint risk material."
+                        },
+                        {
+                          "iaja": "A",
+                          "rating": "B",
+                          "text": "Counterparty negotiation leverage shifting toward Asian buyers; pricing concessions visible in 2025 contracts."
+                        },
+                        {
+                          "iaja": "I",
+                          "rating": "—",
+                          "text": "Watch March 2026 EU sanctions package for incremental tightening on price-cap enforcement."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "summary",
+              "text": "Paradigm fit is the main overlay to close at ESA. AI infrastructure exposure is real and measurable (~18% of orders, growing +87% YoY); backlog provides earnings insulation but not multiple insulation; Iran overlay caps entry conviction until the cyclical read is resolved. Position capped at starter size until P2 closure. Cross-reading: paradigm anchors split across cyclical (negative), AI-infrastructure (positive), and energy-security (positive); net read is neutral-to-positive but conviction-suppressing until ESA. Watch the AI-power demand thread — it has the highest fundamental durability."
+            }
+          ]
+        },
+        {
+          "id": "C.II.4",
+          "title": "Sell-Side Momentum (P5)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bluf",
+              "text": "P5 rated A: all 15 momentum metrics positive with acceleration pattern across all 5 metric families; crowding risk is the price of the conviction."
+            },
+            {
+              "type": "pillar_block",
+              "pillar_id": "p5",
+              "label": "SS Earnings Momentum",
+              "rating": "B",
+              "blocks": [
+                {
+                  "type": "bullet_group",
+                  "items": [
+                    {
+                      "iaja": "J",
+                      "rating": "A",
+                      "text": "EPS and EBITDA revisions — acceleration pattern — EPS revisions +3.2% L1M, +8.5% L3M, +12.1% L6M — acceleration pattern confirms trend is durable, not a one-off.",
+                      "sub": [
+                        {
+                          "iaja": "I",
+                          "text": "EBITDA shows identical pattern: +2.8% / +7.2% / +10.5%; revenue catching up more slowly."
+                        },
+                        {
+                          "iaja": "A",
+                          "text": "(i) Pattern present in all 5 momentum metrics; (ii) rare breadth of consensus conviction."
+                        },
+                        {
+                          "iaja": "A",
+                          "rating": "A",
+                          "text": "Net +5% EPS revisions over 90D; broad-based — 7 of 9 covering brokers up."
+                        },
+                        {
+                          "iaja": "I",
+                          "rating": "—",
+                          "text": "Brokers cite gas-curve repricing and Arctic LNG-2 train-2 commissioning as primary upside drivers."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "J",
+                      "rating": "A",
+                      "text": "Price targets and % Buy revisions — Price targets +11.2% L3M (strongest single metric); % Buy up +5pp L3M (58% → 63%) — upgrade cycle still has breadth room.",
+                      "sub": [
+                        {
+                          "iaja": "I",
+                          "text": "PT acceleration: +5.1% / +11.2% / +15.3% (L1M/L3M/L6M)."
+                        },
+                        {
+                          "iaja": "A",
+                          "text": "(i) % Buy has room: 63% is not yet crowded; (ii) historical peak conviction levels sit ~70%."
+                        },
+                        {
+                          "iaja": "I",
+                          "rating": "—",
+                          "text": "TP dispersion narrowing — variance from the mean down 18% L3M."
+                        },
+                        {
+                          "iaja": "A",
+                          "rating": "B",
+                          "text": "Highest target $185, lowest $128; mean $156 implies ~22% upside vs current."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "J",
+                      "rating": "A",
+                      "text": "Residual risk — consensus crowding — Perfect 15/15 momentum score may reflect consensus crowding — any earnings miss would trigger outsized downgrades.",
+                      "sub": [
+                        {
+                          "iaja": "I",
+                          "text": "Asymmetric downside on miss: historical analogues show 1.5-2x magnitude relative to beat-response."
+                        },
+                        {
+                          "iaja": "A",
+                          "text": "(i) Next print 24-Apr-26; (ii) consensus EPS EUR 2.85 ±0.04 — tight range, high sensitivity."
+                        },
+                        {
+                          "iaja": "A",
+                          "rating": "C",
+                          "text": "All 9 brokers Buy or Outperform — symmetric downside if any break ranks."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "summary",
+              "text": "Breadth and acceleration both confirm a durable upgrade cycle — the 24-Apr-26 print is the next calibration point. Crowding risk asymmetric on miss; sizing discipline critical through the print."
+            }
+          ]
+        },
+        {
+          "id": "C.II.5",
+          "title": "Upside (P6)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bluf",
+              "text": "P6 rated B: 14x 2YF P/E sits at 30th percentile own history and ~30% discount to peers; modal-case TSR 23-26% annualised."
+            },
+            {
+              "type": "pillar_block",
+              "pillar_id": "p6",
+              "label": "Valuation",
+              "rating": "B",
+              "blocks": [
+                {
+                  "type": "bullet_group",
+                  "items": [
+                    {
+                      "iaja": "J",
+                      "rating": "B",
+                      "text": "Absolute valuation — 2YF P/E — 14x 2YF P/E sits at the ~30th percentile of own 3-year range (10-24x) — absolute cheap on own history.",
+                      "sub": [
+                        {
+                          "iaja": "I",
+                          "text": "SP EUR 48; 2YF EPS EUR 3.43 → 14.0x."
+                        },
+                        {
+                          "iaja": "A",
+                          "text": "(i) Historical low 10x (Q1-23); (ii) historical high 24x (H2-24); (iii) median 16x."
+                        },
+                        {
+                          "iaja": "I",
+                          "rating": "—",
+                          "text": "P/E vs sector at 0.7x — sanctions discount is the swing factor for re-rating."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "J",
+                      "rating": "B",
+                      "text": "Peer relative valuation — 18-22x peer average (Fanuc, ABB Robotics, Rockwell) vs NVTK 14x — ~30% discount to peers on a growth-adjusted basis similar to peer group.",
+                      "sub": [
+                        {
+                          "iaja": "I",
+                          "text": "Peer range 18-22x; NVTK 16% EPS CAGR vs peer average ~10%."
+                        },
+                        {
+                          "iaja": "A",
+                          "text": "(i) PEG: NVTK 0.87x vs peers 1.8x-2.2x; (ii) unusual for a name outgrowing the peer group."
+                        },
+                        {
+                          "iaja": "A",
+                          "rating": "B",
+                          "text": "Discount widens to 35% vs Western peers; 15% vs sanctioned-peer subset."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "J",
+                      "rating": "B",
+                      "text": "TSR DuPont cross-reference to A.II.3 — Modal-case TSR DuPont (see A.II.3): EPS CAGR 16% + dividend yield 2.5% + multiple re-rating 5-8%/yr = 23-26% annualised modal TSR.",
+                      "sub": [
+                        {
+                          "iaja": "I",
+                          "text": "EPS growth: observable in order book; yield: funded from current free cash flow; re-rating: mechanical if peer gap closes."
+                        },
+                        {
+                          "iaja": "A",
+                          "text": "(i) Sensitivity: ±500bps per contributor = 8-44% TSR range; (ii) downside-weighted still ~+12%."
+                        },
+                        {
+                          "iaja": "I",
+                          "rating": "—",
+                          "text": "Modal-case TSR DuPont at 14% IRR; +3% from re-rating, +5% growth, +6% yield."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "summary",
+              "text": "Valuation is the unifying mechanic for the upside case — absolute cheap on own history, relative cheap vs peers, and backed by genuinely superior EPS growth. The B rather than A reflects the peer-gap dependence; upgrade to A requires independent re-rating evidence."
+            }
+          ]
+        }
+      ]
+    },
+    "D": {
+      "letter": "D",
+      "title": "COMPONENTS",
+      "applicable": true,
+      "inline_verdict": "KDICs isolated; two ACHs still open",
+      "default_open": false,
+      "subsections": [
+        {
+          "id": "D.I",
+          "title": "Mechanics / building blocks",
+          "heading_level": 3,
+          "target_words": 1050,
+          "blocks": [
+            {
+              "type": "bluf",
+              "text": "Investment case rests on one Primary Driver (LNG price path) and one structural hygiene factor (cost-curve position). Both look robust at Triaging. One Key Confusion (Yamal-2 contract mix) must clear before ESA promotion, and one Key Risk (sanctions) must be sized rather than solved."
+            }
+          ],
+          "topics": [
+            {
+              "id": "D.I.1",
+              "title": "KDICs -- Key Drivers of Investment Case",
+              "target_words": 300,
+              "blocks": [
+                {
+                  "type": "bluf",
+                  "text": "One Primary Driver dominates: LNG price path N1-3Y. Two Secondaries provide supporting mechanics on volume and mix. Tertiaries are noted but de-prioritised. The structure is single-PD and the financial path is simple -- price times volume -- which helps conviction but also means concentration risk lives at the top of the tree."
+                },
+                {
+                  "type": "tree",
+                  "title": "KDICs tree -- qualitative drivers to financial outputs",
+                  "tiers": [
+                    {
+                      "label": "PDs",
+                      "name": "Primary Drivers",
+                      "items": [
+                        {
+                          "text": "LNG realised price N1-3Y",
+                          "detail": "TTF base-case EUR28-35/MWh through 2027; dominates revenue AND unit margin simultaneously",
+                          "iaja": "J"
+                        }
+                      ]
+                    },
+                    {
+                      "label": "SDs",
+                      "name": "Secondary Drivers",
+                      "items": [
+                        {
+                          "text": "Yamal-2 volume ramp",
+                          "detail": "Volume adder through 2027, but price-dependent for margin impact",
+                          "iaja": "A"
+                        },
+                        {
+                          "text": "Contract vs spot mix",
+                          "detail": "Governs how much of price upside is captured; unresolved -- see D.I.3",
+                          "iaja": "A"
+                        }
+                      ]
+                    },
+                    {
+                      "label": "TDs",
+                      "name": "Tertiary Drivers",
+                      "items": [
+                        {
+                          "text": "RUB/USD -- noise",
+                          "detail": "Largely USD-denominated revenue; cost base partially RUB; net is small"
+                        },
+                        {
+                          "text": "Opex inflation",
+                          "detail": "Structural trend, slow-moving; unlikely to shift thesis N1-3Y"
+                        }
+                      ]
+                    },
+                    {
+                      "label": "LIs",
+                      "name": "Leading Indicators (of ICDs)",
+                      "items": [
+                        {
+                          "text": "EU storage refill pace",
+                          "detail": "Real-time TTF proxy; check weekly",
+                          "iaja": "T"
+                        },
+                        {
+                          "text": "Sabetta shipment count",
+                          "detail": "Monthly; validates Yamal-2 ramp",
+                          "iaja": "T"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "bullet_group",
+                  "items": [
+                    {
+                      "iaja": "J",
+                      "text": "Structure is clean -- one PD, direct to revenue.",
+                      "sub": [
+                        {
+                          "iaja": "A",
+                          "text": "PD flows via price x volume; margin near-linear on price."
+                        },
+                        {
+                          "iaja": "I",
+                          "text": "Every EUR5/MWh on TTF is approx $800m EBITDA."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "J",
+                      "text": "SDs conditional on PD -- volume only lifts EBITDA if price holds.",
+                      "sub": [
+                        {
+                          "iaja": "A",
+                          "text": "Branches: (i) TTF stays above EUR30 -- ramp is pure upside; (ii) TTF drops to EUR18-22 -- ramp masks compression, doesn't add."
+                        },
+                        {
+                          "iaja": "I",
+                          "text": "First train COD late-2026; full ramp by end-2027."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "J",
+                      "text": "PD sensitivity is symmetric -- upside and downside scale linearly with TTF.",
+                      "sub": [
+                        {
+                          "iaja": "A",
+                          "text": "No step-functions or discontinuities in the modelled path N1-3Y."
+                        },
+                        {
+                          "iaja": "I",
+                          "text": "Cheniere, Shell IG and Equinor show similar linear leverage -- not an outlier."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "J",
+                      "text": "TDs are genuine noise over the horizon -- not monitored actively.",
+                      "sub": [
+                        {
+                          "iaja": "A",
+                          "text": "FX drag partially hedged; opex inflation slow-moving and small in magnitude."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "J",
+                      "text": "LIs give us real-time visibility into the PD without waiting for earnings.",
+                      "sub": [
+                        {
+                          "iaja": "A",
+                          "text": "Weekly: EU storage refill pace (TTF proxy). Monthly: Sabetta shipment count (Yamal-2 ramp proxy)."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "ACT",
+                      "text": "Wire LIs 1-2 into weekly review; confirm FactSet feeds available."
+                    }
+                  ]
+                },
+                {
+                  "type": "summary",
+                  "text": "One-driver cases are the cleanest to own -- but they carry concentration risk. Size accordingly; don't overload."
+                }
+              ]
+            },
+            {
+              "id": "D.I.2",
+              "title": "KHF/As -- Key Hygiene Factors / Assumptions",
+              "target_words": 0,
+              "stage_note": "Triaging: n.a. -- hypothesise only if disqualifying. Full treatment at ESA.",
+              "blocks": [
+                {
+                  "type": "bluf",
+                  "text": "At Triaging, no KHFs identified that would disqualify. Structural cost-curve position assumed stable N1-3Y; to be stress-tested at ESA."
+                }
+              ]
+            },
+            {
+              "id": "D.I.3",
+              "title": "KCs/KUs -- Key Confusions & Unknowns",
+              "target_words": 300,
+              "blocks": [
+                {
+                  "type": "bluf",
+                  "text": "Two live confusions. One is structurally important and could kill the thesis (Yamal-2 contract mix); the other is solvable with a modelling pass (RUB-hedged economics). KC-1 is the main blocker for ESA promotion."
+                },
+                {
+                  "type": "bullet_group",
+                  "items": [
+                    {
+                      "iaja": "J",
+                      "text": "KC-1 (structural): Yamal-2 contract mix -- pre-sold vs spot?",
+                      "sub": [
+                        {
+                          "iaja": "A",
+                          "text": "Three outcomes: (i) >70% pre-sold -- PD weakens materially, thesis at risk; (ii) 40-70% -- case works but needs blended narrative; (iii) <40% -- PD fully intact."
+                        },
+                        {
+                          "iaja": "I",
+                          "text": "Peers disclose 85-90% contracted; Russian state gas strategy favours long-dated Asian offtake."
+                        },
+                        {
+                          "iaja": "I",
+                          "text": "Company silent on split -- no IR disclosure, no prospectus language, no recent analyst briefings."
+                        },
+                        {
+                          "iaja": "OQ",
+                          "text": "AS deep research scheduled w/o 27-Apr-26 with explicit ask for contract disclosure."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "J",
+                      "text": "KC-2 (solvable): USD FCF conversion after RUB costs -- modellable, just unmodelled.",
+                      "sub": [
+                        {
+                          "iaja": "A",
+                          "text": "(i) Cost base approx 40% RUB; (ii) hedge tenor unclear; both needed to size FX drag."
+                        },
+                        {
+                          "iaja": "A",
+                          "text": "Material at position-size level for a concentrated 5-15 name book -- not small."
+                        },
+                        {
+                          "iaja": "I",
+                          "text": "2023 disclosure implied 8-12% FX drag on cash conversion over the full year."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "J",
+                      "text": "No KC-3 emerging at Triaging -- confusion set feels complete.",
+                      "sub": [
+                        {
+                          "iaja": "A",
+                          "text": "All other items either derive from these two or are KRs, not KCs."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "ACT",
+                      "text": "Build KC-2 Excel scenario pre-ESA (2-day task). Escalate KC-1 to AS deep research."
+                    }
+                  ]
+                },
+                {
+                  "type": "summary",
+                  "text": "KC-1 is the one that can kill the thesis. If it fails to clear at ESA, park the name cleanly rather than push on with a weakened PD."
+                }
+              ]
+            },
+            {
+              "id": "D.I.4",
+              "title": "KRs -- Key Concerns / Risks",
+              "target_words": 300,
+              "blocks": [
+                {
+                  "type": "bluf",
+                  "text": "Three material risks, all headline-adjacent and none small. Sanctions is the main source of tail risk and probably not fully solvable; Yamal-2 execution is the main source of base-case risk; governance opacity is a reputational drag rather than a cash-flow threat."
+                },
+                {
+                  "type": "bullet_group",
+                  "items": [
+                    {
+                      "iaja": "J",
+                      "text": "KR-1: Sanctions tightening -- tail risk, cannot be solved, only sized.",
+                      "sub": [
+                        {
+                          "iaja": "A",
+                          "text": "Two distinct channels: (i) secondary sanctions re-route volumes but keep them sellable; (ii) SDN listing on Novatek itself is binary for ADR holders."
+                        },
+                        {
+                          "iaja": "A",
+                          "text": "Probability and magnitude both needed: small probability of large loss is not the same as large probability of small loss."
+                        },
+                        {
+                          "iaja": "I",
+                          "text": "2022-25 base rate: 3 of 12 sanctioned Russian energy names went binary for foreign holders -- 25% base rate."
+                        },
+                        {
+                          "iaja": "I",
+                          "text": "Current CDS spreads imply ~10-15% probability of SDN listing over 24m -- market thinks possible, not imminent."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "J",
+                      "text": "KR-2: Yamal-2 execution -- most likely a schedule slip, not failure.",
+                      "sub": [
+                        {
+                          "iaja": "A",
+                          "text": "A 6m slip has two effects: (i) volume ramp pushes into a weaker TTF cycle; (ii) modelled 2026 contribution becomes a 2027 event."
+                        },
+                        {
+                          "iaja": "I",
+                          "text": "Arctic-2 COD was on time despite sanctions pressure -- favourable precedent."
+                        },
+                        {
+                          "iaja": "I",
+                          "text": "Western equipment supply chain now tighter -- precedent may not transfer cleanly."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "J",
+                      "text": "KR-3: Governance opacity -- reputational drag, not financial.",
+                      "sub": [
+                        {
+                          "iaja": "A",
+                          "text": "Post-2022 re-registration; no cash-flow impact but complicates any compliance review."
+                        },
+                        {
+                          "iaja": "A",
+                          "text": "Me-state friction risk: each governance headline is a sell-trigger temptation."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "ACT",
+                      "text": "ESA: build kill-switch list per KR with explicit level-1 triggers (e.g. halve on SDN news, exit on binary confirmation)."
+                    }
+                  ]
+                },
+                {
+                  "type": "summary",
+                  "text": "Two sizing constraints emerge: smaller starter than a standard GARP name; and no add on KR-1 triggers until the tail event probability has been re-priced."
+                }
+              ]
+            },
+            {
+              "id": "D.I.5",
+              "title": "KPOs -- Key Positive Optionality",
+              "target_words": 150,
+              "blocks": [
+                {
+                  "type": "bluf",
+                  "text": "Two non-modelled optionalities worth flagging. Neither is required for the base case to work -- they are upside toppers rather than load-bearing."
+                },
+                {
+                  "type": "bullet_group",
+                  "items": [
+                    {
+                      "iaja": "J",
+                      "text": "KPO-1: Buyback re-initiation -- plausible, not scheduled.",
+                      "sub": [
+                        {
+                          "iaja": "A",
+                          "text": "Net cash $2.4bn vs $1.1bn prior year; balance sheet permits."
+                        },
+                        {
+                          "iaja": "I",
+                          "text": "No buyback since 2021; 'capital allocation review' flagged at FY25 without a specific channel."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "J",
+                      "text": "KPO-2: Arctic-3 FID -- terminal value re-rater if confirmed.",
+                      "sub": [
+                        {
+                          "iaja": "A",
+                          "text": "Extends LNG runway past 2030; not in sell-side modal case so any positive newsflow is pure upside."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "J",
+                      "text": "KPO-3: Asian buyer base broadening -- reduces single-buyer concentration risk.",
+                      "sub": [
+                        {
+                          "iaja": "A",
+                          "text": "Incremental Chinese and Indian offtake would soften the sanctions-channel risk in KR-1."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "summary",
+                  "text": "Upside optionality is real but not required. The thesis works on the PD alone -- KPOs are bonus, not necessary."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "D.II",
+          "title": "Violations (ACHs, exit triggers, expected negatives)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "ACH-1 (active): opacity of ultimate shareholder structure post-2022 re-registration."
+                },
+                {
+                  "iaja": "J",
+                  "text": "ACH-2 (active): sparse Q1 disclosure v prior years."
+                },
+                {
+                  "text": "Exit triggers (if we buy): (i) TTF 3-month avg <EUR22, (ii) Yamal-2 COD slipping 6m+, (iii) any material governance event."
+                },
+                {
+                  "text": "Expected negatives: 1-2 sanction-related drawdowns of 10-15% likely across a 24m hold."
+                }
+              ]
+            }
+          ],
+          "target_words": 150
+        },
+        {
+          "id": "D.III",
+          "title": "Open topics (KOQs, KAs)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "text": "KOQ-1: Contract-vs-spot split of Yamal-2 volumes (pending)."
+                },
+                {
+                  "text": "KOQ-2: RUB-hedged economics vs USD-reported headline — needs Excel model."
+                },
+                {
+                  "text": "KA-1: Run AlphaSense deep research on Sabetta logistics constraints."
+                },
+                {
+                  "text": "KA-2: Pull latest ADR liquidity stats from FactSet."
+                }
+              ]
+            }
+          ],
+          "target_words": 100
+        }
+      ],
+      "target_words": 1300
+    },
+    "E": {
+      "letter": "E",
+      "title": "ACTIONS",
+      "applicable": true,
+      "inline_verdict": "Progress to ESA; not yet promote to DD",
+      "default_open": true,
+      "subsections": [
+        {
+          "id": "E.I",
+          "title": "Summary judgement",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "callout",
+              "tone": "judgement",
+              "iaja": "J",
+              "text": "Progress to ESA. Setup is legible, PRIMARY driver is clean, Foundations hold except on governance. Do not yet spend DD energy — two ACHs and one KC need to clear first."
+            },
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "If Yamal-2 contract disclosure remains opaque at ESA exit, park — we cannot size a position responsibly without understanding the downside on pricing."
+            }
+          ]
+        },
+        {
+          "id": "E.II",
+          "title": "If compelling",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "text": "Initial size: 1.5% (half a standard starter given headline volatility)."
+                },
+                {
+                  "text": "Build to 3-4% on first Yamal-2 volume print + Q3 earnings confirmation."
+                },
+                {
+                  "text": "Pair with a short LNG-peer to isolate the unit-economics alpha (optional — assess at build)."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "E.III",
+          "title": "If uncompelling",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "text": "Park [-] with a 6m re-review trigger on Yamal-2 disclosure."
+                },
+                {
+                  "text": "Keep CRBN as the primary LNG-adjacent expression (no gap in coverage)."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "F": {
+      "letter": "F",
+      "title": "APPENDICES",
+      "applicable": true,
+      "inline_verdict": "Light at Triaging (per stage-depth matrix)",
+      "default_open": false,
+      "subsections": [
+        {
+          "id": "F.I",
+          "title": "Basic checks",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "kv_grid",
+              "title": "Basic checks",
+              "rows": [
+                {
+                  "label": "Listing",
+                  "value": "MOEX + Frankfurt ADR",
+                  "delta": ""
+                },
+                {
+                  "label": "Market cap",
+                  "value": "$32bn",
+                  "delta": ""
+                },
+                {
+                  "label": "3m ADV",
+                  "value": "$48m equiv.",
+                  "delta": "adequate for starter size"
+                },
+                {
+                  "label": "Free float",
+                  "value": "~27%",
+                  "delta": ""
+                },
+                {
+                  "label": "Next event",
+                  "value": "Q2 earnings 04-Aug-26",
+                  "delta": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "F.II",
+          "title": "Supplementary",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "text": "Supplementary appendix at Triaging is intentionally thin. ESA will add: contract-pricing scenario table, governance deep-dive, sanctions pathway map. DD will add: discounted cash flow model, reverse-DCF market-implied price path, peer sensitivity grid."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,8 +1,8 @@
 {
  "status": "ok",
- "checked_at": "2026-07-19T06:25:16Z",
+ "checked_at": "2026-07-18T20:19:31Z",
  "wipe_suspected": false,
  "critical_failures": [],
  "warnings": [],
- "checks_run": 13
+ "checks_run": 22
 }

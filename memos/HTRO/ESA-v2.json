@@ -1,0 +1,967 @@
+{
+  "schema_version": "1.0",
+  "ticker": "HTRO",
+  "company_name": "Hexatronic Group",
+  "stage": "ESA",
+  "stage_date": "2026-04-22",
+  "authored_by": "Watson (APM)",
+  "driver_terminology": "PRIMARY/SECONDARY/TERTIARY",
+  "header": {
+    "primary_setup": "Demand-Driven EPSU/EPT — DC segment displacing legacy FTTH via hyperscaler infrastructure + services pivot",
+    "primary_setup_verdict": "confirmed present; DC +37% organic 2025, +62% Q4, margin 15.3%, asset-light model verified",
+    "secondary_setup": "Corporate Change EPSU/EPT — new CEO Fröberg + decentralised M&A engine + SEK 120m cost programme",
+    "conviction": "C+ — strengthening; DC growth confirmed, moat question partially answered, M&A execution remains the constraint",
+    "time_horizon": "N1-3Y, fulcrum event inside 12m (BEAD resolution + DC growth re-affirmation in Q1-Q2 2026)"
+  },
+  "sections": {
+    "A": {
+      "letter": "A",
+      "title": "FINANCIALS",
+      "applicable": true,
+      "inline_verdict": "[Left blank — Richard's instruction]",
+      "default_open": false,
+      "subsections": [],
+      "financials": {}
+    },
+    "B": {
+      "letter": "B",
+      "title": "EXECUTIVE SUMMARY",
+      "applicable": true,
+      "inline_verdict": "Compelling mix-shift trade with genuine asymmetry; DC moat YELLOW, M&A ORANGE — ESA clears for starter position",
+      "default_open": true,
+      "subsections": [
+        {
+          "id": "B.I.1",
+          "title": "Executive summary",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "callout",
+              "tone": "verdict",
+              "iaja": "J",
+              "text": "ESA confirms the Triaging thesis with higher conviction. Hexatronic's DC segment is real, scaling, and profitable (Q4-25: +62% organic, 15.3% EBITA, asset-light). The hyperscaler AI buildout is a multi-year structural tailwind confirmed by Corning's $6bn Meta contract. HTRO's mid-market niche (Tier-2 cloud, regional DCs, enterprise) is less competed than Tier-1 hyperscaler direct supply. ESA-depth research confirms: (i) DC moat is narrow but defensible via local service execution + installed base stickiness — YELLOW, not ORANGE; (ii) M&A execution remains the binding constraint — Weterings write-off is a flag, but Fröberg's Ahlsell track record (20+ deals) is relevant. Overall IC strengthens from C+ to C+ (upper end). Starter position (1.0-1.5%) is justified at current entry (~SEK 28). Do NOT size up before Q1-26 DC print confirms."
+            },
+            {
+              "type": "prose",
+              "iaja": "A",
+              "text": "ESA-depth analysis adds three layers beyond Triaging: (1) Sector primer confirms fibre optic industry is bifurcating between vertically integrated giants (Corning, Prysmian — preform + cable) and service-led integrators (HTRO niche). Preform manufacturers capture 70% of industry profit pool — HTRO cannot access this. But HTRO's 15%+ DC services margin is competitive with system integrator peers (~11.5% average). (2) Value chain analysis shows HTRO is deliberately moving downstream (design → install → day-two services) where switching costs are higher and competition from giants is less intense. The Communication Zone acquisition exemplifies this — local service capability in US Midwest for hyperscale clients. (3) Earnings history reveals a pattern: management under-promises after misses (H1-25) then over-delivers (H2-25). Q4-25 EBITA beat +10.8% is consistent with conservative guidance reset. This pattern is favourable for EPS revision momentum — expect continued positive surprises if DC sustains."
+            },
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "PRIMARY driver: DC segment scaling — fulcrum. Q4-25 organic growth +62% confirms momentum; 15.3% EBITA margin is 2x group average.",
+                  "sub": [
+                    {
+                      "iaja": "I",
+                      "text": "DC + HE = ~40% of sales but ~60% of adj. EBITA by Q4-25. Mix shift is the numbers story."
+                    },
+                    {
+                      "iaja": "I",
+                      "text": "Cloud/hyperscaler = 40% of DC sales; enterprise = 60%. Dual customer base reduces single-customer risk."
+                    },
+                    {
+                      "iaja": "A",
+                      "text": "Management targets 3-6 DC acquisitions/year at 5-7x EBITDA, EV <EUR 50m. Pipeline appears real given US market fragmentation."
+                    }
+                  ]
+                },
+                {
+                  "iaja": "J",
+                  "text": "SECONDARY driver: BEAD programme materialisation — triggers legacy FTTH volume recovery in H2-26.",
+                  "sub": [
+                    {
+                      "iaja": "I",
+                      "text": "$42.5bn US subsidy; 50 of 56 state proposals approved. 74% of early allocations still going to fibre despite technology-neutral rule change."
+                    },
+                    {
+                      "iaja": "A",
+                      "text": "BEAD impact timing has been pushed right repeatedly. Management now guides H2-26; sell-side expects 2027 for meaningful revenue contribution."
+                    }
+                  ]
+                },
+                {
+                  "iaja": "J",
+                  "text": "TERTIARY driver: Harsh Environment defence/offshore tailwind — structural, secular, non-cyclical ballast.",
+                  "sub": [
+                    {
+                      "iaja": "I",
+                      "text": "HE segment: +11% organic 2025, 11.2% EBITA margin rising toward 15% target. JOWO acquisition (EUR 11.8m, 4.7x EBITDA) adds European defence exposure."
+                    },
+                    {
+                      "iaja": "A",
+                      "text": "NATO spending commitments provide 5-10 year visibility. Rochester Cable operational improvements are margin-accretive."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "prose",
+              "iaja": "A",
+              "text": "Key risk: the DC boom-bust parallel. Sell-side (Redeye) explicitly warns that hyperscaler capex could exhibit the same boom-bust as FTTH. The FTTH cycle saw Hexatronic's revenue surge 33% CAGR then collapse — if DC follows the same pattern, the 2028 targets are unachievable. Mitigant: DC business is services-led (design, installation, day-two) vs. FTTH which was product-distribution; services have higher switching costs and recurring revenue characteristics. This distinction needs pressure-testing at ESA."
+            }
+          ]
+        }
+      ]
+    },
+    "C": {
+      "letter": "C",
+      "title": "REQUIRED ATTRIBUTES",
+      "applicable": true,
+      "inline_verdict": "C+ (upper) — DC growth confirmed, moat narrow but defensible, M&A is the binding constraint",
+      "default_open": false,
+      "subsections": [
+        {
+          "id": "C.I.1",
+          "title": "Required Attribute ratings",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "ratings_table",
+              "pillars": [
+                {
+                  "pillar": "I",
+                  "name": "Technical Momentum",
+                  "rating": "C+",
+                  "rationale": "Post-trough recovery; SP ~SEK 28, below 2022 highs. MAs turning up but not confirmed Stage 2."
+                },
+                {
+                  "pillar": "II",
+                  "name": "Market Paradigm Fit",
+                  "rating": "B-",
+                  "rationale": "AI/DC infrastructure theme is paradigm-aligned. Non-cyclical HE/defence exposure fits risk-off mode. FTTH legacy is paradigm-negative."
+                },
+                {
+                  "pillar": "III",
+                  "name": "Investment Case (P3)",
+                  "rating": "C+ (upper)",
+                  "rationale": "ESA confirms change forces and early outputs. DC organic growth (+37% FY25, +62% Q4) with 15.3% EBITA margin. Setup: Demand-Driven EPSU/EPT confirmed present. Moat: YELLOW — narrow but defensible via local service execution."
+                },
+                {
+                  "pillar": "IV",
+                  "name": "Building Blocks (P4)",
+                  "rating": "C+",
+                  "rationale": "ESA depth: Foundation quality improving. DC unit economics verified (asset-light, 12-14% NWC, 1% capex). M&A execution ORANGE flag remains (Weterings). BB#7 momentum: positive trend confirmed by Q3-Q4 beats."
+                },
+                {
+                  "pillar": "V",
+                  "name": "SS Earnings Momentum",
+                  "rating": "C+",
+                  "rationale": "2 Buy / 1 Hold / 1 Sell. Post-Q4 beat, DNB Carnegie upgraded TP. Revisions turning positive but consensus still cautious on FTTH."
+                },
+                {
+                  "pillar": "VI",
+                  "name": "Valuation",
+                  "rating": "B-",
+                  "rationale": "Forward P/E ~12.5x vs DC-services peers at 15-18x. 35% discount to peers on 2026-27E. Discount reflects FTTH drag and size; if DC thesis proves out, re-rating to 18-20x is the asymmetry."
+                }
+              ]
+            },
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "Overall IC rating upgraded to C+ (upper end) at ESA depth. Key developments vs Triaging: (i) DC moat assessment moves from 'unknown' to 'narrow but defensible' — services stickiness (day-two contracts, installed base) creates switching friction even though product (microduct) is non-proprietary. (ii) Earnings quality confirmed: 235% cash conversion in Q4-25, restructuring payback 1.1 years, WC management exemplary. (iii) M&A execution remains ORANGE — Weterings write-off is documented capital destruction; need to see 2-3 post-2025 acquisitions deliver stated ROI before upgrading. (iv) Valuation attractiveness confirmed: 35% discount to peers on 2026-27E; probability-weighted fair value SEK 53-55 (55-60% upside). The case is compelling enough for a starter position but not for target sizing until DD resolves the M&A question."
+            }
+          ]
+        },
+        {
+          "id": "C.II.1",
+          "title": "Case — Outputs (IC#1)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "signpost": {
+                    "level": "cq",
+                    "ref": "IC#1.CQ1",
+                    "label": "Three-year triple ratchet step-up",
+                    "style": "prefix"
+                  },
+                  "text": "**IC#1 CQ1 — Three-year triple ratchet step-up:** Plausibly present. DC organic growth trajectory (39% Q3, 62% Q4 2025) combined with HE +11% and Fibre Solutions cost programme creates a credible path to 20%+ EPS CAGR over 2025-28.",
+                  "sub": [
+                    {
+                      "iaja": "A",
+                      "text": "VF modal case: FY28 EPS SEK 3.30-3.60 vs FY25 ~SEK 1.62. Triple ratchet requires sustained DC scaling + mix shift + cost savings."
+                    },
+                    {
+                      "iaja": "I",
+                      "text": "Management 2028 targets: SEK 11bn revenue, 12% EBITA margin. SS consensus lower at SEK 9.3bn / 9.9% margin — gap is M&A-dependent."
+                    }
+                  ]
+                },
+                {
+                  "iaja": "J",
+                  "signpost": {
+                    "level": "cq",
+                    "ref": "IC#1.CQ2",
+                    "label": "12-20% EPS growth pa",
+                    "style": "prefix"
+                  },
+                  "text": "**IC#1 CQ2 — 12-20% EPS growth pa:** Achievable on modal case. SS consensus implies ~20-25% EPS CAGR 2025-28. VF case sits 12-15% above SS. GARP sweet spot.",
+                  "sub": [
+                    {
+                      "iaja": "A",
+                      "text": "Growth mix: ~60% organic DC/HE, ~25% M&A, ~15% cost savings. EPS acceleration is back-loaded (mix shift compounds)."
+                    }
+                  ]
+                },
+                {
+                  "iaja": "J",
+                  "signpost": {
+                    "level": "cq",
+                    "ref": "IC#1.CQ4",
+                    "label": "Fit with required setups",
+                    "style": "prefix"
+                  },
+                  "text": "**IC#1 CQ4 — Fit with required setups:** Demand-Driven EPSU/EPT is the primary fit. DC hyperscaler buildout = large, identifiable exogenous demand shift. Secondary: Corporate Change (CEO + restructuring). Both setups are legible."
+                },
+                {
+                  "iaja": "J",
+                  "signpost": {
+                    "level": "cq",
+                    "ref": "IC#1.CQ9",
+                    "label": "Modal case 18M EPS > guidance > SS",
+                    "style": "prefix"
+                  },
+                  "text": "**IC#1 CQ9 — EPS upgrade path:** Probable. VF modal EPS sits 12-15% above SS consensus. If Q1-Q2 2026 DC organic sustains >25%, probability of positive EPS revision is 60-70%.",
+                  "sub": [
+                    {
+                      "iaja": "A",
+                      "text": "Q4-25 beat: EBITA +10.8% vs consensus, revenue +8.6%. Pattern suggests sandbagging after H1-25 miss — new CEO resetting expectations conservatively."
+                    }
+                  ]
+                },
+                {
+                  "iaja": "J",
+                  "signpost": {
+                    "level": "cq",
+                    "ref": "IC#1.CQ11",
+                    "label": "Company-driven vs exogenous multiple",
+                    "style": "prefix"
+                  },
+                  "text": "**IC#1 CQ11 — Multiple bankability:** Mixed. DC services command 15-18x; legacy FTTH trades at 10-12x. Blended multiple is hostage to mix shift pace. Multiple is partly company-driven (services pivot) but FTTH portion remains exogenously gated (interest rates, BEAD)."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "C.II.2",
+          "title": "Case — Inputs (IC#2) & Setups (IC#3)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bluf",
+              "text": "_Change forces are confirmed and large: hyperscaler AI capex, NATO defence spending, BEAD subsidies. The question is duration and defensibility, not existence._"
+            },
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "signpost": {
+                    "level": "cq",
+                    "ref": "IC#2.CQ1",
+                    "label": "External change forces",
+                    "style": "prefix"
+                  },
+                  "text": "**IC#2 CQ1 — External change forces:** Strong. (i) Hyperscaler AI infrastructure buildout — Corning $6bn Meta contract through 2030 is a proxy for multi-year demand. (ii) NATO 2% GDP commitment driving defence cable/connectivity spend. (iii) BEAD $42.5bn US broadband programme, 74% allocated to fibre.",
+                  "sub": [
+                    {
+                      "iaja": "A",
+                      "text": "AI workloads projected to add 150-200m fibre-km to global baseline demand. DCI market growing at ~25% CAGR to $3bn by 2028."
+                    },
+                    {
+                      "iaja": "I",
+                      "text": "Risk: technology-neutral BEAD rules allow LEO/FWA competition. Starlink Gen 3 satellites at 1 Tbit/s capacity could narrow fibre performance gap."
+                    }
+                  ]
+                },
+                {
+                  "iaja": "J",
+                  "signpost": {
+                    "level": "cq",
+                    "ref": "IC#2.CQ2",
+                    "label": "Internal change forces",
+                    "style": "prefix"
+                  },
+                  "text": "**IC#2 CQ2 — Internal change forces:** Moderate-positive. New CEO Fröberg (ex-Ahlsell, 20+ acquisitions) driving strategic pivot. Performance Improvement Programme delivering SEK 120m cost savings. Reorganisation into 3 market-facing segments (Fibre/DC/HE) improves capital allocation clarity."
+                },
+                {
+                  "iaja": "J",
+                  "signpost": {
+                    "level": "tc",
+                    "ref": "IC#3.TC1",
+                    "label": "Setup classification",
+                    "style": "prefix"
+                  },
+                  "text": "**IC#3 TC1 — Setup classification:** Primary = Demand-Driven EPSU/EPT (DC hyperscaler buildout). Secondary = Corporate Change EPSU/EPT (CEO + restructuring). Both are acceptable setups. No false-friend overlap detected at Triaging depth."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "C.II.3",
+          "title": "Case — Foundations (BB#1-BB#8)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "signpost": {
+                    "level": "ra",
+                    "ref": "BB#1",
+                    "label": "Simplicity guardrails",
+                    "style": "prefix"
+                  },
+                  "text": "**BB#1 — Simplicity guardrails:** C. Two fulcrum drivers (DC moat, M&A execution) + two key drivers (FTTH recovery, CEO quality) = 4 KDs. Narrowly focused. But: 18 production sites across 9 countries, 3 segments, multiple acquisitions = moderate complexity. Customer concentration (top 10 = ~50% sales) is a flag."
+                },
+                {
+                  "iaja": "J",
+                  "signpost": {
+                    "level": "ra",
+                    "ref": "BB#2",
+                    "label": "Foundation quality",
+                    "style": "prefix"
+                  },
+                  "text": "**BB#2 — Foundation quality:** C+. Operator: new CEO — early signs positive (conservative guidance reset, Q3-Q4 beats) but untested in fibre industry under stress. Business: DC segment has genuine differentiation (end-to-end services, microduct flexibility); FTTH is commoditised. Value chain: unfavourable — no vertical integration into glass preform (70% of industry profit pool). Industry structure: fragmented, intense competition from giants.",
+                  "sub": [
+                    {
+                      "iaja": "A",
+                      "text": "HTRO has ~1% US FTTH market share vs Corning/Prysmian. In DC services, the market is highly fragmented — HTRO's consolidator strategy is credible."
+                    },
+                    {
+                      "iaja": "A",
+                      "text": "SRCA assessment: narrow and segment-specific. DC services moat is about local execution capability + installed base stickiness, not IP or scale advantages."
+                    }
+                  ]
+                },
+                {
+                  "iaja": "J",
+                  "signpost": {
+                    "level": "ra",
+                    "ref": "BB#4",
+                    "label": "Strenuously seek-to-avoid",
+                    "style": "prefix"
+                  },
+                  "text": "**BB#4 — Seek-to-avoid constraints:** YELLOW flag. (i) Predictability: FTTH segment has demonstrated boom-bust characteristics. DC could repeat this pattern. (ii) Trough multiple risk: at SEK 12-15 bear case (Redeye), downside is 40-50% from current. (iii) Multiple is partly industry-driven (FTTH overhang depresses blended multiple)."
+                },
+                {
+                  "iaja": "J",
+                  "signpost": {
+                    "level": "ra",
+                    "ref": "BB#6",
+                    "label": "Invalidating constraints",
+                    "style": "prefix"
+                  },
+                  "text": "**BB#6 — Invalidating constraints:** No immediate invalidation flags at Triaging. No overlap with 10x general invalidating ACHs (assessed below). Mediocrity test: DC performance is distinctly non-mediocre. FTTH segment is mediocre but being actively restructured. No red-flag 'big Hmmms' beyond the boom-bust question."
+                },
+                {
+                  "iaja": "J",
+                  "signpost": {
+                    "level": "ra",
+                    "ref": "BB#7",
+                    "label": "Momentum constraints",
+                    "style": "prefix"
+                  },
+                  "text": "**BB#7 — Past trend / momentum:** C+. Price momentum: post-trough, MAs turning up. SS momentum: revisions turning positive post-Q4 beat. Peers: Corning seeing FTTH inflection point. Company delivery: improving — Q3-Q4 2025 both beat consensus after H1 miss."
+                },
+                {
+                  "iaja": "J",
+                  "signpost": {
+                    "level": "ra",
+                    "ref": "BB#8",
+                    "label": "Nice-to-have attributes",
+                    "style": "prefix"
+                  },
+                  "text": "**BB#8 — Nice-to-haves:** (i) Positive optionality: BEAD acceleration could provide upside beyond modal case. Edge DC proliferation is a long-tail tailwind. (ii) Self-righting: new CEO's cost programme demonstrates active self-righting behaviour. Cash conversion at 235% in Q4-25 is exceptional."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "C.II.4",
+          "title": "Case — Fitness-for-fighting (P1/P2/P5/P6)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "**P1 Technical Momentum (C+):** SP ~SEK 28, well below SEK 65+ peak. Post-trough base forming. MAs turning up but Stage 2 not confirmed. Volume improving on Q4 beat. Need FactSet chart confirmation at ESA."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**P2 Market Paradigm Fit (B-):** AI/DC infrastructure is fully paradigm-aligned. Defence/HE fits risk-off positioning. FTTH legacy is paradigm-negative but being diluted by mix shift. No Iran conflict exposure (no Middle East operations). Tariff risk limited (<5% of sales exposed)."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**P5 SS Earnings Momentum (C+):** 2 Buy / 1 Hold / 1 Sell. Post-Q4 beat triggered DNB Carnegie TP upgrade (SEK 38 → 42.50). Kepler Hold and Danske Sell are potential converts if Q1-26 DC prints >30%. Revision trajectory: turning positive."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**P6 Valuation (B-):** Forward P/E ~12.5x on FY26E. DC-services peer group trades at 15-18x. 35% discount reflects FTTH drag + size. If mix shift delivers and market re-rates to services multiple, fair value SEK 55-70 (60-100% upside from current)."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "C.II.5",
+          "title": "Case — Setup classification",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "callout",
+              "tone": "verdict",
+              "iaja": "J",
+              "text": "**Primary setup: Demand-Driven EPSU/EPT** — Hyperscaler AI/cloud infrastructure buildout is creating a large, identifiable, exogenous demand shift for DC fibre services. HTRO is positioned in the mid-market niche (Tier-2 cloud, regional DCs, enterprise). Q4-25 +62% organic is early-stage confirmation.\n\n**Secondary setup: Corporate Change EPSU/EPT** — New CEO (ex-Ahlsell, M&A specialist), 3-segment reorganisation, SEK 120m cost programme, decentralised M&A engine targeting 3-6 acquisitions/year.\n\n**Setup verdict at Triaging: Plausibly present.** Change forces confirmed; outputs showing; moat question outstanding."
+            }
+          ]
+        }
+      ]
+    },
+    "D": {
+      "letter": "D",
+      "title": "COMPONENTS",
+      "applicable": true,
+      "inline_verdict": "10 INVALIDATION ACHs armed with HTRO-specific triggers; 3 KOQs for ESA",
+      "default_open": false,
+      "subsections": [
+        {
+          "id": "D.I.1",
+          "title": "KDICs — Key Drivers of Investment Case",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "**FULCRUM #1: DC segment competitive moat durability** — Can HTRO's mid-market DC services niche sustain 20%+ organic growth and 15%+ margins against Corning/Prysmian pivot? KD Rating: YELLOW."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**FULCRUM #2: M&A execution quality** — Requires 3-6 acquisitions/year at 5-7x EBITDA with successful integration. Weterings closure (acquired 2021 for EUR 5.6m, closed 2025) is a capital destruction flag. KD Rating: ORANGE."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KEY DRIVER #3: FTTH recovery trajectory** — BEAD impact timing (H2-26 per mgmt, 2027 per SS). Fibre Solutions margin rebound from 6.4% to 10% target. KD Rating: YELLOW."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KEY DRIVER #4: CEO quality (Fröberg)** — 12 months in; conservative guidance reset + Q3-Q4 beats. M&A background (Ahlsell) is relevant. Untested in fibre industry downturn. KD Rating: YELLOW."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KEY DRIVER #5: EPS bridge to 2028** — SEK 515m EBITA (7.2% margin, 2025) → SEK 1.32bn EBITA (12%, 2028). 2.6x growth required. Achievable if DC sustains + M&A executes + costs land. KD Rating: YELLOW."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "D.I.2",
+          "title": "KHF/As — Key Hygiene Factors / Assumptions",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "I",
+                  "text": "**KHF-1: Balance sheet health.** Net debt SEK 1,582m, leverage 1.9x EBITDA. Covenant headroom adequate. No immediate refinancing risk."
+                },
+                {
+                  "iaja": "I",
+                  "text": "**KHF-2: Cash conversion.** Q4-25 operating cash flow conversion 235%. Strong WC management (inventory -SEK 144m, AR -SEK 94m). Payback on restructuring ~1.1 years."
+                },
+                {
+                  "iaja": "I",
+                  "text": "**KHF-3: Governance.** No controlling shareholder (largest: Handelsbanken Fonder 9.3%). Board + mgmt own ~13%. Erik Selin related-party lease (SEK 7m/year) is minor. No red flags."
+                },
+                {
+                  "iaja": "A",
+                  "text": "**KA-1: Assumption — hyperscaler capex sustains.** Modal case assumes 15% CAGR in cloud DC market over N5Y. If AI monetisation disappoints, capex could pause (bear case trigger)."
+                },
+                {
+                  "iaja": "A",
+                  "text": "**KA-2: Assumption — HTRO can acquire at 5-7x EBITDA.** If PE buyers inflate DC service company multiples, M&A engine stalls."
+                },
+                {
+                  "iaja": "A",
+                  "text": "**KA-3: Assumption — Fibre Solutions stabilises at 10% EBITA.** Requires cost programme delivery + BEAD-driven volume recovery. If overcapacity persists, margin stays at 6-7%."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "D.I.3",
+          "title": "KCs/KUs — Key Confusions & Unknowns",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "**KC-1: DC switching costs.** No disclosed customer lock-in periods. Microduct is not proprietary — CommMesh, Corning, others offer similar systems. 'Flexibility' helps the customer, not HTRO. Is the moat real or perceived?"
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KC-2: M&A integration model.** Decentralised integration (preserving entrepreneurial culture) works at small scale. Does it scale to 12+ acquisitions over 3 years without creating coordination failure?"
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KC-3: FTTH structural floor.** Is the FTTH business permanently impaired (negative terminal growth per Redeye bear case) or cyclically depressed with secular catch-up in US/UK/Germany?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "D.I.4",
+          "title": "KRs — Key Concerns / Risks",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "**KR-1: DC boom-bust risk.** Redeye explicitly warns DC hyperscaler demand shares FTTH boom-bust characteristics. If capex pauses, HTRO's DC segment could decelerate from +37% to <10% within 2-3 quarters. Probability: 20-30% over N2Y."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KR-2: Customer concentration.** Top 10 = ~50% of sales. Loss or procurement shift by 1-2 major hyperscalers could cause a revenue miss of 5-10%."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KR-3: Corning/Prysmian competitive pivot.** If Tier-1 carrier demand stalls, these giants redirect excess capacity and salesforce to Tier-2/3 alt-nets — HTRO's core customer base. Scale advantage is overwhelming in a price war."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KR-4: CEO execution risk.** Fröberg lacks fibre industry experience. 12 months is insufficient to judge turnaround capability in a structurally challenged segment."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KR-5: FX headwinds.** Strong SEK vs USD/EUR erodes translated revenue. 9% negative FX impact on sales in late 2025."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KR-6: Glass preform supply vulnerability.** Not vertically integrated. Relies on third-party glass producers. If synchronised demand boom hits, supply shortages could cap revenue growth."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KR-7: LEO satellite substitution.** Starlink/Amazon Kuiper receiving BEAD funding eligibility. Gen-3 satellites at 1 Tbit/s could narrow fibre performance gap in rural/remote markets, capping FTTH TAM."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "D.I.5",
+          "title": "KPOs — Key Positive Optionality",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "**KPO-1: BEAD acceleration.** If US fibre deployment ramps faster than expected, Fibre Solutions could recover to mid-teens margins, adding SEK 200-300m incremental EBITA."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KPO-2: Edge DC proliferation.** Next wave of infrastructure (distributed edge DCs closer to end users) could extend DC growth runway beyond 2028. HTRO's local service model is well-positioned for fragmented edge deployment."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KPO-3: Multiple re-rating on mix shift.** As DC/HE reaches 50% of revenue, the blended multiple should re-rate from FTTH-legacy 10-12x toward services 15-18x. This is the biggest source of TSR asymmetry."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KPO-4: Defence budget escalation.** Geopolitical tensions (Iran, Russia) could accelerate NATO defence spending beyond 2% commitments, providing additional HE segment tailwind."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "D.II.1",
+          "title": "10 standard ACH invalidation scenarios",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bluf",
+              "text": "_{10_INVALIDATION_ACHS} **Live-case invalidation discipline.** These ten one-strike rules apply __while we own this case__ and are explicitly different from the screening thresholds used for new investments. Any single trip → __APM escalates to Richard__ with a sell/trim recommendation; no waiting for a second confirmation. State of each threshold is tracked below._"
+            },
+            {
+              "type": "prose",
+              "text": "**Single-event invalidations (rules 1–5)** — fundamental triggers that fire on a single condition."
+            },
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "text": "**1. Top-line invalidation** — One __probable or actual near-term revenue cut__ to SS/G caused by an exogenous problem. HTRO-specific: DC segment organic growth drops below +10% for two consecutive quarters, OR Fibre Solutions revenue declines >15% YoY without BEAD offset.",
+                  "iaja": "J",
+                  "state": "not-armed"
+                },
+                {
+                  "text": "**2. Cockroach invalidation** — __One actual AND one probable__, OR __three probable/likely__ current/near-term problems. HTRO-specific: (i) M&A write-down (second Weterings-type capital destruction), (ii) DC customer loss (top-3 hyperscaler terminates or significantly reduces procurement), (iii) FTTH overcapacity worsens despite cost programme.",
+                  "iaja": "J",
+                  "state": "not-armed"
+                },
+                {
+                  "text": "**3. Ditherer invalidation** — __Deterioration in operator assessment__ AND one or more problems. HTRO-specific: CEO Fröberg loses credibility (guidance miss >20%, strategic reversal on DC pivot, unexplained departure of key DC segment leaders) AND concurrent FTTH deterioration or DC deceleration.",
+                  "iaja": "J",
+                  "state": "not-armed"
+                },
+                {
+                  "text": "**4. Cyclical invalidation** — __SP underperformance of 15% or 3M__ FOLLOWED BY a plausible+ near-term revenue cut caused by threshold+ exogenous problem. HTRO-specific: SP drops below SEK 24 (15% from ~SEK 28) FOLLOWED BY hyperscaler capex freeze or BEAD programme cancellation/major reallocation to satellite.",
+                  "iaja": "J",
+                  "state": "not-armed"
+                },
+                {
+                  "text": "**5. NT/MT one-two invalidation** — __SP underperformance of 15% or 3M__ FOLLOWED BY any probable/actual near-term profit cut. HTRO-specific: SP drops below SEK 24 FOLLOWED BY Fibre Solutions margin falling below 5% or DC margin contracting below 12% (profitability squeeze from either segment).",
+                  "iaja": "J",
+                  "state": "not-armed"
+                }
+              ]
+            },
+            {
+              "type": "prose",
+              "text": "**SP-conditional & composite invalidations (rules 6–10)** — sequence-dependent triggers (price action × fundamentals)."
+            },
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "text": "**6. Wisdom of crowd invalidation** — __SP underperformance of 15% or 3M__ FOLLOWED BY any plausible+ VF or actual SM threshold+ concerns re. __mid/long-term growth, margins, SRCAs__ or predictability thereof. HTRO-specific: SP <SEK 24 FOLLOWED BY evidence that DC services lack sustainable competitive advantage (e.g., Corning/Prysmian successfully enter mid-market DC services at scale, margin compression across DC peer group).",
+                  "iaja": "J",
+                  "state": "not-armed"
+                },
+                {
+                  "text": "**7. Market catch-up with our existential concerns invalidation** — __VF plausible+ threshold+ concerns__ re. mid/long-term growth/margins/SRCAs FOLLOWED BY __SP underperformance of 15% or 3M__. HTRO-specific: Watson identifies DC boom-bust pattern confirmation (e.g., hyperscaler order cancellations, DC services pricing deflation >10%) FOLLOWED BY SP <SEK 24.",
+                  "iaja": "J",
+                  "state": "not-armed"
+                },
+                {
+                  "text": "**8. Narrow frame invalidation** — __Peerset underperformance of 15% or 3M__ FOLLOWED BY any __actual cut/problem__. HTRO-specific: HTRO underperforms Nordic mid-cap industrials peer group by >15% FOLLOWED BY actual earnings cut, M&A write-down, or customer loss.",
+                  "iaja": "J",
+                  "state": "not-armed"
+                },
+                {
+                  "text": "**9. SS EEG invalidation** — __[2]% or greater SS EPS cuts__ AND __SP underperformance of 15% or 3M__ (either order). HTRO-specific: consensus EPS cut of ≥2% (i.e., from SEK 2.25 to SEK 2.20 or below) combined with SP <SEK 24.",
+                  "iaja": "J",
+                  "state": "not-armed"
+                },
+                {
+                  "text": "**10. Case outputs/attributes invalidation** — __[8] or more case-output thresholds at D or F__. HTRO-specific: if 8+ of the IC#1 output CQs/TCs degrade to D or F ratings (e.g., EPS growth <5%, no upgrade path, multiple de-rates to <10x, case navigability collapses), the thesis is fundamentally broken regardless of SP.",
+                  "iaja": "J",
+                  "state": "not-armed"
+                }
+              ]
+            },
+            {
+              "type": "summary",
+              "text": "_Escalation protocol: when a threshold trips, APM (i) records the trip in the case file with date and evidence, (ii) re-rates the affected pillar(s), (iii) escalates with __trigger evidence, thesis impact, recommended action__ (sell / trim X% / hold-with-tighter-stop) and reasoning chain, and (iv) flips the state in this section to TRIPPED. This sits __upstream of__ the 30-Day Shot Clock — the shot clock applies for deterioration without a tripped threshold; once a threshold trips, APM acts._"
+            }
+          ]
+        },
+        {
+          "id": "D.II.2",
+          "title": "Plausible fundamental invalidation thresholds",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "**Plausible invalidation scenarios (not yet ACH-level, but watchlist):**\n\n(i) AI monetisation disappointment — if hyperscaler revenue growth from AI products disappoints (e.g., Meta/Google AI ad revenue plateaus), capex could be cut 20-30%, directly impacting DC fibre demand. Plausibility: 15-20% over N2Y.\n\n(ii) FTTH permanent impairment — if North American FTTH demand never recovers to 2022 levels and BEAD is substantially reallocated to satellite/FWA, Fibre Solutions becomes a structurally declining business. Bear case terminal margin: 4-5% EBIT. Plausibility: 25-30% over N3Y.\n\n(iii) M&A multiple inflation — PE competition for DC service companies inflates acquisition multiples to 10-12x EBITDA, making HTRO's 5-7x target unachievable and stalling the inorganic growth engine. Plausibility: 20% over N2Y."
+            }
+          ]
+        },
+        {
+          "id": "D.II.3",
+          "title": "Short sellers & negative sentiment",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "iaja": "I",
+              "text": "**Short seller coverage:** No documented short-seller campaigns from major activist firms. No specific short interest data available. Shareholder base: institutional long-only dominated (Handelsbanken Fonder 9.3%, Accendo Capital 5.9%, pension funds)."
+            },
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "**ESA-depth bear case assessment: ORANGE credibility.** The bear case is fundamentally operational, not accounting-driven: (i) FTTH boom-bust is confirmed fact — profit warning July 2025, SEK 299m restructuring charges, Fibre Solutions EBITA collapsed to 5.2% in Q4-25. (ii) DC boom-bust is speculative but credible — Redeye explicitly warns; hyperscaler capex patterns are historically volatile. (iii) Redeye bear case models SEK 12-15/share (40-50% downside), terminal growth -2% to -3%, EBIT margin 4-5%. (iv) Quality of earnings concern: non-GAAP adjustments increasing — SEK 202m in Q3-25, SEK 97m in Q4-25. Adjusted vs reported EBITA gap widening."
+            },
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "**ESA counter-assessment:** (i) DC segment is accelerating, not contracting — directly contradicts bear thesis at current juncture. (ii) Cash conversion is exceptional (235% Q4-25) — suggests earnings quality is understated, not overstated. (iii) Non-GAAP adjustments are explicable (one-time restructuring of known operations) — not suspicious. (iv) No governance red flags (related-party lease is SEK 7m/year, immaterial). (v) Historical ROIC volatility is a legitimate structural concern but reflects FTTH cyclicality, not management fraud. **Net assessment: bears have a plausible downside scenario but no smoking gun. The bet against HTRO is a cyclicality bet, not an integrity bet.**"
+            }
+          ]
+        },
+        {
+          "id": "D.III.1",
+          "title": "KOQs — Key Open Questions",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "**KOQ-1: DC switching costs — real or perceived?** Need ESA-depth evidence of customer lock-in: contract lengths, proprietary integration, service dependency, reference customer interviews. This is the moat question."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KOQ-2: M&A pipeline quality.** What is the actual pipeline? How many targets identified? At what multiples? What is the integration failure rate historically? Weterings is a flag — is it an outlier or a pattern?"
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KOQ-3: Fröberg's DC expertise.** Does the CEO understand the DC services market specifically, or is he applying an industrial wholesale playbook (Ahlsell) to a technology services market? What is his view on the boom-bust risk?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "D.III.2",
+          "title": "KAs — Key Actions",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "**KA-1: Monitor Q1-26 DC organic print (April 2026).** >+30% = conviction-building → consider upsize to 2.0%. <+15% = KC-1 moat concern escalates → hold size, re-assess at Q2."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KA-2: Track first post-Fröberg M&A deal.** When announced: check (i) target EV/EBITDA multiple, (ii) strategic fit (DC services? geography?), (iii) funding (cash flow funded or debt-funded?). Compare to Weterings as calibration."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KA-3: Run Minervini 8-point technical.** Confirm Stage 1→2 transition. Set alerts at SEK 24 (ACH zone) and SEK 32 (breakout)."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KA-4: Check Corning/Prysmian Q1-26 results for mid-market commentary.** If either signals pivot to Tier-2/3 DC services, KC-1 moat risk escalates."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KA-5: Check BEAD state allocation data.** Track % allocated to fibre vs satellite/FWA. If fibre share drops below 60%, KR-7 LEO substitution risk escalates."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KA-6: Request Richard track-record check.** Any parallels with Fasadgruppen/XVIVO on Nordic mid-cap illiquidity? Market cap SEK 5.8bn is above XVIVO but liquidity gate should be explicitly assessed."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "E": {
+      "letter": "E",
+      "title": "ACTIONS",
+      "applicable": true,
+      "inline_verdict": "PROCEED — starter position (1.0-1.5%) justified at SEK ~28; sizing gates at Q1-26 DC print and first M&A deal",
+      "default_open": true,
+      "subsections": [
+        {
+          "id": "E.I",
+          "title": "Summary judgement",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "callout",
+              "tone": "verdict",
+              "iaja": "J",
+              "text": "**ESA VERDICT: PROCEED with starter position (1.0-1.5%).** The Hexatronic investment case passes ESA with a C+ (upper) IC rating. The Demand-Driven EPSU/EPT setup is confirmed present — DC segment organic growth (+37% FY25, +62% Q4), asset-light economics (12-14% NWC, 1% capex), and 15.3% EBITA margin all verified. The services pivot is real and measurable. Valuation offers genuine asymmetry: probability-weighted fair value SEK 53-55 (55-60% upside) vs bear case SEK 12-15 (40-50% downside). R/R is favourable at starter size."
+            },
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "**Gates for upsizing beyond 1.5%:**\n(1) Q1-26 DC organic print >+30% — confirms momentum sustained post-comp normalisation.\n(2) First post-Fröberg M&A deal at stated 5-7x EBITDA with clear DC-services strategic rationale.\n(3) Fibre Solutions margin stabilises above 7% in Q1-26 (cost programme delivery confirmed).\n\n**Sizing trajectory:** 1.0-1.5% starter at ESA pass → +1% on first confirming DC print → +1% on first M&A deal → cap 3% until DD complete.\n**Stop-loss:** -15% vs entry OR any ACH-trip (whichever first).\n\n**Why not higher conviction?** M&A execution remains ORANGE. The Weterings write-off shows HTRO can destroy capital. Until we see 2-3 post-2025 acquisitions deliver at stated multiples with verifiable ROI, the M&A engine is an assumption, not a fact. This is the difference between C+ and B-."
+            }
+          ]
+        },
+        {
+          "id": "E.II",
+          "title": "If compelling — actions",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "Run ESA-depth analysis on KD#1 (DC moat) and KD#2 (M&A execution). These are the fulcrum questions."
+                },
+                {
+                  "iaja": "J",
+                  "text": "Monitor Q1-26 DC organic print (expected April 2026). >+30% = conviction-building; <+15% = reassess."
+                },
+                {
+                  "iaja": "J",
+                  "text": "Run Minervini 8-point technical analysis and confirm Stage 1→2 transition status."
+                },
+                {
+                  "iaja": "J",
+                  "text": "If ESA passes: upsize to 2.0-2.5% on first confirming DC print + first M&A deal at claimed multiples. Cap at 3% until DD complete."
+                },
+                {
+                  "iaja": "J",
+                  "text": "Set price alerts: SEK 24 (ACH trigger zone), SEK 32 (breakout above recent range)."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "E.III",
+          "title": "If uncompelling — actions",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "If ESA fails (DC moat ORANGE, M&A execution RED): park to watchlist. Re-trigger if: (i) DC organic sustains >30% for 4 consecutive quarters, (ii) M&A track record improves (3+ deals with disclosed ROI), (iii) FTTH recovery materialises."
+                },
+                {
+                  "iaja": "J",
+                  "text": "If DC boom-bust materialises: trim immediately to zero. Do not wait for recovery. FTTH cycle history shows 2+ year trough duration."
+                },
+                {
+                  "iaja": "J",
+                  "text": "Alternative exposure: consider PRY (Prysmian) or NKT for cable/connectivity theme with better scale and vertical integration. Lower upside but lower risk."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "F": {
+      "letter": "F",
+      "title": "APPENDICES",
+      "applicable": true,
+      "inline_verdict": "Basic checks pass; no red flags",
+      "default_open": false,
+      "subsections": [
+        {
+          "id": "F.I",
+          "title": "Basic checks",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "kv_grid",
+              "title": "Quick reference — HTRO (Hexatronic Group AB)",
+              "rows": [
+                {
+                  "label": "Ticker",
+                  "value": "HTRO-SE (Nasdaq Stockholm Mid Cap)"
+                },
+                {
+                  "label": "Currency",
+                  "value": "SEK"
+                },
+                {
+                  "label": "Market cap",
+                  "value": "SEK 5.8bn (~EUR 0.5bn)"
+                },
+                {
+                  "label": "Enterprise value",
+                  "value": "SEK 7.4bn"
+                },
+                {
+                  "label": "Share price",
+                  "value": "~SEK 28"
+                },
+                {
+                  "label": "Shares outstanding",
+                  "value": "209.5m"
+                },
+                {
+                  "label": "30-day avg volume",
+                  "value": "1,728K shares/day"
+                },
+                {
+                  "label": "Net debt",
+                  "value": "SEK 1,582m (1.9x EBITDA)"
+                },
+                {
+                  "label": "Dividend",
+                  "value": "None (reinvesting in growth + M&A)"
+                },
+                {
+                  "label": "Largest shareholder",
+                  "value": "Handelsbanken Fonder 9.3%"
+                },
+                {
+                  "label": "Board + mgmt ownership",
+                  "value": "~13%"
+                },
+                {
+                  "label": "Segments",
+                  "value": "Fibre Solutions (65%), Data Center (20%), Harsh Environment (15%)"
+                },
+                {
+                  "label": "2028 targets",
+                  "value": "SEK 11bn revenue, 12% EBITA margin"
+                },
+                {
+                  "label": "CEO",
+                  "value": "Rikard Fröberg (since March 2025, ex-Ahlsell/Ansell)"
+                },
+                {
+                  "label": "Employees",
+                  "value": "~2,500 across 18 facilities in 9 countries"
+                },
+                {
+                  "label": "FY end",
+                  "value": "December"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "F.II",
+          "title": "Supplementary notes",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "iaja": "I",
+              "text": "**Research coverage:** 11 RESEARCHER queries completed (IG: BD [C+AS], CF [C+AS]; Triaging: SS Commentary [AS], KD Assessment [AS]; ESA: BM Primer [C+AS], Earnings History [AS], Short Sellers [C+AS], VC Map [C], VC Analysis [AS], Guidance [AS], KD Assessment ESA [C+AS]). Total word count: ~69,000 across all files. All posted to Notion."
+            },
+            {
+              "type": "prose",
+              "iaja": "A",
+              "text": "**Data gaps at Triaging depth:** (i) No FactSet technical momentum charts — need to confirm Stage 1→2 transition. (ii) No primary source management interviews — relying on earnings call transcripts and press releases. (iii) Limited peer comparison depth — Prysmian and Corning covered qualitatively but not modelled. (iv) Short interest data unavailable. (v) No Richard track-record parallel for Nordic mid-cap fibre plays — check if Fasadgruppen/XVIVO liquidity lessons apply given similar market cap."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,3380 @@
+{
+  "schema_version": "1.0",
+  "ticker": "DIE",
+  "company_name": "D'Ieteren Group SA",
+  "stage": "ESA",
+  "stage_date": "2026-04-24",
+  "authored_by": "Watson (APM)",
+  "driver_terminology": "PRIMARY/SECONDARY/TERTIARY",
+  "header": {
+    "primary_setup": "CfC Margin Expansion — Belron ADAS recalibration penetration (42%→55%) driving margin expansion from 23% to >25% EBIT by 2028; ADAS is secular tailwind, Belron is 80% of group value",
+    "primary_setup_verdict": "B-",
+    "secondary_setup": "Event-Driven IPO Optionality — Belron IPO at €30-32bn EV (H2 2026), Rothschild mandated; D'Ieteren retains majority stake; valuation crystallisation + capital structure improvement",
+    "conviction": "B — GREEN-YELLOW. Belron franchise quality confirmed at ESA depth (world #1 VGRR, insurer moat, ADAS secular tailwind). Margin expansion thesis credible but narrow-path: ADAS recalibration penetration (42%→55%) plausible, but H1 2025 -260bps compression signals genuine cost headwind. IPO optionality is real (Rothschild mandated, €30-32bn EV). Fulcrum = H1 2026 margin data (Sep 2026) and IPO execution. Upgrade from C+ on confirmed franchise quality and quantified IPO upside.",
+    "time_horizon": "N2-4Y, fulcrum events inside 12m (Belron IPO H2 2026, FY26 H1 margin data Sep 2026), ADAS penetration structural through 2030+"
+  },
+  "sections": {
+    "A": {
+      "letter": "A",
+      "title": "FINANCIALS",
+      "applicable": true,
+      "inline_verdict": "[Left blank — Richard's instruction]",
+      "default_open": false,
+      "applicable_note": null,
+      "word_count": 0,
+      "page_count": 0,
+      "target_words": 0,
+      "subsections": [
+        {
+          "id": "A.I",
+          "title": "Financial summary",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "kv_grid",
+              "title": "Last reported period -- headline",
+              "rows": [],
+              "ratings": []
+            },
+            {
+              "type": "prose",
+              "iaja": "I",
+              "text": "",
+              "ratings": []
+            },
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "A.II.1",
+          "title": "Guidance -- Watson analysis/judgement",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "text": "",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "A.II.2",
+          "title": "Financial estimates -- sell-side -- Watson analysis/judgement",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "text": "",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "A.II.3",
+          "title": "Financial forecasts -- VF modal case -- Watson analysis/judgement",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "text": "",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "A.II.4",
+          "title": "TSR Dupont -- Watson analysis/judgement",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "text": "",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        }
+      ],
+      "financials": {
+        "guidance": [],
+        "ss_estimates": [],
+        "model": {
+          "currency": "EUR m",
+          "hist_years": [
+            "FY22",
+            "FY23",
+            "FY24",
+            "FY25"
+          ],
+          "fwd_years": [
+            "FY26E",
+            "FY27E",
+            "FY28E",
+            "FY29E"
+          ],
+          "guidance_years": [
+            "FY26E",
+            "FY27E"
+          ],
+          "ss_years": [
+            "FY26E",
+            "FY27E",
+            "FY28E"
+          ],
+          "rb_years": [
+            "FY26E",
+            "FY27E",
+            "FY28E",
+            "FY29E"
+          ],
+          "sections": [
+            {
+              "id": "pnl",
+              "label": "P&L",
+              "rows": []
+            },
+            {
+              "id": "fcf",
+              "label": "Free Cash Flow",
+              "rows": []
+            },
+            {
+              "id": "bs",
+              "label": "Balance Sheet",
+              "rows": []
+            }
+          ]
+        },
+        "tsr_dupont": {
+          "stock_name": "DIE — D'Ieteren Group SA",
+          "period_headers": [],
+          "columns": [],
+          "rows": []
+        }
+      }
+    },
+    "B": {
+      "letter": "B",
+      "title": "EXECUTIVE SUMMARY",
+      "applicable": true,
+      "inline_verdict": "Show-me setup with elevated execution risk; Belron margin expansion + IPO optionality provide asymmetric upside if management delivers; progress to ESA with margin credibility as fulcrum gate",
+      "default_open": true,
+      "subsections": [
+        {
+          "id": "B.I.1",
+          "title": "Executive summary",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "callout",
+              "iaja": "J",
+              "text": "Progress to DD P1 (conditional). D'Ieteren is a CfC margin expansion + IPO optionality trade confirmed at ESA depth: Belron (80% of group value) is the world's #1 vehicle glass repair/replacement operator with ADAS recalibration penetration rising from 42% to 55%+ driving margin expansion from 23% toward >25% EBIT by 2028. Belron IPO at €30-32bn EV (H2 2026) would crystallise value and deleverage. ESA confirms franchise quality (insurer moat, ADAS complexity barrier, 30%+ global share in fragmented market) but quantifies the margin recovery risk: H1 2025 cost pressure was real (-260bps), and recovery requires 2-3 quarters of visible margin expansion. Gate for DD: H1 2026 margin data (Sep 2026) must show sequential improvement.",
+              "kind": "verdict"
+            },
+            {
+              "type": "prose",
+              "iaja": "A",
+              "text": "The investment case rests on three legs: (1) Belron margin expansion via ADAS recalibration penetration (42% in 2024→55%+ by 2027, 60-70% gross margin on recal vs 40-50% on traditional replacement, +30-50bps group margin per 500bps penetration gain), (2) Belron IPO optionality at €30-32bn EV (18.8x EBITDA, Rothschild mandated, H2 2026 target) crystallising group NAV discount removal (current 30-40% holding company discount), (3) Capital return via €100m buyback restart + €2.00 dividend (up from €1.60). The fulcrum question is whether Belron's margin expansion to >25% is achievable — H1 2025 showed -260bps operating margin compression from labour cost inflation and marketing spend, creating genuine doubt about the trajectory."
+            },
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "PRIMARY driver: Belron ADAS margin expansion — recalibration penetration 42%→55%+ by 2027 driving margin from 23% toward >25% EBIT by 2028. ADAS commands 15-20% price premiums and 60-70% gross margins. €6.97bn revenue, 17.1m jobs/year, 40-country footprint.",
+                  "sub": [
+                    {
+                      "iaja": "I",
+                      "text": "FY25: Belron organic growth 7.1% (constant FX), operating profit +15.7%, margin expanded to 23.0% (vs 21.2% FY24, +180bps). 47.2% ADAS penetration in 2025 (vs 42% in 2024)."
+                    },
+                    {
+                      "iaja": "A",
+                      "text": "Target: margin >25% by 2028. Gating risk: H1 2025 margin fell -260bps (14.2% vs 16.8%), raising doubts about labour cost absorption. If labour cost inflation >150bps, path to 25% is unrealistic."
+                    }
+                  ]
+                },
+                {
+                  "iaja": "J",
+                  "text": "SECONDARY driver: Belron IPO optionality — Rothschild mandated to explore IPO/sale/hold. €30-32bn EV target (18.8x EBITDA). H2 2026 listing potential. D'Ieteren retains majority stake. Crystallises group NAV discount.",
+                  "sub": [
+                    {
+                      "iaja": "I",
+                      "text": "5 owners (CD&R, HF, GIC, BlackRock, D'Ieteren family). Jefferies upgraded Jan 2026 on improved Belron valuation. Average analyst PT €228 (41-47% upside from €159.60)."
+                    },
+                    {
+                      "iaja": "A",
+                      "text": "IPO at €32bn is high end of comps (18.8x EBITDA vs 10-13x peers). Priced-down IPO (<€28bn) creates 15-20% group equity downside. Delay to 2027 extends leverage uncertainty."
+                    }
+                  ]
+                },
+                {
+                  "iaja": "J",
+                  "text": "TERTIARY driver: Capital return — €100m buyback restarted end-2025, dividend raised to €2.00/share (FY25 vs €1.60), €74/share extraordinary dividend paid Dec 2024. Mechanical EPS accretion.",
+                  "sub": [
+                    {
+                      "iaja": "I",
+                      "text": "€74 extraordinary dividend funded by €4.69bn + €2.05bn additional Belron debt. FCF €373.9m (FY25, down from €740.6m FY24 due to €98.4m additional financing charges)."
+                    },
+                    {
+                      "iaja": "A",
+                      "text": "Capital return constrained by Belron leverage (4.7x, target 4.0-4.5x by 2028). Buyback and dividend subordinate to deleveraging. Not the primary value driver."
+                    }
+                  ]
+                }
+              ],
+              "text": "Key risk: Belron margin expansion is narrow-path. H1 2025 -260bps margin compression signals labour cost inflation (+5-7% YoY wage pressure) outpacing pricing power. North America claims avoidance suppressed organic growth to 0.2% in FY24 — ESA analysis suggests this is cyclical (weather-dependent) not structural, but 2-3 quarters of recovery data needed to confirm. D'Ieteren Auto in structural decline (Belgian market -7.5% FY25) — immaterial to thesis (<5% group value) but creates headline noise. TVH Parts operating profit -14.9%. Moleskine loss-making (€8m loss). These non-core drags are expected and priced in. ESA-depth work confirms: (i) ADAS economics are genuinely accretive (60-70% gross margin on recal vs 40-50% traditional, verified via industry data), (ii) Belron IPO comps support €30-32bn (18.8x EBITDA vs Loxam 12x, Rentokil 16x), (iii) insurer moat is durable (switching costs, certification requirements, scale economics). Rate-limiting factor is pace of margin recovery, not direction."
+            },
+            {
+              "type": "prose",
+              "iaja": "A",
+              "text": "Key risk: Belron margin expansion is narrow-path. H1 2025 -260bps margin compression signals labour cost inflation (+5-7% YoY wage pressure) outpacing pricing power. North America claims avoidance suppressed organic growth to 0.2% in FY24. D'Ieteren Auto in structural decline (Belgian market -7.5% FY25). TVH Parts operating profit -14.9%. Moleskine loss-making (€8m loss). Belron leverage elevated at 4.7x (~€10bn net debt). EV transition creating structural repair volume headwind (15-25% lower accident rates for EVs). Overall: Belron is exceptional but surrounding businesses are drag, leverage is high, and margin expansion path has genuine doubt."
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        }
+      ],
+      "applicable_note": null,
+      "word_count": 0,
+      "page_count": 0,
+      "target_words": 0
+    },
+    "C": {
+      "letter": "C",
+      "title": "REQUIRED ATTRIBUTES",
+      "applicable": true,
+      "inline_verdict": "C+ overall — Belron franchise quality exceptional, ADAS tailwind confirmed, but margin expansion credibility uncertain and holding company complexity/leverage are drags",
+      "default_open": true,
+      "applicable_note": null,
+      "word_count": 0,
+      "page_count": 0,
+      "target_words": 0,
+      "subsections": [
+        {
+          "id": "C.I",
+          "title": "Ratings (graphical form)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "ratings_table",
+              "id": "ratings-overview",
+              "title": "Ratings — all six pillars, Required Attribute Families, TCs, Required Attributes and Core Questions (DIE, Triaging)",
+              "word_target": 0,
+              "has_toggle": true,
+              "toggle_labels": [
+                "RATINGS ONLY",
+                "SUMMARIES"
+              ],
+              "default_mode": "SUMMARIES",
+              "default_expansion": "full",
+              "rows": [
+                {
+                  "level": "pillar",
+                  "id": "p1",
+                  "label": "P1: Technical Strength",
+                  "rating": "C",
+                  "summary": "SP ~€159.60, mixed technical picture. Post-extraordinary dividend distortion. MAs uncertain. Estimated 5-6/9 Minervini PASS. Stage unclear — post-event consolidation."
+                },
+                {
+                  "level": "family",
+                  "id": "p1.mn",
+                  "label": "Minervini dimensions (8 point + extension)",
+                  "rating": "C",
+                  "summary": "Estimated 5-6 of 9 PASS. Post-€74 extraordinary dividend in Dec 2024 distorts chart. MA alignment uncertain. Need FactSet confirmation."
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d1",
+                  "label": "D1: Price > 200D MA",
+                  "rating": "PASS",
+                  "summary": "SP ~€159.60 likely above 200D MA. Belron IPO optionality and record FY25 results providing support."
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d2",
+                  "label": "D2: 200D MA trending up (≥1M)",
+                  "rating": "PASS",
+                  "summary": "200D MA likely trending upward since late 2025 on Belron record results and IPO announcement."
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d3",
+                  "label": "D3: Price > 150D MA",
+                  "rating": "PASS",
+                  "summary": "SP likely above 150D MA. Mid-term trend constructive on Belron optionality narrative."
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d4",
+                  "label": "D4: 150D > 200D MA",
+                  "rating": "PASS",
+                  "summary": "150D MA likely above 200D MA — constructive alignment. Post-extraordinary dividend pattern normalising."
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d5",
+                  "label": "D5: 50D > 150D MA",
+                  "rating": "UNCERTAIN",
+                  "summary": "50D vs 150D MA uncertain — Belron IPO speculation creates short-term volatility. Need FactSet data."
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d6",
+                  "label": "D6: Price > 50D MA",
+                  "rating": "UNCERTAIN",
+                  "summary": "SP vs 50D MA uncertain — recent range-bound trading around €159-165. Need FactSet confirmation."
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d7",
+                  "label": "D7: Price > 30% above 52W low",
+                  "rating": "PASS",
+                  "summary": "SP likely 30%+ above 52W low. Strong recovery from 2024 lows driven by Belron record results and IPO optionality."
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d8",
+                  "label": "D8: Price within 25% of 52W high",
+                  "rating": "UNCERTAIN",
+                  "summary": "SP vs 52W high uncertain — post-extraordinary dividend creates distortion. Need FactSet data for adjusted highs."
+                },
+                {
+                  "level": "check",
+                  "id": "p1.mn.d9",
+                  "label": "D9: RS Rank ≥70 (provisional)",
+                  "rating": "FAIL",
+                  "summary": "RS Rank not confirmed — need FactSet. Holding company discount and diversified structure may suppress relative strength vs sector peers."
+                },
+                {
+                  "level": "pillar",
+                  "id": "p2",
+                  "label": "P2: Fit for Market Paradigm",
+                  "rating": "C",
+                  "summary": "Mixed paradigm fit. ADAS/auto tech is relevant but DIE is a holding company not a pure-play. Auto distribution is structural headwind. Defensive Belron franchise provides stability but not thematic momentum."
+                },
+                {
+                  "level": "paradigm",
+                  "id": "p2.1",
+                  "label": "Paradigm 1: Late bull / early bear market",
+                  "rating": "B",
+                  "summary": "Belron is defensive-growth hybrid — non-discretionary repair demand, insurer-backed revenue. D'Ieteren Auto and TVH cyclically exposed. Net: moderate defensiveness from Belron dominance."
+                },
+                {
+                  "level": "paradigm",
+                  "id": "p2.2",
+                  "label": "Paradigm 2: AI demand / disruption",
+                  "rating": "C",
+                  "summary": "No direct AI exposure. ADAS is tech-adjacent (camera recalibration) but not an AI play. No thematic momentum from AI/data centre capex cycle."
+                },
+                {
+                  "level": "paradigm",
+                  "id": "p2.3",
+                  "label": "Paradigm 3: Oil, stagflation, recession, rising rates",
+                  "rating": "C",
+                  "summary": "Belron volume sensitive to macro (claims frequency, consumer behaviour). Auto cyclically exposed. Rising rates negative for Belron leverage (€10bn debt). Insurance premium inflation creates claims avoidance headwind."
+                },
+                {
+                  "level": "pillar",
+                  "id": "p3",
+                  "label": "P3: Fundamental Case (Outputs)",
+                  "rating": "C",
+                  "summary": "ESA confirms CfC setup is credible but narrow-path. ADAS margin economics validated. IPO optionality real. Upgrade thesis from 'possible' to 'probable if H1 2026 confirms'. Fulcrum = Sep 2026 H1 margin data."
+                },
+                {
+                  "level": "family",
+                  "id": "p3.ic1",
+                  "label": "IC#1: Required Case OUTPUTS",
+                  "rating": "B",
+                  "summary": "Belron margin expansion via ADAS recalibration confirmed at ESA depth. Penetration economics validated (60-70% gross margin on recal vs 40-50% traditional). H1 2025 -260bps compression is cost-driven, not structural demand weakness. Path to >25% EBIT credible but narrow."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic1.tc1",
+                  "label": "TC: Strong financial profile?",
+                  "rating": "C",
+                  "summary": "€8.6bn revenue, adj PBT €955.6m (FY25, -10.3% reported, +3.8% underlying). Belron 23% EBIT margin (record). FCF €373.9m. Belron leverage 4.7x. Mixed."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc1.a1",
+                  "label": "A1: Sufficient longevity of case (baton)?",
+                  "rating": "C",
+                  "summary": "ADAS penetration provides 3-5 year secular tailwind (42%→55%+). But fleet EV transition creates structural headwind (15-25% lower accident rates). Longevity present but with offsetting forces."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc1.q1",
+                  "label": "Q1: Three-year, mid-term, triple ratchet step-up?",
+                  "rating": "C",
+                  "summary": "Partial triple ratchet: (1) Volume: Belron 7.1% organic FY25, claims normalising. (2) Margin: ADAS mix +180bps FY25 but H1 compression. (3) Multiple: IPO conditional. Two legs present, third binary."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc1.a2",
+                  "label": "A2: Sufficient growth rate?",
+                  "rating": "C",
+                  "summary": "Low-mid single-digit PBT growth guided for FY26. Belron carrying growth, Auto/TVH dragging. Not a high-growth story — 2-5% PBT CAGR. Insufficient without IPO optionality."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc1.q2",
+                  "label": "Q2: 12-20% EPS growth p.a.?",
+                  "rating": "C",
+                  "summary": "Unlikely. Consensus 18.9% EPS growth vs 1.7% revenue CAGR. Relies on margin expansion + financial engineering simultaneously. Realistic: 5-8% EPS CAGR if margin expansion delivers."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc1.a3",
+                  "label": "A3: Sufficient improvement in financials?",
+                  "rating": "C",
+                  "summary": "Belron margin expanded +180bps in FY25. Record operating profit. But H1 2025 -260bps compression. Auto margins pressured. TVH -14.9%. Improvement concentrated in Belron only."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc1.q3",
+                  "label": "Q3: Margin/growth step-up?",
+                  "rating": "C",
+                  "summary": "Belron margin step-up confirmed (23% FY25) but sustainability questioned. Growth step-up from ADAS real. Auto/TVH/Moleskine have no step-up. Net: Belron only."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic1.tc2",
+                  "label": "TC: Acceptable case setup?",
+                  "rating": "C",
+                  "summary": "CfC Margin Expansion via ADAS credible but narrow. IPO optionality as secondary event-driven setup is interesting but binary. Acceptable but execution-dependent."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc2.a4",
+                  "label": "A4: Sufficient setup fit?",
+                  "rating": "C",
+                  "summary": "Moderate fit. CfC margin expansion from ADAS recognised. Event-driven IPO interesting. But holding company with 3 declining businesses dilutes thesis purity. Not a clean EPSU/EPT."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc2.q4",
+                  "label": "Q4: Fit with required setups?",
+                  "rating": "C",
+                  "summary": "CfC with execution risk. ADAS margin expansion is primary but not classic EPSU (growth rate too low) or EPT (no earnings power transition). Event-driven IPO supplementary."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc2.a5",
+                  "label": "A5: Goldilocks timeliness?",
+                  "rating": "C",
+                  "summary": "Potentially well-timed. Rothschild mandated Mar 2026. FY25 record Belron results. But claims avoidance normalisation is assumption not confirmed. Entry risk: buying before margin credibility proved."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc2.q5",
+                  "label": "Q5: Post CfC clearing / SP turn?",
+                  "rating": "C",
+                  "summary": "CfC partially clearing — Belron FY25 record results and IPO optionality are positive. But margin compression and NA weakness unresolved. Not fully cleared yet. SP +18% 12M reflects some clearing."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc2.q6",
+                  "label": "Q6: Less than 6M after turn?",
+                  "rating": "C",
+                  "summary": "Belron FY25 record results released Mar 2026 (within 2M). Rothschild mandate announced Mar 2026. Timing is current. Not a stale inflection."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic1.tc3",
+                  "label": "TC: Sufficient case navigatability?",
+                  "rating": "B",
+                  "summary": "Navigable. Belron reports quarterly (organic growth, ADAS penetration, margins). Belgian auto monthly registrations. Insurance market indicators. IPO timeline trackable. Good data availability."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc3.a6",
+                  "label": "A6: Sufficiently trackable, updatable, and invalidatable early?",
+                  "rating": "B",
+                  "summary": "Good trackability. Quarterly Belron data (organic growth, ADAS penetration, margin). Monthly Belgian auto registrations. Insurance pricing data (US, quarterly). IPO status via Rothschild/press."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc3.q7",
+                  "label": "Q7: Helpful IR re. operating momentum?",
+                  "rating": "C",
+                  "summary": "Not yet assessed. Belgian holding company IR likely professional. CEO Deprez (ex-McKinsey) investor-friendly. Belron disclosure improving ahead of potential IPO."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc3.q8",
+                  "label": "Q8: Trackable key leading indicators?",
+                  "rating": "B",
+                  "summary": "Good. ADAS penetration % (quarterly), Belron organic growth (quarterly), claims frequency data, Belgian auto registrations (monthly), equipment rental indicators, Belron IPO press. All public."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic1.tc4",
+                  "label": "TC: Earnings upgrades?",
+                  "rating": "C",
+                  "summary": "Mixed. FY25 reported PBT -10.3% (headline miss). Underlying +3.8%. SS tone cautious. No strong upgrade cycle. Upgrades conditional on Belron margin delivery."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc4.a7",
+                  "label": "A7: Sufficient earnings upgrades / beats?",
+                  "rating": "C",
+                  "summary": "No current upgrade cycle. FY25 PBT declined -10.3%. Belron operational beat masked by financing. SS estimates flat. Upgrades require margin delivery and IPO execution."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc4.q9",
+                  "label": "Q9: Modal case 18M EPS > guidance > SS?",
+                  "rating": "C",
+                  "summary": "Uncertain. Management guides low-mid SG PBT growth. SS consensus aligned. VF modal potentially 5-10% above if Belron margin expands faster. Downside equally plausible."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc4.q10",
+                  "label": "Q10: 3:1 SS/G EPS raise/lower skew NFY?",
+                  "rating": "C",
+                  "summary": "No clear positive skew. SS tone cautious. Jefferies upgrade balanced by conservative consensus elsewhere. Need FactSet for revision data. Neutral skew at best."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic1.tc5",
+                  "label": "TC: Limited drawdown risk?",
+                  "rating": "C",
+                  "summary": "Moderate drawdown risk. ~11.4x P/E reasonable but IPO delay/failure could trigger 15-20% drawdown. Belron margin miss = multiple compression. Leverage amplifies downside."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc5.a8",
+                  "label": "A8: Sufficiently robust / bankable multiple?",
+                  "rating": "C",
+                  "summary": "~11.4x 2026E P/E, analyst target €228 assumes high-case. If Belron margin ceiling 21-22% and IPO delayed, fair value €130-150 (20-25% downside). Multiple not bankable."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc5.q11",
+                  "label": "Q11: Multiple more company that exogenously driven?",
+                  "rating": "C",
+                  "summary": "Primarily company-driven via Belron execution and IPO optionality. Holding company discount structural (market-driven). Balance: 60% company, 40% structural/exogenous."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic1.tc5.a9",
+                  "label": "A9: Sufficient returns?",
+                  "rating": "C",
+                  "summary": "Base case: 2-5% PBT CAGR + 2% dividend = 4-7% annual TSR. Bull: 15-20% TSR (IPO + margin). Bear: -10-15%. Asymmetry interesting but base case returns modest."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic1.tc5.q12",
+                  "label": "Q12: More than 20% 3Y TSR?",
+                  "rating": "C",
+                  "summary": "Achievable on bull case only. Bull: 25-35% 3Y TSR. Base: 10-15% 3Y TSR. Below 20% threshold on modal case."
+                },
+                {
+                  "level": "family",
+                  "id": "p3.ic2",
+                  "label": "IC#2: Required Case INPUTS",
+                  "rating": "B",
+                  "summary": "Belron IPO at €30-32bn EV (18.8x EBITDA) confirmed by Rothschild mandate and comparable analysis. ESA work validates NAV discount removal (30-40% → 15-20% post-IPO). Event-driven catalyst with defined H2 2026 timeline."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic2.tc1",
+                  "label": "TC: Sufficient change forces?",
+                  "rating": "C",
+                  "summary": "Moderate. ADAS penetration secular but slowing. Insurance normalisation uncertain. No major transformation, no catalytic M&A. IPO is structural not operational. Change forces present but not overwhelming."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic2.tc1.q1",
+                  "label": "Q1: External change forces / tailwinds?",
+                  "rating": "C",
+                  "summary": "ADAS fleet penetration rising (40-50% of European fleet). Insurance claims normalising after 2025 avoidance. EU auto glass market growing. But EV headwind, claims avoidance risk recurring, Belgian auto declining."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic2.tc1.q2",
+                  "label": "Q2: Internal change forces?",
+                  "rating": "C",
+                  "summary": "Limited. No major M&A (Belron tuck-ins only). No transformation programme beyond Fit for Growth. CEO Deprez stable since 2019. IPO is structural not operational. D'Ieteren Auto managing decline not growth."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic2.tc2",
+                  "label": "TC: Sufficient base (to build a strong case on)?",
+                  "rating": "B",
+                  "summary": "Excellent Belron base — world #1, 40 countries, 17.1m jobs/year, insurer relationships, ADAS technical leadership, €6.97bn revenue. Scale moat real and widening. Surrounding businesses weak but Belron base outstanding."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic2.tc2.q3",
+                  "label": "Q3: Absence of external headwinds?",
+                  "rating": "C",
+                  "summary": "Multiple headwinds. EV transition reducing accident frequency. Claims avoidance from insurance premium inflation. Belgian auto declining (-7.5%). Equipment rental softening. FX headwinds (55% USD). Material headwinds."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic2.tc2.q4",
+                  "label": "Q4: (Well-invested base?)",
+                  "rating": "B",
+                  "summary": "Belron well-invested — 40 countries, 30,000+ employees, brand portfolio (Autoglass/Carglass/Safelite), ADAS calibration equipment, mobile fleet. D'Ieteren Auto dealer network mature. Infrastructure solid."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic2.tc2.q5",
+                  "label": "Q5: Thesis congruency with past/present?",
+                  "rating": "B",
+                  "summary": "Good congruency. D'Ieteren has owned Belron since 2007, grown from regional to global #1. Family ownership since 1805. Consistent portfolio strategy. Belron ADAS push is natural extension."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic2.tc2.q6",
+                  "label": "Q6: Large CfC/mispricing?",
+                  "rating": "C",
+                  "summary": "Moderate. Holding company discount (30-40%) well-understood. IPO could remove discount but market already pricing some. Real mispricing conditional on margin expansion AND IPO execution."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic2.tc2.q7",
+                  "label": "Q7: Low trading multiple?",
+                  "rating": "C",
+                  "summary": "~11.4x 2026E P/E optically cheap but holding company discount structural and justified. Adjusted for Belron-only, valuation is fair-to-full. Not deeply cheap."
+                },
+                {
+                  "level": "family",
+                  "id": "p3.ic3",
+                  "label": "IC#3: Required Case SETUPS",
+                  "rating": "C",
+                  "summary": "CfC margin expansion from ADAS. Event-driven IPO optionality. No unacceptable setup overlap. But not classic EPSU/EPT — growth rate too low, no earnings power transition. Acceptable but not textbook."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic3.tc1",
+                  "label": "TC: Mechanical EPS upgrades from mis-modelling?",
+                  "rating": "C",
+                  "summary": "Limited mis-modelling. SS consensus well-informed on Belron. ADAS margin impact possibly underestimated but H1 margin compression also under-modelled. Net: modest positive skew."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic3.tc1.a1",
+                  "label": "A1: Mis-modelled, high-quality EPS upgrader?",
+                  "rating": "C",
+                  "summary": "Unlikely high-quality upgrader. SS models well-calibrated. EPS 18.9% consensus relies on margin + financial engineering — ambitious. Mis-modelling gap modest."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc1.a1.q1",
+                  "label": "Q1: Is EPS consensus >10% below our estimate?",
+                  "rating": "C",
+                  "summary": "Unlikely. Consensus and guidance aligned. VF modal might be 5% above if ADAS margin accelerates, equally 5% below if H1 pattern persists. No clear gap."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc1.a1.q2",
+                  "label": "Q2: What specific line items are mis-modelled?",
+                  "rating": "C",
+                  "summary": "(1) ADAS recalibration margin contribution possibly underestimated. (2) H1 2025 labour cost inflation possibly under-modelled as structural. (3) Belron IPO — binary event not well-modelled."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc1.a1.q3",
+                  "label": "Q3: Is the modelling gap structural or one-off?",
+                  "rating": "C",
+                  "summary": "ADAS margin gap structural (penetration rising annually). Labour cost gap may be structural too. Net: moderate structural gap in both directions — not clearly positive or negative."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic3.tc2",
+                  "label": "TC: Idiosyncratic, exogenous inflection?",
+                  "rating": "C",
+                  "summary": "No major exogenous inflection. ADAS is gradual (secular not inflection). IPO is company-driven. No market-wide demand explosion for glass repair. Steady-state franchise not inflection story."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic3.tc2.a1",
+                  "label": "A1: Big demand change-driven EPSU or EPT?",
+                  "rating": "C",
+                  "summary": "No. ADAS is mix shift within existing demand, not demand explosion. Glass repair demand mature, tied to fleet size/accident frequency. No demand step-up. Margin expansion story not demand growth."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc2.a1.q1",
+                  "label": "Q1: Is there a market-wide demand explosion?",
+                  "rating": "C",
+                  "summary": "No. Glass repair market mature. Volume growth low single digit. ADAS adds price/mix not volume. EV transition may reduce TAM. No demand explosion."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc2.a1.q2",
+                  "label": "Q2: Does the company hold a dominant competitive position?",
+                  "rating": "B",
+                  "summary": "Yes. Belron is world #1 in VGRRR. 40 countries, 17.1m jobs/year. Insurer relationships and ADAS technical leadership create defensible moat. Dominant position confirmed."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc2.a1.q3",
+                  "label": "Q3: Is the business model one-to-many scalable?",
+                  "rating": "C",
+                  "summary": "Partially. Service network scales via M&A tuck-ins. But each job requires technician labour — not software-scalable. ADAS adds tech complexity favouring scale. Moderate scalability."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc2.a1.q4",
+                  "label": "Q4: Is the market an oligopoly (structure AND behaviour)?",
+                  "rating": "C",
+                  "summary": "Not traditional oligopoly. Belron dominant but market fragmented (independents, OEM networks, regional). Auto Glass Brands expanding. Market = #1 + many small players. Intensity rising."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc2.a1.q5",
+                  "label": "Q5: Is there fixed cost leverage for margin expansion?",
+                  "rating": "B",
+                  "summary": "Yes. Belron's 40-country footprint has high fixed costs. Volume on existing network delivers operating leverage. ADAS adds revenue per job on existing capacity. Confirmed by 23% EBIT margin."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic3.tc3",
+                  "label": "TC: Huge internal push/improvement?",
+                  "rating": "C",
+                  "summary": "No huge internal push. Fit for Growth incremental (50-100bps). No transformative M&A. IPO is structural not operational improvement. Internal change modest."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic3.tc3.a1",
+                  "label": "A1: Strong internal changes driven EPSU / EPT?",
+                  "rating": "C",
+                  "summary": "No. ADAS externally driven. Fit for Growth incremental. M&A tuck-in only. No transformative internal change agent. IPO is value crystallisation not operational improvement."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc3.a1.q1",
+                  "label": "Q1: Is management credible on execution?",
+                  "rating": "B",
+                  "summary": "Yes. CEO Deprez (ex-McKinsey, since 2019) disciplined. Belron CEO Hicks delivered record FY25. €74 dividend executed cleanly. Portfolio management shows competence. Credible operators."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc3.a1.q2",
+                  "label": "Q2: What is the specific internal change programme?",
+                  "rating": "C",
+                  "summary": "Incremental only. Belron: ADAS + Fit for Growth. Auto: manage decline. TVH: ride cycle. Moleskine: turnaround attempt. No step-change roadmap. Steady improvement not transformation."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc3.a1.q3",
+                  "label": "Q3: What is the track record of delivery so far?",
+                  "rating": "C",
+                  "summary": "Belron FY25 is early win — record results, +180bps margin. But H1 2025 -260bps is early miss. Mixed signals. Auto margin held but market declining. TVH deteriorated."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic3.tc4",
+                  "label": "TC: Clearing of (idiosyncratic) negative sentiment?",
+                  "rating": "C",
+                  "summary": "Some clearing. Post-Encore Wire acquisition uncertainty has faded with FY25 delivery. PoC accounting concerns partially addressed. Not a primary setup driver."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic3.tc4.a1",
+                  "label": "A1: Oversold/rebounding quality compounder?",
+                  "rating": "C",
+                  "summary": "Not oversold — SP near highs. Quality compounder credentials emerging as Transmission margins and backlog demonstrate structural advantage. Not a rebound play."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc4.a1.q1",
+                  "label": "Q1: Is the negative sentiment idiosyncratic or sector-wide?",
+                  "rating": "C",
+                  "summary": "Limited negative sentiment. Integration concerns are company-specific. Sector sentiment is positive (energy transition). Not a sentiment-clearing setup."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc4.a1.q2",
+                  "label": "Q2: Is the underlying business quality intact despite sentiment?",
+                  "rating": "B",
+                  "summary": "Quality intact and improving. Record EBITDA, growing backlog, oligopoly positioning confirmed. Business quality is a strength not a concern."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc4.a1.q3",
+                  "label": "Q3: What specific catalyst clears the overhang?",
+                  "rating": "C",
+                  "summary": "No major overhang. Ongoing integration delivery will further clear any residual M&A uncertainty. Each quarterly synergy update reduces risk."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic3.tc4.a2",
+                  "label": "A2: Huge CfC clearing event in solid quality?",
+                  "rating": "NR",
+                  "summary": "N/A. No huge CfC to clear. Integration risk is ongoing not event-driven."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc4.a2.q1",
+                  "label": "Q1: Is there a specific clearing event identified?",
+                  "rating": "NR",
+                  "summary": "N/A."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc4.a2.q2",
+                  "label": "Q2: Is business quality sufficient to justify rebound post-clearing?",
+                  "rating": "NR",
+                  "summary": "N/A."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic3.tc5",
+                  "label": "TC: Standard exogenous reversion to mean?",
+                  "rating": "N/A",
+                  "summary": "Not applicable. DIE is not a mean-reversion play. Belron ADAS penetration is a secular structural shift, not cyclical. Auto distribution margins are stable. No mean-reversion setup exists."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic3.tc5.a1",
+                  "label": "A1: Mean-reverting quality business post-temporary headwind?",
+                  "rating": "NR",
+                  "summary": "N/A. No temporary headwind — demand is structurally rising."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc5.a1.q1",
+                  "label": "Q1: Is the headwind genuinely temporary?",
+                  "rating": "NR",
+                  "summary": "N/A."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc5.a1.q2",
+                  "label": "Q2: What is the normalised earnings level to revert to?",
+                  "rating": "NR",
+                  "summary": "N/A."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc5.a1.q3",
+                  "label": "Q3: Is the quality of the franchise intact through the headwind?",
+                  "rating": "NR",
+                  "summary": "N/A."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p3.ic3.tc5.a2",
+                  "label": "A2: Trough-on-trough turn in solid quality cyclical?",
+                  "rating": "NR",
+                  "summary": "N/A."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc5.a2.q1",
+                  "label": "Q1: Are earnings genuinely at trough?",
+                  "rating": "NR",
+                  "summary": "N/A."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc5.a2.q2",
+                  "label": "Q2: Is business quality sufficient to hold through the full cycle?",
+                  "rating": "NR",
+                  "summary": "N/A."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc5.a2.q3",
+                  "label": "Q3: What leading indicators confirm the cyclical turn?",
+                  "rating": "NR",
+                  "summary": "N/A."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic3.tc6",
+                  "label": "TC: Does not overlap with unacceptable setup?",
+                  "rating": "N/A",
+                  "summary": "No overlap. DIE is not a declining industry, commodity spec, or accounting manipulation. Belron is global #1 in VGRR with secular ADAS tailwind. D'Ieteren Auto is stable distributor. No red-flag pattern match."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc6.q1",
+                  "label": "Q1: Does the case avoid any of the unacceptable setup patterns?",
+                  "rating": "PASS",
+                  "summary": "Yes. Not a structural decliner, not a commodity play (cable manufacturing not commodity trading), not accounting-driven, not a management vanity project. Clear of all unacceptable patterns."
+                },
+                {
+                  "level": "tc",
+                  "id": "p3.ic3.tc7",
+                  "label": "TC: Does not overlap with false friend setup?",
+                  "rating": "PASS",
+                  "summary": "No overlap. Demand cycle is structural (government-mandated grid spend). M&A track record is genuine (General Cable proof point). Not a cyclical masquerading as structural."
+                },
+                {
+                  "level": "question",
+                  "id": "p3.ic3.tc7.q1",
+                  "label": "Q1: Does the case avoid any of the false friend setup patterns?",
+                  "rating": "PASS",
+                  "summary": "Yes. Not a false turnaround (20+ year cable consolidation track record). Not financial engineering (real operational synergies). Demand is government-mandated not cyclical sentiment. Clear of false friend patterns."
+                },
+                {
+                  "level": "pillar",
+                  "id": "p4",
+                  "label": "P4: Fundamental Case (Inputs)",
+                  "rating": "B",
+                  "summary": "Business quality confirmed at ESA depth. Belron franchise quality exceptional (world #1, insurer moat, ADAS barrier). Holding company structure is the constraint, not Belron quality."
+                },
+                {
+                  "level": "family",
+                  "id": "p4.bb1",
+                  "label": "BB#1: Simplicity Guardrails",
+                  "rating": "B",
+                  "summary": "Belron has genuine economic moat via insurer network effects, ADAS recalibration complexity, OEM certification requirements, and scale economics. Moat is widening as ADAS penetration rises and independent capability gap grows."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb1.tc1",
+                  "label": "TC: Narrowly focused bet?",
+                  "rating": "B",
+                  "summary": "Deprez disciplined operator not visionary. €74 dividend executed cleanly. Belron Hicks record operational performance. TVH struggling with cycle. Moleskine in turnaround. Net: strong at group level."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb1.tc1.q1",
+                  "label": "Q1: 2 or less fulcrum drivers and 4 or less key drivers?",
+                  "rating": "B",
+                  "summary": "Good. Healthcare-equivalent disposal, Belron grown to global #1, €74 dividend, buyback restarted. Capital allocation disciplined. Strategic direction (Belron focus) clear and consistent."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb1.tc2",
+                  "label": "TC: Narrow perimeter?",
+                  "rating": "B",
+                  "summary": "Family ownership provides genuine long-term alignment. De Spoelberch family multi-generational owners. Management incentives tied to group performance. Strong skin in the game."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb1.tc2.q2",
+                  "label": "Q2: 10 or less geographies x business units?",
+                  "rating": "C",
+                  "summary": "No. 50+ countries x 4 segments = 200+ cells. Far exceeds 10. But Transmission (the case driver) is concentrated in a few large projects. Tracking complexity is manageable for the fulcrum segment."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb1.tc3",
+                  "label": "TC: No headwinds?",
+                  "rating": "B",
+                  "summary": "Minimal headwinds to core thesis. Copper price is pass-through. Digital Solutions weak but immaterial to thesis. No structural revenue headwinds to Transmission or Electrification."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb1.tc3.q3",
+                  "label": "Q3: Zero value chain headwinds to revenue?",
+                  "rating": "B",
+                  "summary": "Near-zero for Transmission (demand exceeds supply). Digital Solutions has telecom capex softness (minor). Electrification has some cyclical sensitivity. No structural headwinds to the core cable demand thesis."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb1.tc4",
+                  "label": "TC: Narrow range of issues?",
+                  "rating": "B",
+                  "summary": "2 CfCs: (1) Integration execution risk (two large deals simultaneously), (2) capacity oversupply by 2028-30. Within the 2 guideline."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb1.tc4.q4",
+                  "label": "Q4: 2 or less CfCs or problems?",
+                  "rating": "B",
+                  "summary": "2 CfCs: (1) M&A integration execution (two large US deals simultaneously), (2) HV cable capacity oversupply by 2028-30 (NKT Karlskrona + Nexans expansion). Meets guideline."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb1.tc5",
+                  "label": "TC: Conservative IR?",
+                  "rating": "B",
+                  "summary": "FY25 beat guidance, suggesting conservatism. FY26 guidance range €2.625-2.775bn is wide enough to allow beat. Track record of guidance beats supports conservatism thesis."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb1.tc5.q5",
+                  "label": "Q5: Company confirms conservative guidance?",
+                  "rating": "B",
+                  "summary": "Likely. FY25 delivered above initial guidance. Management gave FY26 range — wide enough for beat. General Cable synergies exceeded targets. Pattern suggests conservative guidance culture."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb1.tc6",
+                  "label": "TC: Clear investment case?",
+                  "rating": "B",
+                  "summary": "Very clear. Structural HV cable demand → backlog → revenue/margin growth → EPS upgrades. Synergies → additional EPS accretion. Two-lever case is simple and measurable."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb1.tc6.q6",
+                  "label": "Q6: Clear strategy-to-EPS trans. mechanism?",
+                  "rating": "B",
+                  "summary": "Crystal clear. HV backlog → Transmission revenue growth (39% organic) → 20%+ margins → EBITDA growth. Encore Wire synergies (€140-160m) → cost savings → EPS accretion. Both mechanisms are measurable and trackable."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb1.tc7",
+                  "label": "TC: Trackable case drivers?",
+                  "rating": "B",
+                  "summary": "Highly trackable. Order intake, backlog, synergy milestones, peer results (NKT/Nexans), EU TYNDP pipeline, data centre starts. All public data with quarterly updates."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb1.tc7.q7",
+                  "label": "Q7: Clear VC/Co inputs-to-EPS trans. mechanism?",
+                  "rating": "B",
+                  "summary": "Yes. Grid investment → HV cable orders → backlog → revenue. EU Green Deal/IRA → demand volume. Copper price → revenue (pass-through, margin neutral). Synergies → cost reduction → margin. All trackable."
+                },
+                {
+                  "level": "family",
+                  "id": "p4.bb2",
+                  "label": "BB#2: Foundation Quality",
+                  "rating": "B",
+                  "summary": "Belron BtE confirmed strong at ESA depth. ADAS recalibration requires OEM certification, specialised training, and expensive equipment. Insurance network relationships are sticky (multi-year contracts). Scale economics in mobile fleet and technician training."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb2.tc1",
+                  "label": "TC: Great operator?",
+                  "rating": "B",
+                  "summary": "Belron operationally excellent — record FY25, 18 acquisitions, ADAS expansion. D'Ieteren Auto: managing decline competently. TVH: execution challenges in soft market. Net: strong Belron, weak surrounding."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc1.a1",
+                  "label": "A1: Right direction?",
+                  "rating": "B",
+                  "summary": "Belron: 7.1% organic growth, +15.7% OP, 23% margin — all records. 18 M&A tuck-ins. Auto: margin maintained 5.1% in declining market. Strong track record operationally."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a1.q1",
+                  "label": "Q1: Big, big ambition/vision (force; growth as priority)",
+                  "rating": "B",
+                  "summary": "Belron: record across all metrics. Margin +180bps. ADAS managed effectively. Global operations coordinated. Auto: maintained share in declining Belgian market. Strong operational DNA."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a1.q2",
+                  "label": "Q2: Great, smart strategy and right, bold strategic choices",
+                  "rating": "C",
+                  "summary": "Belron consistent but H1 2025 -260bps breaks trend. Full-year recovered but intra-year volatility real. Auto: consistent decline management. TVH: inconsistent (FY24 +30.5% → FY25 +1.1%). Mixed."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc1.a2",
+                  "label": "A2: Right resources?",
+                  "rating": "B",
+                  "summary": "Strong. Belron tuck-in M&A (18 deals FY25). €74 dividend funded cleanly. Buyback restart. 31 years dividend growth. Leverage targets communicated. Disciplined allocator."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a2.q1",
+                  "label": "Q1: Great CEO (measured via action, not conjecture)",
+                  "rating": "B",
+                  "summary": "Belron: 18 acquisitions FY25, all tuck-ins. TruRoad integration successful. Track record excellent on tuck-ins. No large transformative deals recently — tuck-in discipline."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a2.q2",
+                  "label": "Q2: Hiring well is a top CEO priority + CEO has built a strong team",
+                  "rating": "B",
+                  "summary": "Strong. €74 extraordinary dividend executed cleanly. Regular dividend raised to €2.00 (31 years growth). €100m buyback restarted. Capital return disciplined and meaningful."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a2.q3",
+                  "label": "Q3: Entire business is well-resourced/well-invested",
+                  "rating": "C",
+                  "summary": "Belron: 7.1% organic + 18 M&A = balanced. Auto: organic decline (-5.5%). TVH: stall (+1.1%). Group heavily dependent on Belron for both organic and inorganic. Unbalanced at group level."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a2.q4",
+                  "label": "Q4: Holistic, congruent culture + alignment across the business",
+                  "rating": "C",
+                  "summary": "Belron reinvestment via M&A generating acceptable returns. But €4.69bn leverage at Belron to fund €74 dividend raises questions about reinvestment vs extraction. Returns on incremental debt questionable."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a2.q5",
+                  "label": "Q5: Conservative guidance (buffer)",
+                  "rating": "C",
+                  "summary": "Mixed. FCF €373.9m (FY25) down from €740.6m — financing charges drove decline. Trading CF solid. TVH working capital normalising. Adequate."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a2.q6",
+                  "label": "Q6: Clear, straightforward and helpful communication",
+                  "rating": "B",
+                  "summary": "Capital-light model (mobile vans, depot infrastructure). Limited capex at Belron. Auto capex minimal. TVH warehouse-intensive. Overall capex discipline strong — Belron not capital-intensive."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc1.a3",
+                  "label": "A3: Right record/action/behaviour/forward movement?",
+                  "rating": "B",
+                  "summary": "Belron: excellent. Non-discretionary repair, insurer-backed, recurring, ADAS moat. Auto: distributor declining. TVH: niche cyclical. Moleskine: consumer discretionary. Business model quality is Belron."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a3.q1",
+                  "label": "Q1: High RONIC capital allocation",
+                  "rating": "B",
+                  "summary": "Belron: high recurring revenue from accident frequency and fleet ageing. Insurer contracts. ADAS mandatory recalibration. Non-discretionary. Good visibility."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a3.q2",
+                  "label": "Q2: Acts not just talks (recent record of huge delivery)",
+                  "rating": "C",
+                  "summary": "Belron: insurer concentration risk — top insurers represent significant % (not disclosed). NA dependent on State Farm, Geico, Progressive. Concentration real but not critical given scale."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a3.q3",
+                  "label": "Q3: Track record of delivery (not missing/justifying)",
+                  "rating": "B",
+                  "summary": "Belron: pricing discipline confirmed — +3-4% price/mix FY25. ADAS 15-20% price premiums. Insurer relationships stable. Auto: VW pass-through. Belron pricing power genuine."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a3.q4",
+                  "label": "Q4: Outlier standards, driving higher/faster/better",
+                  "rating": "C",
+                  "summary": "Belron 23% EBIT structurally high but H1 2025 -260bps reveals vulnerability to labour costs. Path to 25% narrow. Auto margins compressing. TVH declining. Sustainability is key debate."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a3.q5",
+                  "label": "Q5: Shareholders first > management",
+                  "rating": "C",
+                  "summary": "Trading CF strong. FCF down 50% due to financing. If Belron EBITDA slows and interest stays elevated, FCF undershoots €50-80m annually. Cash conversion constrained by leverage."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a3.q6",
+                  "label": "Q6: Dynamic repurchaser of SBBs + enlightened capital allocation",
+                  "rating": "B",
+                  "summary": "Belron: asset-light (mobile vans, telematics, depots). Limited capex intensity. Auto: asset-light distributor. TVH: warehouse-intensive. Overall relatively asset-light."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc1.a3.q7",
+                  "label": "Q7: Prudent governance/scaffolding",
+                  "rating": "B",
+                  "summary": "Belron: high stickiness via insurer partnerships, brand recognition, ADAS certification, convenience. Switching costs real for insurers. Consumer side: brand preference moderate."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb2.tc2",
+                  "label": "TC: Advantaged business + widening SRCA?",
+                  "rating": "B",
+                  "summary": "Strong and widening moat. HV/subsea cable oligopoly (3 players). BtE massive (cable-laying vessels, factory lead times, project references). Widening as demand exceeds supply capacity."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc2.a1",
+                  "label": "A1: Strong operational/competitive advantages?",
+                  "rating": "B",
+                  "summary": "Exceptional in Transmission. Oligopoly with massive BtE. Submarine cable vessels, factory certifications, project references create formidable moat. Customer lock-in via multi-year project commitments."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a1.q1",
+                  "label": "Q1: Customer-related moats",
+                  "rating": "B",
+                  "summary": "Strong. Multi-year HV cable contracts with utilities and grid operators. Switching costs are enormous (project redesign, qualification, timeline risk). Reference projects create barriers for new entrants."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a1.q2",
+                  "label": "Q2: Production-related moats",
+                  "rating": "B",
+                  "summary": "Exceptional. Submarine cable factories require 3-5 year lead time. Cable-laying vessels cost €500m+. Only 3 companies globally with full HV/subsea capability. Production moat is the strongest dimension."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a1.q3",
+                  "label": "Q3: Scale advantage moats",
+                  "rating": "B",
+                  "summary": "Global #1 with broadest product range and geographic footprint. Scale provides procurement advantage (copper/aluminium), manufacturing flexibility, and project execution capability. Largest by revenue and capacity."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a1.q4",
+                  "label": "Q4: Regulatory/political moats",
+                  "rating": "B",
+                  "summary": "Moderate regulatory moat. HV cable projects require extensive certification and environmental approval. Government-mandated grid spend creates demand certainty. EU energy security policy favours domestic producers."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a1.q5",
+                  "label": "Q5: Culture/knowledge moats",
+                  "rating": "B",
+                  "summary": "Significant. Submarine cable engineering is specialised knowledge accumulated over decades. Project execution expertise (installation, commissioning) creates institutional knowledge barrier. R&D in HV/EHV technology."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a1.q6",
+                  "label": "Q6: High relative scale (to competitors, other actors)",
+                  "rating": "B",
+                  "summary": "Global #1. Larger than NKT (Danish, pure-play) and Nexans (French). Encore Wire adds US #2 building wire. Relative scale advantage across cable categories. Dominant position."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a1.q7",
+                  "label": "Q7: Large realistic TAM (to facilitate 12-20% p.a. growth)",
+                  "rating": "B",
+                  "summary": "Massive. EU Green Deal €584bn grid investment. US IRA $369bn. Data centre power infrastructure growing 20%+ p.a. Global cable TAM >€100bn and growing structurally. Sufficient for sustained double-digit growth."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc2.a2",
+                  "label": "A2: Strong operational outputs?",
+                  "rating": "B",
+                  "summary": "Transmission margins 20.2% exceptional. Group margin 14.2% solid for industrial. Oligopoly pricing power in HV. Copper pass-through limits gross margin analysis but operating margins are strong."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a2.q1",
+                  "label": "Q1: High SCU",
+                  "rating": "B",
+                  "summary": "Strong in VGRR. Calibration precision, mobile service reliability, and ADAS recalibration capability are critical for insurers and OEMs. Belron's NPS scores and OEM certifications create service quality differentiation vs independent shops."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a2.q2",
+                  "label": "Q2: Leading or non-inferior RSCU (hard to prove)",
+                  "rating": "B",
+                  "summary": "Leading. Independent VGRR operators struggle with ADAS recalibration complexity — Belron's investment in training, tooling, and OEM partnerships creates widening capability gap. Each new ADAS-equipped model year deepens the moat."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a2.q3",
+                  "label": "Q3: High, utilised pricing power (2% nominal+)",
+                  "rating": "B",
+                  "summary": "Strong in Transmission. Oligopoly with demand exceeding supply = pricing power. 20.2% margins confirm pricing is being utilised. Metal price adjustment clauses protect from copper volatility."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a2.q4",
+                  "label": "Q4: Scale economies shared",
+                  "rating": "B",
+                  "summary": "Partially. Competitive pricing in building wire/electrification segments. HV pricing reflects oligopoly premium. Scale economies in procurement shared selectively to maintain market position."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc2.a3",
+                  "label": "A3: Strong financial outputs?",
+                  "rating": "B",
+                  "summary": "EBITDA margin 14.2% (record), Transmission 20.2%. FCF €1.3-1.4bn guided. ROCE improving as Transmission mix increases. Capital-intensive but returns at current utilisation are strong."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a3.q1",
+                  "label": "Q1: 12-20% EPS growth + revenue growth",
+                  "rating": "B",
+                  "summary": "Base case 5-8% EPS CAGR. Revenue growth driven by organic Transmission (+39% Q3) + Encore Wire consolidation. Potentially 10-15% EPS growth with full synergy realisation. Revenue growth visible."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a3.q2",
+                  "label": "Q2: Immediate scope to deploy 20%+ of sales in capital",
+                  "rating": "B",
+                  "summary": "Yes. Encore Wire + Channell represent ~$4.85bn deployed. Capex on Transmission capacity expansion. R&D in HV technology. Capital deployment opportunities abundant relative to earnings."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a3.q3",
+                  "label": "Q3: High post-tax RONIC (25-30%+)",
+                  "rating": "C",
+                  "summary": "Transmission RONIC likely strong given 20.2% margins on capacity-constrained assets. Group RONIC diluted by capital-intensive lower-margin segments. Below 25-30%+ threshold on blended basis. Strong for industrial."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a3.q4",
+                  "label": "Q4: High NI to FCF conversion (80%)",
+                  "rating": "B",
+                  "summary": "FCF €1.3-1.4bn guided vs estimated NI ~€1.0-1.2bn. Good conversion. Working capital tied to copper/project timing can create lumpiness. Structural FCF generation is strong."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a3.q5",
+                  "label": "Q5: Post-tax ROCE of 15%+",
+                  "rating": "B",
+                  "summary": "Likely approaching or exceeding 15% on Transmission assets. Group ROCE diluted by lower-return segments. Post-Encore Wire integration, blended ROCE should improve. Needs ESA confirmation."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a3.q6",
+                  "label": "Q6: Post-tax ROTC of 30%+",
+                  "rating": "C",
+                  "summary": "Unlikely on blended basis. Capital-intensive cable manufacturing does not generate 30%+ ROTC. Transmission segment may approach this given margin levels. Not a high-ROTC business model."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a3.q7",
+                  "label": "Q7: High gross margins",
+                  "rating": "C",
+                  "summary": "Moderate. Revenue includes copper pass-through which depresses reported gross margins. Adjusted for metal, margins are stronger. EBITDA margin 14.2% is solid for industrial. Transmission 20.2% is strong."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a3.q8",
+                  "label": "Q8: Solid EBIT margins (20%+ solid, 25%+ great)",
+                  "rating": "C",
+                  "summary": "Group EBIT margin below 20% threshold. Transmission at 20.2% EBITDA (EBIT somewhat lower after D&A). Capital-intensive industrial — margins are sector-appropriate not sector-leading on group basis."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a3.q9",
+                  "label": "Q9: Genuine fixed cost operating leverage",
+                  "rating": "B",
+                  "summary": "Yes in Transmission. High fixed costs (factories, vessels) provide operating leverage at current utilisation. Volume growth on existing capacity expands margins. Confirmed by Transmission margin expansion to 20.2%."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a3.q10",
+                  "label": "Q10: Low tax rate (below 30%) or other non-obvious advantage",
+                  "rating": "C",
+                  "summary": "Italian corporate tax rate ~24% (IRES) + ~3.9% (IRAP). Effective rate likely ~26-28%. No major tax advantage. Transfer pricing across 50+ countries may provide some flexibility."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc2.a4",
+                  "label": "A4: Gets stronger as it gets bigger/time passes?",
+                  "rating": "B",
+                  "summary": "Yes. Each project reference strengthens competitive position. Scale in procurement compounds. Manufacturing know-how deepens. M&A (General Cable, Encore Wire) creates irreversible scale advantages."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a4.q1",
+                  "label": "Q1: Gravitational/mechanical forces (not just heroics) 1",
+                  "rating": "B",
+                  "summary": "OEM certification library. Each new OEM partnership strengthens Belron's qualification for insurance network inclusion. Insurers prefer certified providers with proven ADAS recalibration capability. Cumulative advantage."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a4.q2",
+                  "label": "Q2: Gravitational/mechanical forces (not just heroics) 2",
+                  "rating": "B",
+                  "summary": "Procurement scale. Copper/aluminium purchasing at global #1 volume provides cost advantage that compounds with each acquisition. Manufacturing footprint diversification reduces project delivery risk."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc2.a5",
+                  "label": "A5: Plausible scope for improvement over mid-term?",
+                  "rating": "B",
+                  "summary": "Strong. Encore Wire synergies (€140-160m). Transmission mix shift to higher margins. Data centre cable as new profit pool. Operational efficiency from scale. Multiple re-rating potential."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a5.q1",
+                  "label": "Q1: Peer precedents",
+                  "rating": "B",
+                  "summary": "NKT's Karlskrona expansion and premium valuation demonstrate market willingness to value HV cable pure-plays at premium multiples. Nexans' struggles provide negative precedent on execution risk."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a5.q2",
+                  "label": "Q2: Big savings/improvements in a few areas",
+                  "rating": "B",
+                  "summary": "Encore Wire synergies (€140-160m) — big, quantified, trackable. Transmission capacity utilisation improvement. Data centre cable as incremental profit pool. Multiple concentrated improvement levers."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a5.q3",
+                  "label": "Q3: Lots of little savings/improvements in many areas",
+                  "rating": "B",
+                  "summary": "Manufacturing efficiency across 50+ plants. Procurement scale improvements from Encore Wire copper volume. Product mix optimisation toward higher-margin cables. Dispersed incremental gains."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc2.a5.q4",
+                  "label": "Q4: Plausibility from congruency with strategy",
+                  "rating": "B",
+                  "summary": "Highly congruent. Transmission focus aligns with structural demand. Encore Wire expands addressable market. Synergy targets derive from proven integration playbook (General Cable precedent). Improvements aligned with strategy."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb2.tc3",
+                  "label": "TC: Favourable value chain dynamics?",
+                  "rating": "B",
+                  "summary": "Highly favourable. Demand exceeds supply (HV cables). Competition is rational oligopoly. Supplier side neutral (copper pass-through). Regulatory tailwind from green policy. Disruption risk low."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc3.a1",
+                  "label": "A1: Demand side — strong/robust or fragile/negative?",
+                  "rating": "B",
+                  "summary": "Exceptional. Structural demand from grid modernisation, energy transition, data centres. Government-mandated spending. €17bn backlog. Multi-decade demand runway. Demand is the strongest pillar."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a1.q1",
+                  "label": "Q1: Customer demand",
+                  "rating": "B",
+                  "summary": "Structural demand explosion. Utilities must invest in grid modernisation (EU Green Deal). Data centre operators need power infrastructure. Offshore wind requires submarine cables. Demand is non-discretionary and government-mandated."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a1.q2",
+                  "label": "Q2: Route to market/intermediaries",
+                  "rating": "B",
+                  "summary": "Direct-to-customer for Transmission (utility/grid operator projects). Distributor channel for Electrification/building wire. Encore Wire adds direct US distribution capability. No intermediary risk on core business."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc3.a2",
+                  "label": "A2: Competitive supportiveness or aggression?",
+                  "rating": "B",
+                  "summary": "Highly supportive in HV/subsea. 3-player oligopoly with rational pricing. Demand exceeds supply. No price warfare. Electrification more competitive but not destructive."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a2.q1",
+                  "label": "Q1: Existing competition",
+                  "rating": "B",
+                  "summary": "Belron is dominant global #1 in VGRR — fragmented competition below. No true oligopoly; Belron holds ~30% global share vs thousands of independents. Safelite (US subsidiary) holds ~30% US share. Rational pricing environment."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a2.q2",
+                  "label": "Q2: Adjacencies entering",
+                  "rating": "B",
+                  "summary": "Very low risk in HV/subsea. Cable-laying vessels, factory certifications, and project references create insurmountable barriers for adjacent entrants. No Chinese HV/subsea entrant credible in EU market."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a2.q3",
+                  "label": "Q3: Vanilla new entrants",
+                  "rating": "B",
+                  "summary": "Minimal risk. 3-5 year factory lead time. €500m+ cable-laying vessel cost. Decades of project reference requirement. BtE in HV/subsea are among the highest in any industrial sector."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a2.q4",
+                  "label": "Q4: Orthogonal / innovative new entrants",
+                  "rating": "B",
+                  "summary": "Low risk. Power cables are physics-constrained — no software disruption. Wireless power transmission is science fiction for grid-scale. HVDC technology evolution favours existing manufacturers. No orthogonal threat identified."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a2.q5",
+                  "label": "Q5: Substitutes / alternatives",
+                  "rating": "B",
+                  "summary": "No substitutes for VGRR when glass is damaged. ADAS recalibration is mandatory post-replacement (safety regulation). Windshield repair (vs replacement) is partial substitute for small chips only — Belron offers both."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc3.a3",
+                  "label": "A3: Disruption forces?",
+                  "rating": "B",
+                  "summary": "Minimal disruption risk. Power cables are physics-constrained infrastructure. No digital disruption threat. Technology evolution (HVDC, superconductors) favours incumbents with R&D capability."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a3.q1",
+                  "label": "Q1: To demand, competition, regulators, suppliers, politics",
+                  "rating": "B",
+                  "summary": "Demand: structurally positive (grid modernisation). Competition: rational oligopoly. Regulators: supportive (EU Green Deal, energy security). Suppliers: neutral (copper pass-through). Politics: bipartisan support for grid investment. No disruption forces identified."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc3.a4",
+                  "label": "A4: Political/regulatory?",
+                  "rating": "B",
+                  "summary": "Strongly supportive. EU Green Deal mandates grid investment. Energy security post-Russia/Iran strengthens imperative. US IRA provides electrification incentives. Political/regulatory environment is the demand driver."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a4.q1",
+                  "label": "Q1: Regulator SWOT",
+                  "rating": "B",
+                  "summary": "Strongly positive. EU energy regulators mandating grid upgrade. ENTSO-E TYNDP provides project pipeline visibility. Environmental regulations favour underground cables over overhead lines. Regulatory environment is a demand catalyst."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a4.q2",
+                  "label": "Q2: Political actor SWOT",
+                  "rating": "B",
+                  "summary": "Bipartisan support. EU: Green Deal + energy security + REPowerEU. US: IRA + bipartisan grid infrastructure need. Grid investment is essential regardless of political orientation. Strong political tailwind."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc3.a5",
+                  "label": "A5: Supportive supplier side?",
+                  "rating": "B",
+                  "summary": "Neutral to supportive. Copper/aluminium supply abundant. Metal price pass-through clauses protect margins. No supplier concentration risk. Logistics for submarine cables is complex but manageable."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc3.a5.q1",
+                  "label": "Q1: Supplier side SWOT",
+                  "rating": "B",
+                  "summary": "Copper supply diversified globally. Metal price adjustment clauses in contracts mean copper cost is pass-through not margin risk. Aluminium emerging as copper substitute in some applications. Supplier side is benign."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb2.tc4",
+                  "label": "TC: Supportive / concentrated industry structure?",
+                  "rating": "B",
+                  "summary": "Belron is dominant #1 globally in VGRR. Competition is fragmented local independents, not concentrated peers. Structure is highly supportive — ADAS complexity raises BtE against independents. Consolidation runway remains significant."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc4.a1",
+                  "label": "A1: Concentrated existing market structure?",
+                  "rating": "B",
+                  "summary": "Belron holds ~30% global VGRR share. Next largest competitors are regional/national (e.g., Glass Doctor, local chains). Top player dominance, not oligopoly. Fragmented tail provides M&A consolidation runway."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a1.q1",
+                  "label": "Q1: This company #1 (or #2)?",
+                  "rating": "B",
+                  "summary": "Global #1 cable manufacturer by revenue. #1 in HV/subsea cable. #2 in US building wire (via Encore Wire). Dominant position across the cable value chain."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a1.q2",
+                  "label": "Q2: Top 5 > 30% share?",
+                  "rating": "B",
+                  "summary": "Yes in VGRR globally. Belron's ~30% global share is dominant in a fragmented market. In US (Safelite), ~30% share. In most European markets, Belron holds #1 or #2 position. Long tail of independents below."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a1.q3",
+                  "label": "Q3: Steep market share distribution curve?",
+                  "rating": "B",
+                  "summary": "Yes in VGRR. Belron is clearly #1 globally with wide gap to next competitor. Market structure is dominant leader + fragmented independents, not tight oligopoly. This is more favourable for pricing power."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc4.a2",
+                  "label": "A2: Concentrating gravitational pull?",
+                  "rating": "B",
+                  "summary": "Yes. Belron has historically grown via acquisition of national VGRR operators (Carglass, Autoglass, Safelite predecessors). Bolt-on M&A of independents continues. ADAS complexity accelerates consolidation toward Belron."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a2.q1",
+                  "label": "Q1: Stability of share over time?",
+                  "rating": "B",
+                  "summary": "Growing via both organic (ADAS upsell, pricing) and M&A (bolt-on independents). Organic share gains from ADAS complexity driving customers away from independents who cannot recalibrate."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a2.q2",
+                  "label": "Q2: New entrants' share?",
+                  "rating": "B",
+                  "summary": "Zero in HV/subsea (3-5 year factory lead time, €500m+ vessels). Chinese entrants exist in MV/LV cables but not competitive in EU HV/subsea market. BtE are structural."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a2.q3",
+                  "label": "Q3: Share consolidates towards largest competitors?",
+                  "rating": "B",
+                  "summary": "Independents investing in basic ADAS tools, but cannot match Belron's scale of OEM relationships, training infrastructure, and mobile fleet. ADAS complexity widens capability gap over time."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a2.q4",
+                  "label": "Q4: Share consolidates to most advantaged competitors?",
+                  "rating": "B",
+                  "summary": "Yes. Belron as global #1 with largest mobile fleet, broadest OEM certification library, and deepest insurance network relationships. Scale advantages compound. Independents face rising capability threshold."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc4.a3",
+                  "label": "A3: Benign competitor attitudes + stability?",
+                  "rating": "B",
+                  "summary": "Benign competitive environment. Belron competes primarily against fragmented independents, not well-capitalised peers. ADAS complexity acts as rising BtE. Insurance network relationships create structural advantage. No price warfare."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a3.q1",
+                  "label": "Q1: Benign-ness?",
+                  "rating": "B",
+                  "summary": "Highly benign. 20%+ Transmission margins confirm rational pricing. Demand exceeds supply so no need for destructive competition. All three players focused on backlog quality not price."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a3.q2",
+                  "label": "Q2: MOL instability or stable attitude?",
+                  "rating": "B",
+                  "summary": "Stable. Oligopoly structure unchanged for decades. NKT expanding (positive for industry discipline). Nexans restructuring (no irrational behaviour). Stable competitive dynamics."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a3.q3",
+                  "label": "Q3: Shark attack if weakness sensed?",
+                  "rating": "B",
+                  "summary": "Low risk. No large well-capitalised competitor exists to challenge Belron. Independents lack scale for predatory pricing. Insurance partnerships create sticky demand. ADAS complexity deters new entrants."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a3.q4",
+                  "label": "Q4: Volume / ROCE prioritisation?",
+                  "rating": "B",
+                  "summary": "ROCE-prioritised. 20.2% Transmission margins confirm margin discipline over volume. Backlog management focuses on project selection not volume maximisation. Rational capital allocation."
+                },
+                {
+                  "level": "attribute",
+                  "id": "p4.bb2.tc4.a4",
+                  "label": "A4: Positive or negative competitiveness trends?",
+                  "rating": "B",
+                  "summary": "Positive. Demand outpacing supply strengthens pricing power. BtE increasing (vessel costs rising, environmental approvals harder). Industry consolidation continuing. All trends favour incumbents."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc4.a4.q1",
+                  "label": "Q1: Positive or negative competitiveness trends?",
+                  "rating": "B",
+                  "summary": "Positive. ADAS penetration rising secularly. BtE increasing via complexity. M&A consolidating fragmented market toward Belron. Insurance partnerships deepening. All structural trends favour dominant incumbent."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb2.tc5",
+                  "label": "TC: High secular / long-term growth potential?",
+                  "rating": "B",
+                  "summary": "Exceptional. Grid modernisation is a multi-decade theme. Data centre buildout secular growth. Offshore wind interconnection growing. EU Green Deal + IRA provide policy floor. Cable demand is structurally growing."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc5.q1",
+                  "label": "Q1: Clear, actionable adjacencies to expand into",
+                  "rating": "B",
+                  "summary": "Data centre power infrastructure. EV charging networks. Battery storage interconnection. Smart grid technology. All natural adjacencies for cable manufacturer. Actionable and growing."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc5.q2",
+                  "label": "Q2: Structurally increasing volume demand",
+                  "rating": "B",
+                  "summary": "Yes. Grid modernisation, energy transition, data centres, offshore wind all driving structurally increasing cable demand. Not cyclical — government-mandated and physics-constrained. Multi-decade growth."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc5.q3",
+                  "label": "Q3: Pricing rising faster than costs/inflation in LT?",
+                  "rating": "B",
+                  "summary": "Yes in HV/subsea. Supply-demand deficit drives pricing above cost inflation. Metal pass-through protects from commodity cost. Pricing power structural while demand exceeds supply."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc5.q4",
+                  "label": "Q4: Historical growth rate at sector/industry level high?",
+                  "rating": "B",
+                  "summary": "Accelerating. Cable industry historically low-growth. Now structurally accelerating with energy transition. HV cable demand growing 15-20% annually. Secular growth inflection underway."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb2.tc6",
+                  "label": "TC: Fit with stock market paradigm / regime / thematic?",
+                  "rating": "B",
+                  "summary": "Excellent paradigm fit. Energy transition infrastructure. AI/data centre adjacency. Energy security. Grid modernisation bipartisan. Fits current market themes well."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb2.tc6.q1",
+                  "label": "Q1: Summarise answer given to that Pillar in C.II.3",
+                  "rating": "B",
+                  "summary": "See P2 paradigm ratings. Late bull/bear: B-. AI: B. Oil/stagflation: B-. Overall paradigm fit B — well-aligned with energy transition, infrastructure, and AI/data centre themes."
+                },
+                {
+                  "level": "family",
+                  "id": "p4.bb3",
+                  "label": "BB#3: Fit for Market Paradigm",
+                  "rating": "C",
+                  "summary": "Mixed. Belron FCF strong (trading CF €482m H1 25) but financing charges consuming €180m+/year. Group FCF down 50%. Belron leverage 4.7x. Balance sheet constrained."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb3.tc1",
+                  "label": "TC: Exit discipline when negatives manifest?",
+                  "rating": "C",
+                  "summary": "Weak. Belron ~€10bn net debt at 4.7x. Group net debt €287m manageable but consolidated leverage opaque. Covenant headroom adequate but limited (5.5-6.0x). Balance sheet stretched."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb3.tc1.q1",
+                  "label": "Q1: Market cycle - downturn",
+                  "rating": "C",
+                  "summary": "Belron: 4.7x (elevated, down from 5.15x). Target 4.0-4.5x by 2028. Group: opaque due to inter-segment loan. Leverage above comfort zone but deleveraging visible."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb3.tc1.q2",
+                  "label": "Q2: AI disruption",
+                  "rating": "C",
+                  "summary": "AI is neutral to positive for DIE. ADAS is AI-adjacent (sensor calibration). Autonomous driving would eventually reduce accidents but timeline is 15-20+ years. Near-term, ADAS complexity increases Belron's value proposition."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb3.tc1.q3",
+                  "label": "Q3: Input cost inflation (Iran)",
+                  "rating": "C",
+                  "summary": "Glass price inflation managed via insurance pass-through pricing. Belron's contracts with insurers allow cost recovery. Iran/geopolitical tensions have minimal direct impact on VGRR demand — auto glass replacement is non-discretionary."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb3.tc1.q4",
+                  "label": "Q4: No overlap with 10x general invalidating ACHs",
+                  "rating": "PASS",
+                  "summary": "No overlap with paradigm invalidation scenarios. Grid investment is structural and bipartisan."
+                },
+                {
+                  "level": "family",
+                  "id": "p4.bb4",
+                  "label": "BB#4: Strenuously Seek-to-Avoid",
+                  "rating": "C",
+                  "summary": "Family-controlled (SPDG). Governance opacity. Complex inter-segment financing. But long-term alignment via multi-generational ownership. ESG risks moderate."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb4.tc1",
+                  "label": "TC: Avoiding invalidation at a trough share price?",
+                  "rating": "C",
+                  "summary": "Family control stable but governance opacity. Complex holding structure. Inter-segment loans. Board adequate but family influence dominant."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb4.tc1.q1",
+                  "label": "Q1: Fundamental SHMLP risks?",
+                  "rating": "C",
+                  "summary": "Board includes independents but family influence dominant via SPDG. CEO is professional manager. Adequate for Belgian standards. Not best-in-class."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb4.tc1.q2",
+                  "label": "Q2: Wide skew in outcomes (low case predictability)?",
+                  "rating": "B",
+                  "summary": "Moderate skew. €17bn backlog narrows outcome range. Oligopoly protects pricing. Integration is the binary risk — success = strong, failure = material write-down. Base case is narrow; tail risks are in integration."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb4.tc2",
+                  "label": "TC: Avoiding large mark-to-market risk?",
+                  "rating": "C",
+                  "summary": "Moderate. No major ESG controversies. Belron mobile fleet carbon footprint. EV transition positive for ADAS but negative for volumes. Overall acceptable."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb4.tc2.q1",
+                  "label": "Q1: Large downside to trough multiple?",
+                  "rating": "C",
+                  "summary": "Low. Glass repair essential service. ADAS improves road safety. Carbon footprint manageable. No regulatory ESG threats. Governance opacity main concern."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb4.tc2.q2",
+                  "label": "Q2: Multiple more influenced by industry than company?",
+                  "rating": "C",
+                  "summary": "Primarily company-driven. Belron margin expansion, ADAS penetration, and IPO timing are the core value drivers. Macro/sector factors (auto parc age, insurance pricing) are secondary. DIE trades on its own fundamentals."
+                },
+                {
+                  "level": "family",
+                  "id": "p4.bb5",
+                  "label": "BB#5: Small Size Constraints",
+                  "rating": "B",
+                  "summary": "Belron is unambiguous global #1 in VGRRR. Sector position is strongest dimension. No close competitor at scale. Insurer relationships and ADAS create widening moat."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb5.tc1",
+                  "label": "TC: Minimise large mark-to-market risk?",
+                  "rating": "B",
+                  "summary": "Belron: unambiguous global leader. 40 countries, 17.1m jobs/year, €6.97bn revenue. Brand portfolio covers key markets. ADAS leadership adds technical dimension. No competitor at scale."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb5.tc1.q1",
+                  "label": "Q1: Sentiment-related SHMLP risks?",
+                  "rating": "B",
+                  "summary": "Dominant #1. Auto Glass Brands tiny vs Belron. Glass America, Novus regional. OEM networks fragmented. No credible challenger to global position."
+                },
+                {
+                  "level": "family",
+                  "id": "p4.bb6",
+                  "label": "BB#6: Invalidating Constraints",
+                  "rating": "C",
+                  "summary": "Growth quality moderate. Belron 7.1% organic includes pricing/mix. Volume growth low SG. Auto declining. TVH stalling. Moleskine declining. Growth concentrated in Belron mix improvement."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb6.tc1",
+                  "label": "TC: Exit discipline when negatives manifest?",
+                  "rating": "C",
+                  "summary": "Belron growth moderate quality — 7.1% organic includes ~4% pricing/mix and ~3% volume. ADAS adds structural mix improvement. Prime jobs growth low (<2%). Group growth Belron-only."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc1.q1",
+                  "label": "Q1: No overlap with 10x general invalidating ACHs",
+                  "rating": "C",
+                  "summary": "Belron: 7.1% organic + 18 M&A. Organic includes pricing/mix — high quality. Inorganic via tuck-ins systematic. Auto: decline. TVH: stall. Group growth quality Belron-only."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb6.tc2",
+                  "label": "TC: Avoiding probable issues hidden under-the-surface?",
+                  "rating": "C",
+                  "summary": "ADAS provides 3-5 year sustainable driver (42%→55%+). But approaching saturation — 50-55% ceiling by 2027. Post-saturation reverts to low SG. EV transition structural headwind beyond 5 years."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc2.q1",
+                  "label": "Q1: No slowing of core engine vs. company's DNA",
+                  "rating": "C",
+                  "summary": "ADAS: 3-5 years of penetration growth remaining. Fleet saturation by 2028-30. EV headwind emerging over 5-10 years. Moderate duration — genuine but not indefinite."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc2.q2",
+                  "label": "Q2: No mediocre CEOs or weird, silly simple choices?",
+                  "rating": "B",
+                  "summary": "No. Battaini is competent. Encore Wire acquisition was bold but strategically sound. General Cable integration executed well. No silly choices identified."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc2.q3",
+                  "label": "Q3: No big 'Hmmms'?",
+                  "rating": "B",
+                  "summary": "One 'Hmmm': simultaneous integration of two large US deals ($4.85bn combined) — can management bandwidth handle both? General Cable precedent is reassuring but scale is larger."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb6.tc3",
+                  "label": "TC: Avoiding mediocrity and obvious risks?",
+                  "rating": "B",
+                  "summary": "Not mediocre. Record EBITDA, 20%+ Transmission margins, €17bn backlog, global #1 position. No obvious risks beyond integration execution. Quality credentials are real."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc3.q1",
+                  "label": "Q1: No to red flags/achilles heel = 2+ Rs?",
+                  "rating": "B",
+                  "summary": "One potential R: PoC accounting risk on long-duration HV projects. Not two. Passes minimum threshold. No achilles heel identified."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc3.q2",
+                  "label": "Q2: No to mediocrity = 8+ Ys?",
+                  "rating": "B",
+                  "summary": "Comfortably passes. Record EBITDA, 20%+ margins, global #1, oligopoly, €17bn backlog, successful M&A track record, structural demand. Quality credentials are strong across multiple dimensions."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb6.tc4",
+                  "label": "TC: Avoiding tough operating environments?",
+                  "rating": "B",
+                  "summary": "Operating environment is exceptionally favourable. Demand exceeds supply. Government-mandated spending. Oligopoly pricing. Not a tough environment — one of the most favourable in industrials."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc4.q1",
+                  "label": "Q1: No recent earnings cuts (unless CfC part of case)?",
+                  "rating": "B",
+                  "summary": "No recent cuts. FY25 record EBITDA beat guidance. FY26 guidance above prior consensus. Earnings trajectory is positive. No cuts identified."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc4.q2",
+                  "label": "Q2: No peers having problems?",
+                  "rating": "C",
+                  "summary": "No direct peer risk analogous to cable sector dynamics. Belron's competition is fragmented independents, not concentrated peers with event risk. Competitive environment is supportive and stable."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb6.tc5",
+                  "label": "TC: Avoid repeating past mistakes/lessons?",
+                  "rating": "C",
+                  "summary": "No overlap with Richard's negative lessons from track record. DIE is a structural quality compounder with event catalyst (IPO), not a cyclical value trap. Holding company discount is well-understood, not a hidden risk."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc5.q1",
+                  "label": "Q1: No overlap with negative lessons and setups?",
+                  "rating": "PASS",
+                  "summary": "No overlap identified. Structural demand cycle with visible backlog is not a failed pattern."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb6.tc5.q2",
+                  "label": "Q2: No fit with unacceptable / false friend setups?",
+                  "rating": "PASS",
+                  "summary": "No fit. Demand is structural (government-mandated). M&A track record genuine (General Cable). Not a cyclical masquerading as structural — backlog confirms duration."
+                },
+                {
+                  "level": "family",
+                  "id": "p4.bb7",
+                  "label": "BB#7: Past Trend / Momentum",
+                  "rating": "C",
+                  "summary": "Elevated risk. Belron leverage 4.7x creates financial risk. IPO binary. Claims avoidance cyclical headwind. EV structural headwind. Auto declining. Multiple risk vectors."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb7.tc1",
+                  "label": "TC: Price momentum?",
+                  "rating": "C",
+                  "summary": "Moderate-to-high. Financial risk (leverage), operational (margin credibility), event (IPO), cyclical (claims avoidance), structural (EV transition). Risk profile elevated for C+ case."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb7.tc1.q1",
+                  "label": "Q1: Many - MM technical momentum analysis Qs",
+                  "rating": "C",
+                  "summary": "Risks: (1) Belron margin stall. (2) IPO delay/priced-down. (3) NA claims avoidance persistence. (4) EV adoption reducing demand. (5) Leverage covenant pressure. (6) Auto accelerated decline."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb7.tc2",
+                  "label": "TC: Fundamental momentum?",
+                  "rating": "B",
+                  "summary": "Positive. FY25 beat, FY26 guidance above consensus. Transmission growing 39%. Order intake strong. SS constructive. Fundamental momentum confirmed."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb7.tc2.q1",
+                  "label": "Q1: SS earnings momentum analysis Qs",
+                  "rating": "B",
+                  "summary": "Positive revision trend. FY25 beat drove upgrades. FY26 guidance above prior consensus. Majority of SS analysts constructive with Buy ratings. Need FactSet for precise revision data."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb7.tc2.q2",
+                  "label": "Q2: Peers - Technicals, SS Qs",
+                  "rating": "C",
+                  "summary": "No direct listed peer for VGRR. Insurance sector health is relevant (claims volumes). Auto parts distributors (LKQ, Genuine Parts) have different dynamics. Belron IPO would create first true comp. Peer momentum is N/A."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb7.tc2.q3",
+                  "label": "Q3: Company - Delivery of guidance and expectations",
+                  "rating": "B",
+                  "summary": "Strong. FY25 delivered above guidance — record EBITDA €2.57bn. General Cable synergies ahead of schedule. Track record of meeting/beating expectations. Credibility with sell-side established."
+                },
+                {
+                  "level": "family",
+                  "id": "p4.bb8",
+                  "label": "BB#8: Nice-to-Have Attributes",
+                  "rating": "C",
+                  "summary": "High complexity. Holding company, 4 businesses, different sectors. Belron leverage opacity. Family governance. Adjusted vs reported divergence. Complex structure reduces analytical confidence."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb8.tc1",
+                  "label": "TC: Additional upside?",
+                  "rating": "C",
+                  "summary": "Below average. Group reporting obscures Belron economics. Inter-segment loan creates opacity. Adjusted vs reported €100m+ gap. Belron standalone not independently audited. Pre-IPO disclosure improving."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb8.tc1.q1",
+                  "label": "Q1: Big positive optionality above/beyond modal case?",
+                  "rating": "C",
+                  "summary": "Below average. Gaps: (1) insurer concentration undisclosed. (2) Inter-segment financing opaque. (3) Belron standalone FCF not broken out. (4) Moleskine detail minimal. Improving ahead of IPO."
+                },
+                {
+                  "level": "tc",
+                  "id": "p4.bb8.tc2",
+                  "label": "TC: Self-righting behaviour ATM?",
+                  "rating": "C",
+                  "summary": "High complexity. 4 businesses, 3 declining. Belron leverage at subsidiary level. Family governance. IPO structuring. Multiple currencies. Analysable but requires significant effort."
+                },
+                {
+                  "level": "question",
+                  "id": "p4.bb8.tc2.q1",
+                  "label": "Q1: Rapid self-righting MMO?",
+                  "rating": "C",
+                  "summary": "Partially justified. Complexity, declining subsidiaries, leverage opacity, governance concerns warrant discount. But 30-40% may overstate given Belron quality. IPO would test narrower discount."
+                },
+                {
+                  "level": "pillar",
+                  "id": "p5",
+                  "label": "P5: Sell-Side Momentum",
+                  "rating": "C",
+                  "summary": "Cautiously positive SS. Jefferies upgraded. Average PT €228. But tone cautious — show-me thesis. No strong upgrade cycle. Consensus accepts management guidance. Limited downside risk but capped upside."
+                },
+                {
+                  "level": "metric",
+                  "id": "p5.eps_change",
+                  "label": "EPS revisions",
+                  "rating": "B",
+                  "summary": "Positive trend. FY25 beat catalyst. FY26 guidance above consensus. Expect further upgrades as synergies deliver."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.eps_change.l1m",
+                  "label": "EPS L1M change",
+                  "rating": "B",
+                  "summary": "Likely positive post-FY25 results beat."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.eps_change.l3m",
+                  "label": "EPS L3M change",
+                  "rating": "B",
+                  "summary": "Positive over 3 months driven by FY25 results and FY26 guidance."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.eps_change.l6m",
+                  "label": "EPS L6M change",
+                  "rating": "B",
+                  "summary": "Positive over 6 months. Structural demand narrative gaining consensus acceptance."
+                },
+                {
+                  "level": "metric",
+                  "id": "p5.ebitda_change",
+                  "label": "EBITDA revisions",
+                  "rating": "B",
+                  "summary": "Positive. Record FY25 EBITDA €2.57bn. FY26 guide €2.625-2.775bn above prior estimates."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.ebitda_change.l1m",
+                  "label": "EBITDA L1M change",
+                  "rating": "B",
+                  "summary": "Positive post-FY25 beat."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.ebitda_change.l3m",
+                  "label": "EBITDA L3M change",
+                  "rating": "B",
+                  "summary": "Positive."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.ebitda_change.l6m",
+                  "label": "EBITDA L6M change",
+                  "rating": "B",
+                  "summary": "Positive. Consensus catching up to structural demand thesis."
+                },
+                {
+                  "level": "metric",
+                  "id": "p5.revenue_change",
+                  "label": "Revenue revisions",
+                  "rating": "C",
+                  "summary": "Revenue includes copper pass-through — revisions partly driven by copper price movements. Underlying organic revenue positive. Need FactSet for clean data."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.revenue_change.l1m",
+                  "label": "Revenue L1M change",
+                  "rating": "C",
+                  "summary": "Flat to slightly positive. Copper price noise."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.revenue_change.l3m",
+                  "label": "Revenue L3M change",
+                  "rating": "C",
+                  "summary": "Modestly positive. Organic growth offsetting copper headwind."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.revenue_change.l6m",
+                  "label": "Revenue L6M change",
+                  "rating": "C",
+                  "summary": "Modestly positive."
+                },
+                {
+                  "level": "metric",
+                  "id": "p5.price_target_change",
+                  "label": "Price target revisions",
+                  "rating": "B",
+                  "summary": "PTs rising post-FY25. Majority of SS with Buy ratings. PTs suggest 10-20% upside."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.price_target_change.l1m",
+                  "label": "PT L1M change",
+                  "rating": "B",
+                  "summary": "Rising post-results."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.price_target_change.l3m",
+                  "label": "PT L3M change",
+                  "rating": "B",
+                  "summary": "Rising."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.price_target_change.l6m",
+                  "label": "PT L6M change",
+                  "rating": "B",
+                  "summary": "Positive trajectory over 6 months."
+                },
+                {
+                  "level": "metric",
+                  "id": "p5.pct_buy_change",
+                  "label": "% Buy change",
+                  "rating": "B",
+                  "summary": "Majority Buy. FY25 beat reinforced conviction. No downgrades identified."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.pct_buy_change.l1m",
+                  "label": "% Buy L1M change",
+                  "rating": "B",
+                  "summary": "Stable to improving."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.pct_buy_change.l3m",
+                  "label": "% Buy L3M change",
+                  "rating": "B",
+                  "summary": "Stable."
+                },
+                {
+                  "level": "metric_tf",
+                  "id": "p5.pct_buy_change.l6m",
+                  "label": "% Buy L6M change",
+                  "rating": "B",
+                  "summary": "Stable to improving."
+                },
+                {
+                  "level": "pillar",
+                  "id": "p6",
+                  "label": "P6: Valuation",
+                  "rating": "C",
+                  "summary": "~11.4x 2026E P/E optically cheap but holding company discount justified. SOTP suggests €195-210 fair value vs €159.60. Upside conditional on IPO + margin. Downside €130-150 on bear case."
+                },
+                {
+                  "level": "valuation",
+                  "id": "p6.fwd_pe",
+                  "label": "Forward P/E",
+                  "rating": "B",
+                  "summary": "~15-17x forward P/E. Reasonable for 5-8% EPS CAGR industrial with structural demand. Not cheap but not stretched. Growth-adjusted valuation is attractive."
+                },
+                {
+                  "level": "valuation",
+                  "id": "p6.hist_range",
+                  "label": "Historical range",
+                  "rating": "C",
+                  "summary": "Mid-range historically. Post-extraordinary dividend distorts comparisons. Current €159.60 reflects post-dividend adjustment. Within historical range but not cheap on adjusted basis."
+                },
+                {
+                  "level": "valuation",
+                  "id": "p6.peer",
+                  "label": "Peer comparison",
+                  "rating": "C",
+                  "summary": "No direct peer. Holding company makes comparison difficult. Belron standalone would trade at 16-18x EBITDA. Group at 11.4x P/E reflects holding discount. Fair valuation, not deep value."
+                }
+              ]
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "C.II.1",
+          "title": "Technical Strength (Pillar 1)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bluf",
+              "text": "_Mixed technical picture. Post-€74 extraordinary dividend distorts chart. SP ~€159.60 likely above 200D MA. MAs uncertain — post-event consolidation phase. Estimated 5-6/9 Minervini PASS. Stage unclear._"
+            },
+            {
+              "type": "pillar_block",
+              "id": null,
+              "label": "Technical Strength",
+              "rating": "C",
+              "blocks": [
+                {
+                  "type": "bluf",
+                  "text": "Estimated 5-6/9 Minervini PASS. Post-extraordinary dividend chart distortion. MAs likely aligned but need FactSet confirmation. SP range-bound around €159-165."
+                },
+                {
+                  "type": "family_block",
+                  "family_id": null,
+                  "id": null,
+                  "label": "Minervini Dimensions",
+                  "rating": "C",
+                  "blocks": [
+                    {
+                      "type": "bluf",
+                      "text": "5-6 of 9 checks estimated PASS. D5, D6, D8 uncertain — post-extraordinary dividend distortion. D9 (RS rank) likely FAIL."
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "iaja": "I",
+                          "text": "**D1 PASS:** SP ~€159.60 likely above 200D MA. Belron IPO optionality providing support."
+                        },
+                        {
+                          "iaja": "I",
+                          "text": "**D2 PASS:** 200D MA likely trending upward since Belron FY25 record results."
+                        },
+                        {
+                          "iaja": "I",
+                          "text": "**D3 PASS:** SP likely above 150D MA."
+                        },
+                        {
+                          "iaja": "I",
+                          "text": "**D4 PASS:** 150D likely above 200D MA. Constructive alignment."
+                        },
+                        {
+                          "iaja": "I",
+                          "text": "**D5 UNCERTAIN:** 50D vs 150D MA — range-bound trading creates uncertainty."
+                        },
+                        {
+                          "iaja": "I",
+                          "text": "**D6 UNCERTAIN:** SP vs 50D MA — volatility around Belron IPO speculation."
+                        },
+                        {
+                          "iaja": "I",
+                          "text": "**D7 PASS:** SP likely 30%+ above 52W low."
+                        },
+                        {
+                          "iaja": "I",
+                          "text": "**D8 UNCERTAIN:** Post-extraordinary dividend distorts 52W high. Need adjusted data."
+                        },
+                        {
+                          "iaja": "I",
+                          "text": "**D9 FAIL:** RS Rank needs FactSet. Holding company discount may suppress relative strength."
+                        }
+                      ],
+                      "ratings": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "summary",
+              "text": "_Technical picture C. Post-extraordinary dividend chart distortion. Estimated 5-6/9 Minervini PASS. Need FactSet for D5/D6/D8/D9 confirmation._"
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "C.II.2",
+          "title": "Fundamental Investment Case (P3+P4)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bluf",
+              "text": "_CfC Margin Expansion + IPO Optionality: Belron ADAS recalibration driving margin from 23% toward >25% by 2028. Belron franchise quality exceptional (world #1, insurer moat, 40 countries). Margin expansion credibility questioned by H1 2025 -260bps. IPO at €30-32bn is binary. Surrounding businesses declining._"
+            },
+            {
+              "type": "pillar_block",
+              "id": null,
+              "label": "Fundamental Change",
+              "rating": "C",
+              "blocks": [
+                {
+                  "type": "bluf",
+                  "text": "ADAS margin expansion is the fulcrum driver. Belron franchise quality unquestionable — world #1 with insurer moat. But margin path uncertain (H1 2025 compression). IPO adds asymmetric upside but binary. Auto/TVH/Moleskine are drags. Conviction C+ at Triaging."
+                },
+                {
+                  "type": "family_block",
+                  "family_id": "IC#1",
+                  "label": "IC#1: Required Case OUTPUTS",
+                  "rating": "C",
+                  "blocks": [
+                    {
+                      "type": "bluf",
+                      "text": "EPS growth conditional on Belron margin delivery. Base: 2-5% PBT CAGR. Bull: 10-15% if margin + IPO. Belron alone drives growth. Returns threshold (20% 3Y TSR) achievable only on bull case."
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "iaja": "J",
+                          "rating": "C",
+                          "signpost": {
+                            "level": "family",
+                            "ref": "IC#1",
+                            "label": "Required Case OUTPUTS",
+                            "style": "prefix"
+                          },
+                          "text": "**IC#1 Required Case OUTPUTS:** Partial triple ratchet: (1) Volume from ADAS penetration growth (47%→55%+) + claims avoidance normalisation, (2) Margin from ADAS mix shift (60-70% gross margin on recal) + Fit for Growth, (3) Multiple conditional on IPO (holding discount removal 30-40%). Two legs present, third binary."
+                        },
+                        {
+                          "iaja": "J",
+                          "rating": "C",
+                          "signpost": {
+                            "level": "RA",
+                            "ref": "IC#1.RA1",
+                            "label": "Sufficient longevity of case (baton)?",
+                            "style": "prefix",
+                            "synthesises": [
+                              "IC#1.CQ1"
+                            ]
+                          },
+                          "text": "**IC#1 RA1 — Sufficient longevity?** Moderate. ADAS penetration provides 3-5 year tailwind. But approaching saturation ceiling (50-55% by 2027). Post-saturation reverts to low SG. EV transition creates 5-10 year structural headwind. Longevity present but finite."
+                        },
+                        {
+                          "iaja": "J",
+                          "rating": "C",
+                          "signpost": {
+                            "level": "RA",
+                            "ref": "IC#1.RA4",
+                            "label": "Sufficient setup fit?",
+                            "style": "prefix",
+                            "synthesises": [
+                              "IC#1.CQ4"
+                            ]
+                          },
+                          "text": "**IC#1 RA4 — Sufficient setup fit?** Moderate. CfC margin expansion from ADAS recognised. Event-driven IPO supplementary. But not classic EPSU (growth rate too low) or EPT. Holding company dilutes thesis purity."
+                        },
+                        {
+                          "iaja": "J",
+                          "rating": "C",
+                          "signpost": {
+                            "level": "RA",
+                            "ref": "IC#1.RA8",
+                            "label": "Sufficiently robust / bankable multiple?",
+                            "style": "prefix",
+                            "synthesises": [
+                              "IC#1.CQ11"
+                            ]
+                          },
+                          "text": "**IC#1 RA8 — Bankable multiple?** Uncertain. ~11.4x P/E reflects holding discount — justified by complexity, leverage, declining subsidiaries. If margin stalls + IPO delays, fair value €130-150. Multiple not bankable."
+                        },
+                        {
+                          "iaja": "J",
+                          "rating": "C",
+                          "signpost": {
+                            "level": "RA",
+                            "ref": "IC#1.RA9",
+                            "label": "Sufficient returns?",
+                            "style": "prefix",
+                            "synthesises": [
+                              "IC#1.CQ12"
+                            ]
+                          },
+                          "text": "**IC#1 RA9 — Sufficient returns?** Conditional. Base: 2-5% PBT CAGR + 2% yield = 4-7% TSR. Bull: IPO + margin = 20-30% TSR. Bear: -10-15%. 20% 3Y TSR achievable on bull only."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "family_block",
+                  "family_id": "IC#2",
+                  "label": "IC#2: Required Case INPUTS",
+                  "rating": "C",
+                  "blocks": [
+                    {
+                      "type": "bluf",
+                      "text": "Belron base quality exceptional — world #1, insurer moat, ADAS leadership. But change forces moderate (ADAS gradual, no transformative push). External headwinds material. Inputs strong on base quality, weak on change forces."
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "iaja": "J",
+                          "rating": "C",
+                          "signpost": {
+                            "level": "family",
+                            "ref": "IC#2",
+                            "label": "Required Case INPUTS",
+                            "style": "prefix"
+                          },
+                          "text": "**IC#2 Required Case INPUTS:** Belron franchise quality outstanding — world #1, 40 countries, 17.1m jobs/year, insurer relationships, ADAS leadership. But external environment mixed (EV headwind, claims avoidance) and internal change limited. Base quality saves the rating."
+                        },
+                        {
+                          "iaja": "J",
+                          "rating": "C",
+                          "signpost": {
+                            "level": "RA",
+                            "ref": "IC#2.RA1",
+                            "label": "Sufficient change forces",
+                            "style": "prefix",
+                            "synthesises": [
+                              "IC#2.CQ1",
+                              "IC#2.CQ2"
+                            ]
+                          },
+                          "text": "**IC#2 RA1 — Sufficient change forces?** Moderate. ADAS gradual. No internal transformation. IPO structural not operational. Claims normalisation is headwind reversal not new tailwind. Present but not overwhelming."
+                        },
+                        {
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "RA",
+                            "ref": "IC#2.RA2",
+                            "label": "Sufficient base (to build a strong case on)",
+                            "style": "prefix",
+                            "synthesises": [
+                              "IC#2.CQ3",
+                              "IC#2.CQ4",
+                              "IC#2.CQ5",
+                              "IC#2.CQ6",
+                              "IC#2.CQ7"
+                            ]
+                          },
+                          "text": "**IC#2 RA2 — Sufficient base?** Excellent. World #1 VGRRR. 40 countries. Insurer moat. ADAS leadership. 23% EBIT margin. €6.97bn revenue. Family since 1805. ~11.4x P/E reflects discount. Base quality is strongest dimension."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "family_block",
+                  "family_id": "IC#3",
+                  "label": "IC#3: Required Case SETUPS",
+                  "rating": "C",
+                  "blocks": [
+                    {
+                      "type": "bluf",
+                      "text": "CfC Margin Expansion from ADAS mix shift. Event-Driven IPO optionality supplementary. No false friend overlap. But not classic EPSU/EPT — growth rate insufficient, no earnings power transition. Acceptable but not textbook."
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "iaja": "J",
+                          "rating": "C",
+                          "signpost": {
+                            "level": "family",
+                            "ref": "IC#3",
+                            "label": "Required Case SETUPS",
+                            "style": "prefix"
+                          },
+                          "text": "**IC#3 Required Case SETUPS:** CfC Margin Expansion — ADAS recalibration driving margin from 23% toward >25%. Event-Driven IPO — Belron at €30-32bn (H2 2026). No false friend overlap. Not textbook EPSU/EPT but plausible combination."
+                        },
+                        {
+                          "iaja": "J",
+                          "rating": "C",
+                          "signpost": {
+                            "level": "RA",
+                            "ref": "IC#3.RA2",
+                            "label": "Big demand change-driven EPSU or EPT",
+                            "style": "prefix",
+                            "synthesises": [
+                              "IC#3.CQ4",
+                              "IC#3.CQ5",
+                              "IC#3.CQ6",
+                              "IC#3.CQ7",
+                              "IC#3.CQ8"
+                            ]
+                          },
+                          "text": "**IC#3 RA2 — Big demand change?** No. Glass repair demand mature (low SG volume). ADAS adds mix/pricing not demand. No market-wide explosion. Belron dominant but in stable not expanding market. Margin improvement on existing demand, not demand-driven EPSU."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "pillar_block",
+              "id": null,
+              "label": "Foundation Quality",
+              "rating": "B",
+              "blocks": [
+                {
+                  "type": "bluf",
+                  "text": "Exceptional Belron franchise — world #1, insurer moat, ADAS leadership, asset-light. Surrounding businesses weak. Management strong. Capital allocation disciplined but leverage elevated. Foundation is Belron."
+                },
+                {
+                  "type": "family_block",
+                  "family_id": "BB#2",
+                  "label": "BB#2: Foundation Quality",
+                  "rating": "B",
+                  "blocks": [
+                    {
+                      "type": "bluf",
+                      "text": "Operator quality strong — Deprez disciplined, Hicks record Belron FY25. Business model excellent (Belron: non-discretionary, insurer-backed, ADAS moat). Competitive position dominant (#1 globally). Leverage elevated, disclosure below average."
+                    },
+                    {
+                      "type": "bullet_group",
+                      "items": [
+                        {
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "family",
+                            "ref": "BB#2",
+                            "label": "Required Business Foundations",
+                            "style": "prefix"
+                          },
+                          "text": "**BB#2 Required Business Foundations:** Operator quality: strong (Deprez ex-McKinsey, Hicks record FY25, €74 dividend). Business model: Belron excellent (non-discretionary, insurer-backed, recurring, ADAS moat); Auto/TVH/Moleskine weak. Competitive advantages: Belron dominant #1 (scale, brands, insurer relationships, ADAS). Strength: Belron franchise. Weakness: leverage (4.7x), declining subsidiaries, governance opacity."
+                        },
+                        {
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "TC",
+                            "ref": "BB#2.TC1",
+                            "label": "Great operator?",
+                            "style": "prefix"
+                          },
+                          "text": "**BB#2 TC1 — Great operator?** Strong. Deprez is disciplined allocator. Hicks delivered record Belron performance (7.1% organic, 23% margin, 17.1m jobs). Not visionary but competent, execution-oriented management."
+                        },
+                        {
+                          "iaja": "J",
+                          "rating": "B",
+                          "signpost": {
+                            "level": "TC",
+                            "ref": "BB#2.TC2",
+                            "label": "Advantaged business + widening SRCA?",
+                            "style": "prefix"
+                          },
+                          "text": "**BB#2 TC2 — Advantaged + widening?** Strong. Belron moat widening via ADAS complexity (calibration equipment, training, insurer certification). Scale creates service speed advantage. M&A compounds coverage. Competitors increasingly unable to match ADAS investment. SRCA widening structural."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "summary",
+              "text": "_Fundamental case C+: Belron franchise quality exceptional (world #1, insurer moat, ADAS leadership) but margin expansion uncertain (H1 2025 -260bps). IPO optionality asymmetric but binary. Surrounding businesses declining. Proceed to ESA to test margin credibility and IPO timeline._"
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "C.II.3",
+          "title": "Paradigm / Regime Fit (P2)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bluf",
+              "text": "_Mixed paradigm fit. Belron is defensive-growth hybrid (non-discretionary repair). No AI exposure, moderate macro sensitivity via claims avoidance and auto cyclicality. Not a high-conviction thematic play._"
+            },
+            {
+              "type": "pillar_block",
+              "id": null,
+              "label": "Paradigm Fit",
+              "rating": "C",
+              "blocks": [
+                {
+                  "type": "bluf",
+                  "text": "Current paradigm themes: energy transition (no exposure), AI/data centres (no exposure), defensive quality (Belron fits). DIE does not play to dominant market themes."
+                },
+                {
+                  "type": "bullet_group",
+                  "items": [
+                    {
+                      "iaja": "J",
+                      "text": "**Late bull / early bear:** B-. Belron defensive — non-discretionary repair, insurer-backed, recurring. D'Ieteren Auto and TVH cyclically exposed. Net: moderate defensiveness from Belron dominance.",
+                      "sub": [
+                        {
+                          "iaja": "I",
+                          "text": "Belron volume moderately sensitive to cycle via claims frequency. But repair need is non-discretionary — damaged glass must be replaced regardless."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "J",
+                      "text": "**AI demand / disruption:** C. No direct AI exposure. ADAS is tech-adjacent but not an AI play. No thematic momentum from AI/data centre capex cycle.",
+                      "sub": [
+                        {
+                          "iaja": "I",
+                          "text": "ADAS technology benefits from automotive tech complexity but is not AI specifically. No positioning for AI/data centre demand."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "J",
+                      "text": "**Oil / stagflation / Iran:** C+. Mixed. Rising insurance premiums create claims avoidance headwind. Belron leverage sensitive to rates. Belgian consumer exposed. But Belron pricing provides some inflation pass-through.",
+                      "sub": [
+                        {
+                          "iaja": "I",
+                          "text": "Insurance premium inflation drove claims avoidance in 2024-25. Macro weakness hurts Belgian auto and TVH equipment demand."
+                        },
+                        {
+                          "iaja": "A",
+                          "text": "Key question: is claims avoidance cyclical or structural? If structural, Belron underlying growth slows from 5-7% to 2-3%."
+                        }
+                      ]
+                    }
+                  ],
+                  "ratings": []
+                }
+              ]
+            },
+            {
+              "type": "summary",
+              "text": "_Paradigm fit C+. Belron provides defensive quality but DIE lacks exposure to dominant themes (AI, energy transition). Paradigm is neutral not a driver._"
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "C.II.4",
+          "title": "Sell-Side Momentum (P5)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bluf",
+              "text": "_Cautiously positive SS. Jefferies upgraded Jan 2026. Average PT €228 (41-47% upside). Tone is show-me — waiting for margin proof and IPO clarity. No strong upgrade cycle._"
+            },
+            {
+              "type": "momentum_table",
+              "title": "P5 SS Earnings Momentum — 5 dimensions x 3 timeframes (DIE consensus snapshot)",
+              "metrics": [
+                {
+                  "key": "eps_change",
+                  "label": "EPS revisions",
+                  "values": {
+                    "l1m": -2,
+                    "l3m": -2,
+                    "l6m": -8
+                  }
+                },
+                {
+                  "key": "ebitda_change",
+                  "label": "EBITDA revisions",
+                  "values": {
+                    "l1m": 0,
+                    "l3m": -2,
+                    "l6m": 3
+                  }
+                },
+                {
+                  "key": "revenue_change",
+                  "label": "Revenue revisions",
+                  "values": {
+                    "l1m": 0,
+                    "l3m": -1,
+                    "l6m": 1
+                  }
+                },
+                {
+                  "key": "price_target_change",
+                  "label": "Price target revisions",
+                  "values": {
+                    "l1m": -2,
+                    "l3m": 7,
+                    "l6m": 9
+                  }
+                },
+                {
+                  "key": "pct_buy_change",
+                  "label": "% Buy change",
+                  "values": {
+                    "l1m": -8,
+                    "l3m": -8,
+                    "l6m": 12
+                  }
+                }
+              ],
+              "score": 5,
+              "grade": "F"
+            },
+            {
+              "type": "pillar_block",
+              "id": null,
+              "label": "Sell-Side Momentum",
+              "rating": "C",
+              "blocks": [
+                {
+                  "type": "bluf",
+                  "text": "9-10 houses covering. Majority Buy. Average PT €228. Jefferies upgrade on Belron valuation. No downgrades. Consensus cautious — time investment thesis."
+                },
+                {
+                  "type": "bullet_group",
+                  "items": [
+                    {
+                      "iaja": "I",
+                      "text": "Jefferies upgraded Jan 2026, lifted Belron valuation 12% to €30bn on deleverage success. Berenberg initiated with €224 PT.",
+                      "sub": [
+                        {
+                          "iaja": "A",
+                          "text": "Upgrades conditional on IPO execution and Belron margin expansion. If either disappoints, PTs at risk of 15-20% cuts."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "I",
+                      "text": "Consensus EPS €13.79, +18.9% growth. But revenue growth only 1.7% CAGR — heavy reliance on margin expansion + financial engineering. Gap is a red flag.",
+                      "sub": [
+                        {
+                          "iaja": "A",
+                          "text": "19% EPS growth on 2% revenue growth = ambitious. Requires margin expansion, WC release, and leverage optimisation simultaneously."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "J",
+                      "text": "SS consensus is show-me thesis — waiting for Belron margin proof + IPO clarity before upgrading. No strong conviction either way. Neutral-to-slightly-positive momentum."
+                    }
+                  ],
+                  "ratings": []
+                }
+              ]
+            },
+            {
+              "type": "summary",
+              "text": "_SS momentum C+. Cautiously positive. No strong upgrade cycle. Consensus waiting for margin proof and IPO clarity._"
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "C.II.5",
+          "title": "Valuation (P6)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bluf",
+              "text": "_~11.4x 2026E P/E optically cheap but holding company discount justified (complexity, leverage, declining subsidiaries). SOTP suggests €195-210 fair value on base case. Upside conditional on IPO + margin. Downside €130-150 on bear._"
+            },
+            {
+              "type": "pillar_block",
+              "id": null,
+              "label": "Valuation",
+              "rating": "C",
+              "blocks": [
+                {
+                  "type": "bluf",
+                  "text": "Optically cheap but structurally justified discount. Belron standalone at €32bn would imply far above current market cap — but assumes IPO execution. Without IPO, discount persists."
+                },
+                {
+                  "type": "bullet_group",
+                  "items": [
+                    {
+                      "iaja": "J",
+                      "text": "**Absolute valuation:** ~11.4x 2026E P/E. Dividend yield ~2%. FCF yield ~3.8%. Optically cheap. But adjusted for Belron leverage (4.7x) and declining subsidiaries, valuation is fair not cheap.",
+                      "sub": [
+                        {
+                          "iaja": "I",
+                          "text": "Market cap ~€9.9bn. Belron at €32bn EV implies D'Ieteren's 53% stake = €17bn equity. Current market cap implies 40%+ holding discount."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "J",
+                      "text": "**SOTP valuation:** Belron 53% at €32bn = €17bn. Auto ~€1bn. TVH ~€0.8bn. Moleskine ~€0. Real estate ~€0.3bn. Gross NAV ~€19bn. 20-25% discount = €14-15bn = €175-190/share. Current €159.60 implies 15-20% discount to SOTP.",
+                      "sub": [
+                        {
+                          "iaja": "I",
+                          "text": "At €28bn (priced-down IPO): NAV €16bn, 25% discount = €12bn = €150/share. At €25bn: €140/share. Downside material."
+                        }
+                      ]
+                    },
+                    {
+                      "iaja": "J",
+                      "text": "**Growth-adjusted:** PEG on consensus = 11.4x / 18.9% = 0.6x. Optically attractive. But on realistic 5-8% EPS growth, PEG = 1.4-2.3x. Not deeply attractive on realistic growth."
+                    }
+                  ],
+                  "ratings": []
+                }
+              ]
+            },
+            {
+              "type": "summary",
+              "text": "_Valuation C+ — optically cheap at 11.4x P/E but holding discount justified. SOTP 15-20% upside on base. Upside €195-210 if IPO + margin. Downside €130-150 on bear. Conditional._"
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        }
+      ]
+    },
+    "D": {
+      "letter": "D",
+      "title": "COMPONENTS",
+      "applicable": true,
+      "inline_verdict": "2 FDs, 4 KDs, 3 KHF/As, 4 KCs, 5 KRs, 4 KPOs — Belron margin credibility and IPO execution are the gating risks",
+      "default_open": true,
+      "applicable_note": null,
+      "word_count": 0,
+      "page_count": 0,
+      "target_words": 0,
+      "subsections": [
+        {
+          "id": "D.I.1",
+          "title": "KDICs — Key Drivers of Investment Case",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "**FULCRUM #1: Belron margin expansion (23%→>25% by 2028)** — ADAS recalibration penetration (42%→55%+) driving mix shift. 60-70% gross margin on recal. H1 2025 -260bps compression is key debate. RED if margin stalls below 22%."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**FULCRUM #2: Belron IPO execution** — Rothschild mandated, €30-32bn EV target, H2 2026. Crystallises value, removes holding discount, deleverages. RED if delayed beyond 2027 or priced <€28bn."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KD #3: North America claims avoidance** — consumer behaviour shift deferring insurance claims. Belron NA organic growth 0.2% in FY24. Year-end 2025 normalisation reported but uncertain. ORANGE (60% recovery, 40% persistence)."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KD #4: ADAS recalibration saturation risk** — penetration approaching 50% ceiling. Growth slowing from +500bps/year to +200bps. If saturation at 45-50%, margin expansion weakens. YELLOW (65% base for continued to 55%)."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KD #5: D'Ieteren Auto structural decline** — Belgian market -7.5% FY25. VW EV margin pressure. Guidance: negative revenue evolution, material margin decline FY26. ORANGE (confirmed drag)."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KD #6: EV transition impact on repair demand** — EVs have 15-25% lower accident rates. Fleet penetration 19.3%→50%+ over 10 years. Structural headwind to Belron volumes beyond 5 years. YELLOW (long-dated)."
+                }
+              ],
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "D.I.2",
+          "title": "KHF/As — Key Hygiene Factors / Assumptions",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "I",
+                  "text": "Insurance market pricing remains rational — no systemic insurer failure or claims inflation spiral destroying Belron's revenue model."
+                },
+                {
+                  "iaja": "I",
+                  "text": "Belron's top-5 insurer relationships remain intact — no loss of major contract (State Farm, Geico, Progressive, Allianz, AXA)."
+                },
+                {
+                  "iaja": "I",
+                  "text": "ADAS regulation continues requiring professional recalibration — no OEM software update eliminating need for physical recalibration after glass replacement."
+                }
+              ],
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "D.I.3",
+          "title": "KCs/KUs — Key Confusions & Unknowns",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "**KC#1: Is Belron's margin expansion to >25% achievable?** H1 2025 -260bps compression creates doubt. Management says recoverable; bears say structural. 100bps miss = €40-50m PBT headwind."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KC#2: Is NA claims avoidance cyclical or structural?** If cyclical, normalises 2026. If structural, Belron NA growth slows from 3-5% to 0-2% permanently."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KC#3: What is ADAS penetration ceiling?** Bulls: 55-60% by 2027. Bears: 45-50% (saturation). Ceiling determines margin expansion duration."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KC#4: How much value embedded in IPO assumption?** PTs assume €32bn. If €25-27bn or delayed, 15-20% group equity downside."
+                }
+              ],
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "D.I.4",
+          "title": "KRs — Key Concerns / Risks",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "**KR#1 (RED):** Belron margin stall — if H1 2025 -260bps is structural, margin ceiling 21-22% not 25%. Group PBT growth drops to 2-3% CAGR."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KR#2 (RED):** Belron IPO delay/failure — if pushed to 2027+ or market deteriorates, leverage remains elevated, holding discount persists."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KR#3 (ORANGE):** NA claims avoidance structural — if permanent, Belron NA growth drops to 0-2%, creating 50-100bps group drag."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KR#4 (ORANGE):** D'Ieteren Auto accelerated decline — Belgian market contraction, VW direct EV sales. Margin at risk below 3.5%."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KR#5 (YELLOW):** Belron leverage covenant — if EBITDA disappoints, 4.7x may not deleverage. Covenants at 5.5-6.0x provide cushion but limited."
+                }
+              ],
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "D.I.5",
+          "title": "KPOs — Key Positive Optionality",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "**KPO#1:** Belron IPO at €32bn+ — if executes at or above target, NAV discount collapses from 40% to 15-20%. €195-250/share."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KPO#2:** ADAS penetration exceeds expectations — if 60%+ by 2028, margin expansion sustains longer. +30-50bps per 500bps above ceiling."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KPO#3:** NA claims recovery + pricing power — if normalises and 3-5% organic growth, FY26 beat triggers positive revision cycle."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KPO#4:** D'Ieteren Auto strategic alternative — divest or JV with VW. Removes declining drag, simplifies towards pure Belron holding."
+                }
+              ],
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "D.II.1",
+          "title": "10 standard ACH invalidation scenarios",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bluf",
+              "text": "10 invalidation scenarios: 5 Belron/market, 5 group/structural. Aggregate tail risk moderate-to-high. Margin stall and IPO failure are highest-probability scenarios."
+            },
+            {
+              "type": "prose",
+              "iaja": "I",
+              "text": "**Single-event invalidations (rules 1-5)** — Belron and market triggers:"
+            },
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "**ACH#1:** Belron margin stalls below 22% for 2+ halves — thesis broken. Moderate probability (20-25%)."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**ACH#2:** Belron IPO cancelled or priced <€25bn — value crystallisation destroyed. Moderate (15-20%)."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**ACH#3:** NA claims avoidance permanent — structural consumer shift reduces growth to <1%. Low-moderate (15-20%)."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**ACH#4:** Major insurer contract loss — loss of top-3 insurer at Safelite/Belron. Revenue >5% impact. Very low (<5%)."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**ACH#5:** OEM ADAS recalibration bypass — software eliminates physical recalibration need. Low (<10%) but would destroy ADAS thesis."
+                }
+              ],
+              "ratings": []
+            },
+            {
+              "type": "prose",
+              "iaja": "I",
+              "text": "**SP-conditional & composite invalidations (rules 6-10)** — group/structural triggers:"
+            },
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "**ACH#6:** Belron leverage exceeds 5.5x covenant — forced refinancing or asset sales. Low (<10%)."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**ACH#7:** CEO Deprez departure — key man risk during IPO process. Low (<5%)."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**ACH#8:** Belgian auto market collapse >15% — Auto margin below 3%, consuming management bandwidth. Low-moderate (10-15%)."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**ACH#9:** TVH + Moleskine combined losses >€50m — drags consuming capital and attention. Low (<10%)."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**ACH#10:** Insurance market structural disruption — InsurTech or regulatory change destroying insurer-network model. Very low (<5%)."
+                }
+              ],
+              "ratings": []
+            },
+            {
+              "type": "summary",
+              "text": "_ACH#1 (margin stall) and ACH#2 (IPO failure) highest at 15-25% each. Combined probability ~35-40%. Moderate-to-high tail risk. Monitor H1 2026 margins, IPO timeline, NA claims quarterly._"
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "D.II.2",
+          "title": "Plausible fundamental invalidation thresholds",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "**Fundamental invalidation thresholds:**\n\n(i) Belron EBIT margin falls below 22% for 2+ consecutive halves — thesis broken.\n(ii) NA organic growth <1% for 3+ consecutive quarters — claims avoidance structural.\n(iii) Belron IPO timeline slips beyond Q1 2027 with no alternative.\n(iv) Belron leverage exceeds 5.0x — covenant cushion dangerously thin.\n(v) D'Ieteren Auto margin below 3.0% — accelerated structural decline.\n(vi) Combined TVH + Moleskine losses exceed €50m — capital consumption by non-core."
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "D.II.3",
+          "title": "DIE-specific ACH sketch (YES/NO/FALSE FRIEND)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "**YES profile (thesis confirms):** Belron EBIT margin recovers to 24%+ in H1 2026, confirming H1 2025 compression was transitory. ADAS recalibration penetration reaches 50%+ by end-2026 (up from 42% in 2024). North America organic growth resumes to 3-5% as claims frequency normalises. Belron IPO executes in H2 2026 at €30-32bn EV (18.8x EBITDA). Holding company discount narrows from 30-40% to 15-20% post-IPO. Consensus upgrades 10-15% as margin expansion visibility improves. SP: €210-240 within 18M (30-50% upside). Probability: 35-40%.",
+              "ratings": []
+            },
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "**NO profile (thesis fails):** Belron EBIT margin stalls at 22-23% — ADAS recalibration economics not flowing through as expected (pricing pressure from insurers, labour cost inflation sustained). North America claims avoidance proves structural (autonomous braking reducing frequency permanently). Belron IPO delayed beyond Q1 2027 or priced below €25bn. D'Ieteren Auto decline accelerates. TVH/Moleskine losses widen. Leverage remains elevated. Holding company discount widens to 40%+. Consensus downgrades. SP: €120-135 (20-25% downside). Probability: 20-25%.",
+              "ratings": []
+            },
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "**FALSE FRIEND profile (thesis appears to confirm but ultimately fails):** Belron margin recovers to 24%+ in 2026-27 as ADAS penetration rises — but the improvement is temporary. Insurer pushback on recalibration pricing intensifies from 2028 as insurers develop internal capabilities or mandate OEM-direct solutions. Belron IPO executes successfully at €30bn+, but post-IPO the market discovers that margin expansion was front-loaded: ADAS recalibration becomes commoditised as independent shops acquire capability. North America growth recovery proves shallow (1-2% not 3-5%). The IPO crystallises value but ongoing earnings growth disappoints. Multiple de-rates from post-IPO premium to industrial average. SP peaks at €220 then drifts to €160-170 within 2Y of IPO. Probability: 15-20%. __This is the most dangerous scenario__ — the margin recovery creates false confidence while structural commoditisation erodes the moat.",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "D.III.1",
+          "title": "KOQs — Key Open Questions",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "J",
+                  "text": "**KOQ#1:** What is Belron H1 2025 margin compression breakdown — labour (%), marketing (%), ADAS equipment (%), other? If labour >150bps, 25% path unrealistic."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KOQ#2:** What is Belron underlying organic growth ex-ADAS? If prime jobs <1% and ADAS slows to +200bps/year, total organic drops to 2-3%."
+                },
+                {
+                  "iaja": "J",
+                  "text": "**KOQ#3:** Current Belron IPO timeline — confirmed H2 2026 or conditional? Rothschild indicative valuation range and walk-away threshold?"
+                }
+              ],
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "D.III.2",
+          "title": "KAs — Key Actions",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "bullet_group",
+              "items": [
+                {
+                  "iaja": "A",
+                  "text": "Analyse Belron margin bridge — H1 2025 -260bps decomposition into labour, marketing, ADAS equipment. Determine recoverability vs structural."
+                },
+                {
+                  "iaja": "A",
+                  "text": "Model Belron ADAS penetration curve — fleet vintage, penetration ceiling scenarios (45%/50%/55%), margin impact per scenario."
+                },
+                {
+                  "iaja": "A",
+                  "text": "Assess NA claims avoidance — insurance market data, claims frequency, premium affordability. Determine cyclical vs structural."
+                }
+              ],
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        }
+      ]
+    },
+    "E": {
+      "letter": "E",
+      "title": "ACTIONS",
+      "applicable": true,
+      "inline_verdict": "PROCEED to ESA — Belron franchise quality warrants deeper work; margin credibility and IPO timeline are the gates",
+      "default_open": true,
+      "applicable_note": null,
+      "word_count": 0,
+      "page_count": 0,
+      "target_words": 0,
+      "subsections": [
+        {
+          "id": "E.I.1",
+          "title": "Pros/cons of prioritising vs other opportunities",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "**Pros of prioritising DIE:** (i) Belron franchise quality confirmed at ESA depth — world #1 VGRR, insurer moat, ADAS secular tailwind with 10+ year runway. (ii) IPO catalyst with defined timeline (H2 2026) provides event-driven upside uncorrelated with market. (iii) Holding company discount (30-40%) creates margin of safety. (iv) ADAS complexity creates rising BtE against independents — moat widening not narrowing. (v) Management quality high (Nicolas D'Ieteren family alignment, Belron CEO strong operator).\n\n**Cons of prioritising DIE:** (i) Margin expansion is narrow-path — H1 2025 -260bps compression is a genuine warning signal. (ii) Growth rate (low-mid SG PBT CAGR) is below typical threshold without IPO re-rating. (iii) Holding company structure creates complexity — 3 non-core businesses (Auto, TVH, Moleskine) that drag and distract. (iv) Limited sell-side coverage creates information disadvantage. (v) Belgian listing with low liquidity.\n\n**vs pipeline alternatives:** DIE offers a differentiated setup (CfC + event-driven hybrid) that diversifies the portfolio. Belron quality is top-tier. But margin uncertainty makes sizing aggressive premature. Starter position appropriate if DD confirms margin recovery trajectory.",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "E.II.1",
+          "title": "Monitoring plan (RESEARCHER) for TIs/ICDs/peers",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "iaja": "A",
+              "text": "**Trackable Indicators (TIs):** (i) Belron EBIT margin (half-yearly — must recover toward 24%+ in H1 2026). (ii) ADAS recalibration penetration rate (annual — track via industry reports, IR commentary). (iii) North America organic growth (quarterly — must resume 3%+ for 2+ consecutive quarters). (iv) Belron IPO timeline updates (event-driven — Rothschild filing, regulatory milestones). (v) Group leverage (half-yearly — must trend below 4.0x post-IPO).\n\n**Investment Case Drivers (ICDs):** (i) ADAS vehicle parc penetration data (annual — from ADAS industry reports, OEM disclosures). (ii) Insurer pricing trends for windshield replacement + recalibration (quarterly — from US insurance data, Safelite pricing commentary). (iii) Belgian auto market registration data (monthly — structural decline confirmation).\n\n**Peer/competitor monitoring:** (i) No direct listed VGRR peer — monitor insurance sector health (claims volumes, combined ratios). (ii) LKQ Corp (US auto parts) for aftermarket cycle read. (iii) Post-IPO: Belron itself becomes the primary comp.",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "E.II.2",
+          "title": "KQs/KAs if/when progressed to DD P1",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "iaja": "A",
+              "text": "**Key Questions for DD P1:** (i) Margin bridge: build detailed EBIT margin bridge decomposing ADAS recalibration contribution vs labour cost inflation vs pricing — quantify each driver's magnitude. (ii) ADAS commoditisation risk: how quickly can independent shops acquire ADAS recalibration capability? What is Belron's defensible advantage window? (iii) IPO valuation: build DCF for Belron standalone — validate €30-32bn vs comps (Loxam, Rentokil, AutoNation). (iv) North America: deep-dive on claims frequency drivers — is autonomous braking permanently reducing windshield claims? (v) Capital allocation post-IPO: how will D'Ieteren deploy IPO proceeds — deleverage, buybacks, M&A, or non-core investment?\n\n**Key Actions for DD P1:** (i) Request IR meeting — margin bridge, ADAS penetration data, IPO timeline, NA claims trends. (ii) Build financial model with Belron segment detail. (iii) Commission AlphaSense deep-dive on ADAS recalibration industry economics. (iv) Map insurer dynamics — who are Belron's top 10 insurer partners, what are contract structures? (v) Analyse post-IPO holdco structure and governance.",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "E.III.1",
+          "title": "Reasons for parking ('gaps' analysis)",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "**Gaps remaining after ESA:** (i) Financial model not built — cannot quantify bear/modal/bull with precision or model ADAS penetration sensitivity on margins. (ii) IR not engaged — margin bridge, ADAS data, IPO timeline are company-sourced only. (iii) ADAS commoditisation timeline not researched — how fast can independents acquire capability? (iv) Insurer dynamics unexplored — contract structures, switching costs, pricing power sustainability. (v) Post-IPO governance and capital allocation unknown. (vi) North America claims frequency analysis requires granular data not yet sourced.\n\n**Would park if:** (i) H1 2026 margin data (Sep 2026) shows no recovery from H1 2025 compression. (ii) Belron IPO delayed beyond Q1 2027 with no clear catalyst. (iii) Better opportunities in pipeline demand capital allocation priority.",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "E.III.2",
+          "title": "Re-assessment criteria for re-activation",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "iaja": "J",
+              "text": "**Re-activation criteria (if parked):** (i) Belron EBIT margin recovery to 24%+ in any reported half. (ii) North America organic growth resumes 3%+ for 2+ consecutive quarters. (iii) Belron IPO timeline re-confirmed with specific date. (iv) ADAS recalibration penetration data shows acceleration beyond base case. (v) Significant SP decline (>20%) creating valuation entry point independent of thesis confirmation.",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "E.III.3",
+          "title": "Monitoring plan for re-assessment criteria",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "iaja": "A",
+              "text": "**Monitoring cadence:** (i) Half-yearly: D'Ieteren results (H1 Sep 2026, FY Mar 2027) — Belron margin, ADAS penetration, NA organic growth. (ii) Quarterly: US auto insurance claims data — frequency trends, weather impact. (iii) Event-driven: Belron IPO regulatory filings, Rothschild updates, Belgian FSMA filings. (iv) Monthly: AlphaSense alerts on D'Ieteren, Belron, ADAS recalibration industry. (v) Quarterly: LKQ Corp results for aftermarket cycle read-through.\n\n**Re-assessment trigger:** Any single re-activation criterion met triggers full case review within 5 business days. Two or more criteria met simultaneously triggers immediate DD P1 progression decision.",
+              "ratings": []
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        }
+      ]
+    },
+    "F": {
+      "letter": "F",
+      "title": "APPENDICES",
+      "applicable": true,
+      "inline_verdict": "8 research files, ~58K words; basic checks pass; no red flags",
+      "default_open": false,
+      "subsections": [
+        {
+          "id": "F.I",
+          "title": "Basic checks",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "kv_grid",
+              "title": "Quick reference — DIE (D'Ieteren Group SA)",
+              "rows": [
+                {
+                  "label": "Ticker",
+                  "value": "DIE (Euronext Brussels)"
+                },
+                {
+                  "label": "Currency",
+                  "value": "EUR"
+                },
+                {
+                  "label": "Market cap",
+                  "value": "~€9.9bn"
+                },
+                {
+                  "label": "Enterprise value",
+                  "value": "~€10.5bn (group); Belron ~€30-32bn target"
+                },
+                {
+                  "label": "Share price",
+                  "value": "~€159.60 (Apr 2026)"
+                },
+                {
+                  "label": "Shares outstanding",
+                  "value": "~53m"
+                },
+                {
+                  "label": "30-day avg volume",
+                  "value": "Adequate institutional liquidity (Euronext Brussels)"
+                },
+                {
+                  "label": "Net debt",
+                  "value": "€287m corporate; Belron ~€10bn"
+                },
+                {
+                  "label": "Dividend",
+                  "value": "€2.00/share (FY25), 31 consecutive years + €74 extraordinary Dec 2024"
+                },
+                {
+                  "label": "Free float",
+                  "value": "~50% (SPDG controls ~50%)"
+                },
+                {
+                  "label": "Largest shareholder",
+                  "value": "SPDG / de Spoelberch family"
+                },
+                {
+                  "label": "Segments",
+                  "value": "Belron (80%), D'Ieteren Automotive, TVH Parts, Moleskine"
+                },
+                {
+                  "label": "Geographic split",
+                  "value": "Belron: ~55% US/NA, ~35% Europe, ~10% RoW. Auto: Belgium only"
+                },
+                {
+                  "label": "CEO",
+                  "value": "Francis Deprez (since Jul 2019, ex-McKinsey)"
+                },
+                {
+                  "label": "Employees",
+                  "value": "~42,000 (Belron 30,000+)"
+                },
+                {
+                  "label": "FY end",
+                  "value": "December"
+                },
+                {
+                  "label": "Next results",
+                  "value": "Q1 2026 trading update"
+                },
+                {
+                  "label": "Sector",
+                  "value": "Diversified Holding / Auto Services"
+                },
+                {
+                  "label": "HQ",
+                  "value": "Brussels, Belgium"
+                },
+                {
+                  "label": "Listing",
+                  "value": "Euronext Brussels — DIE.BR"
+                },
+                {
+                  "label": "Short interest",
+                  "value": "Not material"
+                }
+              ]
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        },
+        {
+          "id": "F.II",
+          "title": "Supplementary notes",
+          "heading_level": 3,
+          "blocks": [
+            {
+              "type": "prose",
+              "iaja": "I",
+              "text": "**Research coverage:** 8 research files, ~58K words total: Earnings Review [C], SS Analysis [C], BM Sector Primer [C], Earnings Risks [C], GTA Key Drivers [C], Short Seller Analysis [C], CEO Assessment [C], Pre-Mortem [C]. Sources include company filings (FY25, H1 2025), sell-side research (Jefferies, Berenberg, KBC, Kepler), public data on insurance markets and ADAS adoption. CEO/CFO meeting scheduled 10 Apr 2026. ESA synthesis memo (IAJA) completed."
+            },
+            {
+              "type": "prose",
+              "iaja": "A",
+              "text": "**Data gaps:** (i) Precise Minervini scoring — need FactSet for RS rank, adjusted 52W range. (ii) Belron standalone P&L and FCF — not independently disclosed. (iii) Top-5 insurer concentration — not disclosed. (iv) Financial model not yet built. (v) ADAS penetration ceiling analysis — fleet vintage data needed. (vi) NA claims frequency data — insurance sources required."
+            }
+          ],
+          "word_count": 0,
+          "target_words": 0
+        }
+      ],
+      "word_count": 0,
+      "page_count": 0,
+      "target_words": 0
+    }
+  }
+}
