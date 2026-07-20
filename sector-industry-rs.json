@@ -1,6 +1,6 @@
 {
  "source": "rs-dashboard.html",
- "current_week": "2026-07-16",
+ "current_week": "2026-07-17",
  "prior_week": "2026-05-15",
  "industry": {
   "A. Consumer staples": {
@@ -24,7 +24,7 @@
    "prior": "A"
   },
   "F. Defence": {
-   "current": "D",
+   "current": "C",
    "prior": "D"
   },
   "G. Financials": {
@@ -52,7 +52,7 @@
    "prior": "F"
   },
   "M. Materials": {
-   "current": "C",
+   "current": "D",
    "prior": "C"
   },
   "N. Real assets": {
@@ -106,7 +106,7 @@
    "prior": "F"
   },
   "B.2. Animal healthcare": {
-   "current": "F",
+   "current": "D",
    "prior": "F"
   },
   "B.3. Hospitals, clinics and care homes": {
@@ -122,7 +122,7 @@
    "prior": "D"
   },
   "B.6. Medtech - capital goods": {
-   "current": "C",
+   "current": "D",
    "prior": "F"
   },
   "B.7. Pharma/biotech": {
@@ -206,7 +206,7 @@
    "prior": "C"
   },
   "G.6. Asset management software (B2B)": {
-   "current": "D",
+   "current": "F",
    "prior": "F"
   },
   "G.8. Retail trading platforms (D2C)": {
@@ -234,7 +234,7 @@
    "prior": "C"
   },
   "H.14. Automotive - sales/rentals": {
-   "current": "D",
+   "current": "C",
    "prior": "C"
   },
   "H.15. Automotive - OEM or supplier": {
@@ -246,7 +246,7 @@
    "prior": "F"
   },
   "H.17. Consumer products": {
-   "current": "B",
+   "current": "C",
    "prior": "C"
   },
   "H.2. Retail - apparel": {
@@ -322,7 +322,7 @@
    "prior": "F"
   },
   "K.3. Testing and inspection services": {
-   "current": "C",
+   "current": "B",
    "prior": "C"
   },
   "K.5. Advertising and consulting services": {
@@ -370,7 +370,7 @@
    "prior": "D"
   },
   "N.1. TBD": {
-   "current": "D",
+   "current": "C",
    "prior": "D"
   },
   "O.1. Industrial services": {
@@ -390,7 +390,7 @@
    "prior": "D"
   },
   "O.2. Products - various [SPLIT]": {
-   "current": "C",
+   "current": "D",
    "prior": "C"
   },
   "O.4. Capital goods - grid": {
