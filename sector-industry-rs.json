@@ -1,6 +1,6 @@
 {
  "source": "rs-dashboard.html",
- "current_week": "2026-07-20",
+ "current_week": "2026-07-21",
  "prior_week": "2026-05-22",
  "industry": {
   "A. Consumer staples": {
@@ -24,7 +24,7 @@
    "prior": "A"
   },
   "F. Defence": {
-   "current": "D",
+   "current": "C",
    "prior": "C"
   },
   "G. Financials": {
@@ -56,7 +56,7 @@
    "prior": "D"
   },
   "N. Real assets": {
-   "current": "C",
+   "current": "D",
    "prior": "D"
   },
   "O. Industrials and capital goods": {
@@ -122,7 +122,7 @@
    "prior": "D"
   },
   "B.6. Medtech - capital goods": {
-   "current": "D",
+   "current": "C",
    "prior": "F"
   },
   "B.7. Pharma/biotech": {
@@ -130,7 +130,7 @@
    "prior": "B"
   },
   "B.8. Medtech - distributors / retail": {
-   "current": "D",
+   "current": "F",
    "prior": "D"
   },
   "B.9. Medtech - consumables - growth": {
@@ -238,7 +238,7 @@
    "prior": "C"
   },
   "H.15. Automotive - OEM or supplier": {
-   "current": "C",
+   "current": "D",
    "prior": "C"
   },
   "H.16. Homebuilders": {
@@ -274,7 +274,7 @@
    "prior": "B"
   },
   "I.1. Logistics": {
-   "current": "C",
+   "current": "B",
    "prior": "C"
   },
   "J.1. IT services - consulting": {
@@ -322,7 +322,7 @@
    "prior": "F"
   },
   "K.3. Testing and inspection services": {
-   "current": "B",
+   "current": "C",
    "prior": "C"
   },
   "K.5. Advertising and consulting services": {
@@ -338,7 +338,7 @@
    "prior": "D"
   },
   "L.1. Content, TV and other media": {
-   "current": "F",
+   "current": "D",
    "prior": "D"
   },
   "M.1. Chemicals - Fragrances/ingredients": {
