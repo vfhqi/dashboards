@@ -1,6 +1,6 @@
 {
  "source": "rs-dashboard.html",
- "current_week": "2026-07-21",
+ "current_week": "2026-07-22",
  "prior_week": "2026-05-22",
  "industry": {
   "A. Consumer staples": {
@@ -12,7 +12,7 @@
    "prior": "D"
   },
   "C. Telecoms": {
-   "current": "D",
+   "current": "C",
    "prior": "B"
   },
   "D. Infrastructure": {
@@ -29,7 +29,7 @@
   },
   "G. Financials": {
    "current": "B",
-   "prior": "B"
+   "prior": "C"
   },
   "H. Consumer discretionary": {
    "current": "D",
@@ -37,7 +37,7 @@
   },
   "I. Transportation": {
    "current": "B",
-   "prior": "C"
+   "prior": "B"
   },
   "J. Technology": {
    "current": "F",
@@ -52,7 +52,7 @@
    "prior": "F"
   },
   "M. Materials": {
-   "current": "C",
+   "current": "D",
    "prior": "D"
   },
   "N. Real assets": {
@@ -139,7 +139,7 @@
   },
   "C.1. Telecoms - MNOs": {
    "current": "C",
-   "prior": "C"
+   "prior": "B"
   },
   "C.2. Telecoms - towers": {
    "current": "F",
@@ -155,7 +155,7 @@
   },
   "E.1. Utilities - Integrated power": {
    "current": "B",
-   "prior": "B"
+   "prior": "C"
   },
   "E.2. Utilities - green focused": {
    "current": "D",
@@ -163,7 +163,7 @@
   },
   "E.3. Utilities - Water and other non-power": {
    "current": "B",
-   "prior": "B"
+   "prior": "C"
   },
   "F.1. Defence - Primes": {
    "current": "C",
@@ -178,7 +178,7 @@
    "prior": "C"
   },
   "G.11. Traditional asset managers (B2C)": {
-   "current": "B",
+   "current": "A",
    "prior": "B"
   },
   "G.12. Specialty finance and other": {
@@ -199,7 +199,7 @@
   },
   "G.4. Holding companies": {
    "current": "C",
-   "prior": "D"
+   "prior": "C"
   },
   "G.5. Online savings platform (D2C)": {
    "current": "B",
@@ -210,11 +210,11 @@
    "prior": "F"
   },
   "G.8. Retail trading platforms (D2C)": {
-   "current": "A",
-   "prior": "A"
+   "current": "B",
+   "prior": "B"
   },
   "H.1. Luxury goods": {
-   "current": "C",
+   "current": "D",
    "prior": "C"
   },
   "H.10. Hotels": {
@@ -258,7 +258,7 @@
    "prior": "D"
   },
   "H.4. Retail - online": {
-   "current": "C",
+   "current": "D",
    "prior": "B"
   },
   "H.6. Gambling - B2C OSB, Casino-led": {
@@ -282,7 +282,7 @@
    "prior": "F"
   },
   "J.2. IT services - reselling": {
-   "current": "B",
+   "current": "C",
    "prior": "F"
   },
   "J.3. Fintech/payment processing": {
@@ -302,8 +302,8 @@
    "prior": "F"
   },
   "J.8. Hardware": {
-   "current": "D",
-   "prior": "C"
+   "current": "B",
+   "prior": "B"
   },
   "J.9. Semiconductors": {
    "current": "A",
@@ -370,8 +370,8 @@
    "prior": "D"
   },
   "N.1. TBD": {
-   "current": "C",
-   "prior": "C"
+   "current": "D",
+   "prior": "D"
   },
   "O.1. Industrial services": {
    "current": "C",
@@ -390,7 +390,7 @@
    "prior": "D"
   },
   "O.2. Products - various [SPLIT]": {
-   "current": "D",
+   "current": "C",
    "prior": "C"
   },
   "O.4. Capital goods - grid": {
@@ -402,7 +402,7 @@
    "prior": "B"
   },
   "O.7. Capital goods - factory equipment": {
-   "current": "D",
+   "current": "C",
    "prior": "C"
   },
   "O.8. Capital goods - misc.": {
@@ -419,7 +419,7 @@
   },
   "P.2. Energy - upstream E&P": {
    "current": "B",
-   "prior": "B"
+   "prior": "A"
   },
   "P.3. Energy - upstream support services": {
    "current": "A",
