@@ -1,5 +1,5 @@
 {
- "generated": "2026-07-26",
+ "generated": "2026-07-27",
  "count": 140,
  "stocks": {
   "1U1-DE": {
@@ -11070,7 +11070,7 @@
   },
   "CVSG-GB": {
    "stage": "Triaging",
-   "date": "2026-07-20",
+   "date": "2026-07-27",
    "source_memo": "memo.md",
    "master": [
     {
@@ -11487,7 +11487,7 @@
   },
   "DCC-GB": {
    "stage": "Triaging",
-   "date": "2026-07-06",
+   "date": "2026-07-27",
    "source_memo": "memo.md",
    "master": [
     {
@@ -11696,7 +11696,7 @@
   },
   "DHER-DE": {
    "stage": "Triaging",
-   "date": "2026-07-17",
+   "date": "2026-07-27",
    "source_memo": "memo.md",
    "master": [
     {
@@ -23032,7 +23032,7 @@
   },
   "JDG-GB": {
    "stage": "Triaging",
-   "date": "2026-07-06",
+   "date": "2026-07-27",
    "source_memo": "memo.md",
    "master": [
     {
