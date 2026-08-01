@@ -1,6 +1,6 @@
 {
  "source": "rs-dashboard.html",
- "current_week": "2026-07-27",
+ "current_week": "2026-07-30",
  "prior_week": "2026-05-29",
  "industry": {
   "A. Consumer staples": {
@@ -13,7 +13,7 @@
   },
   "C. Telecoms": {
    "current": "C",
-   "prior": "C"
+   "prior": "B"
   },
   "D. Infrastructure": {
    "current": "C",
@@ -28,7 +28,7 @@
    "prior": "C"
   },
   "G. Financials": {
-   "current": "A",
+   "current": "B",
    "prior": "C"
   },
   "H. Consumer discretionary": {
@@ -36,7 +36,7 @@
    "prior": "D"
   },
   "I. Transportation": {
-   "current": "B",
+   "current": "A",
    "prior": "B"
   },
   "J. Technology": {
@@ -61,7 +61,7 @@
   },
   "O. Industrials and capital goods": {
    "current": "C",
-   "prior": "B"
+   "prior": "C"
   },
   "P. Energy, commodities and metals mining": {
    "current": "A",
@@ -74,7 +74,7 @@
    "prior": "F"
   },
   "A.2. Tobacco": {
-   "current": "C",
+   "current": "D",
    "prior": "B"
   },
   "A.3. Automotive repair": {
@@ -118,7 +118,7 @@
    "prior": "C"
   },
   "B.5. Medtech - consumables - mature": {
-   "current": "D",
+   "current": "F",
    "prior": "F"
   },
   "B.6. Medtech - capital goods": {
@@ -130,8 +130,8 @@
    "prior": "B"
   },
   "B.8. Medtech - distributors / retail": {
-   "current": "D",
-   "prior": "D"
+   "current": "F",
+   "prior": "F"
   },
   "B.9. Medtech - consumables - growth": {
    "current": "F",
@@ -154,7 +154,7 @@
    "prior": "A"
   },
   "E.1. Utilities - Integrated power": {
-   "current": "B",
+   "current": "C",
    "prior": "C"
   },
   "E.2. Utilities - green focused": {
@@ -174,7 +174,7 @@
    "prior": "D"
   },
   "G.1. Insurance": {
-   "current": "C",
+   "current": "B",
    "prior": "C"
   },
   "G.11. Traditional asset managers (B2C)": {
@@ -190,7 +190,7 @@
    "prior": "B"
   },
   "G.2. Exchanges and brokers": {
-   "current": "C",
+   "current": "D",
    "prior": "D"
   },
   "G.3. Alternative investment managers": {
@@ -198,7 +198,7 @@
    "prior": "D"
   },
   "G.4. Holding companies": {
-   "current": "C",
+   "current": "D",
    "prior": "C"
   },
   "G.5. Online savings platform (D2C)": {
@@ -210,7 +210,7 @@
    "prior": "F"
   },
   "G.8. Retail trading platforms (D2C)": {
-   "current": "B",
+   "current": "C",
    "prior": "B"
   },
   "H.1. Luxury goods": {
@@ -218,11 +218,11 @@
    "prior": "C"
   },
   "H.10. Hotels": {
-   "current": "D",
+   "current": "C",
    "prior": "B"
   },
   "H.11. Airlines and travel": {
-   "current": "D",
+   "current": "F",
    "prior": "D"
   },
   "H.12. Online classifieds/platforms": {
@@ -234,7 +234,7 @@
    "prior": "C"
   },
   "H.14. Automotive - sales/rentals": {
-   "current": "D",
+   "current": "B",
    "prior": "C"
   },
   "H.15. Automotive - OEM or supplier": {
@@ -250,8 +250,8 @@
    "prior": "C"
   },
   "H.2. Retail - apparel": {
-   "current": "C",
-   "prior": "C"
+   "current": "B",
+   "prior": "D"
   },
   "H.3. Retail - general/physical": {
    "current": "B",
@@ -274,15 +274,15 @@
    "prior": "B"
   },
   "I.1. Logistics": {
-   "current": "C",
+   "current": "B",
    "prior": "C"
   },
   "J.1. IT services - consulting": {
-   "current": "F",
+   "current": "D",
    "prior": "F"
   },
   "J.2. IT services - reselling": {
-   "current": "B",
+   "current": "C",
    "prior": "D"
   },
   "J.3. Fintech/payment processing": {
@@ -310,8 +310,8 @@
    "prior": "A"
   },
   "K.1. Security and facilities services": {
-   "current": "F",
-   "prior": "F"
+   "current": "C",
+   "prior": "C"
   },
   "K.10. Waste management services": {
    "current": "B",
@@ -346,7 +346,7 @@
    "prior": "D"
   },
   "M.2. Chemicals - Distributors": {
-   "current": "F",
+   "current": "D",
    "prior": "F"
   },
   "M.3. Chemicals - Specialty": {
@@ -354,7 +354,7 @@
    "prior": "D"
   },
   "M.4. Chemicals - Base": {
-   "current": "D",
+   "current": "C",
    "prior": "D"
   },
   "M.6. Basic materials and construction": {
@@ -378,7 +378,7 @@
    "prior": "C"
   },
   "O.10. Capital goods - EV": {
-   "current": "B",
+   "current": "C",
    "prior": "A"
   },
   "O.13. Renewables": {
@@ -390,7 +390,7 @@
    "prior": "D"
   },
   "O.2. Products - various [SPLIT]": {
-   "current": "C",
+   "current": "D",
    "prior": "C"
   },
   "O.4. Capital goods - grid": {
