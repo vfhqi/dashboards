@@ -1,6 +1,6 @@
 {
  "source": "rs-dashboard.html",
- "current_week": "2026-07-30",
+ "current_week": "2026-07-31",
  "prior_week": "2026-05-29",
  "industry": {
   "A. Consumer staples": {
@@ -8,7 +8,7 @@
    "prior": "F"
   },
   "B. Healthcare": {
-   "current": "D",
+   "current": "F",
    "prior": "D"
   },
   "C. Telecoms": {
@@ -32,7 +32,7 @@
    "prior": "C"
   },
   "H. Consumer discretionary": {
-   "current": "F",
+   "current": "D",
    "prior": "D"
   },
   "I. Transportation": {
@@ -210,7 +210,7 @@
    "prior": "F"
   },
   "G.8. Retail trading platforms (D2C)": {
-   "current": "C",
+   "current": "D",
    "prior": "B"
   },
   "H.1. Luxury goods": {
@@ -390,7 +390,7 @@
    "prior": "D"
   },
   "O.2. Products - various [SPLIT]": {
-   "current": "D",
+   "current": "C",
    "prior": "C"
   },
   "O.4. Capital goods - grid": {
