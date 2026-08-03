@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-02",
- "count": 160,
+ "generated": "2026-08-03",
+ "count": 169,
  "stocks": {
   "1U1-DE": {
    "stage": "Triaging",
@@ -2828,6 +2828,250 @@
       }
      ],
      "anchor": "c-2-pillar-ii-case-building-blocks-c"
+    },
+    {
+     "roman": "III",
+     "label": "Investment case components",
+     "grade": null,
+     "elements": [],
+     "groups": [],
+     "anchor": "section-d-pillar-iii-investment-case-components"
+    }
+   ]
+  },
+  "AKE-FR": {
+   "stage": "Triaging",
+   "date": "2026-08-03",
+   "source_memo": "memo.md",
+   "master": [
+    {
+     "code": "MR1",
+     "label": "Technical momentum",
+     "grade": "A",
+     "anchor": "mr1-technical-momentum-grade"
+    },
+    {
+     "code": "MR2",
+     "label": "Sell-side earnings momentum",
+     "grade": "D",
+     "anchor": "mr2-sell-side-earnings-momentum-grade"
+    },
+    {
+     "code": "MR3",
+     "label": "Thematic fit",
+     "grade": null,
+     "anchor": "mr3-thematic-fit-grade"
+    },
+    {
+     "code": "MR4",
+     "label": "Case change elements",
+     "grade": null,
+     "anchor": "mr4-pillar-i-case-change-elements-grade"
+    },
+    {
+     "code": "MR5",
+     "label": "Case building blocks",
+     "grade": null,
+     "anchor": "mr5-pillar-ii-case-building-blocks-grade"
+    },
+    {
+     "code": "MR6",
+     "label": "Investment case components",
+     "grade": null,
+     "anchor": "mr6-pillar-iii-investment-case-components-nr"
+    }
+   ],
+   "pillars": [
+    {
+     "roman": "I",
+     "label": "Case change elements",
+     "grade": "D",
+     "elements": [
+      {
+       "code": "E1",
+       "label": "Required input change forces",
+       "grade": "D",
+       "ras": [],
+       "anchor": "element-e1-required-input-change-forces-d"
+      },
+      {
+       "code": "E2",
+       "label": "Required case outputs",
+       "grade": null,
+       "ras": [],
+       "anchor": "element-e2-required-case-outputs-nr"
+      },
+      {
+       "code": "E3",
+       "label": "Sufficient TSR / valuation upside",
+       "grade": null,
+       "ras": [],
+       "anchor": "element-e3-sufficient-tsr-valuation-upside-nr"
+      }
+     ],
+     "groups": [],
+     "anchor": "c-1-pillar-i-case-change-elements-d"
+    },
+    {
+     "roman": "II",
+     "label": "Case building blocks",
+     "grade": "D",
+     "elements": [],
+     "groups": [
+      {
+       "code": "GROUP 1",
+       "label": "Case momentum",
+       "grade": "D",
+       "elements": [
+        {
+         "code": "E4",
+         "label": "Technical momentum",
+         "grade": null,
+         "ras": [],
+         "anchor": "element-e4-technical-momentum-nr"
+        },
+        {
+         "code": "E5",
+         "label": "Thematic fit",
+         "grade": "D",
+         "ras": [],
+         "anchor": "element-e5-thematic-fit-d"
+        },
+        {
+         "code": "E6",
+         "label": "Sell-side earnings momentum",
+         "grade": null,
+         "ras": [],
+         "anchor": "element-e6-sell-side-earnings-momentum-nr"
+        }
+       ],
+       "anchor": "group-1-case-momentum-d"
+      },
+      {
+       "code": "GROUP 2",
+       "label": "Case simplicity",
+       "grade": "D",
+       "elements": [
+        {
+         "code": "E7",
+         "label": "Required case simplicity guardrails",
+         "grade": "D",
+         "ras": [],
+         "anchor": "element-e7-required-case-simplicity-guardrails-d"
+        },
+        {
+         "code": "E8",
+         "label": "Fit with acceptable case setups",
+         "grade": "D",
+         "ras": [],
+         "anchor": "element-e8-fit-with-acceptable-case-setups-d"
+        }
+       ],
+       "anchor": "group-2-case-simplicity-d"
+      },
+      {
+       "code": "GROUP 3",
+       "label": "Core philosophy",
+       "grade": "D",
+       "elements": [
+        {
+         "code": "E9",
+         "label": "Great operator",
+         "grade": null,
+         "ras": [],
+         "anchor": "element-e9-great-operator-nr"
+        },
+        {
+         "code": "E10",
+         "label": "Advantaged business and widening competitive advantage",
+         "grade": null,
+         "ras": [],
+         "anchor": "element-e10-advantaged-business-and-widening-competitive-adv"
+        },
+        {
+         "code": "E11",
+         "label": "Value-chain dynamics",
+         "grade": "D",
+         "ras": [],
+         "anchor": "element-e11-value-chain-dynamics-d"
+        },
+        {
+         "code": "E12",
+         "label": "Supportive industry structure",
+         "grade": null,
+         "ras": [],
+         "anchor": "element-e12-supportive-industry-structure-nr"
+        },
+        {
+         "code": "E13",
+         "label": "High secular growth potential",
+         "grade": null,
+         "ras": [],
+         "anchor": "element-e13-high-secular-growth-potential-nr"
+        }
+       ],
+       "anchor": "group-3-core-philosophy-d"
+      },
+      {
+       "code": "GROUP 4",
+       "label": "Case riskiness",
+       "grade": "D",
+       "elements": [
+        {
+         "code": "E15",
+         "label": "Invalidating attributes",
+         "grade": null,
+         "ras": [],
+         "anchor": "element-e15-invalidating-attributes-nr"
+        },
+        {
+         "code": "E16",
+         "label": "Strenuously seek-to-avoid attributes",
+         "grade": null,
+         "ras": [],
+         "anchor": "element-e16-strenuously-seek-to-avoid-attributes-nr"
+        },
+        {
+         "code": "E17",
+         "label": "Capital-constraining attributes",
+         "grade": null,
+         "ras": [],
+         "anchor": "element-e17-capital-constraining-attributes-nr"
+        },
+        {
+         "code": "E18",
+         "label": "Clear transmission mechanism, inputs to earnings per share",
+         "grade": null,
+         "ras": [],
+         "anchor": "element-e18-clear-transmission-mechanism-inputs-to-earnings-"
+        },
+        {
+         "code": "E19",
+         "label": "Monitorable transmission mechanism, leading tracking indicators to earnings per share",
+         "grade": null,
+         "ras": [],
+         "anchor": "element-e19-monitorable-transmission-mechanism-leading-track"
+        }
+       ],
+       "anchor": "group-4-case-riskiness-d"
+      },
+      {
+       "code": "GROUP 5",
+       "label": "Case optionality",
+       "grade": null,
+       "elements": [
+        {
+         "code": "E20",
+         "label": "Nice-to-have attributes",
+         "grade": null,
+         "ras": [],
+         "anchor": "element-e20-nice-to-have-attributes-nr"
+        }
+       ],
+       "anchor": "group-5-case-optionality-nr"
+      }
+     ],
+     "anchor": "c-2-pillar-ii-case-building-blocks-d"
     },
     {
      "roman": "III",
@@ -6544,6 +6788,265 @@
     }
    ]
   },
+  "BCHN-CH": {
+   "stage": "Triaging",
+   "date": "2026-08-03",
+   "source_memo": "memo.md",
+   "master": [
+    {
+     "code": "MR1",
+     "label": "Technical momentum",
+     "grade": "A",
+     "anchor": ""
+    },
+    {
+     "code": "MR2",
+     "label": "Sell-side earnings momentum",
+     "grade": "F",
+     "anchor": ""
+    },
+    {
+     "code": "MR3",
+     "label": "Thematic fit",
+     "grade": "C",
+     "anchor": ""
+    },
+    {
+     "code": "MR4",
+     "label": "Case change elements",
+     "grade": "C",
+     "anchor": ""
+    },
+    {
+     "code": "MR5",
+     "label": "Case building blocks",
+     "grade": "D",
+     "anchor": ""
+    },
+    {
+     "code": "MR6",
+     "label": "Investment case components",
+     "grade": null,
+     "anchor": ""
+    }
+   ],
+   "pillars": [
+    {
+     "roman": "I",
+     "label": "Case change elements",
+     "grade": "C",
+     "elements": [
+      {
+       "code": "E1",
+       "label": "Required input change forces",
+       "grade": "C",
+       "ras": [
+        {
+         "code": "RA1",
+         "label": "Change forces?",
+         "grade": "C",
+         "cqs": [],
+         "anchor": ""
+        },
+        {
+         "code": "RA2",
+         "label": "Robust base?",
+         "grade": "C",
+         "cqs": [],
+         "anchor": ""
+        }
+       ],
+       "anchor": ""
+      },
+      {
+       "code": "E2",
+       "label": "Required case outputs",
+       "grade": null,
+       "ras": [],
+       "anchor": ""
+      },
+      {
+       "code": "E3",
+       "label": "Sufficient TSR / valuation upside",
+       "grade": null,
+       "ras": [],
+       "anchor": ""
+      }
+     ],
+     "groups": [],
+     "anchor": ""
+    },
+    {
+     "roman": "II",
+     "label": "Case building blocks",
+     "grade": "D",
+     "elements": [],
+     "groups": [
+      {
+       "code": "GROUP 1",
+       "label": "Case momentum",
+       "grade": "D",
+       "elements": [
+        {
+         "code": "E4",
+         "label": "Technical momentum",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E5",
+         "label": "Thematic fit",
+         "grade": "C",
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E6",
+         "label": "Sell-side earnings momentum",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        }
+       ],
+       "anchor": ""
+      },
+      {
+       "code": "GROUP 2",
+       "label": "Case simplicity",
+       "grade": "D",
+       "elements": [
+        {
+         "code": "E7",
+         "label": "Required case simplicity guardrails",
+         "grade": "D",
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E8",
+         "label": "Fit with acceptable case setups",
+         "grade": "C",
+         "ras": [],
+         "anchor": ""
+        }
+       ],
+       "anchor": ""
+      },
+      {
+       "code": "GROUP 3",
+       "label": "Core philosophy",
+       "grade": "C",
+       "elements": [
+        {
+         "code": "E9",
+         "label": "Great operator",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E10",
+         "label": "Advantaged business and widening competitive advantage",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E11",
+         "label": "Value-chain dynamics",
+         "grade": "C",
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E12",
+         "label": "Supportive industry structure",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E13",
+         "label": "High secular growth potential",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        }
+       ],
+       "anchor": ""
+      },
+      {
+       "code": "GROUP 4",
+       "label": "Case riskiness",
+       "grade": "C",
+       "elements": [
+        {
+         "code": "E15",
+         "label": "Invalidating attributes",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E16",
+         "label": "Strenuously seek-to-avoid attributes",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E17",
+         "label": "Capital-constraining attributes",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E18",
+         "label": "Clear transmission mechanism, inputs to earnings per share",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E19",
+         "label": "Monitorable transmission mechanism, leading tracking indicators to earnings per share",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        }
+       ],
+       "anchor": ""
+      },
+      {
+       "code": "GROUP 5",
+       "label": "Case optionality",
+       "grade": null,
+       "elements": [
+        {
+         "code": "E20",
+         "label": "Nice-to-have attributes",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        }
+       ],
+       "anchor": ""
+      }
+     ],
+     "anchor": ""
+    },
+    {
+     "roman": "III",
+     "label": "Investment case components",
+     "grade": null,
+     "elements": [],
+     "groups": [],
+     "anchor": ""
+    }
+   ]
+  },
   "BESI-NL": {
    "stage": "Triaging",
    "date": "2026-07-09",
@@ -7687,6 +8190,265 @@
     }
    ]
   },
+  "BOY-GB": {
+   "stage": "Triaging",
+   "date": "2026-08-03",
+   "source_memo": "memo.md",
+   "master": [
+    {
+     "code": "MR1",
+     "label": "Technical momentum",
+     "grade": "A",
+     "anchor": ""
+    },
+    {
+     "code": "MR2",
+     "label": "Sell-side earnings momentum",
+     "grade": "D",
+     "anchor": ""
+    },
+    {
+     "code": "MR3",
+     "label": "Thematic fit",
+     "grade": "C",
+     "anchor": ""
+    },
+    {
+     "code": "MR4",
+     "label": "Case change elements",
+     "grade": "B",
+     "anchor": ""
+    },
+    {
+     "code": "MR5",
+     "label": "Case building blocks",
+     "grade": "B",
+     "anchor": ""
+    },
+    {
+     "code": "MR6",
+     "label": "Investment case components",
+     "grade": null,
+     "anchor": ""
+    }
+   ],
+   "pillars": [
+    {
+     "roman": "I",
+     "label": "Case change elements",
+     "grade": "B",
+     "elements": [
+      {
+       "code": "E1",
+       "label": "Required input change forces",
+       "grade": "B",
+       "ras": [
+        {
+         "code": "RA1",
+         "label": "Change forces?",
+         "grade": "B",
+         "cqs": [],
+         "anchor": ""
+        },
+        {
+         "code": "RA2",
+         "label": "Robust base?",
+         "grade": "C",
+         "cqs": [],
+         "anchor": ""
+        }
+       ],
+       "anchor": ""
+      },
+      {
+       "code": "E2",
+       "label": "Required case outputs",
+       "grade": null,
+       "ras": [],
+       "anchor": ""
+      },
+      {
+       "code": "E3",
+       "label": "Sufficient TSR / valuation upside",
+       "grade": null,
+       "ras": [],
+       "anchor": ""
+      }
+     ],
+     "groups": [],
+     "anchor": ""
+    },
+    {
+     "roman": "II",
+     "label": "Case building blocks",
+     "grade": "C",
+     "elements": [],
+     "groups": [
+      {
+       "code": "GROUP 1",
+       "label": "Case momentum",
+       "grade": "C",
+       "elements": [
+        {
+         "code": "E4",
+         "label": "Technical momentum",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E5",
+         "label": "Thematic fit",
+         "grade": "C",
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E6",
+         "label": "Sell-side earnings momentum",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        }
+       ],
+       "anchor": ""
+      },
+      {
+       "code": "GROUP 2",
+       "label": "Case simplicity",
+       "grade": "C",
+       "elements": [
+        {
+         "code": "E7",
+         "label": "Required case simplicity guardrails",
+         "grade": "C",
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E8",
+         "label": "Fit with acceptable case setups",
+         "grade": "B",
+         "ras": [],
+         "anchor": ""
+        }
+       ],
+       "anchor": ""
+      },
+      {
+       "code": "GROUP 3",
+       "label": "Core philosophy",
+       "grade": "B",
+       "elements": [
+        {
+         "code": "E9",
+         "label": "Great operator",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E10",
+         "label": "Advantaged business and widening competitive advantage",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E11",
+         "label": "Value-chain dynamics",
+         "grade": "B",
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E12",
+         "label": "Supportive industry structure",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E13",
+         "label": "High secular growth potential",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        }
+       ],
+       "anchor": ""
+      },
+      {
+       "code": "GROUP 4",
+       "label": "Case riskiness",
+       "grade": "C",
+       "elements": [
+        {
+         "code": "E15",
+         "label": "Invalidating attributes",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E16",
+         "label": "Strenuously seek-to-avoid attributes",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E17",
+         "label": "Capital-constraining attributes",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E18",
+         "label": "Clear transmission mechanism, inputs to earnings per share",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E19",
+         "label": "Monitorable transmission mechanism, leading tracking indicators to earnings per share",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        }
+       ],
+       "anchor": ""
+      },
+      {
+       "code": "GROUP 5",
+       "label": "Case optionality",
+       "grade": null,
+       "elements": [
+        {
+         "code": "E20",
+         "label": "Nice-to-have attributes",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        }
+       ],
+       "anchor": ""
+      }
+     ],
+     "anchor": ""
+    },
+    {
+     "roman": "III",
+     "label": "Investment case components",
+     "grade": null,
+     "elements": [],
+     "groups": [],
+     "anchor": ""
+    }
+   ]
+  },
   "BRAV-SE": {
    "stage": "Deep Dive",
    "date": "2026-06-19",
@@ -8216,6 +8978,409 @@
     {
      "roman": "III",
      "label": "Investment Case Components",
+     "grade": null,
+     "elements": [],
+     "groups": [],
+     "anchor": "section-d-pillar-iii-investment-case-components"
+    }
+   ]
+  },
+  "BRE-IT": {
+   "stage": "Triaging",
+   "date": "2026-08-03",
+   "source_memo": "memo.md",
+   "master": [
+    {
+     "code": "MR1",
+     "label": "Technical momentum",
+     "grade": "A",
+     "anchor": "mr1-technical-momentum-nr"
+    },
+    {
+     "code": "MR2",
+     "label": "Sell-side earnings momentum",
+     "grade": "F",
+     "anchor": "mr2-sell-side-earnings-momentum-d"
+    },
+    {
+     "code": "MR3",
+     "label": "Thematic fit",
+     "grade": "C",
+     "anchor": "mr3-thematic-fit-c"
+    },
+    {
+     "code": "MR4",
+     "label": "Case change elements",
+     "grade": "C",
+     "anchor": "mr4-pillar-i-case-change-elements-c"
+    },
+    {
+     "code": "MR5",
+     "label": "Case building blocks",
+     "grade": "C",
+     "anchor": "mr5-pillar-ii-case-building-blocks-c"
+    },
+    {
+     "code": "MR6",
+     "label": "Investment case components",
+     "grade": null,
+     "anchor": "mr6-pillar-iii-investment-case-components-nr"
+    }
+   ],
+   "pillars": [
+    {
+     "roman": "I",
+     "label": "Case change elements",
+     "grade": "C",
+     "elements": [
+      {
+       "code": "E1",
+       "label": "Required input change forces",
+       "grade": "C",
+       "ras": [
+        {
+         "code": "RA1",
+         "label": "Change forces?",
+         "grade": null,
+         "cqs": [],
+         "anchor": "e1-ra1-change-forces"
+        },
+        {
+         "code": "RA2",
+         "label": "Robust base?",
+         "grade": null,
+         "cqs": [],
+         "anchor": "e1-ra2-robust-base"
+        }
+       ],
+       "anchor": "element-e1-required-input-change-forces-c"
+      },
+      {
+       "code": "E2",
+       "label": "Required case outputs",
+       "grade": null,
+       "ras": [],
+       "anchor": "element-e2-required-case-outputs-nr"
+      },
+      {
+       "code": "E3",
+       "label": "Sufficient TSR / valuation upside",
+       "grade": null,
+       "ras": [],
+       "anchor": "element-e3-sufficient-tsr-valuation-upside-nr"
+      }
+     ],
+     "groups": [],
+     "anchor": "c-1-pillar-i-case-change-elements-c"
+    },
+    {
+     "roman": "II",
+     "label": "Case building blocks",
+     "grade": "C",
+     "elements": [],
+     "groups": [
+      {
+       "code": "GROUP 1",
+       "label": "Case momentum",
+       "grade": "C",
+       "elements": [
+        {
+         "code": "E4",
+         "label": "Technical momentum",
+         "grade": null,
+         "ras": [],
+         "anchor": "element-e4-technical-momentum-nr"
+        },
+        {
+         "code": "E5",
+         "label": "Thematic fit",
+         "grade": "C",
+         "ras": [
+          {
+           "code": "RA1",
+           "label": "Suitability for bear market / economic downturn",
+           "grade": null,
+           "cqs": [],
+           "anchor": "e5-ra1-suitability-for-bear-market-economic-downturn"
+          },
+          {
+           "code": "RA2",
+           "label": "Suitability for AI disruption",
+           "grade": null,
+           "cqs": [],
+           "anchor": "e5-ra2-suitability-for-ai-disruption"
+          },
+          {
+           "code": "RA3",
+           "label": "Suitability for Iran oil-price induced inflation or demand deterioration",
+           "grade": null,
+           "cqs": [],
+           "anchor": "e5-ra3-suitability-for-iran-oil-price-induced-inflation-or-d"
+          },
+          {
+           "code": "RA4",
+           "label": "Paradigm fit from business perspective",
+           "grade": null,
+           "cqs": [],
+           "anchor": "e5-ra4-paradigm-fit-from-business-perspective"
+          }
+         ],
+         "anchor": "element-e5-thematic-fit-c"
+        },
+        {
+         "code": "E6",
+         "label": "Sell-side earnings momentum",
+         "grade": null,
+         "ras": [],
+         "anchor": "element-e6-sell-side-earnings-momentum-nr"
+        }
+       ],
+       "anchor": "group-1-case-momentum-c"
+      },
+      {
+       "code": "GROUP 2",
+       "label": "Case simplicity",
+       "grade": "D",
+       "elements": [
+        {
+         "code": "E7",
+         "label": "Required case simplicity guardrails",
+         "grade": "D",
+         "ras": [
+          {
+           "code": "RA1",
+           "label": "Focused bet?",
+           "grade": null,
+           "cqs": [],
+           "anchor": "e7-ra1-focused-bet"
+          },
+          {
+           "code": "RA2",
+           "label": "Narrow perimeter?",
+           "grade": null,
+           "cqs": [],
+           "anchor": "e7-ra2-narrow-perimeter"
+          },
+          {
+           "code": "RA3",
+           "label": "Zero headwinds?",
+           "grade": null,
+           "cqs": [],
+           "anchor": "e7-ra3-zero-headwinds"
+          },
+          {
+           "code": "RA4",
+           "label": "Handful of change-from-current items?",
+           "grade": null,
+           "cqs": [],
+           "anchor": "e7-ra4-handful-of-change-from-current-items"
+          },
+          {
+           "code": "RA5",
+           "label": "Conservative investor relations?",
+           "grade": null,
+           "cqs": [],
+           "anchor": "e7-ra5-conservative-investor-relations"
+          }
+         ],
+         "anchor": "element-e7-required-case-simplicity-guardrails-d"
+        },
+        {
+         "code": "E8",
+         "label": "Fit with acceptable case setups",
+         "grade": "C",
+         "ras": [
+          {
+           "code": "RA1",
+           "label": "Mis-modelled, high-quality EPS upgrader?",
+           "grade": null,
+           "cqs": [],
+           "anchor": "e8-ra1-mis-modelled-high-quality-eps-upgrader"
+          },
+          {
+           "code": "RA2",
+           "label": "Big demand change-driven EPSU or EPT?",
+           "grade": null,
+           "cqs": [],
+           "anchor": "e8-ra2-big-demand-change-driven-epsu-or-ept"
+          },
+          {
+           "code": "RA3",
+           "label": "Strong corporate change driven EPSU / EPT?",
+           "grade": null,
+           "cqs": [],
+           "anchor": "e8-ra3-strong-corporate-change-driven-epsu-ept"
+          },
+          {
+           "code": "RA4",
+           "label": "Change-from-current clearing in a high-quality compounder?",
+           "grade": null,
+           "cqs": [],
+           "anchor": "e8-ra4-change-from-current-clearing-in-a-high-quality-compou"
+          },
+          {
+           "code": "RA5",
+           "label": "Huge change-from-current clearing event in solid quality?",
+           "grade": null,
+           "cqs": [],
+           "anchor": "e8-ra5-huge-change-from-current-clearing-event-in-solid-qual"
+          },
+          {
+           "code": "RA6",
+           "label": "Trough-on-trough turn in solid quality cyclical?",
+           "grade": null,
+           "cqs": [],
+           "anchor": "e8-ra6-trough-on-trough-turn-in-solid-quality-cyclical"
+          },
+          {
+           "code": "RA7",
+           "label": "Fit with unacceptable case setups?",
+           "grade": null,
+           "cqs": [],
+           "anchor": "e8-ra7-fit-with-unacceptable-case-setups-negative-guardrail"
+          },
+          {
+           "code": "RA8",
+           "label": "Fit with false friend case setups?",
+           "grade": null,
+           "cqs": [],
+           "anchor": "e8-ra8-fit-with-false-friend-case-setups-negative-guardrail"
+          }
+         ],
+         "anchor": "element-e8-fit-with-acceptable-case-setups-c"
+        }
+       ],
+       "anchor": "group-2-case-simplicity-d"
+      },
+      {
+       "code": "GROUP 3",
+       "label": "Core philosophy",
+       "grade": "C",
+       "elements": [
+        {
+         "code": "E9",
+         "label": "Great operator",
+         "grade": null,
+         "ras": [],
+         "anchor": "element-e9-great-operator-nr"
+        },
+        {
+         "code": "E10",
+         "label": "Advantaged business and widening competitive advantage",
+         "grade": null,
+         "ras": [],
+         "anchor": "element-e10-advantaged-business-and-widening-competitive-adv"
+        },
+        {
+         "code": "E11",
+         "label": "Value-chain dynamics",
+         "grade": "C",
+         "ras": [
+          {
+           "code": "RA1",
+           "label": "Demand side strong / robust or fragile / negative?",
+           "grade": null,
+           "cqs": [],
+           "anchor": "e11-ra1-demand-side-strong-robust-or-fragile-negative"
+          },
+          {
+           "code": "RA2",
+           "label": "Competitive supportiveness or aggression?",
+           "grade": null,
+           "cqs": [],
+           "anchor": "e11-ra2-competitive-supportiveness-or-aggression"
+          },
+          {
+           "code": "RA3",
+           "label": "Disruption forces?",
+           "grade": null,
+           "cqs": [],
+           "anchor": "e11-ra3-disruption-forces"
+          },
+          {
+           "code": "RA4",
+           "label": "Political / regulatory?",
+           "grade": null,
+           "cqs": [],
+           "anchor": "e11-ra4-political-regulatory"
+          },
+          {
+           "code": "RA5",
+           "label": "Supportive supplier side?",
+           "grade": null,
+           "cqs": [],
+           "anchor": "e11-ra5-supportive-supplier-side"
+          }
+         ],
+         "anchor": "element-e11-value-chain-dynamics-c"
+        }
+       ],
+       "anchor": "group-3-core-philosophy-c"
+      },
+      {
+       "code": "GROUP 4",
+       "label": "Case riskiness",
+       "grade": null,
+       "elements": [
+        {
+         "code": "E15",
+         "label": "Invalidating attributes",
+         "grade": null,
+         "ras": [],
+         "anchor": "element-e15-invalidating-attributes-nr"
+        },
+        {
+         "code": "E16",
+         "label": "Strenuously seek-to-avoid attributes",
+         "grade": null,
+         "ras": [],
+         "anchor": "element-e16-strenuously-seek-to-avoid-attributes-nr"
+        },
+        {
+         "code": "E17",
+         "label": "Capital-constraining attributes",
+         "grade": null,
+         "ras": [],
+         "anchor": "element-e17-capital-constraining-attributes-nr"
+        },
+        {
+         "code": "E18",
+         "label": "Clear transmission mechanism, inputs to earnings per share",
+         "grade": null,
+         "ras": [],
+         "anchor": "element-e18-clear-transmission-mechanism-inputs-to-earnings-"
+        },
+        {
+         "code": "E19",
+         "label": "Monitorable transmission mechanism, leading tracking indicators to earnings per share",
+         "grade": null,
+         "ras": [],
+         "anchor": "element-e19-monitorable-transmission-mechanism-leading-track"
+        }
+       ],
+       "anchor": "group-4-case-riskiness-nr"
+      },
+      {
+       "code": "GROUP 5",
+       "label": "Case optionality",
+       "grade": null,
+       "elements": [
+        {
+         "code": "E20",
+         "label": "Nice-to-have attributes",
+         "grade": null,
+         "ras": [],
+         "anchor": "element-e20-nice-to-have-attributes-nr"
+        }
+       ],
+       "anchor": "group-5-case-optionality-nr"
+      }
+     ],
+     "anchor": "c-2-pillar-ii-case-building-blocks-c"
+    },
+    {
+     "roman": "III",
+     "label": "Investment case components",
      "grade": null,
      "elements": [],
      "groups": [],
@@ -9835,6 +11000,265 @@
      "elements": [],
      "groups": [],
      "anchor": "section-d-pillar-iii-investment-case-components"
+    }
+   ]
+  },
+  "CARM-FR": {
+   "stage": "Triaging",
+   "date": "2026-08-03",
+   "source_memo": "memo.md",
+   "master": [
+    {
+     "code": "MR1",
+     "label": "Technical momentum",
+     "grade": "A",
+     "anchor": ""
+    },
+    {
+     "code": "MR2",
+     "label": "Sell-side earnings momentum",
+     "grade": "D",
+     "anchor": ""
+    },
+    {
+     "code": "MR3",
+     "label": "Thematic fit",
+     "grade": "C",
+     "anchor": ""
+    },
+    {
+     "code": "MR4",
+     "label": "Case change elements",
+     "grade": "B",
+     "anchor": ""
+    },
+    {
+     "code": "MR5",
+     "label": "Case building blocks",
+     "grade": "B",
+     "anchor": ""
+    },
+    {
+     "code": "MR6",
+     "label": "Investment case components",
+     "grade": null,
+     "anchor": ""
+    }
+   ],
+   "pillars": [
+    {
+     "roman": "I",
+     "label": "Case change elements",
+     "grade": "B",
+     "elements": [
+      {
+       "code": "E1",
+       "label": "Required input change forces",
+       "grade": "B",
+       "ras": [
+        {
+         "code": "RA1",
+         "label": "Change forces?",
+         "grade": null,
+         "cqs": [],
+         "anchor": ""
+        },
+        {
+         "code": "RA2",
+         "label": "Robust base?",
+         "grade": null,
+         "cqs": [],
+         "anchor": ""
+        }
+       ],
+       "anchor": ""
+      },
+      {
+       "code": "E2",
+       "label": "Required case outputs",
+       "grade": null,
+       "ras": [],
+       "anchor": ""
+      },
+      {
+       "code": "E3",
+       "label": "Sufficient TSR / valuation upside",
+       "grade": null,
+       "ras": [],
+       "anchor": ""
+      }
+     ],
+     "groups": [],
+     "anchor": ""
+    },
+    {
+     "roman": "II",
+     "label": "Case building blocks",
+     "grade": "B",
+     "elements": [],
+     "groups": [
+      {
+       "code": "GROUP 1",
+       "label": "Case momentum",
+       "grade": "C",
+       "elements": [
+        {
+         "code": "E4",
+         "label": "Technical momentum",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E5",
+         "label": "Thematic fit",
+         "grade": "C",
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E6",
+         "label": "Sell-side earnings momentum",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        }
+       ],
+       "anchor": ""
+      },
+      {
+       "code": "GROUP 2",
+       "label": "Case simplicity",
+       "grade": "B",
+       "elements": [
+        {
+         "code": "E7",
+         "label": "Required case simplicity guardrails",
+         "grade": "B",
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E8",
+         "label": "Fit with acceptable case setups",
+         "grade": "B",
+         "ras": [],
+         "anchor": ""
+        }
+       ],
+       "anchor": ""
+      },
+      {
+       "code": "GROUP 3",
+       "label": "Core philosophy",
+       "grade": "B",
+       "elements": [
+        {
+         "code": "E9",
+         "label": "Great operator",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E10",
+         "label": "Advantaged business and widening competitive advantage",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E11",
+         "label": "Value-chain dynamics",
+         "grade": "B",
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E12",
+         "label": "Supportive industry structure",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E13",
+         "label": "High secular growth potential",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        }
+       ],
+       "anchor": ""
+      },
+      {
+       "code": "GROUP 4",
+       "label": "Case riskiness",
+       "grade": null,
+       "elements": [
+        {
+         "code": "E15",
+         "label": "Invalidating attributes",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E16",
+         "label": "Strenuously seek-to-avoid attributes",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E17",
+         "label": "Capital-constraining attributes",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E18",
+         "label": "Clear transmission mechanism, inputs to earnings per share",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E19",
+         "label": "Monitorable transmission mechanism, leading tracking indicators to earnings per share",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        }
+       ],
+       "anchor": ""
+      },
+      {
+       "code": "GROUP 5",
+       "label": "Case optionality",
+       "grade": null,
+       "elements": [
+        {
+         "code": "E20",
+         "label": "Nice-to-have attributes",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        }
+       ],
+       "anchor": ""
+      }
+     ],
+     "anchor": ""
+    },
+    {
+     "roman": "III",
+     "label": "Investment case components",
+     "grade": null,
+     "elements": [],
+     "groups": [],
+     "anchor": ""
     }
    ]
   },
@@ -13286,7 +14710,7 @@
   },
   "CRBN-NL": {
    "stage": "Triaging",
-   "date": "2026-07-28",
+   "date": "2026-08-03",
    "source_memo": "memo.md",
    "master": [
     {
@@ -14450,7 +15874,7 @@
   },
   "DCC-GB": {
    "stage": "Triaging",
-   "date": "2026-07-27",
+   "date": "2026-08-03",
    "source_memo": "memo.md",
    "master": [
     {
@@ -14654,6 +16078,265 @@
      "elements": [],
      "groups": [],
      "anchor": "c-3-pillar-iii-investment-case-components-nr"
+    }
+   ]
+  },
+  "DEMANT-DK": {
+   "stage": "Triaging",
+   "date": "2026-08-03",
+   "source_memo": "memo.md",
+   "master": [
+    {
+     "code": "MR1",
+     "label": "Technical momentum",
+     "grade": "A",
+     "anchor": ""
+    },
+    {
+     "code": "MR2",
+     "label": "Sell-side earnings momentum",
+     "grade": "F",
+     "anchor": ""
+    },
+    {
+     "code": "MR3",
+     "label": "Thematic fit",
+     "grade": "C",
+     "anchor": ""
+    },
+    {
+     "code": "MR4",
+     "label": "Case change elements",
+     "grade": "C",
+     "anchor": ""
+    },
+    {
+     "code": "MR5",
+     "label": "Case building blocks",
+     "grade": "C",
+     "anchor": ""
+    },
+    {
+     "code": "MR6",
+     "label": "Investment case components",
+     "grade": null,
+     "anchor": ""
+    }
+   ],
+   "pillars": [
+    {
+     "roman": "I",
+     "label": "Case change elements",
+     "grade": "C",
+     "elements": [
+      {
+       "code": "E1",
+       "label": "Required input change forces",
+       "grade": "C",
+       "ras": [
+        {
+         "code": "RA1",
+         "label": "Change forces?",
+         "grade": null,
+         "cqs": [],
+         "anchor": ""
+        },
+        {
+         "code": "RA2",
+         "label": "Robust base?",
+         "grade": null,
+         "cqs": [],
+         "anchor": ""
+        }
+       ],
+       "anchor": ""
+      },
+      {
+       "code": "E2",
+       "label": "Required case outputs",
+       "grade": null,
+       "ras": [],
+       "anchor": ""
+      },
+      {
+       "code": "E3",
+       "label": "Sufficient TSR / valuation upside",
+       "grade": null,
+       "ras": [],
+       "anchor": ""
+      }
+     ],
+     "groups": [],
+     "anchor": ""
+    },
+    {
+     "roman": "II",
+     "label": "Case building blocks",
+     "grade": "C",
+     "elements": [],
+     "groups": [
+      {
+       "code": "GROUP 1",
+       "label": "Case momentum",
+       "grade": "B",
+       "elements": [
+        {
+         "code": "E4",
+         "label": "Technical momentum",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E5",
+         "label": "Thematic fit",
+         "grade": "C",
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E6",
+         "label": "Sell-side earnings momentum",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        }
+       ],
+       "anchor": ""
+      },
+      {
+       "code": "GROUP 2",
+       "label": "Case simplicity",
+       "grade": "C",
+       "elements": [
+        {
+         "code": "E7",
+         "label": "Required case simplicity guardrails",
+         "grade": "C",
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E8",
+         "label": "Fit with acceptable case setups",
+         "grade": "C",
+         "ras": [],
+         "anchor": ""
+        }
+       ],
+       "anchor": ""
+      },
+      {
+       "code": "GROUP 3",
+       "label": "Core philosophy",
+       "grade": "C",
+       "elements": [
+        {
+         "code": "E9",
+         "label": "Great operator",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E10",
+         "label": "Advantaged business and widening competitive advantage",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E11",
+         "label": "Value-chain dynamics",
+         "grade": "C",
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E12",
+         "label": "Supportive industry structure",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E13",
+         "label": "High secular growth potential",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        }
+       ],
+       "anchor": ""
+      },
+      {
+       "code": "GROUP 4",
+       "label": "Case riskiness",
+       "grade": "C",
+       "elements": [
+        {
+         "code": "E15",
+         "label": "Invalidating attributes",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E16",
+         "label": "Strenuously seek-to-avoid attributes",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E17",
+         "label": "Capital-constraining attributes",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E18",
+         "label": "Clear transmission mechanism, inputs to earnings per share",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E19",
+         "label": "Monitorable transmission mechanism, leading tracking indicators to earnings per share",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        }
+       ],
+       "anchor": ""
+      },
+      {
+       "code": "GROUP 5",
+       "label": "Case optionality",
+       "grade": null,
+       "elements": [
+        {
+         "code": "E20",
+         "label": "Nice-to-have attributes",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        }
+       ],
+       "anchor": ""
+      }
+     ],
+     "anchor": ""
+    },
+    {
+     "roman": "III",
+     "label": "Investment case components",
+     "grade": null,
+     "elements": [],
+     "groups": [],
+     "anchor": ""
     }
    ]
   },
@@ -17983,6 +19666,265 @@
     }
    ]
   },
+  "ELO-NO": {
+   "stage": "Triaging",
+   "date": "2026-08-03",
+   "source_memo": "memo.md",
+   "master": [
+    {
+     "code": "MR1",
+     "label": "Technical momentum",
+     "grade": "A",
+     "anchor": ""
+    },
+    {
+     "code": "MR2",
+     "label": "Sell-side earnings momentum",
+     "grade": "F",
+     "anchor": ""
+    },
+    {
+     "code": "MR3",
+     "label": "Thematic fit",
+     "grade": "C",
+     "anchor": ""
+    },
+    {
+     "code": "MR4",
+     "label": "Case change elements",
+     "grade": "D",
+     "anchor": ""
+    },
+    {
+     "code": "MR5",
+     "label": "Case building blocks",
+     "grade": "C",
+     "anchor": ""
+    },
+    {
+     "code": "MR6",
+     "label": "Investment case components",
+     "grade": null,
+     "anchor": ""
+    }
+   ],
+   "pillars": [
+    {
+     "roman": "I",
+     "label": "Case change elements",
+     "grade": "D",
+     "elements": [
+      {
+       "code": "E1",
+       "label": "Required input change forces",
+       "grade": "D",
+       "ras": [
+        {
+         "code": "RA1",
+         "label": "Change forces?",
+         "grade": null,
+         "cqs": [],
+         "anchor": ""
+        },
+        {
+         "code": "RA2",
+         "label": "Robust base?",
+         "grade": null,
+         "cqs": [],
+         "anchor": ""
+        }
+       ],
+       "anchor": ""
+      },
+      {
+       "code": "E2",
+       "label": "Required case outputs",
+       "grade": null,
+       "ras": [],
+       "anchor": ""
+      },
+      {
+       "code": "E3",
+       "label": "Sufficient TSR / valuation upside",
+       "grade": null,
+       "ras": [],
+       "anchor": ""
+      }
+     ],
+     "groups": [],
+     "anchor": ""
+    },
+    {
+     "roman": "II",
+     "label": "Case building blocks",
+     "grade": "C",
+     "elements": [],
+     "groups": [
+      {
+       "code": "GROUP 1",
+       "label": "Case momentum",
+       "grade": "D",
+       "elements": [
+        {
+         "code": "E4",
+         "label": "Technical momentum",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E5",
+         "label": "Thematic fit",
+         "grade": "C",
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E6",
+         "label": "Sell-side earnings momentum",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        }
+       ],
+       "anchor": ""
+      },
+      {
+       "code": "GROUP 2",
+       "label": "Case simplicity",
+       "grade": "C",
+       "elements": [
+        {
+         "code": "E7",
+         "label": "Required case simplicity guardrails",
+         "grade": "D",
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E8",
+         "label": "Fit with acceptable case setups",
+         "grade": "C",
+         "ras": [],
+         "anchor": ""
+        }
+       ],
+       "anchor": ""
+      },
+      {
+       "code": "GROUP 3",
+       "label": "Core philosophy",
+       "grade": "C",
+       "elements": [
+        {
+         "code": "E9",
+         "label": "Great operator",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E10",
+         "label": "Advantaged business and widening competitive advantage",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E11",
+         "label": "Value-chain dynamics",
+         "grade": "C",
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E12",
+         "label": "Supportive industry structure",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E13",
+         "label": "High secular growth potential",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        }
+       ],
+       "anchor": ""
+      },
+      {
+       "code": "GROUP 4",
+       "label": "Case riskiness",
+       "grade": "D",
+       "elements": [
+        {
+         "code": "E15",
+         "label": "Invalidating attributes",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E16",
+         "label": "Strenuously seek-to-avoid attributes",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E17",
+         "label": "Capital-constraining attributes",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E18",
+         "label": "Clear transmission mechanism, inputs to earnings per share",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E19",
+         "label": "Monitorable transmission mechanism, leading tracking indicators to earnings per share",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        }
+       ],
+       "anchor": ""
+      },
+      {
+       "code": "GROUP 5",
+       "label": "Case optionality",
+       "grade": null,
+       "elements": [
+        {
+         "code": "E20",
+         "label": "Nice-to-have attributes",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        }
+       ],
+       "anchor": ""
+      }
+     ],
+     "anchor": ""
+    },
+    {
+     "roman": "III",
+     "label": "Investment case components",
+     "grade": null,
+     "elements": [],
+     "groups": [],
+     "anchor": ""
+    }
+   ]
+  },
   "ENAV-IT": {
    "stage": "Triaging",
    "date": "2026-07-04",
@@ -18211,6 +20153,250 @@
      "elements": [],
      "groups": [],
      "anchor": "section-d-pillar-iii-investment-case-components"
+    }
+   ]
+  },
+  "ENI-IT": {
+   "stage": "Triaging",
+   "date": "2026-08-03",
+   "source_memo": "memo.md",
+   "master": [
+    {
+     "code": "MR1",
+     "label": "Technical momentum",
+     "grade": "A",
+     "anchor": ""
+    },
+    {
+     "code": "MR2",
+     "label": "Sell-side earnings momentum",
+     "grade": "A",
+     "anchor": ""
+    },
+    {
+     "code": "MR3",
+     "label": "Thematic fit",
+     "grade": "C",
+     "anchor": ""
+    },
+    {
+     "code": "MR4",
+     "label": "Case change elements",
+     "grade": "B",
+     "anchor": ""
+    },
+    {
+     "code": "MR5",
+     "label": "Case building blocks",
+     "grade": "C",
+     "anchor": ""
+    },
+    {
+     "code": "MR6",
+     "label": "Investment case components",
+     "grade": null,
+     "anchor": ""
+    }
+   ],
+   "pillars": [
+    {
+     "roman": "I",
+     "label": "Case change elements",
+     "grade": "B",
+     "elements": [
+      {
+       "code": "E1",
+       "label": "Required input change forces",
+       "grade": "B",
+       "ras": [],
+       "anchor": ""
+      },
+      {
+       "code": "E2",
+       "label": "Required case outputs",
+       "grade": null,
+       "ras": [],
+       "anchor": ""
+      },
+      {
+       "code": "E3",
+       "label": "Sufficient TSR / valuation upside",
+       "grade": null,
+       "ras": [],
+       "anchor": ""
+      }
+     ],
+     "groups": [],
+     "anchor": ""
+    },
+    {
+     "roman": "II",
+     "label": "Case building blocks",
+     "grade": "C",
+     "elements": [],
+     "groups": [
+      {
+       "code": "GROUP 1",
+       "label": "Case momentum",
+       "grade": "C",
+       "elements": [
+        {
+         "code": "E4",
+         "label": "Technical momentum",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E5",
+         "label": "Thematic fit",
+         "grade": "C",
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E6",
+         "label": "Sell-side earnings momentum",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        }
+       ],
+       "anchor": ""
+      },
+      {
+       "code": "GROUP 2",
+       "label": "Case simplicity",
+       "grade": "C",
+       "elements": [
+        {
+         "code": "E7",
+         "label": "Required case simplicity guardrails",
+         "grade": "D",
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E8",
+         "label": "Fit with acceptable case setups",
+         "grade": "B",
+         "ras": [],
+         "anchor": ""
+        }
+       ],
+       "anchor": ""
+      },
+      {
+       "code": "GROUP 3",
+       "label": "Core philosophy",
+       "grade": "C",
+       "elements": [
+        {
+         "code": "E9",
+         "label": "Great operator",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E10",
+         "label": "Advantaged business and widening competitive advantage",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E11",
+         "label": "Value-chain dynamics",
+         "grade": "C",
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E12",
+         "label": "Supportive industry structure",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E13",
+         "label": "High secular growth potential",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        }
+       ],
+       "anchor": ""
+      },
+      {
+       "code": "GROUP 4",
+       "label": "Case riskiness",
+       "grade": null,
+       "elements": [
+        {
+         "code": "E15",
+         "label": "Invalidating attributes",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E16",
+         "label": "Strenuously seek-to-avoid attributes",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E17",
+         "label": "Capital-constraining attributes",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E18",
+         "label": "Clear transmission mechanism, inputs to earnings per share",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E19",
+         "label": "Monitorable transmission mechanism, leading tracking indicators to earnings per share",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        }
+       ],
+       "anchor": ""
+      },
+      {
+       "code": "GROUP 5",
+       "label": "Case optionality",
+       "grade": null,
+       "elements": [
+        {
+         "code": "E20",
+         "label": "Nice-to-have attributes",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        }
+       ],
+       "anchor": ""
+      }
+     ],
+     "anchor": ""
+    },
+    {
+     "roman": "III",
+     "label": "Investment case components",
+     "grade": null,
+     "elements": [],
+     "groups": [],
+     "anchor": ""
     }
    ]
   },
@@ -27720,7 +29906,7 @@
   },
   "INSTAL-SE": {
    "stage": "Triaging",
-   "date": "2026-07-28",
+   "date": "2026-08-03",
    "source_memo": "memo.md",
    "master": [
     {
@@ -41653,6 +43839,214 @@
     }
    ]
   },
+  "ROVI-ES": {
+   "stage": "Triaging",
+   "date": "2026-08-03",
+   "source_memo": "memo.md",
+   "master": [
+    {
+     "code": "MR1",
+     "label": "Technical momentum",
+     "grade": "A",
+     "anchor": ""
+    },
+    {
+     "code": "MR2",
+     "label": "Sell-side earnings momentum",
+     "grade": "B",
+     "anchor": ""
+    },
+    {
+     "code": "MR3",
+     "label": "Thematic fit",
+     "grade": "C",
+     "anchor": ""
+    },
+    {
+     "code": "MR4",
+     "label": "Case change elements",
+     "grade": "C",
+     "anchor": ""
+    },
+    {
+     "code": "MR5",
+     "label": "Case building blocks",
+     "grade": "D",
+     "anchor": ""
+    },
+    {
+     "code": "MR6",
+     "label": "Investment case components",
+     "grade": null,
+     "anchor": ""
+    }
+   ],
+   "pillars": [
+    {
+     "roman": "I",
+     "label": "Case change elements",
+     "grade": "C",
+     "elements": [
+      {
+       "code": "E1",
+       "label": "Required input change forces",
+       "grade": "C",
+       "ras": [],
+       "anchor": ""
+      },
+      {
+       "code": "E2",
+       "label": "Required case outputs",
+       "grade": null,
+       "ras": [],
+       "anchor": ""
+      },
+      {
+       "code": "E3",
+       "label": "Sufficient TSR / valuation upside",
+       "grade": null,
+       "ras": [],
+       "anchor": ""
+      }
+     ],
+     "groups": [],
+     "anchor": ""
+    },
+    {
+     "roman": "II",
+     "label": "Case building blocks",
+     "grade": "D",
+     "elements": [],
+     "groups": [
+      {
+       "code": "GROUP 1",
+       "label": "Case momentum",
+       "grade": "F",
+       "elements": [
+        {
+         "code": "E4",
+         "label": "Technical momentum",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E5",
+         "label": "Thematic fit",
+         "grade": "C",
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E6",
+         "label": "Sell-side earnings momentum",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        }
+       ],
+       "anchor": ""
+      },
+      {
+       "code": "GROUP 2",
+       "label": "Case simplicity",
+       "grade": "D",
+       "elements": [
+        {
+         "code": "E7",
+         "label": "Required case simplicity guardrails",
+         "grade": "D",
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E8",
+         "label": "Fit with acceptable case setups",
+         "grade": "D",
+         "ras": [],
+         "anchor": ""
+        }
+       ],
+       "anchor": ""
+      },
+      {
+       "code": "GROUP 3",
+       "label": "Core philosophy",
+       "grade": "C",
+       "elements": [
+        {
+         "code": "E9",
+         "label": "Great operator",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E10",
+         "label": "Advantaged business and widening competitive advantage",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E11",
+         "label": "Value-chain dynamics",
+         "grade": "C",
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E12",
+         "label": "Supportive industry structure",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        },
+        {
+         "code": "E13",
+         "label": "High secular growth potential",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        }
+       ],
+       "anchor": ""
+      },
+      {
+       "code": "GROUP 4",
+       "label": "Case riskiness",
+       "grade": "D",
+       "elements": [],
+       "anchor": ""
+      },
+      {
+       "code": "GROUP 5",
+       "label": "Case optionality",
+       "grade": null,
+       "elements": [
+        {
+         "code": "E20",
+         "label": "Nice-to-have attributes",
+         "grade": null,
+         "ras": [],
+         "anchor": ""
+        }
+       ],
+       "anchor": ""
+      }
+     ],
+     "anchor": ""
+    },
+    {
+     "roman": "III",
+     "label": "Investment case components",
+     "grade": null,
+     "elements": [],
+     "groups": [],
+     "anchor": ""
+    }
+   ]
+  },
   "RWAY-IT": {
    "stage": "Triaging",
    "date": "2026-07-20",
@@ -44186,7 +46580,7 @@
   },
   "SN-GB": {
    "stage": "Triaging",
-   "date": "2026-07-28",
+   "date": "2026-08-03",
    "source_memo": "memo.md",
    "master": [
     {
