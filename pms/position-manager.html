@@ -1338,13 +1338,33 @@ function clearTickerSlot(invIdx) {
   render();
 }
 
+// D-PMS-182 (03-Aug-2026): map a dot-less legacy ticker to its canonical universe
+// spelling (CARLB-DK -> CARL.B-DK) so the chart URL resolves to the CURRENT file.
+// Without this the page silently loaded a stale legacy chart of the dot-less name:
+// CARLB-DK.js last bar 2026-07-15 vs CARL_B-DK.js last bar 2026-07-31 (proven live).
+function canonicalChartTicker(ticker) {
+  var universe = (window.PMS_UNIVERSE && PMS_UNIVERSE.data) ? PMS_UNIVERSE.data : {};
+  if (!ticker) return ticker;
+  if (ticker in universe) return ticker;
+  if (!window._pmsDotlessIndex) {
+    window._pmsDotlessIndex = {};
+    Object.keys(universe).forEach(function(k) {
+      var d = k.replace(/\./g, '');
+      if (!(d in window._pmsDotlessIndex)) window._pmsDotlessIndex[d] = k;
+    });
+  }
+  return window._pmsDotlessIndex[ticker] || ticker;
+}
+
 // D-PMS-173: load chart data from master dashboard charts (vfhqi.github.io/master/charts/).
 // Master charts are auto-deployed daily — always current. Replaces pms-charts/ (manual deploy, went stale).
 // Format: CHART_REGISTRY["TICKER"] = [[date,o,h,l,c,v,ma5,ma10,ma20,ma50,ma100,ma150,ma200],...]
 // invIdx may be null when called from initializeChartData() (no warning element available).
 function loadTickerChart(ticker, invIdx) {
   // D-PMS-173: master dashboard charts — dots→underscores in filename, dashes kept
-  var src = 'https://vfhqi.github.io/master/charts/' + ticker.replace(/\./g, '_') + '.js';
+  // D-PMS-182: canonicalise first, so a dot-less legacy ticker cannot hit a stale file
+  var canonical = canonicalChartTicker(ticker);
+  var src = 'https://vfhqi.github.io/master/charts/' + canonical.replace(/\./g, '_') + '.js';
   var s = document.createElement('script');
   s.src = src;
   s.async = false;
@@ -1359,7 +1379,9 @@ function loadTickerChart(ticker, invIdx) {
   s.onload = function() {
     // Master chart format: CHART_REGISTRY["TICKER"][[date,o,h,l,c,v,ma5..ma200],...]
     // Key uses original ticker name including dots (e.g. "SDIP.B-SE")
-    var payload = window.CHART_REGISTRY && window.CHART_REGISTRY[ticker];
+    // D-PMS-182: a canonical file keeps its dot in the registry key, so try both
+    var payload = window.CHART_REGISTRY &&
+                  (window.CHART_REGISTRY[canonical] || window.CHART_REGISTRY[ticker]);
     if (payload && Array.isArray(payload)) {
       var bars = payload.map(function(row) {
         var bar = {d: row[0], o: row[1], h: row[2], l: row[3], c: row[4], v: row[5]};
@@ -1376,6 +1398,8 @@ function loadTickerChart(ticker, invIdx) {
       if (!window.PMS_CHART_DATA) window.PMS_CHART_DATA = {data: {}, _meta: {}};
       if (!PMS_CHART_DATA.data) PMS_CHART_DATA.data = {};
       PMS_CHART_DATA.data[ticker] = bars;
+      // D-PMS-182: store under the canonical spelling too, so both forms resolve
+      if (canonical !== ticker) PMS_CHART_DATA.data[canonical] = bars;
       // Dot-less alias for legacy lookups (e.g. CARL.B-DK → CARLB-DK)
       var alias = ticker.replace(/\./g, '');
       if (alias !== ticker && !PMS_CHART_DATA.data[alias]) {
