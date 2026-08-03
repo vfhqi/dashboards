@@ -2497,15 +2497,48 @@ function render() {
       return (Date.now() - d.getTime()) / 3600000;
     }
 
+    // D-PMS-186: newest ACTUAL close across holdings that carry capital. The build
+    // clock says when the pipeline ran; this says how old the prices really are.
+    function newestHoldingClose() {
+      try {
+        var invs = (typeof POSITION_DATA !== 'undefined' && POSITION_DATA.investments)
+                   ? POSITION_DATA.investments : [];
+        var best = null;
+        for (var i = 0; i < invs.length; i++) {
+          var d = invs[i] && invs[i].last_close_date;
+          if (d && (best === null || d > best)) best = d;
+        }
+        return best;
+      } catch (e) { return null; }
+    }
+    function daysBehind(dateStr) {
+      if (!dateStr) return null;
+      var p = String(dateStr).split('-');
+      if (p.length !== 3) return null;
+      var d = new Date(Date.UTC(+p[0], +p[1] - 1, +p[2]));
+      if (isNaN(d)) return null;
+      var now = new Date();
+      var today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+      return Math.round((today - d.getTime()) / 86400000);
+    }
+
     var priceEl = document.getElementById('pfPriceVal');
     var univEl = document.getElementById('pfUniverseVal');
     if (priceEl) {
       var ago = hoursAgo(pricesGenStr);
-      var isStale = (ago !== null && ago > 24);
+      var buildStale = (ago !== null && ago > 24);
+      // D-PMS-186: 4 calendar days tolerates Fri->Mon plus one public holiday.
+      var newestClose = newestHoldingClose();
+      var lag = daysBehind(newestClose);
+      var dataStale = (lag !== null && lag > 4);
       var label = pricesSource + ' · ' + fmtTimestamp(pricesGenStr);
-      if (isStale) {
-        var hStr = ago != null ? Math.round(ago) + 'h ago' : '';
-        priceEl.innerHTML = '<span class="pf-stale">⚠ STALE ' + hStr + ' — ' + label + '</span>';
+      if (newestClose) label += ' · newest close ' + newestClose;
+      if (buildStale || dataStale) {
+        var why = [];
+        if (dataStale) why.push('prices ' + lag + ' days old');
+        if (buildStale) why.push('build ' + Math.round(ago) + 'h ago');
+        priceEl.innerHTML = '<span class="pf-stale">⚠ STALE (' + why.join(', ') + ') — '
+                            + label + '</span>';
       } else {
         priceEl.textContent = label;
       }
