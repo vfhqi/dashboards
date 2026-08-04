@@ -2747,7 +2747,10 @@ function renderTrancheRow(inv, invIdx, slotType, isFirstSlot, isPlaceholder, tot
     } else if (!isPlaceholder && CURRENT_DATA) {
       var invData = CURRENT_DATA.investments.find(function(x) { return x.ticker === ticker; });
       if (invData && invData.price != null) {
-        meta = '<span class="meta">' + (invData.fallback ? '⚠ fallback · ' : '') + 'Px ' + fmt(invData.price, 2) + ' · ' + (invData.last_close_date || '') + '</span>';
+        // D-PMS-186: the page formats every price to 2dp, so a 2dp-sourced price
+        // is invisible on screen while being real in the arithmetic. Say so.
+        var _prec = (invData.precision === '2dp') ? ' · 2dp source' : '';
+        meta = '<span class="meta">' + (invData.fallback ? '⚠ fallback · ' : '') + 'Px ' + fmt(invData.price, 2) + _prec + ' · ' + (invData.last_close_date || '') + '</span>';
       }
     }
     var mdBadges = '';
