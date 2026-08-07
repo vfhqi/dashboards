@@ -656,12 +656,13 @@ var BACKUP_RETENTION_DAYS = 30;
 // and immediately before the entry Date. Table is now 22 columns, not 21. Every colspan in
 // this file was re-derived from scratch when this landed — see renderInvTotalsRow,
 // renderTrancheRow's warn-lines, and the inv-spacer row.
-// D-PMS-206: at-entry %AUM widened 60 -> 68 and "Last edited" trimmed 96 -> 88, so the fix
-// costs the table NO extra width. At 60px the "%" suffix after the %AUM input was rendered
-// but pushed outside the cell and clipped by `overflow:hidden` — measured: cell 60px,
-// content 64px, suffix bounding box outside the cell. Pre-existing, but with the table now
-// wider it is exactly the kind of clipped text that must not ship.
-var COL_WIDTHS = ['180px', '34px', '140px', '88px', '140px', '68px', '70px', '70px', '70px', '80px', '70px', '95px', '70px', '70px', '70px', '80px', '80px', '90px', '80px', '85px', '140px', '34px'];  // D-PMS-93 #6: Date col 110->140 to fit 'Promoted from' badge on one line
+// D-PMS-206: at-entry %AUM widened 60 -> 82 and "Last edited" trimmed 96 -> 74, so the fix
+// costs the table NO extra width (total stays 1904px).
+// At 60px the "%" suffix after the %AUM input was rendered but pushed outside the cell and
+// clipped by `overflow:hidden`. A first attempt at 68px was still short — the width was
+// GUESSED. Measured instead: input 55 + suffix 6.6 + flex gap 2 + cell padding 16 = 82px.
+// Guessing a width twice is how a "fix" ships still broken; measure the box.
+var COL_WIDTHS = ['180px', '34px', '140px', '74px', '140px', '82px', '70px', '70px', '70px', '80px', '70px', '95px', '70px', '70px', '70px', '80px', '80px', '90px', '80px', '85px', '140px', '34px'];  // D-PMS-93 #6: Date col 110->140 to fit 'Promoted from' badge on one line
 var TOTAL_COLS = COL_WIDTHS.length;  // D-PMS-191: single source for full-width colspans
 
 var CONFIG = null;
