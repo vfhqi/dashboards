@@ -656,7 +656,12 @@ var BACKUP_RETENTION_DAYS = 30;
 // and immediately before the entry Date. Table is now 22 columns, not 21. Every colspan in
 // this file was re-derived from scratch when this landed — see renderInvTotalsRow,
 // renderTrancheRow's warn-lines, and the inv-spacer row.
-var COL_WIDTHS = ['180px', '34px', '140px', '96px', '140px', '60px', '70px', '70px', '70px', '80px', '70px', '95px', '70px', '70px', '70px', '80px', '80px', '90px', '80px', '85px', '140px', '34px'];  // D-PMS-93 #6: Date col 110->140 to fit 'Promoted from' badge on one line
+// D-PMS-206: at-entry %AUM widened 60 -> 68 and "Last edited" trimmed 96 -> 88, so the fix
+// costs the table NO extra width. At 60px the "%" suffix after the %AUM input was rendered
+// but pushed outside the cell and clipped by `overflow:hidden` — measured: cell 60px,
+// content 64px, suffix bounding box outside the cell. Pre-existing, but with the table now
+// wider it is exactly the kind of clipped text that must not ship.
+var COL_WIDTHS = ['180px', '34px', '140px', '88px', '140px', '68px', '70px', '70px', '70px', '80px', '70px', '95px', '70px', '70px', '70px', '80px', '80px', '90px', '80px', '85px', '140px', '34px'];  // D-PMS-93 #6: Date col 110->140 to fit 'Promoted from' badge on one line
 var TOTAL_COLS = COL_WIDTHS.length;  // D-PMS-191: single source for full-width colspans
 
 var CONFIG = null;
@@ -811,6 +816,27 @@ window.addEventListener('DOMContentLoaded', function() {
   // D-PMS-61: scroll listener — show sticky duplicate header when user scrolls past the main table's thead
   window.addEventListener('scroll', updateStickyHeaderVisibility, { passive: true });
   window.addEventListener('resize', updateStickyHeaderVisibility, { passive: true });
+
+  // D-PMS-206 (07-Aug-26): KEEP THE STICKY HEADER IN STEP WITH HORIZONTAL SCROLL.
+  // The duplicate header lives in its own `overflow:hidden` wrapper, so it never moved when
+  // the table below it was scrolled sideways. Measured on the live page: with the table
+  // scrolled 210px the real header sat at x=1202 and the sticky duplicate at x=1412 — every
+  // column label was sitting over a DIFFERENT column, on a table whose columns are stop
+  // levels and loss risk. Latent before; the new "Last edited" column widened the table by
+  // 96px, so a reader reaches the h-scroll far more often, which is what surfaced it.
+  (function syncStickyHorizontalScroll() {
+    var tw = document.querySelector('.table-wrap');
+    var sw = document.getElementById('stickyHeaderWrap');
+    if (!tw || !sw) return;
+    // ONE-WAY ONLY. A reverse listener was written first and had to be removed: the sticky
+    // wrapper is `overflow:hidden`, so assigning its scrollLeft can be clamped, and the two
+    // listeners then fought each other — set sw, sw fires, sw sets tw, tw fires, set sw...
+    // The page froze. The QC suite caught it by HANGING rather than failing, which is a
+    // reminder that a hung test is a result, not a flake.
+    // The user can never scroll the duplicate directly (it is overflow:hidden and inert),
+    // so a reverse path has no purpose anyway.
+    tw.addEventListener('scroll', function() { sw.scrollLeft = tw.scrollLeft; }, { passive: true });
+  })();
 
   // D-PMS-173: load chart data from master dashboard charts for all active positions
   initializeChartData();
