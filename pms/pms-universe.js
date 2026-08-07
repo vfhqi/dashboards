@@ -2203,11 +2203,11 @@ var PMS_UNIVERSE = {
       "exchange": "Copenhagen",
       "yf_ticker": "FLS.CO"
     },
-    "FLTR-GB": {
+    "FLUT-US": {
       "name": "Flutter",
-      "currency": "GBP",
-      "exchange": "London",
-      "yf_ticker": "FLTR.L"
+      "currency": "USD",
+      "exchange": "US",
+      "yf_ticker": "FLUT"
     },
     "FLU-AT": {
       "name": "Flughafen Wien",
