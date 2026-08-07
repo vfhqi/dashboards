@@ -431,7 +431,7 @@ body.active-tab-overview .sticky-top, body.active-tab-charts .sticky-top { displ
     <div class="header">
       <div style="flex:0 0 100%;">
         <h1 style="margin:0 0 4px 0;">Portfolio overview <span id="lastUpdated">— Viewforth</span></h1>
-        <div id="priceFreshness"><span class="pf-item"><span class="pf-label">Price data:</span><span class="pf-value" id="pfPriceVal">loading…</span></span><span class="pf-item"><span class="pf-label">Universe:</span><span class="pf-value" id="pfUniverseVal">—</span></span></div>
+        <div id="priceFreshness"><span class="pf-item"><span class="pf-label">Price data:</span><span class="pf-value" id="pfPriceVal">loading…</span></span><span class="pf-item"><span class="pf-label">Universe:</span><span class="pf-value" id="pfUniverseVal">—</span></span><span class="pf-item"><span class="pf-label">Your data last saved:</span><span class="pf-value" id="pfSavedVal">—</span></span></div>
       </div>
       <div class="header-controls">
         <span id="statusBadge">loading…</span>
@@ -446,6 +446,12 @@ body.active-tab-overview .sticky-top, body.active-tab-charts .sticky-top { displ
         <button class="btn" id="btnHideAlerts" title="Hide or show alert banner and warn-line rows">Hide alerts</button>
         <button class="btn" id="btnSparkCollapse" title="D-PMS-115: collapse same-MA tranches in the sparkline into summed pills">Sparkline expanded</button>
         <button class="btn" id="btnSortByStopMa" title="Sort Core MM tranches within each investment by stop MA (ascending). PB1/PB2 stay fixed.">Sort by stop MA</button>
+        <span class="btn-group-spacer"></span>
+        <button class="btn" id="btnSort-slot" onclick="setPosSort('slot')">Blanks to bottom</button>
+        <button class="btn" id="btnSort-name" onclick="setPosSort('name')">Sort: name</button>
+        <button class="btn" id="btnSort-aum" onclick="setPosSort('aum')">Sort: % of AUM (current)</button>
+        <button class="btn" id="btnSort-risk" onclick="setPosSort('risk')">Sort: loss risk</button>
+        <span class="btn-group-spacer"></span>
         <button class="btn btn-danger" id="btnClearAll" title="Clear all tranche edits">Clear all</button>
       </div>
     </div>
@@ -632,7 +638,12 @@ var GRACE_DAILY_THRESHOLD = 3;
 var BACKUP_RETENTION_DAYS = 30;
 
 // Column widths (must match between sticky header and main table for alignment)
-var COL_WIDTHS = ['180px', '34px', '140px', '140px', '60px', '70px', '70px', '70px', '80px', '70px', '95px', '70px', '70px', '70px', '80px', '80px', '90px', '80px', '85px', '140px', '34px'];  // D-PMS-93 #6: Date col 110->140 to fit 'Promoted from' badge on one line
+// D-PMS-191 (07-Aug-26): "Last edited" column inserted at index 3, immediately after Slot
+// and immediately before the entry Date. Table is now 22 columns, not 21. Every colspan in
+// this file was re-derived from scratch when this landed — see renderInvTotalsRow,
+// renderTrancheRow's warn-lines, and the inv-spacer row.
+var COL_WIDTHS = ['180px', '34px', '140px', '96px', '140px', '60px', '70px', '70px', '70px', '80px', '70px', '95px', '70px', '70px', '70px', '80px', '80px', '90px', '80px', '85px', '140px', '34px'];  // D-PMS-93 #6: Date col 110->140 to fit 'Promoted from' badge on one line
+var TOTAL_COLS = COL_WIDTHS.length;  // D-PMS-191: single source for full-width colspans
 
 var CONFIG = null;
 var CURRENT_DATA = null;
@@ -659,6 +670,10 @@ var pmsDataDirHandle = null;  // FileSystemDirectoryHandle for pms-data/
 var diskWriteEnabled = false;
 var diskAvailable = ('showDirectoryPicker' in window);
 var lastAutoBackupDate = null;  // YYYY-MM-DD string of last auto-backup
+// D-PMS-193 (07-Aug-26): when this data was last saved, surfaced in the header.
+// Tracked separately from the price-data clock, which answers a different question.
+var lastSavedAt = null;          // ISO timestamp of the most recent save
+var lastSavedToDisk = false;     // true = that save reached pms-data/pms-state.json
 var saveQueue = Promise.resolve();  // serialise writes to avoid races
 
 window.addEventListener('DOMContentLoaded', function() {
@@ -675,6 +690,12 @@ window.addEventListener('DOMContentLoaded', function() {
   // Load from localStorage initially (migration source if user grants disk later)
   loadEditsFromLocalStorage();
   cleanupCorruptPromoteMetadata();  // D-PMS-67: clean up any already-corrupt state on load
+  seedEditFingerprints();           // D-PMS-191: baseline BEFORE any user edit
+  restorePosSort();                 // D-PMS-192
+  renderSavedAt();                  // D-PMS-193
+  // D-PMS-194 fallback: if disk never reconnects, still migrate the browser-held state.
+  // Auto-reconnect is async and runs its own call first; migrationInFlight guards the race.
+  setTimeout(function() { runOneTimeMigration(); }, 4000);
 
   statusEl.textContent = (CONFIG.investments || []).length + ' slots · loading charts…';  // D-PMS-174
   // Update status once first chart loads (triggered by first render() from loadTickerChart)
@@ -856,6 +877,8 @@ async function tryAutoReconnect() {
       // Merge disk state with current in-memory state (D-PMS-48)
       await mergeDiskStateIntoMemory();
       updateDiskStatus();
+      seedEditFingerprints();            // D-PMS-191
+      await runOneTimeMigration();       // D-PMS-194: after merge, so it sees authoritative state
       flashSuccess('Auto-reconnected to pms-data/. ' + Object.keys(EDITS).length + ' investment(s) loaded.');
       await maybeWriteAutoBackup();
       render();
@@ -885,6 +908,8 @@ async function connectToDisk() {
 
     // D-PMS-48: merge disk state with in-memory state, NEVER wipe
     await mergeDiskStateIntoMemory();
+    seedEditFingerprints();            // D-PMS-191
+    await runOneTimeMigration();       // D-PMS-194
 
     updateDiskStatus();
     render();
@@ -938,12 +963,24 @@ async function mergeDiskStateIntoMemory() {
   }
   // Both have data: merge per slot, newer wins
   var merged = JSON.parse(JSON.stringify(diskEdits));  // deep clone of disk
+  // D-PMS-195 (07-Aug-26): OBSERVABILITY ONLY — behaviour deliberately unchanged.
+  // The branch below re-adds any tranche present in memory but absent on disk. That is
+  // correct for "disk lagged behind an unsaved edit" and WRONG for "the tranche was
+  // deliberately deleted on disk", and the two are indistinguishable here. The effect is
+  // that a deletion made by editing pms-state.json directly is silently undone on the
+  // next load. That is not hypothetical: it is one of the two mechanisms behind the
+  // slot-13 orphan surviving being cleared on 04-Aug and again on 05-Aug.
+  // The merge semantics are NOT being changed in this pass — getting it wrong deletes
+  // real positions, and it needs its own hostile review. Making it LOUD is the safe
+  // half of the fix, and it removes the "silent" property that made it so expensive.
+  var resurrected = [];
   Object.keys(EDITS).forEach(function(invIdx) {
     if (!merged[invIdx]) merged[invIdx] = {};
     Object.keys(EDITS[invIdx]).forEach(function(slotType) {
       var memEdit = EDITS[invIdx][slotType];
       var diskEdit = merged[invIdx][slotType];
       if (!diskEdit) {
+        if (TRADE_TYPES.indexOf(slotType) >= 0) resurrected.push('slot ' + (parseInt(invIdx, 10) + 1) + ' ' + slotType);
         merged[invIdx][slotType] = memEdit;
       } else {
         // Compare timestamps if both have them
@@ -954,7 +991,18 @@ async function mergeDiskStateIntoMemory() {
     });
   });
   EDITS = merged;
+  lastSavedAt = (diskMeta && diskMeta.saved_at) || lastSavedAt;  // D-PMS-193
   lastAutoBackupDate = diskMeta && diskMeta.last_auto_backup_date;
+  // D-PMS-195: say so, loudly, rather than doing it silently
+  if (resurrected.length) {
+    console.warn('[pms] MERGE re-added ' + resurrected.length
+      + ' tranche(s) that this browser held but the disk file did not: ' + resurrected.join(', ')
+      + '. If these were deleted on purpose by editing pms-state.json, they have just come back — '
+      + 'delete them in the page instead, which writes both stores.');
+    flashError('Merge re-added ' + resurrected.length + ' tranche(s) missing from disk ('
+      + resurrected.slice(0, 4).join(', ') + (resurrected.length > 4 ? ', …' : '')
+      + '). Check the console — a deliberate disk-side deletion would have been undone.');
+  }
   // D-PMS-67: re-clean after merge — disk may have resurrected corrupt state
   cleanupCorruptPromoteMetadata();
   saveEditsToLocalStorage();
@@ -987,6 +1035,7 @@ async function writeStateToDisk() {
     var writable = await fileHandle.createWritable();
     await writable.write(JSON.stringify(payload, null, 2));
     await writable.close();
+    lastSavedAt = payload._meta.saved_at; lastSavedToDisk = true; renderSavedAt();  // D-PMS-193
     return true;
   } catch (e) {
     console.error('writeStateToDisk error', e);
@@ -1045,10 +1094,45 @@ function loadEditsFromLocalStorage() {
   try { var raw = localStorage.getItem('pms_edits_v5') || localStorage.getItem('pms_edits_v4'); if (raw) EDITS = JSON.parse(raw); } catch(e) { EDITS = {}; }
 }
 function saveEditsToLocalStorage() {
-  try { localStorage.setItem('pms_edits_v5', JSON.stringify(EDITS)); } catch(e) {}
+  try {
+    localStorage.setItem('pms_edits_v5', JSON.stringify(EDITS));
+    // D-PMS-193: a browser-only save is still a save; record it so the header can say so,
+    // and can distinguish it from a save that actually reached disk.
+    var nowIso = new Date().toISOString();
+    localStorage.setItem('pms_edits_saved_at_v5', nowIso);
+    if (!diskWriteEnabled) { lastSavedAt = nowIso; lastSavedToDisk = false; renderSavedAt(); }
+  } catch(e) {}
+}
+
+// D-PMS-193: header line answering "when was MY data last saved". Deliberately distinct
+// from the price-data clock above it, which answers "how old are the prices".
+// The disk/browser distinction matters: with the disk not connected, edits live only in
+// this browser profile, so a reader who assumes they are safely on disk would be wrong.
+function renderSavedAt() {
+  var el = document.getElementById('pfSavedVal');
+  if (!el) return;
+  if (!lastSavedAt) {
+    try { lastSavedAt = localStorage.getItem('pms_edits_saved_at_v5') || null; } catch (e) {}
+  }
+  if (!lastSavedAt) { el.textContent = 'no save recorded'; el.className = 'pf-value'; return; }
+  var d = new Date(lastSavedAt);
+  var shown = isNaN(d) ? String(lastSavedAt)
+    : d.toLocaleString('en-GB', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
+  if (lastSavedToDisk && diskWriteEnabled) {
+    el.innerHTML = esc(shown) + ' <span style="color:var(--fg3)">to disk</span>';
+    el.className = 'pf-value';
+  } else if (diskWriteEnabled) {
+    el.innerHTML = esc(shown) + ' <span style="color:var(--fg3)">(disk connected, awaiting first write)</span>';
+    el.className = 'pf-value';
+  } else {
+    el.innerHTML = '<span class="pf-stale">&#9888; ' + esc(shown)
+      + ' &mdash; THIS BROWSER ONLY, not saved to disk. Press &ldquo;Connect to disk&rdquo;.</span>';
+    el.className = 'pf-value';
+  }
 }
 
 function saveEdits() {
+  stampChangedTranches();  // D-PMS-191: central last_edited stamping, before anything persists
   // Always mirror to localStorage for safety
   saveEditsToLocalStorage();
   // Queue async disk write if enabled
@@ -1200,19 +1284,105 @@ function setEditField(invIdx, slotType, field, value) {
   if (!EDITS[invIdx]) EDITS[invIdx] = {};
   if (!EDITS[invIdx][slotType]) EDITS[invIdx][slotType] = {};
   EDITS[invIdx][slotType][field] = value;
-  saveEdits(); render();
+  saveEdits(); render();   // D-PMS-191: saveEdits() stamps last_edited centrally
+}
+
+// === D-PMS-191 (07-Aug-26): per-tranche last-edited stamp ===
+// Two keys, deliberately separate:
+//   last_edited        'YYYY-MM-DD'
+//   last_edited_exact  true  = we watched this edit happen, the date is the edit date
+//                      false = reconstructed from snapshot history, so it is an UPPER
+//                              BOUND ("changed on or before this date"), never exact
+// Missing key entirely = no evidence survives, rendered "n.a.".
+// The distinction is load-bearing: snapshots are spaced up to 30 days apart, so a
+// backfilled date that rendered like a known one would be a false precision claim.
+function todayISO() {
+  var d = new Date();
+  return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+}
+
+// Stamping is CENTRAL, by fingerprint diff inside saveEdits() — deliberately NOT done at
+// each call site. There are at least five paths that mutate a tranche (setEditField,
+// setPctEdit, buffer edits, drag-reslot in onDrop, promotion via performMove) and
+// stamping each one individually would silently miss any path added later. Diffing
+// catches every mutation regardless of how it was made.
+// The fingerprint excludes the stamp keys themselves, so stamping cannot re-trigger.
+var EDIT_FP = {};
+var EDIT_FP_SEEDED = false;
+var FP_FIELDS = ['entry_date', 'target_size_pct', 'stop_ma', 'buffer_pct', 'promoted_from', 'promoted_at'];
+
+function trancheFingerprint(t) {
+  if (!t || typeof t !== 'object') return null;
+  return FP_FIELDS.map(function(f) { return t[f] === undefined ? '' : String(t[f]); }).join('');
+}
+function snapshotEditFingerprints() {
+  var m = {};
+  Object.keys(EDITS || {}).forEach(function(slot) {
+    var se = EDITS[slot];
+    if (!se || typeof se !== 'object') return;
+    TRADE_TYPES.forEach(function(tt) { if (se[tt]) m[slot + '|' + tt] = trancheFingerprint(se[tt]); });
+  });
+  return m;
+}
+// Seed the baseline from freshly-loaded state so the first save after a page load does
+// not stamp every tranche as "edited today".
+function seedEditFingerprints() {
+  EDIT_FP = snapshotEditFingerprints();
+  EDIT_FP_SEEDED = true;
+}
+function stampChangedTranches() {
+  if (!EDIT_FP_SEEDED) { seedEditFingerprints(); return; }
+  var now = snapshotEditFingerprints();
+  var today = todayISO();
+  Object.keys(now).forEach(function(k) {
+    if (EDIT_FP[k] === now[k]) return;
+    var p = k.split('|');
+    var t = EDITS[p[0]] && EDITS[p[0]][p[1]];
+    if (!t) return;
+    t.last_edited = today;
+    t.last_edited_exact = true;
+  });
+  EDIT_FP = now;
+}
+function lastEditedHtml(edit) {
+  if (!edit || !edit.last_edited) {
+    return '<span style="color:var(--fg3);font-size:11px;" title="No edit-date evidence survives for this tranche">n.a.</span>';
+  }
+  var exact = edit.last_edited_exact === true;
+  var shown = fmtDateShort(edit.last_edited);
+  if (exact) {
+    return '<span style="font-size:11px;" title="Exact edit date, recorded when the edit was made">' + esc(shown) + '</span>';
+  }
+  return '<span style="color:var(--fg2);font-size:11px;" title="Upper bound reconstructed from snapshot history: this tranche changed on or before ' + esc(edit.last_edited) + '. Snapshots are spaced, so the true edit date may be earlier.">&#8804; ' + esc(shown) + '</span>';
 }
 // D-PMS-190 (2026-07-15): single source of truth for "which ticker is live in this slot".
 // Mirrors gatherPortfolioRows(): a placeholder slot with a _ticker_override is live under
-// that override; a _universe_hidden slot is inactive; otherwise the slot's own ticker.
+// that override; otherwise the slot's own ticker. (The `_universe_hidden` clause this
+// comment used to describe was retired by D-PMS-191 below.)
 // renderKpis() and renderAlerts() previously read inv.ticker directly, so every override
 // position (most of the live book) was silently excluded from the headline Deployed/At-Risk/
 // P&L/Active KPIs AND from breach-alert detection. Routing all aggregation paths through this
 // helper keeps the KPI cards, the portfolio-summary table totals and the alert engine aligned.
+// D-PMS-191 (07-Aug-26): `_universe_hidden` REMOVED. It is no longer an allowable state.
+//
+// WHY IT WENT. The flag meant "this slot's stock is present in the data but invisible on
+// screen". That is exactly the state a position must never be able to occupy: slot 5 was
+// carrying a live 3.3% Enav tranche that was excluded from the KPI cards, the alerts and
+// the portfolio total, while still sitting in the saved state. A position you cannot see
+// is a position you cannot risk-manage.
+//
+// WHAT REPLACED IT. One field with three states, instead of two fields that could contradict
+// each other (slot 3 was simultaneously hidden AND overridden back to itself):
+//     _ticker_override absent      -> slot shows its own universe stock
+//     _ticker_override === ''      -> slot explicitly emptied by the user
+//     _ticker_override === 'XX-YY' -> slot shows that stock
+// An emptied slot renders as a visible empty slot and, by construction in clearTickerSlot(),
+// can never retain tranches. So "removed" now means removed, not hidden.
 function effectiveTicker(inv, invIdx) {
   var ed = EDITS[invIdx] || {};
-  if (ed._ticker_override) return ed._ticker_override;
-  if (ed._universe_hidden) return null;
+  if (Object.prototype.hasOwnProperty.call(ed, '_ticker_override')) {
+    return ed._ticker_override || null;   // '' => explicitly emptied
+  }
   if (!inv || inv.is_placeholder || !inv.ticker) return null;
   return inv.ticker;
 }
@@ -1234,17 +1404,11 @@ function initializeChartData() {
   if (!window.PMS_CHART_DATA) window.PMS_CHART_DATA = {data: {}, _meta: {}};
   if (!PMS_CHART_DATA.data) PMS_CHART_DATA.data = {};
   var tickers = {};
-  // 1. Universe stocks in CONFIG.investments (not placeholder, not hidden)
+  // D-PMS-191: single path — effectiveTicker() already resolves overrides and emptied slots,
+  // so this no longer needs its own copy of the "which stock is live here" rules.
   (CONFIG.investments || []).forEach(function(inv, idx) {
-    if (!inv || inv.is_placeholder || !inv.ticker) return;
-    var ed = EDITS[idx] || {};
-    if (ed._universe_hidden) return;  // user removed this stock
-    tickers[inv.ticker] = true;
-  });
-  // 2. Override tickers in EDITS
-  Object.keys(EDITS || {}).forEach(function(idx) {
-    var ov = EDITS[idx] && EDITS[idx]._ticker_override;
-    if (ov) tickers[ov] = true;
+    var t = effectiveTicker(inv, idx);
+    if (t) tickers[t] = true;
   });
   // Load each ticker — invIdx null means no warning element (batch load, not user-typed)
   Object.keys(tickers).forEach(function(t) {
@@ -1288,11 +1452,16 @@ function resolveTickerAlias(raw, universe) {
 function setPlaceholderTicker(invIdx, value) {
   var raw = (value || '').trim().toUpperCase();
   if (!EDITS[invIdx]) EDITS[invIdx] = {};
-  // Empty value = clear
+  // Empty value = clear. D-PMS-191: on a slot that has an underlying universe stock,
+  // deleting the key would resurrect that stock. Record the empty explicitly instead —
+  // the third state of _ticker_override. Placeholder slots still just drop the key.
   if (!raw) {
-    delete EDITS[invIdx]._ticker_override;
+    var invU = (CONFIG.investments || [])[invIdx];
+    if (invU && invU.ticker && !invU.is_placeholder) EDITS[invIdx]._ticker_override = '';
+    else delete EDITS[invIdx]._ticker_override;
     saveEdits();
     clearTickerWarning(invIdx);
+    render();
     return;
   }
   // Universe check (with suffix-alias fallback — see D-PMS-181 above)
@@ -1318,22 +1487,32 @@ function setPlaceholderTicker(invIdx, value) {
 
 // D-PMS-162: remove a universe-loaded stock from a placeholder slot.
 // Clears _ticker_override AND all six trade slot edits for that invIdx, then saves + re-renders.
+// D-PMS-191 (07-Aug-26): rewritten. "Remove" now means removed, on every slot type.
+//
+// TWO REAL BUGS WERE FIXED HERE, both of which left capital in the state file invisibly:
+//  1. `_universe_hidden` retired (see effectiveTicker above).
+//  2. The tranche-deletion loop used LOWER-CASE slot names ('pb1','mm1'...) but every
+//     tranche is stored UPPER-CASE ('PB1','MM1' — see TRADE_TYPES). So it deleted nothing.
+//     That is why slot 5 kept a live 3.3% Enav tranche after being "removed", and why the
+//     slot-13 orphan survived being cleared. The loop now uses TRADE_TYPES itself, so it
+//     cannot drift out of step with the real slot names again.
 function clearTickerSlot(invIdx) {
-  // D-PMS-168: support removal of universe stocks (not just override slots)
   var inv = (CONFIG.investments || [])[invIdx];
-  var isUniverseStock = inv && inv.ticker && !inv.is_placeholder;
+  var hasUniverseStock = !!(inv && inv.ticker && !inv.is_placeholder);
   if (!EDITS[invIdx]) EDITS[invIdx] = {};
-  if (isUniverseStock && !(EDITS[invIdx]._ticker_override)) {
-    // Universe stock: mark hidden — slot becomes an empty placeholder
-    EDITS[invIdx]._universe_hidden = true;
-    ['pb1','pb2','mm1','mm2','mm3','mm4'].forEach(function(slot) { delete EDITS[invIdx][slot]; });
+
+  // Always drop every tranche — an emptied slot must never retain capital.
+  TRADE_TYPES.forEach(function(slotType) { delete EDITS[invIdx][slotType]; });
+
+  if (hasUniverseStock) {
+    // Underlying universe stock would otherwise reappear: mark the slot explicitly emptied.
+    EDITS[invIdx]._ticker_override = '';
   } else {
-    // Override slot: clear override — slot reverts to empty placeholder
     delete EDITS[invIdx]._ticker_override;
-    delete EDITS[invIdx]._universe_hidden;
-    ['pb1','pb2','mm1','mm2','mm3','mm4'].forEach(function(slot) { delete EDITS[invIdx][slot]; });
-    if (Object.keys(EDITS[invIdx]).length === 0) delete EDITS[invIdx];
   }
+  delete EDITS[invIdx]._universe_hidden;  // belt and braces: never leave a legacy flag behind
+  if (Object.keys(EDITS[invIdx]).length === 0) delete EDITS[invIdx];
+
   saveEdits();
   render();
 }
@@ -1718,6 +1897,168 @@ function performMove(invIdx, fromSlot, toSlot, newStopMa) {
   saveEdits(); render();
 }
 
+// ===========================================================================
+// D-PMS-194 (07-Aug-26): ONE-TIME STATE MIGRATION
+// ===========================================================================
+// WHY THIS RUNS IN THE PAGE AND NOT AS A DISK EDIT. Editing pms-data/pms-state.json
+// directly cannot delete anything. Two independent mechanisms undo it:
+//   1. On every load, loadEditsFromLocalStorage() runs BEFORE any disk read, then
+//      mergeDiskStateIntoMemory() re-adds any tranche present in memory but absent on
+//      disk ("if (!diskEdit) merged[...] = memEdit"). A disk-side deletion is therefore
+//      resurrected from localStorage on the very next page load.
+//   2. An open tab holds authoritative state in memory and rewrites the whole file on
+//      its next save, overwriting whatever was changed underneath it.
+// The slot-13 orphan was cleared on 04-Aug and again on 05-Aug and came back both times.
+// Running the migration inside the page writes to BOTH stores at once, so neither path
+// can undo it.
+//
+// SAFETY. Guarded four ways, because this deletes capital:
+//   - version key, so it runs exactly once;
+//   - a full pre-migration backup written to disk before anything changes;
+//   - FINGERPRINT MATCHING: a tranche is only deleted if its entry_date AND size match
+//     what was verified on 07-Aug-26. If the state has moved on, the deletion is SKIPPED
+//     and reported, never applied to whatever happens to occupy that slot now;
+//   - every action is logged to the console and surfaced to Richard.
+var MIGRATION_KEY = 'pms_migration_2026_08_07_applied';
+
+// Slots Richard confirmed as erroneous on 07-Aug-26, with the fingerprint that identifies
+// them. Both were invisible in the view while holding capital in the saved state.
+var MIGRATION_ORPHANS = [
+  { slot: '4',  tranche: 'PB1', entry_date: '2026-07-01', size: 0.033,
+    why: 'Slot 5 (Enav) — slot was flagged hidden but retained a live 3.3% PB1' },
+  { slot: '12', tranche: 'PB1', entry_date: '2026-06-03', size: 0.025,
+    why: 'Slot 13 — 2.5% PB1 with no stock attached at all' }
+];
+
+// Upper-bound edit dates reconstructed from 57 snapshots spanning 08-May-26 to 07-Aug-26
+// by scripts/pms_backfill_last_edited.py. Every one is an upper bound, never exact, so all
+// are written with last_edited_exact = false. Cross-validated: every tranche dated 04-Aug
+// here independently carries promoted_at = 2026-08-04 in the live data.
+var MIGRATION_LAST_EDITED = {
+  '0': { MM1: '2026-08-04' },
+  '1': { PB1: '2026-07-03' },
+  '2': { PB1: '2026-08-07', MM1: '2026-08-04' },
+  '3': { PB1: '2026-07-22', PB2: '2026-08-04' },
+  '5': { PB1: '2026-08-04' },
+  '6': { MM1: '2026-08-04', MM2: '2026-08-04' },
+  '8': { MM1: '2026-08-04', MM2: '2026-08-04' },
+  '9': { PB1: '2026-08-05', MM1: '2026-08-04' },
+  '10': { MM1: '2026-08-04', MM2: '2026-08-04' },
+  '13': { PB1: '2026-08-07', MM1: '2026-08-07', MM2: '2026-08-04' },
+  '14': { PB1: '2026-07-03', MM1: '2026-07-22', MM2: '2026-08-04' },
+  '15': { PB1: '2026-08-04' },
+  '16': { PB1: '2026-07-03', PB2: '2026-08-05' },
+  '17': { PB1: '2026-08-07', MM1: '2026-08-04', MM2: '2026-08-07' },
+  '19': { MM1: '2026-08-04' }
+};
+
+var migrationInFlight = false;
+async function runOneTimeMigration() {
+  if (migrationInFlight) return;          // guard the disk-connect / DOM-ready race
+  try {
+    if (localStorage.getItem(MIGRATION_KEY)) return;
+  } catch (e) { return; }
+  migrationInFlight = true;
+
+  var log = [];
+
+  // --- backup first, always ---
+  if (pmsDataDirHandle) {
+    try {
+      var stamp = new Date().toISOString().replace(/[:.]/g, '-');
+      var fh = await pmsDataDirHandle.getFileHandle('pre-migration-backup-' + stamp + '.json', { create: true });
+      var w = await fh.createWritable();
+      await w.write(JSON.stringify({ _meta: { kind: 'pre-migration-backup', saved_at: new Date().toISOString() }, EDITS: EDITS }, null, 2));
+      await w.close();
+      log.push('backup written to pms-data/');
+    } catch (e) { console.error('[migration] backup failed', e); }
+  }
+  try { localStorage.setItem('pms_edits_pre_migration_2026_08_07', JSON.stringify(EDITS)); } catch (e) {}
+
+  // --- 1. retire the hidden flag, PRESERVING WHAT IT MEANT ---
+  // Simply deleting the flag would resurrect every stock Richard had removed, because
+  // hiding WAS the removal mechanism. Ryanair (slot 8) proved this in QC: it reappeared
+  // as a live holding. So each hidden slot is translated, not just cleared:
+  //   hidden + a real override  -> drop the flag; the override already governs what shows
+  //                                (slot 4 was BOTH hidden and overridden back to itself,
+  //                                 a contradiction the two-field design allowed)
+  //   hidden, no override       -> becomes explicitly emptied, which is what "removed"
+  //                                now means, and stays removed
+  var hiddenTranslated = 0, hiddenEmptied = 0;
+  Object.keys(EDITS || {}).forEach(function(slot) {
+    var se = EDITS[slot];
+    if (!se || se._universe_hidden === undefined) return;
+    delete se._universe_hidden;
+    hiddenTranslated++;
+    if (!se._ticker_override) {
+      se._ticker_override = '';   // preserve "Richard removed this stock"
+      hiddenEmptied++;
+    }
+  });
+  if (hiddenTranslated) {
+    log.push('retired the hidden flag on ' + hiddenTranslated + ' slot(s); '
+             + hiddenEmptied + ' kept as explicitly-emptied so removed stocks stay removed');
+  }
+
+  // --- 2. remove the two confirmed-erroneous tranches, fingerprint-guarded ---
+  MIGRATION_ORPHANS.forEach(function(o) {
+    var t = EDITS[o.slot] && EDITS[o.slot][o.tranche];
+    if (!t) { log.push('SKIPPED (already gone): ' + o.why); return; }
+    var sizeMatch = Math.abs((t.target_size_pct || 0) - o.size) < 1e-9;
+    if (t.entry_date !== o.entry_date || !sizeMatch) {
+      log.push('SKIPPED (state has changed, left untouched): ' + o.why
+               + ' — found entry ' + t.entry_date + ' size ' + t.target_size_pct);
+      return;
+    }
+    delete EDITS[o.slot][o.tranche];
+    // an emptied universe slot must not silently show its underlying stock again
+    var inv = (CONFIG.investments || [])[parseInt(o.slot, 10)];
+    var stillHasTranche = TRADE_TYPES.some(function(tt) { return EDITS[o.slot] && EDITS[o.slot][tt]; });
+    if (!stillHasTranche && inv && inv.ticker && !inv.is_placeholder
+        && !EDITS[o.slot]._ticker_override) {
+      EDITS[o.slot]._ticker_override = '';
+    }
+    if (EDITS[o.slot] && Object.keys(EDITS[o.slot]).length === 0) delete EDITS[o.slot];
+    log.push('REMOVED: ' + o.why);
+  });
+
+  // --- 3. Flutter: LSE listing cancelled 03-Aug-26, GB price series died 31-Jul ---
+  Object.keys(EDITS || {}).forEach(function(slot) {
+    if (EDITS[slot] && EDITS[slot]._ticker_override === 'FLTR-GB') {
+      EDITS[slot]._ticker_override = 'FLUT-US';
+      log.push('slot ' + (parseInt(slot, 10) + 1) + ': FLTR-GB re-keyed to FLUT-US (live NYSE series)');
+    }
+  });
+
+  // --- 4. backfill last_edited, never overwriting a real recorded date ---
+  var filled = 0;
+  Object.keys(MIGRATION_LAST_EDITED).forEach(function(slot) {
+    if (!EDITS[slot]) return;
+    Object.keys(MIGRATION_LAST_EDITED[slot]).forEach(function(tt) {
+      var t = EDITS[slot][tt];
+      if (!t || t.last_edited) return;
+      t.last_edited = MIGRATION_LAST_EDITED[slot][tt];
+      t.last_edited_exact = false;   // upper bound, always
+      filled++;
+    });
+  });
+  if (filled) log.push('backfilled edit dates on ' + filled + ' tranche(s) as upper bounds');
+
+  try { localStorage.setItem(MIGRATION_KEY, new Date().toISOString()); } catch (e) {}
+  seedEditFingerprints();          // so the migration itself is not re-stamped as a user edit
+  saveEditsToLocalStorage();
+  if (diskWriteEnabled) { await writeStateToDisk(); }
+  // Charts were requested at DOMContentLoaded, BEFORE this ran, so the Flutter slot asked
+  // for the dead FLTR-GB series. Re-run the loader now that tickers have changed, or the
+  // re-keyed slot renders as an empty placeholder with no price, no rows and no total.
+  // (Caught by QC: FLUT-US was the one holding still missing its totals row.)
+  initializeChartData();
+
+  console.log('[migration 2026-08-07]\n  ' + log.join('\n  '));
+  if (log.length) flashSuccess('One-time cleanup applied: ' + log.length + ' change(s). See console for the full list.');
+  render();
+}
+
 // D-PMS-67: on-load cleanup for already-corrupt state (e.g. RYA-IE.PB1 with promoted_from='PB1')
 function cleanupCorruptPromoteMetadata() {
   var fixed = 0;
@@ -1865,28 +2206,24 @@ function getUniverseName(ticker) {
 function gatherPortfolioRows() {
   var rows = [];
   CONFIG.investments.forEach(function(inv, invIdx) {
-    var ticker = inv.ticker;
-    // D-PMS-127: include placeholder slots as blank rows (matches PMS 16) — unless D-PMS-141 hides them
-    var ed = EDITS[invIdx] || {};
-    if (hidePlaceholders && (inv.is_placeholder || !ticker || ed._universe_hidden) && !ed._ticker_override) {
-      return;
-    }
-    if ((inv.is_placeholder || !ticker) && !ed._ticker_override) {
+    // D-PMS-191: route through effectiveTicker() — the single source of truth for
+    // "which stock is live in this slot". Previously this function carried its own copy
+    // of those rules, which is how the hidden-flag divergence arose in the first place.
+    var ticker = effectiveTicker(inv, invIdx);
+    // D-PMS-127: include empty slots as blank rows (matches PMS 16) — unless D-PMS-141 hides them
+    if (!ticker) {
+      if (hidePlaceholders) return;
       rows.push({
         invIdx: invIdx,
-        ticker: inv.ticker || ('Slot ' + (invIdx + 1)),
-        name: inv.name || ('Empty slot ' + (invIdx + 1)),
-        currency: inv.currency || '',
+        ticker: 'Slot ' + (invIdx + 1),
+        name: 'Empty slot ' + (invIdx + 1),
+        currency: '',
         deployed: 0, trancheCount: 0, valueAum: 0,
         atRisk: 0, weightedStopDistance: null,
         paperPnl: 0, avgPriceMove: null,
         breachCount: 0, tranches: [], _is_placeholder: true
       });
       return;
-    }
-    // Universe-loaded placeholder: use override ticker for compute
-    if ((inv.is_placeholder || !ticker) && ed._ticker_override) {
-      ticker = ed._ticker_override;
     }
     // collect all tranches with computed runTester output
     var trancheData = [];
@@ -2464,6 +2801,8 @@ function renderPortfolioSection() {
 function render() {
   renderTable();
   renderStickyHeaderTable();
+  renderSortButtons();  // D-PMS-192
+  renderSavedAt();      // D-PMS-193
   renderKpis();
   renderAlerts();
   applyHideAlerts();
@@ -2557,7 +2896,7 @@ function buildHeaderRow() {
   // D-PMS-40 two-row group header. Top row = group label spanning multiple cols. Bottom row = simple column name.
   // Hideable "at entry" cols carry .col-atentry class.
   var groupRow = '<tr>'
-    + '<th class="group-head group-investment-info" colspan="3">Investment information</th>'  // D-PMS-124: ticker + drag + slot
+    + '<th class="group-head group-investment-info" colspan="4">Investment information</th>'  // D-PMS-124: ticker + drag + slot; D-PMS-191: + last edited
     + '<th class="group-head group-atentry" colspan="6">At entry</th>'  // date, %aum, pivot, pivot MA, init stop, init stop dist
     + '<th class="group-head group-current" colspan="7">Current</th>'  // stop MA, MA→stop buffer, price, MA, stop, stop dist, value AUM
     + '<th class="group-head group-pnl" colspan="3">P&L</th>'  // paper, AUM, loss risk
@@ -2567,6 +2906,7 @@ function buildHeaderRow() {
     + '<th class="al">Ticker</th>'
     + '<th class="al"></th>'  // drag handle
     + '<th class="al">Slot</th>'
+    + '<th class="al" title="When this tranche was last edited. A &quot;&#8804;&quot; prefix means the date is an upper bound reconstructed from snapshot history, not an exact edit date. n.a. means no evidence survives.">Last edited</th>'  // D-PMS-191
     + '<th class="al col-group-start">Date</th>'
     + '<th>%AUM</th>'
     + '<th class="col-atentry">Price</th>'
@@ -2604,12 +2944,114 @@ function renderStickyHeaderTable() {
   }
 }
 
+// === D-PMS-192 (07-Aug-26): Position Manager sort ===
+//
+// DISPLAY ONLY. This returns a render ORDER (an array of invIdx), and nothing else in the
+// file changes. That is deliberate and it is the safety property that matters: EDITS is
+// keyed by slot index, so physically reordering CONFIG.investments would silently re-point
+// every tranche onto the wrong stock. Every handler (drag, promote, clear, edit) keeps
+// receiving its true invIdx, so behaviour is identical whatever the sort.
+//
+// Empty slots are ALWAYS pushed to the bottom, on every mode including 'slot' — Richard's
+// requirement, and it matches the Portfolio-overview behaviour already shipped as D-PMS-138.
+var posSortMode = 'slot';   // 'slot' | 'name' | 'aum' | 'risk'
+var posSortDir = 1;         // 1 = default direction for the mode, -1 = reversed
+
+function investmentSortMetrics(invIdx) {
+  var inv = CONFIG.investments[invIdx];
+  var ticker = effectiveTicker(inv, invIdx);
+  var m = { blank: !ticker, name: '', aum: 0, risk: 0 };
+  if (!ticker) return m;
+  m.name = (getUniverseName(ticker) || inv.name || ticker || '').toUpperCase();
+  var deployed = 0;
+  TRADE_TYPES.forEach(function(slotType) {
+    var edit = getEdit(invIdx, slotType);
+    if (!edit || !edit.entry_date || edit.target_size_pct == null) return;
+    deployed += edit.target_size_pct;
+    var bufVal = edit.buffer_pct != null ? edit.buffer_pct : 0.02;
+    var r = runTester(ticker, edit.target_size_pct, edit.entry_date, edit.stop_ma || DEFAULT_STOP_MA[slotType], bufVal);
+    if (r && r.ok) {
+      m.aum += (r.value_aum_pct || 0);
+      m.risk += (r.loss_risk_aum || 0);
+    }
+  });
+  // Current value of the position is the honest measure of "how big is this holding".
+  // Fall back to committed entry size when price data has not loaded, so a momentarily
+  // missing chart cannot sort a real position to the bottom as if it were empty.
+  if (!m.aum) m.aum = deployed;
+  return m;
+}
+
+function sortedInvestmentOrder() {
+  var idx = CONFIG.investments.map(function(_, i) { return i; });
+  if (posSortMode === 'slot' && posSortDir === 1) {
+    // Still push empties down: "blanks to bottom" must hold in every mode.
+    var met0 = {};
+    idx.forEach(function(i) { met0[i] = investmentSortMetrics(i); });
+    return idx.slice().sort(function(a, b) {
+      if (met0[a].blank !== met0[b].blank) return met0[a].blank ? 1 : -1;
+      return a - b;
+    });
+  }
+  var met = {};
+  idx.forEach(function(i) { met[i] = investmentSortMetrics(i); });
+  return idx.slice().sort(function(a, b) {
+    var A = met[a], B = met[b];
+    if (A.blank !== B.blank) return A.blank ? 1 : -1;   // blanks last, always
+    if (A.blank && B.blank) return a - b;
+    var c = 0;
+    if (posSortMode === 'name') c = A.name < B.name ? -1 : (A.name > B.name ? 1 : 0);
+    else if (posSortMode === 'aum') c = B.aum - A.aum;      // default: largest holding first
+    else if (posSortMode === 'risk') c = A.risk - B.risk;   // loss risk is negative: worst first
+    else c = a - b;
+    if (c === 0) return a - b;                              // stable tie-break on slot
+    return c * posSortDir;
+  });
+}
+
+function setPosSort(mode) {
+  if (posSortMode === mode && mode !== 'slot') posSortDir = -posSortDir;
+  else { posSortMode = mode; posSortDir = 1; }
+  try {
+    localStorage.setItem('pms_pos_sort_v7', JSON.stringify({ mode: posSortMode, dir: posSortDir }));
+  } catch (e) {}
+  render();
+}
+
+function restorePosSort() {
+  try {
+    var raw = localStorage.getItem('pms_pos_sort_v7');
+    if (!raw) return;
+    var v = JSON.parse(raw);
+    if (v && typeof v.mode === 'string') { posSortMode = v.mode; posSortDir = v.dir === -1 ? -1 : 1; }
+  } catch (e) {}
+}
+
+function renderSortButtons() {
+  var defs = [
+    ['slot', 'Blanks to bottom', 'Restore slot order (1-20) with every empty slot pushed to the bottom'],
+    ['name', 'Sort: name', 'Rank by company name'],
+    ['aum', 'Sort: % of AUM (current)', 'Rank by current position size as a % of AUM, largest first. Click again to reverse.'],
+    ['risk', 'Sort: loss risk', 'Rank by total loss risk if every stop triggered, worst first. Click again to reverse.']
+  ];
+  defs.forEach(function(d) {
+    var el = document.getElementById('btnSort-' + d[0]);
+    if (!el) return;
+    var on = posSortMode === d[0];
+    el.className = 'btn' + (on ? ' btn-primary' : '');
+    el.title = d[2];
+    el.textContent = d[1] + (on && d[0] !== 'slot' ? (posSortDir === 1 ? ' ▼' : ' ▲') : '');
+  });
+}
+
 function renderTable() {
   var tbl = document.getElementById('posTable');
   if (!CONFIG || !CONFIG.investments) { tbl.innerHTML = ''; return; }
   var html = buildColgroup() + buildHeaderRow() + '<tbody>';
-  CONFIG.investments.forEach(function(inv, invIdx) {
-    var isPlaceholder = inv.is_placeholder || !inv.ticker || !!(EDITS[invIdx] && EDITS[invIdx]._universe_hidden);  // D-PMS-168
+  var order = sortedInvestmentOrder();  // D-PMS-192: display-only ordering, never re-keys EDITS
+  order.forEach(function(invIdx, renderPos) {
+    var inv = CONFIG.investments[invIdx];
+    var isPlaceholder = inv.is_placeholder || !inv.ticker;  // D-PMS-168; D-PMS-191 hidden flag retired
     // D-PMS-68: pre-count how many EXTRA rows (warn-lines) this investment will emit,
     // so the first row's ticker cell can use rowspan = 6 + extras to span them all.
     // D-PMS-166: placeholder slots with a live _ticker_override are rendered as live
@@ -2630,10 +3072,17 @@ function renderTable() {
       html += renderTrancheRow(inv, invIdx, slotType, slotOrder === 0, isPlaceholder, totalRowspan);
     });
     var hasAny = TRADE_TYPES.some(function(st) { return hasEdit(invIdx, st); });
-    if (hasAny && !isPlaceholder) html += renderInvTotalsRow(inv, invIdx);
+    // D-PMS-191 THE TOTALS BUG. This line used the RAW `isPlaceholder`, but slots 10-20 are
+    // structurally placeholders that carry a live stock through `_ticker_override`.
+    // renderTrancheRow() promotes those to live; this guard never did, so every override
+    // slot silently lost its totals row — Volex, Hexatronic, Xvivo, SDiptech, Flutter,
+    // Hilton Food, Alfen and Arteche, i.e. most of the live book.
+    // `effectivePlaceholderForRowspan` is the already-promoted value computed above, so
+    // using it here keeps this guard in step with the rows it summarises by construction.
+    if (hasAny && !effectivePlaceholderForRowspan) html += renderInvTotalsRow(inv, invIdx);
     // D-PMS-95: ~32px spacer row between investment blocks (skip after last)
-    if (invIdx < CONFIG.investments.length - 1) {
-      html += '<tr class="inv-spacer"><td colspan="21"></td></tr>';
+    if (renderPos < order.length - 1) {
+      html += '<tr class="inv-spacer"><td colspan="' + TOTAL_COLS + '"></td></tr>';
     }
   });
   html += '</tbody>';
@@ -2770,6 +3219,8 @@ function renderTrancheRow(inv, invIdx, slotType, isFirstSlot, isPlaceholder, tot
   }
   cells += '<td class="al">' + (hasE && !isPlaceholder ? '<span class="drag-handle" title="Drag to reslot">⋮⋮</span>' : '') + '</td>';
   cells += '<td class="al"><span class="' + typeCls + '">' + esc(label) + '</span> <span style="color:var(--fg3);font-size:10px;">cap ' + slotCapPct.toFixed(1) + '%</span></td>';
+  // D-PMS-191: last-edited stamp for this tranche
+  cells += '<td class="al">' + lastEditedHtml(edit) + '</td>';
   // === At entry group ===
   // D-PMS-64: promotion badge replaces date cell when tranche has promoted_from metadata
   if (edit && edit.promoted_from && edit.promoted_from !== slotType) {
@@ -2844,9 +3295,9 @@ function renderTrancheRow(inv, invIdx, slotType, isFirstSlot, isPlaceholder, tot
   // D-PMS-106: only emit warn-line rows when alerts visible (otherwise rowspan overshoots)
   if (!hideAlerts) {
     if (r && r.entry_warn === 'BELOW_STOP') {
-      rowHtml += '<tr class="warn-line"><td colspan="21">⚠ Entry ' + fmtPrice(r.entry_close) + ' below initial stop ' + fmtPrice(r.entry_stop) + ' — would trigger day 1.</td></tr>';
+      rowHtml += '<tr class="warn-line"><td colspan="' + TOTAL_COLS + '">⚠ Entry ' + fmtPrice(r.entry_close) + ' below initial stop ' + fmtPrice(r.entry_stop) + ' — would trigger day 1.</td></tr>';
     } else if (r && r.entry_warn === 'BELOW_MA_ABOVE_STOP') {
-      rowHtml += '<tr class="warn-line"><td colspan="21">ℹ Entry ' + fmtPrice(r.entry_close) + ' below ' + esc(stopMa) + ' MA ' + fmtPrice(r.entry_ma) + ', above stop ' + fmtPrice(r.entry_stop) + ' — buying weakness.</td></tr>';
+      rowHtml += '<tr class="warn-line"><td colspan="' + TOTAL_COLS + '">ℹ Entry ' + fmtPrice(r.entry_close) + ' below ' + esc(stopMa) + ' MA ' + fmtPrice(r.entry_ma) + ', above stop ' + fmtPrice(r.entry_stop) + ' — buying weakness.</td></tr>';
     }
   }
   // D-PMS-64: promotion line removed — now rendered as a green badge in the Date cell instead
@@ -2872,7 +3323,10 @@ function renderInvTotalsRow(inv, invIdx) {
     }
   });
   // D-PMS-44 + D-PMS-59: align deployed under %AUM, sumValueAum under Value AUM, sumPnl under P&L AUM, sumRisk under Loss risk
-  return '<tr class="inv-totals"><td class="al" colspan="4">' + esc(inv.ticker) + ' total</td>'
+  // D-PMS-191: label from effectiveTicker, not inv.ticker. On an override slot inv.ticker is
+  // empty, so once the row above started rendering it would have read " total" with no name.
+  // Colspans re-derived for the 22-column table: 5 + 1 + 10 + 1 + 1 + 1 + 1 + 2 = 22.
+  return '<tr class="inv-totals"><td class="al" colspan="5">' + esc(ticker || inv.ticker || ('Slot ' + (invIdx + 1))) + ' total</td>'
     + '<td>' + pctNoSign1dp(sumDeployed) + '</td>'
     + '<td colspan="10"></td>'
     + '<td>' + pctNoSign1dp(sumValueAum) + '</td>'  // D-PMS-59 + D-PMS-100 1dp Value AUM total
@@ -2916,6 +3370,28 @@ function kpiCard(label, value, cls) {
   return '<div class="kpi-card"><div class="kpi-label">' + label + '</div><div class="kpi-value ' + cls + '">' + value + '</div></div>';
 }
 
+// D-PMS-196 (07-Aug-26): STRANDED-TRANCHE DETECTOR.
+// A tranche with no stock attached is capital the PMS cannot price, cannot stop-manage and
+// cannot show — it is excluded from every KPI, every alert and the portfolio total, while
+// still sitting in the saved state. Two such orphans (3.3% and 2.5% of AUM) had been living
+// in the book unnoticed, and a THIRD was created during this very session by clearing a
+// slot's ticker while its tranches remained.
+// This never deletes anything: stranded capital is Richard's decision, not the page's.
+// It just makes the condition impossible to miss, which is the property it lacked.
+function findStrandedTranches() {
+  var stranded = [];
+  (CONFIG.investments || []).forEach(function(inv, invIdx) {
+    if (effectiveTicker(inv, invIdx)) return;   // has a stock: fine
+    TRADE_TYPES.forEach(function(slotType) {
+      var edit = getEdit(invIdx, slotType);
+      if (!edit) return;
+      if (edit.target_size_pct == null && !edit.entry_date) return;
+      stranded.push({ slot: invIdx + 1, type: slotType, pct: edit.target_size_pct || 0, date: edit.entry_date || '' });
+    });
+  });
+  return stranded;
+}
+
 function renderAlerts() {
   var alerts = [];
   CONFIG.investments.forEach(function(inv, invIdx) {
@@ -2931,8 +3407,28 @@ function renderAlerts() {
     });
   });
   var el = document.getElementById('alertBanner');
-  if (!alerts.length) { el.className = 'alert-banner'; el.innerHTML = ''; return; }
-  var html = '<h2>⚠ STOP BREACH — ' + alerts.length + ' tranche' + (alerts.length > 1 ? 's' : '') + '</h2>';
+
+  // D-PMS-196: stranded tranches lead, because they are invisible everywhere else.
+  var stranded = findStrandedTranches();
+  var strandedHtml = '';
+  if (stranded.length) {
+    var strandedPct = stranded.reduce(function(s, x) { return s + (x.pct || 0); }, 0);
+    strandedHtml = '<h2>&#9888; CAPITAL WITH NO STOCK ATTACHED &mdash; ' + stranded.length + ' tranche'
+      + (stranded.length > 1 ? 's' : '') + ', ' + (strandedPct * 100).toFixed(1) + '% of AUM</h2>';
+    stranded.forEach(function(x) {
+      strandedHtml += '<div class="alert-item">'
+        + '<span class="alert-ticker">Slot ' + x.slot + '</span>'
+        + '<span>' + esc(TRADE_LABELS[x.type] || x.type) + '</span>'
+        + '<span class="alert-msg">' + (x.pct * 100).toFixed(1) + '% of AUM entered ' + esc(x.date || 'n.a.')
+        + ' &mdash; no stock in this slot, so it has no price, no stop and is excluded from every total</span>'
+        + '<span class="alert-status b-bad">STRANDED</span>'
+        + '</div>';
+    });
+  }
+
+  if (!alerts.length && !stranded.length) { el.className = 'alert-banner'; el.innerHTML = ''; return; }
+  if (!alerts.length) { el.innerHTML = strandedHtml; el.className = 'alert-banner visible'; return; }
+  var html = strandedHtml + '<h2>⚠ STOP BREACH — ' + alerts.length + ' tranche' + (alerts.length > 1 ? 's' : '') + '</h2>';
   alerts.forEach(function(a) {
     html += '<div class="alert-item">'
       + '<span class="alert-ticker">' + esc(a.ticker) + '</span>'
