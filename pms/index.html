@@ -91,6 +91,14 @@ body.scrolled-past-header .sticky-header-table-wrap { display: block; }
 .alert-banner { background: var(--red-bg); border: 2px solid var(--red); border-radius: 8px; padding: 12px 16px; margin: 16px 0; display: none; }
 .alert-banner.visible { display: block; }
 body.hide-alerts .alert-banner.visible { display: none !important; }
+/* D-PMS-201 (07-Aug-26): DATA-INTEGRITY banner, deliberately NOT hideable by "Hide alerts".
+   Stop breaches are trading signals and it is reasonable to collapse them for a clean view.
+   Capital sitting in a slot with no stock is a FAULT in the book, not a signal, and a view
+   toggle must not be able to conceal it. Found by checking what "Hide alerts" actually hides:
+   the stranded warning shared the .alert-banner class and vanished with it. */
+.integrity-banner { background: var(--red-bg); border: 2px solid var(--red); border-radius: 8px; padding: 12px 16px; margin: 16px 0; display: none; }
+.integrity-banner.visible { display: block; }
+.integrity-banner h2 { font-size: 13px; color: var(--red); margin-bottom: 6px; }
 body.hide-alerts .warn-line { display: none !important; }
 .alert-banner h2 { font-size: 13px; color: var(--red); margin-bottom: 6px; }
 .alert-item { display: flex; align-items: center; gap: 10px; padding: 5px 0; font-size: 11px; border-bottom: 1px solid rgba(207,34,46,0.2); flex-wrap: wrap; white-space: normal; word-wrap: break-word; line-height: 1.35; }
@@ -190,13 +198,16 @@ body.hide-at-entry-cols .pf-col-entry-aum { display: none; }
 .sticky-header-table thead tr:nth-child(2) th.col-key-bold { font-weight: 700; background: rgba(9,105,218,0.08); }
 .pos-table thead tr:nth-child(2) th.col-key-bold,
 .sticky-header-table thead tr:nth-child(2) th.col-key-bold { background: rgba(9,105,218,0.14); }
-/* D-PMS-84: bold matching column HEADERS (data-row 2 of thead) */
-.pos-table thead tr:nth-child(2) th:nth-child(10),
-.pos-table thead tr:nth-child(2) th:nth-child(15),
-.pos-table thead tr:nth-child(2) th:nth-child(19),
-.sticky-header-table thead tr:nth-child(2) th:nth-child(10),
-.sticky-header-table thead tr:nth-child(2) th:nth-child(15),
-.sticky-header-table thead tr:nth-child(2) th:nth-child(19) { font-weight: 800; color: var(--fg); }
+/* D-PMS-84: bold matching column HEADERS (data-row 2 of thead).
+   D-PMS-198 (07-Aug-26): was :nth-child(10)/(15)/(19). Inserting the "Last edited" column
+   at position 4 shifted the key columns to 11/16/20, so these rules silently emphasised
+   the WRONG three headers ("Stop-loss distance", "Stop-loss level", "P&L AUM") — proven by
+   reading computed styles in headless Chromium, not by inspection.
+   Fixed the way the file's own comment two blocks down already prescribes: match the
+   `col-key-bold` class, which marks exactly the intended columns and cannot drift when a
+   column is added, removed or reordered. */
+.pos-table thead tr:nth-child(2) th.col-key-bold,
+.sticky-header-table thead tr:nth-child(2) th.col-key-bold { font-weight: 800; color: var(--fg); }
 
 /* D-PMS-62 + D-PMS-86: vertical group dividers — borders at start of each column group.
    FIX 09-May-26: use class-based selectors instead of :nth-child, because :nth-child counts cells in the
@@ -560,6 +571,9 @@ body.active-tab-overview .sticky-top, body.active-tab-charts .sticky-top { displ
       <b>Empty slots</b> can have a ticker typed in. <b>New MM tranches</b> warn if no PB exists for that investment (override permitted for backfill). <b>Connect to disk</b> for auto-save (auto-reconnects on reload).
     </div>
 
+    <!-- D-PMS-201: data-integrity faults. Separate element so "Hide alerts" cannot hide them. -->
+    <div class="integrity-banner" id="integrityBanner"></div>
+
     <!-- Stop breach alerts -->
     <div class="alert-banner" id="alertBanner"></div>
 
@@ -694,8 +708,15 @@ window.addEventListener('DOMContentLoaded', function() {
   restorePosSort();                 // D-PMS-192
   renderSavedAt();                  // D-PMS-193
   // D-PMS-194 fallback: if disk never reconnects, still migrate the browser-held state.
-  // Auto-reconnect is async and runs its own call first; migrationInFlight guards the race.
-  setTimeout(function() { runOneTimeMigration(); }, 4000);
+  // D-PMS-199 (07-Aug-26): this MUST NOT be a bare timer. A fixed 4s delay can fire before
+  // tryAutoReconnect() finishes merging the disk file. The migration would then delete the
+  // orphans from localStorage only, set its version key, and the subsequent merge would
+  // re-add them from the still-uncleaned disk copy — a permanent silent failure, because
+  // the version key stops it ever running again.
+  // Instead, wait for auto-reconnect to SETTLE. Whichever path gets there first, the
+  // version key plus migrationInFlight make the second call a no-op.
+  // (Belt and braces: were this ever to fail, D-PMS-196's stranded-tranche banner would
+  // still show the orphans, so the failure is visible rather than silent.)
 
   statusEl.textContent = (CONFIG.investments || []).length + ' slots · loading charts…';  // D-PMS-174
   // Update status once first chart loads (triggered by first render() from loadTickerChart)
@@ -714,8 +735,15 @@ window.addEventListener('DOMContentLoaded', function() {
   updateDiskStatus();
 
   // D-PMS-47: try silent auto-reconnect to disk if previously granted
+  // D-PMS-199: the migration is chained off the SETTLED reconnect, never off a fixed timer,
+  // so it can never run against pre-merge state. See the note above.
   if (diskAvailable) {
-    tryAutoReconnect().catch(function(e) { console.warn('Auto-reconnect failed', e); });
+    tryAutoReconnect()
+      .catch(function(e) { console.warn('Auto-reconnect failed', e); return false; })
+      .then(function() { return runOneTimeMigration(); })
+      .catch(function(e) { console.error('Migration failed', e); });
+  } else {
+    runOneTimeMigration();
   }
 
   document.getElementById('btnConnect').addEventListener('click', connectToDisk);
@@ -973,14 +1001,48 @@ async function mergeDiskStateIntoMemory() {
   // The merge semantics are NOT being changed in this pass — getting it wrong deletes
   // real positions, and it needs its own hostile review. Making it LOUD is the safe
   // half of the fix, and it removes the "silent" property that made it so expensive.
-  var resurrected = [];
+  // D-PMS-203 (07-Aug-26): the deletion fix, now that every tranche carries `last_edited`.
+  //
+  // The rule: a tranche in memory but absent from disk is only re-added if we CANNOT prove
+  // the memory copy is older than the disk file. Proof requires a strictly earlier DAY:
+  //   last_edited  <  saved_at date   -> disk is definitively newer, its omission was
+  //                                      deliberate. Do NOT resurrect.
+  //   last_edited  == saved_at date   -> same day, genuinely ambiguous. KEEP.
+  //   last_edited  >  saved_at date   -> memory is newer, an unsaved edit. KEEP.
+  //   no last_edited at all           -> no evidence. KEEP.
+  // Every ambiguous case keeps the data, so this can never silently lose a real edit; it
+  // only stops re-adding tranches a later save deliberately dropped.
+  //
+  // Dates are compared DAY-ONLY on purpose. `last_edited` has day resolution and `saved_at`
+  // is a full ISO timestamp, so a raw string compare makes '2026-08-07' sort BEFORE
+  // '2026-08-07T13:22', which would discard an edit made today and not yet written. That
+  // single detail is the difference between a safe fix and one that loses live positions.
+  var diskSavedDay = (diskMeta && diskMeta.saved_at) ? String(diskMeta.saved_at).slice(0, 10) : null;
+  var resurrected = [], suppressed = [];
   Object.keys(EDITS).forEach(function(invIdx) {
     if (!merged[invIdx]) merged[invIdx] = {};
     Object.keys(EDITS[invIdx]).forEach(function(slotType) {
       var memEdit = EDITS[invIdx][slotType];
       var diskEdit = merged[invIdx][slotType];
       if (!diskEdit) {
-        if (TRADE_TYPES.indexOf(slotType) >= 0) resurrected.push('slot ' + (parseInt(invIdx, 10) + 1) + ' ' + slotType);
+        var isTranche = TRADE_TYPES.indexOf(slotType) >= 0;
+        var provablyOlder = false;
+        if (isTranche) {
+          if (memEdit && memEdit.last_edited_at && diskMeta && diskMeta.saved_at) {
+            // Precise path: both are full ISO instants, so compare them directly.
+            provablyOlder = String(memEdit.last_edited_at) < String(diskMeta.saved_at);
+          } else {
+            // Fallback for backfilled or legacy tranches: day-level, ambiguity keeps the data.
+            var memDay = (memEdit && memEdit.last_edited) ? String(memEdit.last_edited).slice(0, 10) : null;
+            provablyOlder = !!(diskSavedDay && memDay && memDay < diskSavedDay);
+          }
+        }
+        if (provablyOlder) {
+          suppressed.push('slot ' + (parseInt(invIdx, 10) + 1) + ' ' + slotType
+                          + ' (last edited ' + memDay + ', disk saved ' + diskSavedDay + ')');
+          return;   // deliberate deletion on disk — honour it
+        }
+        if (isTranche) resurrected.push('slot ' + (parseInt(invIdx, 10) + 1) + ' ' + slotType);
         merged[invIdx][slotType] = memEdit;
       } else {
         // Compare timestamps if both have them
@@ -993,15 +1055,21 @@ async function mergeDiskStateIntoMemory() {
   EDITS = merged;
   lastSavedAt = (diskMeta && diskMeta.saved_at) || lastSavedAt;  // D-PMS-193
   lastAutoBackupDate = diskMeta && diskMeta.last_auto_backup_date;
-  // D-PMS-195: say so, loudly, rather than doing it silently
+  // D-PMS-195 / D-PMS-203: report both directions, loudly. Silence was the expensive part.
+  if (suppressed.length) {
+    console.warn('[pms] MERGE honoured ' + suppressed.length + ' deletion(s) present on disk: '
+      + suppressed.join(', ') + '. These tranches were in this browser but were last edited '
+      + 'BEFORE the disk file was saved, so the disk copy is authoritative.');
+  }
   if (resurrected.length) {
     console.warn('[pms] MERGE re-added ' + resurrected.length
       + ' tranche(s) that this browser held but the disk file did not: ' + resurrected.join(', ')
-      + '. If these were deleted on purpose by editing pms-state.json, they have just come back — '
-      + 'delete them in the page instead, which writes both stores.');
+      + '. Kept because the memory copy could not be proven older than the disk file '
+      + '(same-day edit, newer edit, or no edit date). If you deleted these on purpose, '
+      + 'delete them in the page rather than in the JSON — the page writes both stores.');
     flashError('Merge re-added ' + resurrected.length + ' tranche(s) missing from disk ('
       + resurrected.slice(0, 4).join(', ') + (resurrected.length > 4 ? ', …' : '')
-      + '). Check the console — a deliberate disk-side deletion would have been undone.');
+      + '). Check the console.');
   }
   // D-PMS-67: re-clean after merge — disk may have resurrected corrupt state
   cleanupCorruptPromoteMetadata();
@@ -1339,13 +1407,24 @@ function stampChangedTranches() {
     var p = k.split('|');
     var t = EDITS[p[0]] && EDITS[p[0]][p[1]];
     if (!t) return;
-    t.last_edited = today;
+    t.last_edited = today;              // day resolution, this is what the column shows
     t.last_edited_exact = true;
+    // D-PMS-203: full timestamp too, used ONLY by the merge. Day resolution left one sharp
+    // edge — an edit at 23:59 against a disk file saved at 00:01 next day compares as older
+    // and would be dropped. Storing the instant removes that window. Backfilled tranches
+    // deliberately have no timestamp: they are bounds, and inventing one would be a false
+    // precision claim.
+    t.last_edited_at = new Date().toISOString();
   });
   EDIT_FP = now;
 }
 function lastEditedHtml(edit) {
-  if (!edit || !edit.last_edited) {
+  // D-PMS-202: distinguish "this tranche does not exist" from "it exists but its edit date
+  // is unknown". Richard asked for n.a. where the date is not known; an empty slot has no
+  // date to be unknown, so it takes the em-dash the rest of its row already uses. Filling
+  // ~90 empty rows with "n.a." would have been noise asserting a fact about nothing.
+  if (!edit) return '<span style="color:var(--fg3);font-size:11px;">&mdash;</span>';
+  if (!edit.last_edited) {
     return '<span style="color:var(--fg3);font-size:11px;" title="No edit-date evidence survives for this tranche">n.a.</span>';
   }
   var exact = edit.last_edited_exact === true;
@@ -2982,14 +3061,21 @@ function investmentSortMetrics(invIdx) {
   return m;
 }
 
+// D-PMS-202: blankness needs no prices. The default 'slot' mode only has to know which slots
+// are empty, so it must not run the full metric pass — that fired runTester across the whole
+// book on every keystroke, for an answer it never used.
+function isBlankSlot(invIdx) {
+  return !effectiveTicker(CONFIG.investments[invIdx], invIdx);
+}
+
 function sortedInvestmentOrder() {
   var idx = CONFIG.investments.map(function(_, i) { return i; });
   if (posSortMode === 'slot' && posSortDir === 1) {
     // Still push empties down: "blanks to bottom" must hold in every mode.
-    var met0 = {};
-    idx.forEach(function(i) { met0[i] = investmentSortMetrics(i); });
+    var blank0 = {};
+    idx.forEach(function(i) { blank0[i] = isBlankSlot(i); });
     return idx.slice().sort(function(a, b) {
-      if (met0[a].blank !== met0[b].blank) return met0[a].blank ? 1 : -1;
+      if (blank0[a] !== blank0[b]) return blank0[a] ? 1 : -1;
       return a - b;
     });
   }
@@ -3051,7 +3137,15 @@ function renderTable() {
   var order = sortedInvestmentOrder();  // D-PMS-192: display-only ordering, never re-keys EDITS
   order.forEach(function(invIdx, renderPos) {
     var inv = CONFIG.investments[invIdx];
-    var isPlaceholder = inv.is_placeholder || !inv.ticker;  // D-PMS-168; D-PMS-191 hidden flag retired
+    // D-PMS-198 (07-Aug-26): an EXPLICITLY EMPTIED slot must render as empty here too.
+    // Without this clause, `inv.ticker` is still e.g. 'ENAV-IT' on a removed universe slot,
+    // so the Position Manager kept drawing Enav and Ryanair as live holdings with 18 enabled
+    // inputs each, while the KPIs, alerts and Portfolio overview (which all route through
+    // effectiveTicker) correctly treated them as gone. Richard could have typed a position
+    // into a slot he had removed. Caught by asserting on the rendered DOM, not by inspection.
+    var edSlot = EDITS[invIdx] || {};
+    var explicitlyEmptied = Object.prototype.hasOwnProperty.call(edSlot, '_ticker_override') && !edSlot._ticker_override;
+    var isPlaceholder = inv.is_placeholder || !inv.ticker || explicitlyEmptied;  // D-PMS-168; D-PMS-191 hidden flag retired
     // D-PMS-68: pre-count how many EXTRA rows (warn-lines) this investment will emit,
     // so the first row's ticker cell can use rowspan = 6 + extras to span them all.
     // D-PMS-166: placeholder slots with a live _ticker_override are rendered as live
@@ -3326,9 +3420,18 @@ function renderInvTotalsRow(inv, invIdx) {
   // D-PMS-191: label from effectiveTicker, not inv.ticker. On an override slot inv.ticker is
   // empty, so once the row above started rendering it would have read " total" with no name.
   // Colspans re-derived for the 22-column table: 5 + 1 + 10 + 1 + 1 + 1 + 1 + 2 = 22.
+  // D-PMS-200 (07-Aug-26): the middle block MUST be individual cells, four of them carrying
+  // `col-atentry`, NOT a single colspan="10".
+  // A colspan cell cannot collapse when `body.hide-at-entry-cols .col-atentry {display:none}`
+  // hides the four at-entry columns. Measured in headless Chromium: with Hide at-entry on,
+  // the header and the tranche cells moved to x=1122 while this row's value stayed at
+  // x=1412 — every total sat 290px right of its own column heading.
+  // Latent before (7 totals rows rendered); restoring totals on the override slots took it
+  // to 14, i.e. every holding, which is what made it worth fixing rather than noting.
   return '<tr class="inv-totals"><td class="al" colspan="5">' + esc(ticker || inv.ticker || ('Slot ' + (invIdx + 1))) + ' total</td>'
     + '<td>' + pctNoSign1dp(sumDeployed) + '</td>'
-    + '<td colspan="10"></td>'
+    + '<td class="col-atentry"></td><td class="col-atentry"></td><td class="col-atentry"></td><td class="col-atentry"></td>'
+    + '<td></td><td></td><td></td><td></td><td></td><td></td>'
     + '<td>' + pctNoSign1dp(sumValueAum) + '</td>'  // D-PMS-59 + D-PMS-100 1dp Value AUM total
     + '<td></td>'  // share p&l per-share (not summable)
     + '<td>' + pctBp(sumPnl) + '</td>'
@@ -3408,27 +3511,33 @@ function renderAlerts() {
   });
   var el = document.getElementById('alertBanner');
 
-  // D-PMS-196: stranded tranches lead, because they are invisible everywhere else.
+  // D-PMS-196 + D-PMS-201: stranded capital renders into its OWN banner, which "Hide alerts"
+  // does not touch. A data-integrity fault must not be dismissible as if it were a signal.
+  var iel = document.getElementById('integrityBanner');
   var stranded = findStrandedTranches();
-  var strandedHtml = '';
-  if (stranded.length) {
-    var strandedPct = stranded.reduce(function(s, x) { return s + (x.pct || 0); }, 0);
-    strandedHtml = '<h2>&#9888; CAPITAL WITH NO STOCK ATTACHED &mdash; ' + stranded.length + ' tranche'
-      + (stranded.length > 1 ? 's' : '') + ', ' + (strandedPct * 100).toFixed(1) + '% of AUM</h2>';
-    stranded.forEach(function(x) {
-      strandedHtml += '<div class="alert-item">'
-        + '<span class="alert-ticker">Slot ' + x.slot + '</span>'
-        + '<span>' + esc(TRADE_LABELS[x.type] || x.type) + '</span>'
-        + '<span class="alert-msg">' + (x.pct * 100).toFixed(1) + '% of AUM entered ' + esc(x.date || 'n.a.')
-        + ' &mdash; no stock in this slot, so it has no price, no stop and is excluded from every total</span>'
-        + '<span class="alert-status b-bad">STRANDED</span>'
-        + '</div>';
-    });
+  if (iel) {
+    if (!stranded.length) {
+      iel.className = 'integrity-banner'; iel.innerHTML = '';
+    } else {
+      var strandedPct = stranded.reduce(function(s, x) { return s + (x.pct || 0); }, 0);
+      var sh = '<h2>&#9888; CAPITAL WITH NO STOCK ATTACHED &mdash; ' + stranded.length + ' tranche'
+        + (stranded.length > 1 ? 's' : '') + ', ' + (strandedPct * 100).toFixed(1) + '% of AUM</h2>';
+      stranded.forEach(function(x) {
+        sh += '<div class="alert-item">'
+          + '<span class="alert-ticker">Slot ' + x.slot + '</span>'
+          + '<span>' + esc(TRADE_LABELS[x.type] || x.type) + '</span>'
+          + '<span class="alert-msg">' + (x.pct * 100).toFixed(1) + '% of AUM entered ' + esc(x.date || 'n.a.')
+          + ' &mdash; no stock in this slot, so it has no price, no stop and is excluded from every total. '
+          + 'Type a ticker into slot ' + x.slot + ' to restore it, or press &times; Remove to clear the capital.</span>'
+          + '<span class="alert-status b-bad">STRANDED</span>'
+          + '</div>';
+      });
+      iel.innerHTML = sh; iel.className = 'integrity-banner visible';
+    }
   }
 
-  if (!alerts.length && !stranded.length) { el.className = 'alert-banner'; el.innerHTML = ''; return; }
-  if (!alerts.length) { el.innerHTML = strandedHtml; el.className = 'alert-banner visible'; return; }
-  var html = strandedHtml + '<h2>⚠ STOP BREACH — ' + alerts.length + ' tranche' + (alerts.length > 1 ? 's' : '') + '</h2>';
+  if (!alerts.length) { el.className = 'alert-banner'; el.innerHTML = ''; return; }
+  var html = '<h2>⚠ STOP BREACH — ' + alerts.length + ' tranche' + (alerts.length > 1 ? 's' : '') + '</h2>';
   alerts.forEach(function(a) {
     html += '<div class="alert-item">'
       + '<span class="alert-ticker">' + esc(a.ticker) + '</span>'
