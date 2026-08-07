@@ -2034,9 +2034,29 @@ var MIGRATION_LAST_EDITED = {
 var migrationInFlight = false;
 async function runOneTimeMigration() {
   if (migrationInFlight) return;          // guard the disk-connect / DOM-ready race
+  var slotCount = Object.keys(EDITS || {}).length;
   try {
-    if (localStorage.getItem(MIGRATION_KEY)) return;
+    var applied = localStorage.getItem(MIGRATION_KEY);
+    if (applied) {
+      // D-PMS-205 (07-Aug-26): A MIGRATION THAT RAN AGAINST AN EMPTY BOOK PROVES NOTHING.
+      // Found by the UI QC pass, which hit it for real. On a fresh browser profile with no
+      // localStorage and no disk yet connected, this ran against `{}`, found nothing, and
+      // set the version key. The user then presses "Connect to disk"; mergeDiskStateIntoMemory
+      // sees empty memory and ADOPTS the disk state wholesale — orphans, hidden flags, stale
+      // FLTR-GB and all — and the migration can never run again to clean it.
+      // So the key records how many slots it saw, and a run that saw none does not count.
+      // Safe to re-run: every step is idempotent (deletions are fingerprint-guarded, the
+      // backfill only fills a missing stamp, flag removal and the re-key are no-ops second time).
+      if (!(applied.indexOf('slots=0') >= 0 && slotCount > 0)) return;
+      console.log('[migration] previous run saw an empty book; re-running now that '
+                  + slotCount + ' slot(s) are present');
+    }
   } catch (e) { return; }
+  // Nothing to migrate and no disk to wait for: do NOT burn the version key on an empty book.
+  if (slotCount === 0 && !diskWriteEnabled) {
+    console.log('[migration] deferred — no state loaded yet and disk not connected');
+    return;
+  }
   migrationInFlight = true;
 
   var log = [];
@@ -2123,7 +2143,9 @@ async function runOneTimeMigration() {
   });
   if (filled) log.push('backfilled edit dates on ' + filled + ' tranche(s) as upper bounds');
 
-  try { localStorage.setItem(MIGRATION_KEY, new Date().toISOString()); } catch (e) {}
+  // D-PMS-205: record HOW MANY slots this run actually saw, so a run against an empty book
+  // can be identified and re-run later rather than silently sealing the migration shut.
+  try { localStorage.setItem(MIGRATION_KEY, new Date().toISOString() + ' slots=' + Object.keys(EDITS || {}).length); } catch (e) {}
   seedEditFingerprints();          // so the migration itself is not re-stamped as a user edit
   saveEditsToLocalStorage();
   if (diskWriteEnabled) { await writeStateToDisk(); }
