@@ -2448,10 +2448,10 @@
       "market_cap_eur_bn": null,
       "stage": "Triaging",
       "status": "Active",
-      "last_updated": "2026-08-07",
+      "last_updated": "2026-08-08",
       "last_updated_by": "quant_refresh",
       "pillars": {
-        "p1_technical_momentum": "A",
+        "p1_technical_momentum": "C",
         "p2_market_paradigm_fit": "B",
         "p3_fundamental_change": "C",
         "p4_building_blocks": "C",
@@ -2477,7 +2477,7 @@
       },
       "interest_level": "medium",
       "_pipeline_source": "memo-pipeline/Station-6",
-      "_quant_refresh_at": "2026-08-07"
+      "_quant_refresh_at": "2026-08-08"
     },
     {
       "ticker": "NOS-PT",
@@ -5214,6 +5214,158 @@
       "interest_level": "medium",
       "_pipeline_source": "memo-pipeline/Station-6",
       "_quant_refresh_at": "2026-08-07"
+    },
+    {
+      "ticker": "LAGR.B-SE",
+      "company_name": "Lagercrantz Group AB",
+      "sector": null,
+      "market_cap_eur_bn": null,
+      "stage": "Triaging",
+      "status": "Active",
+      "last_updated": "2026-08-08",
+      "last_updated_by": "quant_refresh",
+      "pillars": {
+        "p1_technical_momentum": "B",
+        "p2_market_paradigm_fit": "C",
+        "p3_fundamental_change": "C",
+        "p4_building_blocks": "C",
+        "p5_ss_earnings_momentum": "A",
+        "p6_valuation": "F"
+      },
+      "investment_case": {
+        "primary_setup": null,
+        "supporting_setup": null,
+        "setup_maturity": null,
+        "false_friend_risk": null,
+        "fulcrum_drivers": null,
+        "key_drivers": null,
+        "transmission_clarity": null,
+        "complexity_flag": false
+      },
+      "actions": {
+        "apm_recommendation": null,
+        "next_action": null,
+        "key_question": null,
+        "parking_reason": null,
+        "reassessment_trigger": null
+      },
+      "interest_level": "medium",
+      "_pipeline_source": "memo-pipeline/Station-6",
+      "_quant_refresh_at": "2026-08-08"
+    },
+    {
+      "ticker": "EMSN-CH",
+      "company_name": "EMSN-CH",
+      "sector": null,
+      "market_cap_eur_bn": null,
+      "stage": "Triaging",
+      "status": "Active",
+      "last_updated": "2026-08-08",
+      "last_updated_by": "quant_refresh",
+      "pillars": {
+        "p1_technical_momentum": "B",
+        "p2_market_paradigm_fit": "D",
+        "p3_fundamental_change": "C",
+        "p4_building_blocks": "D",
+        "p5_ss_earnings_momentum": "C",
+        "p6_valuation": "D"
+      },
+      "investment_case": {
+        "primary_setup": null,
+        "supporting_setup": null,
+        "setup_maturity": null,
+        "false_friend_risk": null,
+        "fulcrum_drivers": null,
+        "key_drivers": null,
+        "transmission_clarity": null,
+        "complexity_flag": false
+      },
+      "actions": {
+        "apm_recommendation": null,
+        "next_action": null,
+        "key_question": null,
+        "parking_reason": null,
+        "reassessment_trigger": null
+      },
+      "interest_level": "medium",
+      "_pipeline_source": "memo-pipeline/Station-6",
+      "_quant_refresh_at": "2026-08-08"
+    },
+    {
+      "ticker": "VOLO-SE",
+      "company_name": "Volati AB",
+      "sector": null,
+      "market_cap_eur_bn": null,
+      "stage": "Triaging",
+      "status": "Active",
+      "last_updated": "2026-08-08",
+      "last_updated_by": "quant_refresh",
+      "pillars": {
+        "p1_technical_momentum": "B",
+        "p2_market_paradigm_fit": "D",
+        "p3_fundamental_change": "D",
+        "p4_building_blocks": "D",
+        "p5_ss_earnings_momentum": "C",
+        "p6_valuation": "B"
+      },
+      "investment_case": {
+        "primary_setup": null,
+        "supporting_setup": null,
+        "setup_maturity": null,
+        "false_friend_risk": null,
+        "fulcrum_drivers": null,
+        "key_drivers": null,
+        "transmission_clarity": null,
+        "complexity_flag": false
+      },
+      "actions": {
+        "apm_recommendation": "PARK. Do not progress to Early-Stage Assessment now. Reassess after two quarters of post-spin RemainCo reporting (Q3 2026 and Q4 2026) show either (a) organic EBITA stabilisation at S:t Eriks and Tornum, or (b) net debt to adjusted EBITDA tracking back toward the 2.0x-3.0x target range faster than the 6.4x (2027e) / 5.6x (2028e) base case.",
+        "next_action": null,
+        "key_question": null,
+        "parking_reason": null,
+        "reassessment_trigger": null
+      },
+      "interest_level": "medium",
+      "_pipeline_source": "memo-pipeline/Station-6",
+      "_quant_refresh_at": "2026-08-08"
+    },
+    {
+      "ticker": "MTX-DE",
+      "company_name": "MTU Aero Engines AG",
+      "sector": null,
+      "market_cap_eur_bn": null,
+      "stage": "Triaging",
+      "status": "Active",
+      "last_updated": "2026-08-08",
+      "last_updated_by": "quant_refresh",
+      "pillars": {
+        "p1_technical_momentum": "C",
+        "p2_market_paradigm_fit": "C",
+        "p3_fundamental_change": "C",
+        "p4_building_blocks": "C",
+        "p5_ss_earnings_momentum": "C",
+        "p6_valuation": "A"
+      },
+      "investment_case": {
+        "primary_setup": null,
+        "supporting_setup": null,
+        "setup_maturity": null,
+        "false_friend_risk": null,
+        "fulcrum_drivers": null,
+        "key_drivers": null,
+        "transmission_clarity": null,
+        "complexity_flag": false
+      },
+      "actions": {
+        "apm_recommendation": null,
+        "next_action": null,
+        "key_question": null,
+        "parking_reason": null,
+        "reassessment_trigger": null
+      },
+      "interest_level": "medium",
+      "_pipeline_source": "memo-pipeline/Station-6",
+      "_quant_refresh_at": "2026-08-08"
     }
   ]
 }
