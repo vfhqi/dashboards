@@ -1,6 +1,6 @@
 {
  "source": "rs-dashboard.html",
- "current_week": "2026-08-06",
+ "current_week": "2026-08-07",
  "prior_week": "2026-06-05",
  "industry": {
   "A. Consumer staples": {
@@ -24,7 +24,7 @@
    "prior": "A"
   },
   "F. Defence": {
-   "current": "A",
+   "current": "B",
    "prior": "C"
   },
   "G. Financials": {
@@ -36,7 +36,7 @@
    "prior": "D"
   },
   "I. Transportation": {
-   "current": "B",
+   "current": "A",
    "prior": "C"
   },
   "J. Technology": {
@@ -74,7 +74,7 @@
    "prior": "F"
   },
   "A.2. Tobacco": {
-   "current": "F",
+   "current": "D",
    "prior": "B"
   },
   "A.3. Automotive repair": {
@@ -118,7 +118,7 @@
    "prior": "C"
   },
   "B.5. Medtech - consumables - mature": {
-   "current": "F",
+   "current": "D",
    "prior": "F"
   },
   "B.6. Medtech - capital goods": {
@@ -126,7 +126,7 @@
    "prior": "D"
   },
   "B.7. Pharma/biotech": {
-   "current": "B",
+   "current": "C",
    "prior": "B"
   },
   "B.8. Medtech - distributors / retail": {
@@ -158,7 +158,7 @@
    "prior": "C"
   },
   "E.2. Utilities - green focused": {
-   "current": "D",
+   "current": "C",
    "prior": "C"
   },
   "E.3. Utilities - Water and other non-power": {
@@ -210,15 +210,15 @@
    "prior": "F"
   },
   "G.8. Retail trading platforms (D2C)": {
-   "current": "D",
+   "current": "F",
    "prior": "B"
   },
   "H.1. Luxury goods": {
-   "current": "C",
+   "current": "D",
    "prior": "D"
   },
   "H.10. Hotels": {
-   "current": "D",
+   "current": "C",
    "prior": "B"
   },
   "H.11. Airlines and travel": {
@@ -258,7 +258,7 @@
    "prior": "C"
   },
   "H.4. Retail - online": {
-   "current": "D",
+   "current": "F",
    "prior": "B"
   },
   "H.6. Gambling - B2C OSB, Casino-led": {
@@ -274,7 +274,7 @@
    "prior": "C"
   },
   "I.1. Logistics": {
-   "current": "C",
+   "current": "B",
    "prior": "C"
   },
   "J.1. IT services - consulting": {
@@ -310,7 +310,7 @@
    "prior": "A"
   },
   "K.1. Security and facilities services": {
-   "current": "C",
+   "current": "D",
    "prior": "C"
   },
   "K.10. Waste management services": {
@@ -326,7 +326,7 @@
    "prior": "C"
   },
   "K.5. Advertising and consulting services": {
-   "current": "C",
+   "current": "B",
    "prior": "D"
   },
   "K.8. Outsourcing, admin and other services": {
@@ -358,7 +358,7 @@
    "prior": "D"
   },
   "M.6. Basic materials and construction": {
-   "current": "B",
+   "current": "C",
    "prior": "C"
   },
   "M.7. Forestry and paper products": {
