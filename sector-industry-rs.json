@@ -37,7 +37,7 @@
   },
   "I. Transportation": {
    "current": "A",
-   "prior": "C"
+   "prior": "B"
   },
   "J. Technology": {
    "current": "F",
@@ -61,7 +61,7 @@
   },
   "O. Industrials and capital goods": {
    "current": "C",
-   "prior": "B"
+   "prior": "C"
   },
   "P. Energy, commodities and metals mining": {
    "current": "A",
@@ -91,7 +91,7 @@
   },
   "A.6. Food production": {
    "current": "D",
-   "prior": "F"
+   "prior": "D"
   },
   "A.7. General retail": {
    "current": "F",
@@ -195,7 +195,7 @@
   },
   "G.3. Alternative investment managers": {
    "current": "D",
-   "prior": "D"
+   "prior": "F"
   },
   "G.4. Holding companies": {
    "current": "D",
