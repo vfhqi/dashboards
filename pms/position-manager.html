@@ -662,7 +662,13 @@ var BACKUP_RETENTION_DAYS = 30;
 // clipped by `overflow:hidden`. A first attempt at 68px was still short — the width was
 // GUESSED. Measured instead: input 55 + suffix 6.6 + flex gap 2 + cell padding 16 = 82px.
 // Guessing a width twice is how a "fix" ships still broken; measure the box.
-var COL_WIDTHS = ['180px', '34px', '140px', '74px', '140px', '82px', '70px', '70px', '70px', '80px', '70px', '95px', '70px', '70px', '70px', '80px', '80px', '90px', '80px', '85px', '140px', '34px'];  // D-PMS-93 #6: Date col 110->140 to fit 'Promoted from' badge on one line
+// D-PMS-210: Historical breach 140 -> 158. The widest badge ("IMMEDIATE 29-Jul-26") measures
+// 132px and the 140px cell leaves only 123px inside its 8px padding, so it was clipped by
+// ~9px on 2 of 120 cells. Shrinking the badge font was the alternative and was rejected:
+// this column carries a breach date, and making a breach harder to read to save 18px is the
+// wrong trade. The table already scrolls horizontally inside its own container, so the extra
+// width costs nothing the reader notices.
+var COL_WIDTHS = ['180px', '34px', '140px', '74px', '140px', '82px', '70px', '70px', '70px', '80px', '70px', '95px', '70px', '70px', '70px', '80px', '80px', '90px', '80px', '85px', '158px', '34px'];  // D-PMS-93 #6: Date col 110->140 to fit 'Promoted from' badge on one line
 var TOTAL_COLS = COL_WIDTHS.length;  // D-PMS-191: single source for full-width colspans
 
 var CONFIG = null;
@@ -1607,6 +1613,31 @@ function clearTickerSlot(invIdx) {
   var hasUniverseStock = !!(inv && inv.ticker && !inv.is_placeholder);
   if (!EDITS[invIdx]) EDITS[invIdx] = {};
 
+  // D-PMS-208 (07-Aug-26): CONFIRM BEFORE DELETING CAPITAL.
+  // This guard exists because the FIX ABOVE made this button far more destructive than it
+  // used to be. While the delete silently did nothing, "× Remove" dropped the stock and left
+  // the tranches behind — wrong, but it destroyed no data. Now it really deletes, so one
+  // click can wipe several tranches and several per cent of AUM with no undo.
+  // Making a broken thing work is exactly when to re-ask what the working version can now
+  // destroy. Matches the existing house pattern (Clear all, and the slot-cap prompt).
+  var live = [];
+  TRADE_TYPES.forEach(function(slotType) {
+    var e = EDITS[invIdx][slotType];
+    if (e && (e.entry_date || e.target_size_pct != null)) {
+      live.push({ slot: slotType, pct: e.target_size_pct || 0 });
+    }
+  });
+  if (live.length) {
+    var totalPct = live.reduce(function(s, x) { return s + x.pct; }, 0);
+    var name = effectiveTicker(inv, invIdx) || (inv && inv.ticker) || ('slot ' + (invIdx + 1));
+    var msg = 'Remove ' + name + ' from slot ' + (invIdx + 1) + '?\n\n'
+      + 'This deletes ' + live.length + ' tranche' + (live.length > 1 ? 's' : '')
+      + ' totalling ' + (totalPct * 100).toFixed(1) + '% of AUM:\n'
+      + live.map(function(x) { return '  • ' + (TRADE_LABELS[x.slot] || x.slot) + '  ' + (x.pct * 100).toFixed(1) + '%'; }).join('\n')
+      + '\n\nThis cannot be undone from the page.';
+    if (!confirm(msg)) return;
+  }
+
   // Always drop every tranche — an emptied slot must never retain capital.
   TRADE_TYPES.forEach(function(slotType) { delete EDITS[invIdx][slotType]; });
 
@@ -1645,10 +1676,26 @@ function canonicalChartTicker(ticker) {
 // Master charts are auto-deployed daily — always current. Replaces pms-charts/ (manual deploy, went stale).
 // Format: CHART_REGISTRY["TICKER"] = [[date,o,h,l,c,v,ma5,ma10,ma20,ma50,ma100,ma150,ma200],...]
 // invIdx may be null when called from initializeChartData() (no warning element available).
-function loadTickerChart(ticker, invIdx) {
+// D-PMS-209: the other spelling of the same ticker. Chart files are named from the DOTTED
+// canonical form, so a dot-less name must be able to find its dotted twin and vice versa.
+function alternateChartSpelling(t) {
+  if (!t) return null;
+  var universe = (window.PMS_UNIVERSE && PMS_UNIVERSE.data) ? PMS_UNIVERSE.data : {};
+  if (t.indexOf('.') >= 0) return t.replace(/\./g, '');       // dotted -> dot-less
+  // dot-less -> find the dotted universe key that collapses to it
+  var hit = null;
+  Object.keys(universe).forEach(function(k) {
+    if (!hit && k.indexOf('.') >= 0 && k.replace(/\./g, '') === t) hit = k;
+  });
+  return hit;
+}
+
+function loadTickerChart(ticker, invIdx, forcedCanonical) {
   // D-PMS-173: master dashboard charts — dots→underscores in filename, dashes kept
   // D-PMS-182: canonicalise first, so a dot-less legacy ticker cannot hit a stale file
-  var canonical = canonicalChartTicker(ticker);
+  // D-PMS-209: forcedCanonical is set by the 404 retry below (see s.onerror)
+  var canonical = forcedCanonical || canonicalChartTicker(ticker);
+  var retried = !!forcedCanonical;
   var src = 'https://vfhqi.github.io/master/charts/' + canonical.replace(/\./g, '_') + '.js';
   var s = document.createElement('script');
   s.src = src;
@@ -1709,6 +1756,28 @@ function loadTickerChart(ticker, invIdx) {
     }
   };
   s.onerror = function() {
+    // D-PMS-209 (10-Aug-26): RETRY UNDER THE ALTERNATE SPELLING BEFORE GIVING UP.
+    //
+    // Chart files are named from the CANONICAL (dotted) ticker with dots turned into
+    // underscores: CARL.B-DK -> CARL_B-DK.js. `canonicalChartTicker()` maps a dot-less legacy
+    // name onto the canonical one, but only AFTER an early return that fires when the ticker
+    // is already a key in the universe. The 09-Aug pipeline run began emitting BOTH spellings
+    // into pms-universe.js, so 'CARLB-DK' now hits that early return, the D-PMS-182 mapping
+    // never runs, and the page requests a CARLB-DK.js that does not exist.
+    // Effect: Carlsberg — a live holding with 2 tranches and 2.8% of AUM — rendered with NO
+    // price, NO moving average, NO stop distance and NO loss risk.
+    // Retrying under the alternate spelling is spelling-agnostic: it self-heals whichever of
+    // the two names the universe happens to carry, without depending on upstream staying tidy.
+    if (!retried) {
+      var alt = alternateChartSpelling(canonical);
+      if (alt && alt !== canonical) {
+        retried = true;
+        if (timeoutId) clearTimeout(timeoutId);
+        console.warn('[pms] chart 404 for ' + canonical + '; retrying as ' + alt);
+        loadTickerChart(ticker, invIdx, alt);
+        return;
+      }
+    }
     complete();
     if (invIdx != null) showTickerWarning(invIdx, 'No master chart at ' + src + ' (404). Ticker may not be in the master dashboard universe.');
   };
