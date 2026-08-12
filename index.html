@@ -207,9 +207,15 @@ body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font
   background:#fbfaf5;border-top:2.5px solid rgba(0,0,0,.22);
 }
 .rd tfoot.pinned td{position:sticky;bottom:0;z-index:95;box-shadow:0 -3px 8px rgba(0,0,0,.07)}
-.ftl{display:flex;flex-direction:column;gap:1px;max-height:250px;overflow-y:auto;min-width:0}
+/* max-height 260, NOT 250: a full 16-line column measured 252px, so a 250px cap put a
+   scrollbar on every default view for the sake of 2 pixels. The cap still bounds an
+   EXPANDED column (sector, 91 levels), which is what it is actually for.
+   line-height 1.32 trims the footer without dropping below a readable size: at Richard's
+   window the footer was taking 48% of the visible table area. Guarded in
+   scripts/qc-ratings-dashboard.js ("no footer column scrolls when unexpanded"). */
+.ftl{display:flex;flex-direction:column;gap:1px;max-height:260px;overflow-y:auto;min-width:0}
 .ftr{display:flex;align-items:baseline;justify-content:space-between;gap:7px;
-     font-size:10px;line-height:1.38;min-width:0}
+     font-size:10px;line-height:1.32;min-width:0}
 .ftk{color:#5f5e5a;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
 .ftv{font-family:ui-monospace,Menlo,Consolas,monospace;font-weight:600;color:#1d1d1b;
      flex:0 0 auto;font-variant-numeric:tabular-nums}
