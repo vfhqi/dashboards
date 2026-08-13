@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-12",
+ "generated": "2026-08-13",
  "count": 261,
  "stocks": {
   "1U1-DE": {
@@ -7455,7 +7455,7 @@
   },
   "ALTR-PT": {
    "stage": "Triaging",
-   "date": "2026-08-12",
+   "date": "2026-08-13",
    "source_memo": "memo.md",
    "master": [
     {
@@ -18549,7 +18549,7 @@
   },
   "BYLOT-GR": {
    "stage": "Triaging",
-   "date": "2026-08-12",
+   "date": "2026-08-13",
    "source_memo": "memo.md",
    "master": [
     {
@@ -23927,7 +23927,7 @@
   },
   "COLR-BE": {
    "stage": "Triaging",
-   "date": "2026-08-12",
+   "date": "2026-08-13",
    "source_memo": "memo.md",
    "master": [
     {
@@ -26394,7 +26394,7 @@
   },
   "CRDA-GB": {
    "stage": "Triaging",
-   "date": "2026-08-12",
+   "date": "2026-08-13",
    "source_memo": "memo.md",
    "master": [
     {
@@ -38334,7 +38334,7 @@
   },
   "FLOW-NL": {
    "stage": "Triaging",
-   "date": "2026-08-12",
+   "date": "2026-08-13",
    "source_memo": "memo.md",
    "master": [
     {
@@ -38757,7 +38757,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "F",
+     "grade": "C",
      "anchor": "mr1-technical-momentum-f"
     },
     {
@@ -53483,7 +53483,7 @@
   },
   "IP-IT": {
    "stage": "Triaging",
-   "date": "2026-08-12",
+   "date": "2026-08-13",
    "source_memo": "memo.md",
    "master": [
     {
@@ -55526,7 +55526,7 @@
   },
   "JUST-GB": {
    "stage": "Triaging",
-   "date": "2026-08-12",
+   "date": "2026-08-13",
    "source_memo": "memo.md",
    "master": [
     {
@@ -59805,7 +59805,7 @@
   },
   "LNZ-AT": {
    "stage": "Triaging",
-   "date": "2026-07-20",
+   "date": "2026-08-13",
    "source_memo": "memo.md",
    "master": [
     {
@@ -65033,7 +65033,7 @@
   },
   "NEM-DE": {
    "stage": "Triaging",
-   "date": "2026-07-20",
+   "date": "2026-08-13",
    "source_memo": "memo.md",
    "master": [
     {
