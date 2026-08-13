@@ -814,7 +814,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "B",
+     "grade": "C",
      "anchor": "mr1-technical-momentum-b"
     },
     {
@@ -1253,7 +1253,7 @@
     {
      "code": "MR1",
      "label": "Change thesis",
-     "grade": "C",
+     "grade": "B",
      "anchor": "mr1-change-thesis-b"
     },
     {
@@ -2998,7 +2998,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "D",
+     "grade": "A",
      "anchor": "mr1-technical-momentum-c"
     },
     {
@@ -3228,7 +3228,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "C",
+     "grade": "B",
      "anchor": "mr1-technical-momentum-c"
     },
     {
@@ -3645,7 +3645,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "B",
+     "grade": "C",
      "anchor": "mr1-technical-momentum-c"
     },
     {
@@ -6241,7 +6241,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "B",
+     "grade": "C",
      "anchor": "mr1-technical-momentum-c"
     },
     {
@@ -7878,7 +7878,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "B",
+     "grade": "A",
      "anchor": "mr1-technical-momentum-d"
     },
     {
@@ -9142,7 +9142,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "C",
+     "grade": null,
      "anchor": "mr1-technical-momentum-nr"
     },
     {
@@ -12067,7 +12067,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "D",
+     "grade": "B",
      "anchor": "mr1-technical-momentum-d"
     },
     {
@@ -14638,7 +14638,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "B",
+     "grade": "C",
      "anchor": "mr1-technical-momentum-b"
     },
     {
@@ -14796,7 +14796,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "C",
+     "grade": "B",
      "anchor": "mr1-technical-momentum-a"
     },
     {
@@ -15498,7 +15498,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "B",
+     "grade": "F",
      "anchor": "mr1-technical-momentum-a"
     },
     {
@@ -16418,7 +16418,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "B",
+     "grade": "C",
      "anchor": "mr1-technical-momentum-a"
     },
     {
@@ -21310,7 +21310,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "B",
+     "grade": "C",
      "anchor": "mr1-technical-momentum-a"
     },
     {
@@ -24781,7 +24781,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "B",
+     "grade": "A",
      "anchor": "mr1-technical-momentum-d"
     },
     {
@@ -26400,7 +26400,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "C",
+     "grade": "B",
      "anchor": "mr1-technical-momentum-c"
     },
     {
@@ -29336,7 +29336,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "B",
+     "grade": "C",
      "anchor": "mr1-technical-momentum-b"
     },
     {
@@ -30092,14 +30092,14 @@
   },
   "DNORD-DK": {
    "stage": "Triaging",
-   "date": "2026-08-11",
+   "date": "2026-08-13",
    "source_memo": "memo.md",
    "master": [
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "A",
-     "anchor": "mr1-technical-momentum-b"
+     "grade": "B",
+     "anchor": "mr1-technical-momentum-a"
     },
     {
      "code": "MR2",
@@ -30122,8 +30122,8 @@
     {
      "code": "MR5",
      "label": "Case building blocks",
-     "grade": "C",
-     "anchor": "mr5-pillar-ii-case-building-blocks-c"
+     "grade": "D",
+     "anchor": "mr5-pillar-ii-case-building-blocks-d"
     },
     {
      "code": "MR6",
@@ -30159,20 +30159,6 @@
         }
        ],
        "anchor": "element-e1-required-input-change-forces-c"
-      },
-      {
-       "code": "E2",
-       "label": "Required case outputs",
-       "grade": null,
-       "ras": [],
-       "anchor": "element-e2-required-case-outputs-nr"
-      },
-      {
-       "code": "E3",
-       "label": "Sufficient TSR / valuation upside",
-       "grade": null,
-       "ras": [],
-       "anchor": "element-e3-sufficient-tsr-valuation-upside-nr"
       }
      ],
      "groups": [],
@@ -30181,7 +30167,7 @@
     {
      "roman": "II",
      "label": "Case building blocks",
-     "grade": "C",
+     "grade": "D",
      "elements": [],
      "groups": [
       {
@@ -30203,31 +30189,31 @@
          "ras": [
           {
            "code": "RA1",
-           "label": "Suitability for bear market / economic downturn",
-           "grade": "C",
+           "label": "Suitability for bear market or economic downturn",
+           "grade": "D",
            "cqs": [],
-           "anchor": "e5-ra1-suitability-for-bear-market-economic-downturn-c"
+           "anchor": "e5-ra1-suitability-for-bear-market-or-economic-downturn-d"
           },
           {
            "code": "RA2",
-           "label": "Suitability for AI disruption",
+           "label": "Suitability for artificial-intelligence disruption",
            "grade": "C",
            "cqs": [],
-           "anchor": "e5-ra2-suitability-for-ai-disruption-c"
+           "anchor": "e5-ra2-suitability-for-artificial-intelligence-disruption-c"
           },
           {
            "code": "RA3",
-           "label": "Suitability for Iran oil-price induced input cost inflation or demand deterioration",
+           "label": "Suitability for Iran oil-price inflation or demand deterioration",
            "grade": "B",
            "cqs": [],
-           "anchor": "e5-ra3-suitability-for-iran-oil-price-induced-input-cost-inf"
+           "anchor": "e5-ra3-suitability-for-iran-oil-price-inflation-or-demand-de"
           },
           {
            "code": "RA4",
-           "label": "Summarise paradigm fit from a business perspective",
+           "label": "Paradigm fit from a business perspective",
            "grade": "C",
            "cqs": [],
-           "anchor": "e5-ra4-summarise-paradigm-fit-from-a-business-perspective-c"
+           "anchor": "e5-ra4-paradigm-fit-from-a-business-perspective-c"
           }
          ],
          "anchor": "element-e5-thematic-fit-c"
@@ -30254,35 +30240,35 @@
          "ras": [
           {
            "code": "RA1",
-           "label": "Focused bet?",
+           "label": "Focused bet",
            "grade": "D",
            "cqs": [],
            "anchor": "e7-ra1-focused-bet-d"
           },
           {
            "code": "RA2",
-           "label": "Narrow perimeter?",
+           "label": "Narrow perimeter",
            "grade": "C",
            "cqs": [],
            "anchor": "e7-ra2-narrow-perimeter-c"
           },
           {
            "code": "RA3",
-           "label": "Zero headwinds?",
+           "label": "Zero headwinds",
            "grade": "F",
            "cqs": [],
            "anchor": "e7-ra3-zero-headwinds-f"
           },
           {
            "code": "RA4",
-           "label": "Handful of change-from-current items?",
+           "label": "Handful of change-from-current items",
            "grade": "D",
            "cqs": [],
            "anchor": "e7-ra4-handful-of-change-from-current-items-d"
           },
           {
            "code": "RA5",
-           "label": "Conservative investor relations?",
+           "label": "Conservative investor relations",
            "grade": "B",
            "cqs": [],
            "anchor": "e7-ra5-conservative-investor-relations-b"
@@ -30293,28 +30279,28 @@
         {
          "code": "E8",
          "label": "Fit with acceptable case setups",
-         "grade": "C",
+         "grade": "D",
          "ras": [
           {
            "code": "RA1",
-           "label": "Mis-modelled, high-quality EPS upgrader",
+           "label": "Mis-modelled, high-quality earnings upgrader",
            "grade": "D",
            "cqs": [],
-           "anchor": "e8-ra1-mis-modelled-high-quality-eps-upgrader-d"
+           "anchor": "e8-ra1-mis-modelled-high-quality-earnings-upgrader-d"
           },
           {
            "code": "RA2",
-           "label": "Big demand change-driven EPSU or EPT",
+           "label": "Big demand change-driven earnings upgrade or trajectory",
            "grade": "D",
            "cqs": [],
-           "anchor": "e8-ra2-big-demand-change-driven-epsu-or-ept-d"
+           "anchor": "e8-ra2-big-demand-change-driven-earnings-upgrade-or-trajecto"
           },
           {
            "code": "RA3",
-           "label": "Strong corporate change driven EPSU / EPT",
+           "label": "Strong corporate change driven earnings upgrade or trajectory",
            "grade": "B",
            "cqs": [],
-           "anchor": "e8-ra3-strong-corporate-change-driven-epsu-ept-b"
+           "anchor": "e8-ra3-strong-corporate-change-driven-earnings-upgrade-or-tr"
           },
           {
            "code": "RA4",
@@ -30326,33 +30312,33 @@
           {
            "code": "RA5",
            "label": "Huge change-from-current clearing event in solid quality",
-           "grade": "C",
+           "grade": "F",
            "cqs": [],
            "anchor": "e8-ra5-huge-change-from-current-clearing-event-in-solid-qual"
           },
           {
            "code": "RA6",
-           "label": "Trough-on-trough turn in solid quality cyclical",
+           "label": "Trough-on-trough turn in a solid quality cyclical",
            "grade": "D",
            "cqs": [],
-           "anchor": "e8-ra6-trough-on-trough-turn-in-solid-quality-cyclical-d"
+           "anchor": "e8-ra6-trough-on-trough-turn-in-a-solid-quality-cyclical-d"
           },
           {
            "code": "RA7",
            "label": "Fit with unacceptable case setups",
            "grade": "C",
            "cqs": [],
-           "anchor": "e8-ra7-fit-with-unacceptable-case-setups-negative-guardrail-"
+           "anchor": "e8-ra7-fit-with-unacceptable-case-setups-c"
           },
           {
            "code": "RA8",
            "label": "Fit with false friend case setups",
-           "grade": "D",
+           "grade": "F",
            "cqs": [],
-           "anchor": "e8-ra8-fit-with-false-friend-case-setups-negative-guardrail-"
+           "anchor": "e8-ra8-fit-with-false-friend-case-setups-f"
           }
          ],
-         "anchor": "element-e8-fit-with-acceptable-case-setups-c"
+         "anchor": "element-e8-fit-with-acceptable-case-setups-d"
         }
        ],
        "anchor": "group-2-case-simplicity-d"
@@ -30383,35 +30369,35 @@
          "ras": [
           {
            "code": "RA1",
-           "label": "Demand side — strong/robust or fragile/negative?",
+           "label": "Demand side strong or fragile",
            "grade": "C",
            "cqs": [],
-           "anchor": "e11-ra1-demand-side-strong-robust-or-fragile-negative-c"
+           "anchor": "e11-ra1-demand-side-strong-or-fragile-c"
           },
           {
            "code": "RA2",
-           "label": "Competitive supportiveness or aggression?",
-           "grade": "C",
+           "label": "Competitive supportiveness or aggression",
+           "grade": "D",
            "cqs": [],
-           "anchor": "e11-ra2-competitive-supportiveness-or-aggression-c"
+           "anchor": "e11-ra2-competitive-supportiveness-or-aggression-d"
           },
           {
            "code": "RA3",
-           "label": "Disruption forces?",
-           "grade": "D",
+           "label": "Disruption forces",
+           "grade": "B",
            "cqs": [],
-           "anchor": "e11-ra3-disruption-forces-d"
+           "anchor": "e11-ra3-disruption-forces-b"
           },
           {
            "code": "RA4",
-           "label": "Political / regulatory?",
-           "grade": "C",
+           "label": "Political and regulatory",
+           "grade": "B",
            "cqs": [],
-           "anchor": "e11-ra4-political-regulatory-c"
+           "anchor": "e11-ra4-political-and-regulatory-b"
           },
           {
            "code": "RA5",
-           "label": "Supportive supplier side?",
+           "label": "Supportive supplier side",
            "grade": "B",
            "cqs": [],
            "anchor": "e11-ra5-supportive-supplier-side-b"
@@ -30439,7 +30425,7 @@
       {
        "code": "GROUP 4",
        "label": "Case riskiness",
-       "grade": "C",
+       "grade": "D",
        "elements": [
         {
          "code": "E15",
@@ -30477,7 +30463,7 @@
          "anchor": "element-e19-monitorable-transmission-mechanism-leading-track"
         }
        ],
-       "anchor": "group-4-case-riskiness-c"
+       "anchor": "group-4-case-riskiness-d"
       },
       {
        "code": "GROUP 5",
@@ -30495,7 +30481,7 @@
        "anchor": "group-5-case-optionality-nr"
       }
      ],
-     "anchor": "c-2-pillar-ii-case-building-blocks-c"
+     "anchor": "c-2-pillar-ii-case-building-blocks-d"
     },
     {
      "roman": "III",
@@ -34317,7 +34303,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "A",
+     "grade": "B",
      "anchor": "mr1-technical-momentum-b"
     },
     {
@@ -35425,7 +35411,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "B",
+     "grade": "A",
      "anchor": "mr1-technical-momentum-d"
     },
     {
@@ -36720,7 +36706,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "A",
+     "grade": "C",
      "anchor": "mr1-technical-momentum-c"
     },
     {
@@ -37347,7 +37333,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "B",
+     "grade": "A",
      "anchor": "mr1-technical-momentum-b"
     },
     {
@@ -38340,7 +38326,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "A",
+     "grade": "B",
      "anchor": "mr1-technical-momentum-a"
     },
     {
@@ -44596,7 +44582,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "B",
+     "grade": "C",
      "anchor": "mr1-technical-momentum-b"
     },
     {
@@ -48074,7 +48060,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "C",
+     "grade": "A",
      "anchor": "mr1-technical-momentum-b"
     },
     {
@@ -48491,7 +48477,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "B",
+     "grade": "C",
      "anchor": "mr1-technical-momentum-b"
     },
     {
@@ -50051,7 +50037,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "A",
+     "grade": "B",
      "anchor": "mr1-technical-momentum-d"
     },
     {
@@ -51670,7 +51656,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "B",
+     "grade": "C",
      "anchor": "mr1-technical-momentum-a"
     },
     {
@@ -52424,7 +52410,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "C",
+     "grade": "B",
      "anchor": "mr1-technical-momentum-b"
     },
     {
@@ -52683,7 +52669,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "A",
+     "grade": "C",
      "anchor": "mr1-technical-momentum-nr"
     },
     {
@@ -53489,7 +53475,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "D",
+     "grade": "A",
      "anchor": "mr1-technical-momentum-a"
     },
     {
@@ -54281,7 +54267,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "B",
+     "grade": "C",
      "anchor": "mr1-technical-momentum-a"
     },
     {
@@ -56400,7 +56386,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "B",
+     "grade": "D",
      "anchor": "mr1-technical-momentum-d"
     },
     {
@@ -56847,7 +56833,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "F",
+     "grade": "C",
      "anchor": "mr1-technical-momentum-f"
     },
     {
@@ -57199,7 +57185,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "C",
+     "grade": "B",
      "anchor": "mr1-technical-momentum-c"
     },
     {
@@ -60789,7 +60775,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "B",
+     "grade": "C",
      "anchor": "mr1-technical-momentum-b"
     },
     {
@@ -62372,7 +62358,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "B",
+     "grade": "A",
      "anchor": "mr1-technical-momentum-b"
     },
     {
@@ -65039,7 +65025,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "D",
+     "grade": "C",
      "anchor": "mr1-technical-momentum-d"
     },
     {
@@ -67312,7 +67298,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "B",
+     "grade": "C",
      "anchor": "mr1-technical-momentum-b"
     },
     {
@@ -69542,7 +69528,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "C",
+     "grade": "B",
      "anchor": "mr1-technical-momentum-c"
     },
     {
@@ -70195,7 +70181,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "A",
+     "grade": "B",
      "anchor": "mr1-technical-momentum-b"
     },
     {
@@ -71439,7 +71425,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "F",
+     "grade": "C",
      "anchor": "mr1-technical-momentum-f"
     },
     {
@@ -72707,7 +72693,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "C",
+     "grade": "B",
      "anchor": "mr1-technical-momentum-b"
     },
     {
@@ -73777,7 +73763,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "B",
+     "grade": "C",
      "anchor": "mr1-technical-momentum-c"
     },
     {
@@ -74624,7 +74610,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "C",
+     "grade": "B",
      "anchor": "mr1-technical-momentum-d"
     },
     {
@@ -76488,7 +76474,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "C",
+     "grade": "F",
      "anchor": "mr1-technical-momentum-d"
     },
     {
@@ -76951,7 +76937,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "B",
+     "grade": "C",
      "anchor": "mr1-technical-momentum-b"
     },
     {
@@ -77562,7 +77548,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "A",
+     "grade": "B",
      "anchor": "mr1-technical-momentum-b"
     },
     {
@@ -80318,7 +80304,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "C",
+     "grade": "F",
      "anchor": "mr1-technical-momentum-d"
     },
     {
@@ -83051,7 +83037,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "B",
+     "grade": "C",
      "anchor": "mr1-technical-momentum-d"
     },
     {
@@ -88012,7 +87998,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "B",
+     "grade": "C",
      "anchor": "mr1-technical-momentum-b"
     },
     {
@@ -89373,7 +89359,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "A",
+     "grade": "B",
      "anchor": "mr1-technical-momentum-a"
     },
     {
@@ -90381,7 +90367,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "C",
+     "grade": "B",
      "anchor": "mr1-technical-momentum-c"
     },
     {
@@ -90756,7 +90742,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "B",
+     "grade": "F",
      "anchor": "mr1-technical-momentum-nr"
     },
     {
@@ -91173,7 +91159,7 @@
     {
      "code": "MR1",
      "label": "Technical momentum",
-     "grade": "B",
+     "grade": "A",
      "anchor": "mr1-technical-momentum-b"
     },
     {
