@@ -763,6 +763,19 @@ function rsLookup(kind,name){ const m=(window.SIRS&&window.SIRS[kind])||{}; retu
 function rsCellVal(o,key){ return (o===null) ? badge('ERROR') : badge(o&&o[key]); }
 function rsPair(o){ return '<span class="rs-cur">'+rsCellVal(o,'current')+'</span><span class="rs-pri">'+rsCellVal(o,'prior')+'</span>'; }
 
+// ADM-GB (Admiral) carries stage "2. ESA" where every other stock carries "ESA".
+// Unnormalised, that one mis-keyed value became a FIFTH stage: the counts footer showed
+// "2. ESA 3" and "2. ESA 1" as two separate rows in two different colours, because
+// stagePill falls back to the Triaging style for anything it does not recognise.
+// Normalising at the row fixes the cell, the filter list, the sort and the counts at once.
+// The underlying Notion value is still wrong and is flagged to Richard separately.
+const CANON_STAGE={'triaging':'Triaging','triaged':'Triaging','esa':'ESA','deep dive':'Deep dive'};
+function canonStage(v){
+  if(!v) return '';
+  const k=String(v).replace(/^\s*\d+\s*[.)]\s*/,'').trim().toLowerCase();
+  return CANON_STAGE[k] || String(v).trim();
+}
+
 function stagePill(v){
   if(!v) return '<span style="color:#bbb;font-size:11px">—</span>';
   const map = {'Deep dive':['sp-dd','3. Deep dive'],'ESA':['sp-esa','2. ESA'],'Triaging':['sp-tri','1. Triaged']};
@@ -887,7 +900,7 @@ function sortRows(key){
 function mkRow(s){
   const tr = document.createElement('tr');
   // Dataset for filtering
-  tr.dataset.stage    = s.stage||'';
+  tr.dataset.stage    = canonStage(s.stage);
   tr.dataset.company  = s.company_name||'';
   tr.dataset.industry = s.industry||'';
   tr.dataset.sector   = s.sector||'';
@@ -918,7 +931,7 @@ function mkRow(s){
 
   const ri = riNum(s.interest_level);
   const rk = rkNum(s.knowledge_level);
-  const hasStage = !!s.stage;
+  const hasStage = !!canonStage(s.stage);
 
   const riOpts = RI_OPTS_HTML;
   const rkOpts = RK_OPTS_HTML;
@@ -939,7 +952,7 @@ function mkRow(s){
     <td>${mapBtn}</td>
     <td>${listBtn}</td>
     <td>${memoBtn}</td>
-    <td class="g1e">${stagePill(s.stage)}</td>
+    <td class="g1e">${stagePill(canonStage(s.stage))}</td>
     <td class="tax g2s" title="${esc(s.industry||'')}">${taxDisplay(s.industry_code,s.industry)}</td>
     <td>${rsPair(irs)}</td>
     <td class="tax" title="${esc(s.sector||'')}">${taxDisplay(s.sector_code,s.sector)}</td>
@@ -1075,9 +1088,10 @@ function collectFootValues(rows){
       [...seen].filter(v=>v!==''&&out.indexOf(v)<0).sort().forEach(v=>out.push(v));
       if(seen.has('')) out.push('');
     } else if(d.order==='stage'){
-      // Fixed workflow order, and fold the single stray '2. ESA' variant into 'ESA'
-      // so one mis-keyed value does not read as a fifth stage.
-      out=['Triaging','ESA','Deep dive'].filter(v=>seen.has(v)||true);
+      // Fixed workflow order. Variants are already folded by canonStage() at the row,
+      // so anything still unrecognised here is a genuinely new stage and is appended
+      // rather than silently hidden.
+      out=['Triaging','ESA','Deep dive'];
       [...seen].filter(v=>v!==''&&out.indexOf(v)<0).sort().forEach(v=>out.push(v));
       if(seen.has('')) out.push('');
     } else if(d.order==='s2'){
