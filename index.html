@@ -80,12 +80,16 @@ body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font
 .fpop-div{height:1px;background:#ede9e0;margin:4px 0}
 
 /* ── Table wrap ─────────────────────────────────────────── */
-.twrap{overflow-x:auto;overflow-y:auto;height:calc(100vh - 115px);padding:0 18px 40px}
+.twrap{overflow-x:auto;overflow-y:auto;height:calc(100vh - 115px);padding:0 18px 0}
 
 /* ── Main ratings table ─────────────────────────────────── */
 .rd{
   border-collapse:separate;border-spacing:0;
-  font-size:12px;min-width:1560px;
+  font-size:12px;table-layout:fixed;
+  /* width AND max-width are both required. With table-layout:fixed the <col> widths are
+     only honoured once the table's own width is settled; min-width alone lets the browser
+     size to content and the colgroup is ignored (measured 2235px on 13-Aug-26). */
+  width:100%;max-width:100%;min-width:1330px;   /* 1366px laptop, minus scrollbar+padding */
   background:#fff;border:1px solid rgba(0,0,0,.10);
   border-radius:8px;
 }
@@ -117,18 +121,24 @@ body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font
 .rd tbody tr:hover{background:#f0ede4 !important}
 .rd tbody tr.fhide{display:none}
 .rd td{
-  padding:5px 7px;
+  padding:5px 4px;
   border-bottom:1px solid rgba(0,0,0,.05);
   text-align:center;vertical-align:middle;
+  overflow:hidden;                 /* with table-layout:fixed a cell must clip, */
+  text-overflow:ellipsis;          /* never widen its column */
+  white-space:nowrap;
 }
+/* Header words longer than their column would otherwise force it wider. Allow the
+   header to break mid-word; the full label stays in the title tooltip. */
+.rd thead th{overflow-wrap:normal;word-break:normal;hyphens:none;overflow:hidden;text-overflow:ellipsis}
+/* Headers are pre-broken by hand with <br>, never by the browser: automatic breaking
+   shattered "Map" into "Ma/p" and "Sector" into "Sect/or" (seen 13-Aug-26). */
 .rd td.co{
   text-align:left;font-weight:500;
-  min-width:150px;max-width:210px;
   overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
 }
 .rd td.tax{
   font-size:11px;color:#5f5e5a;
-  max-width:140px;min-width:80px;
   overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
   text-align:left;
 }
@@ -187,6 +197,11 @@ body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font
 .gF{background:#F7C1C1;color:#791F1F}
 .gN{background:#F1EFE8;color:#5F5E5A}
 .gERR{background:#E23A2E;color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.2px}
+/* Spelled-out pill (RB sector view). Narrower padding and a lighter weight so a
+   three-word label still fits a 128px column without clipping. */
+.bdg-wide{font-size:10px;font-weight:500;padding:2px 5px;letter-spacing:0;
+          font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+.bdg-wide b{font-family:ui-monospace,Menlo,Consolas,monospace;font-weight:700;margin-right:2px}
 
 /* ── Stage pills ─────────────────────────────────────────── */
 .sp{display:inline-block;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:500;white-space:nowrap}
@@ -217,7 +232,7 @@ body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font
    at 260px, because unpinned the footer sits after the last row and overlays nothing.
    Guarded in scripts/qc-ratings-dashboard.js — note the guard must measure a tfoot TD
    (the sticky element), never the tfoot itself, which reports its un-stuck position. */
-.rd tfoot.pinned .ftl{max-height:min(260px,22vh)}
+.rd tfoot.pinned .ftl{max-height:calc(100vh - 330px)}
 /* A capped column hides levels below the fold with no cue. At 1568x698 the industry cell
    shows 10 of 16, so Materials, Industrials and Energy sit unseen. An inset shadow marks a
    cell that has more content, which is the difference between "there are none" and "you
@@ -229,12 +244,25 @@ body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font
    line-height 1.32 trims the footer without dropping below a readable size: at Richard's
    window the footer was taking 48% of the visible table area. Guarded in
    scripts/qc-ratings-dashboard.js ("no footer column scrolls when unexpanded"). */
-.ftl{display:flex;flex-direction:column;gap:1px;max-height:260px;overflow-y:auto;min-width:0}
-.ftr{display:flex;align-items:baseline;justify-content:space-between;gap:7px;
-     font-size:10px;line-height:1.32;min-width:0}
+.ftl{display:flex;flex-direction:column;gap:1px;overflow-y:auto;min-width:0}
+.ftr{display:flex;align-items:center;justify-content:space-between;gap:6px;
+     font-size:10px;line-height:1.3;min-width:0}
+/* Narrow columns stack the pill above its count, so a pill is never truncated to
+   "Pro..." to make room for a number (seen 13-Aug-26 after the width rebuild). */
+.ftl.stack .ftr{flex-direction:column;align-items:flex-start;gap:0;margin-bottom:2px}
+.ftl.stack .ftv{align-self:flex-end}
+.ftl.stack .ftk-pill{max-width:100%}
 .ftk{color:#5f5e5a;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+/* A pill in the footer is a compact copy of the table's own pill: same colours, same
+   words, smaller. Scaling keeps one source of truth for the colour classes. */
+.ftk-pill{display:flex;align-items:center;overflow:hidden}
+.ftk-pill .bdg,.ftk-pill .s2p,.ftk-pill .sp,.ftk-pill .rbd{
+  font-size:9px;padding:1px 4px;border-radius:4px;line-height:1.25;
+  max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:inline-block}
+.ftk-pill .bdg-wide{font-size:8.5px;padding:1px 3px}
+.ftk-none{color:#a8a69e;font-style:italic}
 .ftv{font-family:ui-monospace,Menlo,Consolas,monospace;font-weight:600;color:#1d1d1b;
-     flex:0 0 auto;font-variant-numeric:tabular-nums}
+     flex:0 0 auto;font-variant-numeric:tabular-nums;text-align:right;min-width:26px}
 .ftr.zero .ftk,.ftr.zero .ftv{opacity:.30}
 .ftmore{margin-top:3px;font-size:9.5px;padding:1px 6px;border:1px solid #d0ccc0;border-radius:8px;
         background:#fff;cursor:pointer;color:#4a4a4a;align-self:flex-start;white-space:nowrap}
@@ -641,6 +669,29 @@ table.rd.rs-prior .rs-pri{display:inline}
 <div class="twrap">
   <div id="loading">Loading ratings data…</div>
   <table class="rd" id="rt" style="display:none">
+    <colgroup>
+      <col style="width:7.5862%">
+      <col style="width:2.2069%">
+      <col style="width:2.2069%">
+      <col style="width:3.4483%">
+      <col style="width:4.6897%">
+      <col style="width:8.6897%">
+      <col style="width:3.1724%">
+      <col style="width:8.6897%">
+      <col style="width:8.4138%">
+      <col style="width:3.1724%">
+      <col style="width:5.1034%">
+      <col style="width:3.0345%">
+      <col style="width:3.4483%">
+      <col style="width:8.5517%">
+      <col style="width:6.3448%">
+      <col style="width:6.0690%">
+      <col style="width:3.0345%">
+      <col style="width:3.0345%">
+      <col style="width:3.0345%">
+      <col style="width:3.0345%">
+      <col style="width:3.0345%">
+    </colgroup>
     <thead>
       <tr class="sg-row">
         <th colspan="5" class="sg1">Information</th>
@@ -650,26 +701,26 @@ table.rd.rs-prior .rs-pri{display:inline}
       </tr>
       <tr>
         <th class="co g1s" style="text-align:left" data-sort="company" onclick="sortRows('company')">Company</th>
-        <th>Map of<br>ratings</th>
-        <th>List of<br>ratings</th>
-        <th>Latest<br>memo</th>
+        <th title="Map of ratings">Map</th>
+        <th title="List of ratings">List</th>
+        <th title="Latest memo">Latest<br>memo</th>
         <th class="g1e" data-sort="stage" onclick="sortRows('stage')">Stage of<br>IA A&amp;J</th>
         <th class="g2s" style="text-align:left" data-sort="industry" onclick="sortRows('industry')">Industry</th>
-        <th data-sort="irs" onclick="sortRows('irs')" title="Industry relative strength (A to F). Current shown by default; use the Sector/Industry RS button to see the reading from 2 months prior.">Industry<br>RS</th>
+        <th data-sort="irs" onclick="sortRows('irs')" title="Industry relative strength (A to F). Current shown by default; use the Sector/Industry RS button to see the reading from 2 months prior.">Ind<br>RS</th>
         <th style="text-align:left" data-sort="sector" onclick="sortRows('sector')">Sector</th>
         <th data-sort="tsw" onclick="sortRows('tsw')">RB sector<br>view</th>
-        <th class="g2e" data-sort="srs" onclick="sortRows('srs')" title="Sector relative strength (A to F). Current shown by default; use the Sector/Industry RS button to see the reading from 2 months prior.">Sector<br>RS</th>
+        <th class="g2e" data-sort="srs" onclick="sortRows('srs')" title="Sector relative strength (A to F). Current shown by default; use the Sector/Industry RS button to see the reading from 2 months prior.">Sec<br>RS</th>
         <th class="g3s" data-sort="s2" onclick="sortRows('s2')" title="Stage-2 state, the same three buckets as the Long-List Qualified page. Proven Stage 2 = 4 or more of the last 12 months rated Probable or Plausible for Stage 2. Early Stage 2 = 1 to 3 qualifying months, or Stage 2 qualifying right now. S1&#8594;S2 = Stage 1 qualifying now on a cheap valuation. NOTE: unlike the published Long-List page, no timeliness or sector-weight gate is applied here, so more stocks carry a stage than appear on that page.">S1&#8594;S2, Early S2,<br>Proven S2</th>
         <th data-sort="llq" onclick="sortRows('llq')" title="APM list status, from llq-designations.json. VSL = APM suggested live (the portfolio). SL = APM suggested shortlist/bench. LL = long-list qualified by the nightly gate. NQ = not qualified. VSL and SL are set by an APM pass and are protected from the nightly engine; LL and NQ refresh nightly.">APM VSL, SL, LL</th>
-        <th data-sort="mr" onclick="sortRows('mr')">Master<br>rating</th>
+        <th data-sort="mr" onclick="sortRows('mr')" title="Master rating">Mstr<br>rtg</th>
         <th data-sort="ri" onclick="sortRows('ri')">RB interest<br>level</th>
         <th class="g3e" data-sort="rk" onclick="sortRows('rk')">RB knowledge<br>level</th>
         <th class="g4s" data-sort="p1" onclick="sortRows('p1')">Technical<br>momentum</th>
-        <th data-sort="p2" onclick="sortRows('p2')">Market<br>paradigm fit</th>
-        <th data-sort="p3" onclick="sortRows('p3')">Fundamental<br>change thesis</th>
-        <th data-sort="p4" onclick="sortRows('p4')">Fundamental case<br>foundations</th>
-        <th data-sort="p5" onclick="sortRows('p5')">Sell-side earnings<br>momentum</th>
-        <th class="g4e" data-sort="p6" onclick="sortRows('p6')">Valuation<br>in range</th>
+        <th data-sort="p2" onclick="sortRows('p2')" title="Market paradigm fit">Mkt<br>fit</th>
+        <th data-sort="p3" onclick="sortRows('p3')" title="Fundamental change thesis">Fund.<br>chg</th>
+        <th data-sort="p4" onclick="sortRows('p4')" title="Fundamental case foundations">Fund.<br>fdns</th>
+        <th data-sort="p5" onclick="sortRows('p5')" title="Sell-side earnings momentum">SS<br>earn</th>
+        <th class="g4e" data-sort="p6" onclick="sortRows('p6')" title="Valuation in range">Val.</th>
       </tr>
     </thead>
     <tbody id="tbody"></tbody>
@@ -778,13 +829,19 @@ function dimLabel(id,v){
   if(id==='tsw'){ const L=String(v).match(/^([A-FM])/); return L?L[1]+'. '+String(v).replace(/^[A-FM]\s*-?\s*/,''):v; }
   return String(v);
 }
+// "RB target sector weight" values: "A - Strong overweight", "B - Overweight",
+// "C- Normal weight", "D - Underweight", "F - Strong underweight", "M - Mixed".
+// Richard, 13-Aug-26: spell the words out, not just the letter. The letter is kept
+// as a leading grade so the column still scans vertically at a glance.
+const TSW_WORD={'A':'Strong overweight','B':'Overweight','C':'Normal weight',
+                'D':'Underweight','F':'Strong underweight','M':'Mixed'};
+function tswLetter(v){ return (String(v||'').match(/^([A-FM])/)||[])[1] || ''; }
 function sectorWtBadge(v){
-  // "RB target sector weight" values: "A - Strong overweight", "B - Overweight",
-  // "C- Normal weight", "D - Underweight", "F - Strong underweight", "M - Mixed"
   if(!v) return '<span class="bdg gN">—</span>';
-  const letter = v.match(/^([A-FM])/)?.[1] || '?';
-  const cls = {'A':'gA','B':'gB','C':'gC','D':'gD','F':'gF','M':'gN'}[letter] || 'gN';
-  return `<span class="bdg ${cls}" title="${esc(v)}">${letter}</span>`;
+  const L=tswLetter(v)||'?';
+  const cls={'A':'gA','B':'gB','C':'gC','D':'gD','F':'gF','M':'gN'}[L]||'gN';
+  const word=TSW_WORD[L]|| String(v).replace(/^[A-FM]\s*-?\s*/,'');
+  return `<span class="bdg bdg-wide ${cls}" title="${esc(v)}"><b>${L}</b> ${esc(word)}</span>`;
 }
 function riLetterCls(v){
   if(!v) return 'gN';
@@ -968,26 +1025,30 @@ const FOOT_TOTAL_COLS = 21;
 const FOOT_CAP        = 16;          // Richard's ruling: cap at 16, then "+N more"
 const GRADE_LADDER    = ['A','B','C','D','F'];
 const FOOT_DIMS = [
+  // `pill` names the SAME renderer the column body uses, so a level can never be
+  // drawn one way in the table and another way in the counts (Richard, 13-Aug-26).
+  {col:4,  id:'stage',    order:'stage', pill:'stage'},
   {col:5,  id:'industry', order:'value'},
-  {col:6,  id:'irs',      order:'grade', alt:'irsp'},
+  {col:6,  id:'irs',      order:'grade', alt:'irsp', pill:'badge'},
   {col:7,  id:'sector',   order:'count'},   // 91 distinct — the only one that hits the cap
   // 'value', NOT 'grade': target_sector_weight holds full strings
   // ('A - Strong overweight'), never bare letters. Under 'grade' the A-F ladder
   // matched nothing and the cell rendered five phantom zero rows above the real
   // counts. Caught by eye on the 12-Aug-26 QC render, not by any assertion;
   // a ladder-sanity check has since been added to scripts/qc-ratings-dashboard.js.
-  {col:8,  id:'tsw',      order:'value'},
-  {col:9,  id:'srs',      order:'grade', alt:'srsp'},
-  {col:11, id:'llq',      order:'value'},
-  {col:12, id:'mr',       order:'grade'},
-  {col:13, id:'ri',       order:'rb'},
-  {col:14, id:'rk',       order:'rb'},
-  {col:15, id:'p1',       order:'grade'},
-  {col:16, id:'p2',       order:'grade'},
-  {col:17, id:'p3',       order:'grade'},
-  {col:18, id:'p4',       order:'grade'},
-  {col:19, id:'p5',       order:'grade'},
-  {col:20, id:'p6',       order:'grade'}
+  {col:8,  id:'tsw',      order:'value', pill:'tsw'},
+  {col:9,  id:'srs',      order:'grade', alt:'srsp', pill:'badge'},
+  {col:10, id:'s2',       order:'s2',    pill:'s2'},
+  {col:11, id:'llq',      order:'value', pill:'llq'},
+  {col:12, id:'mr',       order:'grade', pill:'badge'},
+  {col:13, id:'ri',       order:'rb',    pill:'ri'},
+  {col:14, id:'rk',       order:'rb',    pill:'rk'},
+  {col:15, id:'p1',       order:'grade', pill:'tl'},
+  {col:16, id:'p2',       order:'grade', pill:'badge'},
+  {col:17, id:'p3',       order:'grade', pill:'badge'},
+  {col:18, id:'p4',       order:'grade', pill:'badge'},
+  {col:19, id:'p5',       order:'grade', pill:'badge'},
+  {col:20, id:'p6',       order:'grade', pill:'badge'}
 ];
 // Keeps the four coloured group borders running unbroken through the footer.
 const FOOT_COLCLS = {0:'g1s',4:'g1e',5:'g2s',9:'g2e',10:'g3s',14:'g3e',15:'g4s',20:'g4e'};
@@ -1013,6 +1074,15 @@ function collectFootValues(rows){
       out=GRADE_LADDER.slice();
       [...seen].filter(v=>v!==''&&out.indexOf(v)<0).sort().forEach(v=>out.push(v));
       if(seen.has('')) out.push('');
+    } else if(d.order==='stage'){
+      // Fixed workflow order, and fold the single stray '2. ESA' variant into 'ESA'
+      // so one mis-keyed value does not read as a fifth stage.
+      out=['Triaging','ESA','Deep dive'].filter(v=>seen.has(v)||true);
+      [...seen].filter(v=>v!==''&&out.indexOf(v)<0).sort().forEach(v=>out.push(v));
+      if(seen.has('')) out.push('');
+    } else if(d.order==='s2'){
+      out=['A_proven','B_early','C_s1trans'];
+      if(seen.has('')) out.push('');
     } else if(d.order==='rb'){
       out=[...seen].sort((a,b)=>{
         if(a===''&&b!=='') return 1;
@@ -1027,6 +1097,23 @@ function collectFootValues(rows){
       });
     }
     footVals[key]=out;
+  }
+}
+
+// The footer must draw a level exactly as the table draws it. Each renderer below is
+// the same function the body cell uses, so the two can never drift apart.
+function footPill(kind,v){
+  if(v==='') return '<span class="ftk-none">— (none)</span>';
+  switch(kind){
+    case 'badge': return badge(v);
+    case 'tl':    return tlBadge(v);
+    case 'llq':   return llqPill(v);
+    case 's2':    return stage2Pill(v);
+    case 'stage': return stagePill(v);
+    case 'tsw':   return sectorWtBadge(v);
+    case 'ri':    return `<span class="rbd ${riLetterCls(v)}">${esc(cleanRB(v))}</span>`;
+    case 'rk':    return `<span class="rbd rk${rkNum(v)}">${esc(cleanRB(v))}</span>`;
+    default:      return null;
   }
 }
 
@@ -1073,8 +1160,11 @@ function renderFoot(){
     for(const v of show){
       const n=counts[v]||0;
       const lab=dimLabel(d.id,v);
+      const pill=d.pill?footPill(d.pill,v):null;
+      const key=pill?`<span class="ftk ftk-pill">${pill}</span>`
+                    :`<span class="ftk">${esc(lab)}</span>`;
       rows+=`<div class="ftr${n?'':' zero'}" title="${esc(lab)} — ${n}">`+
-            `<span class="ftk">${esc(lab)}</span><span class="ftv">${n}</span></div>`;
+            `${key}<span class="ftv">${n}</span></div>`;
     }
     // The button sits OUTSIDE .ftl so it never scrolls out of reach.
     let more='';
@@ -1088,7 +1178,25 @@ function renderFoot(){
   // browser has laid the cell out, so this cannot be done inline above.
   requestAnimationFrame(()=>{
     document.querySelectorAll('#tfoot .ftl').forEach(el=>{
-      el.classList.toggle('scrollable', el.scrollHeight > el.clientHeight + 1);
+      // Stack first (it changes height), then judge scrollability on the result.
+      let tight=false;
+      el.querySelectorAll('.ftk-pill').forEach(k=>{
+        const inner=k.firstElementChild;
+        if(inner && inner.scrollWidth > k.clientWidth+1) tight=true;
+      });
+      el.dataset.tight = tight ? '1' : '0';
+    });
+    // One decision for the whole footer: if ANY pill column is tight, every pill
+    // column stacks. Mixed modes made the grade columns stop lining up row-for-row,
+    // which is the main thing that makes the footer readable across columns.
+    const any=[...document.querySelectorAll('#tfoot .ftl')].some(el=>el.dataset.tight==='1');
+    document.querySelectorAll('#tfoot .ftl').forEach(el=>{
+      el.classList.toggle('stack', any && !!el.querySelector('.ftk-pill'));
+    });
+    requestAnimationFrame(()=>{
+      document.querySelectorAll('#tfoot .ftl').forEach(el=>{
+        el.classList.toggle('scrollable', el.scrollHeight > el.clientHeight + 1);
+      });
     });
   });
 }
