@@ -218,6 +218,11 @@ body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font
    Guarded in scripts/qc-ratings-dashboard.js — note the guard must measure a tfoot TD
    (the sticky element), never the tfoot itself, which reports its un-stuck position. */
 .rd tfoot.pinned .ftl{max-height:min(260px,22vh)}
+/* A capped column hides levels below the fold with no cue. At 1568x698 the industry cell
+   shows 10 of 16, so Materials, Industrials and Energy sit unseen. An inset shadow marks a
+   cell that has more content, which is the difference between "there are none" and "you
+   cannot see them yet". Applied by renderFoot() after layout, never guessed in CSS. */
+.ftl.scrollable{box-shadow:inset 0 -11px 9px -9px rgba(0,0,0,.38)}
 /* max-height 260, NOT 250: a full 16-line column measured 252px, so a 250px cap put a
    scrollbar on every default view for the sake of 2 pixels. The cap still bounds an
    EXPANDED column (sector, 91 levels), which is what it is actually for.
@@ -1079,6 +1084,13 @@ function renderFoot(){
   }
   html+='</tr>';
   tf.innerHTML=html;
+  // Mark genuinely-scrollable cells AFTER layout. scrollHeight is meaningless until the
+  // browser has laid the cell out, so this cannot be done inline above.
+  requestAnimationFrame(()=>{
+    document.querySelectorAll('#tfoot .ftl').forEach(el=>{
+      el.classList.toggle('scrollable', el.scrollHeight > el.clientHeight + 1);
+    });
+  });
 }
 
 function toggleFootPin(){
@@ -1089,6 +1101,7 @@ function toggleFootPin(){
   b.classList.toggle('on',on);
   b.innerHTML='&#8681; Counts footer: '+(on?'pinned':'unpinned');
   try{ localStorage.setItem('icrd-footpin',on?'1':'0'); }catch(e){}
+  renderFoot();   // the cap differs pinned vs unpinned, so re-evaluate the scroll cues
 }
 
 function initFootPin(){
