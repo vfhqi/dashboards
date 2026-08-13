@@ -207,6 +207,17 @@ body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font
   background:#fbfaf5;border-top:2.5px solid rgba(0,0,0,.22);
 }
 .rd tfoot.pinned td{position:sticky;bottom:0;z-index:95;box-shadow:0 -3px 8px rgba(0,0,0,.07)}
+/* When PINNED the footer overlays the table, so its height must be bounded relative to the
+   VIEWPORT, not just to a fixed pixel cap. Measured 13-Aug-26 with the fixed 260px cap:
+     1568x698 (Richard's window)  only 4 body rows readable between header and footer
+     1280x620                     2 rows
+     1280x500                     footer TOP 203px vs header BOTTOM 219px -> OVERLAP, 0 rows
+   28vh keeps the footer clear of the sticky header at every size tested down to 1280x420,
+   and the per-column scroll (already present) absorbs the difference. Unpinned is unchanged
+   at 260px, because unpinned the footer sits after the last row and overlays nothing.
+   Guarded in scripts/qc-ratings-dashboard.js — note the guard must measure a tfoot TD
+   (the sticky element), never the tfoot itself, which reports its un-stuck position. */
+.rd tfoot.pinned .ftl{max-height:min(260px,22vh)}
 /* max-height 260, NOT 250: a full 16-line column measured 252px, so a 250px cap put a
    scrollbar on every default view for the sake of 2 pixels. The cap still bounds an
    EXPANDED column (sector, 91 levels), which is what it is actually for.
