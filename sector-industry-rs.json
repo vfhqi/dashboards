@@ -1,6 +1,6 @@
 {
  "source": "rs-dashboard.html",
- "current_week": "2026-08-12",
+ "current_week": "2026-08-13",
  "prior_week": "2026-06-12",
  "industry": {
   "A. Consumer staples": {
@@ -8,7 +8,7 @@
    "prior": "F"
   },
   "B. Healthcare": {
-   "current": "D",
+   "current": "C",
    "prior": "D"
   },
   "C. Telecoms": {
@@ -16,7 +16,7 @@
    "prior": "C"
   },
   "D. Infrastructure": {
-   "current": "C",
+   "current": "D",
    "prior": "C"
   },
   "E. Utilities": {
@@ -24,7 +24,7 @@
    "prior": "A"
   },
   "F. Defence": {
-   "current": "A",
+   "current": "B",
    "prior": "C"
   },
   "G. Financials": {
@@ -36,7 +36,7 @@
    "prior": "D"
   },
   "I. Transportation": {
-   "current": "B",
+   "current": "A",
    "prior": "B"
   },
   "J. Technology": {
@@ -106,7 +106,7 @@
    "prior": "F"
   },
   "B.2. Animal healthcare": {
-   "current": "D",
+   "current": "C",
    "prior": "F"
   },
   "B.3. Hospitals, clinics and care homes": {
@@ -158,7 +158,7 @@
    "prior": "C"
   },
   "E.2. Utilities - green focused": {
-   "current": "C",
+   "current": "D",
    "prior": "B"
   },
   "E.3. Utilities - Water and other non-power": {
@@ -178,7 +178,7 @@
    "prior": "C"
   },
   "G.11. Traditional asset managers (B2C)": {
-   "current": "A",
+   "current": "B",
    "prior": "B"
   },
   "G.12. Specialty finance and other": {
@@ -194,7 +194,7 @@
    "prior": "D"
   },
   "G.3. Alternative investment managers": {
-   "current": "F",
+   "current": "D",
    "prior": "F"
   },
   "G.4. Holding companies": {
@@ -274,7 +274,7 @@
    "prior": "B"
   },
   "I.1. Logistics": {
-   "current": "B",
+   "current": "C",
    "prior": "C"
   },
   "J.1. IT services - consulting": {
@@ -326,7 +326,7 @@
    "prior": "C"
   },
   "K.5. Advertising and consulting services": {
-   "current": "C",
+   "current": "B",
    "prior": "D"
   },
   "K.8. Outsourcing, admin and other services": {
@@ -362,7 +362,7 @@
    "prior": "B"
   },
   "M.7. Forestry and paper products": {
-   "current": "D",
+   "current": "F",
    "prior": "F"
   },
   "M.8. Chemicals - Gases": {
@@ -418,7 +418,7 @@
    "prior": "A"
   },
   "P.2. Energy - upstream E&P": {
-   "current": "B",
+   "current": "A",
    "prior": "B"
   },
   "P.3. Energy - upstream support services": {
