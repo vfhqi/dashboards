@@ -1,6 +1,6 @@
 {
  "source": "rs-dashboard.html",
- "current_week": "2026-08-13",
+ "current_week": "2026-08-14",
  "prior_week": "2026-06-12",
  "industry": {
   "A. Consumer staples": {
@@ -8,11 +8,11 @@
    "prior": "F"
   },
   "B. Healthcare": {
-   "current": "C",
+   "current": "D",
    "prior": "D"
   },
   "C. Telecoms": {
-   "current": "D",
+   "current": "C",
    "prior": "C"
   },
   "D. Infrastructure": {
@@ -24,7 +24,7 @@
    "prior": "A"
   },
   "F. Defence": {
-   "current": "B",
+   "current": "A",
    "prior": "C"
   },
   "G. Financials": {
@@ -32,11 +32,11 @@
    "prior": "B"
   },
   "H. Consumer discretionary": {
-   "current": "F",
+   "current": "D",
    "prior": "D"
   },
   "I. Transportation": {
-   "current": "A",
+   "current": "B",
    "prior": "B"
   },
   "J. Technology": {
@@ -56,7 +56,7 @@
    "prior": "D"
   },
   "N. Real assets": {
-   "current": "D",
+   "current": "F",
    "prior": "D"
   },
   "O. Industrials and capital goods": {
@@ -118,7 +118,7 @@
    "prior": "C"
   },
   "B.5. Medtech - consumables - mature": {
-   "current": "D",
+   "current": "F",
    "prior": "F"
   },
   "B.6. Medtech - capital goods": {
@@ -126,7 +126,7 @@
    "prior": "D"
   },
   "B.7. Pharma/biotech": {
-   "current": "B",
+   "current": "C",
    "prior": "C"
   },
   "B.8. Medtech - distributors / retail": {
@@ -146,7 +146,7 @@
    "prior": "D"
   },
   "D.1. Infrastructure - airports/trains": {
-   "current": "F",
+   "current": "D",
    "prior": "C"
   },
   "D.2. Infrastructure - ports": {
@@ -178,7 +178,7 @@
    "prior": "C"
   },
   "G.11. Traditional asset managers (B2C)": {
-   "current": "B",
+   "current": "A",
    "prior": "B"
   },
   "G.12. Specialty finance and other": {
@@ -358,7 +358,7 @@
    "prior": "D"
   },
   "M.6. Basic materials and construction": {
-   "current": "C",
+   "current": "B",
    "prior": "B"
   },
   "M.7. Forestry and paper products": {
@@ -394,7 +394,7 @@
    "prior": "D"
   },
   "O.4. Capital goods - grid": {
-   "current": "A",
+   "current": "B",
    "prior": "A"
   },
   "O.6. Capital goods - measurement": {
