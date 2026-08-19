@@ -1,6 +1,6 @@
 {
  "source": "rs-dashboard.html",
- "current_week": "2026-08-17",
+ "current_week": "2026-08-18",
  "prior_week": "2026-06-19",
  "industry": {
   "A. Consumer staples": {
@@ -8,11 +8,11 @@
    "prior": "F"
   },
   "B. Healthcare": {
-   "current": "C",
+   "current": "D",
    "prior": "F"
   },
   "C. Telecoms": {
-   "current": "D",
+   "current": "C",
    "prior": "C"
   },
   "D. Infrastructure": {
@@ -138,7 +138,7 @@
    "prior": "F"
   },
   "C.1. Telecoms - MNOs": {
-   "current": "D",
+   "current": "C",
    "prior": "C"
   },
   "C.2. Telecoms - towers": {
@@ -170,7 +170,7 @@
    "prior": "C"
   },
   "F.2. Defence - Non-primes": {
-   "current": "C",
+   "current": "D",
    "prior": "D"
   },
   "G.1. Insurance": {
@@ -258,7 +258,7 @@
    "prior": "C"
   },
   "H.4. Retail - online": {
-   "current": "D",
+   "current": "C",
    "prior": "C"
   },
   "H.6. Gambling - B2C OSB, Casino-led": {
@@ -266,7 +266,7 @@
    "prior": "F"
   },
   "H.7. Gambling - B2C - Lottery-led": {
-   "current": "D",
+   "current": "F",
    "prior": "D"
   },
   "H.9. Leisure": {
@@ -326,7 +326,7 @@
    "prior": "C"
   },
   "K.5. Advertising and consulting services": {
-   "current": "C",
+   "current": "B",
    "prior": "F"
   },
   "K.8. Outsourcing, admin and other services": {
@@ -354,7 +354,7 @@
    "prior": "D"
   },
   "M.4. Chemicals - Base": {
-   "current": "C",
+   "current": "D",
    "prior": "D"
   },
   "M.6. Basic materials and construction": {
@@ -362,7 +362,7 @@
    "prior": "B"
   },
   "M.7. Forestry and paper products": {
-   "current": "F",
+   "current": "D",
    "prior": "D"
   },
   "M.8. Chemicals - Gases": {
@@ -394,11 +394,11 @@
    "prior": "D"
   },
   "O.4. Capital goods - grid": {
-   "current": "A",
+   "current": "B",
    "prior": "A"
   },
   "O.6. Capital goods - measurement": {
-   "current": "B",
+   "current": "C",
    "prior": "C"
   },
   "O.7. Capital goods - factory equipment": {
@@ -418,7 +418,7 @@
    "prior": "A"
   },
   "P.2. Energy - upstream E&P": {
-   "current": "B",
+   "current": "A",
    "prior": "B"
   },
   "P.3. Energy - upstream support services": {
