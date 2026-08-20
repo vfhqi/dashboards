@@ -1,6 +1,6 @@
 {
  "source": "rs-dashboard.html",
- "current_week": "2026-08-18",
+ "current_week": "2026-08-19",
  "prior_week": "2026-06-19",
  "industry": {
   "A. Consumer staples": {
@@ -24,7 +24,7 @@
    "prior": "A"
   },
   "F. Defence": {
-   "current": "A",
+   "current": "B",
    "prior": "D"
   },
   "G. Financials": {
@@ -36,7 +36,7 @@
    "prior": "D"
   },
   "I. Transportation": {
-   "current": "B",
+   "current": "A",
    "prior": "C"
   },
   "J. Technology": {
@@ -74,7 +74,7 @@
    "prior": "F"
   },
   "A.2. Tobacco": {
-   "current": "D",
+   "current": "F",
    "prior": "C"
   },
   "A.3. Automotive repair": {
@@ -114,11 +114,11 @@
    "prior": "B"
   },
   "B.4. CDMO or CRO": {
-   "current": "D",
+   "current": "C",
    "prior": "C"
   },
   "B.5. Medtech - consumables - mature": {
-   "current": "D",
+   "current": "F",
    "prior": "D"
   },
   "B.6. Medtech - capital goods": {
@@ -126,7 +126,7 @@
    "prior": "D"
   },
   "B.7. Pharma/biotech": {
-   "current": "B",
+   "current": "C",
    "prior": "B"
   },
   "B.8. Medtech - distributors / retail": {
@@ -146,7 +146,7 @@
    "prior": "F"
   },
   "D.1. Infrastructure - airports/trains": {
-   "current": "F",
+   "current": "D",
    "prior": "C"
   },
   "D.2. Infrastructure - ports": {
@@ -170,7 +170,7 @@
    "prior": "C"
   },
   "F.2. Defence - Non-primes": {
-   "current": "D",
+   "current": "C",
    "prior": "D"
   },
   "G.1. Insurance": {
@@ -194,7 +194,7 @@
    "prior": "D"
   },
   "G.3. Alternative investment managers": {
-   "current": "F",
+   "current": "D",
    "prior": "F"
   },
   "G.4. Holding companies": {
@@ -218,7 +218,7 @@
    "prior": "C"
   },
   "H.10. Hotels": {
-   "current": "C",
+   "current": "D",
    "prior": "B"
   },
   "H.11. Airlines and travel": {
@@ -274,7 +274,7 @@
    "prior": "C"
   },
   "I.1. Logistics": {
-   "current": "C",
+   "current": "B",
    "prior": "C"
   },
   "J.1. IT services - consulting": {
@@ -390,7 +390,7 @@
    "prior": "D"
   },
   "O.2. Products - various [SPLIT]": {
-   "current": "C",
+   "current": "D",
    "prior": "D"
   },
   "O.4. Capital goods - grid": {
