@@ -1,6 +1,6 @@
 {
  "source": "rs-dashboard.html",
- "current_week": "2026-09-01",
+ "current_week": "2026-09-02",
  "prior_week": "2026-07-03",
  "industry": {
   "A. Consumer staples": {
@@ -74,7 +74,7 @@
    "prior": "D"
   },
   "A.2. Tobacco": {
-   "current": "D",
+   "current": "F",
    "prior": "C"
   },
   "A.3. Automotive repair": {
@@ -106,7 +106,7 @@
    "prior": "F"
   },
   "B.2. Animal healthcare": {
-   "current": "C",
+   "current": "D",
    "prior": "F"
   },
   "B.3. Hospitals, clinics and care homes": {
@@ -154,7 +154,7 @@
    "prior": "A"
   },
   "E.1. Utilities - Integrated power": {
-   "current": "B",
+   "current": "C",
    "prior": "B"
   },
   "E.2. Utilities - green focused": {
@@ -266,7 +266,7 @@
    "prior": "F"
   },
   "H.7. Gambling - B2C - Lottery-led": {
-   "current": "F",
+   "current": "D",
    "prior": "D"
   },
   "H.9. Leisure": {
@@ -282,7 +282,7 @@
    "prior": "F"
   },
   "J.2. IT services - reselling": {
-   "current": "C",
+   "current": "B",
    "prior": "C"
   },
   "J.3. Fintech/payment processing": {
@@ -390,7 +390,7 @@
    "prior": "D"
   },
   "O.2. Products - various [SPLIT]": {
-   "current": "D",
+   "current": "C",
    "prior": "D"
   },
   "O.4. Capital goods - grid": {
