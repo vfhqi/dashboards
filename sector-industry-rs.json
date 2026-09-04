@@ -1,6 +1,6 @@
 {
  "source": "rs-dashboard.html",
- "current_week": "2026-09-02",
+ "current_week": "2026-09-03",
  "prior_week": "2026-07-03",
  "industry": {
   "A. Consumer staples": {
@@ -8,7 +8,7 @@
    "prior": "F"
   },
   "B. Healthcare": {
-   "current": "D",
+   "current": "F",
    "prior": "D"
   },
   "C. Telecoms": {
@@ -32,7 +32,7 @@
    "prior": "A"
   },
   "H. Consumer discretionary": {
-   "current": "F",
+   "current": "D",
    "prior": "D"
   },
   "I. Transportation": {
@@ -74,7 +74,7 @@
    "prior": "D"
   },
   "A.2. Tobacco": {
-   "current": "F",
+   "current": "D",
    "prior": "C"
   },
   "A.3. Automotive repair": {
@@ -170,7 +170,7 @@
    "prior": "C"
   },
   "F.2. Defence - Non-primes": {
-   "current": "D",
+   "current": "F",
    "prior": "F"
   },
   "G.1. Insurance": {
@@ -206,7 +206,7 @@
    "prior": "B"
   },
   "G.6. Asset management software (B2B)": {
-   "current": "F",
+   "current": "D",
    "prior": "D"
   },
   "G.8. Retail trading platforms (D2C)": {
@@ -282,7 +282,7 @@
    "prior": "F"
   },
   "J.2. IT services - reselling": {
-   "current": "B",
+   "current": "C",
    "prior": "C"
   },
   "J.3. Fintech/payment processing": {
@@ -342,7 +342,7 @@
    "prior": "F"
   },
   "M.1. Chemicals - Fragrances/ingredients": {
-   "current": "C",
+   "current": "D",
    "prior": "D"
   },
   "M.2. Chemicals - Distributors": {
@@ -362,7 +362,7 @@
    "prior": "B"
   },
   "M.7. Forestry and paper products": {
-   "current": "D",
+   "current": "F",
    "prior": "D"
   },
   "M.8. Chemicals - Gases": {
@@ -378,7 +378,7 @@
    "prior": "C"
   },
   "O.10. Capital goods - EV": {
-   "current": "C",
+   "current": "B",
    "prior": "B"
   },
   "O.13. Renewables": {
@@ -398,7 +398,7 @@
    "prior": "A"
   },
   "O.6. Capital goods - measurement": {
-   "current": "D",
+   "current": "C",
    "prior": "C"
   },
   "O.7. Capital goods - factory equipment": {
@@ -410,7 +410,7 @@
    "prior": "B"
   },
   "O.9. Capital goods - HVAC": {
-   "current": "B",
+   "current": "A",
    "prior": "A"
   },
   "P.1. Energy - downstream distribution": {
@@ -418,7 +418,7 @@
    "prior": "A"
   },
   "P.2. Energy - upstream E&P": {
-   "current": "A",
+   "current": "B",
    "prior": "B"
   },
   "P.3. Energy - upstream support services": {
