@@ -1,6 +1,6 @@
 {
  "source": "rs-dashboard.html",
- "current_week": "2026-09-03",
+ "current_week": "2026-09-04",
  "prior_week": "2026-07-03",
  "industry": {
   "A. Consumer staples": {
@@ -12,7 +12,7 @@
    "prior": "D"
   },
   "C. Telecoms": {
-   "current": "C",
+   "current": "D",
    "prior": "C"
   },
   "D. Infrastructure": {
@@ -20,11 +20,11 @@
    "prior": "B"
   },
   "E. Utilities": {
-   "current": "B",
+   "current": "C",
    "prior": "C"
   },
   "F. Defence": {
-   "current": "D",
+   "current": "C",
    "prior": "D"
   },
   "G. Financials": {
@@ -60,7 +60,7 @@
    "prior": "D"
   },
   "O. Industrials and capital goods": {
-   "current": "C",
+   "current": "B",
    "prior": "C"
   },
   "P. Energy, commodities and metals mining": {
@@ -78,7 +78,7 @@
    "prior": "C"
   },
   "A.3. Automotive repair": {
-   "current": "A",
+   "current": "B",
    "prior": "B"
   },
   "A.4. Household products": {
@@ -106,7 +106,7 @@
    "prior": "F"
   },
   "B.2. Animal healthcare": {
-   "current": "D",
+   "current": "C",
    "prior": "F"
   },
   "B.3. Hospitals, clinics and care homes": {
@@ -206,7 +206,7 @@
    "prior": "B"
   },
   "G.6. Asset management software (B2B)": {
-   "current": "D",
+   "current": "F",
    "prior": "D"
   },
   "G.8. Retail trading platforms (D2C)": {
@@ -230,7 +230,7 @@
    "prior": "F"
   },
   "H.13. Food delivery": {
-   "current": "C",
+   "current": "D",
    "prior": "C"
   },
   "H.14. Automotive - sales/rentals": {
@@ -258,7 +258,7 @@
    "prior": "C"
   },
   "H.4. Retail - online": {
-   "current": "B",
+   "current": "C",
    "prior": "D"
   },
   "H.6. Gambling - B2C OSB, Casino-led": {
@@ -326,7 +326,7 @@
    "prior": "C"
   },
   "K.5. Advertising and consulting services": {
-   "current": "B",
+   "current": "C",
    "prior": "F"
   },
   "K.8. Outsourcing, admin and other services": {
@@ -350,11 +350,11 @@
    "prior": "F"
   },
   "M.3. Chemicals - Specialty": {
-   "current": "C",
+   "current": "B",
    "prior": "D"
   },
   "M.4. Chemicals - Base": {
-   "current": "D",
+   "current": "C",
    "prior": "D"
   },
   "M.6. Basic materials and construction": {
@@ -362,11 +362,11 @@
    "prior": "B"
   },
   "M.7. Forestry and paper products": {
-   "current": "F",
+   "current": "D",
    "prior": "D"
   },
   "M.8. Chemicals - Gases": {
-   "current": "C",
+   "current": "D",
    "prior": "C"
   },
   "N.1. TBD": {
@@ -386,7 +386,7 @@
    "prior": "A"
   },
   "O.15. Distributors": {
-   "current": "C",
+   "current": "B",
    "prior": "D"
   },
   "O.2. Products - various [SPLIT]": {
@@ -394,7 +394,7 @@
    "prior": "D"
   },
   "O.4. Capital goods - grid": {
-   "current": "B",
+   "current": "A",
    "prior": "A"
   },
   "O.6. Capital goods - measurement": {
