@@ -1,8 +1,13 @@
 {
  "status": "ok",
- "checked_at": "2026-09-06T04:30:15Z",
+ "checked_at": "2026-09-07T04:30:42Z",
  "wipe_suspected": false,
  "critical_failures": [],
- "warnings": [],
+ "warnings": [
+  {
+   "check": "memo_link_sample",
+   "detail": "EXC 'ratings-snapshot.json'"
+  }
+ ],
  "checks_run": 21
 }
