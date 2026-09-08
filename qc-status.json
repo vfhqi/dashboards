@@ -1,12 +1,12 @@
 {
  "status": "ok",
- "checked_at": "2026-09-07T04:30:42Z",
+ "checked_at": "2026-09-08T04:30:17Z",
  "wipe_suspected": false,
  "critical_failures": [],
  "warnings": [
   {
-   "check": "memo_link_sample",
-   "detail": "EXC 'ratings-snapshot.json'"
+   "check": "snapshot_vs_universe",
+   "detail": "987 rows vs universe 988"
   }
  ],
  "checks_run": 21
